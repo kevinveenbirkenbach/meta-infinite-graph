@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Meta Infinity 3D – Test</title>
+  <meta charset="UTF-8"/>
+  <title>Meta Infinity 3D</title>
   <style>
-    body { margin: 0; overflow: hidden; }
-    #3d-graph { width: 100vw; height: 100vh; display: block; }
+    body { margin: 0; overflow: hidden; font-family: sans-serif; }
+    #3d-graph { width: 100vw; height: 100vh; }
     #sidebar {
-      position: absolute; top: 10px; right: 10px;
-      width: 300px; max-height: 90vh; overflow-y: auto;
-      background: rgba(255,255,255,0.9); padding: 10px;
-      font-family: sans-serif;
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 300px; max-height: 90vh;
+      background: rgba(255,255,255,0.9);
+      padding: 10px;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+    a { color: #3498db; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div id="3d-graph"></div>
-  <div id="sidebar"><p>Klicke einen Knoten an, um Details zu sehen.</p></div>
+  <div id="sidebar">Loading…</div>
 
-  <!-- Bibliotheken -->
-  <script src="https://unpkg.com/three/build/three.min.js"></script>
+  <!-- Three.js and 3d-force-graph -->
+  <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph/dist/3d-force-graph.min.js"></script>
 
   <script>
-    // Warte, bis alles geladen ist
-    window.addEventListener('load', () => {
-      // *** Testdaten ***
-      const data = {
-        nodes: [
-          { id: 'A', title: 'Role A', description: 'Die Beschreibung von A' },
-          { id: 'B', title: 'Role B', description: 'Die Beschreibung von B' },
-          { id: 'C', title: 'Role C', description: 'Die Beschreibung von C' }
-        ],
-        links: [
-          { source: 'A', target: 'B', type: 'run_after' },
-          { source: 'A', target: 'C', type: 'dependency' },
-          { source: 'B', target: 'C', type: 'run_after' }
-        ]
-      };
+    // 1) Read query params (role, dependency type, direction)
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get('role') || 'web-app-akaunting';
+    const dep = params.get('dep') || 'run_after';
+    const dir = params.get('dir') || 'to';
 
-      // *** Graph initialisieren ***
-      const Graph = ForceGraph3D()
-        (document.getElementById('3d-graph'))
-        .graphData(data)
-        .nodeLabel(d => `${d.id}: ${d.title}`)   // Einfacher Tooltip
-        .nodeAutoColorBy('type')                 // färbt nach 'type' (hier: undefined → gleiche Farbe)
-        .linkDirectionalArrowLength(3)
-        .linkDirectionalArrowRelPos(1)
-        // Klick auf Knoten → Sidebar füllen
-        .onNodeClick(node => {
-          document.getElementById('sidebar').innerHTML = `
-            <h2>${node.id} – ${node.title}</h2>
-            <p>${node.description}</p>
-            <p><strong>Verknüpfte Knoten:</strong></p>
-            <ul>
-              ${data.links
-                .filter(l => l.source === node.id)
-                .map(l => `<li>${l.type}: ${l.target}</li>`).join('')}
-            </ul>`;
-        });
-    });
+    // 2) Compute path to the generated tree.json under roles
+    const treePath = `roles/${role}/meta/tree.json`;
+
+    // 3) Fetch the combined mappings JSON
+    fetch(treePath)
+      .then(res => {
+        if (!res.ok) throw new Error(`Failed to load ${treePath}: ${res.status}`);
+        return res.json();
+      })
+      .then(allGraphs => {
+        const key = `${dep}_${dir}`;
+        const data = allGraphs[key];
+        if (!data) throw new Error(`Graph key not found: ${key}`);
+
+        // 4) Initialize and render graph
+        ForceGraph3D()(document.getElementById('3d-graph'))
+          .linkDirectionalArrowLength(4)
+          .linkDirectionalArrowRelPos(1)
+          .nodeLabel(d => d.id)
+          .onNodeClick(showDetails)
+          .graphData(data);
+
+        document.getElementById('sidebar').innerText = 'Click a node for details';
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('sidebar').innerText = 'Error loading graph data';
+      });
+
+    // 5) Sidebar detail renderer
+    function showDetails(node) {
+      document.getElementById('sidebar').innerHTML = `
+        <h2>${node.id}</h2>
+        <p>${node.description || ''}</p>
+        <p>
+          <a href="${node.doc_url}" target="_blank">Documentation</a><br/>
+          <a href="${node.source_url}" target="_blank">Source Code</a>
+        </p>
+      `;
+    }
   </script>
 </body>
 </html>

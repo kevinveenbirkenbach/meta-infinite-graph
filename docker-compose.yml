@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  meta-infinite-graph:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ROLES_DIR: ${ROLES_DIR:-/roles}
+    volumes:
+      - "${ROLES_DIR}:/usr/share/nginx/html/roles:ro"
+    ports:
+      - "8000:80"
