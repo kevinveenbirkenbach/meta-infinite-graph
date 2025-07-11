@@ -1,29 +1,26 @@
-/* full-screen 3D container */
+/* Make the graph container fill the screen */
+body {
+  margin: 0;
+  overflow: hidden;
+}
 #3d-graph {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: #000814;
 }
 
-/* offcanvas styling */
-.offcanvas {
-  width: 360px;
-}
-.offcanvas-backdrop {
-  background-color: rgba(0,0,0,0.3);
-}
-
-/* ensure unified height for all control-bar items */
-.input-group-sm .btn,
-.input-group-sm .form-control,
-.input-group-sm .input-group-text,
-.input-group-sm .form-select {
-  height: 36px;
-  line-height: 1.2;
-  font-size: 0.9rem;
+/* Sidebar sits beneath the navbar */
+#sidebar {
+  position: absolute;
+  top: 56px;    /* height of navbar */
+  right: 0;
+  width: 340px;
+  bottom: 0;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.8);
+  z-index: 1000;
 }
 
-/* legend dot */
+/* Legend dots */
 .legend-dot {
   display: inline-block;
   width: 12px;
@@ -32,9 +29,20 @@
   margin-right: 6px;
   vertical-align: text-bottom;
 }
-/* dot colors */
 .bg-purple { background-color: purple; }
 .bg-pink   { background-color: pink; }
 .bg-orange { background-color: orange; }
 .bg-green  { background-color: green; }
 .bg-red    { background-color: red; }
+
+/* Ensure role description scrolls if too long */
+#role-desc {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+/* Details panel scroll area */
+#details {
+  max-height: 200px;
+  overflow-y: auto;
+}
