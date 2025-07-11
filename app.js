@@ -77,3 +77,4 @@ fetch('/roles/list.json')
     console.error('Init error:', err);
     document.getElementById('sidebar').innerText = 'Initialization failed';
   });
+  

@@ -19,25 +19,41 @@
         Role:
         <select id="sel-role"></select>
       </label>
-
-      <!-- dynamic mapping checkboxes will be injected here -->
       <div id="mapping-controls"></div>
 
-      <button id="btn-zoom-in">Zoom In</button>
-      <button id="btn-zoom-out">Zoom Out</button>
+      <!-- start/stop + interval + zoom -->
+      <div id="button-row">
+        <button id="btn-start" title="Start auto-iteration">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="btn-stop" title="Stop auto-iteration" disabled>
+          <i class="fa-solid fa-pause"></i>
+        </button>
+
+        <input id="iter-interval"
+               type="number" min="0.1" step="0.1"
+               value="0.5"
+               title="Interval (s)"
+               />
+
+        <button id="btn-zoom-in" title="Zoom In">
+          <i class="fa-solid fa-search-plus"></i>
+        </button>
+        <button id="btn-zoom-out" title="Zoom Out">
+          <i class="fa-solid fa-search-minus"></i>
+        </button>
+      </div>
     </div>
 
     <!-- DETAILS -->
-    <div id="details">
-      Loading…
-    </div>
+    <div id="details">Loading…</div>
   </div>
 
-  <!-- Three.js & 3D Force Graph -->
+  <!-- Three.js & ForceGraph -->
   <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph/dist/3d-force-graph.min.js"></script>
 
-  <!-- Application Scripts -->
+  <!-- App Scripts -->
   <script src="dataLoader.js"></script>
   <script src="selectionManager.js"></script>
   <script src="autoResolver.js"></script>

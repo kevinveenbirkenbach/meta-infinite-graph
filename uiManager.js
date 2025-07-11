@@ -5,21 +5,30 @@ class UIManager {
     this.selectionManager = selectionManager;
     this.graphRenderer    = graphRenderer;
     this.autoResolver     = autoResolver;
+    this._iterId          = null;
 
-    // When role dropdown changes
+    // Role dropdown
     document.getElementById('sel-role')
       .addEventListener('change', () => {
         this._updateURL();
         this._onSelectionChange();
       });
 
-    // Zoom buttons
+    // Start ▶
+    document.getElementById('btn-start')
+      .addEventListener('click', () => this._startIteration());
+
+    // Stop ⏸
+    document.getElementById('btn-stop')
+      .addEventListener('click', () => this._stopIteration());
+
+    // Zoom In/Out
     document.getElementById('btn-zoom-in')
       .addEventListener('click', () => this.graphRenderer.zoom(0.8));
     document.getElementById('btn-zoom-out')
       .addEventListener('click', () => this.graphRenderer.zoom(1.2));
 
-    // Node‐click → show details + load subtree
+    // Node click → show details + load subtree
     this.graphRenderer.on('nodeClicked', ({ node }) => {
       this._showDetails(node);
       this._loadSubtree(node);
@@ -43,9 +52,12 @@ class UIManager {
   _onSelectionChange() {
     const role     = document.getElementById('sel-role').value;
     const mappings = this._getSelectedMappings();
-    if (!role || mappings.length===0) return;
+    if (!role || mappings.length === 0) return;
 
-    // reset
+    // stop any auto‐iteration
+    this._stopIteration();
+
+    // reset graph
     this.autoResolver.stop();
     this.selectionManager.loadedRoles.clear();
     this.selectionManager.roleStatus = {};
@@ -58,18 +70,18 @@ class UIManager {
         this.graphRenderer.mergeData(data);
         this.selectionManager.markLoaded(role, data);
         this.graphRenderer.refreshColors();
-        // show details for the initial role
-        const rootNode = this.graphRenderer.graph.graphData().nodes
-                           .find(n => n.id===role);
-        if (rootNode) this._showDetails(rootNode);
+        // show root details
+        const root = this.graphRenderer.graph.graphData().nodes
+                        .find(n => n.id === role);
+        if (root) this._showDetails(root);
       })
       .catch(err => {
         console.error('Initial load error', err);
         document.getElementById('details').innerText = 'Error loading graph';
       });
 
-    // then background‐resolve
-    this.autoResolver.queue = [...mappings.map(_=>role)];
+    // background queue
+    this.autoResolver.queue = mappings.map(_=>role);
     this.autoResolver.start(mappings);
   }
 
@@ -85,11 +97,10 @@ class UIManager {
   }
 
   _showDetails(node) {
-    const iconClass = node.logo?.class || 'fa-solid fa-cube';
-    // <<< only update the DETAILS pane, not the entire sidebar >>>
+    const icon = node.logo?.class || 'fa-solid fa-cube';
     document.getElementById('details').innerHTML = `
       <h2 style="display:flex; align-items:center;">
-        <i class="${iconClass}" style="margin-right:8px;"></i>
+        <i class="${icon}" style="margin-right:8px;"></i>
         <span>${node.id}</span>
       </h2>
       <p>${node.description || ''}</p>
@@ -98,6 +109,37 @@ class UIManager {
         <a href="${node.source_url}" target="_blank">Source Code</a>
       </p>
     `;
+  }
+
+  _startIteration() {
+    if (this._iterId) return;
+    const interval = parseFloat(
+      document.getElementById('iter-interval').value
+    ) * 1000;
+    if (isNaN(interval) || interval <= 0) return;
+
+    document.getElementById('btn-start').disabled = true;
+    document.getElementById('btn-stop').disabled  = false;
+
+    this._iterId = setInterval(() => {
+      const next = this.graphRenderer.graph.graphData().nodes
+        .find(n => this.selectionManager.getColor(n.id) === 'orange');
+      if (next) {
+        this.selectionManager.setSelected(next.id);
+        this._showDetails(next);
+        this._loadSubtree(next);
+      } else {
+        this._stopIteration();
+      }
+    }, interval);
+  }
+
+  _stopIteration() {
+    if (!this._iterId) return;
+    clearInterval(this._iterId);
+    this._iterId = null;
+    document.getElementById('btn-start').disabled = false;
+    document.getElementById('btn-stop').disabled  = true;
   }
 }
 

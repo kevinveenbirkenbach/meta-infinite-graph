@@ -54,3 +54,30 @@ button {
 #mapping-controls label {
   font-size: 13px;
 }
+
+/* button + input on one row */
+#button-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* icon-only buttons */
+#button-row button {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* small interval input */
+#button-row input#iter-interval {
+  width: 50px;
+  padding: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
