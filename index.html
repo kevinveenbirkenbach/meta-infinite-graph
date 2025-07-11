@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,11 +43,22 @@
 
       <!-- Role + description + selector -->
       <div class="mb-3">
-        <h5 id="role-name" class="mb-1"></h5>
-        <div id="role-desc" class="small text-wrap mb-2"></div>
-        <label for="sel-role" class="form-label">Role</label>
-        <select id="sel-role" class="form-select"></select>
-      </div>
+  <h5 id="role-name" class="mb-1"></h5>
+  <div id="role-desc" class="small text-wrap mb-2"></div>
+
+  <!-- New: Role search field -->
+  <label for="role-search" class="form-label">Search Role</label>
+  <input
+    type="text"
+    id="role-search"
+    class="form-control form-control-sm mb-2"
+    placeholder="Type to filter…"
+  />
+
+  <!-- Role dropdown -->
+  <label for="sel-role" class="form-label">Role</label>
+  <select id="sel-role" class="form-select"></select>
+</div>
 
       <!-- Mapping checkboxes -->
       <fieldset id="mapping-controls" class="mb-3">

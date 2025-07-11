@@ -9,6 +9,8 @@ const uiManager        = new UIManager(
   dataLoader, selectionManager, graphRenderer, autoResolver
 );
 
+let rolesList = [];
+
 // URL‐Parameter helper
 function getParams() {
   const p = new URLSearchParams(window.location.search);
@@ -47,7 +49,9 @@ fetch('/roles/list.json')
     return r.json();
   })
   .then(roles => {
+    rolesList = roles;                     // speichern
     const sel = document.getElementById('sel-role');
+    sel.innerHTML = '';                    // sicherheitshalber
     roles.forEach(r => {
       const o = document.createElement('option');
       o.value = o.textContent = r;
@@ -58,6 +62,25 @@ fetch('/roles/list.json')
     const { role, mappings } = getParams();
     sel.value = role || roles[0] || '';
     sel.addEventListener('change', () => uiManager._onSelectionChange());
+
+    // Suchfunktion aktivieren
+    const search = document.getElementById('role-search');
+    search.addEventListener('input', () => {
+      const filter = search.value.toLowerCase();
+      sel.innerHTML = '';
+      rolesList
+        .filter(r => r.toLowerCase().includes(filter))
+        .forEach(r => {
+          const o = document.createElement('option');
+          o.value = o.textContent = r;
+          sel.appendChild(o);
+        });
+      // nach Filterung neue Auswahl-Logik anstoßen, falls der bisherige Wert verschwindet
+      if (!rolesList.includes(sel.value)) {
+        sel.value = '';
+        uiManager._onSelectionChange();
+      }
+    });
 
     // 2) Mappings für diese Rolle laden
     return dataLoader.getMappingsForRole(sel.value)
