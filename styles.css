@@ -1,16 +1,29 @@
-/* Sidebar */
-#sidebar {
+/* full-screen 3D container */
+#3d-graph {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 340px;
-  max-height: 95vh;
-  overflow-y: auto;
-  z-index: 10;
-  background: rgba(255,255,255,0.8);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #000814;
 }
 
-/* Legend Dot */
+/* offcanvas styling */
+.offcanvas {
+  width: 360px;
+}
+.offcanvas-backdrop {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* ensure unified height for all control-bar items */
+.input-group-sm .btn,
+.input-group-sm .form-control,
+.input-group-sm .input-group-text,
+.input-group-sm .form-select {
+  height: 36px;
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+
+/* legend dot */
 .legend-dot {
   display: inline-block;
   width: 12px;
@@ -19,6 +32,7 @@
   margin-right: 6px;
   vertical-align: text-bottom;
 }
+/* dot colors */
 .bg-purple { background-color: purple; }
 .bg-pink   { background-color: pink; }
 .bg-orange { background-color: orange; }
