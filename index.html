@@ -5,49 +5,44 @@
   <title>Meta Infinity 3D</title>
   <link rel="stylesheet" href="styles.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
 </head>
 <body>
   <div id="3d-graph"></div>
-  <!-- inside the #controls div -->
-  <div id="controls">
-    <label>
-    Role:
-    <select id="sel-role"></select>
-    </label>
-    <label>
-      Dependency:
-      <select id="sel-dep">
-        <option value="run_after">run_after</option>
-        <option value="dependencies">dependencies</option>
-      </select>
-    </label>
-    <label>
-      Direction:
-      <select id="sel-dir">
-        <option value="to">to</option>
-        <option value="from">from</option>
-      </select>
-    </label>
-    <!-- <button id="btn-go">Load Graph</button> removed -->
-    <button id="btn-zoom-in">Zoom In</button>
-    <button id="btn-zoom-out">Zoom Out</button>
-  </div>
-  <div id="sidebar">Loading…</div>
 
-  <!-- Load Three.js and ForceGraph -->
+  <div id="sidebar">
+    <!-- NAVIGATION -->
+    <div id="navigation">
+      <label>
+        Role:
+        <select id="sel-role"></select>
+      </label>
+
+      <!-- dynamic mapping checkboxes will be injected here -->
+      <div id="mapping-controls"></div>
+
+      <button id="btn-zoom-in">Zoom In</button>
+      <button id="btn-zoom-out">Zoom Out</button>
+    </div>
+
+    <!-- DETAILS -->
+    <div id="details">
+      Loading…
+    </div>
+  </div>
+
+  <!-- Three.js & 3D Force Graph -->
   <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph/dist/3d-force-graph.min.js"></script>
 
-  <!-- Graph and UI managers -->
-<script src="dataLoader.js"></script>
-<script src="selectionManager.js"></script>
-<script src="autoResolver.js"></script>
-<script src="graphRenderer.js"></script>
-<script src="uiManager.js"></script>
-<script src="app.js"></script>
-
+  <!-- Application Scripts -->
+  <script src="dataLoader.js"></script>
+  <script src="selectionManager.js"></script>
+  <script src="autoResolver.js"></script>
+  <script src="graphRenderer.js"></script>
+  <script src="uiManager.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

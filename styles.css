@@ -3,45 +3,54 @@ body {
   overflow: hidden;
   font-family: sans-serif;
 }
+
+/* Fullscreen 3D graph container */
 #3d-graph {
-  width: 100vw;
-  height: 100vh;
-}
-#controls {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(255,255,255,0.9);
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  z-index: 1;
+  top: 0; left: 0; right: 0; bottom: 0;
 }
+
+/* Sidebar on the right */
 #sidebar {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 300px;
-  max-height: 90vh;
-  background: rgba(255,255,255,0.9);
-  padding: 10px;
+  width: 320px;
+  max-height: 95vh;
+  background: rgba(255,255,255,0.95);
+  padding: 12px;
   overflow-y: auto;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
   z-index: 1;
 }
-select, button {
+
+/* Navigation section at top of sidebar */
+#navigation {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+}
+
+/* Details section below navigation */
+#details {
+  /* default styling */
+}
+
+/* Form elements */
+label {
+  display: block;
+  margin: 6px 0;
   font-size: 14px;
-  margin: 4px 0;
+}
+select, button {
   width: 100%;
+  margin-top: 4px;
+  font-size: 14px;
 }
 button {
   cursor: pointer;
 }
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+#mapping-controls label {
+  font-size: 13px;
 }
