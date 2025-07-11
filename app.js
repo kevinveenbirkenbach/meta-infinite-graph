@@ -22,6 +22,11 @@ function getParams() {
 
 // Mapping‐Checkboxen bauen
 function buildMappingControls(allKeys, checkedKeys) {
+  // wenn keine Keys in der URL, dann alle vorauswählen
+  if (!checkedKeys || checkedKeys.length === 0) {
+    checkedKeys = allKeys.slice();
+  }
+
   const container = document.getElementById('mapping-controls');
   container.innerHTML = '';  // leeren
   allKeys.forEach(key => {

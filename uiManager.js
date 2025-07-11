@@ -11,7 +11,7 @@ class UIManager {
     document.getElementById('sel-role')
       .addEventListener('change', () => this._onSelectionChange());
     document.getElementById('btn-reload')
-  .addEventListener('click', () => this._onSelectionChange());
+      .addEventListener('click', () => this._onSelectionChange());
     document.getElementById('btn-start')
       .addEventListener('click',  () => this._startIteration());
     document.getElementById('btn-stop')
