@@ -37,8 +37,12 @@ class UIManager {
   }
 
   _onSelectionChange() {
-    const role = document.getElementById('sel-role').value;
+    const role     = document.getElementById('sel-role').value;
     const mappings = this._getCheckedMappings();
+
+    // URL-Parameter aktualisieren, ohne Neuladen
+    updateUrlParams(role, mappings);
+
     if (!role || mappings.length === 0) return;
 
     // mark root
@@ -123,6 +127,14 @@ class UIManager {
     document.getElementById('btn-start').disabled = false;
     document.getElementById('btn-stop').disabled  = true;
   }
+}
+
+// Hilfsfunktion zum Setzen der GET-Parameter in der URL
+function updateUrlParams(role, mappings) {
+  const params = new URLSearchParams();
+  if (role) params.set('role', role);
+  mappings.forEach(m => params.append('mapping', m));
+  history.replaceState(null, '', `?${params.toString()}`);
 }
 
 window.UIManager = UIManager;
