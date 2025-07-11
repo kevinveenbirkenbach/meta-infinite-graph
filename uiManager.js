@@ -6,7 +6,7 @@ class UIManager {
     this.graphRenderer    = graphRenderer;
     this.autoResolver     = autoResolver;
 
-    // Listen for dropdown changes
+    // Dropdown changes trigger full reload
     ['sel-role','sel-dep','sel-dir'].forEach(id => {
       document.getElementById(id)
         .addEventListener('change', () => this._onSelectionChange());
@@ -18,47 +18,43 @@ class UIManager {
     document.getElementById('btn-zoom-out')
       .addEventListener('click', () => this.graphRenderer.zoom(1.2));
 
-    // Auto-resolve new data
+    // Auto‐resolve background fetch
     this.autoResolver.on('treeFetched', ({ data }) => {
       this.graphRenderer.mergeData(data);
       this.graphRenderer.refreshColors();
     });
 
-    // On node click: fetch and merge that node's dependencies
-    this.graphRenderer.on('nodeClicked', ({ node }) => this._onNodeClick(node));
+    // On node click: show details AND load that node’s subtree
+    this.graphRenderer.on('nodeClicked', ({ node }) => {
+      this._showDetails(node);
+      this._loadSubtree(node);
+    });
   }
 
   _onSelectionChange() {
-    const roleEl = document.getElementById('sel-role');
-    const role   = roleEl.value;
-    if (!role) {
-      console.warn('No role selected—skipping graph load.');
-      return;
-    }
-    const dep = document.getElementById('sel-dep').value;
-    const dir = document.getElementById('sel-dir').value;
-    this._reload(role, `${dep}_${dir}`);
-  }
+    const sel  = document.getElementById('sel-role');
+    const role = sel.value;
+    if (!role) return;
+    const depKey = `${document.getElementById('sel-dep').value}_` +
+                   document.getElementById('sel-dir').value;
 
-  _reload(role, depKey) {
-    // Stop any in-flight auto-resolution
+    // Fully reload graph
     this.autoResolver.stop();
-
-    // Reset entire graph state
     this.selectionManager.loadedRoles.clear();
     this.selectionManager.roleStatus = {};
     this.selectionManager.setSelected(role);
     this.graphRenderer.graph.graphData({ nodes: [], links: [] });
 
-    // Start background auto-expansion
     this.autoResolver.start(depKey);
-
-    // Initial subtree load
     this.dataLoader.fetchTree(role, depKey)
       .then(data => {
         this.graphRenderer.mergeData(data);
         this.selectionManager.markLoaded(role, data);
         this.graphRenderer.refreshColors();
+        this._showDetails(
+          // find the node object we just added
+          this.graphRenderer.graph.graphData().nodes.find(n => n.id === role)
+        );
       })
       .catch(err => {
         console.error('Error loading tree for', role, err);
@@ -66,13 +62,10 @@ class UIManager {
       });
   }
 
-  _onNodeClick(node) {
-    // Load only the clicked node's subtree
-    const dep = document.getElementById('sel-dep').value;
-    const dir = document.getElementById('sel-dir').value;
-    const key = `${dep}_${dir}`;
-
-    this.dataLoader.fetchTree(node.id, key)
+  _loadSubtree(node) {
+    const depKey = `${document.getElementById('sel-dep').value}_` +
+                   document.getElementById('sel-dir').value;
+    this.dataLoader.fetchTree(node.id, depKey)
       .then(data => {
         this.graphRenderer.mergeData(data);
         this.selectionManager.markLoaded(node.id, data);
@@ -81,6 +74,22 @@ class UIManager {
       .catch(err => {
         console.error('Error loading subtree for', node.id, err);
       });
+  }
+
+  _showDetails(node) {
+    // icon (if any) or default
+    const iconClass = node.logo?.class || 'fa-solid fa-cube';
+    document.getElementById('sidebar').innerHTML = `
+      <h2 style="display:flex; align-items:center;">
+        <i class="${iconClass}" style="margin-right:8px;"></i>
+        <span>${node.id}</span>
+      </h2>
+      <p>${node.description || ''}</p>
+      <p>
+        <a href="${node.doc_url}" target="_blank">Documentation</a><br/>
+        <a href="${node.source_url}" target="_blank">Source Code</a>
+      </p>
+    `;
   }
 }
 

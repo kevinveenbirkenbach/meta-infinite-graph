@@ -1,11 +1,9 @@
 // graphManager.js
 class GraphManager {
   constructor(containerId) {
-    this.container       = document.getElementById(containerId);
-    this.loadedRoles     = new Set();
-    this.roleStatus      = {};      // role → 'leaf' | 'internal'
-    this.selectedRole    = null;    // the last-clicked or initially loaded role
-    this.options         = { depKey: '' };
+    this.container     = document.getElementById(containerId);
+    this.selectedRole  = null;    // last-clicked node
+    this.loadedRoles   = new Set(); // which roles we’ve fetched
     this._initGraph();
   }
 
@@ -15,40 +13,53 @@ class GraphManager {
       .linkDirectionalArrowRelPos(1)
       .nodeLabel(d => d.id)
       .onNodeClick(node => {
-        // mark this node as the new “selected” role
+        // mark as selected and recolor
         this.selectedRole = node.id;
-        if (this.options.onNodeClick) this.options.onNodeClick(node);
-        this.loadRole(node.id, this.options.depKey);
+        this.Graph.nodeColor(n => this._getNodeColor(n.id));
+        // then load its subtree
+        this.loadRole(node.id, this.depKey);
       })
-      .nodeColor(node => this._getNodeColor(node.id));
+      .nodeColor(d => this._getNodeColor(d.id));
   }
 
   _getNodeColor(role) {
-    // always pink for the currently selected role
-    if (role === this.selectedRole) {
-      return 'pink';
+    // pink for the currently selected node
+    if (role === this.selectedRole) return 'pink';
+
+    // get full link list
+    const { nodes, links } = this.Graph.graphData();
+
+    // count incoming and outgoing
+    let incoming = 0, outgoing = 0;
+    for (const l of links) {
+      if (l.source === role) outgoing++;
+      if (l.target === role) incoming++;
     }
-    // not yet loaded at all
-    if (!this.loadedRoles.has(role)) {
-      return 'orange';
-    }
-    // loaded and leaf → red
-    if (this.roleStatus[role] === 'leaf') {
-      return 'red';
-    }
-    // loaded and internal → green
-    return 'green';
+
+    // not yet loaded → light gray
+    if (!this.loadedRoles.has(role)) return '#ccc';
+
+    // pure sink (many incoming, no outgoing) → red
+    if (outgoing === 0 && incoming > 0) return 'red';
+
+    // through-node (both incoming and outgoing) → orange
+    if (outgoing > 0 && incoming > 0) return 'orange';
+
+    // pure source (outgoing, no incoming) → green
+    if (outgoing > 0 && incoming === 0) return 'green';
+
+    // completely isolated → gray
+    return '#888';
   }
 
   reset() {
     this.Graph.graphData({ nodes: [], links: [] });
     this.loadedRoles.clear();
-    this.roleStatus   = {};
     this.selectedRole = null;
   }
 
-  setOptions(opts) {
-    Object.assign(this.options, opts);
+  setDepKey(depKey) {
+    this.depKey = depKey;
   }
 
   cameraZoom(factor) {
@@ -58,55 +69,36 @@ class GraphManager {
   }
 
   loadRole(role, depKey) {
-    // If nothing selected yet (initial load), mark this as selected
-    if (!this.selectedRole) this.selectedRole = role;
+    this.depKey = depKey;            // remember for clicks
+    if (this.loadedRoles.has(role)) return;  // already done
 
-    // avoid fetching the same subtree twice
-    if (this.loadedRoles.has(role)) {
-      // but still recolor now that selectedRole changed
-      this.Graph.nodeColor(r => this._getNodeColor(r.id));
-      return;
-    }
-
-    const path = `/roles/${role}/meta/tree.json`;
-    fetch(path)
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-        return res.json();
+    fetch(`/roles/${role}/meta/tree.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`Failed to load ${role}`);
+        return r.json();
       })
-      .then(allGraphs => {
-        const data = allGraphs[depKey];
-        if (!data) throw new Error(`Missing graph key: ${depKey}`);
+      .then(all => {
+        const data = all[depKey];
+        if (!data) throw new Error(`Missing key ${depKey}`);
 
-        // merge into existing graph
+        // merge nodes & links
         const current = this.Graph.graphData();
-        const nodeMap = new Map(current.nodes.map(n => [n.id, n]));
+        const map     = new Map(current.nodes.map(n=>[n.id,n]));
         data.nodes.forEach(n => {
-          if (!nodeMap.has(n.id)) {
+          if (!map.has(n.id)) {
             current.nodes.push(n);
-            nodeMap.set(n.id, n);
+            map.set(n.id,n);
           }
         });
         current.links.push(...data.links);
         this.Graph.graphData(current);
 
-        // mark as loaded
+        // mark as loaded and recolor
         this.loadedRoles.add(role);
-
-        // compute statuses: any loaded node with outgoing edges is internal
-        const sources = new Set(data.links.map(l => l.source));
-        data.nodes.forEach(n => {
-          this.roleStatus[n.id] = sources.has(n.id) ? 'internal' : 'leaf';
-        });
-
-        // refresh coloring
         this.Graph.nodeColor(n => this._getNodeColor(n.id));
       })
-      .catch(err => {
-        if (this.options.onError) this.options.onError(err);
-      });
+      .catch(err => console.error(err));
   }
 }
 
-// expose globally if not bundling
 window.GraphManager = GraphManager;
