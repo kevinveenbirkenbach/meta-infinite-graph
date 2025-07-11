@@ -9,6 +9,12 @@ const uiManager        = new UIManager(
   dataLoader, selectionManager, graphRenderer, autoResolver
 );
 
+// Helper to get a query‐param or fallback
+function getParam(name, fallback) {
+  const p = new URLSearchParams(window.location.search).get(name);
+  return p || fallback;
+}
+
 // Populate the role dropdown, then trigger initial load if possible
 fetch('/roles/list.json')
   .then(res => {
@@ -16,17 +22,24 @@ fetch('/roles/list.json')
     return res.json();
   })
   .then(roles => {
-    const sel = document.getElementById('sel-role');
+    const selRole = document.getElementById('sel-role');
     roles.forEach(r => {
       const opt = document.createElement('option');
       opt.value = r;
       opt.textContent = r;
-      sel.appendChild(opt);
+      selRole.appendChild(opt);
     });
-    // Only reload once there is a valid selection
-    if (sel.value) {
-      uiManager._onSelectionChange();
-    }
+
+    // Read from URL or use first role
+    const initialRole = getParam('role', selRole.options[0]?.value || '');
+    selRole.value = initialRole;
+
+    // Similarly for dep and dir
+    document.getElementById('sel-dep').value = getParam('dep', 'run_after');
+    document.getElementById('sel-dir').value = getParam('dir', 'to');
+
+    // Now trigger the graph load
+    uiManager._onSelectionChange();
   })
   .catch(err => {
     console.error('Error loading roles list:', err);

@@ -6,13 +6,16 @@ class UIManager {
     this.graphRenderer    = graphRenderer;
     this.autoResolver     = autoResolver;
 
-    // Dropdown changes trigger full reload
+    // Dropdown changes trigger full reload & URL update
     ['sel-role','sel-dep','sel-dir'].forEach(id => {
       document.getElementById(id)
-        .addEventListener('change', () => this._onSelectionChange());
+        .addEventListener('change', () => {
+          this._updateURL();
+          this._onSelectionChange();
+        });
     });
 
-    // Zoom buttons
+    // Zoom buttons (URL need not change)
     document.getElementById('btn-zoom-in')
       .addEventListener('click', () => this.graphRenderer.zoom(0.8));
     document.getElementById('btn-zoom-out')
@@ -29,6 +32,16 @@ class UIManager {
       this._showDetails(node);
       this._loadSubtree(node);
     });
+  }
+
+  // Write current dropdowns into URL querystring
+  _updateURL() {
+    const params = new URLSearchParams(window.location.search);
+    params.set('role', document.getElementById('sel-role').value);
+    params.set('dep',  document.getElementById('sel-dep').value);
+    params.set('dir',  document.getElementById('sel-dir').value);
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    history.replaceState(null, '', newUrl);
   }
 
   _onSelectionChange() {
@@ -52,7 +65,6 @@ class UIManager {
         this.selectionManager.markLoaded(role, data);
         this.graphRenderer.refreshColors();
         this._showDetails(
-          // find the node object we just added
           this.graphRenderer.graph.graphData().nodes.find(n => n.id === role)
         );
       })
@@ -77,7 +89,6 @@ class UIManager {
   }
 
   _showDetails(node) {
-    // icon (if any) or default
     const iconClass = node.logo?.class || 'fa-solid fa-cube';
     document.getElementById('sidebar').innerHTML = `
       <h2 style="display:flex; align-items:center;">
