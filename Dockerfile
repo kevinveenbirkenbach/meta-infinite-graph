@@ -7,4 +7,4 @@ COPY nginx.conf /etc/nginx/conf.d/
 WORKDIR /usr/share/nginx/html
 
 # Copy static files
-COPY index.html ./
+COPY . ./

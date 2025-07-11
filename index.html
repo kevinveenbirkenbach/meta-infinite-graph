@@ -3,77 +3,35 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Meta Infinity 3D</title>
-  <style>
-    body { margin: 0; overflow: hidden; font-family: sans-serif; }
-    #3d-graph { width: 100vw; height: 100vh; }
-    #sidebar {
-      position: absolute;
-      top: 10px; right: 10px;
-      width: 300px; max-height: 90vh;
-      background: rgba(255,255,255,0.9);
-      padding: 10px;
-      overflow-y: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    a { color: #3498db; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="3d-graph"></div>
+  <div id="controls">
+    <label>
+      Role:
+      <select id="sel-role"></select>
+    </label>
+    <label>
+      Dependency:
+      <select id="sel-dep">
+        <option value="run_after">run_after</option>
+        <option value="dependencies">dependencies</option>
+      </select>
+    </label>
+    <label>
+      Direction:
+      <select id="sel-dir">
+        <option value="to">to</option>
+        <option value="from">from</option>
+      </select>
+    </label>
+    <button id="btn-go">Load Graph</button>
+  </div>
   <div id="sidebar">Loading…</div>
 
-  <!-- Three.js and 3d-force-graph -->
   <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph/dist/3d-force-graph.min.js"></script>
-
-  <script>
-    // 1) Read query params (role, dependency type, direction)
-    const params = new URLSearchParams(window.location.search);
-    const role = params.get('role') || 'web-app-akaunting';
-    const dep = params.get('dep') || 'run_after';
-    const dir = params.get('dir') || 'to';
-
-    // 2) Compute path to the generated tree.json under roles
-    const treePath = `roles/${role}/meta/tree.json`;
-
-    // 3) Fetch the combined mappings JSON
-    fetch(treePath)
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load ${treePath}: ${res.status}`);
-        return res.json();
-      })
-      .then(allGraphs => {
-        const key = `${dep}_${dir}`;
-        const data = allGraphs[key];
-        if (!data) throw new Error(`Graph key not found: ${key}`);
-
-        // 4) Initialize and render graph
-        ForceGraph3D()(document.getElementById('3d-graph'))
-          .linkDirectionalArrowLength(4)
-          .linkDirectionalArrowRelPos(1)
-          .nodeLabel(d => d.id)
-          .onNodeClick(showDetails)
-          .graphData(data);
-
-        document.getElementById('sidebar').innerText = 'Click a node for details';
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('sidebar').innerText = 'Error loading graph data';
-      });
-
-    // 5) Sidebar detail renderer
-    function showDetails(node) {
-      document.getElementById('sidebar').innerHTML = `
-        <h2>${node.id}</h2>
-        <p>${node.description || ''}</p>
-        <p>
-          <a href="${node.doc_url}" target="_blank">Documentation</a><br/>
-          <a href="${node.source_url}" target="_blank">Source Code</a>
-        </p>
-      `;
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

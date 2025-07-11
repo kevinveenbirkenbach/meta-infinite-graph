@@ -9,5 +9,6 @@ services:
       ROLES_DIR: ${ROLES_DIR:-/roles}
     volumes:
       - "${ROLES_DIR}:/usr/share/nginx/html/roles:ro"
+      - ./:/usr/share/nginx/html
     ports:
       - "8000:80"
