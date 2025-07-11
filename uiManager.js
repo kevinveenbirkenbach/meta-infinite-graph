@@ -1,4 +1,5 @@
 // uiManager.js
+
 class UIManager {
   constructor(dataLoader, selectionManager, graphRenderer, autoResolver) {
     this.dataLoader       = dataLoader;
@@ -7,28 +8,29 @@ class UIManager {
     this.autoResolver     = autoResolver;
     this._iterId          = null;
 
-    // Role dropdown
+    // Role dropdown → full reload
     document.getElementById('sel-role')
-      .addEventListener('change', () => {
-        this._updateURL();
-        this._onSelectionChange();
-      });
+      .addEventListener('change', () => this._onSelectionChange());
 
-    // Start ▶
+    // Start / Stop iteration
     document.getElementById('btn-start')
       .addEventListener('click', () => this._startIteration());
-
-    // Stop ⏸
     document.getElementById('btn-stop')
       .addEventListener('click', () => this._stopIteration());
 
-    // Zoom In/Out
+    // Zoom controls
     document.getElementById('btn-zoom-in')
       .addEventListener('click', () => this.graphRenderer.zoom(0.8));
     document.getElementById('btn-zoom-out')
       .addEventListener('click', () => this.graphRenderer.zoom(1.2));
 
-    // Node click → show details + load subtree
+    // When background fetch returns
+    this.autoResolver.on('treeFetched', ({ data }) => {
+      this.graphRenderer.mergeData(data);
+      this.graphRenderer.refreshColors();
+    });
+
+    // On click of any node
     this.graphRenderer.on('nodeClicked', ({ node }) => {
       this._showDetails(node);
       this._loadSubtree(node);
@@ -42,46 +44,41 @@ class UIManager {
     );
   }
 
-  _updateURL() {
-    const params = new URLSearchParams();
-    params.set('role', document.getElementById('sel-role').value);
-    this._getSelectedMappings().forEach(m => params.append('mapping', m));
-    history.replaceState(null, '', `${location.pathname}?${params}`);
-  }
-
   _onSelectionChange() {
     const role     = document.getElementById('sel-role').value;
     const mappings = this._getSelectedMappings();
     if (!role || mappings.length === 0) return;
 
-    // stop any auto‐iteration
+    // Reset iteration
     this._stopIteration();
 
-    // reset graph
+    // Reset graph state
     this.autoResolver.stop();
     this.selectionManager.loadedRoles.clear();
     this.selectionManager.roleStatus = {};
+    this.selectionManager.setStartRole(role);
     this.selectionManager.setSelected(role);
     this.graphRenderer.graph.graphData({ nodes: [], links: [] });
 
-    // initial fetch
+    // Initial batch load
     this.dataLoader.fetchTrees(role, mappings)
       .then(data => {
         this.graphRenderer.mergeData(data);
         this.selectionManager.markLoaded(role, data);
         this.graphRenderer.refreshColors();
-        // show root details
+        // Show root details
         const root = this.graphRenderer.graph.graphData().nodes
                         .find(n => n.id === role);
         if (root) this._showDetails(root);
       })
       .catch(err => {
         console.error('Initial load error', err);
-        document.getElementById('details').innerText = 'Error loading graph';
+        document.getElementById('details')
+          .innerText = 'Error loading graph';
       });
 
-    // background queue
-    this.autoResolver.queue = mappings.map(_=>role);
+    // Enqueue root for background resolution
+    this.autoResolver.queue = [ role ];
     this.autoResolver.start(mappings);
   }
 
@@ -99,12 +96,12 @@ class UIManager {
   _showDetails(node) {
     const icon = node.logo?.class || 'fa-solid fa-cube';
     document.getElementById('details').innerHTML = `
-      <h2 style="display:flex; align-items:center;">
+      <h2 style="display:flex; align-items:center; margin:0 0 8px;">
         <i class="${icon}" style="margin-right:8px;"></i>
         <span>${node.id}</span>
       </h2>
-      <p>${node.description || ''}</p>
-      <p>
+      <p style="margin:0 0 12px;">${node.description || ''}</p>
+      <p style="margin:0; font-size:14px;">
         <a href="${node.doc_url}"    target="_blank">Documentation</a><br/>
         <a href="${node.source_url}" target="_blank">Source Code</a>
       </p>
@@ -124,13 +121,14 @@ class UIManager {
     this._iterId = setInterval(() => {
       const next = this.graphRenderer.graph.graphData().nodes
         .find(n => this.selectionManager.getColor(n.id) === 'orange');
-      if (next) {
-        this.selectionManager.setSelected(next.id);
-        this._showDetails(next);
-        this._loadSubtree(next);
-      } else {
+      if (!next) {
         this._stopIteration();
+        return;
       }
+      // “click” it
+      this.selectionManager.setSelected(next.id);
+      this._showDetails(next);
+      this._loadSubtree(next);
     }, interval);
   }
 
