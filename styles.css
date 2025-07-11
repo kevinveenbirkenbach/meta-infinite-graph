@@ -1,83 +1,26 @@
-body {
-  margin: 0;
-  overflow: hidden;
-  font-family: sans-serif;
-}
-
-/* Fullscreen 3D graph container */
-#3d-graph {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-/* Sidebar on the right */
+/* Sidebar */
 #sidebar {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 320px;
+  width: 340px;
   max-height: 95vh;
-  background: rgba(255,255,255,0.95);
-  padding: 12px;
   overflow-y: auto;
-  border-radius: 6px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.25);
-  z-index: 1;
+  z-index: 10;
+  background: rgba(255,255,255,0.8);
 }
 
-/* Navigation section at top of sidebar */
-#navigation {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
+/* Legend Dot */
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: text-bottom;
 }
-
-/* Details section below navigation */
-#details {
-  /* default styling */
-}
-
-/* Form elements */
-label {
-  display: block;
-  margin: 6px 0;
-  font-size: 14px;
-}
-select, button {
-  width: 100%;
-  margin-top: 4px;
-  font-size: 14px;
-}
-button {
-  cursor: pointer;
-}
-#mapping-controls label {
-  font-size: 13px;
-}
-
-/* button + input on one row */
-#button-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-/* icon-only buttons */
-#button-row button {
-  flex: none;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  font-size: 16px;
-}
-
-/* small interval input */
-#button-row input#iter-interval {
-  width: 50px;
-  padding: 4px;
-  font-size: 14px;
-  text-align: center;
-}
-
-
+.bg-purple { background-color: purple; }
+.bg-pink   { background-color: pink; }
+.bg-orange { background-color: orange; }
+.bg-green  { background-color: green; }
+.bg-red    { background-color: red; }

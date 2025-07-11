@@ -1,5 +1,6 @@
 // app.js
 
+// Core Manager instanziieren
 const dataLoader       = new DataLoader('/roles');
 const selectionManager = new SelectionManager();
 const graphRenderer    = new GraphRenderer('3d-graph', selectionManager);
@@ -8,10 +9,41 @@ const uiManager        = new UIManager(
   dataLoader, selectionManager, graphRenderer, autoResolver
 );
 
-// 1) Populate roles dropdown
+// URL‐Parameter helper
+function getParams() {
+  const p = new URLSearchParams(window.location.search);
+  return {
+    role:     p.get('role') || '',
+    mappings: p.getAll('mapping')
+  };
+}
+
+// Mapping‐Checkboxen bauen
+function buildMappingControls(allKeys, checkedKeys) {
+  const container = document.getElementById('mapping-controls');
+  container.innerHTML = '';  // leeren
+  allKeys.forEach(key => {
+    const id = `cb_${key}`;
+    const checked = checkedKeys.includes(key) ? 'checked' : '';
+    container.insertAdjacentHTML('beforeend', `
+      <div class="form-check form-check-sm">
+        <input class="form-check-input" type="checkbox"
+               name="mapping" value="${key}" id="${id}"
+               ${checked}>
+        <label class="form-check-label" for="${id}">
+          ${key.replace(/_/g,' → ')}
+        </label>
+      </div>
+    `);
+    document.getElementById(id)
+      .addEventListener('change', () => uiManager._onSelectionChange());
+  });
+}
+
+// 1) Rollen‐Liste holen
 fetch('/roles/list.json')
   .then(r => {
-    if (!r.ok) throw new Error(r.status);
+    if (!r.ok) throw new Error(`Status ${r.status}`);
     return r.json();
   })
   .then(roles => {
@@ -22,31 +54,18 @@ fetch('/roles/list.json')
       sel.appendChild(o);
     });
 
-    // 2) fetch mappings for initial selection
-    sel.value = roles[0] || '';
-    return dataLoader.getMappingsForRole(sel.value);
-  })
-  .then(allKeys => {
-    // build mapping-checkbox controls
-    const params = new URLSearchParams(window.location.search);
-    const checked = params.getAll('mapping');
-    const container = document.getElementById('mapping-controls');
-    container.innerHTML = '<legend>Mappings</legend>';
-    allKeys.forEach(key => {
-      const id = `cb_${key}`;
-      const isChecked = checked.includes(key) ? 'checked' : '';
-      container.insertAdjacentHTML('beforeend', `
-        <label>
-          <input type="checkbox" name="mapping"
-                 value="${key}" id="${id}" ${isChecked}>
-          ${key.replace(/_/g,' → ')}
-        </label><br/>
-      `);
-      document.getElementById(id)
-        .addEventListener('change', () => uiManager._onSelectionChange());
-    });
+    // initial aus URL oder erstes Element
+    const { role, mappings } = getParams();
+    sel.value = role || roles[0] || '';
+    sel.addEventListener('change', () => uiManager._onSelectionChange());
 
-    // 3) initial graph load
+    // 2) Mappings für diese Rolle laden
+    return dataLoader.getMappingsForRole(sel.value)
+      .then(allKeys => ({ allKeys, mappings }));
+  })
+  .then(({ allKeys, mappings }) => {
+    buildMappingControls(allKeys, mappings);
+    // 3) initialen Graph schießen
     uiManager._onSelectionChange();
   })
   .catch(err => {

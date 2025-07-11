@@ -2,55 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Meta Infinity 3D</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Meta Infinite Graph</title>
+
+  <!-- Bootstrap CSS -->
   <link
-    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+    rel="stylesheet">
+
+  <style>
+    body { margin: 0; overflow: hidden; }
+    #3d-graph { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+    .offcanvas-backdrop,
+    .offcanvas { background-color: rgba(255,255,255,0.8) !important; }
+  </style>
 </head>
 <body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="btn btn-outline-light" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <span class="navbar-brand ms-2">
+        <i class="fa-solid fa-project-diagram me-1"></i>
+        Meta Infinite Graph
+      </span>
+    </div>
+  </nav>
+
   <div id="3d-graph"></div>
 
-  <div id="sidebar">
-    <!-- NAVIGATION -->
-    <div id="navigation">
-      <label>
-        Role:
-        <select id="sel-role"></select>
-      </label>
-      <div id="mapping-controls"></div>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">
+        <i class="fa-solid fa-cubes-stacked me-1"></i>
+        Controls
+      </h5>
+      <button type="button" class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
 
-      <div id="button-row">
-        <button id="btn-start" title="Start auto-iteration">
+      <!-- Role -->
+      <div class="mb-3">
+        <label for="sel-role" class="form-label">Role</label>
+        <select id="sel-role" class="form-select"></select>
+      </div>
+
+      <!-- Mappings -->
+      <fieldset id="mapping-controls" class="mb-3">
+        <legend class="form-label">Mappings</legend>
+        <!-- dynamically injected -->
+      </fieldset>
+
+      <hr/>
+
+      <!-- Compact Control Bar -->
+      <div class="input-group input-group-sm mb-3">
+        <button id="btn-start" class="btn btn-primary" title="Start">
           <i class="fa-solid fa-play"></i>
         </button>
-        <button id="btn-stop" title="Stop auto-iteration" disabled>
+        <button id="btn-stop" class="btn btn-secondary" title="Stop" disabled>
           <i class="fa-solid fa-pause"></i>
         </button>
-        <input id="iter-interval"
-               type="number" min="0.1" step="0.1"
-               value="0.5"
-               title="Interval (s)" />
-
-        <button id="btn-zoom-in" title="Zoom In">
+        <span class="input-group-text">Interval</span>
+        <input id="iter-interval" type="number" class="form-control text-center"
+               min="0.1" step="0.1" value="0.5" title="Seconds"/>
+        <button id="btn-zoom-in" class="btn btn-outline-dark" title="Zoom In">
           <i class="fa-solid fa-search-plus"></i>
         </button>
-        <button id="btn-zoom-out" title="Zoom Out">
+        <button id="btn-zoom-out" class="btn btn-outline-dark" title="Zoom Out">
           <i class="fa-solid fa-search-minus"></i>
         </button>
       </div>
-    </div>
 
-    <!-- DETAILS -->
-    <div id="details">Loading…</div>
+      <!-- Details -->
+      <div id="details" class="small text-wrap" style="max-height:200px; overflow:auto;">
+        Loading…
+      </div>
+      <hr/>
+
+      <div class="small text-center">
+        <a href="https://github.com/kevinveenbirkenbach/meta-infinite-graph" target="_blank">
+          <i class="fa-brands fa-github"></i> Source
+        </a> •
+        <a href="https://www.veen.world" target="_blank">
+          <i class="fa-solid fa-user"></i> Kevin Veen-Birkenbach
+        </a> •
+        <i class="fa-solid fa-scale-balanced"></i> MIT License
+      </div>
+    </div>
   </div>
 
-  <!-- Three.js & ForceGraph -->
   <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph/dist/3d-force-graph.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- App Scripts -->
   <script src="dataLoader.js"></script>
   <script src="selectionManager.js"></script>
   <script src="autoResolver.js"></script>
