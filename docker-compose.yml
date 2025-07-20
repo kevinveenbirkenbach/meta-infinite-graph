@@ -5,10 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      ROLES_DIR: ${ROLES_DIR:-/roles}
     volumes:
-      - "${ROLES_DIR}:/usr/share/nginx/html/roles:ro"
+      # - "${ROLES_DIR:-./roles}:/usr/share/nginx/html/roles:ro"
       - ./:/usr/share/nginx/html
     ports:
       - "8000:80"

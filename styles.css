@@ -1,11 +1,16 @@
 /* Make the graph container fill the screen */
-body {
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   overflow: hidden;
 }
+
 #3d-graph {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Sidebar sits beneath the navbar */

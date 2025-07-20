@@ -5,6 +5,7 @@ class GraphRenderer {
     this.selectionManager = selectionManager;
     this._listeners       = {};
 
+    // 1) Initialize the 3D graph
     this.graph = ForceGraph3D()(this.container)
       .linkDirectionalArrowLength(4)
       .linkDirectionalArrowRelPos(1)
@@ -14,8 +15,22 @@ class GraphRenderer {
         this._emit('nodeClicked', { node });
       })
       .nodeColor(d => this.selectionManager.getColor(d.id));
+
+    // 2) Initial resize to fit container
+    this._resizeGraph();
+
+    // 3) Observe future container resizes
+    this._resizeObserver = new ResizeObserver(() => this._resizeGraph());
+    this._resizeObserver.observe(this.container);
   }
 
+  // Helper to update internal graph dimensions
+  _resizeGraph() {
+    const width  = this.container.clientWidth;
+    const height = this.container.clientHeight;
+    this.graph.width(width).height(height);
+  }
+  
   on(event, fn) {
     (this._listeners[event] = this._listeners[event]||[]).push(fn);
   }

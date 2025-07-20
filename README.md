@@ -38,6 +38,24 @@ docker-compose up --build
 
 ---
 
+## 🚀 Preparing the Data 🗂️
+
+Before launching the Meta Infinite Graph, you need to generate the raw data from your Ansible roles. Run these commands in your terminal:
+
+```bash
+# 🛠️ Generate the full dependency tree of all roles
+cymais build tree --s "$(pkgmgr path mig)/roles/"
+
+# 📋 Export a JSON list of all available roles
+cymais build roles_list -o "$(pkgmgr path mig)/roles/list.json"
+```
+
+* **🔍 `build tree`** scans your roles directory and constructs the complete graph of role dependencies.
+* **📝 `build roles_list`** outputs every discovered role into a `list.json`, which the graph viewer’s sidebar uses for role selection.
+
+Once both commands complete successfully, all required data will reside in `$(pkgmgr path mig)/roles/` and can be loaded by the 3D visualization tool. 🚀🎉
+
+
 ## 📝 Usage
 
 1. Browse to `http://localhost:8000`
