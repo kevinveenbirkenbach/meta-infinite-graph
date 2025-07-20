@@ -1,22 +1,26 @@
 /* styles.css */
 
-/* Ensure html/body fill the iframe viewport */
+/* Make html/body fill the iframe (or viewport) fully */
 html, body {
-  width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
-/* Main graph container always spans full iframe */
+/* Graph container must always cover its parent */
 #graph3d {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
   width: 100%;
   height: 100%;
-  /* Fallback if % heights don’t propagate inside iframe */
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+/* Force the WebGL <canvas> to match #graph3d exactly */
+#graph3d canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* Sidebar sits beneath the navbar */

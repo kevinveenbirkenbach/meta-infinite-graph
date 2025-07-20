@@ -3,7 +3,7 @@
 // Core Manager instanziieren
 const dataLoader       = new DataLoader('/roles');
 const selectionManager = new SelectionManager();
-const graphRenderer    = new GraphRenderer('3d-graph', selectionManager);
+const graphRenderer    = new GraphRenderer('graph3d', selectionManager);
 const autoResolver     = new AutoResolver(dataLoader, selectionManager);
 const uiManager        = new UIManager(
   dataLoader, selectionManager, graphRenderer, autoResolver
