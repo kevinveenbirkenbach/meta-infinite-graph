@@ -1,4 +1,6 @@
-/* Make the graph container fill the screen */
+/* styles.css */
+
+/* Ensure html/body fill the iframe viewport */
 html, body {
   width: 100%;
   height: 100%;
@@ -6,11 +8,15 @@ html, body {
   overflow: hidden;
 }
 
-#3d-graph {
+/* Main graph container always spans full iframe */
+#graph3d {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100%;
   height: 100%;
+  /* Fallback if % heights don’t propagate inside iframe */
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Sidebar sits beneath the navbar */
