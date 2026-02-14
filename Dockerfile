@@ -17,14 +17,7 @@ COPY nginx.conf /etc/nginx/sites-available/mig.conf
 RUN ln -s /etc/nginx/sites-available/mig.conf /etc/nginx/sites-enabled/mig.conf
 
 WORKDIR /usr/share/nginx/html
-COPY index.html ./
-COPY app.js ./
-COPY dataLoader.js ./
-COPY selectionManager.js ./
-COPY autoResolver.js ./
-COPY graphRenderer.js ./
-COPY uiManager.js ./
-COPY styles.css ./
+COPY src/ ./
 
 RUN set -euo pipefail; \
   MIG_WEB_ROLES_DIR="/usr/share/nginx/html/roles"; \

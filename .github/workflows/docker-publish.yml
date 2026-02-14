@@ -13,7 +13,17 @@ permissions:
   packages: write
 
 jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run E2E
+        run: BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/infinito-debian:latest make e2e PORT=18080
+
   build:
+    needs: e2e
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

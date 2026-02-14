@@ -1,9 +1,9 @@
-version: '3.8'
-
 services:
   meta-infinite-graph:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-ghcr.io/kevinveenbirkenbach/infinito-debian:latest}
     ports:
       - "${MIG_PORT:-8000}:80"

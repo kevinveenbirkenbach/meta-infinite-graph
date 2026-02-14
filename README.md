@@ -33,28 +33,34 @@ Or simply clone and run with Docker:
 ```bash
 git clone https://github.com/kevinveenbirkenbach/meta-infinite-graph.git
 cd meta-infinite-graph
-docker-compose up --build
+make up
 ```
 
 ---
 
 ## 🚀 Preparing the Data 🗂️
 
-Before launching the Meta Infinite Graph, you need to generate the raw data from your Ansible roles. Run these commands in your terminal:
+The Docker image generates role data during image build:
 
 ```bash
-# 🛠️ Generate the full dependency tree of all roles
-cymais build tree --s "$(pkgmgr path mig)/roles/"
-
-# 📋 Export a JSON list of all available roles
-cymais build roles_list -o "$(pkgmgr path mig)/roles/list.json"
+docker build -t mig-local .
 ```
 
-* **🔍 `build tree`** scans your roles directory and constructs the complete graph of role dependencies.
-* **📝 `build roles_list`** outputs every discovered role into a `list.json`, which the graph viewer’s sidebar uses for role selection.
+This build step creates:
 
-Once both commands complete successfully, all required data will reside in `$(pkgmgr path mig)/roles/` and can be loaded by the 3D visualization tool. 🚀🎉
+- `roles/*/meta/tree.json`
+- `roles/list.json`
 
+---
+
+## 🧪 Test & Dev Commands
+
+```bash
+make build          # build image
+make up             # run stack on port 8000
+make e2e            # run end-to-end checks
+make down           # stop stack
+```
 
 ## 📝 Usage
 
