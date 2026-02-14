@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  meta-infinite-graph:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${MIG_PORT:-8000}:80"
