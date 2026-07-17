@@ -50,6 +50,15 @@ html, body {
 .bg-green  { background-color: green; }
 .bg-red    { background-color: red; }
 
+/* Legend edge samples */
+.legend-line {
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
 /* Ensure role description scrolls if too long */
 #role-desc {
   max-height: 80px;

@@ -1,142 +1,203 @@
 // uiManager.js
+//
+// Wires the sidebar to the MetaGraph: edge-kind toggles, attribute facet
+// filters (author / lifecycle / deploy mode), node expansion and the
+// details panel showing every scanned meta attribute.
 class UIManager {
-  constructor(dataLoader, selectionManager, graphRenderer, autoResolver) {
-    this.dataLoader       = dataLoader;
+  constructor(metaGraph, selectionManager, graphRenderer, autoResolver) {
+    this.metaGraph = metaGraph;
     this.selectionManager = selectionManager;
-    this.graphRenderer    = graphRenderer;
-    this.autoResolver     = autoResolver;
-    this._iterId          = null;
+    this.graphRenderer = graphRenderer;
+    this.autoResolver = autoResolver;
+    this._iterId = null;
 
-    // bind
     document.getElementById('sel-role')
-      .addEventListener('change', () => this._onSelectionChange());
+      .addEventListener('change', () => this.onSelectionChange());
     document.getElementById('btn-reload')
-      .addEventListener('click', () => this._onSelectionChange());
+      .addEventListener('click', () => this.onSelectionChange());
     document.getElementById('btn-start')
-      .addEventListener('click',  () => this._startIteration());
+      .addEventListener('click', () => this._startIteration());
     document.getElementById('btn-stop')
-      .addEventListener('click',   () => this._stopIteration());
+      .addEventListener('click', () => this._stopIteration());
     document.getElementById('btn-zoom-in')
-      .addEventListener('click',  () => this.graphRenderer.zoom(0.8));
+      .addEventListener('click', () => this.graphRenderer.zoom(0.8));
     document.getElementById('btn-zoom-out')
       .addEventListener('click', () => this.graphRenderer.zoom(1.2));
+    document.getElementById('btn-flow')
+      .addEventListener('click', () => this.showRunAfterFlow());
+
+    for (const id of ['edge-dependencies', 'edge-dependents', 'edge-run-after', 'edge-role-deps']) {
+      document.getElementById(id)
+        .addEventListener('change', () => this.onSelectionChange());
+    }
 
     this.graphRenderer.on('nodeClicked', ({ node }) => {
-      this._showDetails(node);
-      this._loadSubtree(node);
-    });
-    this.autoResolver.on('treeFetched', ({ data }) => {
-      this.graphRenderer.mergeData(data);
-      this.graphRenderer.refreshColors();
+      this.showDetails(node.id);
+      this.expand(node.id);
     });
   }
 
-  _getCheckedMappings() {
-    return Array.from(
-      document.querySelectorAll('input[name="mapping"]:checked'),
-      cb => cb.value
-    );
+  // The next graph node that has appeared but is not yet expanded.
+  _nextPending() {
+    const pending = this.graphRenderer.graph.graphData().nodes
+      .find(n => !this.selectionManager.loadedRoles.has(n.id));
+    return pending ? pending.id : null;
   }
 
-  _onSelectionChange() {
-    const role     = document.getElementById('sel-role').value;
-    const mappings = this._getCheckedMappings();
+  edgeKinds() {
+    return {
+      dependencies: document.getElementById('edge-dependencies').checked,
+      dependents: document.getElementById('edge-dependents').checked,
+      runAfter: document.getElementById('edge-run-after').checked,
+      roleDependencies: document.getElementById('edge-role-deps').checked,
+    };
+  }
 
-    // URL-Parameter aktualisieren, ohne Neuladen
-    updateUrlParams(role, mappings);
+  filters() {
+    return {
+      author: document.getElementById('facet-author').value,
+      lifecycle: document.getElementById('facet-lifecycle').value,
+      mode: document.getElementById('facet-mode').value,
+    };
+  }
 
-    if (!role || mappings.length === 0) return;
+  buildFacetControls() {
+    const facets = this.metaGraph.facets();
+    const fill = (id, entries) => {
+      const sel = document.getElementById(id);
+      sel.innerHTML = '<option value="">all</option>';
+      entries.forEach(([value, count]) => {
+        const o = document.createElement('option');
+        o.value = value;
+        o.textContent = `${value} (${count})`;
+        sel.appendChild(o);
+      });
+      sel.addEventListener('change', () => this.onSelectionChange());
+    };
+    fill('facet-author', facets.author);
+    fill('facet-lifecycle', facets.lifecycle);
+    fill('facet-mode', facets.modes);
+  }
 
-    // mark root
+  _subgraph(role) {
+    const filters = this.filters();
+    const edges = this.metaGraph
+      .neighborhood(role, this.edgeKinds())
+      .filter(e =>
+        this.metaGraph.matches(e.source, filters) &&
+        this.metaGraph.matches(e.target, filters)
+      );
+    const roleIds = new Set([role]);
+    edges.forEach(e => {
+      roleIds.add(e.source);
+      roleIds.add(e.target);
+    });
+    return {
+      nodes: [...roleIds].map(r => this.metaGraph.node(r)),
+      links: edges.map(e => ({ ...e })),
+    };
+  }
+
+  onSelectionChange() {
+    const role = document.getElementById('sel-role').value;
+    if (!role) return;
+    history.replaceState(null, '', `?role=${encodeURIComponent(role)}`);
+
     this.selectionManager.setStartRole(role);
-    // reset
     this.autoResolver.stop();
+    this.autoResolver.queue = [role];
     this.selectionManager.loadedRoles.clear();
     this.selectionManager.roleStatus = {};
     this.selectionManager.setSelected(role);
     this.graphRenderer.graph.graphData({ nodes: [], links: [] });
 
-    // initial fetch
-    this.dataLoader.fetchTrees(role, mappings)
-      .then(data => {
-        this.graphRenderer.mergeData(data);
-        this.selectionManager.markLoaded(role, data);
-        this.graphRenderer.refreshColors();
-        const rootNode = data.nodes.find(n => n.id === role);
-        if (rootNode) this._showDetails(rootNode);
-        // enqueue for background resolver
-        this.autoResolver.queue = [role];
-        this.autoResolver.start(mappings);
-      })
-      .catch(err => {
-        console.error('Error loading tree for', role, err);
-        document.getElementById('details').textContent =
-          'Error loading graph data';
-      });
+    const data = this._subgraph(role);
+    this.graphRenderer.mergeData(data);
+    this.selectionManager.markLoaded(role, data);
+    this.graphRenderer.refreshColors();
+    this.showDetails(role);
+
+    // Auto-iterate outward from the start node; pending nodes carry the
+    // loading marker until the resolver reaches them.
+    this._startIteration();
   }
 
-  _loadSubtree(node) {
-    const mappings = this._getCheckedMappings();
-    this.dataLoader.fetchTrees(node.id, mappings)
-      .then(data => {
-        this.graphRenderer.mergeData(data);
-        this.selectionManager.markLoaded(node.id, data);
-        this.graphRenderer.refreshColors();
-      })
-      .catch(err => console.error(err));
+  // Global run_after flow: every ordering edge at once, no start role.
+  showRunAfterFlow() {
+    const filters = this.filters();
+    const edges = this.metaGraph.edges.filter(e =>
+      e.kind === 'run_after' &&
+      this.metaGraph.matches(e.source, filters) &&
+      this.metaGraph.matches(e.target, filters)
+    );
+    const roleIds = new Set();
+    edges.forEach(e => {
+      roleIds.add(e.source);
+      roleIds.add(e.target);
+    });
+    this.autoResolver.stop();
+    this.graphRenderer.graph.graphData({ nodes: [], links: [] });
+    this.graphRenderer.mergeData({
+      nodes: [...roleIds].map(r => this.metaGraph.node(r)),
+      links: edges.map(e => ({ ...e })),
+    });
+    roleIds.forEach(r => this.selectionManager.loadedRoles.add(r));
+    this.graphRenderer.refreshColors();
+    setStatus(`run_after flow: ${roleIds.size} roles, ${edges.length} ordering edges`);
   }
 
-  _showDetails(node) {
-    const icon = node.logo?.class || 'fa-solid fa-cube';
+  expand(role) {
+    const data = this._subgraph(role);
+    this.graphRenderer.mergeData(data);
+    this.selectionManager.markLoaded(role, data);
+    this.graphRenderer.refreshColors();
+  }
+
+  showDetails(role) {
+    const attrs = this.metaGraph.attributes[role] || {};
+    const row = (label, value) =>
+      value && (!Array.isArray(value) || value.length)
+        ? `<dt class="col-5">${label}</dt><dd class="col-7">${
+            Array.isArray(value) ? value.join(', ') : value
+          }</dd>`
+        : '';
     document.getElementById('details').innerHTML = `
-      <h6 class="d-flex align-items-center mb-2">
-        <i class="${icon} me-2"></i>${node.id}
-      </h6>
+      <h6 class="mb-2"><i class="fa-solid fa-cube me-2"></i>${role}</h6>
       <p class="small text-wrap mb-2" style="max-height:120px; overflow:auto;">
-        ${node.description || ''}
+        ${attrs.description || ''}
       </p>
-      <p class="small mb-0">
-        <a href="${node.doc_url}"    target="_blank">Documentation</a><br/>
-        <a href="${node.source_url}" target="_blank">Source Code</a>
-      </p>
+      <dl class="row small mb-0">
+        ${row('Weight', String(this.metaGraph.weight(role)))}
+        ${row('Author', attrs.author)}
+        ${row('Lifecycle', attrs.lifecycle)}
+        ${row('Provides', attrs.provides)}
+        ${row('Modes', attrs.modes)}
+        ${row('Services', attrs.services)}
+        ${row('Tags', attrs.galaxy_tags)}
+        ${row('License', attrs.license)}
+      </dl>
     `;
   }
 
   _startIteration() {
-    if (this._iterId) return;
     const interval = parseFloat(
       document.getElementById('iter-interval').value
     ) * 1000;
     if (isNaN(interval) || interval <= 0) return;
     document.getElementById('btn-start').disabled = true;
-    document.getElementById('btn-stop').disabled  = false;
-    this._iterId = setInterval(() => {
-      const next = this.graphRenderer.graph.graphData().nodes
-        .find(n => this.selectionManager.getColor(n.id) === 'orange');
-      if (next) {
-        this.selectionManager.setSelected(next.id);
-        this._showDetails(next);
-        this._loadSubtree(next);
-      } else {
-        this._stopIteration();
-      }
-    }, interval);
+    document.getElementById('btn-stop').disabled = false;
+    this.autoResolver.start(
+      () => this._nextPending(),
+      role => this.expand(role),
+      interval
+    );
   }
 
   _stopIteration() {
-    clearInterval(this._iterId);
-    this._iterId = null;
+    this.autoResolver.stop();
     document.getElementById('btn-start').disabled = false;
-    document.getElementById('btn-stop').disabled  = true;
+    document.getElementById('btn-stop').disabled = true;
   }
-}
-
-// Hilfsfunktion zum Setzen der GET-Parameter in der URL
-function updateUrlParams(role, mappings) {
-  const params = new URLSearchParams();
-  if (role) params.set('role', role);
-  mappings.forEach(m => params.append('mapping', m));
-  history.replaceState(null, '', `?${params.toString()}`);
 }
 
 window.UIManager = UIManager;

@@ -18,15 +18,23 @@ class GraphRenderer {
 
     // 2) Instantiate the ForceGraph3D and attach it
     this.graph = ForceGraph3D()(this.container)
-      .linkDirectionalArrowLength(4)       
-      .linkDirectionalArrowRelPos(1)       
-      .nodeLabel(d => d.id)                
+      .linkDirectionalArrowLength(4)
+      .linkDirectionalArrowRelPos(1)
+      .nodeLabel(d => d.id)
+      .linkColor(l => {
+        if (l.kind === 'run_after') return '#ff9f1c';
+        if (l.kind === 'role_dependency') return '#4682b4';
+        return l.optional ? '#cfcfcf' : '#8a8a8a';
+      })
+      .linkLabel(l => `${l.kind}${l.optional ? ' (0..1)' : ''}${l.via ? ' via ' + l.via : ''}`)
       .onNodeClick(node => {
         // Forward click event upstream
         this.selectionManager.setSelected(node.id);
         this._emit('nodeClicked', { node });
       })
-      .nodeColor(d => this.selectionManager.getColor(d.id));  
+      .nodeColor(d => this.selectionManager.getColor(d.id))
+      .nodeThreeObjectExtend(true)
+      .nodeThreeObject(d => this._loadingSprite(d));
 
     // 3) Resize helper: always use viewport dimensions
     this._resizeGraph = () => {
@@ -61,6 +69,28 @@ class GraphRenderer {
     }, 200);
   }
 
+  // A small ⏳ sprite floating over a node that is still pending expansion;
+  // null for already-expanded nodes so they render as the plain sphere.
+  _loadingSprite(node) {
+    if (this.selectionManager.loadedRoles.has(node.id)) return null;
+    if (!this._loadingTexture) {
+      const canvas = document.createElement('canvas');
+      canvas.width = canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+      ctx.font = '48px serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('⏳', 32, 34);
+      this._loadingTexture = new THREE.CanvasTexture(canvas);
+    }
+    const sprite = new THREE.Sprite(
+      new THREE.SpriteMaterial({ map: this._loadingTexture, depthWrite: false })
+    );
+    sprite.scale.set(8, 8, 1);
+    sprite.position.set(0, 8, 0);
+    return sprite;
+  }
+
   /**
    * Subscribe to renderer events (e.g. 'nodeClicked').
    */
@@ -90,10 +120,13 @@ class GraphRenderer {
   }
 
   /**
-   * Re-apply node colors using SelectionManager’s logic.
+   * Re-apply node colors and loading sprites (a node that just expanded
+   * loses its ⏳; a newly appeared neighbor gains one).
    */
   refreshColors() {
-    this.graph.nodeColor(d => this.selectionManager.getColor(d.id));
+    this.graph
+      .nodeColor(d => this.selectionManager.getColor(d.id))
+      .nodeThreeObject(d => this._loadingSprite(d));
   }
 
   /**

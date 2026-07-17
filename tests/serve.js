@@ -1,0 +1,59 @@
+// Minimal static server mirroring the container: serves src/ at the root and
+// exposes the infinito roles/ tree with a JSON autoindex, so the Playwright
+// suite drives the exact code paths the nginx image does. No dependencies.
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+const PORT = Number(process.argv[2] || 8099);
+const SRC = path.resolve(__dirname, '../src');
+const ROLES = path.resolve(
+  __dirname,
+  '..',
+  process.env.INFINITO_ROLES_DIR || '../infinito-nexus-core/roles'
+);
+
+const MIME = {
+  '.html': 'text/html',
+  '.js': 'application/javascript',
+  '.css': 'text/css',
+  '.yml': 'text/yaml',
+  '.yaml': 'text/yaml',
+  '.json': 'application/json',
+};
+
+function autoindex(dir) {
+  return JSON.stringify(
+    fs.readdirSync(dir, { withFileTypes: true }).map(d => ({
+      name: d.name,
+      type: d.isDirectory() ? 'directory' : 'file',
+    }))
+  );
+}
+
+http
+  .createServer((req, res) => {
+    const url = decodeURIComponent(req.url.split('?')[0]);
+    try {
+      if (url === '/roles/' || url.startsWith('/roles/')) {
+        const rel = url.replace(/^\/roles\/?/, '');
+        const target = path.join(ROLES, rel);
+        if (url.endsWith('/')) {
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          return res.end(autoindex(target || ROLES));
+        }
+        const body = fs.readFileSync(target);
+        res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
+        return res.end(body);
+      }
+      const file = url === '/' ? '/index.html' : url;
+      const target = path.join(SRC, file);
+      const body = fs.readFileSync(target);
+      res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
+      return res.end(body);
+    } catch {
+      res.writeHead(404);
+      res.end('not found');
+    }
+  })
+  .listen(PORT, () => console.log(`serve.js on ${PORT} (roles: ${ROLES})`));

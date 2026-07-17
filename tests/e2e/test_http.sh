@@ -23,42 +23,41 @@ fi
 
 grep -q "Meta Infinite Graph" "${TMP_DIR}/index.html"
 
-status="$(curl -sS -o "${TMP_DIR}/list.json" -w '%{http_code}' "${BASE_URL}/roles/list.json")"
+status="$(curl -sS -o "${TMP_DIR}/roles.json" -w '%{http_code}' "${BASE_URL}/roles/")"
 if [[ "${status}" != "200" ]]; then
-  echo "[e2e] Expected /roles/list.json to return 200, got ${status}" >&2
+  echo "[e2e] Expected /roles/ autoindex to return 200, got ${status}" >&2
   exit 1
 fi
 
-python3 - "${TMP_DIR}/list.json" "${BASE_URL}" <<'PY'
+python3 - "${TMP_DIR}/roles.json" "${BASE_URL}" <<'PY'
 import json
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 
-list_path = sys.argv[1]
+listing_path = sys.argv[1]
 base_url = sys.argv[2]
 
-with open(list_path, "r", encoding="utf-8") as fh:
-    roles = json.load(fh)
+with open(listing_path, "r", encoding="utf-8") as fh:
+    entries = json.load(fh)
 
-if not isinstance(roles, list) or not roles:
-    raise SystemExit("[e2e] roles/list.json is empty or invalid")
+roles = [e["name"] for e in entries if e.get("type") == "directory"]
+if not roles:
+    raise SystemExit("[e2e] /roles/ autoindex lists no role directories")
 
-first_role = roles[0]
-if not isinstance(first_role, str) or not first_role:
-    raise SystemExit("[e2e] First role entry is not a non-empty string")
-
-encoded_role = urllib.parse.quote(first_role, safe="")
-tree_url = f"{base_url}/roles/{encoded_role}/meta/tree.json"
-with urllib.request.urlopen(tree_url, timeout=30) as response:
-    if response.status != 200:
-        raise SystemExit(f"[e2e] tree endpoint status was {response.status}")
-    tree = json.load(response)
-
-if not isinstance(tree, dict) or not tree:
-    raise SystemExit("[e2e] tree.json payload is empty or invalid")
-
-print(f"[e2e] Verified role tree for '{first_role}' ({len(tree)} top-level keys)")
+for role in roles:
+    encoded = urllib.parse.quote(role, safe="")
+    url = f"{base_url}/roles/{encoded}/meta/main.yml"
+    try:
+        with urllib.request.urlopen(url, timeout=30) as response:
+            if response.status == 200 and response.read().strip():
+                print(f"[e2e] scanned meta/main.yml of '{role}'")
+                break
+    except urllib.error.HTTPError:
+        continue
+else:
+    raise SystemExit("[e2e] No role exposed a readable meta/main.yml")
 PY
 
 echo "[e2e] All checks passed"

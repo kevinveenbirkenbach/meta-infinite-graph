@@ -3,7 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        BASE_IMAGE: ${BASE_IMAGE:-ghcr.io/kevinveenbirkenbach/infinito-debian:latest}
     ports:
-      - "${MIG_PORT:-8000}:80"
+      - "${MIG_PORT:?set in .env (generated from default.env)}:80"
+    volumes:
+      # src is bind-mounted (not just COPY'd) so a frontend edit shows on
+      # reload without a rebuild; writable so docker can create the nested
+      # roles mountpoint below it.
+      - "./src:/usr/share/nginx/html"
+      - "${INFINITO_ROLES_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/roles:ro"
