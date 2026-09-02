@@ -185,3 +185,12 @@ table.bond-matrix td {
 .diag {
   background: repeating-linear-gradient(45deg, #000, #000 3px, #1b1d22 3px, #1b1d22 6px);
 }
+
+table.bond-matrix {
+  --bond-hover: #ffd400;
+  --bond-lock: #a855f7;
+}
+
+table.bond-matrix td {
+  cursor: pointer;
+}

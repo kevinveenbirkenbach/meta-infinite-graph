@@ -27,7 +27,8 @@ same scanned metadata. Read only: writing a bond back into a role stays with
 the `bond` CLI, which ships its own editable server.
 
 - **Bond matrix** (`cli.meta.roles.applications.bond`): one cell per role pair,
-  row to column above column to row, brightness `0..1`
+  row to column above column to row, brightness `0..1`. Hovering crosses the
+  pair in yellow, a click locks the cross in violet until the next click on it
 - **Ressources** (`cli.meta.roles.applications.ressources`): the compose
   footprint per role with its shared dependencies resolved recursively
 - **Complexity** (`cli.meta.roles.applications.complexity`): the embedded and

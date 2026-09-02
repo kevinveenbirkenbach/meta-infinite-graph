@@ -78,26 +78,32 @@ class TableView {
     table.className = 'bond-matrix';
 
     const headRow = document.createElement('tr');
-    headRow.appendChild(document.createElement('th'));
-    for (const role of roles) {
+    const corner = document.createElement('th');
+    corner.dataset.col = '0';
+    headRow.appendChild(corner);
+    roles.forEach((role, index) => {
       const th = document.createElement('th');
+      th.dataset.col = String(index + 1);
       const label = document.createElement('div');
       label.textContent = role;
       th.appendChild(label);
       headRow.appendChild(th);
-    }
+    });
     const thead = document.createElement('thead');
     thead.appendChild(headRow);
     table.appendChild(thead);
 
     const tbody = document.createElement('tbody');
-    for (const row of roles) {
+    roles.forEach((row, rowIndex) => {
       const tr = document.createElement('tr');
+      tr.dataset.row = String(rowIndex);
       const rowHead = document.createElement('th');
+      rowHead.dataset.col = '0';
       rowHead.textContent = row;
       tr.appendChild(rowHead);
-      for (const col of roles) {
+      roles.forEach((col, colIndex) => {
         const td = document.createElement('td');
+        td.dataset.col = String(colIndex + 1);
         if (row === col) {
           td.className = 'diag';
         } else {
@@ -105,18 +111,76 @@ class TableView {
           td.appendChild(TableView._bar(edges.get(`${col}|${row}`), col, row));
         }
         tr.appendChild(td);
-      }
+      });
       tbody.appendChild(tr);
-    }
+    });
     table.appendChild(tbody);
 
-    return this._wrap(
+    const section = this._wrap(
       'Bond matrix',
       `${edges.size} bonds across ${roles.length} roles. Row to column above, `
       + 'column to row below. Brightness is the bond: black none, white 1. '
-      + 'Read only; run the infinito bond CLI to edit.',
+      + 'Hover crosses the pair in yellow, a click locks it in violet until the '
+      + 'next click. Read only; run the infinito bond CLI to edit.',
       table
     );
+    section.appendChild(TableView._crosshair(table));
+    return section;
+  }
+
+  static _crosshair(table) {
+    const style = document.createElement('style');
+    let hovered = null;
+    let locked = null;
+
+    const paint = () => {
+      const rules = [];
+      const add = (target, variable) => {
+        if (!target) return;
+        const selectors = [`table.bond-matrix [data-col="${target.col}"]`];
+        if (target.row !== null) {
+          selectors.push(`table.bond-matrix tr[data-row="${target.row}"] > *`);
+        }
+        rules.push(`${selectors.join(',')} { background: var(${variable}); }`);
+        rules.push(
+          `${selectors.map(s => `${s} > span`).join(',')} `
+          + `{ box-shadow: inset 0 0 0 2px var(${variable}); }`
+        );
+      };
+      add(hovered, '--bond-hover');
+      add(locked, '--bond-lock');
+      style.textContent = rules.join('\n');
+    };
+
+    const locate = event => {
+      const cell = event.target.closest('td, th');
+      if (!cell || !table.contains(cell)) return null;
+      const row = cell.parentElement.dataset.row;
+      return { col: cell.dataset.col, row: row === undefined ? null : row };
+    };
+
+    table.addEventListener('mousemove', event => {
+      const target = locate(event);
+      if (target && (!hovered || hovered.col !== target.col || hovered.row !== target.row)) {
+        hovered = target;
+        paint();
+      }
+    });
+
+    table.addEventListener('mouseleave', () => {
+      hovered = null;
+      paint();
+    });
+
+    table.addEventListener('click', event => {
+      const target = locate(event);
+      if (!target) return;
+      const same = locked && locked.col === target.col && locked.row === target.row;
+      locked = same ? null : target;
+      paint();
+    });
+
+    return style;
   }
 
   static _bar(edge, consumer, provider) {

@@ -43,6 +43,28 @@ test('ressources and complexity render a row per application role', async ({ pag
   await expect(page.locator('#tables thead')).toContainText('weight');
 });
 
+test('hover crosses the pair in yellow, a click locks it in violet', async ({ page }) => {
+  await open2d(page);
+  const rows = page.locator('table.bond-matrix tbody tr');
+  await expect.poll(() => rows.count()).toBeGreaterThan(100);
+
+  const row = rows.nth(3);
+  const rowHead = row.locator('th');
+  const columnHead = page.locator('table.bond-matrix thead th').nth(6);
+  const background = locator => locator.evaluate(el => getComputedStyle(el).backgroundColor);
+
+  await row.locator('td').nth(5).hover();
+  await expect.poll(() => background(rowHead)).toBe('rgb(255, 212, 0)');
+  await expect.poll(() => background(columnHead)).toBe('rgb(255, 212, 0)');
+
+  await row.locator('td').nth(5).click();
+  await expect.poll(() => background(rowHead)).toBe('rgb(168, 85, 247)');
+  await expect.poll(() => background(columnHead)).toBe('rgb(168, 85, 247)');
+
+  await row.locator('td').nth(5).click();
+  await expect.poll(() => background(rowHead)).toBe('rgb(255, 212, 0)');
+});
+
 test('the theme follows the system and an explicit choice outlives a reload', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/');
