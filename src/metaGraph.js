@@ -106,7 +106,8 @@ class MetaGraph {
   }
 
   // Edges touching `role`, restricted to the enabled kinds/directions.
-  neighborhood(role, { dependencies, dependents, runAfter, roleDependencies }) {
+  // For dependency/role_dependency, source depends on target.
+  neighborhood(role, { dependencies, dependents, runAfter, roleDependencies, roleDependents }) {
     return this.edges.filter(e => {
       if (e.kind === 'dependency') {
         return (dependencies && e.source === role) || (dependents && e.target === role);
@@ -114,7 +115,7 @@ class MetaGraph {
       if (e.kind === 'run_after') {
         return runAfter && (e.source === role || e.target === role);
       }
-      return roleDependencies && (e.source === role || e.target === role);
+      return (roleDependencies && e.source === role) || (roleDependents && e.target === role);
     });
   }
 

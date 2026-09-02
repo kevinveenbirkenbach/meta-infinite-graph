@@ -26,7 +26,7 @@ class UIManager {
     document.getElementById('btn-flow')
       .addEventListener('click', () => this.showRunAfterFlow());
 
-    for (const id of ['edge-dependencies', 'edge-dependents', 'edge-run-after', 'edge-role-deps']) {
+    for (const id of ['edge-dependencies', 'edge-dependents', 'edge-run-after', 'edge-role-deps', 'edge-role-dependents']) {
       document.getElementById(id)
         .addEventListener('change', () => this.onSelectionChange());
     }
@@ -50,6 +50,7 @@ class UIManager {
       dependents: document.getElementById('edge-dependents').checked,
       runAfter: document.getElementById('edge-run-after').checked,
       roleDependencies: document.getElementById('edge-role-deps').checked,
+      roleDependents: document.getElementById('edge-role-dependents').checked,
     };
   }
 

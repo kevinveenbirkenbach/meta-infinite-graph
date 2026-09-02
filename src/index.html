@@ -49,20 +49,24 @@
       <fieldset class="mb-2 small">
         <legend class="form-label mb-1">Edges</legend>
         <div class="form-check form-check-sm">
+          <input class="form-check-input" type="checkbox" id="edge-role-deps">
+          <label class="form-check-label" for="edge-role-deps">Role Dependencies</label>
+        </div>
+        <div class="form-check form-check-sm">
+          <input class="form-check-input" type="checkbox" id="edge-role-dependents">
+          <label class="form-check-label" for="edge-role-dependents">Role Dependents</label>
+        </div>
+        <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-dependencies" checked>
-          <label class="form-check-label" for="edge-dependencies">Dependencies</label>
+          <label class="form-check-label" for="edge-dependencies">Application Dependencies</label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-dependents" checked>
-          <label class="form-check-label" for="edge-dependents">Dependents</label>
+          <label class="form-check-label" for="edge-dependents">Application Dependents</label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-run-after">
           <label class="form-check-label" for="edge-run-after">Run-after flow</label>
-        </div>
-        <div class="form-check form-check-sm">
-          <input class="form-check-input" type="checkbox" id="edge-role-deps">
-          <label class="form-check-label" for="edge-role-deps">Ansible role dependencies</label>
         </div>
       </fieldset>
 
@@ -118,12 +122,12 @@
         <div><span class="legend-dot bg-green"></span>Internal</div>
         <div><span class="legend-dot bg-red"></span>Leaf</div>
         <div class="mt-1">
-          <span class="legend-line" style="background:#8a8a8a"></span>dependency
+          <span class="legend-line" style="background:#8a8a8a"></span>app dep
           <span class="legend-line ms-2" style="background:#cfcfcf"></span>optional
         </div>
         <div>
           <span class="legend-line" style="background:#ff9f1c"></span>run_after
-          <span class="legend-line ms-2" style="background:#4682b4"></span>ansible dep
+          <span class="legend-line ms-2" style="background:#4682b4"></span>role dep
         </div>
       </div>
 
