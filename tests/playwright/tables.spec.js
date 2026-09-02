@@ -10,13 +10,27 @@ async function open2d(page) {
   await page.locator('label[for="mode-2d"]').click();
 }
 
-test('2D mode swaps the canvas for the tables', async ({ page }) => {
+test('the idle mode stays behind the active one at 0.95', async ({ page }) => {
   await open2d(page);
-  await expect(page.locator('#graph3d')).toBeHidden();
-  await expect(page.locator('#tables-pane')).toBeVisible();
+  const graph = page.locator('#graph3d');
+  const pane = page.locator('#tables-pane');
+  const style = locator => locator.evaluate(el => {
+    const computed = getComputedStyle(el);
+    return { opacity: computed.opacity, z: computed.zIndex, events: computed.pointerEvents };
+  });
+
+  await expect(pane).toHaveClass(/pane-front/);
+  await expect(graph).toHaveClass(/pane-back/);
+  expect(await style(pane)).toEqual({ opacity: '0.95', z: '900', events: 'auto' });
+  expect(await style(graph)).toEqual({ opacity: '1', z: '800', events: 'none' });
+  await expect(graph).toBeVisible();
+
   await page.locator('label[for="mode-3d"]').click();
-  await expect(page.locator('#graph3d')).toBeVisible();
-  await expect(page.locator('#tables-pane')).toBeHidden();
+  await expect(graph).toHaveClass(/pane-front/);
+  await expect(pane).toHaveClass(/pane-back/);
+  expect(await style(graph)).toEqual({ opacity: '0.95', z: '900', events: 'auto' });
+  expect(await style(pane)).toEqual({ opacity: '1', z: '800', events: 'none' });
+  await expect(pane).toBeVisible();
 });
 
 test('the bond matrix is square over the participating roles', async ({ page }) => {

@@ -91,7 +91,20 @@ html, body {
   flex-direction: column;
   padding: 12px;
   background: var(--bs-body-bg);
+}
+
+#graph3d.pane-front,
+#tables-pane.pane-front {
+  opacity: 0.95;
   z-index: 900;
+  pointer-events: auto;
+}
+
+#graph3d.pane-back,
+#tables-pane.pane-back {
+  opacity: 1;
+  z-index: 800;
+  pointer-events: none;
 }
 
 #tables {

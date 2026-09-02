@@ -30,13 +30,16 @@ function wireViewMode(tableView) {
   const sidebar = document.getElementById('sidebar');
   const apply = () => {
     const tables = document.getElementById('mode-2d').checked;
-    pane.hidden = !tables;
-    graph.hidden = tables;
+    pane.classList.toggle('pane-front', tables);
+    pane.classList.toggle('pane-back', !tables);
+    graph.classList.toggle('pane-front', !tables);
+    graph.classList.toggle('pane-back', tables);
     sidebar.hidden = tables;
     if (tables) tableView.show(document.querySelector('input[name="table-kind"]:checked').value);
   };
   document.getElementById('mode-3d').addEventListener('change', apply);
   document.getElementById('mode-2d').addEventListener('change', apply);
+  apply();
   for (const input of document.querySelectorAll('input[name="table-kind"]')) {
     input.addEventListener('change', () => tableView.show(input.value));
   }

@@ -16,6 +16,9 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 
 ### Both modes
 
+- **3D / 2D** never hides the other mode. The active one lies over the idle one
+  at 0.95 opacity, so the graph shows through the tables and the tables through
+  the graph; only the front one takes the pointer.
 - **Day/night switch** (🌙 / ☀️) on Bootstrap 5.3's native `data-bs-theme`.
   The system preference decides on first visit; an explicit choice is stored
   and wins until it is toggled again.
