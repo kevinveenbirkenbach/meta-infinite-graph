@@ -19,6 +19,26 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 - **Day/night switch** (🌙 / ☀️) on Bootstrap 5.3's native `data-bs-theme`.
   The system preference decides on first visit; an explicit choice is stored
   and wins until it is toggled again.
+- **Variant awareness** (🧬) reads every role's `meta/variants.yml`. The tables
+  gain one row per variant, and the 3D graph keeps only the dependencies a
+  variant still enables. `bond` itself is constant across variants; what a
+  variant changes is which bonds it deploys.
+- **Symbols instead of names** (🔤 / 🔡) swaps every role name for its mark:
+  the Simple Icons brand where the entity name matches one (81 of 266 roles),
+  otherwise the Font Awesome class from `meta/info.yml`, otherwise a neutral
+  circle.
+- **Role cards** with description, weight, lifecycle, provides, modes,
+  services, tags, author, license, homepage and the video playing inline where
+  the URL names a single video or a playlist (37 of 62 do; a channel or a
+  vendor's video index keeps the link). They replace the sidebar's old details
+  panel.
+
+  Hovering a role opens one, in the tables and on a graph node alike. Cards
+  are independent: opening a second one never closes the first, each opens
+  where its role is and stacks over whatever is already there, and each
+  carries its own close button. A card fades in over 0.1s, lingers half a
+  second after the pointer leaves and fades out over another half. Clicking a
+  graph node pins its card to the node and it follows it until it is closed.
 
 ### 2D tables
 
