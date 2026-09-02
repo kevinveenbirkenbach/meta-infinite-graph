@@ -39,6 +39,15 @@ class UIManager {
     });
   }
 
+  setVariants(raw) {
+    this.metaGraph.setVariants(raw);
+  }
+
+  setVariantAware(flag) {
+    this.metaGraph.variantAware = flag;
+    this.onSelectionChange();
+  }
+
   // The next graph node that has appeared but is not yet expanded.
   _nextPending() {
     const pending = this.graphRenderer.graph.graphData().nodes

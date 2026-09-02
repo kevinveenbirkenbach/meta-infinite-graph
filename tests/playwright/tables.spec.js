@@ -110,23 +110,6 @@ test('the symbol switch replaces role names with icons', async ({ page }) => {
   await expect(firstRowHead).toHaveText('');
 });
 
-test('symbol mode reaches the siblings list and the yes/no columns', async ({ page }) => {
-  await open2d(page);
-  await page.locator('label[for="table-complexity"]').click();
-  const siblings = page.locator('#tables tbody tr').first().locator('td').last();
-  await expect(siblings).toHaveText(/[a-z]/);
-
-  await page.locator('#btn-symbols').click();
-  await expect.poll(
-    () => page.locator('#tables td.role-list [data-role-name]').count(),
-    { timeout: 60000 }
-  ).toBeGreaterThan(0);
-  await expect(page.locator('#tables td.role-list').first()).toHaveText('');
-  await expect
-    .poll(() => page.locator('#tables td.bool i.fa-check, #tables td.bool i.fa-xmark').count())
-    .toBeGreaterThan(0);
-});
-
 test('hovering a role opens a card that outlives the pointer', async ({ page }) => {
   await open2d(page);
   await page.locator('#btn-symbols').click();
@@ -168,6 +151,30 @@ test('a second card opens without replacing the first', async ({ page }) => {
   await expect.poll(() => page.locator('.role-card-host').count(), { timeout: 5000 }).toBe(0);
 });
 
+test('symbol mode reaches the siblings list and the yes/no columns', async ({ page }) => {
+  await open2d(page);
+  await page.locator('label[for="table-complexity"]').click();
+  const siblings = page.locator('#tables tbody tr').first().locator('td').last();
+  await expect(siblings).toHaveText(/[a-z]/);
+
+  await page.locator('#btn-symbols').click();
+  await expect.poll(
+    () => page.locator('#tables td.role-list [data-role-name]').count(),
+    { timeout: 60000 }
+  ).toBeGreaterThan(0);
+  await expect(page.locator('#tables td.role-list').first()).toHaveText('');
+  await expect
+    .poll(() => page.locator('#tables td.bool i.fa-check, #tables td.bool i.fa-xmark').count())
+    .toBeGreaterThan(0);
+
+  const sibling = page.locator('#tables td.role-list [data-role-name]').first();
+  const role = await sibling.getAttribute('data-role-name');
+  await sibling.hover();
+  const card = page.locator(`.role-card-host[data-role="${role}"]`);
+  await expect(card).toBeVisible();
+  await expect(card.locator('.role-card-title')).toContainText(role);
+});
+
 test('a role with a single video plays it inside the card', async ({ page }) => {
   await open2d(page);
 
@@ -199,6 +206,22 @@ test('a role with a single video plays it inside the card', async ({ page }) => 
   await expect(frame).toBeVisible();
   await expect(frame).toHaveAttribute('src', /youtube-nocookie\.com\/embed\//);
   await expect(frame).toHaveAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+});
+
+test('variant awareness adds a variant axis to every table', async ({ page }) => {
+  await open2d(page);
+  const rows = page.locator('table.bond-matrix tbody tr');
+  const before = await rows.count();
+
+  await page.locator('#btn-variants').click();
+  await expect.poll(
+    () => page.locator('table.bond-matrix th.variant-head').count(),
+    { timeout: 90000 }
+  ).toBeGreaterThan(0);
+  expect(await rows.count()).toBeGreaterThan(before);
+
+  await page.locator('label[for="table-complexity"]').click();
+  await expect(page.locator('#tables thead')).toContainText('variant');
 });
 
 test('the service registry resolves bond keys to provider roles', async ({ page }) => {

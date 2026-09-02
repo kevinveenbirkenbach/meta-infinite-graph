@@ -167,6 +167,54 @@ class MetaTables {
     return [...seen].sort();
   }
 
+  setVariants(raw) {
+    this.variants = {};
+    for (const [role, entries] of Object.entries(raw || {})) {
+      if (Array.isArray(entries) && entries.length) this.variants[role] = entries;
+    }
+  }
+
+  variantCount(role) {
+    return this.variants?.[role]?.length || 0;
+  }
+
+  // meta/variants.yml holds overrides, not whole configs.
+  variantServices(role, index) {
+    const base = this._services(role);
+    if (index === null || index === undefined) return base;
+    const override = MetaTables._map(this.variants?.[role]?.[index]).services;
+    return override ? MetaTables._deepMerge(base, override) : base;
+  }
+
+  variantAxis(participants) {
+    const axis = [];
+    for (const role of participants) {
+      const count = this.variantCount(role);
+      if (!count) {
+        axis.push({ role, variant: null });
+        continue;
+      }
+      for (let index = 0; index < count; index += 1) axis.push({ role, variant: index });
+    }
+    return axis;
+  }
+
+  // Only an enabled entry counts. bondEdges() deliberately does not filter,
+  // because that path mirrors the bond CLI exactly.
+  bondsOf(role, variant) {
+    const bonds = new Map();
+    for (const [serviceKey, entry] of Object.entries(this.variantServices(role, variant))) {
+      const conf = MetaTables._map(entry);
+      const bond = MetaTables.parseBond(conf.bond);
+      if (bond === null) continue;
+      if (!MetaTables._isExplicitTruth(conf.enabled)) continue;
+      const provider = this.providerOf(serviceKey);
+      if (!provider || provider === role) continue;
+      bonds.set(provider, { bond, serviceKey });
+    }
+    return bonds;
+  }
+
   static _memBytes(value) {
     if (value === null || value === undefined) return null;
     if (typeof value === 'number') return Math.trunc(value);
@@ -316,12 +364,24 @@ class MetaTables {
     );
   }
 
-  resourceRows() {
-    return Object.keys(this.applications).sort().map(role => {
-      const rows = [];
-      this._collectResources(role, this.applications, new Set(), rows, 1, new Set());
-      return { role, services: rows.length, ...MetaTables.aggregate(rows) };
-    });
+  _variantIndices(role, variantAware) {
+    const count = variantAware ? this.variantCount(role) : 0;
+    return count ? Array.from({ length: count }, (_, index) => index) : [null];
+  }
+
+  resourceRows(variantAware = false) {
+    const out = [];
+    for (const role of Object.keys(this.applications).sort()) {
+      for (const variant of this._variantIndices(role, variantAware)) {
+        const applications = variant === null
+          ? this.applications
+          : { ...this.applications, [role]: { services: this.variantServices(role, variant) } };
+        const rows = [];
+        this._collectResources(role, applications, new Set(), rows, 1, new Set());
+        out.push({ role, variant, services: rows.length, ...MetaTables.aggregate(rows) });
+      }
+    }
+    return out;
   }
 
   _directDepRoles(services) {
@@ -380,25 +440,34 @@ class MetaTables {
     return '';
   }
 
-  complexityRows() {
+  // Only the forward edges are recomputed per variant. Who embeds the role is
+  // a catalog-level fact its own variant choice cannot move.
+  complexityRows(variantAware = false) {
     const { forward, reverse } = this._graphs();
-    const rows = Object.keys(this.applications).sort().map(name => {
-      const services = MetaTables._resolveTransitively(name, forward, null);
-      const consumers = MetaTables._resolveTransitively(name, reverse, null);
-      const servicesDirect = MetaTables._resolveTransitively(name, forward, 1);
-      const consumersDirect = MetaTables._resolveTransitively(name, reverse, 1);
-      return {
-        name,
-        lifecycle: this._lifecycle(name),
-        embeds: services.length,
-        consumers: consumers.length,
-        embeds_direct: servicesDirect.length,
-        consumers_direct: consumersDirect.length,
-        weight: services.length + consumers.length + servicesDirect.length + consumersDirect.length,
-        integrated: servicesDirect.length > 0,
-        dna: [...new Set([name, ...services])].sort().join('\n'),
-      };
-    });
+    const rows = [];
+    for (const name of Object.keys(this.applications).sort()) {
+      for (const variant of this._variantIndices(name, variantAware)) {
+        const scoped = variant === null
+          ? forward
+          : { ...forward, [name]: this._directDepRoles(this.variantServices(name, variant)) };
+        const services = MetaTables._resolveTransitively(name, scoped, null);
+        const consumers = MetaTables._resolveTransitively(name, reverse, null);
+        const servicesDirect = MetaTables._resolveTransitively(name, scoped, 1);
+        const consumersDirect = MetaTables._resolveTransitively(name, reverse, 1);
+        rows.push({
+          name,
+          variant,
+          lifecycle: this._lifecycle(name),
+          embeds: services.length,
+          consumers: consumers.length,
+          embeds_direct: servicesDirect.length,
+          consumers_direct: consumersDirect.length,
+          weight: services.length + consumers.length + servicesDirect.length + consumersDirect.length,
+          integrated: servicesDirect.length > 0,
+          dna: [...new Set([name, ...services])].sort().join('\n'),
+        });
+      }
+    }
 
     const byDna = new Map();
     for (const row of rows) {

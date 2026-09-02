@@ -97,6 +97,30 @@ class MetaGraph {
     }
   }
 
+  setVariants(raw) {
+    this.variants = {};
+    for (const [role, entries] of Object.entries(raw || {})) {
+      if (Array.isArray(entries) && entries.length) this.variants[role] = entries;
+    }
+  }
+
+  // Which variants of `role` keep the services entry `key` enabled. An empty
+  // list on a role that declares variants means no variant deploys it.
+  variantsEnabling(role, key) {
+    const entries = this.variants?.[role];
+    if (!entries) return null;
+    const enabled = [];
+    entries.forEach((entry, index) => {
+      const override = entry?.services?.[key];
+      const base = this._services(role)[key];
+      const flag = override && 'enabled' in override ? override.enabled : base?.enabled;
+      if (flag === true || (typeof flag === 'string' && flag.includes('in group_names'))) {
+        enabled.push(index);
+      }
+    });
+    return enabled;
+  }
+
   _addEdge(source, target, kind, optional, via) {
     this._edgeKeys = this._edgeKeys || new Set();
     const key = `${source}|${target}|${kind}|${via}`;
@@ -108,7 +132,7 @@ class MetaGraph {
   // Edges touching `role`, restricted to the enabled kinds/directions.
   // For dependency/role_dependency, source depends on target.
   neighborhood(role, { dependencies, dependents, runAfter, roleDependencies, roleDependents }) {
-    return this.edges.filter(e => {
+    const kept = this.edges.filter(e => {
       if (e.kind === 'dependency') {
         return (dependencies && e.source === role) || (dependents && e.target === role);
       }
@@ -117,6 +141,24 @@ class MetaGraph {
       }
       return (roleDependencies && e.source === role) || (roleDependents && e.target === role);
     });
+    return this.variantAware ? this._annotateVariants(kept) : kept;
+  }
+
+  _annotateVariants(edges) {
+    const out = [];
+    for (const edge of edges) {
+      if (edge.kind !== 'dependency' || !edge.via) {
+        out.push(edge);
+        continue;
+      }
+      const enabling = this.variantsEnabling(edge.source, edge.via);
+      if (enabling === null) {
+        out.push(edge);
+        continue;
+      }
+      if (enabling.length) out.push({ ...edge, variants: enabling });
+    }
+    return out;
   }
 
   // Weight = number of graph edges touching the role (dependencies +

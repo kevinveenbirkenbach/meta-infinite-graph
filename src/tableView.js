@@ -4,6 +4,7 @@ class TableView {
     this.container = container;
     this.roleInfo = roleInfo;
     this.kind = 'bond';
+    this.variantAware = false;
     this._cache = {};
   }
 
@@ -22,6 +23,10 @@ class TableView {
 
   static _fmtNumber(value) {
     return value === null || value === undefined ? '-' : String(value);
+  }
+
+  static _fmtVariant(variant) {
+    return variant === null || variant === undefined ? '-' : String(variant);
   }
 
   static _cell(text, className) {
@@ -85,7 +90,7 @@ class TableView {
 
   show(kind) {
     this.kind = kind;
-    const key = `${kind}|${this.roleInfo.symbols}`;
+    const key = `${kind}|${this.variantAware}|${this.roleInfo.symbols}`;
     this.container.innerHTML = '';
     if (!this._cache[key]) {
       this._cache[key] = this[`_build${kind[0].toUpperCase()}${kind.slice(1)}`]();
@@ -114,42 +119,79 @@ class TableView {
 
   _buildBond() {
     const edges = this.tables.bondEdges();
-    const roles = MetaTables.bondParticipants(edges);
+    const participants = MetaTables.bondParticipants(edges);
+    const axis = this.variantAware
+      ? this.tables.variantAxis(participants)
+      : participants.map(role => ({ role, variant: null }));
+    const bonds = this.variantAware
+      ? axis.map(entry => this.tables.bondsOf(entry.role, entry.variant))
+      : null;
+
     const table = document.createElement('table');
     table.className = this.roleInfo.symbols ? 'bond-matrix symbols' : 'bond-matrix';
+    const thead = document.createElement('thead');
 
-    const headRow = document.createElement('tr');
-    const corner = document.createElement('th');
-    corner.dataset.col = '0';
-    headRow.appendChild(corner);
-    roles.forEach((role, index) => {
+    if (this.variantAware) {
+      const variantRow = document.createElement('tr');
+      variantRow.appendChild(TableView._corner(2));
+      axis.forEach((entry, index) => {
+        const th = document.createElement('th');
+        th.className = 'variant-head';
+        th.dataset.col = String(index + 1);
+        th.textContent = TableView._fmtVariant(entry.variant);
+        variantRow.appendChild(th);
+      });
+      thead.appendChild(variantRow);
+    }
+
+    const roleRow = document.createElement('tr');
+    roleRow.appendChild(TableView._corner(this.variantAware ? 2 : 1));
+    axis.forEach((entry, index) => {
       const th = document.createElement('th');
       th.dataset.col = String(index + 1);
-      th.dataset.roleName = role;
+      th.dataset.roleName = entry.role;
       const label = document.createElement('div');
-      label.appendChild(this.roleInfo.label(role));
+      label.appendChild(this.roleInfo.label(entry.role));
       th.appendChild(label);
-      headRow.appendChild(th);
+      roleRow.appendChild(th);
     });
-    const thead = document.createElement('thead');
-    thead.appendChild(headRow);
+    thead.appendChild(roleRow);
     table.appendChild(thead);
 
     const tbody = document.createElement('tbody');
-    roles.forEach((row, rowIndex) => {
+    axis.forEach((rowEntry, rowIndex) => {
       const tr = document.createElement('tr');
       tr.dataset.row = String(rowIndex);
-      const rowHead = this._roleCell(row, 'th');
+      if (this.variantAware) {
+        const variantHead = document.createElement('th');
+        variantHead.className = 'variant-head';
+        variantHead.dataset.col = '0';
+        variantHead.textContent = TableView._fmtVariant(rowEntry.variant);
+        tr.appendChild(variantHead);
+      }
+      const rowHead = this._roleCell(rowEntry.role, 'th');
       rowHead.dataset.col = '0';
       tr.appendChild(rowHead);
-      roles.forEach((col, colIndex) => {
+
+      axis.forEach((colEntry, colIndex) => {
         const td = document.createElement('td');
         td.dataset.col = String(colIndex + 1);
-        if (row === col) {
+        if (rowEntry.role === colEntry.role) {
           td.className = 'diag';
+        } else if (this.variantAware) {
+          td.appendChild(TableView._bar(
+            bonds[rowIndex].get(colEntry.role), rowEntry.role, colEntry.role
+          ));
+          td.appendChild(TableView._bar(
+            bonds[colIndex].get(rowEntry.role), colEntry.role, rowEntry.role
+          ));
         } else {
-          td.appendChild(TableView._bar(edges.get(`${row}|${col}`), row, col));
-          td.appendChild(TableView._bar(edges.get(`${col}|${row}`), col, row));
+          td.appendChild(TableView._bar(
+            edges.get(`${rowEntry.role}|${colEntry.role}`), rowEntry.role, colEntry.role
+          ));
+          td.appendChild(TableView._bar(
+            edges.get(`${colEntry.role}|${rowEntry.role}`), colEntry.role, rowEntry.role
+          ));
         }
         tr.appendChild(td);
       });
@@ -157,16 +199,26 @@ class TableView {
     });
     table.appendChild(tbody);
 
+    const scope = this.variantAware
+      ? `${axis.length} variants of ${participants.length} roles. A bond only counts `
+        + 'where the variant enables it, so a row shows what that variant deploys. '
+      : `${edges.size} bonds across ${participants.length} roles. `;
     const section = this._wrap(
       'Bond matrix',
-      `${edges.size} bonds across ${roles.length} roles. Row to column above, `
-      + 'column to row below. A bond of 0 is the page, 1 is its opposite. '
-      + 'Hover crosses the pair in yellow, a click locks it in violet until the '
-      + 'next click. Read only; run the infinito bond CLI to edit.',
+      `${scope}Row to column above, column to row below. A bond of 0 is the page, `
+      + '1 is its opposite. Hover crosses the pair in yellow, a click locks it in '
+      + 'violet until the next click. Read only; run the infinito bond CLI to edit.',
       table
     );
     section.appendChild(TableView._crosshair(table));
     return section;
+  }
+
+  static _corner(span) {
+    const th = document.createElement('th');
+    th.className = 'corner';
+    if (span > 1) th.colSpan = span;
+    return th;
   }
 
   static _crosshair(table) {
@@ -238,15 +290,17 @@ class TableView {
   }
 
   _buildRessources() {
-    const rows = this.tables.resourceRows();
+    const rows = this.tables.resourceRows(this.variantAware);
     const table = document.createElement('table');
     table.className = 'table table-sm table-striped';
-    table.appendChild(TableView._headRow([
-      'role', 'services', 'mem_reservation', 'mem_limit', 'min_storage', 'pids_limit', 'cpus',
-    ]));
+    const headers = ['role', 'services', 'mem_reservation', 'mem_limit', 'min_storage', 'pids_limit', 'cpus'];
+    table.appendChild(TableView._headRow(this.variantAware ? ['variant', ...headers] : headers));
     const tbody = document.createElement('tbody');
     for (const row of rows) {
       const tr = document.createElement('tr');
+      if (this.variantAware) {
+        tr.appendChild(TableView._cell(TableView._fmtVariant(row.variant), 'num'));
+      }
       tr.append(
         this._roleCell(row.role),
         TableView._cell(String(row.services), 'num'),
@@ -260,27 +314,34 @@ class TableView {
     }
     table.appendChild(tbody);
 
+    const scope = this.variantAware
+      ? `${rows.length} rows, one per meta/variants.yml variant`
+      : `${rows.length} application roles, base config`;
     return this._wrap(
       'Resource footprint per role',
-      `${rows.length} application roles, base config, shared dependencies resolved `
-      + 'recursively. mem and pids are summed, cpus is the maximum. The CLI shows the '
-      + 'heaviest meta/variants.yml variant instead; variants are not read here.',
+      `${scope}, shared dependencies resolved recursively. mem and pids are summed, `
+      + 'cpus is the maximum.',
       table
     );
   }
 
   _buildComplexity() {
-    const rows = this.tables.complexityRows()
-      .sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name));
+    const rows = this.tables.complexityRows(this.variantAware)
+      .sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name)
+        || (a.variant || 0) - (b.variant || 0));
     const table = document.createElement('table');
     table.className = 'table table-sm table-striped';
-    table.appendChild(TableView._headRow([
+    const headers = [
       'role', 'lifecycle', 'embeds', 'consumers', 'embeds_direct', 'consumers_direct',
       'weight', 'integrated', 'clone', 'siblings',
-    ]));
+    ];
+    table.appendChild(TableView._headRow(this.variantAware ? ['variant', ...headers] : headers));
     const tbody = document.createElement('tbody');
     for (const row of rows) {
       const tr = document.createElement('tr');
+      if (this.variantAware) {
+        tr.appendChild(TableView._cell(TableView._fmtVariant(row.variant), 'num'));
+      }
       tr.append(
         this._roleCell(row.name),
         TableView._cell(row.lifecycle || '-'),
@@ -297,11 +358,15 @@ class TableView {
     }
     table.appendChild(tbody);
 
+    const scope = this.variantAware
+      ? `${rows.length} rows, one per variant; a variant changes what the role embeds, `
+        + 'never who embeds it'
+      : `${rows.length} application roles`;
     return this._wrap(
       'Complexity',
-      `${rows.length} application roles, heaviest first. The CI columns the CLI adds `
-      + '(compose, swarm, host, stack, test_*, variants, in_main) need the git history, '
-      + 'default.env and each role templates directory, none of which the browser reads.',
+      `${scope}, heaviest first. The CI columns the CLI adds (compose, swarm, host, `
+      + 'stack, test_*, variants, in_main) need the git history, default.env and each '
+      + 'role templates directory, none of which the browser reads.',
       table
     );
   }

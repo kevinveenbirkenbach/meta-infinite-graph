@@ -42,17 +42,40 @@ function wireViewMode(tableView) {
   }
 }
 
-function wireSymbolSwitch(tableView, roleInfo) {
-  const button = document.getElementById('btn-symbols');
-  button.addEventListener('click', () => {
-    button.disabled = true;
+function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
+  const variantButton = document.getElementById('btn-variants');
+  const symbolButton = document.getElementById('btn-symbols');
+  let variantsLoaded = false;
+
+  variantButton.addEventListener('click', () => {
+    const next = !tableView.variantAware;
+    const start = variantsLoaded
+      ? Promise.resolve()
+      : dataLoader.loadSideFileAll(roles, 'variants').then(raw => {
+        tableView.tables.setVariants(raw);
+        uiManager.setVariants(raw);
+        variantsLoaded = true;
+      });
+    variantButton.disabled = true;
+    start.then(() => {
+      tableView.variantAware = next;
+      uiManager.setVariantAware(next);
+      variantButton.classList.toggle('active', next);
+      variantButton.title = `Variant aware: ${next ? 'on' : 'off'}`;
+      variantButton.disabled = false;
+      tableView.refresh();
+    });
+  });
+
+  symbolButton.addEventListener('click', () => {
+    symbolButton.disabled = true;
     roleInfo.load().then(() => {
       roleInfo.symbols = !roleInfo.symbols;
-      button.textContent = roleInfo.symbols ? '🔡' : '🔤';
-      button.title = roleInfo.symbols
+      symbolButton.textContent = roleInfo.symbols ? '🔡' : '🔤';
+      symbolButton.title = roleInfo.symbols
         ? 'Show role names as symbols'
         : 'Show role names as text';
-      button.disabled = false;
+      symbolButton.disabled = false;
       tableView.refresh();
     });
   });
@@ -78,9 +101,21 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       roleInfo
     );
     wireViewMode(tableView);
-    wireSymbolSwitch(tableView, roleInfo);
+    const autoResolver = new AutoResolver();
+    const uiManager = new UIManager(
+      metaGraph, selectionManager, graphRenderer, autoResolver
+    );
+    wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, metaGraph.roles);
+
     const cardHost = new RoleCardHost(roleInfo);
     cardHost.bind(document.getElementById('tables'));
+    graphRenderer.on('nodeClicked', ({ node }) => {
+      cardHost.pin(node.id, () => {
+        const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);
+        return point ? { x: point.x, y: point.y } : null;
+      });
+    });
+    graphRenderer.on('backgroundClicked', () => cardHost.unpin());
     let hoveredNode = null;
     graphRenderer.on('nodeHovered', ({ node }) => {
       if (hoveredNode && hoveredNode !== node?.id) cardHost.release(hoveredNode);
@@ -89,18 +124,6 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);
       cardHost.show(node.id, point ? { x: point.x, y: point.y } : { x: 20, y: 80 });
     });
-    graphRenderer.on('nodeClicked', ({ node }) => {
-      cardHost.pin(node.id, () => {
-        const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);
-        return point ? { x: point.x, y: point.y } : null;
-      });
-    });
-    graphRenderer.on('backgroundClicked', () => cardHost.unpin());
-
-    const autoResolver = new AutoResolver();
-    const uiManager = new UIManager(
-      metaGraph, selectionManager, graphRenderer, autoResolver
-    );
 
     // Heaviest role first, so the dropdown and the default start node both
     // open on the busiest hub of the graph.
