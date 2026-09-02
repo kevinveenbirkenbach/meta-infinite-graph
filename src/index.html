@@ -21,11 +21,29 @@
         🕸️
         Meta Infinite Graph
       </span>
+      <div class="btn-group btn-group-sm ms-auto" role="group">
+        <input type="radio" class="btn-check" name="view-mode" id="mode-3d" checked>
+        <label class="btn btn-outline-light" for="mode-3d">3D graph</label>
+        <input type="radio" class="btn-check" name="view-mode" id="mode-2d">
+        <label class="btn btn-outline-light" for="mode-2d">2D tables</label>
+      </div>
     </div>
   </nav>
 
   <!-- 3D-graph canvas -->
   <div id="graph3d"></div>
+
+  <div id="tables-pane" hidden>
+    <div class="btn-group btn-group-sm" role="group">
+      <input type="radio" class="btn-check" name="table-kind" id="table-bond" value="bond" checked>
+      <label class="btn btn-outline-dark" for="table-bond">Bond</label>
+      <input type="radio" class="btn-check" name="table-kind" id="table-ressources" value="ressources">
+      <label class="btn btn-outline-dark" for="table-ressources">Ressources</label>
+      <input type="radio" class="btn-check" name="table-kind" id="table-complexity" value="complexity">
+      <label class="btn btn-outline-dark" for="table-complexity">Complexity</label>
+    </div>
+    <div id="tables"></div>
+  </div>
 
   <!-- Sidebar: static collapse, shown by default -->
   <div id="sidebar" class="collapse show">
@@ -164,6 +182,8 @@
   <!-- App files -->
   <script src="dataLoader.js"></script>
   <script src="metaGraph.js"></script>
+  <script src="metaTables.js"></script>
+  <script src="tableView.js"></script>
   <script src="selectionManager.js"></script>
   <script src="autoResolver.js"></script>
   <script src="graphRenderer.js"></script>

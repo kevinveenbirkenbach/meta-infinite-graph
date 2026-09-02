@@ -1,9 +1,11 @@
 # 🎲 Meta Infinite Graph
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-blue?logo=github)](https://github.com/sponsors/kevinveenbirkenbach) [![Patreon](https://img.shields.io/badge/Support-Patreon-orange?logo=patreon)](https://www.patreon.com/c/kevinveenbirkenbach) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20Coffee-Funding-yellow?logo=buymeacoffee)](https://buymeacoffee.com/kevinveenbirkenbach) [![PayPal](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://s.veen.world/paypaldonate)
 
-An interactive 3D visualization of the [Infinito.Nexus](https://infinito.nexus) role universe. The app scans the mounted `roles/` tree of the infinito repository directly: nginx serves the tree with a JSON autoindex, the browser parses every role's `meta/*.yml` and derives the graph live. There is no generation step and no helper files.
+An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) role universe, in two modes. The app scans the mounted `roles/` tree of the infinito repository directly: nginx serves the tree with a JSON autoindex, the browser parses every role's `meta/*.yml` and derives both the 3D graph and the 2D tables live. There is no generation step and no helper files.
 
 ## 🚀 Features
+
+### 3D graph
 
 - **3D force-directed graph** powered by [3d-force-graph](https://github.com/vasturiano/3d-force-graph)
 - **Direct meta scan**: role list from the `/roles/` autoindex, all data from parsed `meta/main.yml` / `meta/services.yml`
@@ -12,22 +14,49 @@ An interactive 3D visualization of the [Infinito.Nexus](https://infinito.nexus) 
 - **Attribute filters**: author, lifecycle, deploy mode; details panel with every scanned attribute
 - **Optional edges** (group-membership gated consumption) are shown in their own color with a `0..1` label
 
+### 2D tables
+
+The tables the infinito `meta` CLI prints, recomputed in the browser from the
+same scanned metadata. Read only: writing a bond back into a role stays with
+the `bond` CLI, which ships its own editable server.
+
+- **Bond matrix** (`cli.meta.roles.applications.bond`): one cell per role pair,
+  row to column above column to row, brightness `0..1`
+- **Ressources** (`cli.meta.roles.applications.ressources`): the compose
+  footprint per role with its shared dependencies resolved recursively
+- **Complexity** (`cli.meta.roles.applications.complexity`): the embedded and
+  consuming closures per role and their weight
+
+Two columns of the CLI output are not reachable from a browser and are left
+out: `ressources` reads the heaviest `meta/variants.yml` variant where the 2D
+mode reads the base config, and `complexity` drops the CI columns (`compose`,
+`swarm`, `host`, `stack`, `test_*`, `variants`, `in_main`), which need the git
+history, `default.env` and each role's `templates/` directory.
+
 ## ⚙️ Run
 
-The compose stack mounts the infinito repository's `roles/` directory read-only. With `infinito-nexus-core` checked out next to this repository:
+The compose stack mounts the infinito repository's `roles/` and `meta/`
+directories read-only. With `infinito-nexus-core` checked out next to this
+repository:
 
 ```bash
 make up          # http://127.0.0.1:8000
 ```
 
 The first run copies `default.env` to `.env` (gitignored). Change the port
-or the roles checkout there:
+or the checkout there:
 
 ```bash
 # .env
 MIG_PORT=8207
 INFINITO_ROLES_DIR=/path/to/infinito-nexus-core/roles
+INFINITO_META_DIR=/path/to/infinito-nexus-core/meta
 ```
+
+`INFINITO_META_DIR` points at the repository-root `meta/` holding
+`categories.yml`. The 2D tables resolve a service key to its providing role
+through the category prefixes in that file, so an `.env` predating the 2D mode
+has to gain the line before `make up` starts.
 
 Every reload reflects the current on-disk state of the roles tree.
 

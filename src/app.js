@@ -24,18 +24,42 @@ function setStatus(text) {
 
 setStatus('Scanning roles ...');
 
-dataLoader
-  .listRoles()
-  .then(roles => {
+function wireViewMode(tableView) {
+  const pane = document.getElementById('tables-pane');
+  const graph = document.getElementById('graph3d');
+  const sidebar = document.getElementById('sidebar');
+  const apply = () => {
+    const tables = document.getElementById('mode-2d').checked;
+    pane.hidden = !tables;
+    graph.hidden = tables;
+    sidebar.hidden = tables;
+    if (tables) tableView.show(document.querySelector('input[name="table-kind"]:checked').value);
+  };
+  document.getElementById('mode-3d').addEventListener('change', apply);
+  document.getElementById('mode-2d').addEventListener('change', apply);
+  for (const input of document.querySelectorAll('input[name="table-kind"]')) {
+    input.addEventListener('change', () => tableView.show(input.value));
+  }
+}
+
+Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
+  .then(([roles, categories]) => {
     setStatus(`Loading meta of ${roles.length} roles ...`);
-    return dataLoader.loadAll(roles, (done, total) => {
-      if (done % 25 === 0 || done === total) {
-        setStatus(`Loading meta ${done}/${total} ...`);
-      }
-    });
+    return dataLoader
+      .loadAll(roles, (done, total) => {
+        if (done % 25 === 0 || done === total) {
+          setStatus(`Loading meta ${done}/${total} ...`);
+        }
+      })
+      .then(metaByRole => [metaByRole, categories]);
   })
-  .then(metaByRole => {
+  .then(([metaByRole, categories]) => {
     const metaGraph = new MetaGraph(metaByRole);
+    const tableView = new TableView(
+      new MetaTables(metaByRole, categories),
+      document.getElementById('tables')
+    );
+    wireViewMode(tableView);
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
@@ -68,7 +92,9 @@ dataLoader
     uiManager.onSelectionChange();
 
     // Test hook for the Playwright suite.
-    window.__mig = { metaGraph, selectionManager, uiManager, graph: graphRenderer.graph };
+    window.__mig = {
+      metaGraph, selectionManager, uiManager, tableView, graph: graphRenderer.graph,
+    };
   })
   .catch(err => {
     console.error('Init error', err);

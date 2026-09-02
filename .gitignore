@@ -1,4 +1,5 @@
 roles/*
+src/meta/
 .env
 .mcp.json
 node_modules/

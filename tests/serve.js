@@ -1,6 +1,7 @@
 // Minimal static server mirroring the container: serves src/ at the root and
-// exposes the infinito roles/ tree with a JSON autoindex, so the Playwright
-// suite drives the exact code paths the nginx image does. No dependencies.
+// exposes the infinito roles/ tree with a JSON autoindex plus the repository's
+// meta/ directory, so the Playwright suite drives the exact code paths the
+// nginx image does. No dependencies.
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -11,6 +12,11 @@ const ROLES = path.resolve(
   __dirname,
   '..',
   process.env.INFINITO_ROLES_DIR || '../infinito-nexus-core/roles'
+);
+const META = path.resolve(
+  __dirname,
+  '..',
+  process.env.INFINITO_META_DIR || '../infinito-nexus-core/meta'
 );
 
 const MIME = {
@@ -42,6 +48,12 @@ http
           res.writeHead(200, { 'Content-Type': 'application/json' });
           return res.end(autoindex(target || ROLES));
         }
+        const body = fs.readFileSync(target);
+        res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
+        return res.end(body);
+      }
+      if (url.startsWith('/meta/')) {
+        const target = path.join(META, url.replace(/^\/meta\//, ''));
         const body = fs.readFileSync(target);
         res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
         return res.end(body);
