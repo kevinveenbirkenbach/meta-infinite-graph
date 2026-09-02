@@ -168,6 +168,11 @@ table.bond-matrix td {
   padding: 0;
 }
 
+table.bond-matrix {
+  --paper: var(--bs-body-bg);
+  --ink: var(--bs-body-color);
+}
+
 .b,
 .nb {
   display: block;
@@ -178,12 +183,23 @@ table.bond-matrix td {
   font-variant-numeric: tabular-nums;
 }
 
+.b {
+  background: color-mix(in srgb, var(--ink) calc(var(--b) * 100%), var(--paper));
+  color: color-mix(in srgb, var(--paper) calc(var(--b) * 100%), var(--ink));
+}
+
 .nb {
-  background: #000;
+  background: var(--paper);
 }
 
 .diag {
-  background: repeating-linear-gradient(45deg, #000, #000 3px, #1b1d22 3px, #1b1d22 6px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--paper),
+    var(--paper) 3px,
+    var(--bs-secondary-bg) 3px,
+    var(--bs-secondary-bg) 6px
+  );
 }
 
 table.bond-matrix {

@@ -79,6 +79,24 @@ test('the theme follows the system and an explicit choice outlives a reload', as
   await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
 });
 
+test('a bond of 1 is the opposite of the page in either theme', async ({ page }) => {
+  await open2d(page);
+  const bar = page.locator('table.bond-matrix .b').first();
+  await expect.poll(() => bar.count()).toBeGreaterThan(0);
+  const background = () => bar.evaluate(el => getComputedStyle(el).backgroundColor);
+  const luminance = colour => {
+    const [r, g, b] = colour.match(/\d+/g).map(Number);
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+
+  const themeNow = await page.locator('html').getAttribute('data-bs-theme');
+  const before = luminance(await background());
+  await page.locator('#btn-theme').click();
+  await expect(page.locator('html')).not.toHaveAttribute('data-bs-theme', themeNow);
+  const after = luminance(await background());
+  expect(Math.abs(before - after)).toBeGreaterThan(60);
+});
+
 test('the service registry resolves bond keys to provider roles', async ({ page }) => {
   await open2d(page);
   const resolved = await page.evaluate(() => {

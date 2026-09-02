@@ -23,13 +23,6 @@ class TableView {
     return value === null || value === undefined ? '-' : String(value);
   }
 
-  // Black for no bond, white for 1; the text flips at the point the
-  // background stops carrying it.
-  static _shade(bond) {
-    const level = Math.round(Math.max(0, Math.min(1, bond)) * 255);
-    return [`rgb(${level},${level},${level})`, level > 140 ? '#000' : '#fff'];
-  }
-
   static _cell(text, className) {
     const td = document.createElement('td');
     td.textContent = text;
@@ -119,7 +112,7 @@ class TableView {
     const section = this._wrap(
       'Bond matrix',
       `${edges.size} bonds across ${roles.length} roles. Row to column above, `
-      + 'column to row below. Brightness is the bond: black none, white 1. '
+      + 'column to row below. A bond of 0 is the page, 1 is its opposite. '
       + 'Hover crosses the pair in yellow, a click locks it in violet until the '
       + 'next click. Read only; run the infinito bond CLI to edit.',
       table
@@ -189,10 +182,8 @@ class TableView {
       span.className = 'nb';
       return span;
     }
-    const [background, foreground] = TableView._shade(edge.bond);
     span.className = 'b';
-    span.style.background = background;
-    span.style.color = foreground;
+    span.style.setProperty('--b', String(Math.max(0, Math.min(1, edge.bond))));
     span.textContent = String(edge.bond);
     span.title = `${consumer} -> ${provider} via ${edge.serviceKey}`;
     return span;
