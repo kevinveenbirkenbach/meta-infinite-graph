@@ -210,3 +210,37 @@ table.bond-matrix {
 table.bond-matrix td {
   cursor: pointer;
 }
+
+table.bond-matrix.symbols thead th {
+  height: 26px;
+}
+
+table.bond-matrix.symbols thead th div {
+  writing-mode: horizontal-tb;
+  transform: none;
+  text-align: center;
+}
+
+/* Simple Icons ship a black glyph, so the night theme has to flip it. */
+.role-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+img.role-icon {
+  object-fit: contain;
+}
+
+[data-bs-theme="dark"] img.role-icon {
+  filter: invert(1);
+}
+
+td.bool {
+  text-align: center;
+}
+
+td.role-list span {
+  display: inline-block;
+  margin-right: 0.35em;
+}

@@ -1,7 +1,8 @@
 class TableView {
-  constructor(metaTables, container) {
+  constructor(metaTables, container, roleInfo) {
     this.tables = metaTables;
     this.container = container;
+    this.roleInfo = roleInfo;
     this.kind = 'bond';
     this._cache = {};
   }
@@ -30,6 +31,46 @@ class TableView {
     return td;
   }
 
+  _roleCell(role, tag = 'td') {
+    const cell = document.createElement(tag);
+    cell.dataset.roleName = role;
+    cell.appendChild(this.roleInfo.label(role));
+    return cell;
+  }
+
+  _roleListCell(roles) {
+    const cell = document.createElement('td');
+    if (!roles.length) {
+      cell.textContent = '-';
+      return cell;
+    }
+    cell.className = 'role-list';
+    roles.forEach((role, index) => {
+      const item = document.createElement('span');
+      item.dataset.roleName = role;
+      item.appendChild(this.roleInfo.label(role));
+      cell.appendChild(item);
+      if (!this.roleInfo.symbols && index < roles.length - 1) {
+        cell.appendChild(document.createTextNode(', '));
+      }
+    });
+    return cell;
+  }
+
+  _boolCell(value) {
+    const cell = document.createElement('td');
+    if (!this.roleInfo.symbols) {
+      cell.textContent = value ? 'yes' : 'no';
+      return cell;
+    }
+    const icon = document.createElement('i');
+    icon.className = value ? 'fa-solid fa-check' : 'fa-solid fa-xmark';
+    cell.title = value ? 'yes' : 'no';
+    cell.className = 'bool';
+    cell.appendChild(icon);
+    return cell;
+  }
+
   static _headRow(labels) {
     const tr = document.createElement('tr');
     for (const label of labels) {
@@ -44,9 +85,16 @@ class TableView {
 
   show(kind) {
     this.kind = kind;
+    const key = `${kind}|${this.roleInfo.symbols}`;
     this.container.innerHTML = '';
-    if (!this._cache[kind]) this._cache[kind] = this[`_build${kind[0].toUpperCase()}${kind.slice(1)}`]();
-    this.container.appendChild(this._cache[kind]);
+    if (!this._cache[key]) {
+      this._cache[key] = this[`_build${kind[0].toUpperCase()}${kind.slice(1)}`]();
+    }
+    this.container.appendChild(this._cache[key]);
+  }
+
+  refresh() {
+    this.show(this.kind);
   }
 
   _wrap(title, note, table) {
@@ -68,7 +116,7 @@ class TableView {
     const edges = this.tables.bondEdges();
     const roles = MetaTables.bondParticipants(edges);
     const table = document.createElement('table');
-    table.className = 'bond-matrix';
+    table.className = this.roleInfo.symbols ? 'bond-matrix symbols' : 'bond-matrix';
 
     const headRow = document.createElement('tr');
     const corner = document.createElement('th');
@@ -77,8 +125,9 @@ class TableView {
     roles.forEach((role, index) => {
       const th = document.createElement('th');
       th.dataset.col = String(index + 1);
+      th.dataset.roleName = role;
       const label = document.createElement('div');
-      label.textContent = role;
+      label.appendChild(this.roleInfo.label(role));
       th.appendChild(label);
       headRow.appendChild(th);
     });
@@ -90,9 +139,8 @@ class TableView {
     roles.forEach((row, rowIndex) => {
       const tr = document.createElement('tr');
       tr.dataset.row = String(rowIndex);
-      const rowHead = document.createElement('th');
+      const rowHead = this._roleCell(row, 'th');
       rowHead.dataset.col = '0';
-      rowHead.textContent = row;
       tr.appendChild(rowHead);
       roles.forEach((col, colIndex) => {
         const td = document.createElement('td');
@@ -200,7 +248,7 @@ class TableView {
     for (const row of rows) {
       const tr = document.createElement('tr');
       tr.append(
-        TableView._cell(row.role),
+        this._roleCell(row.role),
         TableView._cell(String(row.services), 'num'),
         TableView._cell(TableView._fmtBytes(row.mem_reservation_bytes), 'num'),
         TableView._cell(TableView._fmtBytes(row.mem_limit_bytes), 'num'),
@@ -234,16 +282,16 @@ class TableView {
     for (const row of rows) {
       const tr = document.createElement('tr');
       tr.append(
-        TableView._cell(row.name),
+        this._roleCell(row.name),
         TableView._cell(row.lifecycle || '-'),
         TableView._cell(String(row.embeds), 'num'),
         TableView._cell(String(row.consumers), 'num'),
         TableView._cell(String(row.embeds_direct), 'num'),
         TableView._cell(String(row.consumers_direct), 'num'),
         TableView._cell(String(row.weight), 'num'),
-        TableView._cell(row.integrated ? 'yes' : 'no'),
-        TableView._cell(row.clone ? 'yes' : 'no'),
-        TableView._cell(row.siblings.join(', ') || '-')
+        this._boolCell(row.integrated),
+        this._boolCell(row.clone),
+        this._roleListCell(row.siblings)
       );
       tbody.appendChild(tr);
     }

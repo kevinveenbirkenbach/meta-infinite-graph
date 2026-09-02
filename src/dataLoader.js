@@ -75,6 +75,43 @@ class DataLoader {
     return promise;
   }
 
+  loadSideFile(role, name) {
+    const key = `${name}:${role}`;
+    if (this._metaCache.has(key)) {
+      return Promise.resolve(this._metaCache.get(key));
+    }
+    const promise = this._fetchYaml(`${this.basePath}/${role}/meta/${name}.yml`);
+    this._metaCache.set(key, promise);
+    return promise;
+  }
+
+  loadSideFileAll(roles, name, limit = 12) {
+    return this._pool(roles, role => this.loadSideFile(role, name).then(data => [role, data]), limit)
+      .then(pairs => Object.fromEntries(pairs.filter(([, data]) => data)));
+  }
+
+  loadBrandIndex() {
+    return fetch('vendor/simple-icons/index.json')
+      .then(res => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
+  }
+
+  _pool(items, task, limit) {
+    const results = [];
+    let index = 0;
+    const worker = () => {
+      if (index >= items.length) return Promise.resolve();
+      const current = index++;
+      return task(items[current]).then(value => {
+        results[current] = value;
+        return worker();
+      });
+    };
+    return Promise.all(
+      Array.from({ length: Math.min(limit, items.length) }, worker)
+    ).then(() => results);
+  }
+
   // Bounded concurrency: fire at most `limit` role loads at once so the
   // browser's per-host connection cap does not turn boot into a stall.
   loadAll(roles, onProgress, limit = 12) {

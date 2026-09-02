@@ -42,6 +42,22 @@ function wireViewMode(tableView) {
   }
 }
 
+function wireSymbolSwitch(tableView, roleInfo) {
+  const button = document.getElementById('btn-symbols');
+  button.addEventListener('click', () => {
+    button.disabled = true;
+    roleInfo.load().then(() => {
+      roleInfo.symbols = !roleInfo.symbols;
+      button.textContent = roleInfo.symbols ? '🔡' : '🔤';
+      button.title = roleInfo.symbols
+        ? 'Show role names as symbols'
+        : 'Show role names as text';
+      button.disabled = false;
+      tableView.refresh();
+    });
+  });
+}
+
 Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
   .then(([roles, categories]) => {
     setStatus(`Loading meta of ${roles.length} roles ...`);
@@ -55,11 +71,14 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
   })
   .then(([metaByRole, categories]) => {
     const metaGraph = new MetaGraph(metaByRole);
+    const roleInfo = new RoleInfo(dataLoader, metaGraph);
     const tableView = new TableView(
       new MetaTables(metaByRole, categories),
-      document.getElementById('tables')
+      document.getElementById('tables'),
+      roleInfo
     );
     wireViewMode(tableView);
+    wireSymbolSwitch(tableView, roleInfo);
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
@@ -93,7 +112,8 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
 
     // Test hook for the Playwright suite.
     window.__mig = {
-      metaGraph, selectionManager, uiManager, tableView, graph: graphRenderer.graph,
+      metaGraph, selectionManager, uiManager, tableView, roleInfo,
+      graph: graphRenderer.graph,
     };
   })
   .catch(err => {

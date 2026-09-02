@@ -26,6 +26,8 @@ const MIME = {
   '.yml': 'text/yaml',
   '.yaml': 'text/yaml',
   '.json': 'application/json',
+  '.svg': 'image/svg+xml',
+  '.woff2': 'font/woff2',
 };
 
 function autoindex(dir) {
