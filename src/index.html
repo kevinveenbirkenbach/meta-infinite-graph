@@ -7,6 +7,7 @@
   <!-- Vendored so the app runs offline / behind a proxy with no CDN. -->
   <link rel="stylesheet" href="vendor/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css" />
+  <script src="themeSwitch.js"></script>
 </head>
 <body>
 
@@ -21,11 +22,14 @@
         🕸️
         Meta Infinite Graph
       </span>
-      <div class="btn-group btn-group-sm ms-auto" role="group">
-        <input type="radio" class="btn-check" name="view-mode" id="mode-3d" checked>
-        <label class="btn btn-outline-light" for="mode-3d">3D graph</label>
-        <input type="radio" class="btn-check" name="view-mode" id="mode-2d">
-        <label class="btn btn-outline-light" for="mode-2d">2D tables</label>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <div class="btn-group btn-group-sm" role="group">
+          <input type="radio" class="btn-check" name="view-mode" id="mode-3d" checked>
+          <label class="btn btn-outline-light" for="mode-3d">3D graph</label>
+          <input type="radio" class="btn-check" name="view-mode" id="mode-2d">
+          <label class="btn btn-outline-light" for="mode-2d">2D tables</label>
+        </div>
+        <button id="btn-theme" type="button" class="btn btn-sm btn-outline-light">🌙</button>
       </div>
     </div>
   </nav>
@@ -36,11 +40,11 @@
   <div id="tables-pane" hidden>
     <div class="btn-group btn-group-sm" role="group">
       <input type="radio" class="btn-check" name="table-kind" id="table-bond" value="bond" checked>
-      <label class="btn btn-outline-dark" for="table-bond">Bond</label>
+      <label class="btn btn-outline-primary" for="table-bond">Bond</label>
       <input type="radio" class="btn-check" name="table-kind" id="table-ressources" value="ressources">
-      <label class="btn btn-outline-dark" for="table-ressources">Ressources</label>
+      <label class="btn btn-outline-primary" for="table-ressources">Ressources</label>
       <input type="radio" class="btn-check" name="table-kind" id="table-complexity" value="complexity">
-      <label class="btn btn-outline-dark" for="table-complexity">Complexity</label>
+      <label class="btn btn-outline-primary" for="table-complexity">Complexity</label>
     </div>
     <div id="tables"></div>
   </div>
@@ -123,10 +127,10 @@
                step="0.1"
                value="0.5"
                title="Seconds"/>
-        <button id="btn-zoom-in" class="btn btn-outline-dark">
+        <button id="btn-zoom-in" class="btn btn-outline-primary">
           ➕
         </button>
-        <button id="btn-zoom-out" class="btn btn-outline-dark">
+        <button id="btn-zoom-out" class="btn btn-outline-primary">
           ➖
         </button>
         <button id="btn-reload" class="btn btn-outline-primary" title="Reload Graph">

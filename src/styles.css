@@ -31,7 +31,7 @@ html, body {
   width: 340px;
   bottom: 0;
   overflow-y: auto;
-  background: rgba(255,255,255,0.8);
+  background: rgba(var(--bs-body-bg-rgb), 0.85);
   z-index: 1000;
 }
 
@@ -91,7 +91,7 @@ html, body {
   display: flex;
   flex-direction: column;
   padding: 12px;
-  background: #fff;
+  background: var(--bs-body-bg);
   z-index: 900;
 }
 
@@ -124,15 +124,15 @@ table.bond-matrix {
 
 table.bond-matrix th,
 table.bond-matrix td {
-  border-right: 1px solid rgba(0,0,0,0.12);
-  border-bottom: 1px solid rgba(0,0,0,0.12);
+  border-right: 1px solid var(--bs-border-color);
+  border-bottom: 1px solid var(--bs-border-color);
 }
 
 table.bond-matrix thead th {
   position: sticky;
   top: 0;
   z-index: 3;
-  background: #fff;
+  background: var(--bs-body-bg);
   height: 132px;
   vertical-align: bottom;
   padding: 0;
@@ -155,7 +155,7 @@ table.bond-matrix tbody th {
   position: sticky;
   left: 0;
   z-index: 2;
-  background: #fff;
+  background: var(--bs-body-bg);
   text-align: left;
   padding: 0 8px 0 6px;
   white-space: nowrap;

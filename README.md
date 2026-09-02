@@ -14,6 +14,12 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 - **Attribute filters**: author, lifecycle, deploy mode; details panel with every scanned attribute
 - **Optional edges** (group-membership gated consumption) are shown in their own color with a `0..1` label
 
+### Both modes
+
+- **Day/night switch** (🌙 / ☀️) on Bootstrap 5.3's native `data-bs-theme`.
+  The system preference decides on first visit; an explicit choice is stored
+  and wins until it is toggled again.
+
 ### 2D tables
 
 The tables the infinito `meta` CLI prints, recomputed in the browser from the

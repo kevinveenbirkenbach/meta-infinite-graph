@@ -43,6 +43,20 @@ test('ressources and complexity render a row per application role', async ({ pag
   await expect(page.locator('#tables thead')).toContainText('weight');
 });
 
+test('the theme follows the system and an explicit choice outlives a reload', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('/');
+  await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'dark');
+  await expect(page.locator('#btn-theme')).toHaveText('☀️');
+
+  await page.locator('#btn-theme').click();
+  await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
+  await expect(page.locator('#btn-theme')).toHaveText('🌙');
+
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
+});
+
 test('the service registry resolves bond keys to provider roles', async ({ page }) => {
   await open2d(page);
   const resolved = await page.evaluate(() => {
