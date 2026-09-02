@@ -31,6 +31,9 @@ class UIManager {
         .addEventListener('change', () => this.onSelectionChange());
     }
 
+    document.getElementById('edge-visible')
+      .addEventListener('change', e => this.graphRenderer.setLinksVisible(e.target.checked));
+
     this.graphRenderer.on('nodeClicked', ({ node }) => {
       this.showDetails(node.id);
       this.expand(node.id);

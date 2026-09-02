@@ -129,6 +129,10 @@ class GraphRenderer {
       .nodeThreeObject(d => this._loadingSprite(d));
   }
 
+  setLinksVisible(visible) {
+    this.graph.linkVisibility(visible);
+  }
+
   /**
    * Zoom the camera by a factor (<1 zooms in, >1 zooms out).
    */
