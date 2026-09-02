@@ -32,6 +32,8 @@ class GraphRenderer {
         this.selectionManager.setSelected(node.id);
         this._emit('nodeClicked', { node });
       })
+      .onBackgroundClick(() => this._emit('backgroundClicked', {}))
+      .onNodeHover(node => this._emit('nodeHovered', { node }))
       .nodeColor(d => this.selectionManager.getColor(d.id))
       .nodeThreeObjectExtend(true)
       .nodeThreeObject(d => this._loadingSprite(d));

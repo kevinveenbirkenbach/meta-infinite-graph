@@ -35,7 +35,6 @@ class UIManager {
       .addEventListener('change', e => this.graphRenderer.setLinksVisible(e.target.checked));
 
     this.graphRenderer.on('nodeClicked', ({ node }) => {
-      this.showDetails(node.id);
       this.expand(node.id);
     });
   }
@@ -119,7 +118,6 @@ class UIManager {
     this.graphRenderer.mergeData(data);
     this.selectionManager.markLoaded(role, data);
     this.graphRenderer.refreshColors();
-    this.showDetails(role);
 
     // Auto-iterate outward from the start node; pending nodes carry the
     // loading marker until the resolver reaches them.
@@ -155,32 +153,6 @@ class UIManager {
     this.graphRenderer.mergeData(data);
     this.selectionManager.markLoaded(role, data);
     this.graphRenderer.refreshColors();
-  }
-
-  showDetails(role) {
-    const attrs = this.metaGraph.attributes[role] || {};
-    const row = (label, value) =>
-      value && (!Array.isArray(value) || value.length)
-        ? `<dt class="col-5">${label}</dt><dd class="col-7">${
-            Array.isArray(value) ? value.join(', ') : value
-          }</dd>`
-        : '';
-    document.getElementById('details').innerHTML = `
-      <h6 class="mb-2"><i class="fa-solid fa-cube me-2"></i>${role}</h6>
-      <p class="small text-wrap mb-2" style="max-height:120px; overflow:auto;">
-        ${attrs.description || ''}
-      </p>
-      <dl class="row small mb-0">
-        ${row('Weight', String(this.metaGraph.weight(role)))}
-        ${row('Author', attrs.author)}
-        ${row('Lifecycle', attrs.lifecycle)}
-        ${row('Provides', attrs.provides)}
-        ${row('Modes', attrs.modes)}
-        ${row('Services', attrs.services)}
-        ${row('Tags', attrs.galaxy_tags)}
-        ${row('License', attrs.license)}
-      </dl>
-    `;
   }
 
   _startIteration() {

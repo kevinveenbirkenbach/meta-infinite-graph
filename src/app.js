@@ -5,7 +5,7 @@
 // in-memory; expanding nodes never refetches.
 
 window.addEventListener('error', e => {
-  const el = document.getElementById('details');
+  const el = document.getElementById('status');
   if (el) el.innerText = 'JS error: ' + (e.message || e.error);
 });
 
@@ -19,7 +19,7 @@ function getParams() {
 }
 
 function setStatus(text) {
-  document.getElementById('details').innerText = text;
+  document.getElementById('status').innerText = text;
 }
 
 setStatus('Scanning roles ...');
@@ -79,6 +79,24 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     );
     wireViewMode(tableView);
     wireSymbolSwitch(tableView, roleInfo);
+    const cardHost = new RoleCardHost(roleInfo);
+    cardHost.bind(document.getElementById('tables'));
+    let hoveredNode = null;
+    graphRenderer.on('nodeHovered', ({ node }) => {
+      if (hoveredNode && hoveredNode !== node?.id) cardHost.release(hoveredNode);
+      hoveredNode = node ? node.id : null;
+      if (!node) return;
+      const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);
+      cardHost.show(node.id, point ? { x: point.x, y: point.y } : { x: 20, y: 80 });
+    });
+    graphRenderer.on('nodeClicked', ({ node }) => {
+      cardHost.pin(node.id, () => {
+        const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);
+        return point ? { x: point.x, y: point.y } : null;
+      });
+    });
+    graphRenderer.on('backgroundClicked', () => cardHost.unpin());
+
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
@@ -112,7 +130,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
 
     // Test hook for the Playwright suite.
     window.__mig = {
-      metaGraph, selectionManager, uiManager, tableView, roleInfo,
+      metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost,
       graph: graphRenderer.graph,
     };
   })

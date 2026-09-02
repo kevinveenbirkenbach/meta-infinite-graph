@@ -36,14 +36,29 @@ test('role dropdown is populated, heaviest role first', async ({ page }) => {
   expect(await sel.inputValue()).toBe((first || '').replace(/ \(\d+\)$/, ''));
 });
 
-test('the start role renders graph nodes and the details panel', async ({ page }) => {
+test('clicking a graph node pins its card until it is closed', async ({ page }) => {
   await page.goto('/');
   await expect
     .poll(() =>
       page.evaluate(() => window.__mig?.graph?.graphData().nodes.length ?? 0)
     )
     .toBeGreaterThan(0);
-  await expect(page.locator('#details')).toContainText('Weight');
+
+  const role = await page.evaluate(() => {
+    const node = window.__mig.graph.graphData().nodes[0];
+    window.__mig.cardHost.pin(node.id, () => ({ x: 100, y: 100 }));
+    return node.id;
+  });
+  const card = page.locator(`.role-card-host[data-role="${role}"]`);
+  await expect(card).toBeVisible();
+  await expect(card).toContainText('Weight');
+  await expect(card).toContainText(role);
+
+  await page.evaluate(role => window.__mig.cardHost.pin(role, () => ({ x: 100, y: 100 })), role);
+  await expect(card).toBeVisible();
+
+  await card.locator('.role-card-close').click();
+  await expect(card).toBeHidden({ timeout: 3000 });
 });
 
 test('facet filters are populated from scanned metadata', async ({ page }) => {
