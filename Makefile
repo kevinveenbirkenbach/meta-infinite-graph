@@ -6,7 +6,11 @@ COMPOSE_FILE ?= compose.yml
 BASE_URL ?= http://127.0.0.1:$(MIG_PORT)
 SERVICE ?= meta-infinite-graph
 
-.PHONY: help up down logs rebuild e2e test clean
+# Param: MIG_CHROMIUM  path to a chromium binary, for hosts where playwright
+#   cannot install its own. Empty means playwright uses its bundled browser.
+MIG_CHROMIUM ?=
+
+.PHONY: help up down logs rebuild e2e test test-fast clean
 
 help:
 	@echo "Targets:"
@@ -15,6 +19,8 @@ help:
 	@echo "  make logs                Follow service logs"
 	@echo "  make rebuild             Down + up"
 	@echo "  make e2e                 Start stack, run HTTP E2E checks, stop stack"
+	@echo "  make test                Install browsers, then run the Playwright suite"
+	@echo "  make test-fast           Run the Playwright suite without installing"
 	@echo "  make clean               Down + remove volumes"
 
 .env:
@@ -40,7 +46,10 @@ e2e: .env
 test:
 	npm install
 	npx playwright install chromium
-	npx playwright test
+	MIG_CHROMIUM=$(MIG_CHROMIUM) npx playwright test
+
+test-fast:
+	MIG_CHROMIUM=$(MIG_CHROMIUM) npx playwright test $(ARGS)
 
 clean:
 	docker compose -f $(COMPOSE_FILE) down -v --remove-orphans

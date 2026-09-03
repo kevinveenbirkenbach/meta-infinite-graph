@@ -12,6 +12,9 @@ module.exports = defineConfig({
   use: {
     baseURL: `http://127.0.0.1:${PORT}`,
     trace: 'on-first-retry',
+    launchOptions: process.env.MIG_CHROMIUM
+      ? { executablePath: process.env.MIG_CHROMIUM }
+      : {},
   },
   webServer: {
     command: `node tests/serve.js ${PORT}`,
