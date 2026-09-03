@@ -1,7 +1,7 @@
 # 🎲 Meta Infinite Graph
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-blue?logo=github)](https://github.com/sponsors/kevinveenbirkenbach) [![Patreon](https://img.shields.io/badge/Support-Patreon-orange?logo=patreon)](https://www.patreon.com/c/kevinveenbirkenbach) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20Coffee-Funding-yellow?logo=buymeacoffee)](https://buymeacoffee.com/kevinveenbirkenbach) [![PayPal](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://s.veen.world/paypaldonate)
 
-An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) role universe, in two modes. The app scans the mounted `roles/` tree of the infinito repository directly: nginx serves the tree with a JSON autoindex, the browser parses every role's `meta/*.yml` and derives both the 3D graph and the 2D tables live. There is no generation step and no helper files.
+An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) role universe, as a 3D graph and as three tables. The app scans the mounted `roles/` tree of the infinito repository directly: nginx serves the tree with a JSON autoindex, the browser parses every role's `meta/*.yml` and derives both the 3D graph and the 2D tables live. There is no generation step and no helper files.
 
 ## 🚀 Features
 
@@ -16,12 +16,24 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 
 ### Both modes
 
-- **3D / 2D** never hides the other mode. The active one lies over the idle one
-  at 0.95 opacity, so the graph shows through the tables and the tables through
-  the graph; only the front one takes the pointer.
-- **Day/night switch** (🌙 / ☀️) on Bootstrap 5.3's native `data-bs-theme`.
-  The system preference decides on first visit; an explicit choice is stored
-  and wins until it is toggled again.
+- **Four views** in the top bar: 3D, Bond, Ressources, Complexity. Switching
+  never hides the previous one; the active view lies over the idle one and only
+  the front one takes the pointer.
+- **Filter** (🔍) and **Design** (🎨) open the two side panels. The filter panel
+  holds the data switches and the author, lifecycle and deploy-mode facets,
+  which narrow the tables and the graph alike, plus the graph's own controls
+  when the graph is up. The design panel sets the theme, the font size and
+  family, whether role names read as text or as icons, and how far the idle
+  view shows through the active one.
+- **A bottom navigator** carries the loading status and the project credits.
+- **Every switch is in the URL.** View, start role, facets, edge kinds, the
+  variant and symbol switches, theme, font size, font family and the
+  transparency all round-trip through the query string, so a reload or a shared
+  link reproduces the page exactly. Values left at their default are left out,
+  so the plain URL stays clean.
+- **Day/night** on Bootstrap 5.3's native `data-bs-theme`, set in the design
+  panel. The system preference decides on first visit; an explicit choice is
+  stored and wins until it is set back to "follow the system".
 - **Variant awareness** (🧬) reads every role's `meta/variants.yml`. The tables
   gain one row per variant, and the 3D graph keeps only the dependencies a
   variant still enables. `bond` itself is constant across variants; what a
