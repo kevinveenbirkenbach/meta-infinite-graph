@@ -73,6 +73,10 @@
         <option value="mono">Mono</option>
       </select>
 
+      <label class="form-label mb-1">Role names</label>
+      <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-primary w-100 mb-3"
+              title="Show role names as text">🔤 Text</button>
+
       <label class="form-label mb-1" for="design-opacity">
         Background transparency <span id="design-opacity-value">5</span>%
       </label>
@@ -99,12 +103,8 @@
 
       <fieldset id="filter-switches" class="mb-2 small">
         <legend class="form-label mb-1">Data</legend>
-        <div class="d-flex gap-2">
-          <button id="btn-variants" type="button" class="btn btn-sm btn-outline-primary flex-fill"
-                  title="Variant aware: off">🧬 Variants</button>
-          <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-primary flex-fill"
-                  title="Show role names as text">🔤 Symbols</button>
-        </div>
+        <button id="btn-variants" type="button" class="btn btn-sm btn-outline-primary w-100"
+                title="Variant aware: off">🧬 Variants</button>
       </fieldset>
 
       <fieldset class="mb-2 small graph-only">

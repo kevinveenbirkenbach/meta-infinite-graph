@@ -17,6 +17,13 @@ async function openFilters(page) {
   await expect(page.locator('#sidebar')).toBeVisible();
 }
 
+async function openDesign(page) {
+  if (await page.locator('#design-panel').isHidden()) {
+    await page.locator('#btn-design').click();
+  }
+  await expect(page.locator('#design-panel')).toBeVisible();
+}
+
 test('the idle mode stays behind the active one at 0.95', async ({ page }) => {
   await open2d(page);
   const graph = page.locator('#graph3d');
@@ -124,7 +131,7 @@ test('the symbol switch replaces role names with icons', async ({ page }) => {
   const firstRowHead = page.locator('table.bond-matrix tbody tr').first().locator('th').last();
   await expect(firstRowHead).toHaveText(/[a-z]/);
 
-  await openFilters(page);
+  await openDesign(page);
   await page.locator('#btn-symbols').click();
   await expect.poll(
     () => firstRowHead.locator('img.role-icon, i.role-icon').count(),
@@ -135,7 +142,7 @@ test('the symbol switch replaces role names with icons', async ({ page }) => {
 
 test('hovering a role opens a card that outlives the pointer', async ({ page }) => {
   await open2d(page);
-  await openFilters(page);
+  await openDesign(page);
   await page.locator('#btn-symbols').click();
   await expect.poll(() => page.locator('#btn-symbols').isEnabled(), { timeout: 60000 }).toBe(true);
 
@@ -181,7 +188,7 @@ test('symbol mode reaches the siblings list and the yes/no columns', async ({ pa
   const siblings = page.locator('#tables tbody tr').first().locator('td').last();
   await expect(siblings).toHaveText(/[a-z]/);
 
-  await openFilters(page);
+  await openDesign(page);
   await page.locator('#btn-symbols').click();
   await expect.poll(
     () => page.locator('#tables td.role-list [data-role-name]').count(),
