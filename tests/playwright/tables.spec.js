@@ -2,12 +2,19 @@ const { test, expect } = require('@playwright/test');
 
 // Bootstrap hides a .btn-check radio and puts its label on top, so the label
 // is the only clickable half of the control.
-async function open2d(page) {
+async function open2d(page, view = 'bond') {
   await page.goto('/');
   await expect
     .poll(() => page.evaluate(() => Boolean(window.__mig?.tableView)))
     .toBe(true);
-  await page.locator('label[for="mode-2d"]').click();
+  await page.locator(`label[for="view-${view}"]`).click();
+}
+
+async function openFilters(page) {
+  if (await page.locator('#sidebar').isHidden()) {
+    await page.locator('#btn-filter').click();
+  }
+  await expect(page.locator('#sidebar')).toBeVisible();
 }
 
 test('the idle mode stays behind the active one at 0.95', async ({ page }) => {
@@ -25,7 +32,7 @@ test('the idle mode stays behind the active one at 0.95', async ({ page }) => {
   expect(await style(graph)).toEqual({ opacity: '1', z: '800', events: 'none' });
   await expect(graph).toBeVisible();
 
-  await page.locator('label[for="mode-3d"]').click();
+  await page.locator('label[for="view-graph"]').click();
   await expect(graph).toHaveClass(/pane-front/);
   await expect(pane).toHaveClass(/pane-back/);
   expect(await style(graph)).toEqual({ opacity: '0.95', z: '900', events: 'auto' });
@@ -48,11 +55,11 @@ test('the bond matrix is square over the participating roles', async ({ page }) 
 
 test('ressources and complexity render a row per application role', async ({ page }) => {
   await open2d(page);
-  await page.locator('label[for="table-ressources"]').click();
+  await page.locator('label[for="view-ressources"]').click();
   await expect.poll(() => page.locator('#tables tbody tr').count()).toBeGreaterThan(100);
   await expect(page.locator('#tables thead')).toContainText('mem_limit');
 
-  await page.locator('label[for="table-complexity"]').click();
+  await page.locator('label[for="view-complexity"]').click();
   await expect.poll(() => page.locator('#tables tbody tr').count()).toBeGreaterThan(100);
   await expect(page.locator('#tables thead')).toContainText('weight');
 });
@@ -83,11 +90,10 @@ test('the theme follows the system and an explicit choice outlives a reload', as
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'dark');
-  await expect(page.locator('#btn-theme')).toHaveText('☀️');
 
-  await page.locator('#btn-theme').click();
+  await page.locator('#btn-design').click();
+  await page.locator('#design-theme').selectOption('light');
   await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
-  await expect(page.locator('#btn-theme')).toHaveText('🌙');
 
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
@@ -105,7 +111,9 @@ test('a bond of 1 is the opposite of the page in either theme', async ({ page })
 
   const themeNow = await page.locator('html').getAttribute('data-bs-theme');
   const before = luminance(await background());
-  await page.locator('#btn-theme').click();
+  await page.locator('#btn-design').click();
+  await page.locator('#design-theme')
+    .selectOption(themeNow === 'dark' ? 'light' : 'dark');
   await expect(page.locator('html')).not.toHaveAttribute('data-bs-theme', themeNow);
   const after = luminance(await background());
   expect(Math.abs(before - after)).toBeGreaterThan(60);
@@ -116,6 +124,7 @@ test('the symbol switch replaces role names with icons', async ({ page }) => {
   const firstRowHead = page.locator('table.bond-matrix tbody tr').first().locator('th').last();
   await expect(firstRowHead).toHaveText(/[a-z]/);
 
+  await openFilters(page);
   await page.locator('#btn-symbols').click();
   await expect.poll(
     () => firstRowHead.locator('img.role-icon, i.role-icon').count(),
@@ -126,6 +135,7 @@ test('the symbol switch replaces role names with icons', async ({ page }) => {
 
 test('hovering a role opens a card that outlives the pointer', async ({ page }) => {
   await open2d(page);
+  await openFilters(page);
   await page.locator('#btn-symbols').click();
   await expect.poll(() => page.locator('#btn-symbols').isEnabled(), { timeout: 60000 }).toBe(true);
 
@@ -167,10 +177,11 @@ test('a second card opens without replacing the first', async ({ page }) => {
 
 test('symbol mode reaches the siblings list and the yes/no columns', async ({ page }) => {
   await open2d(page);
-  await page.locator('label[for="table-complexity"]').click();
+  await page.locator('label[for="view-complexity"]').click();
   const siblings = page.locator('#tables tbody tr').first().locator('td').last();
   await expect(siblings).toHaveText(/[a-z]/);
 
+  await openFilters(page);
   await page.locator('#btn-symbols').click();
   await expect.poll(
     () => page.locator('#tables td.role-list [data-role-name]').count(),
@@ -227,6 +238,7 @@ test('variant awareness adds a variant axis to every table', async ({ page }) =>
   const rows = page.locator('table.bond-matrix tbody tr');
   const before = await rows.count();
 
+  await openFilters(page);
   await page.locator('#btn-variants').click();
   await expect.poll(
     () => page.locator('table.bond-matrix th.variant-head').count(),
@@ -234,8 +246,51 @@ test('variant awareness adds a variant axis to every table', async ({ page }) =>
   ).toBeGreaterThan(0);
   expect(await rows.count()).toBeGreaterThan(before);
 
-  await page.locator('label[for="table-complexity"]').click();
+  await page.locator('label[for="view-complexity"]').click();
   await expect(page.locator('#tables thead')).toContainText('variant');
+});
+
+test('the design panel drives the font, the veil and nothing else', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('#btn-design').click();
+  await expect(page.locator('#design-panel')).toBeVisible();
+
+  const root = () => page.evaluate(() => {
+    const style = getComputedStyle(document.documentElement);
+    return {
+      size: style.getPropertyValue('--mig-font-size').trim(),
+      family: style.getPropertyValue('--mig-font-family').trim(),
+      veil: style.getPropertyValue('--mig-veil').trim(),
+    };
+  });
+  expect(await root()).toEqual({
+    size: '14px',
+    family: 'system-ui, -apple-system, "Segoe UI", sans-serif',
+    veil: '0.05',
+  });
+
+  await page.locator('#design-font-size').fill('20');
+  await page.locator('#design-font-size').dispatchEvent('input');
+  await page.locator('#design-font-family').selectOption('mono');
+  await page.locator('#design-opacity').fill('30');
+  await page.locator('#design-opacity').dispatchEvent('input');
+
+  const after = await root();
+  expect(after.size).toBe('20px');
+  expect(after.family).toContain('monospace');
+  expect(after.veil).toBe('0.3');
+  await expect(page.locator('#design-font-size-value')).toHaveText('20');
+  await expect(page.locator('#design-opacity-value')).toHaveText('30');
+});
+
+test('the bottom navigator carries the status and the credits', async ({ page }) => {
+  await page.goto('/');
+  const nav = page.locator('#bottom-nav');
+  await expect(nav).toBeVisible();
+  await expect(nav.locator('a[href*="github.com"]')).toHaveText(/Source/);
+  await expect(nav.locator('a[href*="veen.world"]')).toHaveText(/Kevin/);
+  await expect(nav).toContainText('MIT License');
+  await expect(page.locator('#sidebar #status')).toHaveCount(0);
 });
 
 test('the service registry resolves bond keys to provider roles', async ({ page }) => {

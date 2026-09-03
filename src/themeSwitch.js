@@ -1,5 +1,4 @@
-// Loaded from <head> so the attribute is set before the first paint; the
-// button it labels only exists after DOMContentLoaded.
+// Loaded from <head> so the attribute is set before the first paint.
 (() => {
   const KEY = 'mig-theme';
   const media = window.matchMedia('(prefers-color-scheme: dark)');
@@ -14,28 +13,27 @@
 
   const apply = theme => {
     document.documentElement.dataset.bsTheme = theme;
-    const button = document.getElementById('btn-theme');
-    if (!button) return;
-    button.textContent = theme === 'dark' ? '☀️' : '🌙';
-    button.title = theme === 'dark' ? 'Switch to day' : 'Switch to night';
   };
 
-  apply(stored() || (media.matches ? 'dark' : 'light'));
+  const fromSystem = () => (media.matches ? 'dark' : 'light');
 
-  media.addEventListener('change', event => {
-    if (!stored()) apply(event.matches ? 'dark' : 'light');
+  // Args:
+  //   choice: 'system', 'light' or 'dark'. 'system' drops the stored choice
+  //     so the page follows the media query again.
+  const choose = choice => {
+    try {
+      if (choice === 'system') localStorage.removeItem(KEY);
+      else localStorage.setItem(KEY, choice);
+    } catch {
+      // A blocked store only costs the choice its persistence.
+    }
+    apply(choice === 'system' ? fromSystem() : choice);
+  };
+
+  apply(stored() || fromSystem());
+  media.addEventListener('change', () => {
+    if (!stored()) apply(fromSystem());
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    apply(document.documentElement.dataset.bsTheme);
-    document.getElementById('btn-theme').addEventListener('click', () => {
-      const next = document.documentElement.dataset.bsTheme === 'dark' ? 'light' : 'dark';
-      try {
-        localStorage.setItem(KEY, next);
-      } catch {
-        // A blocked store only costs the choice its persistence.
-      }
-      apply(next);
-    });
-  });
+  window.MigTheme = { choose, stored, apply };
 })();

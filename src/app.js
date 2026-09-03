@@ -18,31 +18,112 @@ function getParams() {
   return { role: p.get('role') || '' };
 }
 
+function currentView() {
+  return document.querySelector('input[name="view"]:checked').value;
+}
+
 function setStatus(text) {
   document.getElementById('status').innerText = text;
 }
 
 setStatus('Scanning roles ...');
 
+wirePanels();
+wireDesign();
+
 function wireViewMode(tableView) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
-  const sidebar = document.getElementById('sidebar');
   const apply = () => {
-    const tables = document.getElementById('mode-2d').checked;
+    const view = currentView();
+    const tables = view !== 'graph';
     pane.classList.toggle('pane-front', tables);
     pane.classList.toggle('pane-back', !tables);
     graph.classList.toggle('pane-front', !tables);
     graph.classList.toggle('pane-back', tables);
-    sidebar.hidden = tables;
-    if (tables) tableView.show(document.querySelector('input[name="table-kind"]:checked').value);
+    for (const element of document.querySelectorAll('.graph-only')) {
+      element.hidden = tables;
+    }
+    if (tables) tableView.show(view);
   };
-  document.getElementById('mode-3d').addEventListener('change', apply);
-  document.getElementById('mode-2d').addEventListener('change', apply);
-  apply();
-  for (const input of document.querySelectorAll('input[name="table-kind"]')) {
-    input.addEventListener('change', () => tableView.show(input.value));
+  for (const input of document.querySelectorAll('input[name="view"]')) {
+    input.addEventListener('change', apply);
   }
+  apply();
+}
+
+function wirePanels() {
+  const panels = {
+    'btn-filter': document.getElementById('sidebar'),
+    'btn-design': document.getElementById('design-panel'),
+  };
+  for (const [id, panel] of Object.entries(panels)) {
+    document.getElementById(id).addEventListener('click', () => {
+      const opening = panel.hidden;
+      for (const other of Object.values(panels)) other.hidden = true;
+      panel.hidden = !opening;
+      for (const [otherId, other] of Object.entries(panels)) {
+        document.getElementById(otherId).classList.toggle('active', !other.hidden);
+      }
+    });
+  }
+}
+
+function wireDesign() {
+  const root = document.documentElement;
+  const families = {
+    sans: 'system-ui, -apple-system, "Segoe UI", sans-serif',
+    serif: 'Georgia, "Times New Roman", serif',
+    mono: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+  };
+  const read = key => {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  };
+  const store = (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      // A blocked store only costs the choice its persistence.
+    }
+  };
+
+  const size = document.getElementById('design-font-size');
+  const family = document.getElementById('design-font-family');
+  const veil = document.getElementById('design-opacity');
+  const theme = document.getElementById('design-theme');
+
+  const applySize = () => {
+    root.style.setProperty('--mig-font-size', `${size.value}px`);
+    document.getElementById('design-font-size-value').textContent = size.value;
+    store('mig-font-size', size.value);
+  };
+  const applyFamily = () => {
+    root.style.setProperty('--mig-font-family', families[family.value]);
+    store('mig-font-family', family.value);
+  };
+  const applyVeil = () => {
+    root.style.setProperty('--mig-veil', String(veil.value / 100));
+    document.getElementById('design-opacity-value').textContent = veil.value;
+    store('mig-veil', veil.value);
+  };
+
+  size.value = read('mig-font-size') || size.value;
+  family.value = read('mig-font-family') || family.value;
+  veil.value = read('mig-veil') ?? veil.value;
+  theme.value = read('mig-theme') || 'system';
+
+  size.addEventListener('input', applySize);
+  family.addEventListener('change', applyFamily);
+  veil.addEventListener('input', applyVeil);
+  theme.addEventListener('change', () => window.MigTheme.choose(theme.value));
+
+  applySize();
+  applyFamily();
+  applyVeil();
 }
 
 function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {

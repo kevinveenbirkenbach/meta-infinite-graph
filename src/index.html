@@ -25,16 +25,19 @@
       </span>
       <div class="ms-auto d-flex align-items-center gap-2">
         <div class="btn-group btn-group-sm" role="group">
-          <input type="radio" class="btn-check" name="view-mode" id="mode-3d" checked>
-          <label class="btn btn-outline-light" for="mode-3d">3D</label>
-          <input type="radio" class="btn-check" name="view-mode" id="mode-2d">
-          <label class="btn btn-outline-light" for="mode-2d">2D</label>
+          <input type="radio" class="btn-check" name="view" id="view-graph" value="graph" checked>
+          <label class="btn btn-outline-light" for="view-graph">3D</label>
+          <input type="radio" class="btn-check" name="view" id="view-bond" value="bond">
+          <label class="btn btn-outline-light" for="view-bond">Bond</label>
+          <input type="radio" class="btn-check" name="view" id="view-ressources" value="ressources">
+          <label class="btn btn-outline-light" for="view-ressources">Ressources</label>
+          <input type="radio" class="btn-check" name="view" id="view-complexity" value="complexity">
+          <label class="btn btn-outline-light" for="view-complexity">Complexity</label>
         </div>
-        <button id="btn-variants" type="button" class="btn btn-sm btn-outline-light"
-                title="Variant aware: off">🧬</button>
-        <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-light"
-                title="Show role names as text">🔤</button>
-        <button id="btn-theme" type="button" class="btn btn-sm btn-outline-light">🌙</button>
+        <button id="btn-filter" type="button" class="btn btn-sm btn-outline-light"
+                title="Filter">🔍</button>
+        <button id="btn-design" type="button" class="btn btn-sm btn-outline-light"
+                title="Design">🎨</button>
       </div>
     </div>
   </nav>
@@ -43,23 +46,45 @@
   <div id="graph3d"></div>
 
   <div id="tables-pane">
-    <div class="btn-group btn-group-sm" role="group">
-      <input type="radio" class="btn-check" name="table-kind" id="table-bond" value="bond" checked>
-      <label class="btn btn-outline-primary" for="table-bond">Bond</label>
-      <input type="radio" class="btn-check" name="table-kind" id="table-ressources" value="ressources">
-      <label class="btn btn-outline-primary" for="table-ressources">Ressources</label>
-      <input type="radio" class="btn-check" name="table-kind" id="table-complexity" value="complexity">
-      <label class="btn btn-outline-primary" for="table-complexity">Complexity</label>
-    </div>
     <div id="tables"></div>
   </div>
 
-  <!-- Sidebar: static collapse, shown by default -->
-  <div id="sidebar" class="collapse show">
-    <div class="p-3 border-bottom">
+  <div id="design-panel" class="side-panel" hidden>
+    <div class="p-3">
+      <h6 class="mb-3">Design</h6>
 
-      <!-- Role + selector -->
-      <div class="mb-3">
+      <label class="form-label mb-1" for="design-theme">Theme</label>
+      <select id="design-theme" class="form-select form-select-sm mb-3">
+        <option value="system">Follow the system</option>
+        <option value="light">Day</option>
+        <option value="dark">Night</option>
+      </select>
+
+      <label class="form-label mb-1" for="design-font-size">
+        Font size <span id="design-font-size-value">14</span>px
+      </label>
+      <input type="range" class="form-range mb-3" id="design-font-size"
+             min="10" max="22" step="1" value="14">
+
+      <label class="form-label mb-1" for="design-font-family">Font</label>
+      <select id="design-font-family" class="form-select form-select-sm mb-3">
+        <option value="sans">Sans</option>
+        <option value="serif">Serif</option>
+        <option value="mono">Mono</option>
+      </select>
+
+      <label class="form-label mb-1" for="design-opacity">
+        Background transparency <span id="design-opacity-value">5</span>%
+      </label>
+      <input type="range" class="form-range" id="design-opacity"
+             min="0" max="50" step="1" value="5">
+    </div>
+  </div>
+
+  <div id="sidebar" class="side-panel" hidden>
+    <div class="p-3">
+
+      <div class="mb-3 graph-only">
         <label for="role-search" class="form-label">Search Role</label>
         <input
           type="text"
@@ -72,8 +97,17 @@
         <select id="sel-role" class="form-select"></select>
       </div>
 
-      <!-- Edge kinds -->
-      <fieldset class="mb-2 small">
+      <fieldset id="filter-switches" class="mb-2 small">
+        <legend class="form-label mb-1">Data</legend>
+        <div class="d-flex gap-2">
+          <button id="btn-variants" type="button" class="btn btn-sm btn-outline-primary flex-fill"
+                  title="Variant aware: off">🧬 Variants</button>
+          <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-primary flex-fill"
+                  title="Show role names as text">🔤 Symbols</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="mb-2 small graph-only">
         <legend class="form-label mb-1">Edges</legend>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-role-deps">
@@ -112,12 +146,11 @@
         <select id="facet-mode" class="form-select form-select-sm"></select>
       </fieldset>
 
-      <button id="btn-flow" class="btn btn-sm btn-outline-primary mb-2 w-100">
+      <button id="btn-flow" class="btn btn-sm btn-outline-primary mb-2 w-100 graph-only">
         ➡ Global run-after flow
       </button>
 
-      <!-- Compact control bar -->
-      <div class="input-group input-group-sm mb-3">
+      <div class="input-group input-group-sm mb-3 graph-only">
         <button id="btn-start" class="btn btn-primary">
           ▶
         </button>
@@ -145,8 +178,7 @@
 
       <hr/>
 
-      <!-- Legend -->
-      <div class="mb-3 small">
+      <div class="mb-3 small graph-only">
         <div><span class="legend-dot bg-purple"></span>Start node</div>
         <div><span class="legend-dot bg-pink"></span>Selected</div>
         <div><span class="legend-dot bg-orange"></span>Pending ⏳ (auto-expanding)</div>
@@ -162,24 +194,21 @@
         </div>
       </div>
 
-      <hr/>
-
-      <div id="status" class="small text-muted"></div>
-
-      <hr/>
-
-      <!-- Footer links -->
-      <div class="small text-center">
-        <a href="https://github.com/kevinveenbirkenbach/meta-infinite-graph" target="_blank">
-          ⌥ Source
-        </a> •
-        <a href="https://www.veen.world" target="_blank">
-          👤 Kevin Veen-Birkenbach
-        </a> •
-        ⚖ MIT License
-      </div>
     </div>
   </div>
+
+  <nav id="bottom-nav">
+    <span id="status" class="text-muted"></span>
+    <span class="bottom-nav-links">
+      <a href="https://github.com/kevinveenbirkenbach/meta-infinite-graph" target="_blank">
+        ⌥ Source
+      </a>
+      <a href="https://www.veen.world" target="_blank">
+        👤 Kevin Veen-Birkenbach
+      </a>
+      <span>⚖ MIT License</span>
+    </span>
+  </nav>
 
   <!-- Vendored libraries (matched three 0.146 + 3d-force-graph 1.73.4). -->
   <script src="vendor/three.min.js"></script>

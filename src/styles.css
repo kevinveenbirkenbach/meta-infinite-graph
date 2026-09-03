@@ -1,11 +1,18 @@
 /* styles.css */
 
-/* Make html/body fill the iframe (or viewport) fully */
+:root {
+  --mig-font-size: 14px;
+  --mig-font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mig-veil: 0.05;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-size: var(--mig-font-size);
+  font-family: var(--mig-font-family);
 }
 
 /* Graph container must always cover its parent */
@@ -23,16 +30,46 @@ html, body {
   height: 100% !important;
 }
 
-/* Sidebar sits beneath the navbar */
-#sidebar {
+.side-panel {
   position: absolute;
-  top: 56px;    /* height of navbar */
+  top: 56px;
   right: 0;
   width: 340px;
-  bottom: 0;
+  bottom: 32px;
   overflow-y: auto;
-  background: rgba(var(--bs-body-bg-rgb), 0.85);
+  background: rgba(var(--bs-body-bg-rgb), calc(1 - var(--mig-veil)));
+  border-left: 1px solid var(--bs-border-color);
   z-index: 1000;
+}
+
+#bottom-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 12px;
+  background: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--bs-border-color);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+.bottom-nav-links {
+  display: flex;
+  gap: 14px;
+  margin-left: auto;
+}
+
+#status {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Legend dots */
@@ -65,10 +102,6 @@ html, body {
   overflow-y: auto;
 }
 
-#status {
-  max-height: 120px;
-  overflow-y: auto;
-}
 
 .navbar {
   z-index: 1100;
@@ -86,7 +119,7 @@ html, body {
   top: 56px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 32px;
   display: flex;
   flex-direction: column;
   padding: 12px;
@@ -95,7 +128,7 @@ html, body {
 
 #graph3d.pane-front,
 #tables-pane.pane-front {
-  opacity: 0.95;
+  opacity: calc(1 - var(--mig-veil));
   z-index: 900;
   pointer-events: auto;
 }
