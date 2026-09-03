@@ -113,7 +113,7 @@ class UIManager {
   onSelectionChange() {
     const role = document.getElementById('sel-role').value;
     if (!role) return;
-    history.replaceState(null, '', `?role=${encodeURIComponent(role)}`);
+    if (window.urlState) window.urlState.capture();
 
     this.selectionManager.setStartRole(role);
     this.autoResolver.stop();

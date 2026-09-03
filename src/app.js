@@ -13,13 +13,16 @@ const dataLoader = new DataLoader('/roles');
 const selectionManager = new SelectionManager();
 const graphRenderer = new GraphRenderer('graph3d', selectionManager);
 
-function getParams() {
-  const p = new URLSearchParams(window.location.search);
-  return { role: p.get('role') || '' };
+const urlState = new UrlState();
+window.urlState = urlState;
+
+function facet(id) {
+  return document.getElementById(id).value;
 }
 
-function currentView() {
-  return document.querySelector('input[name="view"]:checked').value;
+function setFacet(id, value) {
+  const select = document.getElementById(id);
+  if ([...select.options].some(option => option.value === value)) select.value = value;
 }
 
 function setStatus(text) {
@@ -30,6 +33,10 @@ setStatus('Scanning roles ...');
 
 wirePanels();
 wireDesign();
+
+function currentView() {
+  return document.querySelector('input[name="view"]:checked').value;
+}
 
 function wireViewMode(tableView) {
   const pane = document.getElementById('tables-pane');
@@ -83,7 +90,7 @@ function wireDesign() {
       return null;
     }
   };
-  const store = (key, value) => {
+  const write = (key, value) => {
     try {
       localStorage.setItem(key, value);
     } catch {
@@ -99,16 +106,16 @@ function wireDesign() {
   const applySize = () => {
     root.style.setProperty('--mig-font-size', `${size.value}px`);
     document.getElementById('design-font-size-value').textContent = size.value;
-    store('mig-font-size', size.value);
+    write('mig-font-size', size.value);
   };
   const applyFamily = () => {
     root.style.setProperty('--mig-font-family', families[family.value]);
-    store('mig-font-family', family.value);
+    write('mig-font-family', family.value);
   };
   const applyVeil = () => {
     root.style.setProperty('--mig-veil', String(veil.value / 100));
     document.getElementById('design-opacity-value').textContent = veil.value;
-    store('mig-veil', veil.value);
+    write('mig-veil', veil.value);
   };
 
   size.value = read('mig-font-size') || size.value;
@@ -116,14 +123,37 @@ function wireDesign() {
   veil.value = read('mig-veil') ?? veil.value;
   theme.value = read('mig-theme') || 'system';
 
-  size.addEventListener('input', applySize);
-  family.addEventListener('change', applyFamily);
-  veil.addEventListener('input', applyVeil);
-  theme.addEventListener('change', () => window.MigTheme.choose(theme.value));
+  urlState
+    .register('theme', () => theme.value, value => {
+      theme.value = value;
+      window.MigTheme.choose(value);
+    }, 'system')
+    .register('fontsize', () => size.value, value => {
+      size.value = value;
+      applySize();
+    }, '14')
+    .register('font', () => family.value, value => {
+      family.value = value;
+      applyFamily();
+    }, 'sans')
+    .register('veil', () => veil.value, value => {
+      veil.value = value;
+      applyVeil();
+    }, '5');
+
+  const remember = handler => () => {
+    handler();
+    urlState.capture();
+  };
+  size.addEventListener('input', remember(applySize));
+  family.addEventListener('change', remember(applyFamily));
+  veil.addEventListener('input', remember(applyVeil));
+  theme.addEventListener('change', remember(() => window.MigTheme.choose(theme.value)));
 
   applySize();
   applyFamily();
   applyVeil();
+  urlState.apply(['theme', 'fontsize', 'font', 'veil']);
 }
 
 function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
@@ -131,8 +161,7 @@ function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
   const symbolButton = document.getElementById('btn-symbols');
   let variantsLoaded = false;
 
-  variantButton.addEventListener('click', () => {
-    const next = !tableView.variantAware;
+  const setVariants = next => {
     const start = variantsLoaded
       ? Promise.resolve()
       : dataLoader.loadSideFileAll(roles, 'variants').then(raw => {
@@ -141,7 +170,7 @@ function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
         variantsLoaded = true;
       });
     variantButton.disabled = true;
-    start.then(() => {
+    return start.then(() => {
       tableView.variantAware = next;
       uiManager.setVariantAware(next);
       variantButton.classList.toggle('active', next);
@@ -149,20 +178,27 @@ function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
       variantButton.disabled = false;
       tableView.refresh();
     });
-  });
+  };
 
-  symbolButton.addEventListener('click', () => {
+  const setSymbols = next => {
     symbolButton.disabled = true;
-    roleInfo.load().then(() => {
-      roleInfo.symbols = !roleInfo.symbols;
-      symbolButton.textContent = roleInfo.symbols ? '🔡' : '🔤';
-      symbolButton.title = roleInfo.symbols
+    return roleInfo.load().then(() => {
+      roleInfo.symbols = next;
+      symbolButton.textContent = next ? '🔡 Symbols' : '🔤 Text';
+      symbolButton.title = next
         ? 'Show role names as symbols'
         : 'Show role names as text';
+      symbolButton.classList.toggle('active', next);
       symbolButton.disabled = false;
       tableView.refresh();
     });
-  });
+  };
+
+  variantButton.addEventListener('click', () =>
+    setVariants(!tableView.variantAware).then(() => urlState.capture()));
+  symbolButton.addEventListener('click', () =>
+    setSymbols(!roleInfo.symbols).then(() => urlState.capture()));
+  return { setVariants, setSymbols };
 }
 
 Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
@@ -184,12 +220,13 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       document.getElementById('tables'),
       roleInfo
     );
-    wireViewMode(tableView);
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
     );
-    wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, metaGraph.roles);
+    const switches = wireDataSwitches(
+      tableView, roleInfo, uiManager, dataLoader, metaGraph.roles
+    );
 
     for (const id of ['facet-author', 'facet-lifecycle', 'facet-mode']) {
       document.getElementById(id).addEventListener('change', () => {
@@ -237,11 +274,59 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     });
 
     uiManager.buildFacetControls();
-    tableView.setFilters(uiManager.filters());
+    sel.value = ranked[0];
 
-    const { role } = getParams();
-    sel.value = role && metaGraph.roles.includes(role) ? role : ranked[0];
-    uiManager.onSelectionChange();
+    const edgeIds = [
+      'edge-role-deps', 'edge-role-dependents', 'edge-dependencies',
+      'edge-dependents', 'edge-run-after', 'edge-visible',
+    ];
+    const edgeDefault = edgeIds
+      .filter(id => document.getElementById(id).checked)
+      .map(id => id.slice(5))
+      .join(',');
+
+    urlState
+      .register('view', currentView, value => {
+        const input = document.getElementById(`view-${value}`);
+        if (input) input.checked = true;
+      }, 'graph')
+      .register('role', () => sel.value, value => {
+        if (metaGraph.roles.includes(value)) sel.value = value;
+      }, ranked[0])
+      .register('author', () => facet('facet-author'), value => setFacet('facet-author', value), '')
+      .register('lifecycle', () => facet('facet-lifecycle'), value => setFacet('facet-lifecycle', value), '')
+      .register('mode', () => facet('facet-mode'), value => setFacet('facet-mode', value), '')
+      .register('edges', () => edgeIds
+        .filter(id => document.getElementById(id).checked)
+        .map(id => id.slice(5))
+        .join(','), value => {
+        const wanted = value ? value.split(',') : [];
+        for (const id of edgeIds) {
+          document.getElementById(id).checked = wanted.includes(id.slice(5));
+        }
+      }, edgeDefault)
+      .register('variants', () => String(tableView.variantAware), value => {
+        if (value === 'true') pending.push(switches.setVariants(true));
+      }, 'false')
+      .register('symbols', () => String(roleInfo.symbols), value => {
+        if (value === 'true') pending.push(switches.setSymbols(true));
+      }, 'false');
+
+    const pending = [];
+    urlState.apply();
+    for (const id of [...edgeIds, 'facet-author', 'facet-lifecycle', 'facet-mode', 'sel-role']) {
+      document.getElementById(id).addEventListener('change', () => urlState.capture());
+    }
+    for (const input of document.querySelectorAll('input[name="view"]')) {
+      input.addEventListener('change', () => urlState.capture());
+    }
+
+    tableView.setFilters(uiManager.filters());
+    Promise.all(pending).then(() => {
+      wireViewMode(tableView);
+      uiManager.onSelectionChange();
+      urlState.capture();
+    });
 
     // Test hook for the Playwright suite.
     window.__mig = {

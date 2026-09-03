@@ -257,6 +257,28 @@ test('variant awareness adds a variant axis to every table', async ({ page }) =>
   await expect(page.locator('#tables thead')).toContainText('variant');
 });
 
+test('a facet narrows the tables, not just the graph', async ({ page }) => {
+  await open2d(page, 'complexity');
+  const rows = page.locator('#tables tbody tr');
+  const before = await rows.count();
+  expect(before).toBeGreaterThan(100);
+
+  await openFilters(page);
+  const lifecycle = page.locator('#facet-lifecycle');
+  const value = await lifecycle.locator('option').nth(1).getAttribute('value');
+  await lifecycle.selectOption(value);
+  await expect.poll(() => rows.count()).toBeLessThan(before);
+  expect(await rows.count()).toBeGreaterThan(0);
+
+  await page.locator('label[for="view-bond"]').click();
+  const axis = page.locator('table.bond-matrix tbody tr');
+  await expect.poll(() => axis.count()).toBeGreaterThan(0);
+  expect(await axis.count()).toBeLessThan(123);
+
+  await lifecycle.selectOption('');
+  await expect.poll(() => axis.count()).toBe(123);
+});
+
 test('the design panel drives the font, the veil and nothing else', async ({ page }) => {
   await page.goto('/');
   await page.locator('#btn-design').click();
@@ -300,26 +322,47 @@ test('the bottom navigator carries the status and the credits', async ({ page })
   await expect(page.locator('#sidebar #status')).toHaveCount(0);
 });
 
-test('a facet narrows the tables, not just the graph', async ({ page }) => {
-  await open2d(page, 'complexity');
-  const rows = page.locator('#tables tbody tr');
-  const before = await rows.count();
-  expect(before).toBeGreaterThan(100);
+test('a reload restores the view, the filters and the design', async ({ page }) => {
+  await page.goto('/');
+  await expect
+    .poll(() => page.evaluate(() => Boolean(window.__mig?.tableView)), { timeout: 60000 })
+    .toBe(true);
 
   await openFilters(page);
+  await page.locator('#edge-run-after').check();
   const lifecycle = page.locator('#facet-lifecycle');
   const value = await lifecycle.locator('option').nth(1).getAttribute('value');
   await lifecycle.selectOption(value);
-  await expect.poll(() => rows.count()).toBeLessThan(before);
-  expect(await rows.count()).toBeGreaterThan(0);
+  await page.locator('label[for="view-complexity"]').click();
 
-  await page.locator('label[for="view-bond"]').click();
-  const axis = page.locator('table.bond-matrix tbody tr');
-  await expect.poll(() => axis.count()).toBeGreaterThan(0);
-  expect(await axis.count()).toBeLessThan(123);
+  await openDesign(page);
+  await page.locator('#design-font-size').fill('18');
+  await page.locator('#design-font-size').dispatchEvent('input');
+  await page.locator('#design-font-family').selectOption('mono');
+  await page.locator('#design-theme').selectOption('dark');
+  await page.locator('#btn-symbols').click();
+  await expect.poll(() => page.locator('#btn-symbols').isEnabled(), { timeout: 60000 }).toBe(true);
 
-  await lifecycle.selectOption('');
-  await expect.poll(() => axis.count()).toBe(123);
+  const before = await page.evaluate(() => window.location.search);
+  expect(before).toContain('view=complexity');
+  expect(before).toContain('symbols=true');
+  expect(before).toContain('fontsize=18');
+  expect(before).toContain('font=mono');
+  expect(before).toContain('theme=dark');
+  expect(before).toContain('run-after');
+  const rows = await page.locator('#tables tbody tr').count();
+
+  await page.reload();
+  await expect
+    .poll(() => page.evaluate(() => Boolean(window.__mig?.tableView)), { timeout: 60000 })
+    .toBe(true);
+  await expect.poll(() => page.locator('#tables tbody tr').count()).toBe(rows);
+  await expect(page.locator('#view-complexity')).toBeChecked();
+  await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'dark');
+  await expect(page.locator('#edge-run-after')).toBeChecked();
+  expect(await page.evaluate(() => window.__mig.roleInfo.symbols)).toBe(true);
+  expect(await page.evaluate(() => getComputedStyle(document.documentElement)
+    .getPropertyValue('--mig-font-size').trim())).toBe('18px');
 });
 
 test('the service registry resolves bond keys to provider roles', async ({ page }) => {
