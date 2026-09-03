@@ -5,7 +5,17 @@ class TableView {
     this.roleInfo = roleInfo;
     this.kind = 'bond';
     this.variantAware = false;
+    this.filters = { author: '', lifecycle: '', mode: '' };
     this._cache = {};
+  }
+
+  setFilters(filters) {
+    this.filters = filters;
+    this._cache = {};
+  }
+
+  _keeps(role) {
+    return this.roleInfo.graph.matches(role, this.filters);
   }
 
   static _fmtBytes(value) {
@@ -119,7 +129,7 @@ class TableView {
 
   _buildBond() {
     const edges = this.tables.bondEdges();
-    const participants = MetaTables.bondParticipants(edges);
+    const participants = MetaTables.bondParticipants(edges).filter(role => this._keeps(role));
     const axis = this.variantAware
       ? this.tables.variantAxis(participants)
       : participants.map(role => ({ role, variant: null }));
@@ -290,7 +300,7 @@ class TableView {
   }
 
   _buildRessources() {
-    const rows = this.tables.resourceRows(this.variantAware);
+    const rows = this.tables.resourceRows(this.variantAware).filter(row => this._keeps(row.role));
     const table = document.createElement('table');
     table.className = 'table table-sm table-striped';
     const headers = ['role', 'services', 'mem_reservation', 'mem_limit', 'min_storage', 'pids_limit', 'cpus'];
@@ -327,6 +337,7 @@ class TableView {
 
   _buildComplexity() {
     const rows = this.tables.complexityRows(this.variantAware)
+      .filter(row => this._keeps(row.name))
       .sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name)
         || (a.variant || 0) - (b.variant || 0));
     const table = document.createElement('table');

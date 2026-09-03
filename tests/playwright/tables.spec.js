@@ -293,6 +293,28 @@ test('the bottom navigator carries the status and the credits', async ({ page })
   await expect(page.locator('#sidebar #status')).toHaveCount(0);
 });
 
+test('a facet narrows the tables, not just the graph', async ({ page }) => {
+  await open2d(page, 'complexity');
+  const rows = page.locator('#tables tbody tr');
+  const before = await rows.count();
+  expect(before).toBeGreaterThan(100);
+
+  await openFilters(page);
+  const lifecycle = page.locator('#facet-lifecycle');
+  const value = await lifecycle.locator('option').nth(1).getAttribute('value');
+  await lifecycle.selectOption(value);
+  await expect.poll(() => rows.count()).toBeLessThan(before);
+  expect(await rows.count()).toBeGreaterThan(0);
+
+  await page.locator('label[for="view-bond"]').click();
+  const axis = page.locator('table.bond-matrix tbody tr');
+  await expect.poll(() => axis.count()).toBeGreaterThan(0);
+  expect(await axis.count()).toBeLessThan(123);
+
+  await lifecycle.selectOption('');
+  await expect.poll(() => axis.count()).toBe(123);
+});
+
 test('the service registry resolves bond keys to provider roles', async ({ page }) => {
   await open2d(page);
   const resolved = await page.evaluate(() => {

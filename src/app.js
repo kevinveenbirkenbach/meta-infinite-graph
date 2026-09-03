@@ -191,6 +191,13 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     );
     wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, metaGraph.roles);
 
+    for (const id of ['facet-author', 'facet-lifecycle', 'facet-mode']) {
+      document.getElementById(id).addEventListener('change', () => {
+        tableView.setFilters(uiManager.filters());
+        if (currentView() !== 'graph') tableView.refresh();
+      });
+    }
+
     const cardHost = new RoleCardHost(roleInfo);
     cardHost.bind(document.getElementById('tables'));
     graphRenderer.on('nodeClicked', ({ node }) => {
@@ -230,6 +237,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     });
 
     uiManager.buildFacetControls();
+    tableView.setFilters(uiManager.filters());
 
     const { role } = getParams();
     sel.value = role && metaGraph.roles.includes(role) ? role : ranked[0];
