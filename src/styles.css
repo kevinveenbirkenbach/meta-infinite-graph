@@ -504,6 +504,57 @@ img.role-icon {
   opacity: 1;
 }
 
+.role-card-host:has(.token-help) {
+  max-width: 420px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.token-field label {
+  cursor: help;
+}
+
+.token-help h4 {
+  margin: 10px 0 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.token-help ol {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.token-help li {
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.token-help p.token-help-aside {
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+.token-help code {
+  padding: 0 4px;
+  border-radius: 3px;
+  background: var(--bs-secondary-bg);
+  color: inherit;
+}
+
+.token-help pre {
+  margin: 6px 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: var(--bs-secondary-bg);
+  font-size: 0.76rem;
+  overflow-x: auto;
+}
+
 .role-card-video {
   display: block;
   width: 100%;

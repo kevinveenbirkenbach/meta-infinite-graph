@@ -32,6 +32,94 @@ class ForkTree {
     return typeof iso === 'string' ? iso.slice(0, 10) : '';
   }
 
+  static TOKEN_HELP = '#github-token';
+
+  static _rich(tag, parts, className) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    for (const part of parts) {
+      element.appendChild(
+        typeof part === 'string'
+          ? document.createTextNode(part)
+          : ForkTree._text('code', part.code)
+      );
+    }
+    return element;
+  }
+
+  static _steps(items) {
+    const list = document.createElement('ol');
+    for (const parts of items) list.appendChild(ForkTree._rich('li', parts));
+    return list;
+  }
+
+  static tokenHelp() {
+    const card = document.createElement('div');
+    card.className = 'role-card token-help';
+    card.appendChild(ForkTree._text('div', '🔑 GitHub token', 'role-card-title'));
+    card.appendChild(ForkTree._text(
+      'p',
+      'GitHub answers 60 requests an hour to an address that sends no token. A '
+      + 'full fork tree costs around 32, so the second visit runs dry. A token '
+      + 'lifts the ceiling to 5000 an hour.',
+      'role-card-desc'
+    ));
+
+    card.appendChild(ForkTree._text('h4', 'Create one'));
+    card.appendChild(ForkTree._steps([
+      ['Open Settings, Developer settings, Personal access tokens, Fine-grained tokens, then Generate new token.'],
+      ['Resource owner: your own account. Expiration: any date, the tree needs nothing long lived.'],
+      ['Repository access: ', { code: 'Public repositories (read-only)' }, '.'],
+      ['Leave every permission untouched. Public repository metadata needs none of them.'],
+      ['Generate, then copy the ', { code: 'github_pat_…' }, ' value. GitHub shows it exactly once.'],
+    ]));
+    card.appendChild(ForkTree._text(
+      'p',
+      'A classic token works as well: create one with no scope ticked at all. An '
+      + 'empty scope still reads public data at the authenticated rate.',
+      'token-help-aside'
+    ));
+
+    card.appendChild(ForkTree._text('h4', 'Paste it into the field'));
+    card.appendChild(ForkTree._rich('p', [
+      'It stays in this browser under the key ', { code: 'mig-gh-token' },
+      ' and travels only to ', { code: 'api.github.com' },
+      '. It is never written into the address bar, so a link you share carries '
+      + 'the view and not the credential. The button below the field erases it '
+      + 'again together with the cache.',
+    ], 'token-help-aside'));
+
+    card.appendChild(ForkTree._text('h4', 'Or persist it in .env'));
+    card.appendChild(ForkTree._rich('p', [
+      'Put the token into the ', { code: '.env' },
+      ' file of the server that hosts this page, beside ', { code: 'MIG_PORT' }, ':',
+    ], 'token-help-aside'));
+    card.appendChild(ForkTree._text('pre', 'MIG_GITHUB_TOKEN=github_pat_…'));
+    card.appendChild(ForkTree._rich('p', [
+      'and start it with ', { code: 'make up' },
+      '. The container then writes an nginx snippet that attaches the ',
+      { code: 'Authorization' }, ' header to a ', { code: '/gh/' },
+      ' proxy, so the browser calls its own origin and never receives the token. '
+      + 'This field disappears and every visitor shares the one budget of 5000 an hour.',
+    ], 'token-help-aside'));
+
+    const links = document.createElement('div');
+    links.className = 'role-card-links';
+    for (const [text, href] of [
+      ['Create a token', 'https://github.com/settings/personal-access-tokens/new'],
+      ['Rate limits', 'https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api'],
+    ]) {
+      const link = document.createElement('a');
+      link.href = href;
+      link.target = '_blank';
+      link.rel = 'noreferrer';
+      link.textContent = text;
+      links.appendChild(link);
+    }
+    card.appendChild(links);
+    return card;
+  }
+
   show() {
     this.container.innerHTML = '';
     if (!this.section) {

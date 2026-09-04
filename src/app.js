@@ -63,11 +63,27 @@ function wireViewMode(tableView, forkTree) {
   apply();
 }
 
-function wireForks(forkTree) {
+function wireForks(forkTree, cardHost) {
   const root = document.getElementById('fork-root');
   const token = document.getElementById('fork-token');
   const forget = document.getElementById('fork-forget');
   const owned = document.getElementById('fork-token-owned');
+  const field = document.querySelector('.token-field');
+
+  // Left of the panel rather than at the pointer: the panel is the right edge
+  // of the window, so a card at the pointer covers the very input to fill in.
+  const help = () => {
+    const box = field.getBoundingClientRect();
+    cardHost.show(
+      ForkTree.TOKEN_HELP,
+      { x: box.left, y: box.top, flip: true },
+      ForkTree.tokenHelp
+    );
+  };
+  field.addEventListener('mouseover', help);
+  field.addEventListener('focusin', help);
+  field.addEventListener('mouseout', () => cardHost.release(ForkTree.TOKEN_HELP));
+  field.addEventListener('focusout', () => cardHost.release(ForkTree.TOKEN_HELP));
 
   root.value = forkTree.root;
   token.value = forkTree.api.token;
@@ -376,7 +392,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     }
 
     tableView.setFilters(uiManager.filters());
-    wireForks(forkTree);
+    wireForks(forkTree, cardHost);
     Promise.all(pending).then(() => {
       wireViewMode(tableView, forkTree);
       uiManager.onSelectionChange();

@@ -189,6 +189,26 @@ test('without a server token the visitor may supply one', async ({ page }) => {
   expect(await page.evaluate(() => window.__mig.forkTree.api.base)).toBe('https://api.github.com');
 });
 
+test('hovering the token field explains how to create and how to persist one', async ({ page }) => {
+  const calls = [];
+  await openForks(page, calls);
+  await page.locator('#btn-filter').click();
+  await expect(page.locator('.token-field')).toBeVisible();
+
+  await page.locator('#fork-token').hover();
+  const card = page.locator('.role-card-host .token-help');
+  await expect(card).toBeVisible();
+  await expect(card).toContainText('Public repositories (read-only)');
+  await expect(card).toContainText('github_pat_');
+  await expect(card).toContainText('MIG_GITHUB_TOKEN=github_pat_');
+  await expect(card).toContainText('5000 an hour');
+  await expect(card.locator('a[href*="settings/personal-access-tokens"]')).toHaveCount(1);
+  await expect(page.locator('.role-card-host .role-card-close')).toBeVisible();
+
+  await page.mouse.move(2, 2);
+  await expect(page.locator('.role-card-host')).toHaveCount(0);
+});
+
 test('a server token hides the field and routes through the proxy', async ({ page }) => {
   const paths = [];
   await page.route('**/gh-config.json', route => route.fulfill({

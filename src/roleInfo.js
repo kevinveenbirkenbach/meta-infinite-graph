@@ -194,8 +194,9 @@ class RoleCardHost {
     if (!point) return;
     const width = entry.element.offsetWidth;
     const height = entry.element.offsetHeight;
+    const left = point.flip ? point.x - width - 14 : point.x + 14;
     entry.element.style.left =
-      `${Math.max(8, Math.min(point.x + 14, window.innerWidth - width - 8))}px`;
+      `${Math.max(8, Math.min(left, window.innerWidth - width - 8))}px`;
     entry.element.style.top =
       `${Math.max(8, Math.min(point.y + 14, window.innerHeight - height - 8))}px`;
   }
@@ -204,7 +205,7 @@ class RoleCardHost {
     const element = document.createElement('div');
     element.className = 'role-card-host';
     element.dataset.role = role;
-    element.appendChild(this.roleInfo.card(role));
+    element.appendChild(entry.build ? entry.build() : this.roleInfo.card(role));
 
     const close = document.createElement('button');
     close.type = 'button';
@@ -223,7 +224,7 @@ class RoleCardHost {
     requestAnimationFrame(() => element.classList.add('on'));
   }
 
-  _ensure(role, point, locate) {
+  _ensure(role, point, locate, build) {
     let entry = this.cards.get(role);
     if (entry) {
       entry.point = point || entry.point;
@@ -235,8 +236,12 @@ class RoleCardHost {
       }
       return entry;
     }
-    entry = { element: null, hideTimer: null, frame: null, pinned: false, point, locate };
+    entry = { element: null, hideTimer: null, frame: null, pinned: false, point, locate, build };
     this.cards.set(role, entry);
+    if (build) {
+      this._build(role, entry);
+      return entry;
+    }
     this.roleInfo.load().then(() => {
       if (this.cards.get(role) !== entry) return;
       this._build(role, entry);
@@ -277,8 +282,8 @@ class RoleCardHost {
     this.cards.delete(role);
   }
 
-  show(role, point) {
-    this._ensure(role, point, null);
+  show(role, point, build) {
+    this._ensure(role, point, null, build);
   }
 
   _follow(role, entry) {
