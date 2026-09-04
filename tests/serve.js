@@ -54,6 +54,10 @@ http
         res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
         return res.end(body);
       }
+      if (url === '/gh-config.json') {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        return res.end(JSON.stringify({ proxy: Boolean(process.env.MIG_GITHUB_TOKEN) }));
+      }
       if (url.startsWith('/meta/')) {
         const target = path.join(META, url.replace(/^\/meta\//, ''));
         const body = fs.readFileSync(target);

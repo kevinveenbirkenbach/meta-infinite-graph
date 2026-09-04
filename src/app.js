@@ -67,9 +67,21 @@ function wireForks(forkTree) {
   const root = document.getElementById('fork-root');
   const token = document.getElementById('fork-token');
   const forget = document.getElementById('fork-forget');
+  const owned = document.getElementById('fork-token-owned');
 
   root.value = forkTree.root;
   token.value = forkTree.api.token;
+
+  forkTree.api.detectProxy().then(proxied => {
+    for (const element of document.querySelectorAll('.token-field')) {
+      element.hidden = proxied;
+    }
+    owned.hidden = !proxied;
+    if (proxied) {
+      forkTree.api.token = '';
+      token.value = '';
+    }
+  });
 
   root.addEventListener('change', () => {
     if (!ForkTree.isRepo(root.value.trim())) {

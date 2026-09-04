@@ -77,12 +77,41 @@ requests per hour per IP**, and a full tree costs roughly 32, so:
 - the panel shows how much quota is left, read from the response headers
   GitHub exposes to scripts
 - a personal token, read-only and public scope, raises the limit to 5000 per
-  hour. It is kept in the browser and never travels in the URL
+  hour
 
 The root is `infinito-nexus/core` and `?repo=owner/name` points the view at
-another network. Deployments must allow `https://api.github.com` in the
-`connect-src` of their content security policy; without it the browser blocks
-every call and only this view goes dark.
+another network.
+
+#### The token
+
+Two ways in, and the deployment decides which one the visitor gets.
+
+**The server holds it.** Put it in `.env`:
+
+```
+MIG_GITHUB_TOKEN=github_pat_...
+```
+
+The container writes an nginx snippet at start that adds the `Authorization`
+header to a `/gh/` proxy, and serves `/gh-config.json` saying the proxy is
+live. The browser then talks to `/gh/` instead of `api.github.com` and never
+sees the token. The token field disappears from the filter panel, replaced by
+a note that the server supplies one, and a token a visitor had stored is
+dropped. Every visitor shares the one 5000 per hour budget.
+
+The proxy only forwards what the fork tree actually calls: `/repos/owner/name`
+and its `/forks`, `/branches` and `/tags`. Anything else answers 404, so the
+token cannot be borrowed for the rest of the API.
+
+**The visitor holds it.** With `MIG_GITHUB_TOKEN` empty the browser calls
+`api.github.com` directly and the filter panel offers a token field. That token
+stays in the visitor's browser and never travels in the URL, so a shared link
+carries the view but not the credential.
+
+Direct calls need `https://api.github.com` in the `connect-src` of the
+deployment's content security policy; without it the browser blocks every call
+and only this view goes dark. A server token removes that requirement, because
+then every call is same origin.
 
 ### 2D tables
 
@@ -123,6 +152,7 @@ or the checkout there:
 MIG_PORT=8207
 INFINITO_ROLES_DIR=/path/to/infinito-nexus-core/roles
 INFINITO_META_DIR=/path/to/infinito-nexus-core/meta
+MIG_GITHUB_TOKEN=
 ```
 
 `INFINITO_META_DIR` points at the repository-root `meta/` holding
@@ -146,6 +176,16 @@ HTTP smoke against the container image:
 ```bash
 make e2e
 ```
+
+The GitHub proxy the server token builds is checked against the built image,
+with a token and without one, and its routes are probed:
+
+```bash
+make nginx-verify
+make nginx-probe
+```
+
+`make help` lists the rest.
 
 ## 📜 License
 

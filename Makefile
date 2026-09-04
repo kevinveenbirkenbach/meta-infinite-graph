@@ -6,11 +6,12 @@ COMPOSE_FILE ?= compose.yml
 BASE_URL ?= http://127.0.0.1:$(MIG_PORT)
 SERVICE ?= meta-infinite-graph
 
+IMAGE ?= meta-infinite-graph:local
 # Param: MIG_CHROMIUM  path to a chromium binary, for hosts where playwright
 #   cannot install its own. Empty means playwright uses its bundled browser.
 MIG_CHROMIUM ?=
 
-.PHONY: help up down logs rebuild e2e test test-fast clean
+.PHONY: help up down logs rebuild e2e test test-fast image nginx-verify nginx-probe clean
 
 help:
 	@echo "Targets:"
@@ -21,6 +22,9 @@ help:
 	@echo "  make e2e                 Start stack, run HTTP E2E checks, stop stack"
 	@echo "  make test                Install browsers, then run the Playwright suite"
 	@echo "  make test-fast           Run the Playwright suite without installing"
+	@echo "  make image               Build the container image"
+	@echo "  make nginx-verify        Check the generated GitHub proxy config, with and without a token"
+	@echo "  make nginx-probe         Serve the image and probe the proxy routes"
 	@echo "  make clean               Down + remove volumes"
 
 .env:
@@ -50,6 +54,28 @@ test:
 
 test-fast:
 	MIG_CHROMIUM=$(MIG_CHROMIUM) npx playwright test $(ARGS)
+
+image:
+	docker build -t $(IMAGE) .
+
+nginx-verify: image
+	@echo "== with a token =="
+	@docker run --rm -e MIG_GITHUB_TOKEN=ghp_verify_only $(IMAGE) sh -c \
+		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx -t 2>&1 | tail -1; \
+		 grep -q "Bearer ghp_verify_only" /etc/nginx/mig-github.conf && echo "token reaches nginx: yes"; \
+		 grep -o "proxy\":[a-z]*" /etc/nginx/mig-github.conf'
+	@echo "== without a token =="
+	@docker run --rm $(IMAGE) sh -c \
+		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx -t 2>&1 | tail -1; \
+		 grep -q Authorization\ \"\" /etc/nginx/mig-github.conf && echo "no Authorization header: yes"; \
+		 grep -o "proxy\":[a-z]*" /etc/nginx/mig-github.conf'
+
+nginx-probe: image
+	@docker run --rm $(IMAGE) sh -c \
+		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx & sleep 2; \
+		 echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
+		 echo "unlisted /gh/user: $$(wget -S -qO- http://127.0.0.1/gh/user 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
+		 echo "listed /gh/repos/o/r: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"'
 
 clean:
 	docker compose -f $(COMPOSE_FILE) down -v --remove-orphans

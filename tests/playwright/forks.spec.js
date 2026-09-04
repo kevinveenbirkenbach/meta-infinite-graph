@@ -185,6 +185,47 @@ test('without a server token the visitor may supply one', async ({ page }) => {
 
   await page.locator('#btn-filter').click();
   await expect(page.locator('.token-field')).toBeVisible();
+  await expect(page.locator('#fork-token-owned')).toBeHidden();
+  expect(await page.evaluate(() => window.__mig.forkTree.api.base)).toBe('https://api.github.com');
+});
+
+test('a server token hides the field and routes through the proxy', async ({ page }) => {
+  const paths = [];
+  await page.route('**/gh-config.json', route => route.fulfill({
+    status: 200, contentType: 'application/json', body: JSON.stringify({ proxy: true }),
+  }));
+  await page.route('**/gh/**', route => {
+    const url = new URL(route.request().url());
+    paths.push(url.pathname);
+    const body = url.pathname.endsWith('/forks') ? FORKS : ROOT;
+    route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      headers: { 'x-ratelimit-limit': '5000', 'x-ratelimit-remaining': '4998' },
+      body: JSON.stringify(body),
+    });
+  });
+  await page.route('https://api.github.com/**', route => route.abort());
+  await page.addInitScript(() => {
+    localStorage.setItem('mig-gh-token', 'ghp_visitor');
+    localStorage.removeItem('mig-gh-cache');
+  });
+
+  await page.goto('/');
+  await expect
+    .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
+    .toBe(true);
+  await page.locator('label[for="view-forks"]').click();
+  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+
+  await page.locator('#btn-filter').click();
+  await expect(page.locator('.token-field')).toBeHidden();
+  await expect(page.locator('#fork-token-owned')).toBeVisible();
+
+  expect(paths).toEqual(['/gh/repos/infinito-nexus/core', '/gh/repos/infinito-nexus/core/forks']);
+  expect(await page.evaluate(() => window.__mig.forkTree.api.token),
+    'a visitor token is dropped when the server holds one').toBe('');
+  await expect(page.locator('.table-note')).toContainText('4998 of 5000');
 });
 
 test('pagination follows rel=next and stops without it', async ({ page }) => {

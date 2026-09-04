@@ -3,6 +3,19 @@ class GitHubApi {
     this.ttl = ttlMs;
     this.rate = null;
     this.memory = new Map();
+    this.base = 'https://api.github.com';
+    this.proxied = false;
+  }
+
+  detectProxy() {
+    return fetch('gh-config.json', { cache: 'no-store' })
+      .then(response => (response.ok ? response.json() : null))
+      .catch(() => null)
+      .then(config => {
+        this.proxied = Boolean(config && config.proxy);
+        this.base = this.proxied ? '/gh' : 'https://api.github.com';
+        return this.proxied;
+      });
   }
 
   static CACHE_KEY = 'mig-gh-cache';
@@ -90,9 +103,10 @@ class GitHubApi {
 
   _walk(path, collected = null) {
     const headers = { Accept: 'application/vnd.github+json' };
-    if (this.token) headers.Authorization = `Bearer ${this.token}`;
+    const token = this.proxied ? '' : this.token;
+    if (token) headers.Authorization = `Bearer ${token}`;
 
-    return fetch(`https://api.github.com${path}`, { headers, credentials: 'omit' })
+    return fetch(`${this.base}${path}`, { headers, credentials: 'omit' })
       .then(response => {
         this.rate = {
           limit: Number(response.headers.get('x-ratelimit-limit')),

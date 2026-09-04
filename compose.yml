@@ -12,3 +12,5 @@ services:
       - "./src:/usr/share/nginx/html"
       - "${INFINITO_ROLES_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/roles:ro"
       - "${INFINITO_META_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/meta:ro"
+    environment:
+      MIG_GITHUB_TOKEN: "${MIG_GITHUB_TOKEN:-}"
