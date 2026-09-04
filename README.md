@@ -16,7 +16,7 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 
 ### Both modes
 
-- **Four views** in the top bar: 3D, Bond, Ressources, Complexity. Switching
+- **Five views** in the top bar: 3D, Bond, Ressources, Complexity, Forks. Switching
   never hides the previous one; the active view lies over the idle one and only
   the front one takes the pointer.
 - **Filter** (🔍) and **Design** (🎨) open the two side panels. The filter panel
@@ -54,6 +54,35 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
   carries its own close button. A card fades in over 0.1s, lingers half a
   second after the pointer leaves and fades out over another half. Clicking a
   graph node pins its card to the node and it follows it until it is closed.
+
+### Fork network
+
+The only view that leaves the mounted `roles/` tree: it reads the GitHub API
+directly from the browser and draws the repository, its forks, and per
+repository the branches and the versions.
+
+Versions come from `/tags`, not `/releases`. `infinito-nexus/core` carries 68
+tags and zero releases, and `/releases/latest` answers 404 there, so a releases
+call per node would spend quota on an empty list.
+
+The rate limit shapes the whole design. Unauthenticated GitHub allows **60
+requests per hour per IP**, and a full tree costs roughly 32, so:
+
+- opening the view costs 2 requests, the repository and its fork list
+- branches and versions load when a node is opened, 2 more per node
+- answers are cached in the browser for an hour, and a reload spends nothing.
+  A conditional `If-None-Match` request would not help: it answers 304 and
+  still costs one unauthenticated unit, so the cache skips the request instead
+  of revalidating it
+- the panel shows how much quota is left, read from the response headers
+  GitHub exposes to scripts
+- a personal token, read-only and public scope, raises the limit to 5000 per
+  hour. It is kept in the browser and never travels in the URL
+
+The root is `infinito-nexus/core` and `?repo=owner/name` points the view at
+another network. Deployments must allow `https://api.github.com` in the
+`connect-src` of their content security policy; without it the browser blocks
+every call and only this view goes dark.
 
 ### 2D tables
 

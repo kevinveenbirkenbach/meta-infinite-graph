@@ -33,6 +33,8 @@
           <label class="btn btn-outline-light" for="view-ressources">Ressources</label>
           <input type="radio" class="btn-check" name="view" id="view-complexity" value="complexity">
           <label class="btn btn-outline-light" for="view-complexity">Complexity</label>
+          <input type="radio" class="btn-check" name="view" id="view-forks" value="forks">
+          <label class="btn btn-outline-light" for="view-forks">Forks</label>
         </div>
         <button id="btn-filter" type="button" class="btn btn-sm btn-outline-light"
                 title="Filter">🔍</button>
@@ -100,6 +102,24 @@
         <label for="sel-role" class="form-label">Role</label>
         <select id="sel-role" class="form-select"></select>
       </div>
+
+      <fieldset class="mb-2 small forks-only">
+        <legend class="form-label mb-1">GitHub</legend>
+        <label class="form-label mb-0" for="fork-root">Repository</label>
+        <input type="text" id="fork-root" class="form-control form-control-sm mb-2"
+               placeholder="owner/name" autocomplete="off">
+        <div class="token-field">
+          <label class="form-label mb-0" for="fork-token">Token</label>
+          <input type="password" id="fork-token" class="form-control form-control-sm mb-1"
+                 placeholder="optional, raises 60/h to 5000/h" autocomplete="off">
+          <div class="form-text mb-2">
+            Read-only, public scope. Kept in this browser, never put in the URL.
+          </div>
+        </div>
+        <button id="fork-forget" type="button" class="btn btn-sm btn-outline-primary w-100">
+          Drop the cache and the token
+        </button>
+      </fieldset>
 
       <fieldset id="filter-switches" class="mb-2 small">
         <legend class="form-label mb-1">Data</legend>
@@ -217,6 +237,8 @@
 
   <!-- App files -->
   <script src="urlState.js"></script>
+  <script src="githubApi.js"></script>
+  <script src="forkTree.js"></script>
   <script src="dataLoader.js"></script>
   <script src="metaGraph.js"></script>
   <script src="metaTables.js"></script>

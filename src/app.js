@@ -38,7 +38,7 @@ function currentView() {
   return document.querySelector('input[name="view"]:checked').value;
 }
 
-function wireViewMode(tableView) {
+function wireViewMode(tableView, forkTree) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
   const apply = () => {
@@ -51,12 +51,49 @@ function wireViewMode(tableView) {
     for (const element of document.querySelectorAll('.graph-only')) {
       element.hidden = tables;
     }
-    if (tables) tableView.show(view);
+    for (const element of document.querySelectorAll('.forks-only')) {
+      element.hidden = view !== 'forks';
+    }
+    if (view === 'forks') forkTree.show();
+    else if (tables) tableView.show(view);
   };
   for (const input of document.querySelectorAll('input[name="view"]')) {
     input.addEventListener('change', apply);
   }
   apply();
+}
+
+function wireForks(forkTree) {
+  const root = document.getElementById('fork-root');
+  const token = document.getElementById('fork-token');
+  const forget = document.getElementById('fork-forget');
+
+  root.value = forkTree.root;
+  token.value = forkTree.api.token;
+
+  root.addEventListener('change', () => {
+    if (!ForkTree.isRepo(root.value.trim())) {
+      root.value = forkTree.root;
+      return;
+    }
+    forkTree.setRoot(root.value.trim());
+    urlState.capture();
+    if (currentView() === 'forks') forkTree.show();
+  });
+
+  token.addEventListener('change', () => {
+    forkTree.api.token = token.value.trim();
+    forkTree.loaded = null;
+    if (currentView() === 'forks') forkTree.show();
+  });
+
+  forget.addEventListener('click', () => {
+    forkTree.api.forget();
+    forkTree.api.token = '';
+    token.value = '';
+    forkTree.loaded = null;
+    if (currentView() === 'forks') forkTree.show();
+  });
 }
 
 function wirePanels() {
@@ -220,6 +257,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       document.getElementById('tables'),
       roleInfo
     );
+    const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'));
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
@@ -293,6 +331,10 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       .register('role', () => sel.value, value => {
         if (metaGraph.roles.includes(value)) sel.value = value;
       }, ranked[0])
+      .register('repo', () => forkTree.root, value => {
+        forkTree.setRoot(value);
+        document.getElementById('fork-root').value = forkTree.root;
+      }, forkTree.root)
       .register('author', () => facet('facet-author'), value => setFacet('facet-author', value), '')
       .register('lifecycle', () => facet('facet-lifecycle'), value => setFacet('facet-lifecycle', value), '')
       .register('mode', () => facet('facet-mode'), value => setFacet('facet-mode', value), '')
@@ -322,15 +364,16 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     }
 
     tableView.setFilters(uiManager.filters());
+    wireForks(forkTree);
     Promise.all(pending).then(() => {
-      wireViewMode(tableView);
+      wireViewMode(tableView, forkTree);
       uiManager.onSelectionChange();
       urlState.capture();
     });
 
     // Test hook for the Playwright suite.
     window.__mig = {
-      metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost,
+      metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
       graph: graphRenderer.graph,
     };
   })
