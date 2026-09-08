@@ -128,7 +128,13 @@
       </fieldset>
 
       <fieldset class="mb-2 small tests-only">
-        <legend class="form-label mb-1">Gate</legend>
+        <legend class="form-label mb-1">Order</legend>
+        <label class="form-label mb-0" for="tests-sort">Sort rows by</label>
+        <select id="tests-sort" class="form-select form-select-sm mb-2">
+          <option value="name">role name &#9650;</option>
+          <option value="ci">CI chunk order</option>
+        </select>
+
         <label class="form-label mb-0" for="tests-gate">Gate</label>
         <select id="tests-gate" class="form-select form-select-sm">
           <option value="all">all</option>

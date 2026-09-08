@@ -93,7 +93,7 @@ instead: the `cli.timeout` from `meta/tests.yml`, the `*_ENABLED` keys of
 
 #### Gate filter
 
-In the filter panel under **Gate**, `?gate=` in the URL. It narrows the
+Also under **Order** in the filter panel, `?gate=` in the URL. It narrows the
 table to one of the four marks:
 
 - ✅ **runs**, every skip gate is on
@@ -124,6 +124,29 @@ parser itself answers per variant and stays unaware of both distinctions.
 The note keeps counting all rows and adds how many the filter left, so the totals
 stay comparable across settings. CLI rows are all ✅, so the other three empty
 that table, which is the honest answer rather than a bug.
+
+#### Sort order
+
+The selector sits in the filter panel under **Order**. Two orders, and `?sort=`
+carries the choice:
+
+- **role name ▲**, the default
+- **CI chunk order**, the order a sweep deploys the rows in, with the chunk each
+  one lands in
+
+The CI order is read from `meta/ci-order.json`, which the core checkout writes
+with `make ci-order`. It is not recomputed here, because it cannot be: the last
+key of `INFINITO_DISCOVERY_SORT` is drawn per invocation unless
+`INFINITO_DISCOVERY_SEED` is set, `covered_by` comes out of a greedy set-cover
+pass that runs after the sort, and the candidate list is filtered on columns
+(`test_compose` and its siblings) that live outside `meta/`. `cli/meta/ci/query.py`
+says as much: every human-facing view of that list goes through the CLI rather
+than re-deriving the sort, or it shows an order no run will ever take.
+
+The note under the table carries the snapshot's timestamp and commit, so a stale
+artefact is visible rather than silently wrong. Without the file the view still
+works and the CI option says what to run. Rows the sweep does not plan keep name
+order behind the planned ones; they still have tests.
 
 ### Fork network
 

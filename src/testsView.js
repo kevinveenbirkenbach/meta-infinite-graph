@@ -11,6 +11,7 @@ class TestsView {
     this.section = null;
     this.loaded = null;
     this.filters = {};
+    this.sort = 'name';
     this.kind = 'playwright';
     this.gate = 'all';
   }
@@ -29,6 +30,11 @@ class TestsView {
     unknown: 'maybe in this variant',
   };
 
+  static SORTS = {
+    name: 'role name ▲',
+    ci: 'CI chunk order',
+  };
+
   static STATUS = {
     runs: { mark: '✅', title: 'every skip gate is on' },
     never: { mark: '⛔', title: 'a skip gate is off in every variant, so this test never runs' },
@@ -40,6 +46,13 @@ class TestsView {
   setFilters(filters) {
     this.filters = filters || {};
     this.section = null;
+  }
+
+  setSort(kind) {
+    this.sort = TestsView.SORTS[kind] ? kind : 'name';
+    const select = document.getElementById('tests-sort');
+    if (select) select.value = this.sort;
+    if (this.scroller) this._render();
   }
 
   setGate(gate) {
@@ -117,13 +130,15 @@ class TestsView {
       this.loader.loadHarness(),
       this.loader.loadPlaywrightAll(roles),
       this.loader.loadCliAll(roles),
-    ]).then(([variants, mcp, meta, harness, suites, cli]) => {
+      this.loader.loadCiOrder(),
+    ]).then(([variants, mcp, meta, harness, suites, cli, ci]) => {
       this.tables.setVariants(variants);
       this.matrix = new PlaywrightMatrix(PlaywrightMatrix.parseHarness(harness));
       this.mcp = mcp;
       this.meta = meta;
       this.suites = suites;
       this.cli = cli;
+      this._setCi(ci);
       this._render();
     }).catch(error => {
       this.note.textContent = `Could not read the test suites: ${error.message}`;
@@ -204,10 +219,50 @@ class TestsView {
   }
 
   // Args:
+  //   plan: meta/ci-order.json, or null when core never wrote it.
+  _setCi(plan) {
+    this.ci = plan;
+    this.rank = new Map();
+    for (const row of (plan && plan.rows) || []) {
+      this.rank.set(`${row.role}#${row.variant}`, row);
+    }
+  }
+
+  // A role without meta/variants.yml is one variant to the planner, so its
+  // rank sits under index 0 while the matrix calls that row's variant null.
+  _plan(row) {
+    return this.rank.get(`${row.role}#${row.variant === null ? 0 : row.variant}`);
+  }
+
+  _sorted(rows) {
+    if (this.sort !== 'ci') return rows;
+    return [...rows].sort((left, right) => {
+      const a = this._plan(left);
+      const b = this._plan(right);
+      if (a && b) return a.id - b.id;
+      if (a) return -1;
+      if (b) return 1;
+      return 0;
+    });
+  }
+
+  _ciNote() {
+    if (!this.ci) {
+      return ' No meta/ci-order.json: run make ci-order in the core checkout to'
+        + ' sort by the deploy order.';
+    }
+    return ` CI order from meta/ci-order.json, generated ${this.ci.generated_at}`
+      + ` at ${this.ci.commit}: ${this.rank.size} planned rows in ${this.ci.chunks}`
+      + ` chunks of ${this.ci.chunk_size}.`
+      + (this.ci.seed ? '' : ' The seed is unset, so ties order differently on every sweep.');
+  }
+
+  // Args:
   //   all: every row of the current kind, before the gate narrows them.
   //   shown: the rows the table renders.
   _note(all, shown) {
     const roles = new Set(all.map(row => row.role)).size;
+    const tail = this.sort === 'ci' ? this._ciNote() : '';
     const narrowed = shown.length === all.length
       ? ''
       : ` Showing the ${shown.length} rows gated ${TestsView.GATES[this.gate]}.`;
@@ -216,7 +271,7 @@ class TestsView {
         + ' run of the role\'s files/test/test.sh after that variant deployed.'
         + ' CLI tests declare no <NAME>_SERVICE_ENABLED flags, so no service'
         + ` switches one off; the env column lists what the role does declare.`
-        + narrowed;
+        + `${narrowed}${tail}`;
     }
     const counts = { runs: 0, never: 0, skipped: 0, always: 0, unknown: 0 };
     for (const row of all) counts[row.gate] += 1;
@@ -225,7 +280,7 @@ class TestsView {
       + `${counts.skipped} are skipped only in their own variant. `
       + `${counts.always} are never certain because no variant settles their gate, `
       + `${counts.unknown} are open only in their own variant. `
-      + `A row is one test in one variant.${narrowed}`;
+      + `A row is one test in one variant.${narrowed}${tail}`;
   }
 
   _render() {
@@ -237,11 +292,11 @@ class TestsView {
     table.className = 'tests-matrix';
     table.appendChild(TableView._headRow(
       this.kind === 'cli'
-        ? ['role', 'variant', 'script', 'runs', 'timeout', 'env flags', 'shared harness']
-        : ['role', 'variant', 'test', 'runs', 'skip gates', 'branch gates', 'why']
+        ? ['role', 'variant', 'chunk', 'script', 'runs', 'timeout', 'env flags', 'shared harness']
+        : ['role', 'variant', 'chunk', 'test', 'runs', 'skip gates', 'branch gates', 'why']
     ));
     const body = document.createElement('tbody');
-    for (const row of rows) body.appendChild(this._row(row));
+    for (const row of this._sorted(rows)) body.appendChild(this._row(row));
     table.appendChild(body);
     this.scroller.innerHTML = '';
     this.scroller.appendChild(table);
@@ -258,6 +313,14 @@ class TestsView {
 
     tr.appendChild(TestsView._cell(row.variant === null ? 'base' : String(row.variant)));
 
+    const plan = this._plan(row);
+    const chunk = TestsView._cell(
+      plan && plan.chunk !== null ? String(plan.chunk) : '', 'pw-chunk'
+    );
+    if (plan && plan.chunk === null) chunk.title = 'beyond this sweep’s budget';
+    if (!plan) chunk.title = 'not a row of the CI sweep plan';
+    tr.appendChild(chunk);
+
     tr.appendChild(TestsView._cell(row.test, 'pw-test'));
 
     const status = TestsView.STATUS[row.gate];
@@ -266,7 +329,7 @@ class TestsView {
     tr.appendChild(mark);
 
     if (this.kind === 'cli') {
-      tr.appendChild(TestsView._cell(row.timeout ? `${row.timeout}s` : '', 'pw-num'));
+      tr.appendChild(TestsView._cell(row.timeout ? `${row.timeout}s` : '', 'pw-chunk'));
       tr.appendChild(TestsView._chips(row.flags));
       tr.appendChild(TestsView._chips(row.shared));
       return tr;

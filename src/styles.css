@@ -239,7 +239,7 @@ ul.fork-tree ul {
   margin-bottom: 8px;
 }
 
-table.tests-matrix td.pw-num {
+table.tests-matrix td.pw-chunk {
   text-align: center;
   font-variant-numeric: tabular-nums;
 }

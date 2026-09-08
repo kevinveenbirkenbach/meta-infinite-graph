@@ -119,6 +119,54 @@ test('a variant that pins a gate off marks the test skipped, a jinja flag stays 
   expect(rows[2].reasons[0]).toContain('deployed closure');
 });
 
+test('the CI sort follows meta/ci-order.json and never re-derives it', async ({ page }) => {
+  await page.goto('/?view=tests');
+  const rows = page.locator('table.tests-matrix tbody tr');
+  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
+
+  const plan = await page.evaluate(() => fetch('/meta/ci-order.json').then(r => r.json()));
+  const rank = new Map(plan.rows.map(row => [`${row.role}#${row.variant}`, row.id]));
+
+  await page.locator('#btn-filter').click();
+  await page.selectOption('#tests-sort', 'ci');
+  await expect(page.locator('.table-note')).toContainText('CI order from meta/ci-order.json');
+
+  const seen = await page.evaluate(() => [...document.querySelectorAll(
+    'table.tests-matrix tbody tr'
+  )].map(tr => {
+    const cells = tr.querySelectorAll('td');
+    return `${cells[0].textContent.trim()}#${cells[1].textContent.trim()}`;
+  }));
+
+  const ranked = seen.map(key => rank.get(key)).filter(id => id !== undefined);
+  expect(ranked.length, 'the plan covers most of the matrix').toBeGreaterThan(100);
+  const sorted = [...ranked].sort((a, b) => a - b);
+  expect(ranked, 'planned rows appear in plan order').toEqual(sorted);
+
+  const firstUnplanned = seen.findIndex(key => !rank.has(key));
+  const lastPlanned = seen.reduce((last, key, i) => (rank.has(key) ? i : last), -1);
+  if (firstUnplanned !== -1) {
+    expect(firstUnplanned, 'every planned row comes before every unplanned one')
+      .toBeGreaterThan(lastPlanned);
+  }
+});
+
+test('the chosen sort survives a reload through the URL', async ({ page }) => {
+  await page.goto('/?view=tests&sort=ci');
+  await expect.poll(
+    () => page.locator('table.tests-matrix tbody tr').count(), { timeout: 180000 }
+  ).toBeGreaterThan(500);
+  await page.locator('#btn-filter').click();
+  await expect(page.locator('#tests-sort')).toHaveValue('ci');
+
+  // 'name' is the registered fallback, so it is the value the URL leaves out.
+  await page.selectOption('#tests-sort', 'name');
+  await expect.poll(() => page.evaluate(() => window.location.search)).not.toContain('sort=');
+
+  await page.selectOption('#tests-sort', 'ci');
+  await expect.poll(() => page.evaluate(() => window.location.search)).toContain('sort=ci');
+});
+
 test('the gate filter partitions the rows across its five marks', async ({ page }) => {
   await page.goto('/?view=tests');
   const rows = page.locator('table.tests-matrix tbody tr');
@@ -170,7 +218,7 @@ test('never and always maybe are role facts, not variant facts', async ({ page }
     const cells = tr => [...tr.querySelectorAll('td')].map(td => td.textContent.trim());
     const rows = [...document.querySelectorAll('table.tests-matrix tbody tr')].map(tr => {
       const c = cells(tr);
-      return { role: c[0], test: c[2], gate: tr.className.replace('pw-', '') };
+      return { role: c[0], test: c[3], gate: tr.className.replace('pw-', '') };
     });
     const groups = new Map();
     for (const row of rows) {
@@ -225,7 +273,7 @@ test('the kind switch moves between the playwright and the cli suites', async ({
 
   await page.locator('label[for="tests-kind-cli"]').click();
   await expect(page.locator('table.tests-matrix thead th')).toHaveText(
-    ['role', 'variant', 'script', 'runs', 'timeout', 'env flags', 'shared harness']
+    ['role', 'variant', 'chunk', 'script', 'runs', 'timeout', 'env flags', 'shared harness']
   );
   await expect(page.locator('.table-note')).toContainText('CLI runs across');
   await expect(page.locator('.table-note')).toContainText(
@@ -235,7 +283,7 @@ test('the kind switch moves between the playwright and the cli suites', async ({
   const cliRows = await rows.count();
   expect(cliRows, 'far fewer roles ship a CLI test').toBeLessThan(playwrightRows);
   expect(cliRows).toBeGreaterThan(0);
-  await expect(rows.first().locator('td').nth(2)).toHaveText('files/test/test.sh');
+  await expect(rows.first().locator('td').nth(3)).toHaveText('files/test/test.sh');
 
   await expect.poll(() => page.evaluate(() => window.location.search)).toContain('kind=cli');
 
@@ -258,7 +306,7 @@ test('the playwright view builds a row per role, variant and test', async ({ pag
 
   const head = page.locator('table.tests-matrix thead th');
   await expect(head).toHaveText(
-    ['role', 'variant', 'test', 'runs', 'skip gates', 'branch gates', 'why']
+    ['role', 'variant', 'chunk', 'test', 'runs', 'skip gates', 'branch gates', 'why']
   );
   expect(await page.locator('table.tests-matrix tr.pw-skipped').count()).toBeGreaterThan(0);
   expect(await rows.first().locator('td[data-role-name]').count(),

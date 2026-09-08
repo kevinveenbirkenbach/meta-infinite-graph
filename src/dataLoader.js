@@ -66,6 +66,14 @@ class DataLoader {
     });
   }
 
+  // Never recompute this order here: without INFINITO_DISCOVERY_SEED its last
+  // sort key is drawn per invocation, so a re-derivation is an order no run takes.
+  loadCiOrder() {
+    return fetch('/meta/ci-order.json')
+      .then(res => (res.ok ? res.json() : null))
+      .catch(() => null);
+  }
+
   loadPlaywrightAll(roles, limit = 8) {
     return this._pool(roles, role => this.loadPlaywright(role).then(suite => [role, suite]), limit)
       .then(pairs => Object.fromEntries(pairs.filter(([, suite]) => suite)));

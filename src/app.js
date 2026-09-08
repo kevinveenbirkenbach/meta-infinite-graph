@@ -371,6 +371,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       .register('role', () => sel.value, value => {
         if (metaGraph.roles.includes(value)) sel.value = value;
       }, ranked[0])
+      .register('sort', () => testsView.sort, value => testsView.setSort(value), 'name')
       .register('kind', () => testsView.kind, value => testsView.setKind(value), 'playwright')
       .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
       .register('repo', () => forkTree.root, value => {
@@ -407,10 +408,15 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
 
     tableView.setFilters(uiManager.filters());
     testsView.onChange = () => urlState.capture();
-    document.getElementById('tests-gate').addEventListener('change', event => {
-      testsView.setGate(event.target.value);
-      urlState.capture();
-    });
+    for (const [id, apply] of [
+      ['tests-sort', value => testsView.setSort(value)],
+      ['tests-gate', value => testsView.setGate(value)],
+    ]) {
+      document.getElementById(id).addEventListener('change', event => {
+        apply(event.target.value);
+        urlState.capture();
+      });
+    }
     wireForks(forkTree, cardHost);
     Promise.all(pending).then(() => {
       wireViewMode(tableView, forkTree, testsView);
