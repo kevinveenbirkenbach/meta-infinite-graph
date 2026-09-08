@@ -16,7 +16,7 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 
 ### Both modes
 
-- **Five views** in the top bar: 3D, Bond, Ressources, Complexity, Forks. Switching
+- **Six views** in the top bar: 3D, Bond, Ressources, Complexity, Forks, Tests. Switching
   never hides the previous one; the active view lies over the idle one and only
   the front one takes the pointer.
 - **Filter** (🔍) and **Design** (🎨) open the two side panels. The filter panel
@@ -54,6 +54,76 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
   carries its own close button. A card fades in over 0.1s, lingers half a
   second after the pointer leaves and fades out over another half. Clicking a
   graph node pins its card to the node and it follows it until it is closed.
+
+### Tests
+
+One row per role, variant and test. The view switches between the two suites a
+role can ship.
+
+**Playwright** answers which of a role's tests actually runs in which
+`meta/variants.yml` variant, and which service flag decides it.
+
+The chain the parser follows is the one the deploy follows:
+
+- `templates/playwright.env.j2` declares `<NAME>_SERVICE_ENABLED`, mostly as
+  `lookup('config', application_id, 'services.<key>.enabled')`
+- `files/playwright/*.spec.js` are the entry points, because the deploy copies
+  the whole directory into `tests/` and the config collects
+  `**/*.@(spec|test).js`. Each entry pulls in its `require("./test-…")`
+  siblings, which is where most roles keep their scenarios
+- a test is gated by `skipUnlessServiceEnabled`, `safeSkipUnlessEnabled` or
+  `requireService`, directly or through a shared persona flow. The service name
+  becomes an env key the same way `service-gating.js` derives it
+- `meta/variants.yml` pins the flag per variant
+
+`isServiceEnabled`, `safeIsEnabled` and `isServiceDisabledReason` are listed
+separately as branch gates: they change what a test does without skipping it.
+
+A cell is one of three states, never two. `meta/services.yml` may leave a flag
+as `{{ 'web-app-x' in group_names }}`, which only the deployed closure settles,
+so those rows read ❓ rather than guessing. ⛔ is reserved for a flag a variant
+pins off.
+
+**CLI** is the other suite: one `files/test/test.sh` per role, 29 of them. It has
+no counterpart to the service gates, so a row is a whole run rather than a case
+and no service switches one off. The columns show what a role does declare
+instead: the `cli.timeout` from `meta/tests.yml`, the `*_ENABLED` keys of
+`templates/test.env.j2`, and the shared harnesses under
+`roles/test-e2e-cli/files/shared` the script sources.
+
+#### Gate filter
+
+In the filter panel under **Gate**, `?gate=` in the URL. It narrows the
+table to one of the four marks:
+
+- ✅ **runs**, every skip gate is on
+- ⛔ **never, in no variant**: the gate is off in *every* variant of the role, so
+  the test cannot run at all
+- ➖ **not in this variant**: off here, but the same test runs in another variant
+- ❓ **always maybe, never certain**: no variant settles the gate, so nothing in
+  the repository can say whether the test runs
+- ❔ **maybe in this variant**: open here, settled in another variant
+
+Both pairs split the same way, and both splits are worth having. A test skipped
+in one variant is the design working, that is what a variant is for; a test
+skipped in every variant is a test nothing ever proves. Likewise a gate left open
+in one variant is normal, while one no variant ever closes means the matrix can
+never tell you whether that test ran.
+
+The two splits fall out very differently. Skips are almost all local, 127 rows
+against 2 — the two being `web-app-joomla`'s LDAP scenario, whose
+`meta/services.yml` pins `ldap.enabled: false` and whose variants never override
+it. Uncertainty is the other way round, 106 rows always open against 10 local
+ones, because those gates read role variables such as `CHECKMK_SSO_ENABLED` or
+the `mcp.enabled` topic, none of which live in a variant.
+
+Whether a test can run at all, or can ever be known to run, is a property of the
+whole role, so the view decides it only after every variant's rows exist; the
+parser itself answers per variant and stays unaware of both distinctions.
+
+The note keeps counting all rows and adds how many the filter left, so the totals
+stay comparable across settings. CLI rows are all ✅, so the other three empty
+that table, which is the honest answer rather than a bug.
 
 ### Fork network
 

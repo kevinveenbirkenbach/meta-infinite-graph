@@ -35,6 +35,8 @@
           <label class="btn btn-outline-light" for="view-complexity">Complexity</label>
           <input type="radio" class="btn-check" name="view" id="view-forks" value="forks">
           <label class="btn btn-outline-light" for="view-forks">Forks</label>
+          <input type="radio" class="btn-check" name="view" id="view-tests" value="tests">
+          <label class="btn btn-outline-light" for="view-tests">Tests</label>
         </div>
         <button id="btn-filter" type="button" class="btn btn-sm btn-outline-light"
                 title="Filter">🔍</button>
@@ -123,6 +125,19 @@
         <button id="fork-forget" type="button" class="btn btn-sm btn-outline-primary w-100">
           Drop the cache and the token
         </button>
+      </fieldset>
+
+      <fieldset class="mb-2 small tests-only">
+        <legend class="form-label mb-1">Gate</legend>
+        <label class="form-label mb-0" for="tests-gate">Gate</label>
+        <select id="tests-gate" class="form-select form-select-sm">
+          <option value="all">all</option>
+          <option value="runs">&#9989; runs</option>
+          <option value="never">&#9940; never, in no variant</option>
+          <option value="skipped">&#10134; not in this variant</option>
+          <option value="always">&#10067; always maybe, never certain</option>
+          <option value="unknown">&#10068; maybe in this variant</option>
+        </select>
       </fieldset>
 
       <fieldset id="filter-switches" class="mb-2 small">
@@ -243,6 +258,8 @@
   <script src="urlState.js"></script>
   <script src="githubApi.js"></script>
   <script src="forkTree.js"></script>
+  <script src="playwrightMatrix.js"></script>
+  <script src="testsView.js"></script>
   <script src="dataLoader.js"></script>
   <script src="metaGraph.js"></script>
   <script src="metaTables.js"></script>

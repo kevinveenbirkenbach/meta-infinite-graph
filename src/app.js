@@ -38,7 +38,7 @@ function currentView() {
   return document.querySelector('input[name="view"]:checked').value;
 }
 
-function wireViewMode(tableView, forkTree) {
+function wireViewMode(tableView, forkTree, testsView) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
   const apply = () => {
@@ -54,7 +54,11 @@ function wireViewMode(tableView, forkTree) {
     for (const element of document.querySelectorAll('.forks-only')) {
       element.hidden = view !== 'forks';
     }
+    for (const element of document.querySelectorAll('.tests-only')) {
+      element.hidden = view !== 'tests';
+    }
     if (view === 'forks') forkTree.show();
+    else if (view === 'tests') testsView.show();
     else if (tables) tableView.show(view);
   };
   for (const input of document.querySelectorAll('input[name="view"]')) {
@@ -286,6 +290,9 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       roleInfo
     );
     const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'));
+    const testsView = new TestsView(
+      tableView.tables, dataLoader, roleInfo, document.getElementById('tables')
+    );
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
@@ -296,8 +303,13 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
 
     for (const id of ['facet-author', 'facet-lifecycle', 'facet-mode']) {
       document.getElementById(id).addEventListener('change', () => {
-        tableView.setFilters(uiManager.filters());
-        if (currentView() !== 'graph') tableView.refresh();
+        const filters = uiManager.filters();
+        tableView.setFilters(filters);
+        testsView.setFilters(filters);
+        // Dispatch per view: refreshing the tables unconditionally would
+        // replace whatever the forks or tests view had drawn.
+        if (currentView() === 'tests') testsView.show();
+        else if (!['graph', 'forks'].includes(currentView())) tableView.refresh();
       });
     }
 
@@ -359,6 +371,8 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       .register('role', () => sel.value, value => {
         if (metaGraph.roles.includes(value)) sel.value = value;
       }, ranked[0])
+      .register('kind', () => testsView.kind, value => testsView.setKind(value), 'playwright')
+      .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
       .register('repo', () => forkTree.root, value => {
         forkTree.setRoot(value);
         document.getElementById('fork-root').value = forkTree.root;
@@ -392,9 +406,14 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     }
 
     tableView.setFilters(uiManager.filters());
+    testsView.onChange = () => urlState.capture();
+    document.getElementById('tests-gate').addEventListener('change', event => {
+      testsView.setGate(event.target.value);
+      urlState.capture();
+    });
     wireForks(forkTree, cardHost);
     Promise.all(pending).then(() => {
-      wireViewMode(tableView, forkTree);
+      wireViewMode(tableView, forkTree, testsView);
       uiManager.onSelectionChange();
       urlState.capture();
     });

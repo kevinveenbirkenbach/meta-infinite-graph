@@ -235,6 +235,46 @@ ul.fork-tree ul {
   color: var(--bs-danger);
 }
 
+.tests-kind {
+  margin-bottom: 8px;
+}
+
+table.tests-matrix td.pw-num {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+table.tests-matrix td.pw-test {
+  max-width: 34em;
+  overflow-wrap: anywhere;
+}
+
+table.tests-matrix td.pw-status {
+  text-align: center;
+}
+
+table.tests-matrix td.pw-why {
+  max-width: 26em;
+  opacity: 0.7;
+  overflow-wrap: anywhere;
+}
+
+table.tests-matrix tr.pw-skipped {
+  opacity: 0.55;
+}
+
+table.tests-matrix tr.pw-never td.pw-status {
+  background: color-mix(in srgb, var(--bs-danger) 25%, transparent);
+}
+
+table.tests-matrix tr.pw-always td.pw-status {
+  background: color-mix(in srgb, var(--bs-warning) 25%, transparent);
+}
+
+table.tests-matrix tr.pw-unknown td.pw-status {
+  background: color-mix(in srgb, var(--bs-warning) 10%, transparent);
+}
+
 table.bond-matrix {
   border-collapse: separate;
   border-spacing: 0;
