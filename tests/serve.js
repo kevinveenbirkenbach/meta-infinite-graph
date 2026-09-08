@@ -47,8 +47,11 @@ http
         const rel = url.replace(/^\/roles\/?/, '');
         const target = path.join(ROLES, rel);
         if (url.endsWith('/')) {
+          // Read before answering: a missing directory must reach the catch
+          // below, not throw after the 200 head is already on the wire.
+          const listing = autoindex(target || ROLES);
           res.writeHead(200, { 'Content-Type': 'application/json' });
-          return res.end(autoindex(target || ROLES));
+          return res.end(listing);
         }
         const body = fs.readFileSync(target);
         res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
