@@ -17,5 +17,13 @@ services:
       # required, so an .env predating this mount still starts the stack; the
       # tests view then falls back to name order and says so.
       - "${INFINITO_ENV_FILE:-../infinito-nexus-core/default.env}:/etc/mig/infinito.env:ro"
+      # Named, so a rebuild keeps the clone; dropping the volume costs one
+      # full clone, not any data.
+      - "mig-git:/var/lib/mig"
     environment:
       MIG_GITHUB_TOKEN: "${MIG_GITHUB_TOKEN:-}"
+      MIG_GIT_ROOT: "${MIG_GIT_ROOT:-infinito-nexus/core}"
+      MIG_GIT_FORKS: "${MIG_GIT_FORKS:-auto}"
+
+volumes:
+  mig-git:

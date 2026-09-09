@@ -11,7 +11,7 @@ IMAGE ?= meta-infinite-graph:local
 #   cannot install its own. Empty means playwright uses its bundled browser.
 MIG_CHROMIUM ?=
 
-.PHONY: help up down logs rebuild e2e test test-fast image nginx-verify nginx-probe gh-status clean
+.PHONY: help up down logs rebuild e2e test test-fast image nginx-verify nginx-probe gh-status git-status clean
 
 help:
 	@echo "Targets:"
@@ -26,6 +26,7 @@ help:
 	@echo "  make nginx-verify        Check the generated GitHub proxy config, with and without a token"
 	@echo "  make nginx-probe         Serve the image and probe the proxy routes"
 	@echo "  make gh-status           Report what the RUNNING stack does with the GitHub token"
+	@echo "  make git-status          Report the RUNNING stack's git mirror and its service"
 	@echo "  make clean               Down + remove volumes"
 
 .env:
@@ -80,6 +81,15 @@ nginx-probe: image
 		 for ref in forks branches tags commits commits/f99de7de; do \
 		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 done'
+
+git-status:
+	@docker compose -f $(COMPOSE_FILE) exec -T $(SERVICE) sh -c \
+		'echo "mirror: $$(ls -d /var/lib/mig/mirror.git 2>/dev/null || echo MISSING)"; \
+		 echo "commits: $$(git --git-dir /var/lib/mig/mirror.git rev-list --count --all 2>&1)"; \
+		 echo "remotes: $$(git --git-dir /var/lib/mig/mirror.git remote | tr "\n" " ")"; \
+		 echo "service: $$(pgrep -f mig-git.py >/dev/null && echo running || echo DOWN)"; \
+		 echo "direct : $$(wget -S -qO- http://127.0.0.1:8099/catalog 2>&1 | grep -o "HTTP/1.[01] [0-9]*" | head -1)"; \
+		 echo "proxied: $$(wget -S -qO- http://127.0.0.1/git/catalog 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"'
 
 gh-status:
 	@docker compose -f $(COMPOSE_FILE) exec -T $(SERVICE) sh -c \
