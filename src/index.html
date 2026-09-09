@@ -37,6 +37,12 @@
           <label class="btn btn-outline-light" for="view-forks">Timeline</label>
           <input type="radio" class="btn-check" name="view" id="view-tests" value="tests">
           <label class="btn btn-outline-light" for="view-tests">Tests</label>
+          <input type="radio" class="btn-check" name="view" id="view-commits" value="commits">
+          <label class="btn btn-outline-light" for="view-commits">Commits</label>
+          <input type="radio" class="btn-check" name="view" id="view-pulls" value="pulls">
+          <label class="btn btn-outline-light" for="view-pulls">PR</label>
+          <input type="radio" class="btn-check" name="view" id="view-actions" value="actions">
+          <label class="btn btn-outline-light" for="view-actions">Actions</label>
         </div>
         <button id="btn-filter" type="button" class="btn btn-sm btn-outline-light"
                 title="Filter">🔍</button>
@@ -303,6 +309,8 @@
   <!-- App files -->
   <script src="urlState.js"></script>
   <script src="gitRange.js"></script>
+  <script src="commitsView.js"></script>
+  <script src="githubFeed.js"></script>
   <script src="githubApi.js"></script>
   <script src="forkGraph.js"></script>
   <script src="forkPlot.js"></script>

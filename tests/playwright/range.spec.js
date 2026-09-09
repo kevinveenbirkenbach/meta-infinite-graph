@@ -145,10 +145,12 @@ test('a date without the current schema greys the views that need it',
       expect(await page.locator(`label[for="view-${view}"]`).getAttribute('title'))
         .toContain('does not exist at the chosen date');
     }
-    expect(await page.locator('#view-forks').isDisabled(),
-      'the timeline needs no roles tree, so it stays usable').toBe(false);
+    for (const view of ['forks', 'commits', 'pulls', 'actions']) {
+      expect(await page.locator(`#view-${view}`).isDisabled(),
+        `${view} needs no roles tree, so it stays usable`).toBe(false);
+    }
     expect(await page.evaluate(() => document.querySelector('input[name="view"]:checked').value),
-      'and the greyed default gives way to one that works').toBe('forks');
+      'and the greyed default gives way to one that works').toBe('commits');
   });
 
 test('a moved handle travels in the URL', async ({ page }) => {

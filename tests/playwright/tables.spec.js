@@ -8,6 +8,11 @@ async function open2d(page, view = 'bond') {
     .poll(() => page.evaluate(() => Boolean(window.__mig?.tableView)))
     .toBe(true);
   await page.locator(`label[for="view-${view}"]`).click();
+  // The switch renders the table, and a row grabbed mid-render is replaced by
+  // the one that follows, which loses whatever the caller hovered.
+  await expect
+    .poll(() => page.locator('#tables table tbody tr').count(), { timeout: 60000 })
+    .toBeGreaterThan(0);
 }
 
 async function openFilters(page) {

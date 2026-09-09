@@ -53,11 +53,11 @@ function disableMetaViews(missing) {
     label.title = why;
   }
   if (META_VIEWS.includes(currentView())) {
-    document.getElementById('view-forks').checked = true;
+    document.getElementById('view-commits').checked = true;
   }
 }
 
-function wireViewMode(tableView, forkTree, testsView) {
+function wireViewMode(tableView, forkTree, testsView, feeds) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
   const apply = () => {
@@ -78,6 +78,7 @@ function wireViewMode(tableView, forkTree, testsView) {
     }
     if (view === 'forks') forkTree.show();
     else if (view === 'tests') testsView.show();
+    else if (feeds[view]) feeds[view].show();
     else if (tables) tableView.show(view);
   };
   for (const input of document.querySelectorAll('input[name="view"]')) {
@@ -152,7 +153,7 @@ function wireForks(forkTree, cardHost) {
 function redraw(tableView, testsView) {
   const view = currentView();
   if (view === 'tests') testsView.refresh();
-  else if (!['graph', 'forks'].includes(view)) tableView.refresh();
+  else if (!['graph', 'forks', 'commits', 'pulls', 'actions'].includes(view)) tableView.refresh();
 }
 
 function wirePanels() {
@@ -360,6 +361,12 @@ gitRange.load()
     const cardHost = new RoleCardHost(roleInfo);
     const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'), cardHost);
     forkTree.useMirror(gitRange);
+    const tables = document.getElementById('tables');
+    const feeds = {
+      commits: new CommitsView(gitRange, tables),
+      pulls: new GitHubFeed('pulls', forkTree.api, gitRange, tables),
+      actions: new GitHubFeed('actions', forkTree.api, gitRange, tables),
+    };
     const testsView = new TestsView(
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables')
     );
@@ -505,12 +512,12 @@ gitRange.load()
     // takes __mig as ready any earlier can grab a row the redraw then replaces
     // under its pointer.
     return Promise.all(pending).then(() => {
-      wireViewMode(tableView, forkTree, testsView);
+      wireViewMode(tableView, forkTree, testsView, feeds);
       uiManager.onSelectionChange();
       urlState.capture();
       window.__mig = {
         metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
-        testsView, dataLoader, gitRange,
+        testsView, dataLoader, gitRange, feeds,
         graph: graphRenderer.graph,
       };
     });
