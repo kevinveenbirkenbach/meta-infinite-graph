@@ -16,7 +16,7 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 
 ### Both modes
 
-- **Six views** in the top bar: 3D, Bond, Ressources, Complexity, Forks, Tests. Switching
+- **Six views** in the top bar: Cosmos, Bond, Ressources, Complexity, Timeline, Tests. Switching
   never hides the previous one; the active view lies over the idle one and only
   the front one takes the pointer.
 - **Filter** (🔍) and **Design** (🎨) open the two side panels. The filter panel
@@ -148,7 +148,7 @@ artefact is visible rather than silently wrong. Without the file the view still
 works and the CI option says what to run. Rows the sweep does not plan keep name
 order behind the planned ones; they still have tests.
 
-### Fork network
+### Timeline
 
 The only view that leaves the mounted `roles/` tree: it reads the GitHub API
 directly from the browser and draws the repository, its forks, and per

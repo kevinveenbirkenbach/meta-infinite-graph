@@ -135,7 +135,7 @@ class ForkTree {
   _shell() {
     const section = document.createElement('div');
     section.className = 'table-section';
-    section.appendChild(ForkTree._text('h2', 'Fork network'));
+    section.appendChild(ForkTree._text('h2', 'Timeline'));
     this.note = ForkTree._text('p', `Reading ${this.root} …`, 'table-note');
     section.appendChild(this.note);
     this.plot = document.createElement('div');
