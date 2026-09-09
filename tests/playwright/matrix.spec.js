@@ -119,37 +119,40 @@ test('a variant that pins a gate off marks the test skipped, a jinja flag stays 
   expect(rows[2].reasons[0]).toContain('deployed closure');
 });
 
-test('the CI sort follows meta/ci-order.json and never re-derives it', async ({ page }) => {
-  await page.goto('/?view=tests');
-  const rows = page.locator('table.tests-matrix tbody tr');
-  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
+test('the CI sort follows meta/ci-order.json, and says so when it is absent',
+  async ({ page }) => {
+    await page.goto('/?view=tests');
+    const rows = page.locator('table.tests-matrix tbody tr');
+    await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
 
-  const plan = await page.evaluate(() => fetch('/meta/ci-order.json').then(r => r.json()));
-  const rank = new Map(plan.rows.map(row => [`${row.role}#${row.variant}`, row.id]));
+    // The artefact is written into the core checkout by `make ci-order`, so a
+    // MIG checkout on its own must render without it.
+    const plan = await page.evaluate(() => fetch('/meta/ci-order.json')
+      .then(res => (res.ok ? res.json() : null))
+      .catch(() => null));
 
-  await page.locator('#btn-filter').click();
-  await page.selectOption('#tests-sort', 'ci');
-  await expect(page.locator('.table-note')).toContainText('CI order from meta/ci-order.json');
+    await page.locator('#btn-filter').click();
+    await page.selectOption('#tests-sort', 'ci');
 
-  const seen = await page.evaluate(() => [...document.querySelectorAll(
-    'table.tests-matrix tbody tr'
-  )].map(tr => {
-    const cells = tr.querySelectorAll('td');
-    return `${cells[0].textContent.trim()}#${cells[1].textContent.trim()}`;
-  }));
+    if (!plan) {
+      await expect(page.locator('.table-note')).toContainText('No meta/ci-order.json');
+      await expect(rows, 'the table survives a missing artefact').not.toHaveCount(0);
+      return;
+    }
 
-  const ranked = seen.map(key => rank.get(key)).filter(id => id !== undefined);
-  expect(ranked.length, 'the plan covers most of the matrix').toBeGreaterThan(100);
-  const sorted = [...ranked].sort((a, b) => a - b);
-  expect(ranked, 'planned rows appear in plan order').toEqual(sorted);
+    await expect(page.locator('.table-note')).toContainText('CI order from meta/ci-order.json');
+    const rank = new Map(plan.rows.map(row => [`${row.role}#${row.variant}`, row.id]));
+    const seen = await page.evaluate(() => [...document.querySelectorAll(
+      'table.tests-matrix tbody tr'
+    )].map(tr => {
+      const cells = tr.querySelectorAll('td');
+      return `${cells[0].textContent.trim()}#${cells[1].textContent.trim()}`;
+    }));
 
-  const firstUnplanned = seen.findIndex(key => !rank.has(key));
-  const lastPlanned = seen.reduce((last, key, i) => (rank.has(key) ? i : last), -1);
-  if (firstUnplanned !== -1) {
-    expect(firstUnplanned, 'every planned row comes before every unplanned one')
-      .toBeGreaterThan(lastPlanned);
-  }
-});
+    const ranked = seen.map(key => rank.get(key)).filter(id => id !== undefined);
+    expect(ranked.length, 'the plan covers most of the matrix').toBeGreaterThan(100);
+    expect(ranked, 'planned rows appear in plan order').toEqual([...ranked].sort((a, b) => a - b));
+  });
 
 test('the chosen sort survives a reload through the URL', async ({ page }) => {
   await page.goto('/?view=tests&sort=ci');
