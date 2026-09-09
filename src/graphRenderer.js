@@ -135,13 +135,14 @@ class GraphRenderer {
     this.graph.linkVisibility(visible);
   }
 
-  /**
-   * Zoom the camera by a factor (<1 zooms in, >1 zooms out).
-   */
-  zoom(factor) {
+  // Args:
+  //   percent: zoom level, 100 being the distance the first call recorded.
+  //     Measured from that same place every time, so levels do not compound.
+  setZoom(percent) {
     const cam = this.graph.camera();
-    cam.position.z *= factor;
-    this.graph.cameraPosition(cam.position, 500);
+    if (!this.baseDistance) this.baseDistance = cam.position.z || 300;
+    cam.position.z = this.baseDistance * (100 / Math.max(percent, 1));
+    this.graph.cameraPosition(cam.position, 300);
   }
 
   /**

@@ -19,10 +19,6 @@ class UIManager {
       .addEventListener('click', () => this._startIteration());
     document.getElementById('btn-stop')
       .addEventListener('click', () => this._stopIteration());
-    document.getElementById('btn-zoom-in')
-      .addEventListener('click', () => this.graphRenderer.zoom(0.8));
-    document.getElementById('btn-zoom-out')
-      .addEventListener('click', () => this.graphRenderer.zoom(1.2));
     document.getElementById('btn-flow')
       .addEventListener('click', () => this.showRunAfterFlow());
 

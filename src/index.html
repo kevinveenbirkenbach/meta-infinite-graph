@@ -95,8 +95,14 @@
       <label class="form-label mb-1" for="design-opacity">
         Background transparency <span id="design-opacity-value">5</span>%
       </label>
-      <input type="range" class="form-range" id="design-opacity"
-             min="0" max="50" step="1" value="5">
+      <input type="range" class="form-range mb-3" id="design-opacity"
+             min="0" max="100" step="1" value="5">
+
+      <label class="form-label mb-1" for="design-zoom">
+        Zoom <span id="design-zoom-value">100</span>%
+      </label>
+      <input type="range" class="form-range" id="design-zoom"
+             min="40" max="250" step="5" value="100">
     </div>
   </div>
 
@@ -220,12 +226,6 @@
                step="0.1"
                value="0.5"
                title="Seconds"/>
-        <button id="btn-zoom-in" class="btn btn-outline-primary">
-          ➕
-        </button>
-        <button id="btn-zoom-out" class="btn btn-outline-primary">
-          ➖
-        </button>
         <button id="btn-reload" class="btn btn-outline-primary" title="Reload Graph">
           ↻
         </button>

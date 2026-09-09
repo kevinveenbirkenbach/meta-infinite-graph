@@ -1,6 +1,7 @@
 /* styles.css */
 
 :root {
+  --mig-zoom: 1;
   --mig-font-size: 14px;
   --mig-font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   --mig-veil: 0.05;
@@ -144,6 +145,7 @@ html, body {
   flex: 1;
   overflow: auto;
   margin-top: 10px;
+  zoom: var(--mig-zoom);
 }
 
 .table-section h2 {

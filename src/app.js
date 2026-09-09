@@ -32,7 +32,7 @@ function setStatus(text) {
 setStatus('Scanning roles ...');
 
 wirePanels();
-wireDesign();
+wireDesign(graphRenderer);
 
 function currentView() {
   return document.querySelector('input[name="view"]:checked').value;
@@ -153,7 +153,7 @@ function wirePanels() {
   }
 }
 
-function wireDesign() {
+function wireDesign(graphRenderer) {
   const root = document.documentElement;
   const families = {
     sans: 'system-ui, -apple-system, "Segoe UI", sans-serif',
@@ -179,6 +179,7 @@ function wireDesign() {
   const family = document.getElementById('design-font-family');
   const veil = document.getElementById('design-opacity');
   const theme = document.getElementById('design-theme');
+  const zoom = document.getElementById('design-zoom');
 
   const applySize = () => {
     root.style.setProperty('--mig-font-size', `${size.value}px`);
@@ -189,6 +190,12 @@ function wireDesign() {
     root.style.setProperty('--mig-font-family', families[family.value]);
     write('mig-font-family', family.value);
   };
+  const applyZoom = () => {
+    root.style.setProperty('--mig-zoom', String(zoom.value / 100));
+    document.getElementById('design-zoom-value').textContent = zoom.value;
+    write('mig-zoom', zoom.value);
+    if (graphRenderer) graphRenderer.setZoom(Number(zoom.value));
+  };
   const applyVeil = () => {
     root.style.setProperty('--mig-veil', String(veil.value / 100));
     document.getElementById('design-opacity-value').textContent = veil.value;
@@ -198,6 +205,7 @@ function wireDesign() {
   size.value = read('mig-font-size') || size.value;
   family.value = read('mig-font-family') || family.value;
   veil.value = read('mig-veil') ?? veil.value;
+  zoom.value = read('mig-zoom') || zoom.value;
   theme.value = read('mig-theme') || 'system';
 
   urlState
@@ -216,7 +224,11 @@ function wireDesign() {
     .register('veil', () => veil.value, value => {
       veil.value = value;
       applyVeil();
-    }, '5');
+    }, '5')
+    .register('zoom', () => zoom.value, value => {
+      zoom.value = value;
+      applyZoom();
+    }, '100');
 
   const remember = handler => () => {
     handler();
@@ -225,12 +237,14 @@ function wireDesign() {
   size.addEventListener('input', remember(applySize));
   family.addEventListener('change', remember(applyFamily));
   veil.addEventListener('input', remember(applyVeil));
+  zoom.addEventListener('input', remember(applyZoom));
   theme.addEventListener('change', remember(() => window.MigTheme.choose(theme.value)));
 
   applySize();
   applyFamily();
   applyVeil();
-  urlState.apply(['theme', 'fontsize', 'font', 'veil']);
+  applyZoom();
+  urlState.apply(['theme', 'fontsize', 'font', 'veil', 'zoom']);
 }
 
 function wireDataSwitches(tableView, testsView, roleInfo, uiManager, dataLoader, roles) {
