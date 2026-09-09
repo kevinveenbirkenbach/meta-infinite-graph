@@ -12,5 +12,10 @@ services:
       - "./src:/usr/share/nginx/html"
       - "${INFINITO_ROLES_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/roles:ro"
       - "${INFINITO_META_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/meta:ro"
+      # The CI ranking is declared here, not in the roles tree: the sort spec
+      # and the lifecycle envelope live in this one file. Defaulted rather than
+      # required, so an .env predating this mount still starts the stack; the
+      # tests view then falls back to name order and says so.
+      - "${INFINITO_ENV_FILE:-../infinito-nexus-core/default.env}:/etc/mig/infinito.env:ro"
     environment:
       MIG_GITHUB_TOKEN: "${MIG_GITHUB_TOKEN:-}"

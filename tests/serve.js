@@ -13,6 +13,11 @@ const ROLES = path.resolve(
   '..',
   process.env.INFINITO_ROLES_DIR || '../infinito-nexus-core/roles'
 );
+const ENV_FILE = path.resolve(
+  __dirname,
+  process.env.INFINITO_ENV_FILE || '../../infinito-nexus-core/default.env'
+);
+
 const META = path.resolve(
   __dirname,
   '..',
@@ -55,6 +60,11 @@ http
         }
         const body = fs.readFileSync(target);
         res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
+        return res.end(body);
+      }
+      if (url === '/infinito.env') {
+        const body = fs.readFileSync(ENV_FILE);
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
         return res.end(body);
       }
       if (url === '/gh-config.json') {
