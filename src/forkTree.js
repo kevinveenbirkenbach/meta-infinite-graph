@@ -167,10 +167,14 @@ class ForkTree {
     this.note.textContent = `${parts.join('. ')} ${this._quota()}`;
   }
 
+  // Three cases, not two: in proxied mode api.token is deliberately empty
+  // because the server holds it, so reading that alone would report the
+  // authenticated 5000 ceiling as "unauthenticated".
   _quota() {
     const rate = this.api.rate;
     if (!rate || !rate.limit) return '';
-    const scope = this.api.token ? 'with your token' : 'unauthenticated';
+    const scope = this.api.proxied ? "through the server's token"
+      : this.api.token ? 'with your token' : 'unauthenticated';
     return `${rate.remaining} of ${rate.limit} requests left this hour, ${scope}.`;
   }
 

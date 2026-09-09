@@ -7,15 +7,22 @@ class GitHubApi {
     this.proxied = false;
   }
 
+  // Memoised and awaited by every request: a deep link straight into the fork
+  // view otherwise fires its first calls against api.github.com before the
+  // answer arrives, so a server that holds a token still gets the
+  // unauthenticated limit and a 403.
   detectProxy() {
-    return fetch('gh-config.json', { cache: 'no-store' })
-      .then(response => (response.ok ? response.json() : null))
-      .catch(() => null)
-      .then(config => {
-        this.proxied = Boolean(config && config.proxy);
-        this.base = this.proxied ? '/gh' : 'https://api.github.com';
-        return this.proxied;
-      });
+    if (!this.ready) {
+      this.ready = fetch('gh-config.json', { cache: 'no-store' })
+        .then(response => (response.ok ? response.json() : null))
+        .catch(() => null)
+        .then(config => {
+          this.proxied = Boolean(config && config.proxy);
+          this.base = this.proxied ? '/gh' : 'https://api.github.com';
+          return this.proxied;
+        });
+    }
+    return this.ready;
   }
 
   static CACHE_KEY = 'mig-gh-cache';
@@ -85,7 +92,8 @@ class GitHubApi {
     if (hit) return Promise.resolve(hit);
     if (this.memory.has(path)) return this.memory.get(path);
 
-    const pending = this._walk(path)
+    const pending = this.detectProxy()
+      .then(() => this._walk(path))
       .then(data => {
         this._store()[path] = { at: Date.now(), data };
         this._persist();
