@@ -4,9 +4,25 @@ class ForkGraph {
   //     full_name this one was forked from, or null for the root.
   //   commits: full_name -> [{ sha, parents, date, branch, message }], the
   //     branch histories of the repos that were opened. Absent for the rest.
-  constructor(repos, commits = {}) {
+  //   tags: full_name -> [{ name, sha, date }] with date resolved separately
+  //     where the commit is outside the fetched window. A tag left without one
+  //     is counted, not guessed at.
+  constructor(repos, commits = {}, tags = {}) {
     this.repos = repos;
     this.commits = commits;
+    this.tags = tags;
+  }
+
+  static place(tags, history) {
+    const dated = new Map((history || []).map(commit => [commit.sha, commit.date]));
+    const placed = [];
+    let orphaned = 0;
+    for (const tag of tags || []) {
+      const date = tag.date || dated.get(tag.sha);
+      if (date) placed.push({ ...tag, date });
+      else orphaned += 1;
+    }
+    return { placed, orphaned };
   }
 
   static _time(iso) {
@@ -23,6 +39,11 @@ class ForkGraph {
     if (histories.length) {
       for (const history of histories) {
         for (const commit of history) stamps.push(ForkGraph._time(commit.date));
+      }
+      // Tags reach years further back than one page of commits, and clamping
+      // them all onto the left edge is what a narrowed axis would do.
+      for (const tags of Object.values(this.tags)) {
+        for (const tag of tags || []) stamps.push(ForkGraph._time(tag.date));
       }
     } else {
       for (const repo of this.repos) {
@@ -48,6 +69,7 @@ class ForkGraph {
     }
     const walk = repo => {
       const graph = ForkGraph.assign(this.commits[repo.full_name]);
+      const tags = ForkGraph.place(this.tags[repo.full_name], this.commits[repo.full_name]);
       rows.push({
         id: repo.full_name,
         parent: repo.parent,
@@ -55,6 +77,8 @@ class ForkGraph {
         to: ForkGraph._time(repo.pushed_at),
         columns: graph.lanes,
         merges: graph.edges,
+        tags: tags.placed,
+        orphanedTags: tags.orphaned,
       });
       for (const child of children.get(repo.full_name) || []) walk(child);
     };

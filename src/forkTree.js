@@ -6,6 +6,7 @@ class ForkTree {
     this.root = 'infinito-nexus/core';
     this.loaded = null;
     this.branches = true;
+    this.tags = false;
   }
 
   setRoot(fullName) {
@@ -160,9 +161,10 @@ class ForkTree {
           ...forks.map(fork => ({ ...fork, parent: repo.full_name })),
         ];
         this.histories = {};
+        this.tagsBy = {};
         this._plot();
         this._describe(repo, forks);
-        return this._allHistories();
+        return this._allHistories().then(() => this._allTags());
       })
       .catch(error => this._fail(error));
   }
@@ -170,7 +172,7 @@ class ForkTree {
   // Fork points come free with the fork list, so this draws before any history.
   _plot() {
     if (!this.network) return;
-    const graph = new ForkGraph(this.network, this.histories);
+    const graph = new ForkGraph(this.network, this.histories, this.tagsBy);
     const drawn = ForkPlot.draw(graph, this.plot.clientWidth || 900, (commit, repo, event) => {
       if (!commit) return this.cards.release(ForkTree.COMMIT);
       this._point = { x: event.clientX, y: event.clientY };
@@ -180,6 +182,20 @@ class ForkTree {
     if (!drawn) return;
     this.plot.appendChild(drawn.svg);
     const span = graph.span();
+    const rows = graph.rows();
+    const placed = rows.reduce((sum, row) => sum + (row.tags || []).length, 0);
+    const orphaned = rows.reduce((sum, row) => sum + (row.orphanedTags || 0), 0);
+    if (placed || orphaned) {
+      this.plot.appendChild(ForkTree._text(
+        'p',
+        `${placed} of ${placed + orphaned} tags placed.`
+        + (orphaned
+          ? ' A tag carries no date, so the rest would each cost a request that the'
+            + " hour's remaining quota is not spent on."
+          : ''),
+        'fork-tag-note'
+      ));
+    }
     if (this.refused) {
       this.plot.appendChild(ForkTree._text('p', ForkTree._refusal(this.refused), 'fork-error'));
     }
@@ -188,7 +204,7 @@ class ForkTree {
       span.zoomed
         ? `Axis: ${ForkTree._date(new Date(span.from).toISOString())} to `
           + `${ForkTree._date(new Date(span.to).toISOString())}, the window of the loaded `
-          + 'commits. Fork lines older than it are clamped to the left edge.'
+          + 'commits and tags. Fork lines older than it are clamped to the left edge.'
         : `Axis: ${ForkTree._date(new Date(span.from).toISOString())} to `
           + `${ForkTree._date(new Date(span.to).toISOString())}. Open a repository to draw its `
           + 'commit lanes and merges; the axis then narrows to that history.',
@@ -352,6 +368,59 @@ class ForkTree {
       return Promise.resolve();
     }
     return this._allHistories();
+  }
+
+  // Args:
+  //   next: whether the plot should carry tag marks.
+  // Returns: a promise for the redraw, so a caller can wait for the fetches.
+  setTags(next) {
+    this.tags = next;
+    if (!this.network) return Promise.resolve();
+    if (!next) {
+      this.tagsBy = {};
+      this._plot();
+      return Promise.resolve();
+    }
+    return this._allTags();
+  }
+
+  _allTags() {
+    if (!this.tags || !this.network) return Promise.resolve();
+    return this.network.reduce(
+      (chain, repo) => chain.then(() => (this.refused ? null : this._tagsOf(repo))),
+      Promise.resolve()
+    ).then(() => this._plot());
+  }
+
+  // A tag carries no date, so each one outside the fetched commits costs its
+  // own request, and an unauthenticated visitor has 60 for the whole hour.
+  static TAG_RESERVE = 200;
+
+  _lookups() {
+    const rate = this.api.rate;
+    const left = rate && rate.remaining ? rate.remaining : 60;
+    return Math.max(4, left - ForkTree.TAG_RESERVE);
+  }
+
+  _tagsOf(repo) {
+    if (!this.tagsBy || repo.full_name in this.tagsBy) return Promise.resolve();
+    this.tagsBy[repo.full_name] = [];
+    return this.api.tags(repo.full_name)
+      .then(tags => {
+        const known = new Set((this.histories[repo.full_name] || []).map(c => c.sha));
+        const listed = tags.map(tag => ({ name: tag.name, sha: tag.commit && tag.commit.sha }));
+        this.tagsBy[repo.full_name] = listed;
+        const missing = listed.filter(tag => tag.sha && !known.has(tag.sha));
+        return Promise.all(missing.slice(0, this._lookups()).map(
+          tag => this.api.commit(repo.full_name, tag.sha)
+            .then(commit => { tag.date = commit.commit.committer.date; })
+            .catch(() => null)
+        ));
+      })
+      .catch(error => {
+        delete this.tagsBy[repo.full_name];
+        this.refused = error;
+      });
   }
 
   // Serial, and stopped at the first refusal: each repository costs one

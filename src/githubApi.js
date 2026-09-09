@@ -161,6 +161,10 @@ class GitHubApi {
     return this.get(`/repos/${fullName}/commits?${ref}per_page=100`, false);
   }
 
+  commit(fullName, sha) {
+    return this.get(`/repos/${fullName}/commits/${sha}`, false);
+  }
+
   tags(fullName) {
     return this.get(`/repos/${fullName}/tags?per_page=100`);
   }

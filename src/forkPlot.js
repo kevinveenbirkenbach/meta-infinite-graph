@@ -7,6 +7,8 @@ class ForkPlot {
 
   static PAD = { left: 190, right: 12, top: 22, bottom: 8 };
 
+  static TAG_GAP = 42;
+
   static _el(name, attrs) {
     const node = document.createElementNS(ForkPlot.NS, name);
     for (const [key, value] of Object.entries(attrs || {})) {
@@ -132,6 +134,26 @@ class ForkPlot {
         class: 'fork-merge',
         d: `M ${at} ${lane} C ${at - 6} ${lane}, ${at - 6} ${y}, ${at} ${y}`,
       }));
+    }
+
+    // Releases cluster, so every mark is drawn but a name only where it does
+    // not land on the one before it.
+    let named = -Infinity;
+    const tags = [...(row.tags || [])].sort(
+      (one, other) => ForkGraph._time(one.date) - ForkGraph._time(other.date)
+    );
+    for (const tag of tags) {
+      const at = x(ForkGraph._time(tag.date));
+      const mark = ForkPlot._el('line', { class: 'fork-tag', x1: at, x2: at, y1: y - 9, y2: y });
+      const hint = ForkPlot._el('title');
+      hint.textContent = `${tag.name} (${String(tag.date).slice(0, 10)})`;
+      mark.appendChild(hint);
+      group.appendChild(mark);
+      if (at - named < ForkPlot.TAG_GAP) continue;
+      named = at;
+      const label = ForkPlot._el('text', { class: 'fork-tag-name', x: at + 2, y: y - 10 });
+      label.textContent = tag.name;
+      group.appendChild(label);
     }
 
     for (const column of row.columns || []) {

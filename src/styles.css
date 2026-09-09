@@ -172,7 +172,8 @@ td.role-list span {
   margin-right: 0.35em;
 }
 
-.fork-axis-note {
+.fork-axis-note,
+.fork-tag-note {
   font-size: 0.78rem;
   opacity: 0.65;
   margin: 4px 0 0;
@@ -239,6 +240,16 @@ svg.fork-plot .fork-merge {
   stroke-width: 1;
   fill: none;
   opacity: 0.35;
+}
+
+svg.fork-plot .fork-tag {
+  stroke: var(--bs-success);
+  stroke-width: 1.5;
+}
+
+svg.fork-plot .fork-tag-name {
+  fill: var(--bs-success);
+  font-size: 9px;
 }
 
 svg.fork-plot .fork-commit {

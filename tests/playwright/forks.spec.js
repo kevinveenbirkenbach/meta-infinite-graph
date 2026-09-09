@@ -46,6 +46,13 @@ const COMMITS = [
     commit: { message: 'root commit', committer: { date: '2026-08-30T00:00:00Z' } } },
 ];
 
+// v13 sits on a commit the fetched page carries; v11 points at one older than
+// it, which is the only case a date lookup exists for.
+const TAGS = [
+  { name: 'v13.0.0', commit: { sha: 'aaa2' } },
+  { name: 'v11.6.0', commit: { sha: 'old9' } },
+];
+
 function stub(page, counter) {
   return page.route('https://api.github.com/**', route => {
     const path = new URL(route.request().url()).pathname;
@@ -54,7 +61,10 @@ function stub(page, counter) {
       if (path === '/repos/infinito-nexus/core') return ROOT;
       if (path === '/repos/infinito-nexus/core/forks') return FORKS;
       if (path.endsWith('/branches')) return [{ name: 'main' }, { name: HOSTILE }];
-      if (path.endsWith('/tags')) return [{ name: 'v13.0.0' }, { name: 'v11.6.0' }];
+      if (path.endsWith('/tags')) return TAGS;
+      if (/\/commits\/[0-9a-z]+$/.test(path)) {
+        return { sha: path.split('/').pop(), commit: { committer: { date: '2026-08-20T00:00:00Z' } } };
+      }
       if (path.endsWith('/commits')) return COMMITS;
       return [];
     })();
@@ -196,6 +206,26 @@ test('branch lines are drawn by default and the design panel turns them off',
       .toBeGreaterThan(0);
     expect(calls.filter(path => path.endsWith('/commits')).length,
       'the cache answers the second time, so nothing is spent again').toBe(perRepo.length);
+  });
+
+test('a tag older than the fetched commits is dated by its own lookup',
+  async ({ page }) => {
+    const calls = [];
+    await openForks(page, calls);
+    await expect(page.locator('svg.fork-plot')).toBeVisible();
+    expect(await page.locator('svg.fork-plot .fork-tag').count(),
+      'tags stay off until the design panel asks for them').toBe(0);
+
+    await page.locator('#btn-design').click();
+    await page.locator('#design-tags').check();
+    await expect
+      .poll(() => page.locator('svg.fork-plot .fork-tag').count(), { timeout: 30000 })
+      .toBe(6);
+
+    expect(calls.filter(path => path.endsWith('/commits/old9')).length,
+      'the tag inside the history is free, the one outside costs one call').toBe(3);
+    await expect(page.locator('.fork-tag-note')).toHaveText('6 of 6 tags placed.');
+    await expect.poll(() => page.evaluate(() => window.location.search)).toContain('tags=true');
   });
 
 test('a deep link into the fork view still waits for the proxy', async ({ page }) => {

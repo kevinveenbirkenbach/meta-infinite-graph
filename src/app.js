@@ -398,6 +398,10 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
         forkTree.branches = value === 'true';
         document.getElementById('design-branches').checked = forkTree.branches;
       }, 'true')
+      .register('tags', () => String(forkTree.tags), value => {
+        forkTree.tags = value === 'true';
+        document.getElementById('design-tags').checked = forkTree.tags;
+      }, 'false')
       .register('kind', () => testsView.kind, value => testsView.setKind(value), 'playwright')
       .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
       .register('repo', () => forkTree.root, value => {
@@ -443,10 +447,13 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
         urlState.capture();
       });
     }
-    const branches = document.getElementById('design-branches');
-    branches.addEventListener('change', () => {
-      forkTree.setBranches(branches.checked).then(() => urlState.capture());
-    });
+    for (const [id, apply] of [
+      ['design-branches', next => forkTree.setBranches(next)],
+      ['design-tags', next => forkTree.setTags(next)],
+    ]) {
+      const box = document.getElementById(id);
+      box.addEventListener('change', () => apply(box.checked).then(() => urlState.capture()));
+    }
     wireForks(forkTree, cardHost);
     Promise.all(pending).then(() => {
       wireViewMode(tableView, forkTree, testsView);

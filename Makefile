@@ -77,7 +77,7 @@ nginx-probe: image
 		 echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
 		 echo "unlisted /gh/user: $$(wget -S -qO- http://127.0.0.1/gh/user 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 echo "listed /gh/repos/o/r: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
-		 for ref in forks branches tags commits; do \
+		 for ref in forks branches tags commits commits/f99de7de; do \
 		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 done'
 
@@ -86,7 +86,7 @@ gh-status:
 		'echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
 		 grep -q "Bearer ." /etc/nginx/mig-github.conf \
 		   && echo "token in nginx: yes" || echo "token in nginx: NO"; \
-		 for ref in forks branches tags commits; do \
+		 for ref in forks branches tags commits commits/f99de7de; do \
 		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 done'
 

@@ -22,7 +22,7 @@ cat > "$CONF" <<CONFIG
     return 200 '{"proxy":${PROXY}}';
   }
 
-  location ~ "^/gh/((repos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+|repositories/[0-9]+)(/(forks|branches|tags|commits))?)\$" {
+  location ~ "^/gh/((repos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+|repositories/[0-9]+)(/(forks|branches|tags|commits)(/[0-9a-fA-F]{7,40})?)?)\$" {
     resolver 127.0.0.11 1.1.1.1 valid=300s ipv6=off;
     set \$mig_upstream https://api.github.com/\$1\$is_args\$args;
     proxy_pass \$mig_upstream;
