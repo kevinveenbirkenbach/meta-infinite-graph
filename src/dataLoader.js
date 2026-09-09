@@ -4,8 +4,9 @@
 // nginx's JSON autoindex of /roles/, and per-role metadata is the parsed
 // meta/*.yml itself. No pre-generated helper files.
 class DataLoader {
-  constructor(basePath = '/roles') {
+  constructor(basePath = '/roles', metaPath = '/meta') {
     this.basePath = basePath;
+    this.metaPath = metaPath;
     this._metaCache = new Map();
   }
 
@@ -151,10 +152,10 @@ class DataLoader {
   }
 
   loadCategories() {
-    return this._fetchYaml('/meta/categories.yml').then(data => {
+    return this._fetchYaml(`${this.metaPath}/categories.yml`).then(data => {
       if (!data?.roles) {
         throw new Error(
-          '/meta/categories.yml is missing or has no roles mapping. Mount the '
+          `${this.metaPath}/categories.yml is missing or has no roles mapping. Mount the `
           + 'infinito repository meta/ directory (INFINITO_META_DIR in .env) '
           + 'and recreate the stack with make up.'
         );

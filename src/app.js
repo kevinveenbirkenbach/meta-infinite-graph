@@ -38,6 +38,25 @@ function currentView() {
   return document.querySelector('input[name="view"]:checked').value;
 }
 
+// Filling these from the working copy would put today's numbers under a past
+// timestamp, so at a date that predates the schema they are greyed instead.
+const META_VIEWS = ['graph', 'bond', 'ressources', 'complexity', 'tests'];
+
+function disableMetaViews(missing) {
+  const why = `${missing.join(', ')} does not exist at the chosen date. This view reads `
+    + 'from it, so it would show the working copy rather than that state.';
+  for (const view of META_VIEWS) {
+    const input = document.getElementById(`view-${view}`);
+    const label = document.querySelector(`label[for="view-${view}"]`);
+    input.disabled = true;
+    label.classList.add('view-unavailable');
+    label.title = why;
+  }
+  if (META_VIEWS.includes(currentView())) {
+    document.getElementById('view-forks').checked = true;
+  }
+}
+
 function wireViewMode(tableView, forkTree, testsView) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
@@ -293,7 +312,33 @@ function wireDataSwitches(tableView, testsView, roleInfo, uiManager, dataLoader,
   return { setVariants, setSymbols };
 }
 
-Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
+const gitRange = new GitRange(urlState, range => {
+  // A moved handle changes which commits exist for every view, so the page is
+  // rebuilt from the new base path instead of each view being invalidated.
+  const params = new URLSearchParams(window.location.search);
+  params.set('from', new Date(range.from).toISOString());
+  params.set('until', range.head());
+  params.set('refs', range.refs.join(','));
+  window.location.search = params.toString();
+});
+window.gitRange = gitRange;
+
+// Before the scan: a right handle in the past means the tables read the roles
+// tree of that commit, not the mounted working copy.
+gitRange.load()
+  .then(catalog => (catalog ? GitRange.rewind(gitRange.head(), gitRange.treeRef()) : null))
+  .then(GitRange.inspect)
+  .then(({ rewound, missing }) => {
+    if (rewound && !missing.length) {
+      dataLoader.basePath = `${rewound.path}roles`;
+      dataLoader.metaPath = `${rewound.path}meta`;
+      setStatus(`Scanning roles at ${rewound.date.slice(0, 10)} ...`);
+    } else if (rewound) {
+      gitRange.markMissing(rewound.date, missing);
+      disableMetaViews(missing);
+    }
+    return Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()]);
+  })
   .then(([roles, categories]) => {
     setStatus(`Loading meta of ${roles.length} roles ...`);
     return dataLoader
@@ -314,6 +359,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
     );
     const cardHost = new RoleCardHost(roleInfo);
     const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'), cardHost);
+    forkTree.useMirror(gitRange);
     const testsView = new TestsView(
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables')
     );
@@ -455,17 +501,19 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       box.addEventListener('change', () => apply(box.checked).then(() => urlState.capture()));
     }
     wireForks(forkTree, cardHost);
-    Promise.all(pending).then(() => {
+    // The hook lands last: wireViewMode redraws the active view, so a test that
+    // takes __mig as ready any earlier can grab a row the redraw then replaces
+    // under its pointer.
+    return Promise.all(pending).then(() => {
       wireViewMode(tableView, forkTree, testsView);
       uiManager.onSelectionChange();
       urlState.capture();
+      window.__mig = {
+        metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
+        testsView, dataLoader, gitRange,
+        graph: graphRenderer.graph,
+      };
     });
-
-    // Test hook for the Playwright suite.
-    window.__mig = {
-      metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree, testsView,
-      graph: graphRenderer.graph,
-    };
   })
   .catch(err => {
     console.error('Init error', err);

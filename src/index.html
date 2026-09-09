@@ -87,8 +87,8 @@
           Tags on the timeline
         </label>
         <div class="form-text">
-          A tag carries no date of its own, so every one that sits outside the
-          fetched commits costs a request to place.
+          Free from the local mirror. Without it a tag carries no date, so each
+          one outside the fetched commits costs its own request.
         </div>
       </div>
 
@@ -265,6 +265,24 @@
 
   <nav id="bottom-nav">
     <span id="status" class="text-muted"></span>
+
+    <span id="git-range" class="git-range" hidden>
+      <span class="dropup">
+        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+                id="btn-sources" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">Quellen</button>
+        <div class="dropdown-menu range-sources" id="range-sources"></div>
+      </span>
+      <span class="range-track">
+        <label class="visually-hidden" for="range-from">Ab wann Commits geholt werden</label>
+        <input type="range" id="range-from">
+        <label class="visually-hidden" for="range-to">Bis zu welchem Stand die Daten gelten</label>
+        <input type="range" id="range-to">
+      </span>
+      <span id="range-label" class="range-label text-muted"></span>
+      <span id="range-warning" class="range-warning" hidden></span>
+    </span>
+
     <span class="bottom-nav-links">
       <a href="https://github.com/kevinveenbirkenbach/meta-infinite-graph" target="_blank">
         ⌥ Source
@@ -284,6 +302,7 @@
 
   <!-- App files -->
   <script src="urlState.js"></script>
+  <script src="gitRange.js"></script>
   <script src="githubApi.js"></script>
   <script src="forkGraph.js"></script>
   <script src="forkPlot.js"></script>

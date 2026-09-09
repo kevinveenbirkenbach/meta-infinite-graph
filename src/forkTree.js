@@ -7,6 +7,16 @@ class ForkTree {
     this.loaded = null;
     this.branches = true;
     this.tags = false;
+    this.range = null;
+  }
+
+  useMirror(range) {
+    this.range = range && range.catalog ? range : null;
+  }
+
+  _mirrored(fullName) {
+    if (!this.range) return null;
+    return (this.range.catalog.repos || []).find(repo => repo.full_name === fullName) || null;
   }
 
   setRoot(fullName) {
@@ -405,6 +415,12 @@ class ForkTree {
   _tagsOf(repo) {
     if (!this.tagsBy || repo.full_name in this.tagsBy) return Promise.resolve();
     this.tagsBy[repo.full_name] = [];
+    if (this._mirrored(repo.full_name)) {
+      if (repo.full_name === this.range.catalog.root) {
+        this.tagsBy[repo.full_name] = this.range.catalog.tags || [];
+      }
+      return Promise.resolve();
+    }
     return this.api.tags(repo.full_name)
       .then(tags => {
         const known = new Set((this.histories[repo.full_name] || []).map(c => c.sha));
@@ -441,6 +457,8 @@ class ForkTree {
       return Promise.resolve();
     }
     this.histories[repo.full_name] = [];
+    const mirrored = this._mirrored(repo.full_name);
+    if (mirrored) return this._mirrorHistory(repo, mirrored);
     return this.api.commits(repo.full_name, repo.default_branch)
       .then(commits => {
         this.histories[repo.full_name] = commits.map(entry => ({
@@ -449,6 +467,27 @@ class ForkTree {
           date: entry.commit.committer.date,
           message: entry.commit.message.split('\n')[0],
         }));
+        this._plot();
+      })
+      .catch(error => {
+        delete this.histories[repo.full_name];
+        this.refused = error;
+      });
+  }
+
+  _mirrorHistory(repo, mirrored) {
+    const wanted = mirrored.refs
+      .filter(ref => this.range.refs.includes(ref.ref))
+      .map(ref => ref.ref);
+    if (!wanted.length) return Promise.resolve();
+    return Promise.all(wanted.map(ref => this.range.log(ref)))
+      .then(walks => {
+        const seen = new Map();
+        for (const walk of walks) {
+          for (const commit of walk) if (!seen.has(commit.sha)) seen.set(commit.sha, commit);
+        }
+        this.histories[repo.full_name] = [...seen.values()]
+          .sort((one, other) => Date.parse(other.date) - Date.parse(one.date));
         this._plot();
       })
       .catch(error => {

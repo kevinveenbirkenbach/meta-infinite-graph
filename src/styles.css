@@ -58,8 +58,15 @@ html, body {
   border-top: 1px solid var(--bs-border-color);
   font-size: 0.78rem;
   white-space: nowrap;
-  overflow: hidden;
   z-index: 1100;
+}
+
+/* The status is the only part that grows, so it carries the clipping. The bar
+   itself must not, or it cuts off the sources menu opening above it. */
+#status {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 30vw;
 }
 
 .bottom-nav-links {
@@ -750,4 +757,108 @@ img.role-icon {
   border: 0;
   border-radius: 4px;
   background: #000;
+}
+
+.git-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 0.75rem;
+}
+
+.range-track {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 120px;
+  height: 22px;
+}
+
+.range-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  height: 2px;
+  background: var(--bs-border-color, #888);
+}
+
+/* Stacked, so only the thumbs take the pointer; a full-width input on top
+   would otherwise swallow every click meant for the one beneath it. */
+.range-track input[type="range"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  height: 22px;
+  background: none;
+  appearance: none;
+  pointer-events: none;
+}
+
+.range-track input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  pointer-events: auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bs-body-bg, #fff);
+  background: var(--bs-primary, #0d6efd);
+}
+
+.range-track input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bs-body-bg, #fff);
+  background: var(--bs-primary, #0d6efd);
+}
+
+.range-warning {
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: #fd7e14;
+  cursor: help;
+}
+
+/* Bootstrap greys a disabled .btn-check's label, but drops the pointer with it,
+   and a greyed view has to keep answering why it is greyed. */
+.btn-check:disabled + .btn.view-unavailable {
+  pointer-events: auto;
+  cursor: help;
+  opacity: 0.45;
+  border-color: #fd7e14;
+  color: #fd7e14;
+}
+
+.range-label {
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.range-sources {
+  max-height: 60vh;
+  overflow: auto;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.range-repo + .range-repo {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--bs-border-color);
+  padding-top: 0.5rem;
+}
+
+.range-repo-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.range-ref {
+  display: block;
+  white-space: nowrap;
 }

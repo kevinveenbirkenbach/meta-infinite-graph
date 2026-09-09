@@ -151,8 +151,8 @@ class GitHubApi {
     return this.get(`/repos/${fullName}/branches?per_page=100`);
   }
 
-  // One page is the whole drawable window: /commits walks the DAG, not just the
-  // branch's own line, so a single call already carries the merges to draw.
+  // One page only: this is the fallback for a deployment without the git
+  // mirror, where every further page is a request spent on the same picture.
   // Without a branch GitHub walks the repository's own default, which is the
   // right answer; sending sha=undefined asks for a ref that cannot exist and
   // earns a 404 that reads like a broken proxy.
