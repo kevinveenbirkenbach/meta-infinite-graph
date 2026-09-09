@@ -119,46 +119,67 @@ test('a variant that pins a gate off marks the test skipped, a jinja flag stays 
   expect(rows[2].reasons[0]).toContain('deployed closure');
 });
 
-test('the CI sort follows meta/ci-order.json, and says so when it is absent',
+test('the CI sort ranks the rows here, from the declared discovery sort',
   async ({ page }) => {
     await page.goto('/?view=tests');
-    const rows = page.locator('table.tests-matrix tbody tr');
-    await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
+    const lines = page.locator('table.tests-matrix tbody tr');
+    await expect.poll(() => lines.count(), { timeout: 180000 }).toBeGreaterThan(50);
 
-    // The artefact is written into the core checkout by `make ci-order`, so a
-    // MIG checkout on its own must render without it.
-    const plan = await page.evaluate(() => fetch('/meta/ci-order.json')
-      .then(res => (res.ok ? res.json() : null))
-      .catch(() => null));
+    // The spec lives in the core checkout's default.env, mounted as
+    // /infinito.env. A MIG checkout without it must still render.
+    const declared = await page.evaluate(() => fetch('/infinito.env')
+      .then(res => (res.ok ? res.text() : ''))
+      .catch(() => ''));
 
     await page.locator('#btn-filter').click();
     await page.selectOption('#tests-sort', 'ci');
 
-    if (!plan) {
-      await expect(page.locator('.table-note')).toContainText('No meta/ci-order.json');
-      await expect(rows, 'the table survives a missing artefact').not.toHaveCount(0);
+    if (!/INFINITO_DISCOVERY_SORT/.test(declared)) {
+      await expect(page.locator('.table-note')).toContainText('No INFINITO_DISCOVERY_SORT');
+      await expect(lines, 'the grid survives a missing settings file').not.toHaveCount(0);
       return;
     }
 
-    await expect(page.locator('.table-note')).toContainText('CI order from meta/ci-order.json');
-    const rank = new Map(plan.rows.map(row => [`${row.role}#${row.variant}`, row.id]));
-    const seen = await page.evaluate(() => [...document.querySelectorAll(
+    await expect(page.locator('.table-note')).toContainText('CI order derived here');
+    const ranks = await page.evaluate(() => [...document.querySelectorAll(
       'table.tests-matrix tbody tr'
-    )].map(tr => {
-      const cells = tr.querySelectorAll('td');
-      return `${cells[0].textContent.trim()}#${cells[1].textContent.trim()}`;
-    }));
+    )].map(tr => tr.querySelectorAll('th.tests-axis')[2].textContent.trim()));
 
-    const ranked = seen.map(key => rank.get(key)).filter(id => id !== undefined);
-    expect(ranked.length, 'the plan covers most of the matrix').toBeGreaterThan(100);
-    expect(ranked, 'planned rows appear in plan order').toEqual([...ranked].sort((a, b) => a - b));
+    const numbered = ranks.filter(Boolean).map(Number);
+    expect(numbered.length, 'most lines are rows CI discovers').toBeGreaterThan(50);
+    expect(numbered, 'ranked lines run in rank order')
+      .toEqual([...numbered].sort((a, b) => a - b));
+    expect(new Set(numbered).size, 'a rank is not shared').toBe(numbered.length);
+
+    const aware = await page.evaluate(() => Boolean(window.__mig?.testsView?.variantAware));
+    if (!aware) {
+      const expected = await page.evaluate(() => {
+        const view = window.__mig.testsView;
+        const shown = [...document.querySelectorAll(
+          'table.tests-matrix tbody tr th.tests-axis:first-child'
+        )].map(th => th.textContent.trim());
+        return shown
+          .map(role => view.best.get(role))
+          .filter(Boolean)
+          .map(row => row.rank)
+          .sort((a, b) => a - b);
+      });
+      expect(numbered, 'a role line carries that role\'s earliest rank').toEqual(expected);
+    }
+
+    const firstBlank = ranks.findIndex(rank => !rank);
+    const lastRanked = ranks.reduce((last, rank, i) => (rank ? i : last), -1);
+    if (firstBlank !== -1) {
+      expect(firstBlank, 'undiscovered lines sit behind the ranked ones')
+        .toBeGreaterThan(lastRanked);
+    }
   });
 
 test('the chosen sort survives a reload through the URL', async ({ page }) => {
   await page.goto('/?view=tests&sort=ci');
   await expect.poll(
     () => page.locator('table.tests-matrix tbody tr').count(), { timeout: 180000 }
-  ).toBeGreaterThan(500);
+  ).toBeGreaterThan(50);
   await page.locator('#btn-filter').click();
   await expect(page.locator('#tests-sort')).toHaveValue('ci');
 
@@ -170,13 +191,81 @@ test('the chosen sort survives a reload through the URL', async ({ page }) => {
   await expect.poll(() => page.evaluate(() => window.location.search)).toContain('sort=ci');
 });
 
-test('the gate filter partitions the rows across its five marks', async ({ page }) => {
+test('the grid puts role and variant on one axis and the tests on the other', async ({ page }) => {
   await page.goto('/?view=tests');
-  const rows = page.locator('table.tests-matrix tbody tr');
-  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
+  const cells = page.locator('table.tests-matrix td[data-cell]');
+  await expect.poll(() => cells.count(), { timeout: 180000 }).toBeGreaterThan(300);
+
+  const shape = await page.evaluate(() => {
+    const lines = [...document.querySelectorAll('table.tests-matrix tbody tr')];
+    const headers = [...document.querySelectorAll('table.tests-matrix thead th')]
+      .map(th => th.textContent.trim());
+    const widths = new Set(lines.map(tr => tr.querySelectorAll('td').length));
+    return {
+      lines: lines.length,
+      headers,
+      filled: document.querySelectorAll('table.tests-matrix td[data-cell]').length,
+      blank: document.querySelectorAll('table.tests-matrix td.tests-blank').length,
+      widths: [...widths],
+      axisPerLine: [...new Set(lines.map(tr => tr.querySelectorAll('th.tests-axis').length))],
+    };
+  });
+
+  expect(shape.headers.slice(0, 3)).toEqual(['role', 'variant', 'rank']);
+  expect(shape.headers.slice(3), 'the test axis is numbered').toEqual(
+    shape.headers.slice(3).map((_, i) => String(i + 1))
+  );
+  expect(shape.axisPerLine, 'every line carries the same three axis cells').toEqual([3]);
+  expect(shape.widths, 'the grid is rectangular').toHaveLength(1);
+  expect(shape.filled + shape.blank, 'every slot is either a test or blank')
+    .toBe(shape.lines * shape.widths[0]);
+  expect(shape.lines, 'one line per role, not per test').toBeLessThan(shape.filled);
+});
+
+test('hovering a cell opens a card with that run’s detail', async ({ page }) => {
+  await page.goto('/?view=tests');
+  const cells = page.locator('table.tests-matrix td[data-cell]');
+  await expect.poll(() => cells.count(), { timeout: 180000 }).toBeGreaterThan(300);
+
+  await cells.first().hover();
+  const card = page.locator('.role-card-host .test-card');
+  await expect(card).toBeVisible();
+  await expect(card).toContainText('Variant');
+  await expect(card).toContainText('Gate');
+  await expect(page.locator('.role-card-host .role-card-close')).toBeVisible();
+
+  const named = await page.evaluate(() => {
+    const cell = document.querySelector('table.tests-matrix td[data-cell]');
+    const role = cell.closest('tr').querySelector('th.tests-axis').textContent.trim();
+    return { role, card: document.querySelector('.test-card').textContent };
+  });
+  expect(named.card, 'the card names the role of its own cell').toContain(named.role);
+
+  // The card must not sit on the cell it explains, or the pointer cannot leave.
+  const clear = await page.evaluate(() => {
+    const host = document.querySelector('.role-card-host').getBoundingClientRect();
+    const cell = document.querySelector('table.tests-matrix td[data-cell]').getBoundingClientRect();
+    return host.left >= cell.right || host.right <= cell.left
+      || host.top >= cell.bottom || host.bottom <= cell.top;
+  });
+  expect(clear).toBe(true);
+
+  await page.mouse.move(2, 2);
+  await expect(page.locator('.role-card-host')).toHaveCount(0);
+});
+
+test('the gate filter partitions the cells across its five marks', async ({ page }) => {
+  await page.goto('/?view=tests');
+  const rows = page.locator('table.tests-matrix td[data-cell]');
+  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(300);
+
+  // The two per-variant marks need more than one variant to exist at all, so
+  // the five-way split is only observable with the variants switch on.
+  await page.locator('#btn-filter').click();
+  await page.locator('#btn-variants').click();
+  await expect.poll(() => rows.count(), { timeout: 60000 }).toBeGreaterThan(1000);
   const total = await rows.count();
 
-  await page.locator('#btn-filter').click();
   const count = async gate => {
     await page.selectOption('#tests-gate', gate);
     await page.waitForFunction(
@@ -187,18 +276,18 @@ test('the gate filter partitions the rows across its five marks', async ({ page 
 
   const never = await count('never');
   expect(never).toBeGreaterThan(0);
-  expect(await page.locator('table.tests-matrix tr.pw-skipped').count()).toBe(0);
+  expect(await page.locator('table.tests-matrix td.pw-skipped').count()).toBe(0);
   await expect(page.locator('.table-note')).toContainText(`Showing the ${never} rows gated never`);
 
   const here = await count('skipped');
   expect(here).toBeGreaterThan(0);
-  expect(await page.locator('table.tests-matrix tr.pw-never').count()).toBe(0);
+  expect(await page.locator('table.tests-matrix td.pw-never').count()).toBe(0);
   await expect(page.locator('.table-note'))
     .toContainText(`Showing the ${here} rows gated not in this variant`);
 
   const always = await count('always');
   expect(always).toBeGreaterThan(0);
-  expect(await page.locator('table.tests-matrix tr.pw-unknown').count()).toBe(0);
+  expect(await page.locator('table.tests-matrix td.pw-unknown').count()).toBe(0);
 
   const maybe = await count('unknown');
   const runs = await count('runs');
@@ -214,18 +303,19 @@ test('the gate filter partitions the rows across its five marks', async ({ page 
 test('never and always maybe are role facts, not variant facts', async ({ page }) => {
   await page.goto('/?view=tests');
   await expect.poll(
-    () => page.locator('table.tests-matrix tbody tr').count(), { timeout: 180000 }
+    () => page.locator('table.tests-matrix td[data-cell]').count(), { timeout: 180000 }
   ).toBeGreaterThan(500);
 
   const verdict = await page.evaluate(() => {
-    const cells = tr => [...tr.querySelectorAll('td')].map(td => td.textContent.trim());
-    const rows = [...document.querySelectorAll('table.tests-matrix tbody tr')].map(tr => {
-      const c = cells(tr);
-      return { role: c[0], test: c[3], gate: tr.className.replace('pw-', '') };
-    });
+    const rows = [...document.querySelectorAll('table.tests-matrix td[data-cell]')].map(td => ({
+      role: td.closest('tr').querySelector('th.tests-axis').textContent.trim(),
+      column: [...td.parentNode.querySelectorAll('td')].indexOf(td),
+      gate: td.className.replace('pw-', ''),
+    }));
     const groups = new Map();
     for (const row of rows) {
-      const key = `${row.role}|${row.test}`;
+      // Same role, same column: the same test across that role's variants.
+      const key = `${row.role}|${row.column}`;
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(row.gate);
     }
@@ -268,16 +358,44 @@ test('never and always maybe are role facts, not variant facts', async ({ page }
   expect(verdict.brokenOpen, 'a this-variant maybe is settled in some other variant').toBe(0);
 });
 
+test('the variants switch splits each role line into its variants', async ({ page }) => {
+  await page.goto('/?view=tests');
+  const lines = page.locator('table.tests-matrix tbody tr');
+  const cells = page.locator('table.tests-matrix td[data-cell]');
+  await expect.poll(() => lines.count(), { timeout: 180000 }).toBeGreaterThan(50);
+
+  const blindLines = await lines.count();
+  const blindCells = await cells.count();
+  const roles = await page.evaluate(() => new Set([...document.querySelectorAll(
+    'table.tests-matrix tbody tr th.tests-axis:first-child'
+  )].map(th => th.textContent.trim())).size);
+  expect(blindLines, 'variant blind, a line is a role').toBe(roles);
+  await expect(lines.first().locator('th.tests-axis').nth(1)).toHaveText('base');
+
+  await page.locator('#btn-filter').click();
+  await page.locator('#btn-variants').click();
+  await expect.poll(() => lines.count(), { timeout: 60000 }).toBeGreaterThan(blindLines);
+
+  const awareLines = await lines.count();
+  expect(await cells.count(), 'every variant brings its own runs')
+    .toBeGreaterThan(blindCells);
+  const awareRoles = await page.evaluate(() => new Set([...document.querySelectorAll(
+    'table.tests-matrix tbody tr th.tests-axis:first-child'
+  )].map(th => th.textContent.trim())).size);
+  expect(awareRoles, 'the same roles, only split').toBe(roles);
+  expect(awareLines).toBeGreaterThan(awareRoles);
+
+  await page.locator('#btn-variants').click();
+  await expect.poll(() => lines.count()).toBe(blindLines);
+});
+
 test('the kind switch moves between the playwright and the cli suites', async ({ page }) => {
   await page.goto('/?view=tests');
-  const rows = page.locator('table.tests-matrix tbody tr');
-  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
+  const rows = page.locator('table.tests-matrix td[data-cell]');
+  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(300);
   const playwrightRows = await rows.count();
 
   await page.locator('label[for="tests-kind-cli"]').click();
-  await expect(page.locator('table.tests-matrix thead th')).toHaveText(
-    ['role', 'variant', 'chunk', 'script', 'runs', 'timeout', 'env flags', 'shared harness']
-  );
   await expect(page.locator('.table-note')).toContainText('CLI runs across');
   await expect(page.locator('.table-note')).toContainText(
     'CLI tests declare no <NAME>_SERVICE_ENABLED flags'
@@ -286,7 +404,10 @@ test('the kind switch moves between the playwright and the cli suites', async ({
   const cliRows = await rows.count();
   expect(cliRows, 'far fewer roles ship a CLI test').toBeLessThan(playwrightRows);
   expect(cliRows).toBeGreaterThan(0);
-  await expect(rows.first().locator('td').nth(3)).toHaveText('files/test/test.sh');
+  // One script per role, so the CLI grid is a single column.
+  await expect(page.locator('table.tests-matrix thead th')).toHaveText(
+    ['role', 'variant', 'rank', '1']
+  );
 
   await expect.poll(() => page.evaluate(() => window.location.search)).toContain('kind=cli');
 
@@ -294,10 +415,14 @@ test('the kind switch moves between the playwright and the cli suites', async ({
   await expect.poll(() => rows.count()).toBe(playwrightRows);
 });
 
-test('the playwright view builds a row per role, variant and test', async ({ page }) => {
+test('the note counts every run, whatever the grid shows', async ({ page }) => {
   await page.goto('/?view=tests');
-  const rows = page.locator('table.tests-matrix tbody tr');
-  await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(500);
+  const cells = page.locator('table.tests-matrix td[data-cell]');
+  await expect.poll(() => cells.count(), { timeout: 180000 }).toBeGreaterThan(300);
+
+  await page.locator('#btn-filter').click();
+  await page.locator('#btn-variants').click();
+  await expect.poll(() => cells.count(), { timeout: 60000 }).toBeGreaterThan(1000);
 
   await expect(page.locator('.table-note')).toContainText('test runs across');
   await expect(page.locator('.table-note'))
@@ -307,11 +432,7 @@ test('the playwright view builds a row per role, variant and test', async ({ pag
   await expect(page.locator('.table-note'))
     .toContainText('never certain because no variant settles their gate');
 
-  const head = page.locator('table.tests-matrix thead th');
-  await expect(head).toHaveText(
-    ['role', 'variant', 'chunk', 'test', 'runs', 'skip gates', 'branch gates', 'why']
-  );
-  expect(await page.locator('table.tests-matrix tr.pw-skipped').count()).toBeGreaterThan(0);
-  expect(await rows.first().locator('td[data-role-name]').count(),
-    'the role cell carries the hover card trigger').toBe(1);
+  expect(await page.locator('table.tests-matrix td.pw-skipped').count()).toBeGreaterThan(0);
+  expect(await page.locator('table.tests-matrix th[data-role-name]').first().count(),
+    'the role axis carries the hover card trigger').toBe(1);
 });

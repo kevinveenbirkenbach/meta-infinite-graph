@@ -239,40 +239,94 @@ ul.fork-tree ul {
   margin-bottom: 8px;
 }
 
-table.tests-matrix td.pw-chunk {
-  text-align: center;
+table.tests-matrix {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12px;
+}
+
+table.tests-matrix th,
+table.tests-matrix td {
+  border-right: 1px solid var(--bs-border-color);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+table.tests-matrix thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--bs-body-bg);
+  padding: 3px 6px;
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
 }
 
-table.tests-matrix td.pw-test {
-  max-width: 34em;
-  overflow-wrap: anywhere;
+table.tests-matrix th.tests-axis {
+  background: var(--bs-body-bg);
+  text-align: left;
+  padding: 1px 8px 1px 6px;
+  white-space: nowrap;
+  font-weight: 500;
 }
 
-table.tests-matrix td.pw-status {
+/* Only the role column sticks. Offsetting the two behind it needs their real
+   widths, which CSS cannot see, and a wrong guess parks them over the cells. */
+table.tests-matrix th.tests-axis:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  max-width: 16em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.tests-matrix thead th.tests-axis:nth-child(1) {
+  z-index: 4;
+}
+
+table.tests-matrix th.tests-axis:nth-child(2),
+table.tests-matrix th.tests-axis:nth-child(3) {
+  text-align: right;
+}
+
+table.tests-matrix tbody td {
+  width: 26px;
+  min-width: 26px;
+  padding: 0;
   text-align: center;
+  line-height: 18px;
+  cursor: help;
 }
 
-table.tests-matrix td.pw-why {
-  max-width: 26em;
-  opacity: 0.7;
-  overflow-wrap: anywhere;
+table.tests-matrix td.tests-blank {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--bs-body-bg),
+    var(--bs-body-bg) 3px,
+    var(--bs-secondary-bg) 3px,
+    var(--bs-secondary-bg) 6px
+  );
+  cursor: default;
 }
 
-table.tests-matrix tr.pw-skipped {
-  opacity: 0.55;
+table.tests-matrix td.pw-never {
+  background: color-mix(in srgb, var(--bs-danger) 22%, transparent);
 }
 
-table.tests-matrix tr.pw-never td.pw-status {
-  background: color-mix(in srgb, var(--bs-danger) 25%, transparent);
+table.tests-matrix td.pw-skipped {
+  background: color-mix(in srgb, var(--bs-secondary) 22%, transparent);
 }
 
-table.tests-matrix tr.pw-always td.pw-status {
-  background: color-mix(in srgb, var(--bs-warning) 25%, transparent);
+table.tests-matrix td.pw-always {
+  background: color-mix(in srgb, var(--bs-warning) 28%, transparent);
 }
 
-table.tests-matrix tr.pw-unknown td.pw-status {
-  background: color-mix(in srgb, var(--bs-warning) 10%, transparent);
+table.tests-matrix td.pw-unknown {
+  background: color-mix(in srgb, var(--bs-warning) 12%, transparent);
+}
+
+.role-card-host:has(.test-card) {
+  max-width: 460px;
 }
 
 table.bond-matrix {

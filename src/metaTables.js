@@ -167,6 +167,35 @@ class MetaTables {
     return [...seen].sort();
   }
 
+  // A role whose name is exactly a category prefix strips to the empty string,
+  // so the services key is the role name itself.
+  primaryEntry(role) {
+    const services = this.meta[role]?.services || {};
+    return services[this.entityName(role)] || services[role] || {};
+  }
+
+  // Args:
+  //   categories: the parsed meta/categories.yml roles tree.
+  // Returns: the dash-joined paths whose node carries invokable: true, the
+  //   same list plugins/filter/invokable_paths.py builds.
+  static invokablePaths(categories) {
+    const paths = [];
+    const walk = (node, trail) => {
+      if (!node || typeof node !== 'object') return;
+      if (node.invokable === true && trail.length) paths.push(trail.join('-'));
+      for (const [key, value] of Object.entries(node)) {
+        if (key === 'invokable' || !value || typeof value !== 'object') continue;
+        walk(value, [...trail, key]);
+      }
+    };
+    walk(categories || {}, []);
+    return paths.sort();
+  }
+
+  static isInvokable(role, paths) {
+    return paths.some(path => role === path || role.startsWith(`${path}-`));
+  }
+
   setVariants(raw) {
     this.variants = {};
     for (const [role, entries] of Object.entries(raw || {})) {
@@ -464,6 +493,7 @@ class MetaTables {
           consumers_direct: consumersDirect.length,
           weight: services.length + consumers.length + servicesDirect.length + consumersDirect.length,
           integrated: servicesDirect.length > 0,
+          services,
           dna: [...new Set([name, ...services])].sort().join('\n'),
         });
       }

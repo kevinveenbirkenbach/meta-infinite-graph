@@ -3,10 +3,11 @@ class TestsView {
   //   tables: MetaTables, for variantCount() and variantServices().
   //   loader: DataLoader, for the suites, the shared harness and the CI plan.
   //   roleInfo: for the role label and its hover card.
-  constructor(tables, loader, roleInfo, container) {
+  constructor(tables, loader, roleInfo, cardHost, container) {
     this.tables = tables;
     this.loader = loader;
     this.roleInfo = roleInfo;
+    this.cardHost = cardHost;
     this.container = container;
     this.section = null;
     this.loaded = null;
@@ -14,6 +15,7 @@ class TestsView {
     this.sort = 'name';
     this.kind = 'playwright';
     this.gate = 'all';
+    this.variantAware = false;
   }
 
   static KINDS = {
@@ -67,6 +69,10 @@ class TestsView {
     for (const input of document.querySelectorAll('input[name="tests-kind"]')) {
       input.checked = input.value === this.kind;
     }
+    if (this.scroller) this._render();
+  }
+
+  refresh() {
     if (this.scroller) this._render();
   }
 
@@ -130,15 +136,17 @@ class TestsView {
       this.loader.loadHarness(),
       this.loader.loadPlaywrightAll(roles),
       this.loader.loadCliAll(roles),
-      this.loader.loadCiOrder(),
-    ]).then(([variants, mcp, meta, harness, suites, cli, ci]) => {
+      this.loader.loadSettings(),
+      this.loader.loadStackAll(roles),
+      this.loader.loadCategories(),
+    ]).then(([variants, mcp, meta, harness, suites, cli, env, stacks, categories]) => {
       this.tables.setVariants(variants);
       this.matrix = new PlaywrightMatrix(PlaywrightMatrix.parseHarness(harness));
       this.mcp = mcp;
       this.meta = meta;
       this.suites = suites;
       this.cli = cli;
-      this._setCi(ci);
+      this._setCi(CiOrder.parse(env), stacks, categories);
       this._render();
     }).catch(error => {
       this.note.textContent = `Could not read the test suites: ${error.message}`;
@@ -149,8 +157,10 @@ class TestsView {
     return this.roleInfo.graph.matches(role, this.filters);
   }
 
+  // Off, a role is one line against its base meta/services.yml, which leaves
+  // every group_names flag unsettled; on, one line per meta/variants.yml entry.
   _variants(role) {
-    const count = this.tables.variantCount(role);
+    const count = this.variantAware ? this.tables.variantCount(role) : 0;
     return count ? [...Array(count).keys()] : [null];
   }
 
@@ -219,19 +229,40 @@ class TestsView {
   }
 
   // Args:
-  //   plan: meta/ci-order.json, or null when core never wrote it.
-  _setCi(plan) {
-    this.ci = plan;
+  //   settings: the parsed infinito.env; empty when it is not mounted.
+  //   stacks: role -> whether it ships its own compose template.
+  //   categories: the roles tree, for the invokable paths.
+  _setCi(settings, stacks, categories) {
+    this.settings = settings;
     this.rank = new Map();
-    for (const row of (plan && plan.rows) || []) {
-      this.rank.set(`${row.role}#${row.variant}`, row);
+    this.best = new Map();
+    if (!settings.INFINITO_DISCOVERY_SORT) return;
+
+    const order = new CiOrder(settings);
+    const invokable = MetaTables.invokablePaths(categories);
+    const rows = this.tables.complexityRows(true).map(row => ({
+      ...row,
+      ...order.columns({
+        name: row.name,
+        lifecycle: row.lifecycle,
+        stack: stacks[row.name],
+        modes: this.tables.primaryEntry(row.name).modes,
+        testSkips: (this.meta[row.name] || {}).skip,
+      }, invokable),
+    }));
+    for (const row of order.rank(rows)) {
+      this.rank.set(`${row.name}#${row.variant === null ? 0 : row.variant}`, row);
+      const best = this.best.get(row.name);
+      if (!best || row.rank < best.rank) this.best.set(row.name, row);
     }
   }
 
-  // A role without meta/variants.yml is one variant to the planner, so its
-  // rank sits under index 0 while the matrix calls that row's variant null.
+  // A variant-blind line stands for the whole role, so it takes the role's
+  // earliest rank. Variant 0's rank would put a role behind others that CI
+  // reaches later, because a role's first deploy is often another variant.
   _plan(row) {
-    return this.rank.get(`${row.role}#${row.variant === null ? 0 : row.variant}`);
+    if (row.variant === null) return this.best.get(row.role);
+    return this.rank.get(`${row.role}#${row.variant}`);
   }
 
   _sorted(rows) {
@@ -239,7 +270,7 @@ class TestsView {
     return [...rows].sort((left, right) => {
       const a = this._plan(left);
       const b = this._plan(right);
-      if (a && b) return a.id - b.id;
+      if (a && b) return a.rank - b.rank;
       if (a) return -1;
       if (b) return 1;
       return 0;
@@ -247,14 +278,13 @@ class TestsView {
   }
 
   _ciNote() {
-    if (!this.ci) {
-      return ' No meta/ci-order.json: run make ci-order in the core checkout to'
-        + ' sort by the deploy order.';
+    if (!this.rank.size) {
+      return ' No INFINITO_DISCOVERY_SORT: mount the core checkout\'s default.env'
+        + ' (INFINITO_ENV_FILE) to sort by the deploy order.';
     }
-    return ` CI order from meta/ci-order.json, generated ${this.ci.generated_at}`
-      + ` at ${this.ci.commit}: ${this.rank.size} planned rows in ${this.ci.chunks}`
-      + ` chunks of ${this.ci.chunk_size}.`
-      + (this.ci.seed ? '' : ' The seed is unset, so ties order differently on every sweep.');
+    return ` CI order derived here from ${this.rank.size} discovered rows, by`
+      + ` INFINITO_DISCOVERY_SORT. Ties fall back to the role name: the last key`
+      + ` of that spec is a nonce core draws per run, which nothing can reproduce.`;
   }
 
   // Args:
@@ -283,81 +313,170 @@ class TestsView {
       + `A row is one test in one variant.${narrowed}${tail}`;
   }
 
+  // Args:
+  //   rows: the rows the gate left, already in display order.
+  // Returns: one line per role and variant, its cells in the spec's own order.
+  static _lines(rows) {
+    const lines = new Map();
+    for (const row of rows) {
+      const key = JSON.stringify([row.role, row.variant]);
+      if (!lines.has(key)) lines.set(key, { role: row.role, variant: row.variant, cells: [] });
+      lines.get(key).cells.push(row);
+    }
+    return [...lines.values()];
+  }
+
   _render() {
     const all = this.kind === 'cli' ? this._cliRows() : this._playwrightRows();
     const rows = this.gate === 'all' ? all : all.filter(row => row.gate === this.gate);
     this.note.textContent = this._note(all, rows);
 
+    const lines = TestsView._lines(this._sorted(rows));
+    const width = lines.reduce((most, line) => Math.max(most, line.cells.length), 0);
+
+    this.detail = new Map();
     const table = document.createElement('table');
     table.className = 'tests-matrix';
-    table.appendChild(TableView._headRow(
-      this.kind === 'cli'
-        ? ['role', 'variant', 'chunk', 'script', 'runs', 'timeout', 'env flags', 'shared harness']
-        : ['role', 'variant', 'chunk', 'test', 'runs', 'skip gates', 'branch gates', 'why']
-    ));
+    table.appendChild(TestsView._head(width));
     const body = document.createElement('tbody');
-    for (const row of this._sorted(rows)) body.appendChild(this._row(row));
+    for (const line of lines) body.appendChild(this._line(line, width));
     table.appendChild(body);
+
     this.scroller.innerHTML = '';
     this.scroller.appendChild(table);
+    this._bind(table);
   }
 
-  _row(row) {
+  static _head(width) {
     const tr = document.createElement('tr');
-    tr.className = `pw-${row.gate}`;
+    for (const label of ['role', 'variant', 'rank']) {
+      const th = document.createElement('th');
+      th.className = 'tests-axis';
+      th.textContent = label;
+      tr.appendChild(th);
+    }
+    for (let index = 0; index < width; index += 1) {
+      const th = document.createElement('th');
+      th.textContent = String(index + 1);
+      tr.appendChild(th);
+    }
+    const thead = document.createElement('thead');
+    thead.appendChild(tr);
+    return thead;
+  }
 
-    const role = document.createElement('td');
-    role.dataset.roleName = row.role;
-    role.appendChild(this.roleInfo.label(row.role));
+  _line(line, width) {
+    const tr = document.createElement('tr');
+
+    const role = document.createElement('th');
+    role.className = 'tests-axis';
+    role.dataset.roleName = line.role;
+    role.appendChild(this.roleInfo.label(line.role));
     tr.appendChild(role);
 
-    tr.appendChild(TestsView._cell(row.variant === null ? 'base' : String(row.variant)));
+    const variant = document.createElement('th');
+    variant.className = 'tests-axis';
+    variant.textContent = line.variant === null ? 'base' : String(line.variant);
+    tr.appendChild(variant);
 
-    const plan = this._plan(row);
-    const chunk = TestsView._cell(
-      plan && plan.chunk !== null ? String(plan.chunk) : '', 'pw-chunk'
-    );
-    if (plan && plan.chunk === null) chunk.title = 'beyond this sweep’s budget';
-    if (!plan) chunk.title = 'not a row of the CI sweep plan';
-    tr.appendChild(chunk);
+    const plan = this._plan(line);
+    const rank = document.createElement('th');
+    rank.className = 'tests-axis';
+    rank.textContent = plan ? String(plan.rank) : '';
+    if (!plan) rank.title = 'CI discovery does not deploy this role and variant';
+    tr.appendChild(rank);
 
-    tr.appendChild(TestsView._cell(row.test, 'pw-test'));
-
-    const status = TestsView.STATUS[row.gate];
-    const mark = TestsView._cell(status.mark, 'pw-status');
-    mark.title = status.title;
-    tr.appendChild(mark);
-
-    if (this.kind === 'cli') {
-      tr.appendChild(TestsView._cell(row.timeout ? `${row.timeout}s` : '', 'pw-chunk'));
-      tr.appendChild(TestsView._chips(row.flags));
-      tr.appendChild(TestsView._chips(row.shared));
-      return tr;
+    for (let index = 0; index < width; index += 1) {
+      tr.appendChild(this._cellFor(line.cells[index]));
     }
-
-    tr.appendChild(TestsView._chips(row.skip));
-    tr.appendChild(TestsView._chips(row.branch));
-    tr.appendChild(TestsView._cell(row.reasons.join('; '), 'pw-why'));
     return tr;
   }
 
-  static _cell(text, className) {
+  _cellFor(row) {
     const td = document.createElement('td');
-    td.textContent = text;
-    if (className) td.className = className;
+    if (!row) {
+      td.className = 'tests-blank';
+      return td;
+    }
+    const status = TestsView.STATUS[row.gate];
+    td.className = `pw-${row.gate}`;
+    td.textContent = status.mark;
+    const key = String(this.detail.size);
+    this.detail.set(key, row);
+    td.dataset.cell = key;
     return td;
   }
 
-  static _chips(services) {
-    const td = document.createElement('td');
-    td.className = 'chips';
-    for (const service of services || []) {
-      const chip = document.createElement('span');
-      chip.className = 'chip';
-      chip.textContent = service;
-      td.appendChild(chip);
+  _bind(table) {
+    table.addEventListener('mouseover', event => {
+      const cell = event.target.closest('[data-cell]');
+      if (!cell) return;
+      const row = this.detail.get(cell.dataset.cell);
+      const box = cell.getBoundingClientRect();
+      this.cardHost.show(
+        `#test-${cell.dataset.cell}`,
+        { x: box.left, y: box.bottom },
+        () => TestsView.card(row, this.roleInfo, this._plan(row))
+      );
+    });
+    table.addEventListener('mouseout', event => {
+      const cell = event.target.closest('[data-cell]');
+      if (cell) this.cardHost.release(`#test-${cell.dataset.cell}`);
+    });
+  }
+
+  // Args:
+  //   row: the cell's test row.
+  //   plan: its meta/ci-order.json entry, or undefined when the sweep skips it.
+  static card(row, roleInfo, plan) {
+    const card = document.createElement('div');
+    card.className = 'role-card test-card';
+
+    const status = TestsView.STATUS[row.gate];
+    const title = document.createElement('div');
+    title.className = 'role-card-title';
+    title.appendChild(roleInfo.iconFor(row.role));
+    title.appendChild(document.createTextNode(` ${status.mark} ${row.role}`));
+    card.appendChild(title);
+
+    const name = document.createElement('p');
+    name.className = 'role-card-desc';
+    name.textContent = row.test;
+    card.appendChild(name);
+
+    const facts = document.createElement('dl');
+    facts.className = 'role-card-facts';
+    const scalars = [
+      ['Variant', row.variant === null ? 'base' : String(row.variant)],
+      ['Gate', status.title],
+      ['CI rank', plan ? String(plan.rank) : 'not discovered'],
+      ['Timeout', row.timeout ? `${row.timeout}s` : ''],
+      ['Why', (row.reasons || []).join('; ')],
+    ].filter(([, value]) => value);
+    for (const [term, value] of scalars) {
+      facts.append(TestsView._text('dt', term), TestsView._text('dd', value));
     }
-    return td;
+    for (const [term, items] of [
+      ['Skip gates', row.skip],
+      ['Branch gates', row.branch],
+      ['Env flags', row.flags],
+      ['Shared harness', row.shared],
+    ]) {
+      if (!items || !items.length) continue;
+      const definition = document.createElement('dd');
+      definition.className = 'chips';
+      for (const item of items) definition.appendChild(TestsView._text('span', item, 'chip'));
+      facts.append(TestsView._text('dt', term), definition);
+    }
+    card.appendChild(facts);
+    return card;
+  }
+
+  static _text(tag, text, className) {
+    const element = document.createElement(tag);
+    element.textContent = text;
+    if (className) element.className = className;
+    return element;
   }
 }
 

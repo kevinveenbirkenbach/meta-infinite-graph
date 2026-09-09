@@ -128,6 +128,14 @@ function wireForks(forkTree, cardHost) {
   });
 }
 
+// Both switches feed both views, so the redraw has to follow the visible one
+// rather than always refreshing the tables over whatever is on screen.
+function redraw(tableView, testsView) {
+  const view = currentView();
+  if (view === 'tests') testsView.refresh();
+  else if (!['graph', 'forks'].includes(view)) tableView.refresh();
+}
+
 function wirePanels() {
   const panels = {
     'btn-filter': document.getElementById('sidebar'),
@@ -225,7 +233,7 @@ function wireDesign() {
   urlState.apply(['theme', 'fontsize', 'font', 'veil']);
 }
 
-function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
+function wireDataSwitches(tableView, testsView, roleInfo, uiManager, dataLoader, roles) {
   const variantButton = document.getElementById('btn-variants');
   const symbolButton = document.getElementById('btn-symbols');
   let variantsLoaded = false;
@@ -245,7 +253,8 @@ function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
       variantButton.classList.toggle('active', next);
       variantButton.title = `Variant aware: ${next ? 'on' : 'off'}`;
       variantButton.disabled = false;
-      tableView.refresh();
+      testsView.variantAware = next;
+      redraw(tableView, testsView);
     });
   };
 
@@ -259,7 +268,7 @@ function wireDataSwitches(tableView, roleInfo, uiManager, dataLoader, roles) {
         : 'Show role names as text';
       symbolButton.classList.toggle('active', next);
       symbolButton.disabled = false;
-      tableView.refresh();
+      redraw(tableView, testsView);
     });
   };
 
@@ -290,15 +299,16 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       roleInfo
     );
     const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'));
+    const cardHost = new RoleCardHost(roleInfo);
     const testsView = new TestsView(
-      tableView.tables, dataLoader, roleInfo, document.getElementById('tables')
+      tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables')
     );
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
     );
     const switches = wireDataSwitches(
-      tableView, roleInfo, uiManager, dataLoader, metaGraph.roles
+      tableView, testsView, roleInfo, uiManager, dataLoader, metaGraph.roles
     );
 
     for (const id of ['facet-author', 'facet-lifecycle', 'facet-mode']) {
@@ -308,12 +318,10 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
         testsView.setFilters(filters);
         // Dispatch per view: refreshing the tables unconditionally would
         // replace whatever the forks or tests view had drawn.
-        if (currentView() === 'tests') testsView.show();
-        else if (!['graph', 'forks'].includes(currentView())) tableView.refresh();
+        redraw(tableView, testsView);
       });
     }
 
-    const cardHost = new RoleCardHost(roleInfo);
     cardHost.bind(document.getElementById('tables'));
     graphRenderer.on('nodeClicked', ({ node }) => {
       cardHost.pin(node.id, () => {
@@ -426,7 +434,7 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
 
     // Test hook for the Playwright suite.
     window.__mig = {
-      metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
+      metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree, testsView,
       graph: graphRenderer.graph,
     };
   })

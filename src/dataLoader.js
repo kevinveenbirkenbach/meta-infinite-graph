@@ -66,12 +66,30 @@ class DataLoader {
     });
   }
 
-  // Never recompute this order here: without INFINITO_DISCOVERY_SEED its last
-  // sort key is drawn per invocation, so a re-derivation is an order no run takes.
-  loadCiOrder() {
-    return fetch('/meta/ci-order.json')
-      .then(res => (res.ok ? res.json() : null))
-      .catch(() => null);
+  // The CI ranking is declared in the core checkout's default.env, mounted
+  // beside the roles tree. Absent, the view falls back to name order.
+  loadSettings() {
+    return fetch('/infinito.env')
+      .then(res => (res.ok ? res.text() : ''))
+      .catch(() => '');
+  }
+
+  // Presence of a templates/*compose*.yml.j2 is the signal, not an image key,
+  // so a stack built from source still counts.
+  loadStack(role) {
+    const hunt = (path, depth) => this.listDir(path).then(entries => {
+      if (entries.some(e => e.type === 'file' && /compose.*\.yml\.j2$/.test(e.name))) return true;
+      if (depth === 0) return false;
+      const dirs = entries.filter(e => e.type === 'directory');
+      return Promise.all(dirs.map(dir => hunt(`${path}/${dir.name}`, depth - 1)))
+        .then(found => found.some(Boolean));
+    });
+    return hunt(`${role}/templates`, 2);
+  }
+
+  loadStackAll(roles, limit = 12) {
+    return this._pool(roles, role => this.loadStack(role).then(stack => [role, stack]), limit)
+      .then(Object.fromEntries);
   }
 
   loadPlaywrightAll(roles, limit = 8) {
