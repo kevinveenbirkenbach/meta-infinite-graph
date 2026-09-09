@@ -12,7 +12,9 @@ else
 fi
 
 # Widening this path list turns the instance into an open GitHub proxy that
-# spends the server token on a stranger's calls.
+# spends the server token on a stranger's calls. The /repositories/<id> form is
+# not a second surface: it is the shape GitHub's own Link header uses for the
+# next page, so without it every paginated answer stops at page one.
 cat > "$CONF" <<CONFIG
   location = /gh-config.json {
     default_type application/json;
@@ -20,7 +22,7 @@ cat > "$CONF" <<CONFIG
     return 200 '{"proxy":${PROXY}}';
   }
 
-  location ~ "^/gh/(repos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(/(forks|branches|tags))?)\$" {
+  location ~ "^/gh/((repos/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+|repositories/[0-9]+)(/(forks|branches|tags|commits))?)\$" {
     resolver 127.0.0.11 1.1.1.1 valid=300s ipv6=off;
     set \$mig_upstream https://api.github.com/\$1\$is_args\$args;
     proxy_pass \$mig_upstream;

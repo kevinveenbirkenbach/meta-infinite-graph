@@ -298,8 +298,8 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
       document.getElementById('tables'),
       roleInfo
     );
-    const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'));
     const cardHost = new RoleCardHost(roleInfo);
+    const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'), cardHost);
     const testsView = new TestsView(
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables')
     );
@@ -380,6 +380,10 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
         if (metaGraph.roles.includes(value)) sel.value = value;
       }, ranked[0])
       .register('sort', () => testsView.sort, value => testsView.setSort(value), 'name')
+      .register('branches', () => String(forkTree.branches), value => {
+        forkTree.branches = value === 'true';
+        document.getElementById('design-branches').checked = forkTree.branches;
+      }, 'true')
       .register('kind', () => testsView.kind, value => testsView.setKind(value), 'playwright')
       .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
       .register('repo', () => forkTree.root, value => {
@@ -425,6 +429,10 @@ Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()])
         urlState.capture();
       });
     }
+    const branches = document.getElementById('design-branches');
+    branches.addEventListener('change', () => {
+      forkTree.setBranches(branches.checked).then(() => urlState.capture());
+    });
     wireForks(forkTree, cardHost);
     Promise.all(pending).then(() => {
       wireViewMode(tableView, forkTree, testsView);

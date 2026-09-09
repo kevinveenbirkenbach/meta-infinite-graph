@@ -81,6 +81,17 @@
       <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-primary w-100 mb-3"
               title="Show role names as text">🔤 Text</button>
 
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="design-branches" checked>
+        <label class="form-check-label" for="design-branches">
+          Branch lines in the fork plot
+        </label>
+        <div class="form-text">
+          One request per repository. Turn it off to spend the hourly budget on
+          the fork network alone.
+        </div>
+      </div>
+
       <label class="form-label mb-1" for="design-opacity">
         Background transparency <span id="design-opacity-value">5</span>%
       </label>
@@ -263,6 +274,8 @@
   <!-- App files -->
   <script src="urlState.js"></script>
   <script src="githubApi.js"></script>
+  <script src="forkGraph.js"></script>
+  <script src="forkPlot.js"></script>
   <script src="forkTree.js"></script>
   <script src="ciOrder.js"></script>
   <script src="playwrightMatrix.js"></script>

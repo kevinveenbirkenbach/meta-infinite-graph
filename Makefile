@@ -76,14 +76,17 @@ nginx-probe: image
 		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx & sleep 2; \
 		 echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
 		 echo "unlisted /gh/user: $$(wget -S -qO- http://127.0.0.1/gh/user 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
-		 echo "listed /gh/repos/o/r: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"'
+		 echo "listed /gh/repos/o/r: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
+		 for ref in forks branches tags commits; do \
+		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
+		 done'
 
 gh-status:
 	@docker compose -f $(COMPOSE_FILE) exec -T $(SERVICE) sh -c \
 		'echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
 		 grep -q "Bearer ." /etc/nginx/mig-github.conf \
 		   && echo "token in nginx: yes" || echo "token in nginx: NO"; \
-		 for ref in forks branches tags; do \
+		 for ref in forks branches tags commits; do \
 		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 done'
 

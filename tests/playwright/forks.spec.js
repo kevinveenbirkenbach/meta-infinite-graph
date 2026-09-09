@@ -30,6 +30,22 @@ const FORKS = [
 
 const HOSTILE ='<img src=x onerror="window.__pwned=1">';
 
+// A trunk of three with two merged side commits. The second side is older than
+// the first one's whole life, so the two never overlap in time and the graph
+// has to put them in the SAME column instead of opening a second one.
+const COMMITS = [
+  { sha: 'aaa1', parents: [{ sha: 'aaa2' }, { sha: 'bbb1' }],
+    commit: { message: 'Merge one', committer: { date: '2026-09-03T00:00:00Z' } } },
+  { sha: 'bbb1', parents: [{ sha: 'aaa3' }],
+    commit: { message: 'side one', committer: { date: '2026-09-02T12:00:00Z' } } },
+  { sha: 'aaa2', parents: [{ sha: 'aaa3' }, { sha: 'ccc1' }],
+    commit: { message: 'Merge two', committer: { date: '2026-09-01T00:00:00Z' } } },
+  { sha: 'ccc1', parents: [{ sha: 'aaa3' }],
+    commit: { message: 'side two', committer: { date: '2026-08-31T00:00:00Z' } } },
+  { sha: 'aaa3', parents: [],
+    commit: { message: 'root commit', committer: { date: '2026-08-30T00:00:00Z' } } },
+];
+
 function stub(page, counter) {
   return page.route('https://api.github.com/**', route => {
     const path = new URL(route.request().url()).pathname;
@@ -39,6 +55,7 @@ function stub(page, counter) {
       if (path === '/repos/infinito-nexus/core/forks') return FORKS;
       if (path.endsWith('/branches')) return [{ name: 'main' }, { name: HOSTILE }];
       if (path.endsWith('/tags')) return [{ name: 'v13.0.0' }, { name: 'v11.6.0' }];
+      if (path.endsWith('/commits')) return COMMITS;
       return [];
     })();
     route.fulfill({
@@ -78,18 +95,25 @@ test('the fork tree shows the root and its forks', async ({ page }) => {
   await expect(page.locator('.table-note')).toContainText('2 direct forks');
   await expect(page.locator('.table-note')).toContainText('requests left this hour');
 
-  expect(calls).toEqual(['/repos/infinito-nexus/core', '/repos/infinito-nexus/core/forks']);
+  expect(calls.slice(0, 2), 'the listings come first').toEqual(
+    ['/repos/infinito-nexus/core', '/repos/infinito-nexus/core/forks']
+  );
+  await expect
+    .poll(() => calls.filter(path => path.endsWith('/commits')).length)
+    .toBe(3);
 });
 
 test('branches and tags load only when a node is opened', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
   await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
-  expect(calls.length).toBe(2);
+  // Two listings plus one history per repository, because the branch lines are
+  // on by default; the refs themselves still wait for a node to be opened.
+  await expect.poll(() => calls.length).toBe(5);
 
   await page.locator('.fork-toggle').first().click();
-  await expect.poll(() => calls.length).toBe(4);
-  expect(calls.slice(2).sort()).toEqual([
+  await expect.poll(() => calls.length).toBe(7);
+  expect(calls.slice(5).sort(), 'only the refs are new; the history is cached').toEqual([
     '/repos/infinito-nexus/core/branches',
     '/repos/infinito-nexus/core/tags',
   ]);
@@ -103,11 +127,262 @@ test('branches and tags load only when a node is opened', async ({ page }) => {
   await expect(body).toContainText('v13.0.0');
 });
 
+test('the plot draws a life line per repository and an edge per fork', async ({ page }) => {
+  const calls = [];
+  await openForks(page, calls);
+  await expect(page.locator('svg.fork-plot')).toBeVisible();
+
+  const shape = await page.evaluate(() => ({
+    lifes: document.querySelectorAll('svg.fork-plot .fork-life').length,
+    edges: document.querySelectorAll('svg.fork-plot .fork-edge').length,
+    labels: [...document.querySelectorAll('svg.fork-plot .fork-label title')].map(t => t.textContent),
+    commits: document.querySelectorAll('svg.fork-plot .fork-commit').length,
+  }));
+
+  expect(shape.lifes, 'the root and both forks').toBe(3);
+  expect(shape.edges, 'one edge per fork').toBe(2);
+  expect(shape.labels).toEqual(['infinito-nexus/core', 'someone/core', 'other/core-fork']);
+  expect(shape.commits, 'no history is fetched until a repository is opened').toBe(0);
+});
+
+test('the commit lanes carry the merges of every repository', async ({ page }) => {
+  const calls = [];
+  await openForks(page, calls);
+  await expect(page.locator('svg.fork-plot')).toBeVisible();
+  await expect
+    .poll(() => page.locator('svg.fork-plot .fork-commit').count(), { timeout: 30000 })
+    .toBe(15);
+
+  const drawn = await page.evaluate(() => ({
+    merges: document.querySelectorAll('svg.fork-plot .fork-commit.merge').length,
+    mergeEdges: document.querySelectorAll('svg.fork-plot .fork-merge').length,
+    lanes: document.querySelectorAll('svg.fork-plot .fork-lane').length,
+  }));
+
+  // The stub answers every repository with the same five commits, so each of
+  // the three carries two merges and shares one side column with its trunk.
+  expect(drawn.merges, 'two of five commits carry a second parent').toBe(6);
+  expect(drawn.mergeEdges, 'each merge joins a side lane into the trunk').toBe(6);
+  expect(drawn.lanes, 'both side branches share one column, so trunk plus one').toBe(6);
+  expect(calls.filter(path => path.endsWith('/commits')).length,
+    'one call per repository, not one per branch').toBe(3);
+});
+
+test('branch lines are drawn by default and the design panel turns them off',
+  async ({ page }) => {
+    const calls = [];
+    await openForks(page, calls);
+    await expect(page.locator('svg.fork-plot')).toBeVisible();
+
+    // Default on: the lanes appear without opening a single repository. The
+    // walk is serial, so the count has to settle before it is read.
+    await expect
+      .poll(() => calls.filter(path => path.endsWith('/commits')).length, { timeout: 30000 })
+      .toBe(3);
+    const perRepo = calls.filter(path => path.endsWith('/commits'));
+    expect(await page.locator('svg.fork-plot .fork-commit').count()).toBeGreaterThan(0);
+
+    await page.locator('#btn-design').click();
+    await page.locator('#design-branches').uncheck();
+    await expect.poll(() => page.locator('svg.fork-plot .fork-commit').count()).toBe(0);
+    expect(await page.locator('svg.fork-plot .fork-life').count(),
+      'the fork network stays, only its commit lanes go').toBe(3);
+    await expect.poll(() => page.evaluate(() => window.location.search))
+      .toContain('branches=false');
+
+    await page.locator('#design-branches').check();
+    await expect
+      .poll(() => page.locator('svg.fork-plot .fork-commit').count(), { timeout: 30000 })
+      .toBeGreaterThan(0);
+    expect(calls.filter(path => path.endsWith('/commits')).length,
+      'the cache answers the second time, so nothing is spent again').toBe(perRepo.length);
+  });
+
+test('a deep link into the fork view still waits for the proxy', async ({ page }) => {
+  const paths = [];
+  // Delayed on purpose: the answer has to arrive after the view would other-
+  // wise have started fetching, which is what used to send it past the proxy.
+  await page.route('**/gh-config.json', async route => {
+    await new Promise(resolve => setTimeout(resolve, 500));
+    route.fulfill({
+      status: 200, contentType: 'application/json', body: JSON.stringify({ proxy: true }),
+    });
+  });
+  await page.route('**/gh/**', route => {
+    const url = new URL(route.request().url());
+    paths.push(url.pathname);
+    const body = url.pathname.endsWith('/forks') ? FORKS
+      : url.pathname.endsWith('/commits') ? COMMITS : ROOT;
+    route.fulfill({
+      status: 200, contentType: 'application/json',
+      headers: { 'x-ratelimit-limit': '5000', 'x-ratelimit-remaining': '4998' },
+      body: JSON.stringify(body),
+    });
+  });
+  const direct = [];
+  await page.route('https://api.github.com/**', route => {
+    direct.push(new URL(route.request().url()).pathname);
+    route.abort();
+  });
+
+  await page.goto('/?view=forks');
+  await expect
+    .poll(() => page.locator('svg.fork-plot .fork-life').count(), { timeout: 60000 })
+    .toBe(3);
+
+  expect(direct, 'not one call may bypass the proxy').toEqual([]);
+  expect(paths.length, 'every call went through the proxy').toBeGreaterThan(2);
+
+  // The note has to name the path taken, or a proxied page reporting the
+  // unauthenticated wording is indistinguishable from a broken proxy.
+  await expect(page.locator('.table-note')).toContainText("through the server's token");
+  await expect(page.locator('.table-note')).toContainText('4998 of 5000');
+});
+
+test('a repository without a default branch asks for no ref at all', async ({ page }) => {
+  const paths = [];
+  await page.route('https://api.github.com/**', route => {
+    const url = new URL(route.request().url());
+    paths.push(url.pathname + url.search);
+    const body = url.pathname === '/repos/infinito-nexus/core' ? { ...ROOT, default_branch: undefined }
+      : url.pathname.endsWith('/forks') ? []
+        : url.pathname.endsWith('/commits') ? COMMITS : [];
+    route.fulfill({
+      status: 200, contentType: 'application/json',
+      headers: {
+        'access-control-allow-origin': '*',
+        'access-control-expose-headers': 'X-RateLimit-Limit, X-RateLimit-Remaining',
+        'x-ratelimit-limit': '60', 'x-ratelimit-remaining': '55',
+      },
+      body: JSON.stringify(body),
+    });
+  });
+
+  await page.goto('/');
+  await expect
+    .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
+    .toBe(true);
+  await page.evaluate(() => window.__mig.forkTree.api.forget());
+  await page.locator('label[for="view-forks"]').click();
+  await expect
+    .poll(() => page.locator('svg.fork-plot .fork-commit').count(), { timeout: 30000 })
+    .toBeGreaterThan(0);
+
+  const asked = paths.filter(path => path.includes('/commits'));
+  expect(asked, 'exactly one history call').toHaveLength(1);
+  expect(asked[0], 'no sha=undefined may reach GitHub').not.toContain('sha=');
+});
+
+test('a commit history stops at one page even when GitHub offers more',
+  async ({ page }) => {
+    const paths = [];
+    await page.route('https://api.github.com/**', route => {
+      const url = new URL(route.request().url());
+      paths.push(url.pathname + url.search);
+      const commits = url.pathname.endsWith('/commits');
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        headers: {
+          'access-control-allow-origin': '*',
+          'access-control-expose-headers': 'Link, X-RateLimit-Limit, X-RateLimit-Remaining',
+          'x-ratelimit-limit': '60',
+          'x-ratelimit-remaining': '55',
+          // GitHub answers the next page under the numeric id, not the name.
+          ...(commits ? {
+            link: '<https://api.github.com/repositories/42/commits?per_page=100&page=2>; rel="next"',
+          } : {}),
+        },
+        body: JSON.stringify(
+          url.pathname === '/repos/infinito-nexus/core' ? ROOT
+            : url.pathname.endsWith('/forks') ? []
+              : commits ? COMMITS : []
+        ),
+      });
+    });
+
+    await page.goto('/');
+    await expect
+      .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
+      .toBe(true);
+    await page.evaluate(() => window.__mig.forkTree.api.forget());
+    await page.locator('label[for="view-forks"]').click();
+    await expect
+      .poll(() => page.locator('svg.fork-plot .fork-commit').count(), { timeout: 30000 })
+      .toBe(COMMITS.length);
+
+    // The plot draws one window, so walking the whole history would cost dozens
+    // of requests for commits it never shows.
+    expect(paths.filter(path => path.includes('page=2')),
+      'rel=next is offered and must be declined').toEqual([]);
+    expect(paths.filter(path => path.includes('/commits'))).toHaveLength(1);
+  });
+
+test('a refused history says so instead of drawing an empty plot', async ({ page }) => {
+  const calls = [];
+  await page.route('https://api.github.com/**', route => {
+    const path = new URL(route.request().url()).pathname;
+    calls.push(path);
+    const headers = {
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'X-RateLimit-Limit, X-RateLimit-Remaining',
+      'x-ratelimit-limit': '60',
+      'x-ratelimit-remaining': path.endsWith('/commits') ? '0' : '58',
+    };
+    if (path.endsWith('/commits')) {
+      return route.fulfill({
+        status: 403, contentType: 'application/json', headers,
+        body: JSON.stringify({ message: 'API rate limit exceeded' }),
+      });
+    }
+    const body = path === '/repos/infinito-nexus/core' ? ROOT
+      : path.endsWith('/forks') ? FORKS : [];
+    return route.fulfill({
+      status: 200, contentType: 'application/json', headers, body: JSON.stringify(body),
+    });
+  });
+
+  await page.goto('/');
+  await expect
+    .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
+    .toBe(true);
+  await page.evaluate(() => window.__mig.forkTree.api.forget());
+  await page.locator('label[for="view-forks"]').click();
+
+  await expect(page.locator('.fork-plot-host .fork-error'))
+    .toContainText('out of requests for this hour');
+  await expect(page.locator('.fork-plot-host .fork-error'))
+    .toContainText('fork network above is complete');
+
+  expect(await page.locator('svg.fork-plot .fork-life').count(),
+    'the network still draws from the listings alone').toBe(3);
+  expect(await page.locator('svg.fork-plot .fork-commit').count()).toBe(0);
+  expect(calls.filter(path => path.endsWith('/commits')).length,
+    'the walk stops at the first refusal rather than spending the rest').toBe(1);
+});
+
+test('hovering a commit opens a card naming it', async ({ page }) => {
+  const calls = [];
+  await openForks(page, calls);
+  await expect
+    .poll(() => page.locator('svg.fork-plot .fork-commit').count(), { timeout: 30000 })
+    .toBeGreaterThan(0);
+
+  // Row groups are drawn in fork order, so the first one is the root.
+  await page.locator('svg.fork-plot .fork-row').first()
+    .locator('.fork-commit').last().hover();
+  const card = page.locator('.role-card-host .commit-card');
+  await expect(card).toBeVisible();
+  await expect(card, 'the card names the repository its dot belongs to')
+    .toContainText('infinito-nexus/core');
+  await expect(card).toContainText('Parents');
+});
+
 test('a hostile branch name is rendered as text, not as markup', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
   await page.locator('.fork-toggle').first().click();
-  await expect.poll(() => calls.length).toBe(4);
+  await expect.poll(() => calls.length).toBe(7);
 
   const body = page.locator('.fork-body').first();
   await expect(body).toContainText(HOSTILE);
@@ -119,7 +394,7 @@ test('the cache spares the quota on a second visit', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
   await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
-  expect(calls.length).toBe(2);
+  await expect.poll(() => calls.length).toBe(5);
 
   await page.locator('label[for="view-graph"]').click();
   await page.locator('label[for="view-forks"]').click();
@@ -131,7 +406,7 @@ test('the cache spares the quota on a second visit', async ({ page }) => {
     .toBe(true);
   await page.locator('label[for="view-forks"]').click();
   await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
-  expect(calls.length, 'a reload must not spend a single request').toBe(2);
+  expect(calls.length, 'a reload must not spend a single request').toBe(5);
 });
 
 test('an exhausted quota says so instead of failing silently', async ({ page }) => {
@@ -217,7 +492,8 @@ test('a server token hides the field and routes through the proxy', async ({ pag
   await page.route('**/gh/**', route => {
     const url = new URL(route.request().url());
     paths.push(url.pathname);
-    const body = url.pathname.endsWith('/forks') ? FORKS : ROOT;
+    const body = url.pathname.endsWith('/forks') ? FORKS
+      : url.pathname.endsWith('/commits') ? COMMITS : ROOT;
     route.fulfill({
       status: 200,
       contentType: 'application/json',
@@ -242,7 +518,12 @@ test('a server token hides the field and routes through the proxy', async ({ pag
   await expect(page.locator('.token-field')).toBeHidden();
   await expect(page.locator('#fork-token-owned')).toBeVisible();
 
-  expect(paths).toEqual(['/gh/repos/infinito-nexus/core', '/gh/repos/infinito-nexus/core/forks']);
+  expect(paths.slice(0, 2)).toEqual(
+    ['/gh/repos/infinito-nexus/core', '/gh/repos/infinito-nexus/core/forks']
+  );
+  await expect
+    .poll(() => paths.filter(path => path.endsWith('/commits')).length)
+    .toBe(3);
   expect(await page.evaluate(() => window.__mig.forkTree.api.token),
     'a visitor token is dropped when the server holds one').toBe('');
   await expect(page.locator('.table-note')).toContainText('4998 of 5000');

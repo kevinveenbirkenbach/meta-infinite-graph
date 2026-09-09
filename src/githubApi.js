@@ -87,13 +87,17 @@ class GitHubApi {
 
   // Returns: the parsed body, or throws with .status set. A 403 or 429 carrying
   // x-ratelimit-remaining: 0 is the exhausted-quota case, not a permission one.
-  get(path) {
+  // Args:
+  //   paginate: false stops at the first page. A caller that only draws a
+  //     window must not walk the whole history: /commits on a busy repository
+  //     is thousands of commits and dozens of requests.
+  get(path, paginate = true) {
     const hit = this.cached(path);
     if (hit) return Promise.resolve(hit);
     if (this.memory.has(path)) return this.memory.get(path);
 
     const pending = this.detectProxy()
-      .then(() => this._walk(path))
+      .then(() => this._walk(path, null, paginate))
       .then(data => {
         this._store()[path] = { at: Date.now(), data };
         this._persist();
@@ -109,7 +113,7 @@ class GitHubApi {
     return pending;
   }
 
-  _walk(path, collected = null) {
+  _walk(path, collected = null, paginate = true) {
     const headers = { Accept: 'application/vnd.github+json' };
     const token = this.proxied ? '' : this.token;
     if (token) headers.Authorization = `Bearer ${token}`;
@@ -127,7 +131,7 @@ class GitHubApi {
           error.exhausted = this.rate.remaining === 0;
           throw error;
         }
-        const next = GitHubApi.next(response.headers.get('link'));
+        const next = paginate ? GitHubApi.next(response.headers.get('link')) : null;
         return response.json().then(data => {
           if (!Array.isArray(data) || !next) return collected ? collected.concat(data) : data;
           return this._walk(next, (collected || []).concat(data));
@@ -145,6 +149,16 @@ class GitHubApi {
 
   branches(fullName) {
     return this.get(`/repos/${fullName}/branches?per_page=100`);
+  }
+
+  // One page is the whole drawable window: /commits walks the DAG, not just the
+  // branch's own line, so a single call already carries the merges to draw.
+  // Without a branch GitHub walks the repository's own default, which is the
+  // right answer; sending sha=undefined asks for a ref that cannot exist and
+  // earns a 404 that reads like a broken proxy.
+  commits(fullName, branch) {
+    const ref = branch ? `sha=${encodeURIComponent(branch)}&` : '';
+    return this.get(`/repos/${fullName}/commits?${ref}per_page=100`, false);
   }
 
   tags(fullName) {

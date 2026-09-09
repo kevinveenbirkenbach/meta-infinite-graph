@@ -1,9 +1,11 @@
 class ForkTree {
-  constructor(api, container) {
+  constructor(api, container, cards) {
     this.api = api;
     this.container = container;
+    this.cards = cards;
     this.root = 'infinito-nexus/core';
     this.loaded = null;
+    this.branches = true;
   }
 
   setRoot(fullName) {
@@ -136,6 +138,9 @@ class ForkTree {
     section.appendChild(ForkTree._text('h2', 'Fork network'));
     this.note = ForkTree._text('p', `Reading ${this.root} …`, 'table-note');
     section.appendChild(this.note);
+    this.plot = document.createElement('div');
+    this.plot.className = 'fork-plot-host';
+    section.appendChild(this.plot);
     this.list = document.createElement('ul');
     this.list.className = 'fork-tree';
     section.appendChild(this.list);
@@ -150,9 +155,79 @@ class ForkTree {
         const children = document.createElement('ul');
         for (const fork of forks) children.appendChild(this._node(fork, false));
         if (forks.length) this.list.lastChild.appendChild(children);
+        this.network = [
+          { ...repo, parent: null },
+          ...forks.map(fork => ({ ...fork, parent: repo.full_name })),
+        ];
+        this.histories = {};
+        this._plot();
         this._describe(repo, forks);
+        return this._allHistories();
       })
       .catch(error => this._fail(error));
+  }
+
+  // Fork points come free with the fork list, so this draws before any history.
+  _plot() {
+    if (!this.network) return;
+    const graph = new ForkGraph(this.network, this.histories);
+    const drawn = ForkPlot.draw(graph, this.plot.clientWidth || 900, (commit, repo, event) => {
+      if (!commit) return this.cards.release(ForkTree.COMMIT);
+      this._point = { x: event.clientX, y: event.clientY };
+      this.cards.show(ForkTree.COMMIT, this._point, () => ForkTree.commitCard(commit, repo));
+    });
+    this.plot.innerHTML = '';
+    if (!drawn) return;
+    this.plot.appendChild(drawn.svg);
+    const span = graph.span();
+    if (this.refused) {
+      this.plot.appendChild(ForkTree._text('p', ForkTree._refusal(this.refused), 'fork-error'));
+    }
+    this.plot.appendChild(ForkTree._text(
+      'p',
+      span.zoomed
+        ? `Axis: ${ForkTree._date(new Date(span.from).toISOString())} to `
+          + `${ForkTree._date(new Date(span.to).toISOString())}, the window of the loaded `
+          + 'commits. Fork lines older than it are clamped to the left edge.'
+        : `Axis: ${ForkTree._date(new Date(span.from).toISOString())} to `
+          + `${ForkTree._date(new Date(span.to).toISOString())}. Open a repository to draw its `
+          + 'commit lanes and merges; the axis then narrows to that history.',
+      'fork-axis-note'
+    ));
+  }
+
+  static COMMIT = '#fork-commit';
+
+  // The plot silently losing its lanes reads as "this repository has no
+  // branches", so a refusal has to say which one it was and what it costs.
+  static _refusal(error) {
+    if (error.status === 404) {
+      return `No branch lines: ${error.message}. A 404 here is either a branch that does `
+        + 'not exist or a path the server proxy does not carry; the fork network above is '
+        + 'complete either way.';
+    }
+    return error.exhausted
+      ? 'GitHub is out of requests for this hour, so no branch lines could be drawn. '
+        + 'The fork network above is complete. Add a token in the filter panel, or turn '
+        + 'the branch lines off in the design panel to spend the budget on the network alone.'
+      : `GitHub answered ${error.status || 'with an error'} for the commit histories, `
+        + 'so no branch lines could be drawn. The fork network above is complete.';
+  }
+
+  static commitCard(commit, repo) {
+    const card = document.createElement('div');
+    card.className = 'role-card commit-card';
+    card.appendChild(ForkTree._text('div', `${commit.sha.slice(0, 8)} in ${repo.id}`, 'role-card-title'));
+    card.appendChild(ForkTree._text('p', commit.message, 'role-card-desc'));
+    const facts = document.createElement('dl');
+    facts.className = 'role-card-facts';
+    facts.append(ForkTree._text('dt', 'Date'), ForkTree._text('dd', ForkTree._date(commit.date)));
+    facts.append(
+      ForkTree._text('dt', 'Parents'),
+      ForkTree._text('dd', (commit.parents || []).map(sha => sha.slice(0, 8)).join(', ') || 'root')
+    );
+    card.appendChild(facts);
+    return card;
   }
 
   _describe(repo, forks) {
@@ -162,7 +237,7 @@ class ForkTree {
       deeper
         ? `${deeper} of them are forked again; open one to walk deeper`
         : 'none of them are forked again, so this is the whole network',
-      'Branches and tags load when a repository is opened.',
+      'Branches, tags and the commit lanes load when a repository is opened.',
     ];
     this.note.textContent = `${parts.join('. ')} ${this._quota()}`;
   }
@@ -241,6 +316,7 @@ class ForkTree {
       ['Branches', this.api.branches(repo.full_name), b => b.name],
       ['Versions', this.api.tags(repo.full_name), t => t.name],
     ];
+    this._history(repo);
     Promise.all(wanted.map(([, promise]) => promise.catch(error => error)))
       .then(results => {
         body.textContent = '';
@@ -260,6 +336,55 @@ class ForkTree {
         });
         if (this.note) this.note.textContent = this.note.textContent.replace(/\d+ of \d+ requests.*$/, this._quota());
         if (repo.forks_count) this._deeper(body, repo);
+      });
+  }
+
+  // Args:
+  //   next: whether the plot should carry branch lines.
+  // Returns: a promise for the redraw, so a caller can wait for the fetches.
+  setBranches(next) {
+    this.branches = next;
+    if (!this.network) return Promise.resolve();
+    if (!next) {
+      this.refused = null;
+      this.histories = {};
+      this._plot();
+      return Promise.resolve();
+    }
+    return this._allHistories();
+  }
+
+  // Serial, and stopped at the first refusal: each repository costs one
+  // request, so a network of thirty forks would otherwise empty an
+  // unauthenticated hour in one burst before the first line is drawn.
+  _allHistories() {
+    if (!this.branches || !this.network) return Promise.resolve();
+    this.refused = null;
+    return this.network.reduce(
+      (chain, repo) => chain.then(() => (this.refused ? null : this._history(repo))),
+      Promise.resolve()
+    ).then(() => this._plot());
+  }
+
+  // One call per repository, not per branch; see GitHubApi.commits.
+  _history(repo) {
+    if (!this.branches || !this.histories || repo.full_name in this.histories) {
+      return Promise.resolve();
+    }
+    this.histories[repo.full_name] = [];
+    return this.api.commits(repo.full_name, repo.default_branch)
+      .then(commits => {
+        this.histories[repo.full_name] = commits.map(entry => ({
+          sha: entry.sha,
+          parents: (entry.parents || []).map(parent => parent.sha),
+          date: entry.commit.committer.date,
+          message: entry.commit.message.split('\n')[0],
+        }));
+        this._plot();
+      })
+      .catch(error => {
+        delete this.histories[repo.full_name];
+        this.refused = error;
       });
   }
 

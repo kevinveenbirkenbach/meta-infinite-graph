@@ -170,6 +170,86 @@ td.role-list span {
   margin-right: 0.35em;
 }
 
+.fork-axis-note {
+  font-size: 0.78rem;
+  opacity: 0.65;
+  margin: 4px 0 0;
+}
+
+.fork-plot-host {
+  overflow: auto;
+  max-height: 45vh;
+  margin-bottom: 10px;
+}
+
+svg.fork-plot {
+  display: block;
+}
+
+svg.fork-plot .fork-axis line {
+  stroke: var(--bs-border-color);
+  stroke-width: 1;
+}
+
+svg.fork-plot .fork-axis text {
+  fill: var(--bs-body-color);
+  opacity: 0.55;
+  font-size: 9px;
+}
+
+svg.fork-plot .fork-label {
+  fill: var(--bs-body-color);
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+svg.fork-plot .fork-label.root {
+  font-weight: 600;
+  opacity: 1;
+}
+
+svg.fork-plot .fork-life {
+  stroke: var(--bs-primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+svg.fork-plot .fork-birth {
+  fill: var(--bs-primary);
+}
+
+svg.fork-plot .fork-edge {
+  stroke: var(--bs-primary);
+  stroke-width: 1;
+  fill: none;
+  opacity: 0.45;
+  stroke-dasharray: 2 2;
+}
+
+svg.fork-plot .fork-lane {
+  stroke: var(--bs-body-color);
+  stroke-width: 1;
+  opacity: 0.35;
+}
+
+svg.fork-plot .fork-merge {
+  stroke: var(--bs-body-color);
+  stroke-width: 1;
+  fill: none;
+  opacity: 0.35;
+}
+
+svg.fork-plot .fork-commit {
+  fill: var(--bs-body-color);
+  opacity: 0.6;
+  cursor: help;
+}
+
+svg.fork-plot .fork-commit.merge {
+  fill: var(--bs-primary);
+  opacity: 1;
+}
+
 ul.fork-tree,
 ul.fork-tree ul {
   list-style: none;
