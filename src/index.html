@@ -29,8 +29,6 @@
           <label class="btn btn-outline-light" for="view-graph">Cosmos</label>
           <input type="radio" class="btn-check" name="view" id="view-bond" value="bond">
           <label class="btn btn-outline-light" for="view-bond">Bond</label>
-          <input type="radio" class="btn-check" name="view" id="view-ressources" value="ressources">
-          <label class="btn btn-outline-light" for="view-ressources">Ressources</label>
           <input type="radio" class="btn-check" name="view" id="view-complexity" value="complexity">
           <label class="btn btn-outline-light" for="view-complexity">Complexity</label>
           <input type="radio" class="btn-check" name="view" id="view-forks" value="forks">
@@ -86,6 +84,13 @@
       <label class="form-label mb-1">Role names</label>
       <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-primary w-100 mb-3"
               title="Show role names as text">🔤 Text</button>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="design-resources" checked>
+        <label class="form-check-label" for="design-resources">
+          Ressources in the role card
+        </label>
+      </div>
 
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="design-tags">

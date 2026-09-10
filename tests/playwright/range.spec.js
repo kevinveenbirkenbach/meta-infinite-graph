@@ -140,7 +140,7 @@ test('a date without the current schema greys the views that need it',
     expect(await warning.getAttribute('title'), 'the tooltip names the file')
       .toContain('meta/categories.yml');
 
-    for (const view of ['graph', 'bond', 'ressources', 'complexity', 'tests']) {
+    for (const view of ['graph', 'bond', 'complexity', 'tests']) {
       expect(await page.locator(`#view-${view}`).isDisabled(), `${view} is greyed`).toBe(true);
       expect(await page.locator(`label[for="view-${view}"]`).getAttribute('title'))
         .toContain('does not exist at the chosen date');

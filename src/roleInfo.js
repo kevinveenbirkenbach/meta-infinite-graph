@@ -1,11 +1,83 @@
 class RoleInfo {
-  constructor(dataLoader, metaGraph) {
+  constructor(dataLoader, metaGraph, tables) {
     this.loader = dataLoader;
     this.graph = metaGraph;
+    this.tables = tables;
     this.info = {};
     this.brands = {};
     this.symbols = false;
+    this.resources = true;
     this._promise = null;
+  }
+
+  static RESOURCES = [
+    ['CPU', 'cpus_float', value => TableView._fmtNumber(value)],
+    ['Mem res.', 'mem_reservation_bytes', value => TableView._fmtBytes(value)],
+    ['Mem limit', 'mem_limit_bytes', value => TableView._fmtBytes(value)],
+    ['Storage', 'min_storage_bytes', value => TableView._fmtBytes(value)],
+    ['PIDs', 'pids_limit_int', value => TableView._fmtNumber(value)],
+  ];
+
+  _resources(role) {
+    const { totals, rows } = this.tables.resourcesOf(role);
+    if (!rows.length) return null;
+    const table = document.createElement('table');
+    table.className = 'role-card-resources';
+
+    const head = table.createTHead().insertRow();
+    head.appendChild(Object.assign(document.createElement('th'), { textContent: 'Ressources' }));
+    for (const [name] of RoleInfo.RESOURCES) {
+      head.appendChild(Object.assign(document.createElement('th'), {
+        className: 'num', textContent: name,
+      }));
+    }
+
+    const total = table.createTBody();
+    total.className = 'res-total';
+    const toggle = total.insertRow();
+    toggle.tabIndex = 0;
+    toggle.setAttribute('role', 'button');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.title = 'mem, storage and pids are summed over the services, cpu is the maximum. '
+      + 'Click to break them down per service.';
+    const label = document.createElement('th');
+    label.textContent = `▸ ${rows.length} ${rows.length === 1 ? 'service' : 'services'}`;
+    toggle.appendChild(label);
+    for (const [, key, format] of RoleInfo.RESOURCES) {
+      const cell = toggle.insertCell();
+      cell.className = 'num';
+      cell.dataset.metric = key;
+      cell.textContent = format(totals[key]);
+    }
+
+    const services = table.createTBody();
+    services.className = 'res-services';
+    services.hidden = true;
+    for (const row of rows) {
+      const line = services.insertRow();
+      const service = line.insertCell();
+      service.textContent = row.service;
+      service.title = row.role;
+      service.style.paddingLeft = `${(row.depth - 1) * 0.9 + 0.8}em`;
+      for (const [, key, format] of RoleInfo.RESOURCES) {
+        const cell = line.insertCell();
+        cell.className = 'num';
+        cell.textContent = format(row[key]);
+      }
+    }
+
+    const flip = () => {
+      services.hidden = !services.hidden;
+      toggle.setAttribute('aria-expanded', String(!services.hidden));
+      label.textContent = `${services.hidden ? '▸' : '▾'}${label.textContent.slice(1)}`;
+    };
+    toggle.addEventListener('click', flip);
+    toggle.addEventListener('keydown', event => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      flip();
+    });
+    return table;
   }
 
   load() {
@@ -148,7 +220,23 @@ class RoleInfo {
       }
       facts.append(term, definition);
     }
+    const totals = this.resources && this.tables ? this.tables.resourcesOf(role) : null;
+    if (totals && totals.rows.length) {
+      for (const [name, key, format] of RoleInfo.RESOURCES) {
+        const term = Object.assign(document.createElement('dt'), {
+          className: 'res-fact', textContent: name,
+        });
+        const definition = Object.assign(document.createElement('dd'), {
+          className: 'res-fact', textContent: format(totals.totals[key]),
+        });
+        definition.dataset.metric = key;
+        facts.append(term, definition);
+      }
+    }
     if (facts.childElementCount) card.appendChild(facts);
+
+    const resources = this.resources && this.tables ? this._resources(role) : null;
+    if (resources) card.appendChild(resources);
 
     const player = info.video ? RoleInfo.player(info.video) : null;
     if (player) card.appendChild(player);
@@ -215,6 +303,16 @@ class RoleCardHost {
     close.addEventListener('click', () => this.drop(role));
     element.appendChild(close);
 
+    if (!entry.build) {
+      const grow = document.createElement('button');
+      grow.type = 'button';
+      grow.className = 'role-card-grow';
+      grow.title = 'Maximize';
+      grow.textContent = '⤢';
+      grow.addEventListener('click', () => this.maximize(role));
+      element.appendChild(grow);
+    }
+
     element.addEventListener('mouseenter', () => this.hold(role));
     element.addEventListener('mouseleave', () => this.release(role));
     document.body.appendChild(element);
@@ -260,9 +358,23 @@ class RoleCardHost {
     if (entry.element) entry.element.classList.remove('fading');
   }
 
+  maximize(role) {
+    const entry = this.cards.get(role);
+    if (!entry || !entry.element) return;
+    entry.maximized = !entry.maximized;
+    entry.element.classList.toggle('maximized', entry.maximized);
+    const grow = entry.element.querySelector('.role-card-grow');
+    grow.textContent = entry.maximized ? '⤡' : '⤢';
+    grow.title = entry.maximized ? 'Restore' : 'Maximize';
+    if (entry.maximized) this.hold(role);
+    else this._place(entry);
+  }
+
+  // A maximized card covers the window, so the pointer leaving it means it left
+  // the page, not the card; letting that fade it would close it under the reader.
   release(role) {
     const entry = this.cards.get(role);
-    if (!entry || entry.pinned) return;
+    if (!entry || entry.pinned || entry.maximized) return;
     entry.released = true;
     if (!entry.element) return;
     clearTimeout(entry.hideTimer);

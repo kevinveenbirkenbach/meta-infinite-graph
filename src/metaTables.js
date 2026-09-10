@@ -398,19 +398,12 @@ class MetaTables {
     return count ? Array.from({ length: count }, (_, index) => index) : [null];
   }
 
-  resourceRows(variantAware = false) {
-    const out = [];
-    for (const role of Object.keys(this.applications).sort()) {
-      for (const variant of this._variantIndices(role, variantAware)) {
-        const applications = variant === null
-          ? this.applications
-          : { ...this.applications, [role]: { services: this.variantServices(role, variant) } };
-        const rows = [];
-        this._collectResources(role, applications, new Set(), rows, 1, new Set());
-        out.push({ role, variant, services: rows.length, ...MetaTables.aggregate(rows) });
-      }
-    }
-    return out;
+  // Returns: { totals, rows } for the role's base config, one row per service,
+  //   shared dependencies resolved recursively at depth 2 and deeper.
+  resourcesOf(role) {
+    const rows = [];
+    this._collectResources(role, this.applications, new Set(), rows, 1, new Set());
+    return { totals: MetaTables.aggregate(rows), rows };
   }
 
   _directDepRoles(services) {

@@ -40,7 +40,7 @@ function currentView() {
 
 // Filling these from the working copy would put today's numbers under a past
 // timestamp, so at a date that predates the schema they are greyed instead.
-const META_VIEWS = ['graph', 'bond', 'ressources', 'complexity', 'tests'];
+const META_VIEWS = ['graph', 'bond', 'complexity', 'tests'];
 
 function disableMetaViews(missing) {
   const why = `${missing.join(', ')} does not exist at the chosen date. This view reads `
@@ -352,12 +352,9 @@ gitRange.load()
   })
   .then(([metaByRole, categories]) => {
     const metaGraph = new MetaGraph(metaByRole);
-    const roleInfo = new RoleInfo(dataLoader, metaGraph);
-    const tableView = new TableView(
-      new MetaTables(metaByRole, categories),
-      document.getElementById('tables'),
-      roleInfo
-    );
+    const metaTables = new MetaTables(metaByRole, categories);
+    const roleInfo = new RoleInfo(dataLoader, metaGraph, metaTables);
+    const tableView = new TableView(metaTables, document.getElementById('tables'), roleInfo);
     const cardHost = new RoleCardHost(roleInfo);
     const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'), cardHost);
     forkTree.useMirror(gitRange);
@@ -451,6 +448,10 @@ gitRange.load()
         forkTree.branches = value === 'true';
         document.getElementById('design-branches').checked = forkTree.branches;
       }, 'true')
+      .register('resources', () => String(roleInfo.resources), value => {
+        roleInfo.resources = value === 'true';
+        document.getElementById('design-resources').checked = roleInfo.resources;
+      }, 'true')
       .register('tags', () => String(forkTree.tags), value => {
         forkTree.tags = value === 'true';
         document.getElementById('design-tags').checked = forkTree.tags;
@@ -500,6 +501,11 @@ gitRange.load()
         urlState.capture();
       });
     }
+    const resources = document.getElementById('design-resources');
+    resources.addEventListener('change', () => {
+      roleInfo.resources = resources.checked;
+      urlState.capture();
+    });
     for (const [id, apply] of [
       ['design-branches', next => forkTree.setBranches(next)],
       ['design-tags', next => forkTree.setTags(next)],

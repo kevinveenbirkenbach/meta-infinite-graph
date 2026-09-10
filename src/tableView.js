@@ -299,42 +299,6 @@ class TableView {
     return span;
   }
 
-  _buildRessources() {
-    const rows = this.tables.resourceRows(this.variantAware).filter(row => this._keeps(row.role));
-    const table = document.createElement('table');
-    table.className = 'table table-sm table-striped';
-    const headers = ['role', 'services', 'mem_reservation', 'mem_limit', 'min_storage', 'pids_limit', 'cpus'];
-    table.appendChild(TableView._headRow(this.variantAware ? ['variant', ...headers] : headers));
-    const tbody = document.createElement('tbody');
-    for (const row of rows) {
-      const tr = document.createElement('tr');
-      if (this.variantAware) {
-        tr.appendChild(TableView._cell(TableView._fmtVariant(row.variant), 'num'));
-      }
-      tr.append(
-        this._roleCell(row.role),
-        TableView._cell(String(row.services), 'num'),
-        TableView._cell(TableView._fmtBytes(row.mem_reservation_bytes), 'num'),
-        TableView._cell(TableView._fmtBytes(row.mem_limit_bytes), 'num'),
-        TableView._cell(TableView._fmtBytes(row.min_storage_bytes), 'num'),
-        TableView._cell(TableView._fmtNumber(row.pids_limit_int), 'num'),
-        TableView._cell(TableView._fmtNumber(row.cpus_float), 'num')
-      );
-      tbody.appendChild(tr);
-    }
-    table.appendChild(tbody);
-
-    const scope = this.variantAware
-      ? `${rows.length} rows, one per meta/variants.yml variant`
-      : `${rows.length} application roles, base config`;
-    return this._wrap(
-      'Resource footprint per role',
-      `${scope}, shared dependencies resolved recursively. mem and pids are summed, `
-      + 'cpus is the maximum.',
-      table
-    );
-  }
-
   _buildComplexity() {
     const rows = this.tables.complexityRows(this.variantAware)
       .filter(row => this._keeps(row.name))
