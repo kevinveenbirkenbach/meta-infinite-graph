@@ -4,7 +4,16 @@
 # Param: MIG_GIT_FORKS    "auto" to discover forks through the API, "off" for
 #                         the root alone, or a space separated owner/name list
 # Param: MIG_GITHUB_TOKEN used for the one fork listing call, and for cloning
+# Param: MIG_GIT_PORT     where mig-git.py listens and nginx proxies /git/ to
 set -eu
+
+cat > /etc/nginx/mig-git.conf <<CONFIG
+  location /git/ {
+    proxy_pass http://127.0.0.1:${MIG_GIT_PORT}/;
+    proxy_read_timeout 900s;
+    add_header Cache-Control "no-store";
+  }
+CONFIG
 
 ROOT="${MIG_GIT_ROOT:-infinito-nexus/core}"
 HOME_DIR="${MIG_GIT_HOME:-/var/lib/mig}"

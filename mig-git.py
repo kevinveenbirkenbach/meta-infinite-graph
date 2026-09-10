@@ -23,7 +23,7 @@ ROOT = os.environ.get("MIG_GIT_ROOT", "infinito-nexus/core")
 HOME = os.environ.get("MIG_GIT_HOME", "/var/lib/mig")
 MIRROR = os.path.join(HOME, "mirror.git")
 TREES = os.path.join(HOME, "worktrees")
-PORT = int(os.environ.get("MIG_GIT_PORT", "8099"))
+PORT = int(os.environ["MIG_GIT_PORT"])
 KEEP = int(os.environ.get("MIG_GIT_KEEP", "3"))
 UNIT = "\x1f"
 
