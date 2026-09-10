@@ -1,4 +1,6 @@
-class ForkCards {
+import { el, textElement } from '../dom.js';
+
+export class ForkCards {
   static TOKEN_HELP = '#github-token';
 
   static COMMIT = '#fork-commit';
@@ -134,5 +136,3 @@ class ForkCards {
         + 'narrows to that history.';
   }
 }
-
-window.ForkCards = ForkCards;

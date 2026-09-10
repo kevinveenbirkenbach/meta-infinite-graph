@@ -83,8 +83,7 @@ function stub(page, counter) {
   });
 }
 
-async function openForks(page, counter) {
-  await stub(page, counter);
+async function enterForks(page) {
   await page.goto('/');
   await expect
     .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
@@ -93,4 +92,9 @@ async function openForks(page, counter) {
   await page.locator('label[for="view-forks"]').click();
 }
 
-module.exports = { ROOT, FORKS, HOSTILE, COMMITS, stub, openForks };
+async function openForks(page, counter) {
+  await stub(page, counter);
+  await enterForks(page);
+}
+
+module.exports = { ROOT, FORKS, HOSTILE, COMMITS, stub, enterForks, openForks };

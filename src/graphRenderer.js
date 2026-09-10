@@ -5,10 +5,10 @@
  * and makes sure the graph always fills the visible viewport
  * (even when DevTools opens/closes, iframe resizes, etc.).
  */
-class GraphRenderer {
+export class GraphRenderer {
   /**
    * @param {string} containerId        ID of the DIV to mount the graph into
-   * @param {SelectionManager} selectionManager  Provides node color logic
+   * @param {import('./selectionManager.js').SelectionManager} selectionManager  Provides node color logic
    */
   constructor(containerId, selectionManager) {
     // 1) Store references
@@ -159,4 +159,3 @@ class GraphRenderer {
 }
 
 // Expose globally
-window.GraphRenderer = GraphRenderer;

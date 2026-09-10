@@ -11,10 +11,11 @@
 //
 // A consumption whose enabled/shared flag is a '{{ ... }}' template is
 // `optional: true` (rendered dashed, 0..1).
-class MetaGraph {
+export class MetaGraph {
   constructor(metaByRole) {
     this.meta = metaByRole;
     this.roles = Object.keys(metaByRole).sort();
+    this.variantAware = false;
     this._buildIndex();
   }
 
@@ -214,5 +215,3 @@ class MetaGraph {
     return true;
   }
 }
-
-window.MetaGraph = MetaGraph;

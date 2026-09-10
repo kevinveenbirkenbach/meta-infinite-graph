@@ -1,6 +1,11 @@
-function wireDataSwitches(tableView, testsView, roleInfo, uiManager, dataLoader, roles) {
-  const variantButton = document.getElementById('btn-variants');
-  const symbolButton = document.getElementById('btn-symbols');
+import { byId } from '../dom.js';
+import { urlState } from '../context.js';
+import { MatrixModel } from '../matrix/model.js';
+import { redraw } from './views.js';
+
+export function wireDataSwitches(tableView, testsView, roleInfo, uiManager, dataLoader, roles) {
+  const variantButton = byId('btn-variants', HTMLButtonElement);
+  const symbolButton = byId('btn-symbols', HTMLButtonElement);
   let variantsLoaded = false;
 
   const setVariants = next => {
@@ -44,34 +49,33 @@ function wireDataSwitches(tableView, testsView, roleInfo, uiManager, dataLoader,
   return { setVariants, setSymbols };
 }
 
-function wireControls({ testsView, matrixView, roleInfo, forkTree }) {
+export function wireControls({ testsView, matrixView, roleInfo, forkTree }) {
   testsView.onChange = () => urlState.capture();
-  for (const [id, apply] of [
-    ['tests-sort', value => testsView.setSort(value)],
-    ['tests-gate', value => testsView.setGate(value)],
-  ]) {
-    document.getElementById(id).addEventListener('change', event => {
-      apply(event.target.value);
+  const choose = (id, apply) => {
+    const select = byId(id, HTMLSelectElement);
+    select.addEventListener('change', () => {
+      apply(select.value);
       urlState.capture();
     });
-  }
-  const columnSearch = document.getElementById('matrix-columns-search');
+  };
+  choose('tests-sort', value => testsView.setSort(value));
+  choose('tests-gate', value => testsView.setGate(value));
+  const columnSearch = byId('matrix-columns-search', HTMLInputElement);
   columnSearch.addEventListener('input', () => matrixView.renderPicker(
     document.getElementById('matrix-columns'), columnSearch.value
   ));
-  document.getElementById('matrix-columns-reset')
+  byId('matrix-columns-reset', HTMLButtonElement)
     .addEventListener('click', () => matrixView.setColumns([...MatrixModel.DEFAULT]));
   matrixView.renderPicker(document.getElementById('matrix-columns'), '');
-  const resources = document.getElementById('design-resources');
+  const resources = byId('design-resources', HTMLInputElement);
   resources.addEventListener('change', () => {
     roleInfo.resources = resources.checked;
     urlState.capture();
   });
-  for (const [id, apply] of [
-    ['design-branches', next => forkTree.setBranches(next)],
-    ['design-tags', next => forkTree.setTags(next)],
-  ]) {
-    const box = document.getElementById(id);
+  const tick = (id, apply) => {
+    const box = byId(id, HTMLInputElement);
     box.addEventListener('change', () => apply(box.checked).then(() => urlState.capture()));
-  }
+  };
+  tick('design-branches', next => forkTree.setBranches(next));
+  tick('design-tags', next => forkTree.setTags(next));
 }

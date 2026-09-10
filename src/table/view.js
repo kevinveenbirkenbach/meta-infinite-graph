@@ -1,10 +1,14 @@
-class TableView extends TableCells {
+import { MetaTables } from '../meta/tables.js';
+import { TableCells } from './cells.js';
+
+export class TableView extends TableCells {
   constructor(metaTables, container, roleInfo) {
     super(roleInfo);
     this.tables = metaTables;
     this.container = container;
     this.kind = 'bond';
     this.variantAware = false;
+    this.matrix = null;
     this.filters = { author: '', lifecycle: '', mode: '' };
     this._cache = {};
   }
@@ -205,5 +209,3 @@ class TableView extends TableCells {
     return span;
   }
 }
-
-window.TableView = TableView;

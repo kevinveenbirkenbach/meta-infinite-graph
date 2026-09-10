@@ -1,4 +1,4 @@
-class PlaywrightMatrix {
+export class PlaywrightMatrix {
   // Args:
   //   harness: helper name -> { skip, branch }, from parseHarness(). Specs
   //     reach most of their gates through these shared persona flows.
@@ -162,5 +162,3 @@ class PlaywrightMatrix {
     });
   }
 }
-
-window.PlaywrightMatrix = PlaywrightMatrix;

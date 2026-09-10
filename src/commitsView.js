@@ -1,6 +1,9 @@
+import { el } from './dom.js';
+import { html, render } from './html.js';
+
 // Reads no roles tree, so this view stays usable at a date where the ones
 // derived from it are greyed out.
-class CommitsView {
+export class CommitsView {
   // Args:
   //   range: the GitRange holding the window and the ticked refs.
   //   container: the element the table is rendered into.
@@ -8,6 +11,7 @@ class CommitsView {
     this.range = range;
     this.container = container;
     this.walked = new Map();
+    this.root = el('div', { className: 'table-section' });
   }
 
   invalidate() {
@@ -22,26 +26,22 @@ class CommitsView {
     return owner;
   }
 
+  _paint(note, listed) {
+    render(html`<${Commits} note=${note} listed=${listed} />`, this.root);
+  }
+
   show() {
-    this.container.innerHTML = '';
-    const section = document.createElement('div');
-    section.className = 'table-section';
-    section.appendChild(textElement('h2', 'Commits'));
-    this.note = textElement('p', 'Reading the mirror …', 'table-note');
-    section.appendChild(this.note);
-    this.host = document.createElement('div');
-    this.host.className = 'commits-host';
-    section.appendChild(this.host);
-    this.container.appendChild(section);
+    this.container.replaceChildren(this.root);
+    this._paint('Reading the mirror …', null);
 
     if (!this.range.catalog) {
-      this.note.textContent = 'No local mirror, so there is nothing to read commits from.';
+      this._paint('No local mirror, so there is nothing to read commits from.', null);
       return Promise.resolve();
     }
     const owner = this._repoOf();
     const refs = this.range.refs.filter(ref => owner.has(ref));
     if (!refs.length) {
-      this.note.textContent = 'No source ticked. Pick a branch in the sources menu below.';
+      this._paint('No source ticked. Pick a branch in the sources menu below.', null);
       return Promise.resolve();
     }
     // Keyed by the window too, so moving a handle is not answered from a walk
@@ -63,41 +63,36 @@ class CommitsView {
     for (const row of rows) if (!seen.has(row.sha)) seen.set(row.sha, row);
     const listed = [...seen.values()].sort((one, other) => other.date.localeCompare(one.date));
 
-    this.note.textContent = `${listed.length} commits across ${refs.length} `
+    this._paint(`${listed.length} commits across ${refs.length} `
       + `${refs.length === 1 ? 'ref' : 'refs'}`
       + (rows.length === listed.length
         ? '.'
-        : `, merged from ${rows.length} rows because the refs share history.`);
-
-    const table = document.createElement('table');
-    table.className = 'table table-sm commits-table';
-    const head = document.createElement('thead');
-    const headRow = document.createElement('tr');
-    for (const title of ['Date', 'Repository', 'Ref', 'Commit', 'Subject']) {
-      headRow.appendChild(textElement('th', title));
-    }
-    head.appendChild(headRow);
-    table.appendChild(head);
-
-    const body = document.createElement('tbody');
-    for (const row of listed) {
-      const line = document.createElement('tr');
-      line.appendChild(textElement('td', row.date.slice(0, 10), 'commits-date'));
-      line.appendChild(textElement('td', row.repo));
-      line.appendChild(textElement('td', row.ref, 'commits-ref'));
-      const sha = textElement('td', row.sha.slice(0, 8), 'commits-sha');
-      sha.title = row.sha;
-      line.appendChild(sha);
-      const subject = textElement('td', row.message, 'commits-subject');
-      if ((row.parents || []).length > 1) subject.classList.add('merge');
-      line.appendChild(subject);
-      body.appendChild(line);
-    }
-    table.appendChild(body);
-    this.host.innerHTML = '';
-    this.host.appendChild(table);
+        : `, merged from ${rows.length} rows because the refs share history.`), listed);
     return listed;
   }
 }
 
-window.CommitsView = CommitsView;
+function Commits({ note, listed }) {
+  return html`
+    <h2>Commits</h2>
+    <p class="table-note">${note}</p>
+    <div class="commits-host">
+      ${listed && html`
+        <table class="table table-sm commits-table">
+          <thead><tr>${['Date', 'Repository', 'Ref', 'Commit', 'Subject'].map(title => html`<th>${title}</th>`)}</tr></thead>
+          <tbody>
+            ${listed.map(row => html`
+              <tr>
+                <td class="commits-date">${row.date.slice(0, 10)}</td>
+                <td>${row.repo}</td>
+                <td class="commits-ref">${row.ref}</td>
+                <td class="commits-sha" title=${row.sha}>${row.sha.slice(0, 8)}</td>
+                <td class=${(row.parents || []).length > 1 ? 'commits-subject merge' : 'commits-subject'}>${row.message}</td>
+              </tr>
+            `)}
+          </tbody>
+        </table>
+      `}
+    </div>
+  `;
+}

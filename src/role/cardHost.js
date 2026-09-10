@@ -1,4 +1,4 @@
-class RoleCardHost {
+export class RoleCardHost {
   constructor(roleInfo) {
     this.roleInfo = roleInfo;
     this.cards = new Map();
@@ -191,5 +191,3 @@ class RoleCardHost {
     });
   }
 }
-
-window.RoleCardHost = RoleCardHost;

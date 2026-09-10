@@ -1,9 +1,12 @@
+import { byId } from './dom.js';
+import { setStatus, urlState } from './context.js';
+
 // uiManager.js
 //
 // Wires the sidebar to the MetaGraph: edge-kind toggles, attribute facet
 // filters (author / lifecycle / deploy mode), node expansion and the
 // details panel showing every scanned meta attribute.
-class UIManager {
+export class UIManager {
   constructor(metaGraph, selectionManager, graphRenderer, autoResolver) {
     this.metaGraph = metaGraph;
     this.selectionManager = selectionManager;
@@ -11,15 +14,15 @@ class UIManager {
     this.autoResolver = autoResolver;
     this._iterId = null;
 
-    document.getElementById('sel-role')
+    byId('sel-role', HTMLSelectElement)
       .addEventListener('change', () => this.onSelectionChange());
-    document.getElementById('btn-reload')
+    byId('btn-reload', HTMLButtonElement)
       .addEventListener('click', () => this.onSelectionChange());
-    document.getElementById('btn-start')
+    byId('btn-start', HTMLButtonElement)
       .addEventListener('click', () => this._startIteration());
-    document.getElementById('btn-stop')
+    byId('btn-stop', HTMLButtonElement)
       .addEventListener('click', () => this._stopIteration());
-    document.getElementById('btn-flow')
+    byId('btn-flow', HTMLButtonElement)
       .addEventListener('click', () => this.showRunAfterFlow());
 
     for (const id of ['edge-dependencies', 'edge-dependents', 'edge-run-after', 'edge-role-deps', 'edge-role-dependents']) {
@@ -27,8 +30,8 @@ class UIManager {
         .addEventListener('change', () => this.onSelectionChange());
     }
 
-    document.getElementById('edge-visible')
-      .addEventListener('change', e => this.graphRenderer.setLinksVisible(e.target.checked));
+    const visible = byId('edge-visible', HTMLInputElement);
+    visible.addEventListener('change', () => this.graphRenderer.setLinksVisible(visible.checked));
 
     this.graphRenderer.on('nodeClicked', ({ node }) => {
       this.expand(node.id);
@@ -53,19 +56,19 @@ class UIManager {
 
   edgeKinds() {
     return {
-      dependencies: document.getElementById('edge-dependencies').checked,
-      dependents: document.getElementById('edge-dependents').checked,
-      runAfter: document.getElementById('edge-run-after').checked,
-      roleDependencies: document.getElementById('edge-role-deps').checked,
-      roleDependents: document.getElementById('edge-role-dependents').checked,
+      dependencies: byId('edge-dependencies', HTMLInputElement).checked,
+      dependents: byId('edge-dependents', HTMLInputElement).checked,
+      runAfter: byId('edge-run-after', HTMLInputElement).checked,
+      roleDependencies: byId('edge-role-deps', HTMLInputElement).checked,
+      roleDependents: byId('edge-role-dependents', HTMLInputElement).checked,
     };
   }
 
   filters() {
     return {
-      author: document.getElementById('facet-author').value,
-      lifecycle: document.getElementById('facet-lifecycle').value,
-      mode: document.getElementById('facet-mode').value,
+      author: byId('facet-author', HTMLSelectElement).value,
+      lifecycle: byId('facet-lifecycle', HTMLSelectElement).value,
+      mode: byId('facet-mode', HTMLSelectElement).value,
     };
   }
 
@@ -107,9 +110,9 @@ class UIManager {
   }
 
   onSelectionChange() {
-    const role = document.getElementById('sel-role').value;
+    const role = byId('sel-role', HTMLSelectElement).value;
     if (!role) return;
-    if (window.urlState) window.urlState.capture();
+    urlState.capture();
 
     this.selectionManager.setStartRole(role);
     this.autoResolver.stop();
@@ -162,11 +165,11 @@ class UIManager {
 
   _startIteration() {
     const interval = parseFloat(
-      document.getElementById('iter-interval').value
+      byId('iter-interval', HTMLInputElement).value
     ) * 1000;
     if (isNaN(interval) || interval <= 0) return;
-    document.getElementById('btn-start').disabled = true;
-    document.getElementById('btn-stop').disabled = false;
+    byId('btn-start', HTMLButtonElement).disabled = true;
+    byId('btn-stop', HTMLButtonElement).disabled = false;
     this.autoResolver.start(
       () => this._nextPending(),
       role => this.expand(role),
@@ -176,9 +179,7 @@ class UIManager {
 
   _stopIteration() {
     this.autoResolver.stop();
-    document.getElementById('btn-start').disabled = false;
-    document.getElementById('btn-stop').disabled = true;
+    byId('btn-start', HTMLButtonElement).disabled = false;
+    byId('btn-stop', HTMLButtonElement).disabled = true;
   }
 }
-
-window.UIManager = UIManager;

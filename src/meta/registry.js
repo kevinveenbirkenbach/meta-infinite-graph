@@ -1,4 +1,4 @@
-class MetaRegistry {
+export class MetaRegistry {
   constructor(metaByRole, categoriesTree) {
     this.meta = metaByRole;
     this.roles = Object.keys(metaByRole).sort();
@@ -210,5 +210,3 @@ class MetaRegistry {
     return override;
   }
 }
-
-window.MetaRegistry = MetaRegistry;

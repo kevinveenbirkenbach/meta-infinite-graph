@@ -1,4 +1,8 @@
-class MatrixPanels {
+import { el } from '../dom.js';
+import { html, render, useState } from '../html.js';
+import { MatrixModel } from './model.js';
+
+export class MatrixPanels {
   constructor(matrix) {
     this.matrix = matrix;
     this.picked = null;
@@ -6,15 +10,14 @@ class MatrixPanels {
     this._escape = null;
   }
 
-  _float(className, x, y) {
+  _float(className, x, y, vnode) {
     this.close();
     const panel = el('div', { className: `${className} matrix-float` });
     document.body.appendChild(panel);
-    const place = () => {
-      const box = panel.getBoundingClientRect();
-      panel.style.left = `${Math.max(8, Math.min(x, window.innerWidth - box.width - 8))}px`;
-      panel.style.top = `${Math.max(8, Math.min(y, window.innerHeight - box.height - 8))}px`;
-    };
+    render(vnode, panel);
+    const box = panel.getBoundingClientRect();
+    panel.style.left = `${Math.max(8, Math.min(x, window.innerWidth - box.width - 8))}px`;
+    panel.style.top = `${Math.max(8, Math.min(y, window.innerHeight - box.height - 8))}px`;
     this._outside = event => {
       if (!panel.contains(event.target)) this.close();
     };
@@ -25,12 +28,15 @@ class MatrixPanels {
       document.addEventListener('mousedown', this._outside);
       document.addEventListener('keydown', this._escape);
     });
-    return { panel, place };
+    return panel;
   }
 
   close() {
     this.picked = null;
-    for (const open of document.querySelectorAll('.matrix-float')) open.remove();
+    for (const open of document.querySelectorAll('.matrix-float')) {
+      render(null, open);
+      open.remove();
+    }
     if (this._outside) document.removeEventListener('mousedown', this._outside);
     if (this._escape) document.removeEventListener('keydown', this._escape);
     this._outside = null;
@@ -38,88 +44,27 @@ class MatrixPanels {
   }
 
   detail(row, id, x, y) {
-    const { panel, place } = this._float('matrix-detail', x, y);
     const variant = row.variant !== null && row.variant !== undefined ? ` #${row.variant}` : '';
-    panel.appendChild(el('div', {
-      className: 'matrix-detail-title', textContent: `${row.name}${variant} · ${id}`,
-    }));
     const value = this.matrix.model.value(row, id);
-    panel.appendChild(el('pre', {
-      textContent: typeof value === 'object' && value !== null
+    this._float('matrix-detail', x, y, html`
+      <div class="matrix-detail-title">${`${row.name}${variant} · ${id}`}</div>
+      <pre>${typeof value === 'object' && value !== null
         ? jsyaml.dump(value, { lineWidth: 100 }).trimEnd()
-        : String(value),
-    }));
-    place();
+        : String(value)}</pre>
+    `);
   }
 
   menu(id, x, y, rows) {
-    const { matrix } = this;
-    const { panel, place } = this._float('matrix-menu dropdown-menu show', x, y);
-    const item = (into, text, action, disabled) => {
-      const button = el('button', {
-        type: 'button', className: 'dropdown-item', textContent: text, disabled,
-      });
-      button.addEventListener('click', () => {
-        this.close();
-        action();
-      });
-      into.appendChild(button);
-    };
-    item(panel, 'Sort ascending', () => matrix.setSort(id, 'asc'), false);
-    item(panel, 'Sort descending', () => matrix.setSort(id, 'desc'), false);
-    const { common, rare } = matrix.model.children(id, rows);
-    item(panel, `Unfold into ${common.length} common columns`, () => matrix.expand(id, false),
-      !common.length);
-    if (rare.length) {
-      item(panel, `Unfold all ${common.length + rare.length} (${rare.length} rare)`,
-        () => matrix.expand(id, true), false);
-    }
-    const parent = MatrixModel.parent(id);
-    item(panel, `Fold into ${parent || 'its parent'}`, () => matrix.collapse(id), !parent);
-    item(panel, 'Remove this column', () => matrix.remove(id), id === 'role');
-
-    panel.appendChild(el('div', { className: 'dropdown-divider' }));
-    const search = el('input', {
-      type: 'search', className: 'form-control form-control-sm', placeholder: 'Add a column …',
-    });
-    const list = el('div', { className: 'matrix-menu-list' });
-    const fill = () => {
-      list.innerHTML = '';
-      const hidden = matrix.model.search(search.value, matrix.columns)
-        .filter(column => !matrix.columns.includes(column));
-      for (const column of hidden.slice(0, 80)) {
-        item(list, column, () => matrix.add(column, id), false);
-      }
-      if (hidden.length > 80) {
-        list.appendChild(el('div', {
-          className: 'dropdown-item-text small', textContent: `${hidden.length - 80} more, type to narrow`,
-        }));
-      }
-    };
-    search.addEventListener('input', fill);
-    panel.append(search, list);
-    fill();
-    place();
+    this._float('matrix-menu dropdown-menu show', x, y, html`<${ColumnMenu} panels=${this} id=${id} rows=${rows} />`);
   }
 
   picker(x, y) {
-    const { panel, place } = this._float('matrix-picker', x, y);
-    const search = el('input', {
-      type: 'search', className: 'form-control form-control-sm', placeholder: 'Filter columns …',
-    });
-    const reset = el('button', {
-      type: 'button', className: 'btn btn-sm btn-outline-primary', textContent: 'Default',
-    });
-    reset.addEventListener('click', () => this.matrix.setColumns([...MatrixModel.DEFAULT]));
-    const top = el('div', { className: 'd-flex gap-1 mb-1' });
-    top.append(search, reset);
-    const list = el('div', { className: 'matrix-columns' });
-    panel.append(top, list);
-    search.addEventListener('input', () => this.list(list, search.value));
-    this.list(list, '');
-    place();
-    this.picked = { list, search };
-    search.focus();
+    this.picked = this._float('matrix-picker', x, y, html`<${Picker} panels=${this} />`);
+    this.picked.querySelector('input').focus();
+  }
+
+  repaintPicker() {
+    if (this.picked) render(html`<${Picker} panels=${this} />`, this.picked);
   }
 
   // Args:
@@ -127,38 +72,10 @@ class MatrixPanels {
   //     table both render through here.
   //   needle: narrows the list to columns whose path contains it.
   list(host, needle) {
-    const { matrix } = this;
     if (!host) return;
-    if (!matrix.model.meta) {
-      host.textContent = 'Open the matrix once to list its columns.';
-      return;
-    }
-    host.innerHTML = '';
-    const groups = new Map();
-    for (const id of matrix.model.search(needle, matrix.columns)) {
-      const group = id.split('.')[0];
-      if (!groups.has(group)) groups.set(group, []);
-      groups.get(group).push(id);
-    }
-    for (const [group, ids] of groups) {
-      host.appendChild(el('div', { className: 'matrix-columns-group', textContent: group }));
-      for (const id of ids) {
-        const row = el('label', { className: 'matrix-columns-row' });
-        const box = el('input', {
-          type: 'checkbox', checked: matrix.columns.includes(id), disabled: id === 'role',
-        });
-        box.dataset.column = id;
-        box.addEventListener('change', () => (box.checked ? matrix.add(id) : matrix.remove(id)));
-        row.append(box, ` ${id}`);
-        if (id !== 'role' && matrix.model.distinct(id) <= 1) {
-          row.appendChild(el('span', {
-            className: 'matrix-const', textContent: 'constant',
-            title: 'Every role carries the same value here',
-          }));
-        }
-        host.appendChild(row);
-      }
-    }
+    render(this.matrix.model.meta
+      ? html`<${ColumnList} matrix=${this.matrix} needle=${needle} />`
+      : 'Open the matrix once to list its columns.', host);
   }
 
   // Returns: the lines written, header first.
@@ -183,4 +100,64 @@ class MatrixPanels {
   }
 }
 
-window.MatrixPanels = MatrixPanels;
+function ColumnMenu({ panels, id, rows }) {
+  const { matrix } = panels;
+  const [needle, setNeedle] = useState('');
+  const item = (text, action, disabled) => html`
+    <button type="button" class="dropdown-item" disabled=${disabled} onClick=${() => { panels.close(); action(); }}>${text}</button>
+  `;
+  const { common, rare } = matrix.model.children(id, rows);
+  const parent = MatrixModel.parent(id);
+  const hidden = matrix.model.search(needle, matrix.columns).filter(column => !matrix.columns.includes(column));
+  return html`
+    ${item('Sort ascending', () => matrix.setSort(id, 'asc'), false)}
+    ${item('Sort descending', () => matrix.setSort(id, 'desc'), false)}
+    ${item(`Unfold into ${common.length} common columns`, () => matrix.expand(id, false), !common.length)}
+    ${rare.length ? item(`Unfold all ${common.length + rare.length} (${rare.length} rare)`, () => matrix.expand(id, true), false) : null}
+    ${item(`Fold into ${parent || 'its parent'}`, () => matrix.collapse(id), !parent)}
+    ${item('Remove this column', () => matrix.remove(id), id === 'role')}
+    <div class="dropdown-divider"></div>
+    <input type="search" class="form-control form-control-sm" placeholder="Add a column …"
+           value=${needle} onInput=${event => setNeedle(event.currentTarget.value)} />
+    <div class="matrix-menu-list">
+      ${hidden.slice(0, 80).map(column => item(column, () => matrix.add(column, id), false))}
+      ${hidden.length > 80 && html`<div class="dropdown-item-text small">${`${hidden.length - 80} more, type to narrow`}</div>`}
+    </div>
+  `;
+}
+
+function Picker({ panels }) {
+  const { matrix } = panels;
+  const [needle, setNeedle] = useState('');
+  return html`
+    <div class="d-flex gap-1 mb-1">
+      <input type="search" class="form-control form-control-sm" placeholder="Filter columns …"
+             value=${needle} onInput=${event => setNeedle(event.currentTarget.value)} />
+      <button type="button" class="btn btn-sm btn-outline-primary"
+              onClick=${() => matrix.setColumns([...MatrixModel.DEFAULT])}>Default</button>
+    </div>
+    <div class="matrix-columns"><${ColumnList} matrix=${matrix} needle=${needle} /></div>
+  `;
+}
+
+function ColumnList({ matrix, needle }) {
+  const groups = new Map();
+  for (const id of matrix.model.search(needle, matrix.columns)) {
+    const group = id.split('.')[0];
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(id);
+  }
+  return [...groups].map(([group, ids]) => html`
+    <div class="matrix-columns-group">${group}</div>
+    ${ids.map(id => html`
+      <label class="matrix-columns-row">
+        <input type="checkbox" data-column=${id} checked=${matrix.columns.includes(id)} disabled=${id === 'role'}
+               onChange=${event => (event.currentTarget.checked ? matrix.add(id) : matrix.remove(id))} />
+        ${` ${id}`}
+        ${id !== 'role' && matrix.model.distinct(id) <= 1 && html`
+          <span class="matrix-const" title="Every role carries the same value here">constant</span>
+        `}
+      </label>
+    `)}
+  `);
+}

@@ -1,4 +1,11 @@
-class MatrixView {
+import { byId, el } from '../dom.js';
+import { html, render } from '../html.js';
+import { MatrixModel } from './model.js';
+import { MatrixPanels } from './panels.js';
+import { MatrixTable } from './table.js';
+import { MatrixToolbar } from './toolbar.js';
+
+export class MatrixView {
   static WIDTHS_KEY = 'mig-matrix-widths';
 
   // Args:
@@ -21,8 +28,7 @@ class MatrixView {
     this.find = '';
     this.density = 'compact';
     this.widths = MatrixView._readWidths();
-    this.host = null;
-    this.note = null;
+    this.root = el('div', { className: 'table-section matrix-section' });
   }
 
   get meta() {
@@ -150,13 +156,13 @@ class MatrixView {
   preset(name) {
     this.complexity = false;
     this.sort = [{ id: 'role', dir: 'asc' }];
-    this.setColumns([...MatrixModel.PRESETS[name][1]]);
+    this.setColumns([...MatrixModel.PRESETS[name].columns]);
   }
 
   setFind(text) {
     this.find = text;
     if (this.onChange) this.onChange(this);
-    if (this.host) this.table.render(this.host, this.note);
+    if (this.model.meta) this.paint();
   }
 
   setDensity(density) {
@@ -164,44 +170,40 @@ class MatrixView {
     this._changed();
   }
 
-  // Re-renders in place: rebuilding the whole view would close the column
-  // picker after every box ticked in it.
   _changed() {
     if (this.onChange) this.onChange(this);
-    const bar = this.container.querySelector('.matrix-section .matrix-toolbar');
-    if (bar) {
-      bar.replaceWith(this.toolbar.render());
-      this.table.render(this.host, this.note);
-    }
+    if (this.model.meta) this.paint();
     this.panels.list(
       document.getElementById('matrix-columns'),
-      (document.getElementById('matrix-columns-search') || {}).value || ''
+      (byId('matrix-columns-search', HTMLInputElement) || {}).value || ''
     );
-    if (this.panels.picked) this.panels.list(this.panels.picked.list, this.panels.picked.search.value);
+    this.panels.repaintPicker();
+  }
+
+  // Returns: the rows drawn, after the search and in the current order.
+  paint() {
+    const columns = this.visible();
+    const rows = this.model.rows(columns, this.find, this.sort);
+    render(html`
+      <h2>Matrix</h2>
+      ${this.toolbar.render()}
+      <p class="table-note">${this.table.note(rows, columns)}</p>
+      <div class="matrix-host">${this.table.grid(rows, columns)}</div>
+    `, this.root);
+    return rows;
   }
 
   show() {
     this.tableView.kind = 'matrix';
     this.panels.close();
-    this.container.innerHTML = '';
+    this.container.replaceChildren(this.root);
     if (!this.model.meta) {
-      this.container.appendChild(el('p', {
-        className: 'table-note', textContent: 'Reading every meta/*.yml …',
-      }));
+      render(html`<p class="table-note">Reading every meta/*.yml …</p>`, this.root);
       return this.model.load().then(() => {
         this.panels.list(document.getElementById('matrix-columns'), '');
         if (this.tableView.kind === 'matrix') this.show();
       });
     }
-
-    const section = el('div', { className: 'table-section matrix-section' });
-    section.appendChild(el('h2', { textContent: 'Matrix' }));
-    section.appendChild(this.toolbar.render());
-    this.note = section.appendChild(el('p', { className: 'table-note' }));
-    this.host = section.appendChild(el('div', { className: 'matrix-host' }));
-    this.container.appendChild(section);
-    return Promise.resolve(this.table.render(this.host, this.note));
+    return Promise.resolve(this.paint());
   }
 }
-
-window.MatrixView = MatrixView;

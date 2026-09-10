@@ -1,7 +1,13 @@
-function wireForks(forkTree, cardHost) {
-  const root = document.getElementById('fork-root');
-  const token = document.getElementById('fork-token');
-  const forget = document.getElementById('fork-forget');
+import { byId } from '../dom.js';
+import { urlState } from '../context.js';
+import { ForkCards } from '../fork/cards.js';
+import { ForkTree } from '../fork/tree.js';
+import { currentView } from './views.js';
+
+export function wireForks(forkTree, cardHost) {
+  const root = byId('fork-root', HTMLInputElement);
+  const token = byId('fork-token', HTMLInputElement);
+  const forget = byId('fork-forget', HTMLButtonElement);
   const owned = document.getElementById('fork-token-owned');
   const field = document.querySelector('.token-field');
 
@@ -25,7 +31,7 @@ function wireForks(forkTree, cardHost) {
 
   forkTree.api.detectProxy().then(proxied => {
     for (const element of document.querySelectorAll('.token-field')) {
-      element.hidden = proxied;
+      element.toggleAttribute('hidden', proxied);
     }
     owned.hidden = !proxied;
     if (proxied) {

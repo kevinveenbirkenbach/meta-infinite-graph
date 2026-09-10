@@ -1,5 +1,4 @@
-// _plot() is left to the subclass; it runs after every batch that arrived.
-class ForkHistory {
+export class ForkHistory {
   // A tag carries no date, so each one outside the fetched commits costs its
   // own request, and an unauthenticated visitor has 60 for the whole hour.
   static TAG_RESERVE = 200;
@@ -9,6 +8,14 @@ class ForkHistory {
     this.branches = true;
     this.tags = false;
     this.range = null;
+    this.network = null;
+    this.histories = null;
+    this.tagsBy = null;
+    this.refused = null;
+  }
+
+  _plot() {
+    throw new Error('ForkHistory draws nothing itself; a subclass provides _plot()');
   }
 
   useMirror(range) {
@@ -147,5 +154,3 @@ class ForkHistory {
       });
   }
 }
-
-window.ForkHistory = ForkHistory;

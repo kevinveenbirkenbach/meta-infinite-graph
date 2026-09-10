@@ -1,4 +1,4 @@
-class UrlState {
+export class UrlState {
   constructor() {
     this.controls = [];
   }
@@ -36,5 +36,3 @@ class UrlState {
     history.replaceState(null, '', query ? `?${query}` : window.location.pathname);
   }
 }
-
-window.UrlState = UrlState;

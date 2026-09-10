@@ -1,4 +1,4 @@
-class ForkGraph {
+export class ForkGraph {
   // Args:
   //   repos: [{ full_name, created_at, pushed_at, parent }] with parent the
   //     full_name this one was forked from, or null for the root.
@@ -157,5 +157,3 @@ class ForkGraph {
       .map(row => ({ from: row.parent, to: row.id, at: row.from }));
   }
 }
-
-window.ForkGraph = ForkGraph;

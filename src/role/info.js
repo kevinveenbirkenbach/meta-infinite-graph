@@ -1,4 +1,8 @@
-class RoleInfo {
+import { el } from '../dom.js';
+import { html, render, toElement } from '../html.js';
+import { RoleResources } from './resources.js';
+
+export class RoleInfo {
   constructor(dataLoader, metaGraph, tables) {
     this.loader = dataLoader;
     this.graph = metaGraph;
@@ -7,7 +11,7 @@ class RoleInfo {
     this.brands = {};
     this.symbols = false;
     this.resources = true;
-    this.footprint = new RoleResources(tables, (key, role) => this.serviceChip(key, role));
+    this.footprint = new RoleResources(tables, (key, role) => this.chip(key, role));
     this._promise = null;
   }
 
@@ -15,17 +19,15 @@ class RoleInfo {
   //   key: a service key as meta/services.yml spells it.
   //   fallback: the role to open when no role provides the key under that name.
   // Returns: a chip that opens the providing role's card on hover.
-  serviceChip(key, fallback = null) {
-    const chip = document.createElement('span');
-    chip.className = 'chip';
-    chip.textContent = key;
+  chip(key, fallback = null) {
     const provider = (this.tables && this.tables.providerOf(key)) || fallback;
-    if (provider) {
-      chip.classList.add('service');
-      chip.dataset.roleName = provider;
-      chip.title = `provided by ${provider}`;
-    }
-    return chip;
+    return provider
+      ? html`<span class="chip service" data-role-name=${provider} title=${`provided by ${provider}`}>${key}</span>`
+      : html`<span class="chip">${key}</span>`;
+  }
+
+  serviceChip(key, fallback = null) {
+    return toElement(this.chip(key, fallback));
   }
 
   load() {
@@ -41,19 +43,15 @@ class RoleInfo {
     return this._promise;
   }
 
-  iconFor(role) {
+  icon(role) {
     const slug = this.brands[role];
-    if (slug) {
-      const img = document.createElement('img');
-      img.className = 'role-icon';
-      img.src = `vendor/simple-icons/${slug}.svg`;
-      img.alt = role;
-      return img;
-    }
-    const icon = document.createElement('i');
+    if (slug) return html`<img class="role-icon" src=${`vendor/simple-icons/${slug}.svg`} alt=${role} />`;
     const declared = this.info[role]?.logo?.class;
-    icon.className = `role-icon ${declared || 'fa-regular fa-circle'}`;
-    return icon;
+    return html`<i class=${`role-icon ${declared || 'fa-regular fa-circle'}`}></i>`;
+  }
+
+  iconFor(role) {
+    return toElement(this.icon(role));
   }
 
   // Returns: an embeddable URL for a single video or an explicit playlist,
@@ -85,111 +83,72 @@ class RoleInfo {
     return peertube ? `${url.origin}/videos/embed/${peertube[1]}` : null;
   }
 
+  // YouTube authorises an embed by its referrer and answers "error 153"
+  // without one, so the policy has to leave at least the origin in place.
   static player(video) {
     const embed = RoleInfo.embedUrl(video);
     if (!embed) return null;
-    const frame = document.createElement('iframe');
-    frame.className = 'role-card-video';
-    frame.src = embed;
-    frame.loading = 'lazy';
-    frame.allow = 'accelerometer; encrypted-media; picture-in-picture; fullscreen';
-    frame.allowFullscreen = true;
-    // YouTube authorises an embed by its referrer and answers "error 153"
-    // without one, so the policy has to leave at least the origin in place.
-    frame.referrerPolicy = 'strict-origin-when-cross-origin';
-    return frame;
+    return html`<iframe class="role-card-video" src=${embed} loading="lazy" allowfullscreen
+      allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  }
+
+  labelNode(role) {
+    return this.symbols ? this.icon(role) : html`<span>${role}</span>`;
   }
 
   label(role) {
-    if (!this.symbols) {
-      const span = document.createElement('span');
-      span.textContent = role;
-      return span;
-    }
-    return this.iconFor(role);
+    return toElement(this.labelNode(role));
   }
 
   card(role) {
-    const info = this.info[role] || {};
-    const attributes = this.graph.attributes[role] || {};
-    const card = document.createElement('div');
-    card.className = 'role-card';
-
-    const heading = document.createElement('div');
-    heading.className = 'role-card-title';
-    heading.appendChild(this.iconFor(role));
-    heading.appendChild(document.createTextNode(` ${role}`));
-    card.appendChild(heading);
-
-    if (attributes.lifecycle) {
-      const badge = document.createElement('span');
-      badge.className = `role-card-badge lifecycle-${attributes.lifecycle}`;
-      badge.textContent = attributes.lifecycle;
-      heading.appendChild(badge);
-    }
-
-    if (attributes.description) {
-      const description = document.createElement('p');
-      description.className = 'role-card-desc';
-      description.textContent = attributes.description;
-      card.appendChild(description);
-    }
-
-    const facts = document.createElement('dl');
-    facts.className = 'role-card-facts';
-    const scalars = [
-      ['Weight', String(this.graph.weight(role))],
-      ['Provides', attributes.provides],
-      ['Modes', (attributes.modes || []).join(', ')],
-      ['Author', attributes.author],
-      ['License', attributes.license],
-    ].filter(([, value]) => value);
-    for (const [name, value] of scalars) {
-      const term = document.createElement('dt');
-      term.textContent = name;
-      const definition = document.createElement('dd');
-      definition.textContent = value;
-      facts.append(term, definition);
-    }
-    for (const [name, items, chip] of [
-      ['Services', attributes.services || [], item => this.serviceChip(item)],
-      ['Tags', attributes.galaxy_tags || [], item => Object.assign(
-        document.createElement('span'), { className: 'chip', textContent: item }
-      )],
-    ]) {
-      if (!items.length) continue;
-      const term = document.createElement('dt');
-      term.textContent = name;
-      const definition = document.createElement('dd');
-      definition.className = 'chips';
-      for (const item of items) definition.appendChild(chip(item));
-      facts.append(term, definition);
-    }
-    if (this.resources) facts.append(...this.footprint.facts(role));
-    if (facts.childElementCount) card.appendChild(facts);
-
-    const resources = this.resources ? this.footprint.table(role) : null;
-    if (resources) card.appendChild(resources);
-
-    const player = info.video ? RoleInfo.player(info.video) : null;
-    if (player) card.appendChild(player);
-
-    const links = document.createElement('div');
-    links.className = 'role-card-links';
-    const entries = [['Homepage', info.homepage]];
-    if (info.video) entries.push([player ? 'Watch on site' : 'Video', info.video]);
-    for (const [text, href] of entries) {
-      if (!href) continue;
-      const link = document.createElement('a');
-      link.href = href;
-      link.target = '_blank';
-      link.rel = 'noreferrer';
-      link.textContent = text;
-      links.appendChild(link);
-    }
-    if (links.childElementCount) card.appendChild(links);
-    return card;
+    const root = el('div', { className: 'role-card' });
+    render(html`<${RoleCard} info=${this} role=${role} />`, root);
+    return root;
   }
 }
 
-window.RoleInfo = RoleInfo;
+function RoleCard({ info: roleInfo, role }) {
+  const info = roleInfo.info[role] || {};
+  const attributes = roleInfo.graph.attributes[role] || {};
+  const scalars = [
+    ['Weight', String(roleInfo.graph.weight(role))],
+    ['Provides', attributes.provides],
+    ['Modes', (attributes.modes || []).join(', ')],
+    ['Author', attributes.author],
+    ['License', attributes.license],
+  ].filter(([, value]) => value);
+  const lists = [
+    ['Services', attributes.services || [], item => roleInfo.chip(item)],
+    ['Tags', attributes.galaxy_tags || [], item => html`<span class="chip">${item}</span>`],
+  ].filter(([, items]) => items.length);
+  const footprint = roleInfo.resources ? roleInfo.footprint.facts(role) : [];
+  const player = info.video ? RoleInfo.player(info.video) : null;
+  const links = [
+    ['Homepage', info.homepage],
+    ...(info.video ? [[player ? 'Watch on site' : 'Video', info.video]] : []),
+  ].filter(([, href]) => href);
+  return html`
+    <div class="role-card-title">
+      ${roleInfo.icon(role)}${` ${role}`}
+      ${attributes.lifecycle && html`
+        <span class=${`role-card-badge lifecycle-${attributes.lifecycle}`}>${attributes.lifecycle}</span>
+      `}
+    </div>
+    ${attributes.description && html`<p class="role-card-desc">${attributes.description}</p>`}
+    ${(scalars.length || lists.length || footprint.length) ? html`
+      <dl class="role-card-facts">
+        ${scalars.map(([name, value]) => html`<dt>${name}</dt><dd>${value}</dd>`)}
+        ${lists.map(([name, items, chip]) => html`<dt>${name}</dt><dd class="chips">${items.map(chip)}</dd>`)}
+        ${footprint}
+      </dl>
+    ` : null}
+    ${roleInfo.resources ? roleInfo.footprint.table(role) : null}
+    ${player}
+    ${links.length ? html`
+      <div class="role-card-links">
+        ${links.map(([text, href]) => html`<a href=${href} target="_blank" rel="noreferrer">${text}</a>`)}
+      </div>
+    ` : null}
+  `;
+}

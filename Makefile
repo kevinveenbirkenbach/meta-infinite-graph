@@ -22,7 +22,7 @@ help:
 	@echo "  make e2e                 Start stack, run HTTP E2E checks, stop stack"
 	@echo "  make test                Install browsers, then run the Playwright suite"
 	@echo "  make test-fast           Run the Playwright suite without installing"
-	@echo "  make lint                Run the repository lints under tests/lint"
+	@echo "  make lint                Run the repository lints under tests/lint and the type check"
 	@echo "  make image               Build the container image"
 	@echo "  make nginx-verify        Check the generated GitHub proxy config, with and without a token"
 	@echo "  make nginx-probe         Serve the image and probe the proxy routes"
@@ -60,6 +60,7 @@ test-fast:
 
 lint:
 	python3 -m pytest -q tests/lint
+	npx tsc -p tsconfig.json
 
 image:
 	docker build -t $(IMAGE) .

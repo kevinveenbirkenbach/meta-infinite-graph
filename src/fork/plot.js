@@ -1,4 +1,6 @@
-class ForkPlot {
+import { ForkGraph } from './graph.js';
+
+export class ForkPlot {
   static NS = 'http://www.w3.org/2000/svg';
 
   static ROW = 26;
@@ -176,5 +178,3 @@ class ForkPlot {
     return group;
   }
 }
-
-window.ForkPlot = ForkPlot;

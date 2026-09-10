@@ -1,6 +1,9 @@
+import { el } from '../dom.js';
+import { html, render } from '../html.js';
+
 // Neither lives in a git mirror, so these are the only views still spending
 // GitHub requests. GitHubApi caches every answer, so a second visit is free.
-class GitHubFeed {
+export class GitHubFeed {
   static KINDS = {
     pulls: {
       title: 'Pull requests',
@@ -44,6 +47,7 @@ class GitHubFeed {
     this.api = api;
     this.range = range;
     this.container = container;
+    this.root = el('div', { className: 'table-section' });
   }
 
   // The menu ticks refs, but a feed is per repository.
@@ -55,23 +59,20 @@ class GitHubFeed {
     return [...wanted];
   }
 
+  _paint(spec, note, entries) {
+    render(html`<${Feed} spec=${spec} note=${note} entries=${entries} />`, this.root);
+  }
+
   show() {
     const spec = GitHubFeed.KINDS[this.kind];
-    this.container.innerHTML = '';
-    const section = document.createElement('div');
-    section.className = 'table-section';
-    section.appendChild(textElement('h2', spec.title));
-    this.note = textElement('p', 'Asking GitHub …', 'table-note');
-    section.appendChild(this.note);
-    this.host = document.createElement('div');
-    section.appendChild(this.host);
-    this.container.appendChild(section);
+    this.container.replaceChildren(this.root);
+    this._paint(spec, 'Asking GitHub …', null);
 
     const repos = this._repos();
     if (!repos.length) {
-      this.note.textContent = this.range.catalog
+      this._paint(spec, this.range.catalog
         ? 'No source ticked. Pick a repository in the sources menu below.'
-        : 'No local mirror, so there is no source list to read from.';
+        : 'No local mirror, so there is no source list to read from.', null);
       return Promise.resolve([]);
     }
     return Promise.all(repos.map(full => this.api.get(spec.path(full), false)
@@ -96,45 +97,33 @@ class GitHubFeed {
       return !Number.isNaN(at) && at >= from && at <= until;
     }).sort((one, other) => Date.parse(spec.when(other)) - Date.parse(spec.when(one)));
 
-    this.note.textContent = `${inside.length} of ${entries.length} in this window, `
+    this._paint(spec, `${inside.length} of ${entries.length} in this window, `
       + `across ${repos.length} ${repos.length === 1 ? 'repository' : 'repositories'}.`
-      + (this.failed ? ` GitHub answered ${this.failed.status || 'with an error'}.` : '');
-
-    const table = document.createElement('table');
-    table.className = 'table table-sm feed-table';
-    const head = document.createElement('thead');
-    const headRow = document.createElement('tr');
-    for (const title of spec.columns) headRow.appendChild(textElement('th', title));
-    head.appendChild(headRow);
-    table.appendChild(head);
-
-    const body = document.createElement('tbody');
-    for (const entry of inside) {
-      const line = document.createElement('tr');
-      const cells = spec.cells(entry);
-      cells.forEach((value, index) => {
-        const cell = textElement('td', value);
-        if (index === 2) {
-          cell.className = `feed-mark feed-${spec.mark(entry)}`;
-        }
-        if (index === 3 && spec.link(entry)) {
-          cell.textContent = '';
-          const link = document.createElement('a');
-          link.href = spec.link(entry);
-          link.target = '_blank';
-          link.rel = 'noreferrer';
-          link.textContent = value;
-          cell.appendChild(link);
-        }
-        line.appendChild(cell);
-      });
-      body.appendChild(line);
-    }
-    table.appendChild(body);
-    this.host.innerHTML = '';
-    this.host.appendChild(table);
+      + (this.failed ? ` GitHub answered ${this.failed.status || 'with an error'}.` : ''), inside);
     return inside;
   }
 }
 
-window.GitHubFeed = GitHubFeed;
+function Feed({ spec, note, entries }) {
+  const cell = (entry, value, index) => {
+    if (index === 2) return html`<td class=${`feed-mark feed-${spec.mark(entry)}`}>${value}</td>`;
+    if (index === 3 && spec.link(entry)) {
+      return html`<td><a href=${spec.link(entry)} target="_blank" rel="noreferrer">${value}</a></td>`;
+    }
+    return html`<td>${value}</td>`;
+  };
+  return html`
+    <h2>${spec.title}</h2>
+    <p class="table-note">${note}</p>
+    <div>
+      ${entries && html`
+        <table class="table table-sm feed-table">
+          <thead><tr>${spec.columns.map(title => html`<th>${title}</th>`)}</tr></thead>
+          <tbody>
+            ${entries.map(entry => html`<tr>${spec.cells(entry).map((value, index) => cell(entry, value, index))}</tr>`)}
+          </tbody>
+        </table>
+      `}
+    </div>
+  `;
+}

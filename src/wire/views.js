@@ -1,30 +1,32 @@
-function currentView() {
-  return document.querySelector('input[name="view"]:checked').value;
+import { byId, bySelector } from '../dom.js';
+
+export function currentView() {
+  return bySelector('input[name="view"]:checked', HTMLInputElement).value;
 }
 
 // Filling these from the working copy would put today's numbers under a past
 // timestamp, so at a date that predates the schema they are greyed instead.
 const META_VIEWS = ['graph', 'bond', 'matrix', 'tests'];
 
-function disableMetaViews(missing) {
+export function disableMetaViews(missing) {
   const why = `${missing.join(', ')} does not exist at the chosen date. This view reads `
     + 'from it, so it would show the working copy rather than that state.';
   for (const view of META_VIEWS) {
-    const input = document.getElementById(`view-${view}`);
-    const label = document.querySelector(`label[for="view-${view}"]`);
+    const input = byId(`view-${view}`, HTMLInputElement);
+    const label = bySelector(`label[for="view-${view}"]`, HTMLLabelElement);
     input.disabled = true;
     label.classList.add('view-unavailable');
     label.title = why;
   }
-  const roles = document.getElementById('btn-roles');
+  const roles = byId('btn-roles', HTMLButtonElement);
   roles.classList.add('view-unavailable');
   roles.title = why;
   if (META_VIEWS.includes(currentView())) {
-    document.getElementById('view-commits').checked = true;
+    byId('view-commits', HTMLInputElement).checked = true;
   }
 }
 
-function wireViewMode(tableView, forkTree, testsView, feeds) {
+export function wireViewMode(tableView, forkTree, testsView, feeds) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
   const apply = () => {
@@ -35,15 +37,15 @@ function wireViewMode(tableView, forkTree, testsView, feeds) {
     graph.classList.toggle('pane-front', !tables);
     graph.classList.toggle('pane-back', tables);
     for (const element of document.querySelectorAll('.graph-only')) {
-      element.hidden = tables;
+      element.toggleAttribute('hidden', tables);
     }
     for (const element of document.querySelectorAll('.forks-only')) {
-      element.hidden = view !== 'forks';
+      element.toggleAttribute('hidden', view !== 'forks');
     }
     for (const element of document.querySelectorAll('.tests-only')) {
-      element.hidden = view !== 'tests';
+      element.toggleAttribute('hidden', view !== 'tests');
     }
-    const roles = document.getElementById('btn-roles');
+    const roles = byId('btn-roles', HTMLButtonElement);
     const sub = document.querySelector(`label[for="view-${view}"].dropdown-item`);
     roles.classList.toggle('active', Boolean(sub));
     roles.textContent = sub ? `Roles · ${sub.textContent}` : 'Roles';
@@ -60,13 +62,13 @@ function wireViewMode(tableView, forkTree, testsView, feeds) {
 
 // Both switches feed both views, so the redraw has to follow the visible one
 // rather than always refreshing the tables over whatever is on screen.
-function redraw(tableView, testsView) {
+export function redraw(tableView, testsView) {
   const view = currentView();
   if (view === 'tests') testsView.refresh();
   else if (!['graph', 'forks', 'commits', 'pulls', 'actions'].includes(view)) tableView.refresh();
 }
 
-function wirePanels() {
+export function wirePanels() {
   const panels = {
     'btn-filter': document.getElementById('sidebar'),
     'btn-design': document.getElementById('design-panel'),

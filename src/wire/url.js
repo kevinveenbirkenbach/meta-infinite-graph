@@ -1,3 +1,8 @@
+import { byId } from '../dom.js';
+import { facet, setFacet, urlState } from '../context.js';
+import { MatrixModel } from '../matrix/model.js';
+import { currentView } from './views.js';
+
 const EDGE_IDS = [
   'edge-role-deps', 'edge-role-dependents', 'edge-dependencies',
   'edge-dependents', 'edge-run-after', 'edge-visible',
@@ -5,7 +10,7 @@ const EDGE_IDS = [
 
 function checkedEdges() {
   return EDGE_IDS
-    .filter(id => document.getElementById(id).checked)
+    .filter(id => byId(id, HTMLInputElement).checked)
     .map(id => id.slice(5))
     .join(',');
 }
@@ -34,13 +39,13 @@ function registerMatrixUrl(matrixView) {
 
 // Returns: the promises of the switches the URL turned on, which have to
 // settle before the first view is drawn.
-function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches }) {
+export function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches }) {
   const pending = [];
   const edgeDefault = checkedEdges();
   urlState
     .register('view', currentView, value => {
       const input = document.getElementById(`view-${value}`);
-      if (input) input.checked = true;
+      if (input instanceof HTMLInputElement) input.checked = true;
     }, 'graph')
     .register('role', () => sel.value, value => {
       if (metaGraph.roles.includes(value)) sel.value = value;
@@ -48,23 +53,23 @@ function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, matrixVie
     .register('sort', () => testsView.sort, value => testsView.setSort(value), 'name')
     .register('branches', () => String(forkTree.branches), value => {
       forkTree.branches = value === 'true';
-      document.getElementById('design-branches').checked = forkTree.branches;
+      byId('design-branches', HTMLInputElement).checked = forkTree.branches;
     }, 'true');
   registerMatrixUrl(matrixView);
   urlState
     .register('resources', () => String(roleInfo.resources), value => {
       roleInfo.resources = value === 'true';
-      document.getElementById('design-resources').checked = roleInfo.resources;
+      byId('design-resources', HTMLInputElement).checked = roleInfo.resources;
     }, 'true')
     .register('tags', () => String(forkTree.tags), value => {
       forkTree.tags = value === 'true';
-      document.getElementById('design-tags').checked = forkTree.tags;
+      byId('design-tags', HTMLInputElement).checked = forkTree.tags;
     }, 'false')
     .register('kind', () => testsView.kind, value => testsView.setKind(value), 'playwright')
     .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
     .register('repo', () => forkTree.root, value => {
       forkTree.setRoot(value);
-      document.getElementById('fork-root').value = forkTree.root;
+      byId('fork-root', HTMLInputElement).value = forkTree.root;
     }, forkTree.root)
     .register('author', () => facet('facet-author'), value => setFacet('facet-author', value), '')
     .register('lifecycle', () => facet('facet-lifecycle'), value => setFacet('facet-lifecycle', value), '')
@@ -72,7 +77,7 @@ function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, matrixVie
     .register('edges', checkedEdges, value => {
       const wanted = value ? value.split(',') : [];
       for (const id of EDGE_IDS) {
-        document.getElementById(id).checked = wanted.includes(id.slice(5));
+        byId(id, HTMLInputElement).checked = wanted.includes(id.slice(5));
       }
     }, edgeDefault)
     .register('variants', () => String(tableView.variantAware), value => {

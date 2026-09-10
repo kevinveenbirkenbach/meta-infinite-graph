@@ -1,4 +1,4 @@
-class GitHubApi {
+export class GitHubApi {
   constructor(ttlMs = 3600000) {
     this.ttl = ttlMs;
     this.rate = null;
@@ -126,10 +126,10 @@ class GitHubApi {
           reset: Number(response.headers.get('x-ratelimit-reset')),
         };
         if (!response.ok) {
-          const error = new Error(`GitHub ${response.status} for ${path}`);
-          error.status = response.status;
-          error.exhausted = this.rate.remaining === 0;
-          throw error;
+          throw Object.assign(new Error(`GitHub ${response.status} for ${path}`), {
+            status: response.status,
+            exhausted: this.rate.remaining === 0,
+          });
         }
         const next = paginate ? GitHubApi.next(response.headers.get('link')) : null;
         return response.json().then(data => {
@@ -169,5 +169,3 @@ class GitHubApi {
     return this.get(`/repos/${fullName}/tags?per_page=100`);
   }
 }
-
-window.GitHubApi = GitHubApi;

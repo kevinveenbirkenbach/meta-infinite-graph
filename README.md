@@ -272,6 +272,12 @@ render, facet population, auto-iteration):
 make test
 ```
 
+The folder layout and the types of `src/` are checked without a browser:
+
+```bash
+make lint
+```
+
 HTTP smoke against the container image:
 
 ```bash

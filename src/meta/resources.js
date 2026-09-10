@@ -1,5 +1,7 @@
+import { MetaRegistry } from './registry.js';
+
 // Port of, and kept in sync with, cli.meta.roles.applications.ressources.
-class MetaResources extends MetaRegistry {
+export class MetaResources extends MetaRegistry {
   static _RESOURCE_KEYS = ['mem_reservation', 'mem_limit', 'pids_limit', 'cpus'];
 
   static _CONTAINER_KEYS = ['image', 'name', 'version', 'container'];
@@ -147,5 +149,3 @@ class MetaResources extends MetaRegistry {
     return { totals: MetaResources.aggregate(rows), rows };
   }
 }
-
-window.MetaResources = MetaResources;

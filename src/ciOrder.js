@@ -1,4 +1,6 @@
-class CiOrder {
+import { MetaTables } from './meta/tables.js';
+
+export class CiOrder {
   // Args:
   //   settings: the parsed infinito.env, for the sort spec, the lifecycle
   //     envelope, the whitelist and the chunk slots.
@@ -140,5 +142,3 @@ class CiOrder {
   }
 
 }
-
-window.CiOrder = CiOrder;

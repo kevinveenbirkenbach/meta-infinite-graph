@@ -1,7 +1,9 @@
+import { RoleResources } from '../role/resources.js';
+
 // Every value under each role's meta/, one row per role. A column is a dotted
 // path; the catalogue offers one per file and top-level key, and a column
 // whose values are maps unfolds into its keys.
-class MatrixModel {
+export class MatrixModel {
   // Chosen by how much they tell apart: license is one value for every role
   // and author nearly so, which is why neither is here.
   static DEFAULT = [
@@ -19,14 +21,14 @@ class MatrixModel {
   static RESSOURCES = Object.fromEntries(RoleResources.METRICS.map(metric => [metric.column, metric]));
 
   static PRESETS = {
-    overview: ['Overview', MatrixModel.DEFAULT],
-    galaxy: ['Galaxy', [
+    overview: { label: 'Overview', columns: MatrixModel.DEFAULT },
+    galaxy: { label: 'Galaxy', columns: [
       'role', 'main.galaxy_info.description', 'main.galaxy_info.galaxy_tags',
       'main.galaxy_info.author', 'main.galaxy_info.company', 'main.galaxy_info.license',
       'main.galaxy_info.min_ansible_version', 'main.galaxy_info.platforms', 'main.dependencies',
-    ]],
-    ressources: ['Ressources', ['role', 'services', ...Object.keys(MatrixModel.RESSOURCES)]],
-    network: ['Network', ['role', 'domains', 'networks', 'server', 'csp', 'volumes']],
+    ] },
+    ressources: { label: 'Ressources', columns: ['role', 'services', ...Object.keys(MatrixModel.RESSOURCES)] },
+    network: { label: 'Network', columns: ['role', 'domains', 'networks', 'server', 'csp', 'volumes'] },
   };
 
   // Args:
@@ -229,5 +231,3 @@ class MatrixModel {
     return one.name.localeCompare(other.name) || (one.variant || 0) - (other.variant || 0);
   }
 }
-
-window.MatrixModel = MatrixModel;

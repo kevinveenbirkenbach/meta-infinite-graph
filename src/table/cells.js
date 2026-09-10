@@ -1,4 +1,4 @@
-class TableCells {
+export class TableCells {
   constructor(roleInfo) {
     this.roleInfo = roleInfo;
   }
@@ -24,50 +24,10 @@ class TableCells {
     return variant === null || variant === undefined ? '-' : String(variant);
   }
 
-  static _cell(text, className) {
-    const td = document.createElement('td');
-    td.textContent = text;
-    if (className) td.className = className;
-    return td;
-  }
-
   _roleCell(role, tag = 'td') {
     const cell = document.createElement(tag);
     cell.dataset.roleName = role;
     cell.appendChild(this.roleInfo.label(role));
-    return cell;
-  }
-
-  _roleListCell(roles) {
-    const cell = document.createElement('td');
-    if (!roles.length) {
-      cell.textContent = '-';
-      return cell;
-    }
-    cell.className = 'role-list';
-    roles.forEach((role, index) => {
-      const item = document.createElement('span');
-      item.dataset.roleName = role;
-      item.appendChild(this.roleInfo.label(role));
-      cell.appendChild(item);
-      if (!this.roleInfo.symbols && index < roles.length - 1) {
-        cell.appendChild(document.createTextNode(', '));
-      }
-    });
-    return cell;
-  }
-
-  _boolCell(value) {
-    const cell = document.createElement('td');
-    if (!this.roleInfo.symbols) {
-      cell.textContent = value ? 'yes' : 'no';
-      return cell;
-    }
-    const icon = document.createElement('i');
-    icon.className = value ? 'fa-solid fa-check' : 'fa-solid fa-xmark';
-    cell.title = value ? 'yes' : 'no';
-    cell.className = 'bool';
-    cell.appendChild(icon);
     return cell;
   }
 
@@ -86,5 +46,3 @@ class TableCells {
     return section;
   }
 }
-
-window.TableCells = TableCells;

@@ -1,4 +1,7 @@
-class DataLoader extends RoleFiles {
+import { PlaywrightMatrix } from './playwrightMatrix.js';
+import { RoleFiles } from './role/files.js';
+
+export class DataLoader extends RoleFiles {
   // Args:
   //   role: the role whose Playwright suite to read.
   // Returns: { entries, files, env } where files is the closure of every
@@ -101,5 +104,3 @@ class DataLoader extends RoleFiles {
       .then(Object.fromEntries);
   }
 }
-
-window.DataLoader = DataLoader;

@@ -154,6 +154,25 @@ test('a date without the current schema greys the views that need it',
       'and the greyed default gives way to one that works').toBe('commits');
   });
 
+test('a handle still moves after a date without the current schema', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await mirror(page, []);
+  await page.route(`**/at/${SHA}/meta/categories.yml`, route =>
+    route.fulfill({ status: 404, body: '' }));
+  await page.goto('/');
+  await expect(page.locator('#range-warning')).toBeVisible({ timeout: 60000 });
+
+  const label = page.locator('#range-label');
+  const before = await label.textContent();
+  await page.locator('#range-to').evaluate(input => {
+    input.value = String(Number(input.max) / 2);
+    input.dispatchEvent(new Event('input'));
+  });
+  await expect(label).not.toHaveText(before);
+  expect(errors, 'moving the handle throws nothing').toEqual([]);
+});
+
 test('a moved handle travels in the URL', async ({ page }) => {
   await mirror(page, []);
   await page.goto('/?until=2024-06-01T00:00:00.000Z');

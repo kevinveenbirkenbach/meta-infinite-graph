@@ -1,7 +1,10 @@
+import { MetaRegistry } from './registry.js';
+import { MetaResources } from './resources.js';
+
 // Ports of, and kept in sync with:
 //   bond        cli.meta.roles.applications.bond
 //   complexity  cli.meta.roles.applications.complexity
-class MetaTables extends MetaResources {
+export class MetaTables extends MetaResources {
   // {"consumer|provider": {bond, serviceKey, enabled}}. A role's entry
   // for its own entity is skipped: it carries unrelated topics such as users
   // or domains, not a bond to another role.
@@ -154,5 +157,3 @@ class MetaTables extends MetaResources {
     return rows;
   }
 }
-
-window.MetaTables = MetaTables;

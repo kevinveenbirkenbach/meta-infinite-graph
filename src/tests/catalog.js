@@ -1,4 +1,8 @@
-class TestsCatalog {
+import { CiOrder } from '../ciOrder.js';
+import { MetaTables } from '../meta/tables.js';
+import { PlaywrightMatrix } from '../playwrightMatrix.js';
+
+export class TestsCatalog {
   static KINDS = {
     playwright: 'Playwright',
     cli: 'CLI',
@@ -39,6 +43,11 @@ class TestsCatalog {
     this.kind = 'playwright';
     this.gate = 'all';
     this.variantAware = false;
+    this.suites = null;
+    this.cli = null;
+    this.mcp = null;
+    this.meta = null;
+    this.matrix = null;
   }
 
   _keeps(role) {
@@ -214,5 +223,3 @@ class TestsCatalog {
     return [...lines.values()];
   }
 }
-
-window.TestsCatalog = TestsCatalog;

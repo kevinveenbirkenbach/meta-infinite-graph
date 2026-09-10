@@ -1,4 +1,7 @@
-function wireDesign(graphRenderer) {
+import { byId } from '../dom.js';
+import { urlState } from '../context.js';
+
+export function wireDesign(graphRenderer) {
   const root = document.documentElement;
   const families = {
     sans: 'system-ui, -apple-system, "Segoe UI", sans-serif',
@@ -20,11 +23,11 @@ function wireDesign(graphRenderer) {
     }
   };
 
-  const size = document.getElementById('design-font-size');
-  const family = document.getElementById('design-font-family');
-  const veil = document.getElementById('design-opacity');
-  const theme = document.getElementById('design-theme');
-  const zoom = document.getElementById('design-zoom');
+  const size = byId('design-font-size', HTMLInputElement);
+  const family = byId('design-font-family', HTMLSelectElement);
+  const veil = byId('design-opacity', HTMLInputElement);
+  const theme = byId('design-theme', HTMLSelectElement);
+  const zoom = byId('design-zoom', HTMLInputElement);
 
   const applySize = () => {
     root.style.setProperty('--mig-font-size', `${size.value}px`);
@@ -36,13 +39,13 @@ function wireDesign(graphRenderer) {
     write('mig-font-family', family.value);
   };
   const applyZoom = () => {
-    root.style.setProperty('--mig-zoom', String(zoom.value / 100));
+    root.style.setProperty('--mig-zoom', String(Number(zoom.value) / 100));
     document.getElementById('design-zoom-value').textContent = zoom.value;
     write('mig-zoom', zoom.value);
     if (graphRenderer) graphRenderer.setZoom(Number(zoom.value));
   };
   const applyVeil = () => {
-    root.style.setProperty('--mig-veil', String(veil.value / 100));
+    root.style.setProperty('--mig-veil', String(Number(veil.value) / 100));
     document.getElementById('design-opacity-value').textContent = veil.value;
     write('mig-veil', veil.value);
   };

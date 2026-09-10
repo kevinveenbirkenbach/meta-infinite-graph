@@ -1,4 +1,10 @@
-class ForkTree extends ForkHistory {
+import { el, textElement } from '../dom.js';
+import { ForkCards } from './cards.js';
+import { ForkGraph } from './graph.js';
+import { ForkHistory } from './history.js';
+import { ForkPlot } from './plot.js';
+
+export class ForkTree extends ForkHistory {
   constructor(api, container, cards) {
     super(api);
     this.container = container;
@@ -204,5 +210,3 @@ class ForkTree extends ForkHistory {
     body.appendChild(button);
   }
 }
-
-window.ForkTree = ForkTree;

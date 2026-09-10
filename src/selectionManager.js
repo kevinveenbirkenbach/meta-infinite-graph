@@ -1,6 +1,6 @@
 // selectionManager.js
 
-class SelectionManager {
+export class SelectionManager {
   constructor() {
     this.loadedRoles  = new Set();
     this.roleStatus   = {};      // role → 'leaf' | 'internal'
@@ -53,5 +53,3 @@ class SelectionManager {
     return 'green';
   }
 }
-
-window.SelectionManager = SelectionManager;

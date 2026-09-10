@@ -1,4 +1,6 @@
-class MatrixPointer {
+import { MatrixTable } from './table.js';
+
+export class MatrixPointer {
   // Native drag and drop picked a neighbouring heading as its source inside
   // the sticky header, so a press is followed by hand: released in place it
   // sorts, moved past a few pixels it carries the column to where it is let go.
@@ -11,7 +13,8 @@ class MatrixPointer {
     let dragging = false;
     const under = at => {
       const hit = document.elementFromPoint(at.clientX, at.clientY);
-      return hit ? hit.closest('table.role-matrix tr.matrix-keys th') : null;
+      const cell = hit && hit.closest('table.role-matrix tr.matrix-keys th');
+      return cell instanceof HTMLElement ? cell : null;
     };
     const clear = () => {
       for (const cell of document.querySelectorAll('.matrix-drop')) cell.classList.remove('matrix-drop');
@@ -66,5 +69,3 @@ class MatrixPointer {
     document.addEventListener('mouseup', stop);
   }
 }
-
-window.MatrixPointer = MatrixPointer;

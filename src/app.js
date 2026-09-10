@@ -1,33 +1,35 @@
+import { AutoResolver } from './autoResolver.js';
+import { CommitsView } from './commitsView.js';
+import { dataLoader, graphRenderer, selectionManager, setStatus, urlState } from './context.js';
+import { ForkTree } from './fork/tree.js';
+import { GitRange } from './gitRange.js';
+import { GitHubApi } from './github/api.js';
+import { GitHubFeed } from './github/feed.js';
+import { MatrixView } from './matrix/view.js';
+import { MetaGraph } from './meta/graph.js';
+import { MetaTables } from './meta/tables.js';
+import { PlaywrightMatrix } from './playwrightMatrix.js';
+import { RoleCardHost } from './role/cardHost.js';
+import { RoleInfo } from './role/info.js';
+import { TableView } from './table/view.js';
+import { TestsView } from './tests/view.js';
+import { UIManager } from './uiManager.js';
+import { UrlState } from './urlState.js';
+import { wireDesign } from './wire/design.js';
+import { wireForks } from './wire/forks.js';
+import { wireGraphCards, wireRoleSelect } from './wire/graph.js';
+import { wireControls, wireDataSwitches } from './wire/switches.js';
+import { restoreFromUrl } from './wire/url.js';
+import { disableMetaViews, redraw, wirePanels, wireViewMode } from './wire/views.js';
+
 // app.js
 //
 // Boot: scan the roles tree, parse every meta/*.yml, build the derived
 // graph index, then hand over to the UI. Everything after boot is
 // in-memory; expanding nodes never refetches.
 
-window.addEventListener('error', e => {
-  const el = document.getElementById('status');
-  if (el) el.innerText = 'JS error: ' + (e.message || e.error);
-});
-
-const dataLoader = new DataLoader('/roles');
-const selectionManager = new SelectionManager();
-const graphRenderer = new GraphRenderer('graph3d', selectionManager);
-
-const urlState = new UrlState();
-window.urlState = urlState;
-
-function facet(id) {
-  return document.getElementById(id).value;
-}
-
-function setFacet(id, value) {
-  const select = document.getElementById(id);
-  if ([...select.options].some(option => option.value === value)) select.value = value;
-}
-
-function setStatus(text) {
-  document.getElementById('status').innerText = text;
-}
+// The specs reach these through page.evaluate; nothing in the app reads them.
+Object.assign(window, { PlaywrightMatrix, RoleInfo, TableView, TestsView, UrlState });
 
 setStatus('Scanning roles ...');
 

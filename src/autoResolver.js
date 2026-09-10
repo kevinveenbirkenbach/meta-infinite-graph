@@ -4,7 +4,7 @@
 // present in the graph but not yet expanded and expands it, until the
 // reachable frontier is exhausted. All data is already in memory, so a tick
 // never fetches.
-class AutoResolver {
+export class AutoResolver {
   constructor() {
     this.intervalId = null;
   }
@@ -31,5 +31,3 @@ class AutoResolver {
     this.intervalId = null;
   }
 }
-
-window.AutoResolver = AutoResolver;

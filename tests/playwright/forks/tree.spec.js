@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { HOSTILE, openForks } = require('../support/forks');
+const { HOSTILE, enterForks, openForks, stub } = require('../support/forks');
 
 test('the fork tree shows the root and its forks', async ({ page }) => {
   const calls = [];
@@ -47,7 +47,11 @@ test('branches and tags load only when a node is opened', async ({ page }) => {
 
 test('the plot draws a life line per repository and an edge per fork', async ({ page }) => {
   const calls = [];
-  await openForks(page, calls);
+  await stub(page, calls);
+  let release;
+  const histories = new Promise(resolve => { release = resolve; });
+  await page.route(/\/commits(\?|$)/, route => histories.then(() => route.fallback()));
+  await enterForks(page);
   await expect(page.locator('svg.fork-plot')).toBeVisible();
 
   const shape = await page.evaluate(() => ({
@@ -60,7 +64,8 @@ test('the plot draws a life line per repository and an edge per fork', async ({ 
   expect(shape.lifes, 'the root and both forks').toBe(3);
   expect(shape.edges, 'one edge per fork').toBe(2);
   expect(shape.labels).toEqual(['infinito-nexus/core', 'someone/core', 'other/core-fork']);
-  expect(shape.commits, 'no history is fetched until a repository is opened').toBe(0);
+  expect(shape.commits, 'the fork network is drawn before any history arrives').toBe(0);
+  release();
 });
 
 test('the commit lanes carry the merges of every repository', async ({ page }) => {

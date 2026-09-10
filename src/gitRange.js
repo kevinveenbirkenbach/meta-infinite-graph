@@ -1,9 +1,10 @@
+import { byId } from './dom.js';
 // The time range in the bottom bar, over the local mirror served by mig-git.py.
 //
 // Left handle: how far back commits are pulled. At the far left it is the whole
 // history. Right handle: the state every view reads, which for the tables means
 // the roles tree checked out at that commit.
-class GitRange {
+export class GitRange {
   static YEAR = 365 * 24 * 3600 * 1000;
 
   static STEPS = 1000;
@@ -91,14 +92,14 @@ class GitRange {
     const host = document.getElementById('git-range');
     if (!host) return;
     host.hidden = false;
-    this.fromInput = document.getElementById('range-from');
-    this.untilInput = document.getElementById('range-to');
+    this.fromInput = byId('range-from', HTMLInputElement);
+    this.untilInput = byId('range-to', HTMLInputElement);
     for (const input of [this.fromInput, this.untilInput]) {
-      input.min = 0;
-      input.max = GitRange.STEPS;
+      input.min = '0';
+      input.max = String(GitRange.STEPS);
     }
-    this.fromInput.value = this.position(this.from);
-    this.untilInput.value = this.position(this.until);
+    this.fromInput.value = String(this.position(this.from));
+    this.untilInput.value = String(this.position(this.until));
     this._sources();
     this._label();
 
@@ -126,7 +127,7 @@ class GitRange {
     warning.hidden = !(this.missing && this.missing.length);
     if (warning.hidden) return;
     warning.textContent = `⚠ ${this.missing.length} Datei${this.missing.length > 1 ? 'en' : ''} fehlt`;
-    warning.title = `${(this.at || '').slice(0, 10)} kennt das aktuelle Schema nicht: `
+    warning.title = `${(this.missingAt || '').slice(0, 10)} kennt das aktuelle Schema nicht: `
       + `${this.missing.join(', ')} fehlt dort. Die Ansichten, die daraus lesen, sind `
       + 'ausgegraut, weil sie sonst den Arbeitsstand unter einem alten Datum zeigen würden.';
   }
@@ -154,7 +155,7 @@ class GitRange {
         box.value = ref.ref;
         box.checked = this.refs.includes(ref.ref);
         box.addEventListener('change', () => {
-          this.refs = [...menu.querySelectorAll('input:checked')].map(one => one.value);
+          this.refs = [...menu.querySelectorAll('input:checked')].map(one => one.getAttribute('value'));
           this.commit();
         });
         row.appendChild(box);
@@ -185,7 +186,7 @@ class GitRange {
 
   markMissing(date, missing) {
     this.missing = missing;
-    this.at = date;
+    this.missingAt = date;
     this._label();
   }
 
@@ -206,5 +207,3 @@ class GitRange {
       .catch(() => []);
   }
 }
-
-window.GitRange = GitRange;

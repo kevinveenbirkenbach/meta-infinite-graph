@@ -1,4 +1,7 @@
-function wireGraphCards(cardHost) {
+import { graphRenderer } from '../context.js';
+import { byId, el } from '../dom.js';
+
+export function wireGraphCards(cardHost) {
   cardHost.bind(document.body);
   const at = node => {
     const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);
@@ -17,9 +20,9 @@ function wireGraphCards(cardHost) {
 
 // Heaviest role first, so the dropdown and the default start node both open
 // on the busiest hub of the graph.
-function wireRoleSelect(metaGraph) {
+export function wireRoleSelect(metaGraph) {
   const ranked = metaGraph.rolesByWeight();
-  const sel = document.getElementById('sel-role');
+  const sel = byId('sel-role', HTMLSelectElement);
   const fill = list => {
     sel.innerHTML = '';
     for (const role of list) {
@@ -27,8 +30,9 @@ function wireRoleSelect(metaGraph) {
     }
   };
   fill(ranked);
-  document.getElementById('role-search').addEventListener('input', event => {
-    const filter = event.target.value.toLowerCase();
+  const search = byId('role-search', HTMLInputElement);
+  search.addEventListener('input', () => {
+    const filter = search.value.toLowerCase();
     fill(ranked.filter(role => role.toLowerCase().includes(filter)));
   });
   return { sel, ranked };
