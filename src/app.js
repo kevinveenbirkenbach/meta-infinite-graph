@@ -386,7 +386,7 @@ gitRange.load()
       });
     }
 
-    cardHost.bind(document.getElementById('tables'));
+    cardHost.bind(document.body);
     graphRenderer.on('nodeClicked', ({ node }) => {
       cardHost.pin(node.id, () => {
         const point = graphRenderer.graph.graph2ScreenCoords(node.x, node.y, node.z);

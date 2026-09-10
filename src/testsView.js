@@ -465,7 +465,12 @@ class TestsView {
       if (!items || !items.length) continue;
       const definition = document.createElement('dd');
       definition.className = 'chips';
-      for (const item of items) definition.appendChild(TestsView._text('span', item, 'chip'));
+      const services = term === 'Skip gates' || term === 'Branch gates';
+      for (const item of items) {
+        definition.appendChild(services
+          ? roleInfo.serviceChip(item)
+          : TestsView._text('span', item, 'chip'));
+      }
       facts.append(TestsView._text('dt', term), definition);
     }
     card.appendChild(facts);

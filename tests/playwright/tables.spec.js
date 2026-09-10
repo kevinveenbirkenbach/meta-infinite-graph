@@ -243,6 +243,45 @@ test('the design panel takes the ressources out of the card', async ({ page }) =
   await expect(card.locator('.res-fact')).toHaveCount(0);
 });
 
+test('hovering a service in a card opens the card of the role providing it', async ({ page }) => {
+  await open2d(page);
+  const role = await hoverRoleWithDependencies(page);
+  const card = page.locator(`.role-card-host[data-role="${role}"]`);
+  await expect(card).toBeVisible({ timeout: 60000 });
+
+  const chip = card.locator(`dd.chips .chip.service:not([data-role-name="${role}"])`).first();
+  const provider = await chip.getAttribute('data-role-name');
+  const key = await chip.textContent();
+  expect(await page.evaluate(k => window.__mig.tableView.tables.providerOf(k), key),
+    'the chip points at the registry\'s provider, not a guess').toBe(provider);
+
+  await card.hover();
+  await chip.hover();
+  await expect(page.locator(`.role-card-host[data-role="${provider}"]`)).toBeVisible();
+  await expect(card, 'the first card stays while the second opens').toBeVisible();
+});
+
+test('a test card opens the provider of every gating service', async ({ page }) => {
+  await open2d(page);
+  const found = await page.evaluate(() => {
+    const tables = window.__mig.tableView.tables;
+    const key = Object.keys(tables.registry).find(name => tables.providerOf(name));
+    const card = TestsView.card({
+      role: 'web-app-nextcloud', test: 'probe', variant: null, gate: 'runs',
+      skip: [key], branch: [], flags: ['NOT_A_SERVICE'], shared: [],
+    }, window.__mig.roleInfo, undefined);
+    const chips = [...card.querySelectorAll('.chip')];
+    return {
+      key,
+      provider: tables.providerOf(key),
+      gate: chips.find(chip => chip.textContent === key).dataset.roleName,
+      flag: chips.find(chip => chip.textContent === 'NOT_A_SERVICE').dataset.roleName || null,
+    };
+  });
+  expect(found.gate).toBe(found.provider);
+  expect(found.flag, 'an env flag is not a service and opens nothing').toBe(null);
+});
+
 test('the maximize button spreads the card over the window and back', async ({ page }) => {
   await open2d(page);
   const role = await hoverRoleWithDependencies(page);

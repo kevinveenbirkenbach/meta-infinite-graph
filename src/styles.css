@@ -954,6 +954,12 @@ img.role-icon {
   background: var(--bs-tertiary-bg);
 }
 
+.chip.service {
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+
 .role-card-host:not(.maximized) .role-card-resources,
 .role-card-host.maximized .res-fact {
   display: none;

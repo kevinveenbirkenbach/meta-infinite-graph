@@ -18,6 +18,23 @@ class RoleInfo {
     ['PIDs', 'pids_limit_int', value => TableView._fmtNumber(value)],
   ];
 
+  // Args:
+  //   key: a service key as meta/services.yml spells it.
+  //   fallback: the role to open when no role provides the key under that name.
+  // Returns: a chip that opens the providing role's card on hover.
+  serviceChip(key, fallback = null) {
+    const chip = document.createElement('span');
+    chip.className = 'chip';
+    chip.textContent = key;
+    const provider = (this.tables && this.tables.providerOf(key)) || fallback;
+    if (provider) {
+      chip.classList.add('service');
+      chip.dataset.roleName = provider;
+      chip.title = `provided by ${provider}`;
+    }
+    return chip;
+  }
+
   _resources(role) {
     const { totals, rows } = this.tables.resourcesOf(role);
     if (!rows.length) return null;
@@ -56,8 +73,7 @@ class RoleInfo {
     for (const row of rows) {
       const line = services.insertRow();
       const service = line.insertCell();
-      service.textContent = row.service;
-      service.title = row.role;
+      service.appendChild(this.serviceChip(row.service, row.role));
       service.style.paddingLeft = `${(row.depth - 1) * 0.9 + 0.8}em`;
       for (const [, key, format] of RoleInfo.RESOURCES) {
         const cell = line.insertCell();
@@ -203,21 +219,18 @@ class RoleInfo {
       definition.textContent = value;
       facts.append(term, definition);
     }
-    for (const [name, items] of [
-      ['Services', attributes.services || []],
-      ['Tags', attributes.galaxy_tags || []],
+    for (const [name, items, chip] of [
+      ['Services', attributes.services || [], item => this.serviceChip(item)],
+      ['Tags', attributes.galaxy_tags || [], item => Object.assign(
+        document.createElement('span'), { className: 'chip', textContent: item }
+      )],
     ]) {
       if (!items.length) continue;
       const term = document.createElement('dt');
       term.textContent = name;
       const definition = document.createElement('dd');
       definition.className = 'chips';
-      for (const item of items) {
-        const chip = document.createElement('span');
-        chip.className = 'chip';
-        chip.textContent = item;
-        definition.appendChild(chip);
-      }
+      for (const item of items) definition.appendChild(chip(item));
       facts.append(term, definition);
     }
     const totals = this.resources && this.tables ? this.tables.resourcesOf(role) : null;
