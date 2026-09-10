@@ -1,3 +1,4 @@
 *
 !.gitignore
+!.nocheck
 !settings.json

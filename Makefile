@@ -11,7 +11,7 @@ IMAGE ?= meta-infinite-graph:local
 #   cannot install its own. Empty means playwright uses its bundled browser.
 MIG_CHROMIUM ?=
 
-.PHONY: help up down logs rebuild e2e test test-fast image nginx-verify nginx-probe gh-status git-status clean
+.PHONY: help up down logs rebuild e2e test test-fast lint image nginx-verify nginx-probe gh-status git-status clean
 
 help:
 	@echo "Targets:"
@@ -22,6 +22,7 @@ help:
 	@echo "  make e2e                 Start stack, run HTTP E2E checks, stop stack"
 	@echo "  make test                Install browsers, then run the Playwright suite"
 	@echo "  make test-fast           Run the Playwright suite without installing"
+	@echo "  make lint                Run the repository lints under tests/lint"
 	@echo "  make image               Build the container image"
 	@echo "  make nginx-verify        Check the generated GitHub proxy config, with and without a token"
 	@echo "  make nginx-probe         Serve the image and probe the proxy routes"
@@ -56,6 +57,9 @@ test:
 
 test-fast:
 	MIG_CHROMIUM=$(MIG_CHROMIUM) npx playwright test $(ARGS)
+
+lint:
+	python3 -m pytest -q tests/lint
 
 image:
 	docker build -t $(IMAGE) .
