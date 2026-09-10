@@ -7,20 +7,27 @@
 # Param: MIG_GIT_PORT     where mig-git.py listens and nginx proxies /git/ to
 set -eu
 
+ROOT="${MIG_GIT_ROOT:?set in .env}"
+HOME_DIR="${MIG_GIT_HOME:?set in .env}"
+MIRROR="$HOME_DIR/mirror.git"
+FORKS="${MIG_GIT_FORKS:?set in .env}"
+
 cat > /etc/nginx/mig-git.conf <<CONFIG
   location /git/ {
     proxy_pass http://127.0.0.1:${MIG_GIT_PORT}/;
     proxy_read_timeout 900s;
     add_header Cache-Control "no-store";
   }
+
+  location /at/ {
+    alias ${HOME_DIR}/worktrees/;
+    autoindex on;
+    autoindex_format json;
+    add_header Cache-Control "no-store";
+  }
 CONFIG
 
-ROOT="${MIG_GIT_ROOT:-infinito-nexus/core}"
-HOME_DIR="${MIG_GIT_HOME:-/var/lib/mig}"
-MIRROR="$HOME_DIR/mirror.git"
-FORKS="${MIG_GIT_FORKS:-auto}"
-
-mkdir -p "$HOME_DIR"
+mkdir -p "$HOME_DIR/worktrees"
 
 # Backgrounded, clone included: nginx only starts once this script returns, so
 # any network call made here in the foreground holds the whole page back.
@@ -62,4 +69,4 @@ mkdir -p "$HOME_DIR"
   echo "mig-git: mirror up to date"
 ) &
 
-MIG_GIT_ROOT="$ROOT" MIG_GIT_HOME="$HOME_DIR" python3 /usr/local/bin/mig-git.py &
+python3 /usr/local/bin/mig-git.py &

@@ -19,12 +19,12 @@ import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
-ROOT = os.environ.get("MIG_GIT_ROOT", "infinito-nexus/core")
-HOME = os.environ.get("MIG_GIT_HOME", "/var/lib/mig")
+ROOT = os.environ["MIG_GIT_ROOT"]
+HOME = os.environ["MIG_GIT_HOME"]
 MIRROR = os.path.join(HOME, "mirror.git")
 TREES = os.path.join(HOME, "worktrees")
 PORT = int(os.environ["MIG_GIT_PORT"])
-KEEP = int(os.environ.get("MIG_GIT_KEEP", "3"))
+KEEP = int(os.environ["MIG_GIT_KEEP"])
 UNIT = "\x1f"
 
 

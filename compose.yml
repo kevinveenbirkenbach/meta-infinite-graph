@@ -19,11 +19,12 @@ services:
       - "${INFINITO_ENV_FILE:-../infinito-nexus-core/default.env}:/etc/mig/infinito.env:ro"
       # Named, so a rebuild keeps the clone; dropping the volume costs one
       # full clone, not any data.
-      - "mig-git:/var/lib/mig"
+      - "mig-git:${MIG_GIT_HOME:?set in .env (generated from default.env)}"
     environment:
       MIG_GITHUB_TOKEN: "${MIG_GITHUB_TOKEN:-}"
-      MIG_GIT_ROOT: "${MIG_GIT_ROOT:-infinito-nexus/core}"
-      MIG_GIT_FORKS: "${MIG_GIT_FORKS:-auto}"
+      MIG_GIT_ROOT: "${MIG_GIT_ROOT:?set in .env (generated from default.env)}"
+      MIG_GIT_FORKS: "${MIG_GIT_FORKS:?set in .env (generated from default.env)}"
+      MIG_GIT_HOME: "${MIG_GIT_HOME:?set in .env (generated from default.env)}"
 
 volumes:
   mig-git:
