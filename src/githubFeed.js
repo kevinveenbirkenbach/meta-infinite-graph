@@ -46,13 +46,6 @@ class GitHubFeed {
     this.container = container;
   }
 
-  static _text(tag, text, className) {
-    const element = document.createElement(tag);
-    element.textContent = text;
-    if (className) element.className = className;
-    return element;
-  }
-
   // The menu ticks refs, but a feed is per repository.
   _repos() {
     const wanted = new Set();
@@ -67,8 +60,8 @@ class GitHubFeed {
     this.container.innerHTML = '';
     const section = document.createElement('div');
     section.className = 'table-section';
-    section.appendChild(GitHubFeed._text('h2', spec.title));
-    this.note = GitHubFeed._text('p', 'Asking GitHub …', 'table-note');
+    section.appendChild(textElement('h2', spec.title));
+    this.note = textElement('p', 'Asking GitHub …', 'table-note');
     section.appendChild(this.note);
     this.host = document.createElement('div');
     section.appendChild(this.host);
@@ -111,7 +104,7 @@ class GitHubFeed {
     table.className = 'table table-sm feed-table';
     const head = document.createElement('thead');
     const headRow = document.createElement('tr');
-    for (const title of spec.columns) headRow.appendChild(GitHubFeed._text('th', title));
+    for (const title of spec.columns) headRow.appendChild(textElement('th', title));
     head.appendChild(headRow);
     table.appendChild(head);
 
@@ -120,7 +113,7 @@ class GitHubFeed {
       const line = document.createElement('tr');
       const cells = spec.cells(entry);
       cells.forEach((value, index) => {
-        const cell = GitHubFeed._text('td', value);
+        const cell = textElement('td', value);
         if (index === 2) {
           cell.className = `feed-mark feed-${spec.mark(entry)}`;
         }

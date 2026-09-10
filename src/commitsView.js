@@ -14,13 +14,6 @@ class CommitsView {
     this.walked.clear();
   }
 
-  static _text(tag, text, className) {
-    const element = document.createElement(tag);
-    element.textContent = text;
-    if (className) element.className = className;
-    return element;
-  }
-
   _repoOf() {
     const owner = new Map();
     for (const repo of (this.range.catalog || { repos: [] }).repos) {
@@ -33,8 +26,8 @@ class CommitsView {
     this.container.innerHTML = '';
     const section = document.createElement('div');
     section.className = 'table-section';
-    section.appendChild(CommitsView._text('h2', 'Commits'));
-    this.note = CommitsView._text('p', 'Reading the mirror …', 'table-note');
+    section.appendChild(textElement('h2', 'Commits'));
+    this.note = textElement('p', 'Reading the mirror …', 'table-note');
     section.appendChild(this.note);
     this.host = document.createElement('div');
     this.host.className = 'commits-host';
@@ -81,7 +74,7 @@ class CommitsView {
     const head = document.createElement('thead');
     const headRow = document.createElement('tr');
     for (const title of ['Date', 'Repository', 'Ref', 'Commit', 'Subject']) {
-      headRow.appendChild(CommitsView._text('th', title));
+      headRow.appendChild(textElement('th', title));
     }
     head.appendChild(headRow);
     table.appendChild(head);
@@ -89,13 +82,13 @@ class CommitsView {
     const body = document.createElement('tbody');
     for (const row of listed) {
       const line = document.createElement('tr');
-      line.appendChild(CommitsView._text('td', row.date.slice(0, 10), 'commits-date'));
-      line.appendChild(CommitsView._text('td', row.repo));
-      line.appendChild(CommitsView._text('td', row.ref, 'commits-ref'));
-      const sha = CommitsView._text('td', row.sha.slice(0, 8), 'commits-sha');
+      line.appendChild(textElement('td', row.date.slice(0, 10), 'commits-date'));
+      line.appendChild(textElement('td', row.repo));
+      line.appendChild(textElement('td', row.ref, 'commits-ref'));
+      const sha = textElement('td', row.sha.slice(0, 8), 'commits-sha');
       sha.title = row.sha;
       line.appendChild(sha);
-      const subject = CommitsView._text('td', row.message, 'commits-subject');
+      const subject = textElement('td', row.message, 'commits-subject');
       if ((row.parents || []).length > 1) subject.classList.add('merge');
       line.appendChild(subject);
       body.appendChild(line);
