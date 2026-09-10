@@ -40,7 +40,7 @@ function currentView() {
 
 // Filling these from the working copy would put today's numbers under a past
 // timestamp, so at a date that predates the schema they are greyed instead.
-const META_VIEWS = ['graph', 'bond', 'complexity', 'tests'];
+const META_VIEWS = ['graph', 'bond', 'matrix', 'tests'];
 
 function disableMetaViews(missing) {
   const why = `${missing.join(', ')} does not exist at the chosen date. This view reads `
@@ -52,6 +52,9 @@ function disableMetaViews(missing) {
     label.classList.add('view-unavailable');
     label.title = why;
   }
+  const roles = document.getElementById('btn-roles');
+  roles.classList.add('view-unavailable');
+  roles.title = why;
   if (META_VIEWS.includes(currentView())) {
     document.getElementById('view-commits').checked = true;
   }
@@ -76,6 +79,10 @@ function wireViewMode(tableView, forkTree, testsView, feeds) {
     for (const element of document.querySelectorAll('.tests-only')) {
       element.hidden = view !== 'tests';
     }
+    const roles = document.getElementById('btn-roles');
+    const sub = document.querySelector(`label[for="view-${view}"].dropdown-item`);
+    roles.classList.toggle('active', Boolean(sub));
+    roles.textContent = sub ? `Roles · ${sub.textContent}` : 'Roles';
     if (view === 'forks') forkTree.show();
     else if (view === 'tests') testsView.show();
     else if (feeds[view]) feeds[view].show();
@@ -359,6 +366,10 @@ gitRange.load()
     const forkTree = new ForkTree(new GitHubApi(), document.getElementById('tables'), cardHost);
     forkTree.useMirror(gitRange);
     const tables = document.getElementById('tables');
+    const matrixView = new MatrixView(
+      tableView, dataLoader, tables, () => urlState.capture(), cardHost
+    );
+    tableView.matrix = matrixView;
     const feeds = {
       commits: new CommitsView(gitRange, tables),
       pulls: new GitHubFeed('pulls', forkTree.api, gitRange, tables),
@@ -448,6 +459,24 @@ gitRange.load()
         forkTree.branches = value === 'true';
         document.getElementById('design-branches').checked = forkTree.branches;
       }, 'true')
+      .register('cols', () => matrixView.columns.join(','), value => {
+        matrixView.columns = ['role', ...value.split(',').filter(id => id && id !== 'role')];
+      }, MatrixView.DEFAULT.join(','))
+      .register('order', () => matrixView.sort.map(key => `${key.id}:${key.dir}`).join(','), value => {
+        matrixView.sort = value.split(',').filter(Boolean).map(entry => {
+          const cut = entry.lastIndexOf(':');
+          return { id: entry.slice(0, cut), dir: entry.slice(cut + 1) === 'desc' ? 'desc' : 'asc' };
+        });
+      }, 'role:asc')
+      .register('complexity', () => String(matrixView.complexity), value => {
+        matrixView.complexity = value === 'true';
+      }, 'false')
+      .register('find', () => matrixView.find, value => {
+        matrixView.find = value;
+      }, '')
+      .register('density', () => matrixView.density, value => {
+        matrixView.density = value === 'comfort' ? 'comfort' : 'compact';
+      }, 'compact')
       .register('resources', () => String(roleInfo.resources), value => {
         roleInfo.resources = value === 'true';
         document.getElementById('design-resources').checked = roleInfo.resources;
@@ -501,6 +530,13 @@ gitRange.load()
         urlState.capture();
       });
     }
+    const columnSearch = document.getElementById('matrix-columns-search');
+    columnSearch.addEventListener('input', () => matrixView.renderPicker(
+      document.getElementById('matrix-columns'), columnSearch.value
+    ));
+    document.getElementById('matrix-columns-reset')
+      .addEventListener('click', () => matrixView.setColumns([...MatrixView.DEFAULT]));
+    matrixView.renderPicker(document.getElementById('matrix-columns'), '');
     const resources = document.getElementById('design-resources');
     resources.addEventListener('change', () => {
       roleInfo.resources = resources.checked;
@@ -523,7 +559,7 @@ gitRange.load()
       urlState.capture();
       window.__mig = {
         metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
-        testsView, dataLoader, gitRange, feeds,
+        testsView, dataLoader, gitRange, feeds, matrixView,
         graph: graphRenderer.graph,
       };
     });

@@ -99,6 +99,7 @@ class TableView {
   }
 
   show(kind) {
+    if (kind === 'matrix') return this.matrix.show();
     this.kind = kind;
     const key = `${kind}|${this.variantAware}|${this.roleInfo.symbols}`;
     this.container.innerHTML = '';
@@ -299,52 +300,6 @@ class TableView {
     return span;
   }
 
-  _buildComplexity() {
-    const rows = this.tables.complexityRows(this.variantAware)
-      .filter(row => this._keeps(row.name))
-      .sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name)
-        || (a.variant || 0) - (b.variant || 0));
-    const table = document.createElement('table');
-    table.className = 'table table-sm table-striped';
-    const headers = [
-      'role', 'lifecycle', 'embeds', 'consumers', 'embeds_direct', 'consumers_direct',
-      'weight', 'integrated', 'clone', 'siblings',
-    ];
-    table.appendChild(TableView._headRow(this.variantAware ? ['variant', ...headers] : headers));
-    const tbody = document.createElement('tbody');
-    for (const row of rows) {
-      const tr = document.createElement('tr');
-      if (this.variantAware) {
-        tr.appendChild(TableView._cell(TableView._fmtVariant(row.variant), 'num'));
-      }
-      tr.append(
-        this._roleCell(row.name),
-        TableView._cell(row.lifecycle || '-'),
-        TableView._cell(String(row.embeds), 'num'),
-        TableView._cell(String(row.consumers), 'num'),
-        TableView._cell(String(row.embeds_direct), 'num'),
-        TableView._cell(String(row.consumers_direct), 'num'),
-        TableView._cell(String(row.weight), 'num'),
-        this._boolCell(row.integrated),
-        this._boolCell(row.clone),
-        this._roleListCell(row.siblings)
-      );
-      tbody.appendChild(tr);
-    }
-    table.appendChild(tbody);
-
-    const scope = this.variantAware
-      ? `${rows.length} rows, one per variant; a variant changes what the role embeds, `
-        + 'never who embeds it'
-      : `${rows.length} application roles`;
-    return this._wrap(
-      'Complexity',
-      `${scope}, heaviest first. The CI columns the CLI adds (compose, swarm, host, `
-      + 'stack, test_*, variants, in_main) need the git history, default.env and each '
-      + 'role templates directory, none of which the browser reads.',
-      table
-    );
-  }
 }
 
 window.TableView = TableView;

@@ -25,12 +25,18 @@
       </span>
       <div class="ms-auto d-flex align-items-center gap-2">
         <div class="btn-group btn-group-sm" role="group">
-          <input type="radio" class="btn-check" name="view" id="view-graph" value="graph" checked>
-          <label class="btn btn-outline-light" for="view-graph">Cosmos</label>
-          <input type="radio" class="btn-check" name="view" id="view-bond" value="bond">
-          <label class="btn btn-outline-light" for="view-bond">Bond</label>
-          <input type="radio" class="btn-check" name="view" id="view-complexity" value="complexity">
-          <label class="btn btn-outline-light" for="view-complexity">Complexity</label>
+          <div class="btn-group btn-group-sm" role="group">
+            <button id="btn-roles" type="button" class="btn btn-outline-light dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">Roles</button>
+            <div class="dropdown-menu roles-menu">
+              <input type="radio" class="btn-check" name="view" id="view-graph" value="graph" checked>
+              <label class="dropdown-item" for="view-graph">Cosmos</label>
+              <input type="radio" class="btn-check" name="view" id="view-bond" value="bond">
+              <label class="dropdown-item" for="view-bond">Bond</label>
+              <input type="radio" class="btn-check" name="view" id="view-matrix" value="matrix">
+              <label class="dropdown-item" for="view-matrix">Matrix</label>
+            </div>
+          </div>
           <input type="radio" class="btn-check" name="view" id="view-forks" value="forks">
           <label class="btn btn-outline-light" for="view-forks">Timeline</label>
           <input type="radio" class="btn-check" name="view" id="view-tests" value="tests">
@@ -119,6 +125,15 @@
       </label>
       <input type="range" class="form-range mb-3" id="design-opacity"
              min="0" max="100" step="1" value="5">
+
+      <label class="form-label mb-1" for="matrix-columns-search">Matrix columns</label>
+      <div class="d-flex gap-1 mb-1">
+        <input type="search" id="matrix-columns-search" class="form-control form-control-sm"
+               placeholder="Filter columns …">
+        <button id="matrix-columns-reset" type="button" class="btn btn-sm btn-outline-primary"
+                title="The twelve default columns">Default</button>
+      </div>
+      <div id="matrix-columns" class="matrix-columns mb-3"></div>
 
       <label class="form-label mb-1" for="design-zoom">
         Zoom <span id="design-zoom-value">100</span>%
@@ -316,6 +331,7 @@
   <script src="gitRange.js"></script>
   <script src="commitsView.js"></script>
   <script src="githubFeed.js"></script>
+  <script src="matrixView.js"></script>
   <script src="githubApi.js"></script>
   <script src="forkGraph.js"></script>
   <script src="forkPlot.js"></script>

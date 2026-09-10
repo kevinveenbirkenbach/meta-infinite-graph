@@ -426,6 +426,7 @@ test('the cache spares the quota on a second visit', async ({ page }) => {
   await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
   await expect.poll(() => calls.length).toBe(5);
 
+  await page.locator('#btn-roles').click();
   await page.locator('label[for="view-graph"]').click();
   await page.locator('label[for="view-forks"]').click();
   await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);

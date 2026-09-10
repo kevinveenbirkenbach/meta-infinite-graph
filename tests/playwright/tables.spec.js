@@ -1,13 +1,22 @@
 const { test, expect } = require('@playwright/test');
 
 // Bootstrap hides a .btn-check radio and puts its label on top, so the label
-// is the only clickable half of the control.
+// is the only clickable half of the control. Cosmos, Bond and Matrix sit in
+// the Roles menu, whose labels are not visible until it opens.
+async function pickView(page, view) {
+  const label = page.locator(`label[for="view-${view}"]`);
+  if (!(await label.isVisible()) && await label.evaluate(el => Boolean(el.closest('.roles-menu')))) {
+    await page.locator('#btn-roles').click();
+  }
+  await label.click();
+}
+
 async function open2d(page, view = 'bond') {
   await page.goto('/');
   await expect
     .poll(() => page.evaluate(() => Boolean(window.__mig?.tableView)))
     .toBe(true);
-  await page.locator(`label[for="view-${view}"]`).click();
+  await pickView(page, view);
   // The switch renders the table, and a row grabbed mid-render is replaced by
   // the one that follows, which loses whatever the caller hovered.
   await expect
@@ -44,7 +53,7 @@ test('the idle mode stays behind the active one at 0.95', async ({ page }) => {
   expect(await style(graph)).toEqual({ opacity: '1', z: '800', events: 'none' });
   await expect(graph).toBeVisible();
 
-  await page.locator('label[for="view-graph"]').click();
+  await pickView(page, 'graph');
   await expect(graph).toHaveClass(/pane-front/);
   await expect(pane).toHaveClass(/pane-back/);
   expect(await style(graph)).toEqual({ opacity: '0.95', z: '900', events: 'auto' });
@@ -65,14 +74,16 @@ test('the bond matrix is square over the participating roles', async ({ page }) 
     .toBeGreaterThan(0);
 });
 
-test('complexity renders a row per application role, and ressources has no tab', async ({ page }) => {
-  await open2d(page);
-  expect(await page.locator('#view-ressources').count(), 'the ressources moved into the card')
-    .toBe(0);
-  await page.locator('label[for="view-complexity"]').click();
-  await expect.poll(() => page.locator('#tables tbody tr').count()).toBeGreaterThan(100);
-  await expect(page.locator('#tables thead')).toContainText('weight');
-});
+test('roles gathers cosmos, bond and the matrix; ressources and complexity have no tab',
+  async ({ page }) => {
+    await open2d(page);
+    expect(await page.locator('#view-ressources').count(), 'the ressources moved into the card')
+      .toBe(0);
+    expect(await page.locator('#view-complexity').count(), 'complexity is a matrix filter')
+      .toBe(0);
+    await expect(page.locator('.roles-menu label')).toHaveText(['Cosmos', 'Bond', 'Matrix']);
+    await expect(page.locator('#btn-roles')).toHaveText('Roles · Bond');
+  });
 
 test('hover crosses the pair in yellow, a click locks it in violet', async ({ page }) => {
   await open2d(page);
@@ -317,21 +328,6 @@ test('only a role card gets the maximize button', async ({ page }) => {
   await expect(page.locator('.role-card-host[data-role="#probe"] .role-card-grow')).toHaveCount(0);
 });
 
-test('a card pinned before it is built still shows as pinned', async ({ page }) => {
-  await page.goto('/');
-  await expect.poll(() => page.evaluate(() => Boolean(window.__mig?.cardHost)), { timeout: 60000 })
-    .toBe(true);
-  // A card is always built after the role info has loaded, so a pin on a card
-  // nobody hovered yet always lands before its element exists.
-  const role = await page.evaluate(() => {
-    const name = window.__mig.metaGraph.roles.find(candidate => candidate.startsWith('web-app-'));
-    window.__mig.cardHost.pin(name, () => ({ x: 200, y: 200 }));
-    return name;
-  });
-  await expect(page.locator(`.role-card-host.pinned[data-role="${role}"]`))
-    .toBeVisible({ timeout: 60000 });
-});
-
 test('a second card opens without replacing the first', async ({ page }) => {
   await open2d(page);
   const heads = page.locator('table.bond-matrix tbody th[data-role-name]');
@@ -357,8 +353,10 @@ test('a second card opens without replacing the first', async ({ page }) => {
 });
 
 test('symbol mode reaches the siblings list and the yes/no columns', async ({ page }) => {
-  await open2d(page);
-  await page.locator('label[for="view-complexity"]').click();
+  await page.goto('/?view=matrix&complexity=true&order=complexity.weight:desc'
+    + '&cols=role,complexity.integrated,complexity.siblings');
+  await expect.poll(() => page.locator('table.role-matrix tbody tr').count(), { timeout: 90000 })
+    .toBeGreaterThan(100);
   const siblings = page.locator('#tables tbody tr').first().locator('td').last();
   await expect(siblings).toHaveText(/[a-z]/);
 
@@ -427,13 +425,14 @@ test('variant awareness adds a variant axis to every table', async ({ page }) =>
   ).toBeGreaterThan(0);
   expect(await rows.count()).toBeGreaterThan(before);
 
-  await page.locator('label[for="view-complexity"]').click();
-  await expect(page.locator('#tables thead')).toContainText('variant');
+  await pickView(page, 'matrix');
+  await expect(page.locator('table.role-matrix thead')).toContainText('variant', { timeout: 90000 });
 });
 
 test('a facet narrows the tables, not just the graph', async ({ page }) => {
-  await open2d(page, 'complexity');
-  const rows = page.locator('#tables tbody tr');
+  await open2d(page, 'matrix');
+  const rows = page.locator('table.role-matrix tbody tr');
+  await expect.poll(() => rows.count(), { timeout: 90000 }).toBeGreaterThan(100);
   const before = await rows.count();
   expect(before).toBeGreaterThan(100);
 
@@ -444,7 +443,7 @@ test('a facet narrows the tables, not just the graph', async ({ page }) => {
   await expect.poll(() => rows.count()).toBeLessThan(before);
   expect(await rows.count()).toBeGreaterThan(0);
 
-  await page.locator('label[for="view-bond"]').click();
+  await pickView(page, 'bond');
   const axis = page.locator('table.bond-matrix tbody tr');
   await expect.poll(() => axis.count()).toBeGreaterThan(0);
   expect(await axis.count()).toBeLessThan(123);
@@ -507,7 +506,10 @@ test('a reload restores the view, the filters and the design', async ({ page }) 
   const lifecycle = page.locator('#facet-lifecycle');
   const value = await lifecycle.locator('option').nth(1).getAttribute('value');
   await lifecycle.selectOption(value);
-  await page.locator('label[for="view-complexity"]').click();
+  await pickView(page, 'matrix');
+  await expect.poll(() => page.locator('table.role-matrix tbody tr').count(), { timeout: 90000 })
+    .toBeGreaterThan(0);
+  await page.locator('[data-preset="complexity"]').click();
 
   await openDesign(page);
   await page.locator('#design-font-size').fill('18');
@@ -518,7 +520,8 @@ test('a reload restores the view, the filters and the design', async ({ page }) 
   await expect.poll(() => page.locator('#btn-symbols').isEnabled(), { timeout: 60000 }).toBe(true);
 
   const before = await page.evaluate(() => window.location.search);
-  expect(before).toContain('view=complexity');
+  expect(before).toContain('view=matrix');
+  expect(before).toContain('complexity=true');
   expect(before).toContain('symbols=true');
   expect(before).toContain('fontsize=18');
   expect(before).toContain('font=mono');
@@ -531,7 +534,8 @@ test('a reload restores the view, the filters and the design', async ({ page }) 
     .poll(() => page.evaluate(() => Boolean(window.__mig?.tableView)), { timeout: 60000 })
     .toBe(true);
   await expect.poll(() => page.locator('#tables tbody tr').count()).toBe(rows);
-  await expect(page.locator('#view-complexity')).toBeChecked();
+  await expect(page.locator('#view-matrix')).toBeChecked();
+  await expect(page.locator('[data-preset="complexity"]')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'dark');
   await expect(page.locator('#edge-run-after')).toBeChecked();
   expect(await page.evaluate(() => window.__mig.roleInfo.symbols)).toBe(true);

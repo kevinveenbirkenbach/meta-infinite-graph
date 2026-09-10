@@ -201,6 +201,23 @@ class DataLoader {
     return promise;
   }
 
+  // Returns: role -> { file -> parsed yaml } for every meta/*.yml a role has,
+  //   read from its directory listing rather than a fixed list of names. A
+  //   directory under roles/ without one (__pycache__, .claude) is no role.
+  loadMetaTree(roles, limit = 12) {
+    const read = role => this.listDir(`${role}/meta`)
+      .then(entries => entries
+        .filter(entry => entry.type === 'file' && entry.name.endsWith('.yml'))
+        .map(entry => entry.name.slice(0, -4)))
+      .then(files => Promise.all(files.map(file => this.loadSideFile(role, file)
+        .then(data => [file, data]))))
+      .then(pairs => [role, Object.fromEntries(
+        pairs.filter(([, data]) => data !== null && data !== undefined)
+      )]);
+    return this._pool(roles, read, limit)
+      .then(pairs => Object.fromEntries(pairs.filter(([, files]) => Object.keys(files).length)));
+  }
+
   loadSideFileAll(roles, name, limit = 12) {
     return this._pool(roles, role => this.loadSideFile(role, name).then(data => [role, data]), limit)
       .then(pairs => Object.fromEntries(pairs.filter(([, data]) => data)));
