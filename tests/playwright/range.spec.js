@@ -137,7 +137,7 @@ test('a date without the current schema greys the views that need it',
 
     const warning = page.locator('#range-warning');
     await expect(warning).toBeVisible();
-    await expect(warning).toContainText('fehlt');
+    await expect(warning).toContainText('missing');
     expect(await warning.getAttribute('title'), 'the tooltip names the file')
       .toContain('meta/categories.yml');
 

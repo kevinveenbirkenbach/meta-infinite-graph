@@ -1,15 +1,16 @@
 import { el } from '../dom.js';
 import { html, render } from '../html.js';
+import { t } from '../i18n.js';
 
 // Neither lives in a git mirror, so these are the only views still spending
 // GitHub requests. GitHubApi caches every answer, so a second visit is free.
 export class GitHubFeed {
   static KINDS = {
     pulls: {
-      title: 'Pull requests',
+      title: t('feed.pulls.title'),
       path: full => `/repos/${full}/pulls?state=all&per_page=100&sort=updated&direction=desc`,
       when: entry => entry.updated_at || entry.created_at,
-      columns: ['Updated', 'Repository', 'State', 'PR', 'Title'],
+      columns: ['updated', 'repository', 'state', 'number', 'subject'].map(column => t(`feed.pulls.${column}`)),
       cells: entry => [
         (entry.updated_at || '').slice(0, 10),
         entry.base && entry.base.repo ? entry.base.repo.full_name : '',
@@ -21,11 +22,11 @@ export class GitHubFeed {
       link: entry => entry.html_url,
     },
     actions: {
-      title: 'Workflow runs',
+      title: t('feed.actions.title'),
       path: full => `/repos/${full}/actions/runs?per_page=100`,
       list: body => (body && body.workflow_runs) || [],
       when: entry => entry.created_at,
-      columns: ['Started', 'Repository', 'Result', 'Run', 'Workflow'],
+      columns: ['started', 'repository', 'result', 'run', 'workflow'].map(column => t(`feed.actions.${column}`)),
       cells: entry => [
         (entry.created_at || '').slice(0, 10),
         entry.repository ? entry.repository.full_name : '',
@@ -66,13 +67,11 @@ export class GitHubFeed {
   show() {
     const spec = GitHubFeed.KINDS[this.kind];
     this.container.replaceChildren(this.root);
-    this._paint(spec, 'Asking GitHub …', null);
+    this._paint(spec, t('feed.asking'), null);
 
     const repos = this._repos();
     if (!repos.length) {
-      this._paint(spec, this.range.catalog
-        ? 'No source ticked. Pick a repository in the sources menu below.'
-        : 'No local mirror, so there is no source list to read from.', null);
+      this._paint(spec, t(this.range.catalog ? 'feed.noSource' : 'feed.noMirror'), null);
       return Promise.resolve([]);
     }
     return Promise.all(repos.map(full => this.api.get(spec.path(full), false)
@@ -97,9 +96,8 @@ export class GitHubFeed {
       return !Number.isNaN(at) && at >= from && at <= until;
     }).sort((one, other) => Date.parse(spec.when(other)) - Date.parse(spec.when(one)));
 
-    this._paint(spec, `${inside.length} of ${entries.length} in this window, `
-      + `across ${repos.length} ${repos.length === 1 ? 'repository' : 'repositories'}.`
-      + (this.failed ? ` GitHub answered ${this.failed.status || 'with an error'}.` : ''), inside);
+    this._paint(spec, t('feed.note', { inside: inside.length, total: entries.length, n: repos.length })
+      + (this.failed ? ` ${t('feed.failed', { status: this.failed.status || t('feed.anError') })}` : ''), inside);
     return inside;
   }
 }

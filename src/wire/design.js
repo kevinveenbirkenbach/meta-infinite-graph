@@ -1,5 +1,17 @@
-import { byId } from '../dom.js';
 import { urlState } from '../context.js';
+import { byId, el } from '../dom.js';
+import { LANGUAGES, choice, choose, language, t } from '../i18n.js';
+
+function wireLanguage() {
+  const select = byId('design-language', HTMLSelectElement);
+  const named = [...LANGUAGES].sort((one, other) => one.name.localeCompare(other.name, language));
+  select.replaceChildren(
+    el('option', { value: 'auto', textContent: t('design.languageAuto') }),
+    ...named.map(({ code, name }) => el('option', { value: code, textContent: name }))
+  );
+  select.value = choice;
+  select.addEventListener('change', () => choose(select.value));
+}
 
 export function wireDesign(graphRenderer) {
   const root = document.documentElement;
@@ -93,4 +105,5 @@ export function wireDesign(graphRenderer) {
   applyVeil();
   applyZoom();
   urlState.apply(['theme', 'fontsize', 'font', 'veil', 'zoom']);
+  wireLanguage();
 }

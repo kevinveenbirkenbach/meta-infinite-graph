@@ -1,5 +1,6 @@
 import { byId, el } from '../dom.js';
 import { html, render } from '../html.js';
+import { t } from '../i18n.js';
 import { MatrixModel } from './model.js';
 import { MatrixPanels } from './panels.js';
 import { MatrixTable } from './table.js';
@@ -185,7 +186,7 @@ export class MatrixView {
     const columns = this.visible();
     const rows = this.model.rows(columns, this.find, this.sort);
     render(html`
-      <h2>Matrix</h2>
+      <h2>${t('view.matrix')}</h2>
       ${this.toolbar.render()}
       <p class="table-note">${this.table.note(rows, columns)}</p>
       <div class="matrix-host">${this.table.grid(rows, columns)}</div>
@@ -198,7 +199,7 @@ export class MatrixView {
     this.panels.close();
     this.container.replaceChildren(this.root);
     if (!this.model.meta) {
-      render(html`<p class="table-note">Reading every meta/*.yml …</p>`, this.root);
+      render(html`<p class="table-note">${t('matrix.reading')}</p>`, this.root);
       return this.model.load().then(() => {
         this.panels.list(document.getElementById('matrix-columns'), '');
         if (this.tableView.kind === 'matrix') this.show();

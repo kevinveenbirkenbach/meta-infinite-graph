@@ -1,3 +1,4 @@
+import { t } from './i18n.js';
 export class PlaywrightMatrix {
   // Args:
   //   harness: helper name -> { skip, branch }, from parseHarness(). Specs
@@ -131,15 +132,15 @@ export class PlaywrightMatrix {
   // Returns: { state, why } with state true, false or null.
   state(service, payload, flags) {
     const key = PlaywrightMatrix.envKey(service);
-    if (!(key in flags)) return { state: false, why: `${key} is not declared` };
+    if (!(key in flags)) return { state: false, why: t('tests.why.undeclared', { key }) };
     const path = flags[key];
-    if (!path) return { state: null, why: `${key} reads a role variable` };
+    if (!path) return { state: null, why: t('tests.why.variable', { key }) };
     const value = PlaywrightMatrix._at(payload, path);
     if (value === undefined) {
-      return { state: null, why: `${path} is not in the role's meta files` };
+      return { state: null, why: t('tests.why.missing', { path }) };
     }
     const state = PlaywrightMatrix.truth(value);
-    return { state, why: state === null ? `${path} settles on the deployed closure` : path };
+    return { state, why: state === null ? t('tests.why.closure', { path }) : path };
   }
 
   // Args:

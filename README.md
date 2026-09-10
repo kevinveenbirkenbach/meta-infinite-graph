@@ -227,6 +227,29 @@ mode reads the base config, and `complexity` drops the CI columns (`compose`,
 `swarm`, `host`, `stack`, `test_*`, `variants`, `in_main`), which need the git
 history, `default.env` and each role's `templates/` directory.
 
+## 🌐 Languages
+
+The interface speaks all 184 ISO 639-1 languages. It picks the first language
+the browser prefers that has a catalogue and falls back to English; the
+**Language** menu in the design panel overrides that and remembers the choice
+in this browser. Right-to-left languages turn the page and load Bootstrap's RTL
+stylesheet.
+
+- `src/locales/index.json` lists every language with its own name and, for
+  right-to-left scripts, `"dir": "rtl"`.
+- `src/locales/en.json` is the source catalogue. Each other `<code>.json` holds
+  the same keys. `{name}` placeholders are filled at runtime; a message that
+  depends on a count is an object with one text per plural category the
+  browser's `Intl.PluralRules` knows for that language.
+- In code a text is `t('key', { placeholder })` from `src/i18n.js`; in
+  `index.html` it is a `data-i18n`, `data-i18n-title` or `data-i18n-placeholder`
+  attribute.
+
+To add or change a text, edit `en.json` and every other catalogue with it.
+`make lint` fails on a key the code asks for that `en.json` lacks, and on one
+nothing uses; `tests/playwright/i18n.spec.js` fails on a catalogue missing a
+key, a placeholder or a plural form, and renders the page in every language.
+
 ## ⚙️ Run
 
 The compose stack mounts the infinito repository's `roles/` and `meta/`

@@ -1,4 +1,5 @@
 import { el, textElement } from '../dom.js';
+import { t } from '../i18n.js';
 import { ForkCards } from './cards.js';
 import { ForkGraph } from './graph.js';
 import { ForkHistory } from './history.js';
@@ -40,8 +41,8 @@ export class ForkTree extends ForkHistory {
 
   _shell() {
     const section = el('div', { className: 'table-section' });
-    section.appendChild(textElement('h2', 'Timeline'));
-    this.note = textElement('p', `Reading ${this.root} …`, 'table-note');
+    section.appendChild(textElement('h2', t('view.forks')));
+    this.note = textElement('p', t('forks.reading', { repo: this.root }), 'table-note');
     section.appendChild(this.note);
     this.plot = el('div', { className: 'fork-plot-host' });
     section.appendChild(this.plot);
@@ -97,14 +98,12 @@ export class ForkTree extends ForkHistory {
 
   _describe(repo, forks) {
     const deeper = forks.filter(fork => fork.forks_count > 0).length;
-    const parts = [
-      `${forks.length} direct fork${forks.length === 1 ? '' : 's'} of ${repo.full_name}`,
-      deeper
-        ? `${deeper} of them are forked again; open one to walk deeper`
-        : 'none of them are forked again, so this is the whole network',
-      'Branches, tags and the commit lanes load when a repository is opened.',
-    ];
-    this.note.textContent = `${parts.join('. ')} ${this._quota()}`;
+    this.summary = [
+      t('forks.direct', { n: forks.length, repo: repo.full_name }),
+      deeper ? t('forks.deeper', { n: deeper }) : t('forks.leaves'),
+      t('forks.lazy'),
+    ].join(' ');
+    this.note.textContent = `${this.summary} ${this._quota()}`;
   }
 
   // Three cases, not two: in proxied mode api.token is deliberately empty
@@ -113,17 +112,15 @@ export class ForkTree extends ForkHistory {
   _quota() {
     const rate = this.api.rate;
     if (!rate || !rate.limit) return '';
-    const scope = this.api.proxied ? "through the server's token"
-      : this.api.token ? 'with your token' : 'unauthenticated';
-    return `${rate.remaining} of ${rate.limit} requests left this hour, ${scope}.`;
+    const scope = this.api.proxied ? 'server' : this.api.token ? 'token' : 'none';
+    return t('forks.quota', { remaining: rate.remaining, limit: rate.limit, scope: t(`forks.scope.${scope}`) });
   }
 
   _fail(error) {
     this.list.innerHTML = '';
     this.note.textContent = error.exhausted
-      ? 'GitHub is out of requests for this hour. Add a token in the filter panel to raise the '
-        + 'limit from 60 to 5000, or come back after the hour turns.'
-      : `GitHub answered ${error.status || 'with an error'}: ${error.message}`;
+      ? t('forks.exhausted')
+      : t('forks.answered', { status: error.status || t('feed.anError'), message: error.message });
   }
 
   _node(repo, isRoot) {
@@ -160,12 +157,12 @@ export class ForkTree extends ForkHistory {
   }
 
   _fill(body, repo) {
-    body.textContent = 'Loading …';
+    body.textContent = t('forks.loading');
     // Versions come from tags, not releases: this network carries 68 tags and
     // zero releases, so a /releases call per node would spend quota on nothing.
     const wanted = [
-      ['Branches', this.api.branches(repo.full_name), b => b.name],
-      ['Versions', this.api.tags(repo.full_name), t => t.name],
+      [t('forks.branches'), this.api.branches(repo.full_name), b => b.name],
+      [t('forks.versions'), this.api.tags(repo.full_name), tag => tag.name],
     ];
     this._history(repo);
     Promise.all(wanted.map(([, promise]) => promise.catch(error => error)))
@@ -184,7 +181,7 @@ export class ForkTree extends ForkHistory {
           }
           body.appendChild(row);
         });
-        if (this.note) this.note.textContent = this.note.textContent.replace(/\d+ of \d+ requests.*$/, this._quota());
+        if (this.summary) this.note.textContent = `${this.summary} ${this._quota()}`;
         if (repo.forks_count) this._deeper(body, repo);
       });
   }
@@ -192,7 +189,7 @@ export class ForkTree extends ForkHistory {
   _deeper(body, repo) {
     const button = el('button', {
       type: 'button', className: 'btn btn-sm btn-outline-primary mt-2',
-      textContent: `Show the ${repo.forks_count} forks of ${repo.full_name}`,
+      textContent: t('forks.showForks', { n: repo.forks_count, repo: repo.full_name }),
     });
     button.addEventListener('click', () => {
       button.disabled = true;

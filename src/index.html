@@ -27,31 +27,31 @@
         <div class="btn-group btn-group-sm" role="group">
           <div class="btn-group btn-group-sm" role="group">
             <button id="btn-roles" type="button" class="btn btn-outline-light dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">Roles</button>
+                    data-bs-toggle="dropdown" aria-expanded="false" data-i18n="view.roles"></button>
             <div class="dropdown-menu roles-menu">
               <input type="radio" class="btn-check" name="view" id="view-graph" value="graph" checked>
-              <label class="dropdown-item" for="view-graph">Cosmos</label>
+              <label class="dropdown-item" for="view-graph" data-i18n="view.graph"></label>
               <input type="radio" class="btn-check" name="view" id="view-bond" value="bond">
-              <label class="dropdown-item" for="view-bond">Bond</label>
+              <label class="dropdown-item" for="view-bond" data-i18n="view.bond"></label>
               <input type="radio" class="btn-check" name="view" id="view-matrix" value="matrix">
-              <label class="dropdown-item" for="view-matrix">Matrix</label>
+              <label class="dropdown-item" for="view-matrix" data-i18n="view.matrix"></label>
             </div>
           </div>
           <input type="radio" class="btn-check" name="view" id="view-forks" value="forks">
-          <label class="btn btn-outline-light" for="view-forks">Timeline</label>
+          <label class="btn btn-outline-light" for="view-forks" data-i18n="view.forks"></label>
           <input type="radio" class="btn-check" name="view" id="view-tests" value="tests">
-          <label class="btn btn-outline-light" for="view-tests">Tests</label>
+          <label class="btn btn-outline-light" for="view-tests" data-i18n="view.tests"></label>
           <input type="radio" class="btn-check" name="view" id="view-commits" value="commits">
-          <label class="btn btn-outline-light" for="view-commits">Commits</label>
+          <label class="btn btn-outline-light" for="view-commits" data-i18n="view.commits"></label>
           <input type="radio" class="btn-check" name="view" id="view-pulls" value="pulls">
-          <label class="btn btn-outline-light" for="view-pulls">PR</label>
+          <label class="btn btn-outline-light" for="view-pulls" data-i18n="view.pulls"></label>
           <input type="radio" class="btn-check" name="view" id="view-actions" value="actions">
-          <label class="btn btn-outline-light" for="view-actions">Actions</label>
+          <label class="btn btn-outline-light" for="view-actions" data-i18n="view.actions"></label>
         </div>
         <button id="btn-filter" type="button" class="btn btn-sm btn-outline-light"
-                title="Filter">🔍</button>
+                data-i18n-title="panel.filter">🔍</button>
         <button id="btn-design" type="button" class="btn btn-sm btn-outline-light"
-                title="Design">🎨</button>
+                data-i18n-title="panel.design">🎨</button>
       </div>
     </div>
   </nav>
@@ -65,81 +65,72 @@
 
   <div id="design-panel" class="side-panel" hidden>
     <div class="p-3">
-      <h6 class="mb-3">Design</h6>
+      <h6 class="mb-3" data-i18n="panel.design"></h6>
 
-      <label class="form-label mb-1" for="design-theme">Theme</label>
+      <label class="form-label mb-1" for="design-theme" data-i18n="design.theme"></label>
       <select id="design-theme" class="form-select form-select-sm mb-3">
-        <option value="system">Follow the system</option>
-        <option value="light">Day</option>
-        <option value="dark">Night</option>
+        <option value="system" data-i18n="design.themeSystem"></option>
+        <option value="light" data-i18n="design.themeDay"></option>
+        <option value="dark" data-i18n="design.themeNight"></option>
       </select>
 
       <label class="form-label mb-1" for="design-font-size">
-        Font size <span id="design-font-size-value">14</span>px
+        <span data-i18n="design.fontSize"></span> <span id="design-font-size-value">14</span>px
       </label>
       <input type="range" class="form-range mb-3" id="design-font-size"
              min="10" max="22" step="1" value="14">
 
-      <label class="form-label mb-1" for="design-font-family">Font</label>
+      <label class="form-label mb-1" for="design-font-family" data-i18n="design.font"></label>
       <select id="design-font-family" class="form-select form-select-sm mb-3">
-        <option value="sans">Sans</option>
-        <option value="serif">Serif</option>
-        <option value="mono">Mono</option>
+        <option value="sans" data-i18n="design.fontSans"></option>
+        <option value="serif" data-i18n="design.fontSerif"></option>
+        <option value="mono" data-i18n="design.fontMono"></option>
       </select>
 
-      <label class="form-label mb-1">Role names</label>
+      <label class="form-label mb-1" data-i18n="design.roleNames"></label>
       <button id="btn-symbols" type="button" class="btn btn-sm btn-outline-primary w-100 mb-3"
-              title="Show role names as text">🔤 Text</button>
+              data-i18n-title="symbols.textTitle" data-i18n="symbols.text"></button>
 
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="design-resources" checked>
-        <label class="form-check-label" for="design-resources">
-          Ressources in the role card
-        </label>
+        <label class="form-check-label" for="design-resources" data-i18n="design.resources"></label>
       </div>
 
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="design-tags">
-        <label class="form-check-label" for="design-tags">
-          Tags on the timeline
-        </label>
-        <div class="form-text">
-          Free from the local mirror. Without it a tag carries no date, so each
-          one outside the fetched commits costs its own request.
-        </div>
+        <label class="form-check-label" for="design-tags" data-i18n="design.tags"></label>
+        <div class="form-text" data-i18n="design.tagsHelp"></div>
       </div>
 
       <div class="form-check mb-3">
         <input class="form-check-input" type="checkbox" id="design-branches" checked>
-        <label class="form-check-label" for="design-branches">
-          Branch lines in the fork plot
-        </label>
-        <div class="form-text">
-          One request per repository. Turn it off to spend the hourly budget on
-          the fork network alone.
-        </div>
+        <label class="form-check-label" for="design-branches" data-i18n="design.branches"></label>
+        <div class="form-text" data-i18n="design.branchesHelp"></div>
       </div>
 
       <label class="form-label mb-1" for="design-opacity">
-        Background transparency <span id="design-opacity-value">5</span>%
+        <span data-i18n="design.opacity"></span> <span id="design-opacity-value">5</span>%
       </label>
       <input type="range" class="form-range mb-3" id="design-opacity"
              min="0" max="100" step="1" value="5">
 
-      <label class="form-label mb-1" for="matrix-columns-search">Matrix columns</label>
+      <label class="form-label mb-1" for="matrix-columns-search" data-i18n="design.matrixColumns"></label>
       <div class="d-flex gap-1 mb-1">
         <input type="search" id="matrix-columns-search" class="form-control form-control-sm"
-               placeholder="Filter columns …">
+               data-i18n-placeholder="matrix.filterColumns">
         <button id="matrix-columns-reset" type="button" class="btn btn-sm btn-outline-primary"
-                title="The twelve default columns">Default</button>
+                data-i18n-title="matrix.defaultTitle" data-i18n="matrix.default"></button>
       </div>
       <div id="matrix-columns" class="matrix-columns mb-3"></div>
 
       <label class="form-label mb-1" for="design-zoom">
-        Zoom <span id="design-zoom-value">100</span>%
+        <span data-i18n="design.zoom"></span> <span id="design-zoom-value">100</span>%
       </label>
-      <input type="range" class="form-range" id="design-zoom"
+      <input type="range" class="form-range mb-3" id="design-zoom"
              min="40" max="250" step="5" value="100">
+
+      <label class="form-label mb-1" for="design-language" data-i18n="design.language"></label>
+      <select id="design-language" class="form-select form-select-sm"></select>
     </div>
   </div>
 
@@ -147,106 +138,97 @@
     <div class="p-3">
 
       <div class="mb-3 graph-only">
-        <label for="role-search" class="form-label">Search Role</label>
+        <label for="role-search" class="form-label" data-i18n="filter.searchRole"></label>
         <input
           type="text"
           id="role-search"
           class="form-control form-control-sm mb-2"
-          placeholder="Type to filter…"
+          data-i18n-placeholder="filter.typeToFilter"
         />
 
-        <label for="sel-role" class="form-label">Role</label>
+        <label for="sel-role" class="form-label" data-i18n="filter.role"></label>
         <select id="sel-role" class="form-select"></select>
       </div>
 
       <fieldset class="mb-2 small forks-only">
         <legend class="form-label mb-1">GitHub</legend>
-        <label class="form-label mb-0" for="fork-root">Repository</label>
+        <label class="form-label mb-0" for="fork-root" data-i18n="forks.repository"></label>
         <input type="text" id="fork-root" class="form-control form-control-sm mb-2"
-               placeholder="owner/name" autocomplete="off">
+               data-i18n-placeholder="forks.repositoryPlaceholder" autocomplete="off">
         <div class="token-field">
-          <label class="form-label mb-0" for="fork-token">Token</label>
+          <label class="form-label mb-0" for="fork-token" data-i18n="forks.token"></label>
           <input type="password" id="fork-token" class="form-control form-control-sm mb-1"
-                 placeholder="optional, raises 60/h to 5000/h" autocomplete="off">
-          <div class="form-text mb-2">
-            Read-only, public scope. Kept in this browser, never put in the URL.
-          </div>
+                 data-i18n-placeholder="forks.tokenPlaceholder" autocomplete="off">
+          <div class="form-text mb-2" data-i18n="forks.tokenHelp"></div>
         </div>
-        <div id="fork-token-owned" class="form-text mb-2" hidden>
-          This instance carries its own token, so requests go through the server
-          and the limit is 5000 an hour. Nothing to enter here.
-        </div>
-        <button id="fork-forget" type="button" class="btn btn-sm btn-outline-primary w-100">
-          Drop the cache and the token
-        </button>
+        <div id="fork-token-owned" class="form-text mb-2" hidden data-i18n="forks.tokenOwned"></div>
+        <button id="fork-forget" type="button" class="btn btn-sm btn-outline-primary w-100" data-i18n="forks.forget"></button>
       </fieldset>
 
       <fieldset class="mb-2 small tests-only">
-        <legend class="form-label mb-1">Order</legend>
-        <label class="form-label mb-0" for="tests-sort">Sort rows by</label>
+        <legend class="form-label mb-1" data-i18n="tests.order"></legend>
+        <label class="form-label mb-0" for="tests-sort" data-i18n="tests.sortBy"></label>
         <select id="tests-sort" class="form-select form-select-sm mb-2">
-          <option value="name">role name &#9650;</option>
-          <option value="ci">CI chunk order</option>
+          <option value="name" data-i18n="tests.sort.name"></option>
+          <option value="ci" data-i18n="tests.sort.ci"></option>
         </select>
 
-        <label class="form-label mb-0" for="tests-gate">Gate</label>
+        <label class="form-label mb-0" for="tests-gate" data-i18n="tests.gate"></label>
         <select id="tests-gate" class="form-select form-select-sm">
-          <option value="all">all</option>
-          <option value="runs">&#9989; runs</option>
-          <option value="never">&#9940; never, in no variant</option>
-          <option value="skipped">&#10134; not in this variant</option>
-          <option value="always">&#10067; always maybe, never certain</option>
-          <option value="unknown">&#10068; maybe in this variant</option>
+          <option value="all" data-i18n="tests.gateOption.all"></option>
+          <option value="runs" data-i18n="tests.gateOption.runs"></option>
+          <option value="never" data-i18n="tests.gateOption.never"></option>
+          <option value="skipped" data-i18n="tests.gateOption.skipped"></option>
+          <option value="always" data-i18n="tests.gateOption.always"></option>
+          <option value="unknown" data-i18n="tests.gateOption.unknown"></option>
         </select>
       </fieldset>
 
       <fieldset id="filter-switches" class="mb-2 small">
-        <legend class="form-label mb-1">Data</legend>
+        <legend class="form-label mb-1" data-i18n="filter.data"></legend>
         <button id="btn-variants" type="button" class="btn btn-sm btn-outline-primary w-100"
-                title="Variant aware: off">🧬 Variants</button>
+                data-i18n-title="variants.off" data-i18n="variants.button"></button>
       </fieldset>
 
       <fieldset class="mb-2 small graph-only">
-        <legend class="form-label mb-1">Edges</legend>
+        <legend class="form-label mb-1" data-i18n="edges.title"></legend>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-role-deps">
-          <label class="form-check-label" for="edge-role-deps">Role Dependencies</label>
+          <label class="form-check-label" for="edge-role-deps" data-i18n="edges.role-deps"></label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-role-dependents">
-          <label class="form-check-label" for="edge-role-dependents">Role Dependents</label>
+          <label class="form-check-label" for="edge-role-dependents" data-i18n="edges.role-dependents"></label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-dependencies" checked>
-          <label class="form-check-label" for="edge-dependencies">Application Dependencies</label>
+          <label class="form-check-label" for="edge-dependencies" data-i18n="edges.dependencies"></label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-dependents" checked>
-          <label class="form-check-label" for="edge-dependents">Application Dependents</label>
+          <label class="form-check-label" for="edge-dependents" data-i18n="edges.dependents"></label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-run-after">
-          <label class="form-check-label" for="edge-run-after">Run-after flow</label>
+          <label class="form-check-label" for="edge-run-after" data-i18n="edges.run-after"></label>
         </div>
         <div class="form-check form-check-sm">
           <input class="form-check-input" type="checkbox" id="edge-visible" checked>
-          <label class="form-check-label" for="edge-visible">Show connection lines</label>
+          <label class="form-check-label" for="edge-visible" data-i18n="edges.visible"></label>
         </div>
       </fieldset>
 
       <fieldset class="mb-2 small">
-        <legend class="form-label mb-1">Filter</legend>
-        <label class="form-label mb-0" for="facet-author">Author</label>
+        <legend class="form-label mb-1" data-i18n="panel.filter"></legend>
+        <label class="form-label mb-0" for="facet-author" data-i18n="filter.author"></label>
         <select id="facet-author" class="form-select form-select-sm mb-1"></select>
-        <label class="form-label mb-0" for="facet-lifecycle">Lifecycle</label>
+        <label class="form-label mb-0" for="facet-lifecycle" data-i18n="filter.lifecycle"></label>
         <select id="facet-lifecycle" class="form-select form-select-sm mb-1"></select>
-        <label class="form-label mb-0" for="facet-mode">Deploy mode</label>
+        <label class="form-label mb-0" for="facet-mode" data-i18n="filter.mode"></label>
         <select id="facet-mode" class="form-select form-select-sm"></select>
       </fieldset>
 
-      <button id="btn-flow" class="btn btn-sm btn-outline-primary mb-2 w-100 graph-only">
-        ➡ Global run-after flow
-      </button>
+      <button id="btn-flow" class="btn btn-sm btn-outline-primary mb-2 w-100 graph-only" data-i18n="graph.flow"></button>
 
       <div class="input-group input-group-sm mb-3 graph-only">
         <button id="btn-start" class="btn btn-primary">
@@ -255,15 +237,15 @@
         <button id="btn-stop" class="btn btn-secondary" disabled>
           ⏸
         </button>
-        <span class="input-group-text">Interval</span>
+        <span class="input-group-text" data-i18n="graph.interval"></span>
         <input id="iter-interval"
                type="number"
                class="form-control text-center"
                min="0.1"
                step="0.1"
                value="0.5"
-               title="Seconds"/>
-        <button id="btn-reload" class="btn btn-outline-primary" title="Reload Graph">
+               data-i18n-title="graph.seconds"/>
+        <button id="btn-reload" class="btn btn-outline-primary" data-i18n-title="graph.reload">
           ↻
         </button>
       </div>
@@ -271,18 +253,18 @@
       <hr/>
 
       <div class="mb-3 small graph-only">
-        <div><span class="legend-dot bg-purple"></span>Start node</div>
-        <div><span class="legend-dot bg-pink"></span>Selected</div>
-        <div><span class="legend-dot bg-orange"></span>Pending ⏳ (auto-expanding)</div>
-        <div><span class="legend-dot bg-green"></span>Internal</div>
-        <div><span class="legend-dot bg-red"></span>Leaf</div>
+        <div><span class="legend-dot bg-purple"></span><span data-i18n="legend.start"></span></div>
+        <div><span class="legend-dot bg-pink"></span><span data-i18n="legend.selected"></span></div>
+        <div><span class="legend-dot bg-orange"></span><span data-i18n="legend.pending"></span></div>
+        <div><span class="legend-dot bg-green"></span><span data-i18n="legend.internal"></span></div>
+        <div><span class="legend-dot bg-red"></span><span data-i18n="legend.leaf"></span></div>
         <div class="mt-1">
-          <span class="legend-line" style="background:#8a8a8a"></span>app dep
-          <span class="legend-line ms-2" style="background:#cfcfcf"></span>optional
+          <span class="legend-line" style="background:#8a8a8a"></span><span data-i18n="legend.appDep"></span>
+          <span class="legend-line ms-2" style="background:#cfcfcf"></span><span data-i18n="legend.optional"></span>
         </div>
         <div>
           <span class="legend-line" style="background:#ff9f1c"></span>run_after
-          <span class="legend-line ms-2" style="background:#4682b4"></span>role dep
+          <span class="legend-line ms-2" style="background:#4682b4"></span><span data-i18n="legend.roleDep"></span>
         </div>
       </div>
 
@@ -296,13 +278,13 @@
       <span class="dropup">
         <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
                 id="btn-sources" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                aria-expanded="false">Quellen</button>
+                aria-expanded="false" data-i18n="range.sources"></button>
         <div class="dropdown-menu range-sources" id="range-sources"></div>
       </span>
       <span class="range-track">
-        <label class="visually-hidden" for="range-from">Ab wann Commits geholt werden</label>
+        <label class="visually-hidden" for="range-from" data-i18n="range.from"></label>
         <input type="range" id="range-from">
-        <label class="visually-hidden" for="range-to">Bis zu welchem Stand die Daten gelten</label>
+        <label class="visually-hidden" for="range-to" data-i18n="range.to"></label>
         <input type="range" id="range-to">
       </span>
       <span id="range-label" class="range-label text-muted"></span>
@@ -311,7 +293,7 @@
 
     <span class="bottom-nav-links">
       <a href="https://github.com/kevinveenbirkenbach/meta-infinite-graph" target="_blank">
-        ⌥ Source
+        ⌥ <span data-i18n="bottom.source"></span>
       </a>
       <a href="https://www.veen.world" target="_blank">
         👤 Kevin Veen-Birkenbach

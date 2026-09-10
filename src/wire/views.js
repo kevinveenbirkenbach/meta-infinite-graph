@@ -1,4 +1,5 @@
 import { byId, bySelector } from '../dom.js';
+import { t } from '../i18n.js';
 
 export function currentView() {
   return bySelector('input[name="view"]:checked', HTMLInputElement).value;
@@ -9,8 +10,7 @@ export function currentView() {
 const META_VIEWS = ['graph', 'bond', 'matrix', 'tests'];
 
 export function disableMetaViews(missing) {
-  const why = `${missing.join(', ')} does not exist at the chosen date. This view reads `
-    + 'from it, so it would show the working copy rather than that state.';
+  const why = t('views.missing', { files: missing.join(', ') });
   for (const view of META_VIEWS) {
     const input = byId(`view-${view}`, HTMLInputElement);
     const label = bySelector(`label[for="view-${view}"]`, HTMLLabelElement);
@@ -48,7 +48,7 @@ export function wireViewMode(tableView, forkTree, testsView, feeds) {
     const roles = byId('btn-roles', HTMLButtonElement);
     const sub = document.querySelector(`label[for="view-${view}"].dropdown-item`);
     roles.classList.toggle('active', Boolean(sub));
-    roles.textContent = sub ? `Roles · ${sub.textContent}` : 'Roles';
+    roles.textContent = sub ? t('view.rolesWith', { view: sub.textContent }) : t('view.roles');
     if (view === 'forks') forkTree.show();
     else if (view === 'tests') testsView.show();
     else if (feeds[view]) feeds[view].show();

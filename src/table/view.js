@@ -1,3 +1,4 @@
+import { t } from '../i18n.js';
 import { MetaTables } from '../meta/tables.js';
 import { TableCells } from './cells.js';
 
@@ -120,16 +121,9 @@ export class TableView extends TableCells {
     table.appendChild(tbody);
 
     const scope = this.variantAware
-      ? `${axis.length} variants of ${participants.length} roles. A bond only counts `
-        + 'where the variant enables it, so a row shows what that variant deploys. '
-      : `${edges.size} bonds across ${participants.length} roles. `;
-    const section = this._wrap(
-      'Bond matrix',
-      `${scope}Row to column above, column to row below. A bond of 0 is the page, `
-      + '1 is its opposite. Hover crosses the pair in yellow, a click locks it in '
-      + 'violet until the next click. Read only; run the infinito bond CLI to edit.',
-      table
-    );
+      ? t('bond.scopeVariants', { n: axis.length, roles: participants.length })
+      : t('bond.scopeBonds', { n: edges.size, roles: participants.length });
+    const section = this._wrap(t('bond.title'), `${scope} ${t('bond.help')}`, table);
     section.appendChild(TableView._crosshair(table));
     return section;
   }
@@ -205,7 +199,7 @@ export class TableView extends TableCells {
     span.className = 'b';
     span.style.setProperty('--b', String(Math.max(0, Math.min(1, edge.bond))));
     span.textContent = String(edge.bond);
-    span.title = `${consumer} -> ${provider} via ${edge.serviceKey}`;
+    span.title = t('bond.bar', { consumer, provider, service: edge.serviceKey });
     return span;
   }
 }

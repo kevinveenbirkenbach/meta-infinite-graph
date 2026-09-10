@@ -1,4 +1,5 @@
 import { html } from '../html.js';
+import { t } from '../i18n.js';
 import { MatrixModel } from './model.js';
 
 export class MatrixToolbar {
@@ -23,27 +24,27 @@ export class MatrixToolbar {
     return html`
       <div class="matrix-toolbar">
         <input type="search" id="matrix-find" class="form-control form-control-sm"
-               placeholder="Search the visible columns …" value=${matrix.find} onInput=${event => this._search(event)} />
+               placeholder=${t('matrix.search')} value=${matrix.find} onInput=${event => this._search(event)} />
         <div class="btn-group btn-group-sm matrix-presets">
           ${Object.entries(MatrixModel.PRESETS).map(([name, { label, columns }]) => toggle(
             name, label, !matrix.complexity && columns.join(',') === current, () => matrix.preset(name)
           ))}
-          ${toggle('complexity', 'Complexity', matrix.complexity, () => matrix.setComplexity(!matrix.complexity),
-            'Adds the complexity columns and orders the rows heaviest first.')}
+          ${toggle('complexity', t('matrix.complexity'), matrix.complexity, () => matrix.setComplexity(!matrix.complexity),
+            t('matrix.complexityTitle'))}
         </div>
         <button type="button" id="matrix-columns-button" class="btn btn-sm btn-outline-secondary" onClick=${event => {
           event.stopPropagation();
           const box = event.currentTarget.getBoundingClientRect();
           matrix.panels.picker(box.left, box.bottom + 4);
-        }}>${`Columns ${matrix.columns.length}/${matrix.model.catalogue(matrix.columns).length} ▾`}</button>
+        }}>${t('matrix.columnsButton', { shown: matrix.columns.length, all: matrix.model.catalogue(matrix.columns).length })}</button>
         <div class="btn-group btn-group-sm">
-          ${[['compact', 'Compact'], ['comfort', 'Comfort']].map(([value, label]) => html`
+          ${['compact', 'comfort'].map(value => html`
             <button type="button" class=${matrix.density === value ? 'btn btn-outline-secondary active' : 'btn btn-outline-secondary'}
-                    data-density=${value} onClick=${() => matrix.setDensity(value)}>${label}</button>
+                    data-density=${value} onClick=${() => matrix.setDensity(value)}>${t(`matrix.density.${value}`)}</button>
           `)}
         </div>
         <button type="button" id="matrix-csv" class="btn btn-sm btn-outline-secondary"
-                title="Download the rows and columns shown, in their order" onClick=${() => matrix.download()}>CSV</button>
+                title=${t('matrix.csvTitle')} onClick=${() => matrix.download()}>CSV</button>
       </div>
     `;
   }

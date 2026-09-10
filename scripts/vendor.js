@@ -12,6 +12,7 @@ const FILES = [
   ['3d-force-graph', 'dist/3d-force-graph.min.js', '3d-force-graph.min.js'],
   ['bootstrap', 'dist/js/bootstrap.bundle.min.js', 'bootstrap.bundle.min.js'],
   ['bootstrap', 'dist/css/bootstrap.min.css', 'bootstrap.min.css'],
+  ['bootstrap', 'dist/css/bootstrap.rtl.min.css', 'bootstrap.rtl.min.css'],
   ['js-yaml', 'dist/js-yaml.min.js', 'js-yaml.min.js'],
   // The stylesheet reaches its fonts as ../webfonts/, so the two keep that layout.
   ['@fortawesome/fontawesome-free', 'LICENSE.txt', 'fontawesome/LICENSE.txt'],

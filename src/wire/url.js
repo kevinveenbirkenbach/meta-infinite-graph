@@ -1,5 +1,5 @@
-import { byId } from '../dom.js';
 import { facet, setFacet, urlState } from '../context.js';
+import { byId } from '../dom.js';
 import { MatrixModel } from '../matrix/model.js';
 import { currentView } from './views.js';
 

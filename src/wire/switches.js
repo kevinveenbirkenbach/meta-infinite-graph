@@ -1,5 +1,6 @@
-import { byId } from '../dom.js';
 import { urlState } from '../context.js';
+import { byId } from '../dom.js';
+import { t } from '../i18n.js';
 import { MatrixModel } from '../matrix/model.js';
 import { redraw } from './views.js';
 
@@ -21,7 +22,7 @@ export function wireDataSwitches(tableView, testsView, roleInfo, uiManager, data
       tableView.variantAware = next;
       uiManager.setVariantAware(next);
       variantButton.classList.toggle('active', next);
-      variantButton.title = `Variant aware: ${next ? 'on' : 'off'}`;
+      variantButton.title = t(next ? 'variants.on' : 'variants.off');
       variantButton.disabled = false;
       testsView.variantAware = next;
       redraw(tableView, testsView);
@@ -32,10 +33,8 @@ export function wireDataSwitches(tableView, testsView, roleInfo, uiManager, data
     symbolButton.disabled = true;
     return roleInfo.load().then(() => {
       roleInfo.symbols = next;
-      symbolButton.textContent = next ? '🔡 Symbols' : '🔤 Text';
-      symbolButton.title = next
-        ? 'Show role names as symbols'
-        : 'Show role names as text';
+      symbolButton.textContent = t(next ? 'symbols.symbols' : 'symbols.text');
+      symbolButton.title = t(next ? 'symbols.symbolsTitle' : 'symbols.textTitle');
       symbolButton.classList.toggle('active', next);
       symbolButton.disabled = false;
       redraw(tableView, testsView);

@@ -1,5 +1,6 @@
 import { el } from './dom.js';
 import { html, render } from './html.js';
+import { t } from './i18n.js';
 
 // Reads no roles tree, so this view stays usable at a date where the ones
 // derived from it are greyed out.
@@ -32,16 +33,16 @@ export class CommitsView {
 
   show() {
     this.container.replaceChildren(this.root);
-    this._paint('Reading the mirror …', null);
+    this._paint(t('commits.reading'), null);
 
     if (!this.range.catalog) {
-      this._paint('No local mirror, so there is nothing to read commits from.', null);
+      this._paint(t('commits.noMirror'), null);
       return Promise.resolve();
     }
     const owner = this._repoOf();
     const refs = this.range.refs.filter(ref => owner.has(ref));
     if (!refs.length) {
-      this._paint('No source ticked. Pick a branch in the sources menu below.', null);
+      this._paint(t('commits.noSource'), null);
       return Promise.resolve();
     }
     // Keyed by the window too, so moving a handle is not answered from a walk
@@ -63,23 +64,21 @@ export class CommitsView {
     for (const row of rows) if (!seen.has(row.sha)) seen.set(row.sha, row);
     const listed = [...seen.values()].sort((one, other) => other.date.localeCompare(one.date));
 
-    this._paint(`${listed.length} commits across ${refs.length} `
-      + `${refs.length === 1 ? 'ref' : 'refs'}`
-      + (rows.length === listed.length
-        ? '.'
-        : `, merged from ${rows.length} rows because the refs share history.`), listed);
+    this._paint(t(rows.length === listed.length ? 'commits.note' : 'commits.noteMerged', {
+      n: refs.length, commits: listed.length, rows: rows.length,
+    }), listed);
     return listed;
   }
 }
 
 function Commits({ note, listed }) {
   return html`
-    <h2>Commits</h2>
+    <h2>${t('view.commits')}</h2>
     <p class="table-note">${note}</p>
     <div class="commits-host">
       ${listed && html`
         <table class="table table-sm commits-table">
-          <thead><tr>${['Date', 'Repository', 'Ref', 'Commit', 'Subject'].map(title => html`<th>${title}</th>`)}</tr></thead>
+          <thead><tr>${['date', 'repository', 'ref', 'commit', 'subject'].map(column => html`<th>${t(`commits.column.${column}`)}</th>`)}</tr></thead>
           <tbody>
             ${listed.map(row => html`
               <tr>

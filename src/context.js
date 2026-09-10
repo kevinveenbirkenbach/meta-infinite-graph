@@ -1,12 +1,13 @@
 import { DataLoader } from './dataLoader.js';
 import { byId } from './dom.js';
 import { GraphRenderer } from './graphRenderer.js';
+import { t } from './i18n.js';
 import { SelectionManager } from './selectionManager.js';
 import { UrlState } from './urlState.js';
 
 window.addEventListener('error', e => {
   const el = document.getElementById('status');
-  if (el) el.innerText = 'JS error: ' + (e.message || e.error);
+  if (el) el.innerText = t('status.jsError', { message: e.message || e.error });
 });
 
 export const dataLoader = new DataLoader('/roles');

@@ -1,3 +1,4 @@
+import { t } from '../i18n.js';
 // Scans the mounted infinito roles tree directly: the role list comes from
 // nginx's JSON autoindex of /roles/, and per-role metadata is the parsed
 // meta/*.yml itself. No pre-generated helper files.
@@ -50,11 +51,7 @@ export class RoleFiles {
   loadCategories() {
     return this._fetchYaml(`${this.metaPath}/categories.yml`).then(data => {
       if (!data?.roles) {
-        throw new Error(
-          `${this.metaPath}/categories.yml is missing or has no roles mapping. Mount the `
-          + 'infinito repository meta/ directory (INFINITO_META_DIR in .env) '
-          + 'and recreate the stack with make up.'
-        );
+        throw new Error(t('status.noCategories', { path: this.metaPath }));
       }
       return data.roles;
     });

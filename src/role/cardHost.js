@@ -1,3 +1,4 @@
+import { t } from '../i18n.js';
 export class RoleCardHost {
   constructor(roleInfo) {
     this.roleInfo = roleInfo;
@@ -37,7 +38,7 @@ export class RoleCardHost {
     const close = document.createElement('button');
     close.type = 'button';
     close.className = 'role-card-close';
-    close.title = 'Close';
+    close.title = t('card.close');
     close.textContent = '×';
     close.addEventListener('click', () => this.drop(role));
     element.appendChild(close);
@@ -46,7 +47,7 @@ export class RoleCardHost {
       const grow = document.createElement('button');
       grow.type = 'button';
       grow.className = 'role-card-grow';
-      grow.title = 'Maximize';
+      grow.title = t('card.maximize');
       grow.textContent = '⤢';
       grow.addEventListener('click', () => this.maximize(role));
       element.appendChild(grow);
@@ -107,7 +108,7 @@ export class RoleCardHost {
     entry.element.classList.toggle('maximized', entry.maximized);
     const grow = entry.element.querySelector('.role-card-grow');
     grow.textContent = entry.maximized ? '⤡' : '⤢';
-    grow.title = entry.maximized ? 'Restore' : 'Maximize';
+    grow.title = t(entry.maximized ? 'card.restore' : 'card.maximize');
     if (entry.maximized) this.hold(role);
     else this._place(entry);
   }

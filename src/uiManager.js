@@ -1,5 +1,7 @@
-import { byId } from './dom.js';
 import { setStatus, urlState } from './context.js';
+import { el } from './dom.js';
+import { byId } from './dom.js';
+import { t } from './i18n.js';
 
 // uiManager.js
 //
@@ -76,7 +78,7 @@ export class UIManager {
     const facets = this.metaGraph.facets();
     const fill = (id, entries) => {
       const sel = document.getElementById(id);
-      sel.innerHTML = '<option value="">all</option>';
+      sel.replaceChildren(el('option', { value: '', textContent: t('filter.all') }));
       entries.forEach(([value, count]) => {
         const o = document.createElement('option');
         o.value = value;
@@ -153,7 +155,7 @@ export class UIManager {
     });
     roleIds.forEach(r => this.selectionManager.loadedRoles.add(r));
     this.graphRenderer.refreshColors();
-    setStatus(`run_after flow: ${roleIds.size} roles, ${edges.length} ordering edges`);
+    setStatus(t('graph.flowStatus', { n: roleIds.size, edges: edges.length }));
   }
 
   expand(role) {

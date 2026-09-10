@@ -1,3 +1,4 @@
+import { t } from '../i18n.js';
 import { RoleResources } from '../role/resources.js';
 
 // Every value under each role's meta/, one row per role. A column is a dotted
@@ -21,14 +22,14 @@ export class MatrixModel {
   static RESSOURCES = Object.fromEntries(RoleResources.METRICS.map(metric => [metric.column, metric]));
 
   static PRESETS = {
-    overview: { label: 'Overview', columns: MatrixModel.DEFAULT },
-    galaxy: { label: 'Galaxy', columns: [
+    overview: { label: t('matrix.preset.overview'), columns: MatrixModel.DEFAULT },
+    galaxy: { label: t('matrix.preset.galaxy'), columns: [
       'role', 'main.galaxy_info.description', 'main.galaxy_info.galaxy_tags',
       'main.galaxy_info.author', 'main.galaxy_info.company', 'main.galaxy_info.license',
       'main.galaxy_info.min_ansible_version', 'main.galaxy_info.platforms', 'main.dependencies',
     ] },
-    ressources: { label: 'Ressources', columns: ['role', 'services', ...Object.keys(MatrixModel.RESSOURCES)] },
-    network: { label: 'Network', columns: ['role', 'domains', 'networks', 'server', 'csp', 'volumes'] },
+    ressources: { label: t('matrix.preset.ressources'), columns: ['role', 'services', ...Object.keys(MatrixModel.RESSOURCES)] },
+    network: { label: t('matrix.preset.network'), columns: ['role', 'domains', 'networks', 'server', 'csp', 'volumes'] },
   };
 
   // Args:

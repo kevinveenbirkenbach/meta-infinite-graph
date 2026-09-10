@@ -1,4 +1,5 @@
 import { byId } from './dom.js';
+import { t } from './i18n.js';
 // The time range in the bottom bar, over the local mirror served by mig-git.py.
 //
 // Left handle: how far back commits are pulled. At the far left it is the whole
@@ -120,16 +121,14 @@ export class GitRange {
   _label() {
     const label = document.getElementById('range-label');
     if (!label) return;
-    const left = this.position(this.from) <= 0 ? 'alles' : GitRange._day(this.from);
+    const left = this.position(this.from) <= 0 ? t('range.all') : GitRange._day(this.from);
     label.textContent = `${left} → ${GitRange._day(this.until)}`;
     const warning = document.getElementById('range-warning');
     if (!warning) return;
     warning.hidden = !(this.missing && this.missing.length);
     if (warning.hidden) return;
-    warning.textContent = `⚠ ${this.missing.length} Datei${this.missing.length > 1 ? 'en' : ''} fehlt`;
-    warning.title = `${(this.missingAt || '').slice(0, 10)} kennt das aktuelle Schema nicht: `
-      + `${this.missing.join(', ')} fehlt dort. Die Ansichten, die daraus lesen, sind `
-      + 'ausgegraut, weil sie sonst den Arbeitsstand unter einem alten Datum zeigen würden.';
+    warning.textContent = t('range.missing', { n: this.missing.length });
+    warning.title = t('range.missingTitle', { date: (this.missingAt || '').slice(0, 10), files: this.missing.join(', ') });
   }
 
   static _day(stamp) {

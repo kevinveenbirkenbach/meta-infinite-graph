@@ -1,5 +1,6 @@
 import { el } from '../dom.js';
 import { html, render, toElement } from '../html.js';
+import { t } from '../i18n.js';
 import { RoleResources } from './resources.js';
 
 export class RoleInfo {
@@ -22,7 +23,7 @@ export class RoleInfo {
   chip(key, fallback = null) {
     const provider = (this.tables && this.tables.providerOf(key)) || fallback;
     return provider
-      ? html`<span class="chip service" data-role-name=${provider} title=${`provided by ${provider}`}>${key}</span>`
+      ? html`<span class="chip service" data-role-name=${provider} title=${t('card.providedBy', { provider })}>${key}</span>`
       : html`<span class="chip">${key}</span>`;
   }
 
@@ -112,21 +113,21 @@ function RoleCard({ info: roleInfo, role }) {
   const info = roleInfo.info[role] || {};
   const attributes = roleInfo.graph.attributes[role] || {};
   const scalars = [
-    ['Weight', String(roleInfo.graph.weight(role))],
-    ['Provides', attributes.provides],
-    ['Modes', (attributes.modes || []).join(', ')],
-    ['Author', attributes.author],
-    ['License', attributes.license],
+    [t('card.weight'), String(roleInfo.graph.weight(role))],
+    [t('card.provides'), attributes.provides],
+    [t('card.modes'), (attributes.modes || []).join(', ')],
+    [t('card.author'), attributes.author],
+    [t('card.license'), attributes.license],
   ].filter(([, value]) => value);
   const lists = [
-    ['Services', attributes.services || [], item => roleInfo.chip(item)],
-    ['Tags', attributes.galaxy_tags || [], item => html`<span class="chip">${item}</span>`],
+    [t('card.services'), attributes.services || [], item => roleInfo.chip(item)],
+    [t('card.tags'), attributes.galaxy_tags || [], item => html`<span class="chip">${item}</span>`],
   ].filter(([, items]) => items.length);
   const footprint = roleInfo.resources ? roleInfo.footprint.facts(role) : [];
   const player = info.video ? RoleInfo.player(info.video) : null;
   const links = [
-    ['Homepage', info.homepage],
-    ...(info.video ? [[player ? 'Watch on site' : 'Video', info.video]] : []),
+    [t('card.homepage'), info.homepage],
+    ...(info.video ? [[t(player ? 'card.watchOnSite' : 'card.video'), info.video]] : []),
   ].filter(([, href]) => href);
   return html`
     <div class="role-card-title">

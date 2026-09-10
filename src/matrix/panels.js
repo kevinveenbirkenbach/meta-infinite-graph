@@ -1,5 +1,6 @@
 import { el } from '../dom.js';
 import { html, render, useState } from '../html.js';
+import { t } from '../i18n.js';
 import { MatrixModel } from './model.js';
 
 export class MatrixPanels {
@@ -75,7 +76,7 @@ export class MatrixPanels {
     if (!host) return;
     render(this.matrix.model.meta
       ? html`<${ColumnList} matrix=${this.matrix} needle=${needle} />`
-      : 'Open the matrix once to list its columns.', host);
+      : t('matrix.openFirst'), host);
   }
 
   // Returns: the lines written, header first.
@@ -110,18 +111,18 @@ function ColumnMenu({ panels, id, rows }) {
   const parent = MatrixModel.parent(id);
   const hidden = matrix.model.search(needle, matrix.columns).filter(column => !matrix.columns.includes(column));
   return html`
-    ${item('Sort ascending', () => matrix.setSort(id, 'asc'), false)}
-    ${item('Sort descending', () => matrix.setSort(id, 'desc'), false)}
-    ${item(`Unfold into ${common.length} common columns`, () => matrix.expand(id, false), !common.length)}
-    ${rare.length ? item(`Unfold all ${common.length + rare.length} (${rare.length} rare)`, () => matrix.expand(id, true), false) : null}
-    ${item(`Fold into ${parent || 'its parent'}`, () => matrix.collapse(id), !parent)}
-    ${item('Remove this column', () => matrix.remove(id), id === 'role')}
+    ${item(t('matrix.sortAsc'), () => matrix.setSort(id, 'asc'), false)}
+    ${item(t('matrix.sortDesc'), () => matrix.setSort(id, 'desc'), false)}
+    ${item(t('matrix.unfoldCommon', { n: common.length }), () => matrix.expand(id, false), !common.length)}
+    ${rare.length ? item(t('matrix.unfoldAll', { n: common.length + rare.length, rare: rare.length }), () => matrix.expand(id, true), false) : null}
+    ${item(t('matrix.foldInto', { parent: parent || t('matrix.itsParent') }), () => matrix.collapse(id), !parent)}
+    ${item(t('matrix.remove'), () => matrix.remove(id), id === 'role')}
     <div class="dropdown-divider"></div>
-    <input type="search" class="form-control form-control-sm" placeholder="Add a column …"
+    <input type="search" class="form-control form-control-sm" placeholder=${t('matrix.addColumn')}
            value=${needle} onInput=${event => setNeedle(event.currentTarget.value)} />
     <div class="matrix-menu-list">
       ${hidden.slice(0, 80).map(column => item(column, () => matrix.add(column, id), false))}
-      ${hidden.length > 80 && html`<div class="dropdown-item-text small">${`${hidden.length - 80} more, type to narrow`}</div>`}
+      ${hidden.length > 80 && html`<div class="dropdown-item-text small">${t('matrix.more', { n: hidden.length - 80 })}</div>`}
     </div>
   `;
 }
@@ -131,10 +132,10 @@ function Picker({ panels }) {
   const [needle, setNeedle] = useState('');
   return html`
     <div class="d-flex gap-1 mb-1">
-      <input type="search" class="form-control form-control-sm" placeholder="Filter columns …"
+      <input type="search" class="form-control form-control-sm" placeholder=${t('matrix.filterColumns')}
              value=${needle} onInput=${event => setNeedle(event.currentTarget.value)} />
       <button type="button" class="btn btn-sm btn-outline-primary"
-              onClick=${() => matrix.setColumns([...MatrixModel.DEFAULT])}>Default</button>
+              onClick=${() => matrix.setColumns([...MatrixModel.DEFAULT])}>${t('matrix.default')}</button>
     </div>
     <div class="matrix-columns"><${ColumnList} matrix=${matrix} needle=${needle} /></div>
   `;
@@ -155,7 +156,7 @@ function ColumnList({ matrix, needle }) {
                onChange=${event => (event.currentTarget.checked ? matrix.add(id) : matrix.remove(id))} />
         ${` ${id}`}
         ${id !== 'role' && matrix.model.distinct(id) <= 1 && html`
-          <span class="matrix-const" title="Every role carries the same value here">constant</span>
+          <span class="matrix-const" title=${t('matrix.constantTitle')}>${t('matrix.constant')}</span>
         `}
       </label>
     `)}

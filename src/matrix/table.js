@@ -1,4 +1,5 @@
 import { html } from '../html.js';
+import { t } from '../i18n.js';
 import { TableView } from '../table/view.js';
 import { MatrixModel } from './model.js';
 import { MatrixPointer } from './pointer.js';
@@ -27,10 +28,11 @@ export class MatrixTable {
 
   note(rows, columns) {
     const total = this.matrix.model.allRows().length;
-    return `${rows.length}${rows.length === total ? '' : ` of ${total}`} rows, `
-      + `${columns.length} of ${this.matrix.model.catalogue(this.matrix.columns).length} columns. Click a `
-      + 'heading to sort, shift-click to sort by more than one; drag it to move it, drag its '
-      + 'edge to widen it; click a value to read all of it, click a role to pin its card.';
+    const shown = rows.length === total
+      ? t('matrix.noteRows', { n: rows.length })
+      : t('matrix.noteRowsOf', { n: rows.length, total });
+    const all = this.matrix.model.catalogue(this.matrix.columns).length;
+    return `${shown}, ${t('matrix.noteColumns', { n: columns.length, all })} ${t('matrix.noteHelp')}`;
   }
 
   grid(rows, columns) {
@@ -71,13 +73,13 @@ export class MatrixTable {
     const stop = event => event.stopPropagation();
     const parts = html`
       ${(common.length || rare.length) ? html`
-        <span class="matrix-unfold" title=${`Unfold ${id} into its ${common.length} common keys`}
+        <span class="matrix-unfold" title=${t('matrix.unfoldTitle', { id, n: common.length })}
               onClick=${event => { stop(event); matrix.expand(id, !common.length); }}>▸</span>
       ` : null}
       <span class="matrix-label">${leaf}</span>
       ${dir && html`<span class="matrix-sorted">${dir === 'asc' ? '▲' : '▼'}${sort.length > 1 ? at + 1 : ''}</span>`}
       ${filled !== null && html`
-        <span class="matrix-fill" title=${`${filled} of ${rows.length} rows carry a value`}>
+        <span class="matrix-fill" title=${t('matrix.fillTitle', { filled, n: rows.length })}>
           ${`${Math.round((filled / rows.length) * 100)}%`}
         </span>
       `}
@@ -91,12 +93,12 @@ export class MatrixTable {
           onMouseDown=${event => MatrixPointer.press(matrix, event, id)}
           onContextMenu=${event => { event.preventDefault(); matrix.panels.menu(id, event.clientX, event.clientY, rows); }}>
         ${parts}
-        <button type="button" class="matrix-more" title="Column menu" onClick=${event => {
+        <button type="button" class="matrix-more" title=${t('matrix.columnMenu')} onClick=${event => {
           stop(event);
           const box = event.currentTarget.getBoundingClientRect();
           matrix.panels.menu(id, box.left, box.bottom, rows);
         }}>⋮</button>
-        <span class="matrix-resize" title="Drag to widen" onClick=${stop}
+        <span class="matrix-resize" title=${t('matrix.dragToWiden')} onClick=${stop}
               onMouseDown=${event => MatrixPointer.widen(matrix, event, id, event.currentTarget.closest('th'))}></span>
       </th>
     `;
@@ -122,8 +124,8 @@ export class MatrixTable {
     }
     if (typeof value === 'boolean') {
       return roleInfo.symbols
-        ? ['bool', html`<i class=${value ? 'fa-solid fa-check' : 'fa-solid fa-xmark'}></i>`, value ? 'yes' : 'no']
-        : ['', value ? 'yes' : 'no'];
+        ? ['bool', html`<i class=${value ? 'fa-solid fa-check' : 'fa-solid fa-xmark'}></i>`, t(value ? 'common.yes' : 'common.no')]
+        : ['', t(value ? 'common.yes' : 'common.no')];
     }
     if (id in MatrixModel.RESSOURCES || typeof value === 'number') return ['num', model.display(row, id)];
     if (id === 'services' && MatrixModel.isMap(value)) {

@@ -5,6 +5,7 @@ import { ForkTree } from './fork/tree.js';
 import { GitRange } from './gitRange.js';
 import { GitHubApi } from './github/api.js';
 import { GitHubFeed } from './github/feed.js';
+import { t } from './i18n.js';
 import { MatrixView } from './matrix/view.js';
 import { MetaGraph } from './meta/graph.js';
 import { MetaTables } from './meta/tables.js';
@@ -31,7 +32,7 @@ import { disableMetaViews, redraw, wirePanels, wireViewMode } from './wire/views
 // The specs reach these through page.evaluate; nothing in the app reads them.
 Object.assign(window, { PlaywrightMatrix, RoleInfo, TableView, TestsView, UrlState });
 
-setStatus('Scanning roles ...');
+setStatus(t('status.scanning'));
 
 wirePanels();
 wireDesign(graphRenderer);
@@ -57,7 +58,7 @@ gitRange.load()
     if (rewound && !missing.length) {
       dataLoader.basePath = `${rewound.path}roles`;
       dataLoader.metaPath = `${rewound.path}meta`;
-      setStatus(`Scanning roles at ${rewound.date.slice(0, 10)} ...`);
+      setStatus(t('status.scanningAt', { date: rewound.date.slice(0, 10) }));
     } else if (rewound) {
       gitRange.markMissing(rewound.date, missing);
       disableMetaViews(missing);
@@ -65,11 +66,11 @@ gitRange.load()
     return Promise.all([dataLoader.listRoles(), dataLoader.loadCategories()]);
   })
   .then(([roles, categories]) => {
-    setStatus(`Loading meta of ${roles.length} roles ...`);
+    setStatus(t('status.loadingMeta', { n: roles.length }));
     return dataLoader
       .loadAll(roles, (done, total) => {
         if (done % 25 === 0 || done === total) {
-          setStatus(`Loading meta ${done}/${total} ...`);
+          setStatus(t('status.loadingProgress', { done, total }));
         }
       })
       .then(metaByRole => [metaByRole, categories]);
@@ -141,5 +142,5 @@ gitRange.load()
   })
   .catch(err => {
     console.error('Init error', err);
-    setStatus('Initialization failed: ' + err.message);
+    setStatus(t('status.failed', { message: err.message }));
   });

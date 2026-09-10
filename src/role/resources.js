@@ -1,26 +1,27 @@
 import { html, useState } from '../html.js';
+import { t } from '../i18n.js';
 import { TableView } from '../table/view.js';
 
 export class RoleResources {
   static METRICS = [
     {
-      label: 'CPU', column: 'ressources.cpus', key: 'cpus_float',
+      label: t('resources.cpu'), column: 'ressources.cpus', key: 'cpus_float',
       format: value => TableView._fmtNumber(value),
     },
     {
-      label: 'Mem res.', column: 'ressources.mem_reservation', key: 'mem_reservation_bytes',
+      label: t('resources.memRes'), column: 'ressources.mem_reservation', key: 'mem_reservation_bytes',
       format: value => TableView._fmtBytes(value),
     },
     {
-      label: 'Mem limit', column: 'ressources.mem_limit', key: 'mem_limit_bytes',
+      label: t('resources.memLimit'), column: 'ressources.mem_limit', key: 'mem_limit_bytes',
       format: value => TableView._fmtBytes(value),
     },
     {
-      label: 'Storage', column: 'ressources.min_storage', key: 'min_storage_bytes',
+      label: t('resources.storage'), column: 'ressources.min_storage', key: 'min_storage_bytes',
       format: value => TableView._fmtBytes(value),
     },
     {
-      label: 'PIDs', column: 'ressources.pids_limit', key: 'pids_limit_int',
+      label: t('resources.pids'), column: 'ressources.pids_limit', key: 'pids_limit_int',
       format: value => TableView._fmtNumber(value),
     },
   ];
@@ -62,13 +63,13 @@ function ResourceTable({ totals, rows, chip }) {
   return html`
     <table class="role-card-resources">
       <thead><tr>
-        <th>Ressources</th>
+        <th>${t('resources.title')}</th>
         ${RoleResources.METRICS.map(({ label }) => html`<th class="num">${label}</th>`)}
       </tr></thead>
       <tbody class="res-total">
         <tr tabindex="0" role="button" aria-expanded=${String(open)} onClick=${flip} onKeyDown=${keydown}
-            title="mem, storage and pids are summed over the services, cpu is the maximum. Click to break them down per service.">
-          <th>${open ? '▾' : '▸'} ${rows.length} ${rows.length === 1 ? 'service' : 'services'}</th>
+            title=${t('resources.toggleTitle')}>
+          <th>${open ? '▾' : '▸'} ${t('resources.services', { n: rows.length })}</th>
           ${RoleResources.METRICS.map(({ key, format }) => html`
             <td class="num" data-metric=${key}>${format(totals[key])}</td>
           `)}

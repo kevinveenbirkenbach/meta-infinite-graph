@@ -1,4 +1,5 @@
 import { el, textElement } from '../dom.js';
+import { t } from '../i18n.js';
 
 export class ForkCards {
   static TOKEN_HELP = '#github-token';
@@ -9,80 +10,53 @@ export class ForkCards {
     return typeof iso === 'string' ? iso.slice(0, 10) : '';
   }
 
-  static _rich(tag, parts, className) {
+  // Args:
+  //   message: a translated text whose {placeholders} name entries of codes.
+  //   codes: the literal each placeholder stands for, set as <code>.
+  static _rich(tag, message, codes, className) {
     const element = document.createElement(tag);
     if (className) element.className = className;
-    for (const part of parts) {
-      element.appendChild(
-        typeof part === 'string'
-          ? document.createTextNode(part)
-          : textElement('code', part.code)
-      );
-    }
+    message.split(/\{(\w+)\}/).forEach((part, index) => {
+      element.appendChild(index % 2 ? textElement('code', codes[part]) : document.createTextNode(part));
+    });
     return element;
-  }
-
-  static _steps(items) {
-    const list = document.createElement('ol');
-    for (const parts of items) list.appendChild(ForkCards._rich('li', parts));
-    return list;
   }
 
   static tokenHelp() {
     const card = el('div', { className: 'role-card token-help' });
-    card.appendChild(textElement('div', '🔑 GitHub token', 'role-card-title'));
-    card.appendChild(textElement(
-      'p',
-      'GitHub answers 60 requests an hour to an address that sends no token. A '
-      + 'full fork tree costs around 32, so the second visit runs dry. A token '
-      + 'lifts the ceiling to 5000 an hour.',
-      'role-card-desc'
-    ));
+    card.appendChild(textElement('div', t('token.title'), 'role-card-title'));
+    card.appendChild(textElement('p', t('token.intro'), 'role-card-desc'));
 
-    card.appendChild(textElement('h4', 'Create one'));
-    card.appendChild(ForkCards._steps([
-      ['Open Settings, Developer settings, Personal access tokens, Fine-grained tokens, then Generate new token.'],
-      ['Resource owner: your own account. Expiration: any date, the tree needs nothing long lived.'],
-      ['Repository access: ', { code: 'Public repositories (read-only)' }, '.'],
-      ['Leave every permission untouched. Public repository metadata needs none of them.'],
-      ['Generate, then copy the ', { code: 'github_pat_…' }, ' value. GitHub shows it exactly once.'],
-    ]));
-    card.appendChild(textElement(
-      'p',
-      'A classic token works as well: create one with no scope ticked at all. An '
-      + 'empty scope still reads public data at the authenticated rate.',
-      'token-help-aside'
-    ));
+    card.appendChild(textElement('h4', t('token.create')));
+    const steps = document.createElement('ol');
+    for (const [key, codes] of Object.entries({
+      'token.step1': {},
+      'token.step2': {},
+      'token.step3': { scope: 'Public repositories (read-only)' },
+      'token.step4': {},
+      'token.step5': { token: 'github_pat_…' },
+    })) {
+      steps.appendChild(ForkCards._rich('li', t(key), codes));
+    }
+    card.appendChild(steps);
+    card.appendChild(textElement('p', t('token.classic'), 'token-help-aside'));
 
-    card.appendChild(textElement('h4', 'Paste it into the field'));
-    card.appendChild(ForkCards._rich('p', [
-      'It stays in this browser under the key ', { code: 'mig-gh-token' },
-      ' and travels only to ', { code: 'api.github.com' },
-      '. It is never written into the address bar, so a link you share carries '
-      + 'the view and not the credential. The button below the field erases it '
-      + 'again together with the cache.',
-    ], 'token-help-aside'));
+    card.appendChild(textElement('h4', t('token.paste')));
+    card.appendChild(ForkCards._rich('p', t('token.stays'), { key: 'mig-gh-token', host: 'api.github.com' }, 'token-help-aside'));
 
-    card.appendChild(textElement('h4', 'Or persist it in .env'));
-    card.appendChild(ForkCards._rich('p', [
-      'Put the token into the ', { code: '.env' },
-      ' file of the server that hosts this page, beside ', { code: 'MIG_PORT' }, ':',
-    ], 'token-help-aside'));
+    card.appendChild(textElement('h4', t('token.persist')));
+    card.appendChild(ForkCards._rich('p', t('token.persistHow'), { env: '.env', port: 'MIG_PORT' }, 'token-help-aside'));
     card.appendChild(textElement('pre', 'MIG_GITHUB_TOKEN=github_pat_…'));
-    card.appendChild(ForkCards._rich('p', [
-      'and start it with ', { code: 'make up' },
-      '. The container then writes an nginx snippet that attaches the ',
-      { code: 'Authorization' }, ' header to a ', { code: '/gh/' },
-      ' proxy, so the browser calls its own origin and never receives the token. '
-      + 'This field disappears and every visitor shares the one budget of 5000 an hour.',
-    ], 'token-help-aside'));
+    card.appendChild(ForkCards._rich('p', t('token.proxy'), {
+      make: 'make up', header: 'Authorization', path: '/gh/',
+    }, 'token-help-aside'));
 
     const links = el('div', { className: 'role-card-links' });
-    for (const [text, href] of [
-      ['Create a token', 'https://github.com/settings/personal-access-tokens/new'],
-      ['Rate limits', 'https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api'],
+    for (const [key, href] of [
+      ['token.createLink', 'https://github.com/settings/personal-access-tokens/new'],
+      ['token.limitsLink', 'https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api'],
     ]) {
-      links.appendChild(el('a', { href, target: '_blank', rel: 'noreferrer', textContent: text }));
+      links.appendChild(el('a', { href, target: '_blank', rel: 'noreferrer', textContent: t(key) }));
     }
     card.appendChild(links);
     return card;
@@ -90,13 +64,13 @@ export class ForkCards {
 
   static commitCard(commit, repo) {
     const card = el('div', { className: 'role-card commit-card' });
-    card.appendChild(textElement('div', `${commit.sha.slice(0, 8)} in ${repo.id}`, 'role-card-title'));
+    card.appendChild(textElement('div', t('fork.commitIn', { sha: commit.sha.slice(0, 8), repo: repo.id }), 'role-card-title'));
     card.appendChild(textElement('p', commit.message, 'role-card-desc'));
     const facts = el('dl', { className: 'role-card-facts' });
-    facts.append(textElement('dt', 'Date'), textElement('dd', ForkCards.date(commit.date)));
+    facts.append(textElement('dt', t('commits.column.date')), textElement('dd', ForkCards.date(commit.date)));
     facts.append(
-      textElement('dt', 'Parents'),
-      textElement('dd', (commit.parents || []).map(sha => sha.slice(0, 8)).join(', ') || 'root')
+      textElement('dt', t('fork.parents')),
+      textElement('dd', (commit.parents || []).map(sha => sha.slice(0, 8)).join(', ') || t('fork.root'))
     );
     card.appendChild(facts);
     return card;
@@ -105,34 +79,22 @@ export class ForkCards {
   // The plot silently losing its lanes reads as "this repository has no
   // branches", so a refusal has to say which one it was and what it costs.
   static refusal(error) {
-    if (error.status === 404) {
-      return `No branch lines: ${error.message}. A 404 here is either a branch that does `
-        + 'not exist or a path the server proxy does not carry; the fork network above is '
-        + 'complete either way.';
-    }
+    if (error.status === 404) return t('fork.refused404', { message: error.message });
     return error.exhausted
-      ? 'GitHub is out of requests for this hour, so no branch lines could be drawn. '
-        + 'The fork network above is complete. Add a token in the filter panel, or turn '
-        + 'the branch lines off in the design panel to spend the budget on the network alone.'
-      : `GitHub answered ${error.status || 'with an error'} for the commit histories, `
-        + 'so no branch lines could be drawn. The fork network above is complete.';
+      ? t('fork.refusedExhausted')
+      : t('fork.refusedOther', { status: error.status || t('feed.anError') });
   }
 
   static tagNote(placed, orphaned) {
-    return `${placed} of ${placed + orphaned} tags placed.`
-      + (orphaned
-        ? ' A tag carries no date, so the rest would each cost a request that the'
-          + " hour's remaining quota is not spent on."
-        : '');
+    const note = t('fork.tagsPlaced', { placed, n: placed + orphaned });
+    return orphaned ? `${note} ${t('fork.tagsOrphaned')}` : note;
   }
 
   static axisNote(span) {
-    const range = `Axis: ${ForkCards.date(new Date(span.from).toISOString())} to `
-      + `${ForkCards.date(new Date(span.to).toISOString())}`;
-    return span.zoomed
-      ? `${range}, the window of the loaded commits and tags. Fork lines older than it are `
-        + 'clamped to the left edge.'
-      : `${range}. Open a repository to draw its commit lanes and merges; the axis then `
-        + 'narrows to that history.';
+    const axis = t('fork.axis', {
+      from: ForkCards.date(new Date(span.from).toISOString()),
+      to: ForkCards.date(new Date(span.to).toISOString()),
+    });
+    return t(span.zoomed ? 'fork.axisZoomed' : 'fork.axisWhole', { axis });
   }
 }

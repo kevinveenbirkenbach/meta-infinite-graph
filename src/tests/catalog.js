@@ -1,33 +1,29 @@
 import { CiOrder } from '../ciOrder.js';
+import { t } from '../i18n.js';
 import { MetaTables } from '../meta/tables.js';
 import { PlaywrightMatrix } from '../playwrightMatrix.js';
 
 export class TestsCatalog {
   static KINDS = {
-    playwright: 'Playwright',
-    cli: 'CLI',
+    playwright: t('tests.kind.playwright'),
+    cli: t('tests.kind.cli'),
   };
 
-  static GATES = {
-    all: 'all',
-    runs: 'runs',
-    never: 'never',
-    skipped: 'not in this variant',
-    always: 'always maybe',
-    unknown: 'maybe in this variant',
-  };
+  static GATES = Object.fromEntries(
+    ['all', 'runs', 'never', 'skipped', 'always', 'unknown'].map(gate => [gate, t(`tests.gates.${gate}`)])
+  );
 
   static SORTS = {
-    name: 'role name ▲',
-    ci: 'CI chunk order',
+    name: t('tests.sort.name'),
+    ci: t('tests.sort.ci'),
   };
 
   static STATUS = {
-    runs: { mark: '✅', title: 'every skip gate is on' },
-    never: { mark: '⛔', title: 'a skip gate is off in every variant, so this test never runs' },
-    skipped: { mark: '➖', title: 'a skip gate is off here; the test runs in another variant' },
-    always: { mark: '❓', title: 'no variant settles this gate, so the test is never certain' },
-    unknown: { mark: '❔', title: 'this variant leaves the gate open; another one settles it' },
+    runs: { mark: '✅', title: t('tests.status.runs') },
+    never: { mark: '⛔', title: t('tests.status.never') },
+    skipped: { mark: '➖', title: t('tests.status.skipped') },
+    always: { mark: '❓', title: t('tests.status.always') },
+    unknown: { mark: '❔', title: t('tests.status.unknown') },
   };
 
   // Args:
@@ -175,13 +171,7 @@ export class TestsCatalog {
   }
 
   _ciNote() {
-    if (!this.rank.size) {
-      return ' No INFINITO_DISCOVERY_SORT: mount the core checkout\'s default.env'
-        + ' (INFINITO_ENV_FILE) to sort by the deploy order.';
-    }
-    return ` CI order derived here from ${this.rank.size} discovered rows, by`
-      + ` INFINITO_DISCOVERY_SORT. Ties fall back to the role name: the last key`
-      + ` of that spec is a nonce core draws per run, which nothing can reproduce.`;
+    return this.rank.size ? t('tests.note.ciSort', { n: this.rank.size }) : t('tests.note.noSort');
   }
 
   // Args:
@@ -189,25 +179,15 @@ export class TestsCatalog {
   //   shown: the rows the table renders.
   _note(all, shown) {
     const roles = new Set(all.map(row => row.role)).size;
-    const tail = this.sort === 'ci' ? this._ciNote() : '';
-    const narrowed = shown.length === all.length
-      ? ''
-      : ` Showing the ${shown.length} rows gated ${TestsCatalog.GATES[this.gate]}.`;
-    if (this.kind === 'cli') {
-      return `${all.length} CLI runs across ${roles} roles. One row is one`
-        + ' run of the role\'s files/test/test.sh after that variant deployed.'
-        + ' CLI tests declare no <NAME>_SERVICE_ENABLED flags, so no service'
-        + ` switches one off; the env column lists what the role does declare.`
-        + `${narrowed}${tail}`;
-    }
     const counts = { runs: 0, never: 0, skipped: 0, always: 0, unknown: 0 };
     for (const row of all) counts[row.gate] += 1;
-    return `${all.length} test runs across ${roles} roles. ${counts.runs} run. `
-      + `${counts.never} never run because a gate is off in every variant, `
-      + `${counts.skipped} are skipped only in their own variant. `
-      + `${counts.always} are never certain because no variant settles their gate, `
-      + `${counts.unknown} are open only in their own variant. `
-      + `A row is one test in one variant.${narrowed}${tail}`;
+    return [
+      this.kind === 'cli'
+        ? t('tests.note.cli', { n: all.length, roles })
+        : t('tests.note.playwright', { n: all.length, roles, ...counts }),
+      shown.length === all.length ? '' : t('tests.note.narrowed', { n: shown.length, gate: TestsCatalog.GATES[this.gate] }),
+      this.sort === 'ci' ? this._ciNote() : '',
+    ].filter(Boolean).join(' ');
   }
 
   // Args:

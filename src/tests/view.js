@@ -1,6 +1,7 @@
 import { CiOrder } from '../ciOrder.js';
 import { byId, el } from '../dom.js';
 import { html, render, toElement } from '../html.js';
+import { t } from '../i18n.js';
 import { PlaywrightMatrix } from '../playwrightMatrix.js';
 import { TestsCatalog } from './catalog.js';
 
@@ -55,7 +56,7 @@ export class TestsView extends TestsCatalog {
     this.container.replaceChildren(this.root);
     if (!this.section) {
       this.section = true;
-      this.note = 'Reading every role’s test suite…';
+      this.note = t('tests.reading');
       this.lines = null;
       this._paint();
       this.loaded = this._load();
@@ -94,7 +95,7 @@ export class TestsView extends TestsCatalog {
       this._setCi(CiOrder.parse(env), stacks, categories);
       this._render();
     }).catch(error => {
-      this.note = `Could not read the test suites: ${error.message}`;
+      this.note = t('tests.failed', { message: error.message });
       this._paint();
     });
   }
@@ -139,17 +140,17 @@ export class TestsView extends TestsCatalog {
   static card(row, roleInfo, plan) {
     const status = TestsView.STATUS[row.gate];
     const scalars = [
-      ['Variant', row.variant === null ? 'base' : String(row.variant)],
-      ['Gate', status.title],
-      ['CI rank', plan ? String(plan.rank) : 'not discovered'],
-      ['Timeout', row.timeout ? `${row.timeout}s` : ''],
-      ['Why', (row.reasons || []).join('; ')],
+      [t('tests.card.variant'), row.variant === null ? t('tests.base') : String(row.variant)],
+      [t('tests.gate'), status.title],
+      [t('tests.card.rank'), plan ? String(plan.rank) : t('tests.card.undiscovered')],
+      [t('tests.card.timeout'), row.timeout ? `${row.timeout}s` : ''],
+      [t('tests.card.why'), (row.reasons || []).join('; ')],
     ].filter(([, value]) => value);
     const lists = [
-      ['Skip gates', row.skip, true],
-      ['Branch gates', row.branch, true],
-      ['Env flags', row.flags, false],
-      ['Shared harness', row.shared, false],
+      [t('tests.card.skip'), row.skip, true],
+      [t('tests.card.branch'), row.branch, true],
+      [t('tests.card.flags'), row.flags, false],
+      [t('tests.card.shared'), row.shared, false],
     ].filter(([, items]) => items && items.length);
     return toElement(html`
       <div class="role-card test-card">
@@ -175,8 +176,8 @@ function TestsGrid({ view }) {
     return html`
       <tr>
         <th class="tests-axis" data-role-name=${entry.role}>${view.roleInfo.labelNode(entry.role)}</th>
-        ${axis(entry.variant === null ? 'base' : String(entry.variant))}
-        <th class="tests-axis" title=${plan ? undefined : 'CI discovery does not deploy this role and variant'}>
+        ${axis(entry.variant === null ? t('tests.base') : String(entry.variant))}
+        <th class="tests-axis" title=${plan ? undefined : t('tests.undeployed')}>
           ${plan ? String(plan.rank) : ''}
         </th>
         ${Array.from({ length: width }, (_, index) => {
@@ -188,7 +189,7 @@ function TestsGrid({ view }) {
     `;
   };
   return html`
-    <h2>Tests</h2>
+    <h2>${t('view.tests')}</h2>
     <div class="btn-group btn-group-sm tests-kind">
       ${Object.entries(TestsView.KINDS).map(([value, label]) => html`
         <input type="radio" class="btn-check" name="tests-kind" id=${`tests-kind-${value}`} value=${value}
@@ -201,7 +202,7 @@ function TestsGrid({ view }) {
       ${lines && html`
         <table class="tests-matrix" onMouseOver=${event => view._hover(event)} onMouseOut=${event => view._leave(event)}>
           <thead><tr>
-            ${['role', 'variant', 'rank'].map(axis)}
+            ${['role', 'variant', 'rank'].map(name => axis(t(`tests.axis.${name}`)))}
             ${Array.from({ length: width }, (_, index) => html`<th>${String(index + 1)}</th>`)}
           </tr></thead>
           <tbody>${lines.map(line)}</tbody>
