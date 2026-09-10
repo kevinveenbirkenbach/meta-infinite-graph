@@ -6,6 +6,9 @@ class UrlState {
   // Args:
   //   fallback: the value that is left out of the URL, not one used on read.
   register(name, get, set, fallback) {
+    if (this.controls.some(control => control.name === name)) {
+      throw new Error(`URL key '${name}' is registered twice; both setters would read one value.`);
+    }
     this.controls.push({ name, get, set, fallback });
     return this;
   }

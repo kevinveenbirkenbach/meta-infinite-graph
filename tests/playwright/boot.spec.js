@@ -26,6 +26,22 @@ test('boots without JS errors and the libs are defined', async ({ page }) => {
   expect(errors, errors.join('\n')).toEqual([]);
 });
 
+test('a URL key registered twice fails loudly instead of feeding two setters', async ({ page }) => {
+  await page.goto('/');
+  await expect.poll(() => page.evaluate(() => typeof window.UrlState)).toBe('function');
+  const outcome = await page.evaluate(() => {
+    const state = new UrlState();
+    state.register('probe', () => 'a', () => {}, '');
+    try {
+      state.register('probe', () => 'b', () => {}, '');
+      return 'accepted';
+    } catch (error) {
+      return error.message;
+    }
+  });
+  expect(outcome).toContain("URL key 'probe' is registered twice");
+});
+
 test('role dropdown is populated, heaviest role first', async ({ page }) => {
   await page.goto('/');
   const sel = page.locator('#sel-role');
