@@ -237,6 +237,12 @@ repository:
 make up          # http://127.0.0.1:8000
 ```
 
+The libraries the page loads are pinned in `package.json`. `make up` and the
+test targets first run `make vendor`, which installs them and copies the files
+the page needs into `src/vendor/` (gitignored), so the host needs Node.js and
+npm. The image build does the same in its own Node stage. To move a library to
+a new version, change its pin in `package.json` and run `make vendor`.
+
 The first run copies `default.env` to `.env` (gitignored). Change the port
 or the checkout there:
 

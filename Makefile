@@ -11,7 +11,7 @@ IMAGE ?= meta-infinite-graph:local
 #   cannot install its own. Empty means playwright uses its bundled browser.
 MIG_CHROMIUM ?=
 
-.PHONY: help up down logs rebuild e2e test test-fast lint image nginx-verify nginx-probe gh-status git-status clean
+.PHONY: help up down logs rebuild e2e vendor test test-fast lint image nginx-verify nginx-probe gh-status git-status clean
 
 help:
 	@echo "Targets:"
@@ -20,6 +20,7 @@ help:
 	@echo "  make logs                Follow service logs"
 	@echo "  make rebuild             Down + up"
 	@echo "  make e2e                 Start stack, run HTTP E2E checks, stop stack"
+	@echo "  make vendor              Copy the pinned npm libraries into src/vendor"
 	@echo "  make test                Install browsers, then run the Playwright suite"
 	@echo "  make test-fast           Run the Playwright suite without installing"
 	@echo "  make lint                Run the repository lints under tests/lint and the type check"
@@ -33,7 +34,7 @@ help:
 .env:
 	cp default.env .env
 
-up: .env
+up: .env vendor
 	docker compose -f $(COMPOSE_FILE) up -d --build --force-recreate
 
 down:
@@ -44,21 +45,27 @@ logs:
 
 rebuild: down up
 
-e2e: .env
+e2e: .env vendor
 	@set -euo pipefail; \
 	trap 'docker compose -f $(COMPOSE_FILE) down --remove-orphans' EXIT; \
 	docker compose -f $(COMPOSE_FILE) up -d --build --force-recreate; \
 	BASE_URL=$(BASE_URL) tests/end_to_end/test_http.sh
 
-test:
-	npm install
+node_modules: package.json package-lock.json
+	npm install --no-audit --no-fund
+	touch node_modules
+
+vendor: node_modules
+	node scripts/vendor.js
+
+test: vendor
 	npx playwright install chromium
 	MIG_CHROMIUM=$(MIG_CHROMIUM) npx playwright test
 
-test-fast:
+test-fast: vendor
 	MIG_CHROMIUM=$(MIG_CHROMIUM) npx playwright test $(ARGS)
 
-lint:
+lint: node_modules
 	python3 -m pytest -q tests/lint
 	npx tsc -p tsconfig.json
 

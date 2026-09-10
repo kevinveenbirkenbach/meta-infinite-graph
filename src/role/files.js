@@ -120,7 +120,7 @@ export class RoleFiles {
   }
 
   loadBrandIndex() {
-    return fetch('vendor/simple-icons/index.json')
+    return fetch('role/brands.json')
       .then(res => (res.ok ? res.json() : {}))
       .catch(() => ({}));
   }

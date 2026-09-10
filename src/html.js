@@ -1,6 +1,9 @@
-import { html, render, useState } from './vendor/preact/standalone.module.js';
+import htm from 'htm';
+import { h, render } from 'preact';
+import { useState } from 'preact/hooks';
 
-export { html, render, useState };
+export const html = htm.bind(h);
+export { render, useState };
 
 // Returns: the element a stateless vnode renders to, for callers that still
 //   assemble the page by hand. A vnode holding state must stay in the
