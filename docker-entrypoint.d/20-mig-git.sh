@@ -22,39 +22,40 @@ FORKS="${MIG_GIT_FORKS:-auto}"
 
 mkdir -p "$HOME_DIR"
 
-if [ ! -d "$MIRROR" ]; then
-  echo "mig-git: cloning $ROOT"
-  git clone --bare --filter=blob:none "https://github.com/$ROOT.git" "$MIRROR"
-  git --git-dir "$MIRROR" config remote.origin.promisor true
-  git --git-dir "$MIRROR" config remote.origin.partialclonefilter blob:none
-fi
-
-listed=""
-case "$FORKS" in
-  off) ;;
-  auto)
-    auth=""
-    [ -n "${MIG_GITHUB_TOKEN:-}" ] && auth="--header=Authorization: Bearer $MIG_GITHUB_TOKEN"
-    listed=$(wget -qO- ${auth:+"$auth"} \
-      "https://api.github.com/repos/$ROOT/forks?per_page=100&sort=oldest" 2>/dev/null \
-      | sed -n 's/.*"full_name": *"\([^"]*\)".*/\1/p' | grep -v "^$ROOT$" || true)
-    ;;
-  *) listed="$FORKS" ;;
-esac
-
-index=0
-for fork in $listed; do
-  index=$((index + 1))
-  name="f$index"
-  git --git-dir "$MIRROR" remote add "$name" "https://github.com/$fork.git" 2>/dev/null || \
-    git --git-dir "$MIRROR" remote set-url "$name" "https://github.com/$fork.git"
-  git --git-dir "$MIRROR" config "remote.$name.promisor" true
-  git --git-dir "$MIRROR" config "remote.$name.partialclonefilter" blob:none
-done
-echo "mig-git: $(echo "$listed" | grep -c . || echo 0) forks registered"
-
-# Backgrounded: a fetch over a slow network must not hold the web server back.
+# Backgrounded, clone included: nginx only starts once this script returns, so
+# any network call made here in the foreground holds the whole page back.
 (
+  if [ ! -d "$MIRROR" ]; then
+    echo "mig-git: cloning $ROOT"
+    git clone --bare --filter=blob:none "https://github.com/$ROOT.git" "$MIRROR"
+    git --git-dir "$MIRROR" config remote.origin.promisor true
+    git --git-dir "$MIRROR" config remote.origin.partialclonefilter blob:none
+  fi
+
+  listed=""
+  case "$FORKS" in
+    off) ;;
+    auto)
+      auth=""
+      [ -n "${MIG_GITHUB_TOKEN:-}" ] && auth="--header=Authorization: Bearer $MIG_GITHUB_TOKEN"
+      listed=$(wget -T 30 -qO- ${auth:+"$auth"} \
+        "https://api.github.com/repos/$ROOT/forks?per_page=100&sort=oldest" 2>/dev/null \
+        | sed -n 's/.*"full_name": *"\([^"]*\)".*/\1/p' | grep -v "^$ROOT$" || true)
+      ;;
+    *) listed="$FORKS" ;;
+  esac
+
+  index=0
+  for fork in $listed; do
+    index=$((index + 1))
+    name="f$index"
+    git --git-dir "$MIRROR" remote add "$name" "https://github.com/$fork.git" 2>/dev/null || \
+      git --git-dir "$MIRROR" remote set-url "$name" "https://github.com/$fork.git"
+    git --git-dir "$MIRROR" config "remote.$name.promisor" true
+    git --git-dir "$MIRROR" config "remote.$name.partialclonefilter" blob:none
+  done
+  echo "mig-git: $(echo "$listed" | grep -c . || true) forks registered"
+
   git --git-dir "$MIRROR" fetch --prune origin >/dev/null 2>&1 || true
   remotes=$(git --git-dir "$MIRROR" remote | grep -v '^origin$' || true)
   [ -n "$remotes" ] && git --git-dir "$MIRROR" fetch --multiple --prune --no-tags $remotes >/dev/null 2>&1
