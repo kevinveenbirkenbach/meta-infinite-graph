@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { DEFAULT, openMatrix, head, heads, column, numbers } = require('./support/matrixView');
+const { DEFAULT, openMatrix, head, heads, column, numbers } = require('../support/matrixView');
 
 test('the matrix opens with twelve informative columns, one row per role', async ({ page }) => {
   const rows = await openMatrix(page);

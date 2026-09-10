@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { HOSTILE, openForks } = require('./support/forks');
+const { HOSTILE, openForks } = require('../support/forks');
 
 test('the fork tree shows the root and its forks', async ({ page }) => {
   const calls = [];

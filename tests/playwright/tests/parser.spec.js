@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { MANIFEST, BASELINE, REGISTERED, ENV, ADMIN_FLOW, load } = require('./support/testsMatrix');
+const { MANIFEST, BASELINE, REGISTERED, ENV, ADMIN_FLOW, load } = require('../support/testsMatrix');
 
 test('the env key derivation matches the shared gating helper', async ({ page }) => {
   await load(page);

@@ -47,7 +47,7 @@ e2e: .env
 	@set -euo pipefail; \
 	trap 'docker compose -f $(COMPOSE_FILE) down --remove-orphans' EXIT; \
 	docker compose -f $(COMPOSE_FILE) up -d --build --force-recreate; \
-	BASE_URL=$(BASE_URL) tests/e2e/test_http.sh
+	BASE_URL=$(BASE_URL) tests/end_to_end/test_http.sh
 
 test:
 	npm install

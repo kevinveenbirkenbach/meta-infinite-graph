@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { ROOT, FORKS, COMMITS, openForks } = require('./support/forks');
+const { ROOT, FORKS, COMMITS, openForks } = require('../support/forks');
 
 test('a deep link into the fork view still waits for the proxy', async ({ page }) => {
   const paths = [];

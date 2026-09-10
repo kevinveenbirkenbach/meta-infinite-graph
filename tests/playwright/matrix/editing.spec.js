@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { DEFAULT, openMatrix, head, heads } = require('./support/matrixView');
+const { DEFAULT, openMatrix, head, heads } = require('../support/matrixView');
 
 test('C: a value opens its whole subtree, lists are chips', async ({ page }) => {
   await openMatrix(page, '&cols=role,services,main.galaxy_info.galaxy_tags,networks');

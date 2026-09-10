@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { ROOT, FORKS, COMMITS, stub, openForks } = require('./support/forks');
+const { ROOT, FORKS, COMMITS, stub, openForks } = require('../support/forks');
 
 test('the root repository travels in the URL, the token never does', async ({ page }) => {
   const calls = [];
