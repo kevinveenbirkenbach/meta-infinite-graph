@@ -8,10 +8,10 @@ services:
     volumes:
       # src is bind-mounted (not just COPY'd) so a frontend edit shows on
       # reload without a rebuild; writable so docker can create the nested
-      # roles and meta mountpoints below it.
+      # roles and infinito_meta mountpoints below it.
       - "./src:/usr/share/nginx/html"
       - "${INFINITO_ROLES_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/roles:ro"
-      - "${INFINITO_META_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/meta:ro"
+      - "${INFINITO_META_DIR:?set in .env (generated from default.env)}:/usr/share/nginx/html/infinito_meta:ro"
       # The CI ranking is declared here, not in the roles tree: the sort spec
       # and the lifecycle envelope live in this one file. Defaulted rather than
       # required, so an .env predating this mount still starts the stack; the

@@ -85,7 +85,8 @@ async function wire(page, calls) {
   });
   await page.route(`**/at/${SHA}/**`, route => {
     const url = new URL(route.request().url());
-    route.continue({ url: `${url.origin}${url.pathname.replace(`/at/${SHA}/`, '/')}${url.search}` });
+    const served = url.pathname.replace(`/at/${SHA}/meta/`, '/infinito_meta/').replace(`/at/${SHA}/`, '/');
+    route.continue({ url: `${url.origin}${served}${url.search}` });
   });
   await page.route('https://api.github.com/**', route => {
     const url = new URL(route.request().url());

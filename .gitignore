@@ -1,5 +1,5 @@
 roles/*
-src/meta/
+src/infinito_meta/
 .env
 .mcp.json
 node_modules/

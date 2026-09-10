@@ -71,8 +71,8 @@ http
         res.writeHead(200, { 'Content-Type': 'application/json' });
         return res.end(JSON.stringify({ proxy: Boolean(process.env.MIG_GITHUB_TOKEN) }));
       }
-      if (url.startsWith('/meta/')) {
-        const target = path.join(META, url.replace(/^\/meta\//, ''));
+      if (url.startsWith('/infinito_meta/')) {
+        const target = path.join(META, url.replace(/^\/infinito_meta\//, ''));
         const body = fs.readFileSync(target);
         res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
         return res.end(body);

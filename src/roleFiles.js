@@ -2,7 +2,7 @@
 // nginx's JSON autoindex of /roles/, and per-role metadata is the parsed
 // meta/*.yml itself. No pre-generated helper files.
 class RoleFiles {
-  constructor(basePath = '/roles', metaPath = '/meta') {
+  constructor(basePath = '/roles', metaPath = '/infinito_meta') {
     this.basePath = basePath;
     this.metaPath = metaPath;
     this._metaCache = new Map();
