@@ -4,7 +4,8 @@ from collections import defaultdict
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[2]
-MARKER = b"nocheck: prefix-folder"
+# Split, or this file would carry the marker and exempt itself.
+MARKER = b"nocheck: " + b"prefix-folder"
 EXEMPT_FILE = ".nocheck"
 FOLDER_NAME = re.compile(r"^[a-z_]+$")
 SEPARATOR = re.compile(r"[-_.]|(?<=[a-z0-9])(?=[A-Z])")
