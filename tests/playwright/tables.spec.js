@@ -317,6 +317,21 @@ test('only a role card gets the maximize button', async ({ page }) => {
   await expect(page.locator('.role-card-host[data-role="#probe"] .role-card-grow')).toHaveCount(0);
 });
 
+test('a card pinned before it is built still shows as pinned', async ({ page }) => {
+  await page.goto('/');
+  await expect.poll(() => page.evaluate(() => Boolean(window.__mig?.cardHost)), { timeout: 60000 })
+    .toBe(true);
+  // A card is always built after the role info has loaded, so a pin on a card
+  // nobody hovered yet always lands before its element exists.
+  const role = await page.evaluate(() => {
+    const name = window.__mig.metaGraph.roles.find(candidate => candidate.startsWith('web-app-'));
+    window.__mig.cardHost.pin(name, () => ({ x: 200, y: 200 }));
+    return name;
+  });
+  await expect(page.locator(`.role-card-host.pinned[data-role="${role}"]`))
+    .toBeVisible({ timeout: 60000 });
+});
+
 test('a second card opens without replacing the first', async ({ page }) => {
   await open2d(page);
   const heads = page.locator('table.bond-matrix tbody th[data-role-name]');

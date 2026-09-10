@@ -357,7 +357,10 @@ class RoleCardHost {
       if (this.cards.get(role) !== entry) return;
       this._build(role, entry);
       if (entry.released) this.release(role);
-      if (entry.pinned) this._follow(role, entry);
+      if (entry.pinned) {
+        entry.element.classList.add('pinned', 'on');
+        this._follow(role, entry);
+      }
     });
     return entry;
   }
