@@ -3,7 +3,9 @@
 # Param: MIG_GIT_HOME     where the mirror and the worktrees live
 # Param: MIG_GIT_FORKS    "auto" to discover forks through the API, "off" for
 #                         the root alone, or a space separated owner/name list
-# Param: MIG_GITHUB_TOKEN used for the one fork listing call, and for cloning
+# Param: MIG_GITHUB_TOKEN used for the one fork listing call, for cloning, and
+#                         for the Playwright artifacts, which GitHub only hands
+#                         to a token
 # Param: MIG_GIT_PORT     where mig/git.py listens and nginx proxies /git/ to
 set -eu
 
@@ -25,9 +27,18 @@ cat > /etc/nginx/mig-git.conf <<CONFIG
     autoindex_format json;
     add_header Cache-Control "no-store";
   }
+
+  # CI output any pull request can shape, served from this origin: sandboxed,
+  # or its report script would read the visitor's token from localStorage.
+  location /artifacts/ {
+    alias ${HOME_DIR}/artifacts/;
+    add_header Content-Security-Policy "sandbox allow-scripts" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Cache-Control "private, max-age=86400" always;
+  }
 CONFIG
 
-mkdir -p "$HOME_DIR/worktrees"
+mkdir -p "$HOME_DIR/worktrees" "$HOME_DIR/artifacts"
 
 # Backgrounded, clone included: nginx only starts once this script returns, so
 # any network call made here in the foreground holds the whole page back.

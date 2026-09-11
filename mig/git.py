@@ -9,6 +9,9 @@ Endpoints (all GET, all JSON):
   /log?ref=&since=&until=      commits on one ref, newest first
   /checkout?at=&ref=           worktree at the newest commit before `at`
   /refresh                     fetch every remote again
+  /artifact?id=&repo=          a Playwright artifact of the root or a mirrored
+                               fork, unpacked under /artifacts/<id>/, and its
+                               results
 """
 
 import json
@@ -19,10 +22,13 @@ import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
+import artifacts
+
 ROOT = os.environ["MIG_GIT_ROOT"]
 HOME = os.environ["MIG_GIT_HOME"]
 MIRROR = os.path.join(HOME, "mirror.git")
 TREES = os.path.join(HOME, "worktrees")
+UNPACKED = os.path.join(HOME, "artifacts")
 PORT = int(os.environ["MIG_GIT_PORT"])
 KEEP = int(os.environ["MIG_GIT_KEEP"])
 UNIT = "\x1f"
@@ -88,6 +94,21 @@ def span():
     return {"from": oldest, "to": newest}
 
 
+def full_name(url):
+    return url.rstrip("/").removesuffix(".git").split("github.com/")[-1]
+
+
+def mirrored(repo):
+    """Returns: repo when it is the root or one of its mirrored forks.
+
+    The server token downloads what this names, so a stranger's repository
+    must never get through.
+    """
+    if repo == ROOT or repo in {full_name(url) for url in remotes().values()}:
+        return repo
+    raise Failed(f"{repo} is not a repository of this mirror")
+
+
 def catalog():
     listed = remotes()
     repos = []
@@ -95,7 +116,7 @@ def catalog():
         repos.append({
             "remote": name,
             "url": url,
-            "full_name": url.rstrip("/").removesuffix(".git").split("github.com/")[-1],
+            "full_name": full_name(url),
             "refs": refs_of(name),
         })
     return {"root": ROOT, "repos": repos, "tags": tags(), "span": span()}
@@ -175,9 +196,12 @@ class Handler(BaseHTTPRequestHandler):
                 body = checkout(query.get("at", ""), query.get("ref", "origin/HEAD"))
             elif route.path == "/refresh":
                 body = refresh()
+            elif route.path == "/artifact" and query.get("id", "").isdigit():
+                body = artifacts.fetch(mirrored(query.get("repo", ROOT)), query["id"],
+                                       os.environ.get("MIG_GITHUB_TOKEN", ""), UNPACKED)
             else:
                 return self._answer(404, {"error": f"no route {route.path}"})
-        except Failed as error:
+        except (Failed, artifacts.Failed) as error:
             return self._answer(502, {"error": str(error)})
         except Exception as error:  # noqa: BLE001
             return self._answer(500, {"error": f"{type(error).__name__}: {error}"})

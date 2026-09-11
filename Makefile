@@ -14,7 +14,7 @@ MIG_CHROMIUM ?=
 #   LIBRETRANSLATE_API_KEY in the environment is sent along when set.
 LIBRETRANSLATE_URL ?= http://127.0.0.1:5000
 
-.PHONY: help up down logs rebuild e2e vendor test test-fast lint translate image nginx-verify nginx-probe gh-status git-status clean
+.PHONY: help up down logs rebuild e2e vendor test test-fast lint test-server translate image nginx-verify nginx-probe gh-status git-status clean
 
 help:
 	@echo "Targets:"
@@ -27,6 +27,7 @@ help:
 	@echo "  make test                Install browsers, then run the Playwright suite"
 	@echo "  make test-fast           Run the Playwright suite without installing"
 	@echo "  make lint                Run the repository lints under tests/lint and the type check"
+	@echo "  make test-server         Run the unit tests of the mig/ server code"
 	@echo "  make translate           Fill every missing catalogue entry through LibreTranslate"
 	@echo "  make image               Build the container image"
 	@echo "  make nginx-verify        Check the generated GitHub proxy config, with and without a token"
@@ -73,6 +74,9 @@ lint: node_modules
 	python3 -m pytest -q tests/lint
 	npx tsc -p tsconfig.json
 
+test-server:
+	python3 -m pytest -q tests/mig
+
 translate:
 	LIBRETRANSLATE_URL=$(LIBRETRANSLATE_URL) node scripts/translate.js
 
@@ -96,6 +100,11 @@ nginx-verify: image
 		 echo "alert locations: $$(grep -c "/alerts)" /etc/nginx/mig-github.conf)"; \
 		 echo "secrets hidden: $$(grep -c "hide_secret=true" /etc/nginx/mig-github.conf)"; \
 		 grep -o "proxy\":[a-z]*,\"alerts\":[a-z]*" /etc/nginx/mig-github.conf'
+	@echo "== git mirror and artifacts =="
+	@docker run --rm -e MIG_GIT_ROOT=infinito-nexus/core -e MIG_GIT_HOME=/tmp/mig -e MIG_GIT_FORKS=off $(IMAGE) sh -c \
+		'/docker-entrypoint.d/20-mig-git.sh >/dev/null 2>&1; nginx -t 2>&1 | tail -1; \
+		 echo "artifacts sandboxed: $$(grep -c "sandbox allow-scripts" /etc/nginx/mig-git.conf)"; \
+		 python3 -m py_compile /usr/local/lib/mig/git.py /usr/local/lib/mig/artifacts.py && echo "server compiles: yes"'
 
 nginx-probe: image
 	@docker run --rm $(IMAGE) sh -c \

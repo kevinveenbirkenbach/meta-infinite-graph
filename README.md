@@ -202,8 +202,8 @@ a note that the server supplies one, and a token a visitor had stored is
 dropped. Every visitor shares the one 5000 per hour budget.
 
 The proxy only forwards what the page actually calls: `/repos/owner/name` and
-its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls`, `/actions/runs` and
-`/security-advisories`, plus the alert paths of the [Security](#security) tab
+its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls`, `/actions/runs`,
+`/actions/runs/<id>/artifacts` and `/security-advisories`, plus the alert paths of the [Security](#security) tab
 when `MIG_GITHUB_ALERTS=true`. Anything else answers 404, so the token cannot
 be borrowed for the rest of the API.
 
@@ -362,6 +362,13 @@ The folder layout and the types of `src/` are checked without a browser:
 
 ```bash
 make lint
+```
+
+The server code under `mig/` has unit tests of its own, the artifact download
+included, with GitHub replaced by fakes:
+
+```bash
+make test-server
 ```
 
 HTTP smoke against the container image:
