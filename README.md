@@ -192,9 +192,10 @@ sees the token. The token field disappears from the filter panel, replaced by
 a note that the server supplies one, and a token a visitor had stored is
 dropped. Every visitor shares the one 5000 per hour budget.
 
-The proxy only forwards what the fork tree actually calls: `/repos/owner/name`
-and its `/forks`, `/branches` and `/tags`. Anything else answers 404, so the
-token cannot be borrowed for the rest of the API.
+The proxy only forwards what the page actually calls: `/repos/owner/name` and
+its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls` and `/actions/runs`.
+Anything else answers 404, so the token cannot be borrowed for the rest of the
+API.
 
 **The visitor holds it.** With `MIG_GITHUB_TOKEN` empty the browser calls
 `api.github.com` directly and the filter panel offers a token field. That token
