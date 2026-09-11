@@ -10,8 +10,11 @@ IMAGE ?= meta-infinite-graph:local
 # Param: MIG_CHROMIUM  path to a chromium binary, for hosts where playwright
 #   cannot install its own. Empty means playwright uses its bundled browser.
 MIG_CHROMIUM ?=
+# Param: LIBRETRANSLATE_URL  the LibreTranslate server make translate asks;
+#   LIBRETRANSLATE_API_KEY in the environment is sent along when set.
+LIBRETRANSLATE_URL ?= http://127.0.0.1:5000
 
-.PHONY: help up down logs rebuild e2e vendor test test-fast lint image nginx-verify nginx-probe gh-status git-status clean
+.PHONY: help up down logs rebuild e2e vendor test test-fast lint translate image nginx-verify nginx-probe gh-status git-status clean
 
 help:
 	@echo "Targets:"
@@ -24,6 +27,7 @@ help:
 	@echo "  make test                Install browsers, then run the Playwright suite"
 	@echo "  make test-fast           Run the Playwright suite without installing"
 	@echo "  make lint                Run the repository lints under tests/lint and the type check"
+	@echo "  make translate           Fill every missing catalogue entry through LibreTranslate"
 	@echo "  make image               Build the container image"
 	@echo "  make nginx-verify        Check the generated GitHub proxy config, with and without a token"
 	@echo "  make nginx-probe         Serve the image and probe the proxy routes"
@@ -68,6 +72,9 @@ test-fast: vendor
 lint: node_modules
 	python3 -m pytest -q tests/lint
 	npx tsc -p tsconfig.json
+
+translate:
+	LIBRETRANSLATE_URL=$(LIBRETRANSLATE_URL) node scripts/translate.js
 
 image:
 	docker build -t $(IMAGE) .

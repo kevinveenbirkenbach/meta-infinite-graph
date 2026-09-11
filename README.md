@@ -286,6 +286,19 @@ stylesheet.
   attribute.
 
 To add or change a text, edit `en.json` and every other catalogue with it.
+`make translate` fills whatever the other catalogues lack, missing keys and
+missing plural forms alike, through a LibreTranslate server:
+
+```bash
+docker run -d -p 5000:5000 libretranslate/libretranslate
+make translate                      # LIBRETRANSLATE_URL=http://127.0.0.1:5000
+```
+
+It sends one request per language, keeps every `{placeholder}`, and leaves an
+entry out when a placeholder comes back changed. LibreTranslate has models for
+only a few dozen of the 184 languages; the command lists the ones it could not
+fill, and those still need a hand. `LIBRETRANSLATE_API_KEY` is sent along for a
+server that requires one.
 
 `make lint` fails on a key the code asks for that `en.json` lacks, and on one
 nothing uses; `tests/playwright/i18n.spec.js` fails on a catalogue missing a
