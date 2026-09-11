@@ -1,6 +1,6 @@
 import { byId } from './dom.js';
 import { t } from './i18n.js';
-// The time range in the bottom bar, over the local mirror served by mig-git.py.
+// The time range in the bottom bar, over the local mirror served by mig/git.py.
 //
 // Left handle: how far back commits are pulled. At the far left it is the whole
 // history. Right handle: the state every view reads, which for the tables means

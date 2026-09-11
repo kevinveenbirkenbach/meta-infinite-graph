@@ -112,7 +112,7 @@ git-status:
 		'echo "mirror: $$(ls -d $$MIG_GIT_HOME/mirror.git 2>/dev/null || echo MISSING)"; \
 		 echo "commits: $$(git --git-dir $$MIG_GIT_HOME/mirror.git rev-list --count --all 2>&1)"; \
 		 echo "remotes: $$(git --git-dir $$MIG_GIT_HOME/mirror.git remote | tr "\n" " ")"; \
-		 echo "service: $$(pgrep -f mig-git.py >/dev/null && echo running || echo DOWN)"; \
+		 echo "service: $$(pgrep -f mig/git.py >/dev/null && echo running || echo DOWN)"; \
 		 echo "direct : $$(wget -S -qO- http://127.0.0.1:$$MIG_GIT_PORT/catalog 2>&1 | grep -o "HTTP/1.[01] [0-9]*" | head -1)"; \
 		 echo "proxied: $$(wget -S -qO- http://127.0.0.1/git/catalog 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"'
 

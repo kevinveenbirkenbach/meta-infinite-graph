@@ -16,7 +16,7 @@ ENV MIG_GIT_PORT=8399 MIG_GIT_KEEP=3
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY docker_entrypoint/10-mig-github.sh /docker-entrypoint.d/10-mig-github.sh
 COPY docker_entrypoint/20-mig-git.sh /docker-entrypoint.d/20-mig-git.sh
-COPY mig-git.py /usr/local/bin/mig-git.py
+COPY mig/ /usr/local/lib/mig/
 COPY src/ /usr/share/nginx/html/
 COPY --from=vendor /build/src/vendor/ /usr/share/nginx/html/vendor/
 

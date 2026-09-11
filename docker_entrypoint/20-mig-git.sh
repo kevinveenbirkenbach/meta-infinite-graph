@@ -4,7 +4,7 @@
 # Param: MIG_GIT_FORKS    "auto" to discover forks through the API, "off" for
 #                         the root alone, or a space separated owner/name list
 # Param: MIG_GITHUB_TOKEN used for the one fork listing call, and for cloning
-# Param: MIG_GIT_PORT     where mig-git.py listens and nginx proxies /git/ to
+# Param: MIG_GIT_PORT     where mig/git.py listens and nginx proxies /git/ to
 set -eu
 
 ROOT="${MIG_GIT_ROOT:?set in .env}"
@@ -69,4 +69,4 @@ mkdir -p "$HOME_DIR/worktrees"
   echo "mig-git: mirror up to date"
 ) &
 
-python3 /usr/local/bin/mig-git.py &
+python3 /usr/local/lib/mig/git.py &
