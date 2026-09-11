@@ -10,6 +10,13 @@ test('the timeline labels the root and its forks and is the whole view', async (
   await expect.poll(() => labels(page)).toEqual(NETWORK);
   await expect(page.locator('svg.fork-plot .fork-label').first()).toHaveClass(/root/);
   expect(await page.locator('.fork-plot-host ~ *').count(), 'nothing is listed below the timeline').toBe(0);
+  expect(await page.locator('.fork-plot-host').evaluate(host => {
+    const style = getComputedStyle(host);
+    return { overflow: style.overflowY, maxHeight: style.maxHeight };
+  }), 'the timeline grows to its full height instead of scrolling on its own')
+    .toEqual({ overflow: 'visible', maxHeight: 'none' });
+  expect(await page.locator('#tables').evaluate(pane => pane.scrollWidth <= pane.clientWidth),
+    'the plot never pushes the view sideways').toBe(true);
   await expect(page.locator('.table-note')).toContainText('2 direct forks');
   await expect(page.locator('.table-note')).toContainText('requests left this hour');
 

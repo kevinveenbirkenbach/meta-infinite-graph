@@ -187,13 +187,13 @@ td.role-list span {
 }
 
 .fork-plot-host {
-  overflow: auto;
-  max-height: 45vh;
   margin-bottom: 10px;
 }
 
 svg.fork-plot {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 svg.fork-plot .fork-axis line {
