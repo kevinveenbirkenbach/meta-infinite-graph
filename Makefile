@@ -77,12 +77,18 @@ nginx-verify: image
 	@docker run --rm -e MIG_GITHUB_TOKEN=ghp_verify_only $(IMAGE) sh -c \
 		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx -t 2>&1 | tail -1; \
 		 grep -q "Bearer ghp_verify_only" /etc/nginx/mig-github.conf && echo "token reaches nginx: yes"; \
-		 grep -o "proxy\":[a-z]*" /etc/nginx/mig-github.conf'
+		 grep -o "proxy\":[a-z]*,\"alerts\":[a-z]*" /etc/nginx/mig-github.conf'
 	@echo "== without a token =="
 	@docker run --rm $(IMAGE) sh -c \
 		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx -t 2>&1 | tail -1; \
 		 grep -q Authorization\ \"\" /etc/nginx/mig-github.conf && echo "no Authorization header: yes"; \
-		 grep -o "proxy\":[a-z]*" /etc/nginx/mig-github.conf'
+		 grep -o "proxy\":[a-z]*,\"alerts\":[a-z]*" /etc/nginx/mig-github.conf'
+	@echo "== with alerts allowed =="
+	@docker run --rm -e MIG_GITHUB_TOKEN=ghp_verify_only -e MIG_GITHUB_ALERTS=true $(IMAGE) sh -c \
+		'/docker-entrypoint.d/10-mig-github.sh >/dev/null; nginx -t 2>&1 | tail -1; \
+		 echo "alert locations: $$(grep -c "/alerts)" /etc/nginx/mig-github.conf)"; \
+		 echo "secrets hidden: $$(grep -c "hide_secret=true" /etc/nginx/mig-github.conf)"; \
+		 grep -o "proxy\":[a-z]*,\"alerts\":[a-z]*" /etc/nginx/mig-github.conf'
 
 nginx-probe: image
 	@docker run --rm $(IMAGE) sh -c \
@@ -90,7 +96,7 @@ nginx-probe: image
 		 echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
 		 echo "unlisted /gh/user: $$(wget -S -qO- http://127.0.0.1/gh/user 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 echo "listed /gh/repos/o/r: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
-		 for ref in forks branches tags commits commits/f99de7de; do \
+		 for ref in forks branches tags commits commits/f99de7de security-advisories dependabot/alerts; do \
 		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 done'
 
@@ -108,7 +114,7 @@ gh-status:
 		'echo "gh-config.json: $$(wget -qO- http://127.0.0.1/gh-config.json)"; \
 		 grep -q "Bearer ." /etc/nginx/mig-github.conf \
 		   && echo "token in nginx: yes" || echo "token in nginx: NO"; \
-		 for ref in forks branches tags commits commits/f99de7de; do \
+		 for ref in forks branches tags commits commits/f99de7de security-advisories dependabot/alerts; do \
 		   echo "  /gh/.../$$ref: $$(wget -S -qO- http://127.0.0.1/gh/repos/infinito-nexus/core/$$ref 2>&1 | grep -o "HTTP/1.1 [0-9]*" | head -1)"; \
 		 done'
 

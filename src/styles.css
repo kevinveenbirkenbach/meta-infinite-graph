@@ -820,6 +820,21 @@ img.role-icon {
 .table td.feed-open, .table td.feed-in_progress, .table td.feed-queued { color: #fd7e14; }
 .table td.feed-closed, .table td.feed-failure, .table td.feed-cancelled { color: var(--bs-danger); }
 
+.security-summary {
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.security-severity {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table td.security-critical, .table td.security-high, .table td.security-error { color: var(--bs-danger); }
+.table td.security-medium, .table td.security-warning { color: #fd7e14; }
+.table td.security-low, .table td.security-note, .table td.security-withheld,
+.table td.security-refused, .table td.security-failed { opacity: 0.65; }
+
 .range-label {
   font-size: 0.78rem;
   white-space: nowrap;

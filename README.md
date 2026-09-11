@@ -200,9 +200,10 @@ a note that the server supplies one, and a token a visitor had stored is
 dropped. Every visitor shares the one 5000 per hour budget.
 
 The proxy only forwards what the page actually calls: `/repos/owner/name` and
-its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls` and `/actions/runs`.
-Anything else answers 404, so the token cannot be borrowed for the rest of the
-API.
+its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls`, `/actions/runs` and
+`/security-advisories`, plus the alert paths of the [Security](#security) tab
+when `MIG_GITHUB_ALERTS=true`. Anything else answers 404, so the token cannot
+be borrowed for the rest of the API.
 
 **The visitor holds it.** With `MIG_GITHUB_TOKEN` empty the browser calls
 `api.github.com` directly and the filter panel offers a token field. That token
@@ -213,6 +214,37 @@ Direct calls need `https://api.github.com` in the `connect-src` of the
 deployment's content security policy; without it the browser blocks every call
 and only this view goes dark. A server token removes that requirement, because
 then every call is same origin.
+
+### Security
+
+The **Security** tab lists the findings of every repository ticked in the
+sources menu in one table, worst first. Above it one row per repository counts
+the findings per source and links to that source's page on GitHub.
+
+| Source | Asked for | Who can read it |
+|---|---|---|
+| Advisories | `/security-advisories?state=published` | anyone, no token needed |
+| Dependabot | `/dependabot/alerts?state=open` | a token with read permission for Dependabot alerts |
+| Code scanning | `/code-scanning/alerts?state=open` | a token with read permission for code scanning alerts |
+| Secret scanning | `/secret-scanning/alerts?state=open&hide_secret=true` | a token with read permission for secret scanning alerts |
+
+A cell reads `no access` when there is no token, the token lacks that
+permission, or the feature is off for the repository. Secret scanning always
+sends `hide_secret=true`, so a secret's value never reaches the page. The
+findings are the current state, so the time window does not narrow them; each
+source lists its first 100.
+
+Behind a server token the proxy forwards only the advisories, and the alert
+cells read `withheld`. To forward the alerts as well, set in `.env`:
+
+```
+MIG_GITHUB_ALERTS=true
+```
+
+Only the exact value `true` turns it on. Every visitor of the instance then
+sees the alerts the server token can read, so set it only on an instance no one
+else reaches. The proxy sends each of these paths with the query shown above
+and drops the visitor's own.
 
 ### 2D tables
 
@@ -254,6 +286,7 @@ stylesheet.
   attribute.
 
 To add or change a text, edit `en.json` and every other catalogue with it.
+
 `make lint` fails on a key the code asks for that `en.json` lacks, and on one
 nothing uses; `tests/playwright/i18n.spec.js` fails on a catalogue missing a
 key, a placeholder or a plural form, and renders the page in every language.
@@ -283,6 +316,7 @@ MIG_PORT=8207
 INFINITO_ROLES_DIR=/path/to/infinito-nexus-core/roles
 INFINITO_META_DIR=/path/to/infinito-nexus-core/meta
 MIG_GITHUB_TOKEN=
+MIG_GITHUB_ALERTS=false
 MIG_GIT_ROOT=infinito-nexus/core
 MIG_GIT_FORKS=auto
 MIG_GIT_HOME=/var/lib/mig

@@ -2,6 +2,15 @@ import { el } from '../dom.js';
 import { html, render } from '../html.js';
 import { t } from '../i18n.js';
 
+// The menu ticks refs, but a feed is per repository.
+export function selectedRepos(range) {
+  const wanted = new Set();
+  for (const repo of (range.catalog || { repos: [] }).repos) {
+    if (repo.refs.some(ref => range.refs.includes(ref.ref))) wanted.add(repo.full_name);
+  }
+  return [...wanted];
+}
+
 // Neither lives in a git mirror, so these are the only views still spending
 // GitHub requests. GitHubApi caches every answer, so a second visit is free.
 export class GitHubFeed {
@@ -51,15 +60,6 @@ export class GitHubFeed {
     this.root = el('div', { className: 'table-section' });
   }
 
-  // The menu ticks refs, but a feed is per repository.
-  _repos() {
-    const wanted = new Set();
-    for (const repo of (this.range.catalog || { repos: [] }).repos) {
-      if (repo.refs.some(ref => this.range.refs.includes(ref.ref))) wanted.add(repo.full_name);
-    }
-    return [...wanted];
-  }
-
   _paint(spec, note, entries) {
     render(html`<${Feed} spec=${spec} note=${note} entries=${entries} />`, this.root);
   }
@@ -69,7 +69,7 @@ export class GitHubFeed {
     this.container.replaceChildren(this.root);
     this._paint(spec, t('feed.asking'), null);
 
-    const repos = this._repos();
+    const repos = selectedRepos(this.range);
     if (!repos.length) {
       this._paint(spec, t(this.range.catalog ? 'feed.noSource' : 'feed.noMirror'), null);
       return Promise.resolve([]);

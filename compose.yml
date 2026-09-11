@@ -22,6 +22,8 @@ services:
       - "mig-git:${MIG_GIT_HOME:?set in .env (generated from default.env)}"
     environment:
       MIG_GITHUB_TOKEN: "${MIG_GITHUB_TOKEN:-}"
+      # Empty, not required: an .env predating the switch must keep alerts off.
+      MIG_GITHUB_ALERTS: "${MIG_GITHUB_ALERTS:-}"
       MIG_GIT_ROOT: "${MIG_GIT_ROOT:?set in .env (generated from default.env)}"
       MIG_GIT_FORKS: "${MIG_GIT_FORKS:?set in .env (generated from default.env)}"
       MIG_GIT_HOME: "${MIG_GIT_HOME:?set in .env (generated from default.env)}"

@@ -65,7 +65,7 @@ export function wireViewMode(tableView, forkTree, testsView, feeds) {
 export function redraw(tableView, testsView) {
   const view = currentView();
   if (view === 'tests') testsView.refresh();
-  else if (!['graph', 'forks', 'commits', 'pulls', 'actions'].includes(view)) tableView.refresh();
+  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security'].includes(view)) tableView.refresh();
 }
 
 export function wirePanels() {

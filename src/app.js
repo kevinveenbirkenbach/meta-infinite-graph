@@ -5,6 +5,7 @@ import { ForkTree } from './fork/tree.js';
 import { GitRange } from './gitRange.js';
 import { GitHubApi } from './github/api.js';
 import { GitHubFeed } from './github/feed.js';
+import { GitHubSecurity } from './github/security.js';
 import { t } from './i18n.js';
 import { MatrixView } from './matrix/view.js';
 import { MetaGraph } from './meta/graph.js';
@@ -92,6 +93,7 @@ gitRange.load()
       commits: new CommitsView(gitRange, tables),
       pulls: new GitHubFeed('pulls', forkTree.api, gitRange, tables),
       actions: new GitHubFeed('actions', forkTree.api, gitRange, tables),
+      security: new GitHubSecurity(forkTree.api, gitRange, tables),
     };
     const testsView = new TestsView(
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables')

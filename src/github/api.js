@@ -5,6 +5,7 @@ export class GitHubApi {
     this.memory = new Map();
     this.base = 'https://api.github.com';
     this.proxied = false;
+    this.alerts = false;
   }
 
   // Memoised and awaited by every request: a deep link straight into the fork
@@ -18,6 +19,7 @@ export class GitHubApi {
         .catch(() => null)
         .then(config => {
           this.proxied = Boolean(config && config.proxy);
+          this.alerts = Boolean(config && config.alerts);
           this.base = this.proxied ? '/gh' : 'https://api.github.com';
           return this.proxied;
         });
