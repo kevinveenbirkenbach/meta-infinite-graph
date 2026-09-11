@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ਨੇ {status} ਜਵਾਬ ਦਿੱਤਾ।",
   "feed.anError": "ਗਲਤੀ ਨਾਲ",
+  "loader.loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ …",
+  "loader.next": {
+    "one": "ਅਗਲਾ ਰਿਫ੍ਰੈਸ਼ {n} ਸਕਿੰਟ ਵਿੱਚ",
+    "other": "ਅਗਲਾ ਰਿਫ੍ਰੈਸ਼ {n} ਸਕਿੰਟ ਵਿੱਚ"
+  },
+  "loader.paused": {
+    "one": "GitHub ਕੋਟਾ ਬਚਾਉਣ ਲਈ ਪਿਛਲਾ ਰਿਫ੍ਰੈਸ਼ ਛੱਡ ਦਿੱਤਾ ਗਿਆ; ਅਗਲੀ ਕੋਸ਼ਿਸ਼ {n} ਸਕਿੰਟ ਵਿੱਚ",
+    "other": "GitHub ਕੋਟਾ ਬਚਾਉਣ ਲਈ ਪਿਛਲਾ ਰਿਫ੍ਰੈਸ਼ ਛੱਡ ਦਿੱਤਾ ਗਿਆ; ਅਗਲੀ ਕੋਸ਼ਿਸ਼ {n} ਸਕਿੰਟ ਵਿੱਚ"
+  },
+  "loader.menu.hint": "ਮੁੜ ਲੋਡ ਕਰਨ ਦੇ ਵਿਕਲਪਾਂ ਲਈ ਸੱਜਾ-ਕਲਿੱਕ ਕਰੋ",
+  "loader.menu.title": "ਮੁੜ ਲੋਡ ਕਰੋ",
+  "loader.menu.changes": "ਸਿਰਫ਼ ਜੋ ਬਦਲਿਆ, ਹੁਣੇ",
+  "loader.menu.all": "ਹਰ ਦੌੜ, ਹੁਣੇ",
+  "loader.menu.interval": "ਆਪਣੇ ਆਪ ਮੁੜ ਪੁੱਛੋ",
+  "loader.menu.seconds": {
+    "one": "ਹਰ {n} ਸਕਿੰਟ ਬਾਅਦ",
+    "other": "ਹਰ {n} ਸਕਿੰਟ ਬਾਅਦ"
+  },
+  "loader.menu.minutes": {
+    "one": "ਹਰ {n} ਮਿੰਟ ਬਾਅਦ",
+    "other": "ਹਰ {n} ਮਿੰਟ ਬਾਅਦ"
+  },
+  "loader.menu.off": "ਕਦੇ ਨਹੀਂ",
+  "loader.menu.view": "ਇਹ ਦ੍ਰਿਸ਼, ਹੁਣੇ",
+  "loader.menu.cache": "ਕੈਸ਼ ਕੀਤੇ GitHub ਜਵਾਬ ਭੁੱਲ ਜਾਓ",
+  "loader.menu.page": "ਪੰਨਾ ਮੁੜ ਲੋਡ ਕਰੋ",
+  "loader.overview.title": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
+  "loader.overview.running": {
+    "one": "{n} ਚੱਲ ਰਹੀ ਹੈ",
+    "other": "{n} ਚੱਲ ਰਹੀਆਂ ਹਨ"
+  },
+  "loader.overview.none": "ਹਾਲੇ ਤੱਕ ਕੁਝ ਵੀ ਲੋਡ ਨਹੀਂ ਹੋਇਆ।",
+  "loader.task.boot": "ਭੂਮਿਕਾਵਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਮੈਟਾ ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ",
+  "loader.task.view": "{view} ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ",
+  "loader.task.changes": "GitHub ਤੋਂ ਪੁੱਛਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਕੀ ਬਦਲਿਆ",
+  "loader.task.everything": "GitHub ਤੋਂ ਹਰ ਦੌੜ ਮੰਗੀ ਜਾ ਰਹੀ ਹੈ",
   "loader.task.artifacts": "ਦੌੜ #{number} ਦੇ ਆਰਟੀਫੈਕਟ: {total} ਵਿੱਚੋਂ {done}",
+  "loader.task.artifact": "ਆਰਟੀਫੈਕਟ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ਅਸਫਲ: {message}",
+  "feed.actions.pick": "ਇਸ ਦੌੜ ਦੇ ਟੈਸਟ ਦਿਖਾਓ",
+  "feed.actions.ended": "ਖ਼ਤਮ ਹੋਇਆ",
+  "feed.actions.duration": "ਮਿਆਦ",
+  "feed.actions.running": "ਚੱਲ ਰਹੀ ਹੈ",
+  "feed.actions.longest": "ਦਿਖਾਈ ਗਈ ਸਭ ਤੋਂ ਲੰਬੀ ਦੌੜ ਨੂੰ {duration} ਲੱਗੇ ({run})।",
+  "feed.filter.search": "ਦੌੜਾਂ ਖੋਜੋ",
+  "feed.filter.all": "ਸਾਰੇ",
+  "feed.filter.event": "ਘਟਨਾ",
+  "feed.filter.branch": "ਬ੍ਰਾਂਚ",
+  "feed.filter.clear": "ਫਿਲਟਰ ਹਟਾਓ",
+  "feed.filter.shown": {
+    "one": "ਫਿਲਟਰਾਂ ਤੋਂ ਬਾਅਦ {n} ਦੌੜ ਬਾਕੀ ਹੈ।",
+    "other": "ਫਿਲਟਰਾਂ ਤੋਂ ਬਾਅਦ {n} ਦੌੜਾਂ ਬਾਕੀ ਹਨ।"
+  },
   "security.source.advisories": "ਸਲਾਹਾਂ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ਕੋਡ ਸਕੈਨਿੰਗ",

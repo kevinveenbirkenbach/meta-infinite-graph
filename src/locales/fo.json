@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub svaraði {status}.",
   "feed.anError": "við villu",
+  "loader.loading": "Innlesur …",
+  "loader.next": {
+    "one": "Næsta dagføring um {n} sekund",
+    "other": "Næsta dagføring um {n} sekund"
+  },
+  "loader.paused": {
+    "one": "Seinasta dagføringin varð leypt um fyri at spara GitHub-kvotuna; næsta roynd um {n} sekund",
+    "other": "Seinasta dagføringin varð leypt um fyri at spara GitHub-kvotuna; næsta roynd um {n} sekund"
+  },
+  "loader.menu.hint": "høgraklikk fyri valmøguleikar at innlesa aftur",
+  "loader.menu.title": "Innles aftur",
+  "loader.menu.changes": "Bara tað, sum er broytt, nú",
+  "loader.menu.all": "Hvør koyring, nú",
+  "loader.menu.interval": "Spyr aftur sjálvvirkandi",
+  "loader.menu.seconds": {
+    "one": "hvørt {n}. sekund",
+    "other": "hvørt {n}. sekund"
+  },
+  "loader.menu.minutes": {
+    "one": "hvønn {n}. minutt",
+    "other": "hvønn {n}. minutt"
+  },
+  "loader.menu.off": "ongantíð",
+  "loader.menu.view": "Hesin teigurin, nú",
+  "loader.menu.cache": "Gloym GitHub-svarini í fyribilsgoymsluni",
+  "loader.menu.page": "Innles síðuna aftur",
+  "loader.overview.title": "Innlesur",
+  "loader.overview.running": {
+    "one": "{n} koyrir",
+    "other": "{n} koyra"
+  },
+  "loader.overview.none": "Einki er innlisið enn.",
+  "loader.task.boot": "Lesur leiklutirnar og teirra meta",
+  "loader.task.view": "Teknar {view}",
+  "loader.task.changes": "Spyr GitHub, hvat er broytt",
+  "loader.task.everything": "Spyr GitHub eftir hvørjari koyring",
   "loader.task.artifacts": "Artefaktir úr koyring #{number}: {done} av {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "miseydnaðist: {message}",
+  "feed.actions.pick": "Vís royndirnar hjá hesi koyringini",
+  "feed.actions.ended": "Endað",
+  "feed.actions.duration": "Longd",
+  "feed.actions.running": "koyrir",
+  "feed.actions.longest": "Longsta vísta koyringin tók {duration} ({run}).",
+  "feed.filter.search": "Leita í koyringunum",
+  "feed.filter.all": "øll",
+  "feed.filter.event": "Hending",
+  "feed.filter.branch": "Grein",
+  "feed.filter.clear": "Strika síurnar",
+  "feed.filter.shown": {
+    "one": "{n} er eftir aftaná síurnar.",
+    "other": "{n} eru eftir aftaná síurnar."
+  },
   "security.source.advisories": "Trygdarráð",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Skanning av kotu",

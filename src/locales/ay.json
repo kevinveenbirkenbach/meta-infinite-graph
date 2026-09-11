@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ukax {status} sasaw kutt'ayäna.",
   "feed.anError": "pantjampi",
+  "loader.loading": "Apkatasiski …",
+  "loader.next": {
+    "one": "Jutir machaqt'ayäwix {n} sikundu qhipata",
+    "other": "Jutir machaqt'ayäwix {n} sikundu qhipata"
+  },
+  "loader.paused": {
+    "one": "Qhipa machaqt'ayäwix thuqtatawa GitHub mayiwinak imañataki; jutir yant'äwix {n} sikundu qhipata",
+    "other": "Qhipa machaqt'ayäwix thuqtatawa GitHub mayiwinak imañataki; jutir yant'äwix {n} sikundu qhipata"
+  },
+  "loader.menu.hint": "kupi ch'iqamp ch'iqt'am wasitat apsuñ ajlliñanakataki",
+  "loader.menu.title": "Wasitat apsuña",
+  "loader.menu.changes": "Mayjt'atakis ukakiw, jichpacha",
+  "loader.menu.all": "Taqi sarawi, jichpacha",
+  "loader.menu.interval": "Jupa pachpa wasitat jiskt'aña",
+  "loader.menu.seconds": {
+    "one": "sapa {n} sikundu",
+    "other": "sapa {n} sikundu"
+  },
+  "loader.menu.minutes": {
+    "one": "sapa {n} minutu",
+    "other": "sapa {n} minutu"
+  },
+  "loader.menu.off": "janipuniwa",
+  "loader.menu.view": "Aka uñjawi, jichpacha",
+  "loader.menu.cache": "Cache ukan GitHub jaysäwinak armaña",
+  "loader.menu.page": "Laphi wasitat apsuña",
+  "loader.overview.title": "Apkatasiski",
+  "loader.overview.running": {
+    "one": "{n} saraskakiwa",
+    "other": "{n} saraskakiwa"
+  },
+  "loader.overview.none": "Janiw kunas apkatataskiti.",
+  "loader.task.boot": "Lurawinak metapampi liyiski",
+  "loader.task.view": "{view} siq'iski",
+  "loader.task.changes": "GitHub ukar kunas mayjt'atapat jiskt'aski",
+  "loader.task.everything": "GitHub ukar taqi sarawit jiskt'aski",
   "loader.task.artifacts": "Sarawi #{number} artefactonakapa: {done}/{total}",
+  "loader.task.artifact": "Artefacto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "janiw atipkiti: {message}",
+  "feed.actions.pick": "Aka sarawin yant'awinakap uñacht'ayaña",
+  "feed.actions.ended": "Tukuyata",
+  "feed.actions.duration": "Qawqha pacha",
+  "feed.actions.running": "saraskakiwa",
+  "feed.actions.longest": "Uñacht'ayat sarawinakat juk'amp jaya sarawixa {duration} pachaw apasïna ({run}).",
+  "feed.filter.search": "Sarawinak thaqaña",
+  "feed.filter.all": "taqpacha",
+  "feed.filter.event": "Paskiri",
+  "feed.filter.branch": "Rama",
+  "feed.filter.clear": "Susuñanak q'umachaña",
+  "feed.filter.shown": {
+    "one": "Susuñanak qhipatx {n} qhiparaski.",
+    "other": "Susuñanak qhipatx {n} qhiparaski."
+  },
   "security.source.advisories": "Iwxanaka",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodigo uñakipaña",

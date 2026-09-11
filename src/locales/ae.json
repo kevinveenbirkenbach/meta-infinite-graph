@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub paiti.aoxta {status}.",
   "feed.anError": "mat draogā",
+  "loader.loading": "Frabarəta …",
+  "loader.next": {
+    "one": "Nauuō.kərətiš pasca {n} kasiiah zrvānahe",
+    "other": "Nauuō.kərətiš pasca {n} kasiiā̊ zrvānō"
+  },
+  "loader.paused": {
+    "one": "Apəməm nauuō.kərətiš apa.tačitəm, yaθa GitHub yānā̊ θrāiieite; aniiō frāiiatiš pasca {n} kasiiah zrvānahe",
+    "other": "Apəməm nauuō.kərətiš apa.tačitəm, yaθa GitHub yānā̊ θrāiieite; aniiō frāiiatiš pasca {n} kasiiā̊ zrvānō"
+  },
+  "loader.menu.hint": "dašina gauua frašnāi pasca.barahe",
+  "loader.menu.title": "Pasca bara",
+  "loader.menu.changes": "Aēuua yat vīcitəm, nūrəm",
+  "loader.menu.all": "Vīspā̊ tačinā̊, nūrəm",
+  "loader.menu.interval": "Hauuaδāta pasca frašna",
+  "loader.menu.seconds": {
+    "one": "vīspe {n} kasiiah zrvānahe",
+    "other": "vīspe {n} kasiiā̊ zrvānō"
+  },
+  "loader.menu.minutes": {
+    "one": "vīspe {n} minūtahe",
+    "other": "vīspe {n} minūtā̊"
+  },
+  "loader.menu.off": "nōit.kadā",
+  "loader.menu.view": "Aēm dōiθrəm, nūrəm",
+  "loader.menu.cache": "Apa.bara GitHub paitiuuāka kasu.nidānəm",
+  "loader.menu.page": "Pasca bara varəkəm",
+  "loader.overview.title": "Frabarəta",
+  "loader.overview.running": {
+    "one": "{n} tačaiti",
+    "other": "{n} tačiṇti"
+  },
+  "loader.overview.none": "Naēcim nūrəm frabarətəm.",
+  "loader.task.boot": "Kārā̊ aēšąm meta-ca frasrāuuaiieiṇte",
+  "loader.task.view": "{view} paēsaiiete",
+  "loader.task.changes": "GitHub pərəsāmahi yat vīcitəm",
+  "loader.task.everything": "GitHub pərəsāmahi vīspā̊ tačinā̊",
   "loader.task.artifacts": "Tačinahe #{number} artifakta: {done}/{total}",
+  "loader.task.artifact": "Artifaktəm {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "nōit vanat: {message}",
+  "feed.actions.pick": "Daršaiia aŋhā̊ tačinaiiā̊ pərəsā̊",
+  "feed.actions.ended": "Apəmō.kərəta",
+  "feed.actions.duration": "Zruuan",
+  "feed.actions.running": "tačaiti",
+  "feed.actions.longest": "Darəγōtəmō daršitō tačina {duration} tačat ({run}).",
+  "feed.filter.search": "Vaēδaiia tačināni",
+  "feed.filter.all": "vīspa",
+  "feed.filter.event": "Hąm.jasti",
+  "feed.filter.branch": "Frasparəγa",
+  "feed.filter.clear": "Apa.baraiia vīcirā̊",
+  "feed.filter.shown": {
+    "one": "Pasca vīcirāt {n} upa.štāiti.",
+    "other": "Pasca vīcirāt {n} upa.štəṇti."
+  },
   "security.source.advisories": "Sāxvąni",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kōdahe pərəsā",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ya zira {status}.",
   "feed.anError": "notjipuke",
+  "loader.loading": "Mai yetwa …",
+  "loader.next": {
+    "one": "Eyaruriro ndi ri kuramba mosekonda {n}",
+    "other": "Eyaruriro ndi ri kuramba mozosekonda {n}"
+  },
+  "loader.paused": {
+    "one": "Eyaruriro ra sekukisa ra pitwa kokuzeuza omaningiriro wa GitHub; ekondjo ndi ri kuramba mosekonda {n}",
+    "other": "Eyaruriro ra sekukisa ra pitwa kokuzeuza omaningiriro wa GitHub; ekondjo ndi ri kuramba mozosekonda {n}"
+  },
+  "loader.menu.hint": "kanda koukunahi okurama kutja u munine omahoropo wokuyarura",
+  "loader.menu.title": "Yarura",
+  "loader.menu.changes": "Imbi mbya tanauka porwa, nambano",
+  "loader.menu.all": "Omaungurisiro aeherwe, nambano",
+  "loader.menu.interval": "Pura rukwao ouini",
+  "loader.menu.seconds": {
+    "one": "kehi sekonda {n}",
+    "other": "kehi ozosekonda {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "kehi ominiti {n}",
+    "other": "kehi ozominiti {n}"
+  },
+  "loader.menu.off": "nandarire",
+  "loader.menu.view": "Omutarero mbwi, nambano",
+  "loader.menu.cache": "Zembi omazirira wa GitHub mokakasi",
+  "loader.menu.page": "Yarura epandja",
+  "loader.overview.title": "Mai yetwa",
+  "loader.overview.running": {
+    "one": "{n} mai tjitwa",
+    "other": "{n} mai tjitwa"
+  },
+  "loader.overview.none": "Kaku na tjiyetwa natjiṋa.",
+  "loader.task.boot": "Mai leserwa oviungura nometa yavyo",
+  "loader.task.view": "Mai ṱunwa {view}",
+  "loader.task.changes": "Mai purwa GitHub imbi mbya tanauka",
+  "loader.task.everything": "Mai ningirwa ku GitHub omaungurisiro aeherwe",
   "loader.task.artifacts": "Oviungurwa vyeungurisiro #{number}: {done} mu {total}",
+  "loader.task.artifact": "Otjiungurwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ya pandjara: {message}",
+  "feed.actions.pick": "Raisa omakondoroiso weungurisiro ndi",
+  "feed.actions.ended": "Tja yanda",
+  "feed.actions.duration": "Oure",
+  "feed.actions.running": "tji ri nokuungura",
+  "feed.actions.longest": "Eungurisiro enda eure tjinene ndi raisiwa ra kambura {duration} ({run}).",
+  "feed.filter.search": "Paha momaungurisiro",
+  "feed.filter.all": "aayehe",
+  "feed.filter.event": "Otjiningwa",
+  "feed.filter.branch": "Otjitavi",
+  "feed.filter.clear": "Isa ovitoororo",
+  "feed.filter.shown": {
+    "one": "{n} tja sewa kombunda yovitoororo.",
+    "other": "{n} mbi sewa kombunda yovitoororo."
+  },
   "security.source.advisories": "Omaronganeno",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Okupaha kokode",

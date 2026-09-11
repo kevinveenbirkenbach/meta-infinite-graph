@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub zara {status}.",
   "feed.anError": "na njehie",
+  "loader.loading": "Na-ebu …",
+  "loader.next": {
+    "other": "Mmelite ọzọ n'ime sekọnd {n}"
+  },
+  "loader.paused": {
+    "other": "Agafere mmelite ikpeazụ iji chekwaa oke GitHub; mgbalị ọzọ n'ime sekọnd {n}"
+  },
+  "loader.menu.hint": "pịa aka nri maka nhọrọ ibugharị ọzọ",
+  "loader.menu.title": "Bugharịa ọzọ",
+  "loader.menu.changes": "Naanị ihe gbanwere, ugbu a",
+  "loader.menu.all": "Ọsọ niile, ugbu a",
+  "loader.menu.interval": "Jụọ ọzọ na-akpaghị aka",
+  "loader.menu.seconds": {
+    "other": "sekọnd {n} ọ bụla"
+  },
+  "loader.menu.minutes": {
+    "other": "nkeji {n} ọ bụla"
+  },
+  "loader.menu.off": "ọ dịghị mgbe",
+  "loader.menu.view": "Ngosi a, ugbu a",
+  "loader.menu.cache": "Chefuo azịza GitHub dị na cache",
+  "loader.menu.page": "Bugharịa peeji ọzọ",
+  "loader.overview.title": "Na-ebu",
+  "loader.overview.running": {
+    "other": "{n} na-aga"
+  },
+  "loader.overview.none": "Ọ dịbeghị ihe ebutere.",
+  "loader.task.boot": "Na-agụ ọrụ na meta ha",
+  "loader.task.view": "Na-ese {view}",
+  "loader.task.changes": "Na-ajụ GitHub ihe gbanwere",
+  "loader.task.everything": "Na-arịọ GitHub maka ọsọ niile",
   "loader.task.artifacts": "Ihe arụpụtara nke ọsọ #{number}: {done} n'ime {total}",
+  "loader.task.artifact": "Ihe arụpụtara {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "dara: {message}",
+  "feed.actions.pick": "Gosi ule nke ọsọ a",
+  "feed.actions.ended": "Kwụsịrị",
+  "feed.actions.duration": "Ogologo oge",
+  "feed.actions.running": "na-agba",
+  "feed.actions.longest": "Ọsọ kachasị ogologo egosiri were {duration} ({run}).",
+  "feed.filter.search": "Chọọ na ọsọ niile",
+  "feed.filter.all": "niile",
+  "feed.filter.event": "Ihe omume",
+  "feed.filter.branch": "Alaka",
+  "feed.filter.clear": "Kpochapụ nzacha",
+  "feed.filter.shown": {
+    "other": "{n} fọdụrụ mgbe nzacha gasịrị."
+  },
   "security.source.advisories": "Ndụmọdụ nchekwa",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Nyocha koodu",

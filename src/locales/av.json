@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub-ица {status} абун жаваб кьуна.",
   "feed.anError": "гъалатӀгун",
+  "loader.loading": "ТӀад рачӀунеб буго …",
+  "loader.next": {
+    "one": "Хадусеб цӀидизаби {n} секундалда хадуб",
+    "other": "Хадусеб цӀидизаби {n} секундалда хадуб"
+  },
+  "loader.paused": {
+    "one": "GitHub-алъул тӀалабал цӀунизе ахирисеб цӀидизаби рехана; хадусеб хӀаракат {n} секундалда хадуб",
+    "other": "GitHub-алъул тӀалабал цӀунизе ахирисеб цӀидизаби рехана; хадусеб хӀаракат {n} секундалда хадуб"
+  },
+  "loader.menu.hint": "цӀидасан босизе параметрал — кваранаб кнопкаялъ клик",
+  "loader.menu.title": "ЦӀидасан босе",
+  "loader.menu.changes": "Хисараб жо гурхӀан, гьанже",
+  "loader.menu.all": "Киналго байбихьизаби, гьанже",
+  "loader.menu.interval": "Автоматикияв цӀидасан гьикъе",
+  "loader.menu.seconds": {
+    "one": "щибаб {n} секундалда",
+    "other": "щибаб {n} секундалда"
+  },
+  "loader.menu.minutes": {
+    "one": "щибаб {n} минуталда",
+    "other": "щибаб {n} минуталда"
+  },
+  "loader.menu.off": "киданиги",
+  "loader.menu.view": "Гьаб вкладка, гьанже",
+  "loader.menu.cache": "Кэшалда цӀунарал GitHub-алъул жавабал кӀочене",
+  "loader.menu.page": "Гьумер цӀидасан босе",
+  "loader.overview.title": "ТӀад рачӀунеб буго",
+  "loader.overview.running": {
+    "one": "{n} унеб буго",
+    "other": "{n} унеб буго"
+  },
+  "loader.overview.none": "Жеги щибниги тӀад рачӀун гьечӀо.",
+  "loader.task.boot": "Рольал ва гьезул meta цӀалулеб буго",
+  "loader.task.view": "{view} сурат бахъулеб буго",
+  "loader.task.changes": "GitHub-алда щиб хисараб гьикъулеб буго",
+  "loader.task.everything": "GitHub-алда киналго байбихьизаби гьикъулеб буго",
   "loader.task.artifacts": "Байбихьизаби #{number}-алъул артефактал: {done}/{total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "тӀубачӀо: {message}",
+  "feed.actions.pick": "Гьаб байбихьизабиялъул тестал бихьизаре",
+  "feed.actions.ended": "Лъугьана",
+  "feed.actions.duration": "Заман",
+  "feed.actions.running": "унеб буго",
+  "feed.actions.longest": "Бихьизабураб байбихьизабиязда гьоркьоб цIикIкIун халатаб {duration} бана ({run}).",
+  "feed.filter.search": "Байбихьизабиял балагье",
+  "feed.filter.all": "киналго",
+  "feed.filter.event": "Лъугьа-бахъин",
+  "feed.filter.branch": "ГаркӀ",
+  "feed.filter.clear": "Фильтрал бацӀцӀад гьаре",
+  "feed.filter.shown": {
+    "one": "Фильтраздаса хадуб {n} хутӀана.",
+    "other": "Фильтраздаса хадуб {n} хутӀана."
+  },
   "security.source.advisories": "Малъа-хъваял",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодалъул хал гьаби",

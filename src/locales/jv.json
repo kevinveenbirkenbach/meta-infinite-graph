@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub mangsuli {status}.",
   "feed.anError": "kanthi kasalahan",
+  "loader.loading": "Ngemot …",
+  "loader.next": {
+    "other": "Pambaharuan sabanjure ing {n} detik"
+  },
+  "loader.paused": {
+    "other": "Pambaharuan pungkasan dilewati kanggo ngirit jatah GitHub; nyoba maneh ing {n} detik"
+  },
+  "loader.menu.hint": "klik tengen kanggo pilihan muat maneh",
+  "loader.menu.title": "Muat maneh",
+  "loader.menu.changes": "Mung sing owah, saiki",
+  "loader.menu.all": "Kabeh lakon, saiki",
+  "loader.menu.interval": "Takon maneh kanthi otomatis",
+  "loader.menu.seconds": {
+    "other": "saben {n} detik"
+  },
+  "loader.menu.minutes": {
+    "other": "saben {n} menit"
+  },
+  "loader.menu.off": "ora tau",
+  "loader.menu.view": "Tab iki, saiki",
+  "loader.menu.cache": "Lalekake wangsulan GitHub ing cache",
+  "loader.menu.page": "Muat maneh kaca",
+  "loader.overview.title": "Ngemot",
+  "loader.overview.running": {
+    "other": "{n} lagi mlaku"
+  },
+  "loader.overview.none": "Durung ana sing diemot.",
+  "loader.task.boot": "Maca peran lan meta-ne",
+  "loader.task.view": "Nggambar {view}",
+  "loader.task.changes": "Takon GitHub apa sing owah",
+  "loader.task.everything": "Njaluk kabeh lakon saka GitHub",
   "loader.task.artifacts": "Artefak lakon #{number}: {done} saka {total}",
+  "loader.task.artifact": "Artefak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "gagal: {message}",
+  "feed.actions.pick": "Tampilake pangujian lakon iki",
+  "feed.actions.ended": "Rampung",
+  "feed.actions.duration": "Suwene",
+  "feed.actions.running": "lagi mlaku",
+  "feed.actions.longest": "Lakon paling suwe sing ditampilake butuh {duration} ({run}).",
+  "feed.filter.search": "Golek ing lakon",
+  "feed.filter.all": "kabeh",
+  "feed.filter.event": "Kedadeyan",
+  "feed.filter.branch": "Cabang",
+  "feed.filter.clear": "Busak saringan",
+  "feed.filter.shown": {
+    "other": "Isih ana {n} sawise disaring."
+  },
   "security.source.advisories": "Pitutur keamanan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pindai kode",

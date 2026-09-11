@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} nispa kutichirqan.",
   "feed.anError": "pantaywan",
+  "loader.loading": "Chaqnachkan …",
+  "loader.next": {
+    "one": "Qatiq musuqchay {n} sikundupi",
+    "other": "Qatiq musuqchay {n} sikundupi"
+  },
+  "loader.paused": {
+    "one": "Qhipa musuqchayqa mana ruwasqachu karqan GitHub mañakuykunata waqaychanapaq; qatiq kallpachakuy {n} sikundupi",
+    "other": "Qhipa musuqchayqa mana ruwasqachu karqan GitHub mañakuykunata waqaychanapaq; qatiq kallpachakuy {n} sikundupi"
+  },
+  "loader.menu.hint": "paña ñit'iy musuqmanta chaqnay akllanakunapaq",
+  "loader.menu.title": "Musuqmanta chaqnay",
+  "loader.menu.changes": "Tikrasqallata, kunan",
+  "loader.menu.all": "Llapan puriykuna, kunan",
+  "loader.menu.interval": "Kikillanmanta yapamanta tapuy",
+  "loader.menu.seconds": {
+    "one": "sapa {n} sikundu",
+    "other": "sapa {n} sikundu"
+  },
+  "loader.menu.minutes": {
+    "one": "sapa {n} minutu",
+    "other": "sapa {n} minutu"
+  },
+  "loader.menu.off": "manan hayk'aqpas",
+  "loader.menu.view": "Kay qhaway, kunan",
+  "loader.menu.cache": "Waqaychasqa GitHub kutichiykunata qunqay",
+  "loader.menu.page": "P'anqata musuqmanta chaqnay",
+  "loader.overview.title": "Chaqnachkan",
+  "loader.overview.running": {
+    "one": "{n} purichkan",
+    "other": "{n} purichkan"
+  },
+  "loader.overview.none": "Manaraq imapas chaqnasqachu.",
+  "loader.task.boot": "Ruwanakunata metankunatawan ñawinchachkan",
+  "loader.task.view": "{view} siq'ichkan",
+  "loader.task.changes": "GitHub-ta tapuchkan ima tikrasqanta",
+  "loader.task.everything": "GitHub-manta llapan puriykunata mañakuchkan",
   "loader.task.artifacts": "Puriy #{number}-pa ruwasqankuna: {total}-manta {done}",
+  "loader.task.artifact": "Ruwasqa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "pantarqan: {message}",
+  "feed.actions.pick": "Kay puriypa llanchiyninkunata rikuchiy",
+  "feed.actions.ended": "Tukusqa",
+  "feed.actions.duration": "Unay",
+  "feed.actions.running": "purichkan",
+  "feed.actions.longest": "Rikuchisqa aswan unay puriyqa {duration} unarqan ({run}).",
+  "feed.filter.search": "Puriykunata maskay",
+  "feed.filter.all": "llapan",
+  "feed.filter.event": "Ruwakuy",
+  "feed.filter.branch": "K'allma",
+  "feed.filter.clear": "Suysunakunata pichay",
+  "feed.filter.shown": {
+    "one": "Suysuykunamanta qhipaman {n} puchun.",
+    "other": "Suysuykunamanta qhipaman {n} puchun."
+  },
   "security.source.advisories": "Yuyaychaykuna",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kudigu qhawariy",

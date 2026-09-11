@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub ngajawab {status}.",
   "feed.anError": "kalayan kasalahan",
+  "loader.loading": "Ngamuat …",
+  "loader.next": {
+    "other": "Nyegerkeun salajengna dina {n} detik"
+  },
+  "loader.paused": {
+    "other": "Nyegerkeun pamungkas dilangkungan pikeun ngirit kuota GitHub; cobian salajengna dina {n} detik"
+  },
+  "loader.menu.hint": "klik katuhu pikeun pilihan muat deui",
+  "loader.menu.title": "Muat deui",
+  "loader.menu.changes": "Ngan nu robah, ayeuna",
+  "loader.menu.all": "Sadaya pajalanan, ayeuna",
+  "loader.menu.interval": "Tanya deui sacara otomatis",
+  "loader.menu.seconds": {
+    "other": "unggal {n} detik"
+  },
+  "loader.menu.minutes": {
+    "other": "unggal {n} menit"
+  },
+  "loader.menu.off": "moal pernah",
+  "loader.menu.view": "Tab ieu, ayeuna",
+  "loader.menu.cache": "Hilapkeun jawaban GitHub dina cache",
+  "loader.menu.page": "Muat deui kaca",
+  "loader.overview.title": "Ngamuat",
+  "loader.overview.running": {
+    "other": "{n} keur jalan"
+  },
+  "loader.overview.none": "Can aya nu dimuat.",
+  "loader.task.boot": "Maca peran jeung meta-na",
+  "loader.task.view": "Ngagambar {view}",
+  "loader.task.changes": "Nanya ka GitHub naon nu robah",
+  "loader.task.everything": "Nyuhunkeun sadaya pajalanan ka GitHub",
   "loader.task.artifacts": "Artefak pajalanan #{number}: {done} tina {total}",
+  "loader.task.artifact": "Artefak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "gagal: {message}",
+  "feed.actions.pick": "Témbongkeun tés pajalanan ieu",
+  "feed.actions.ended": "Réngsé",
+  "feed.actions.duration": "Lilana",
+  "feed.actions.running": "keur jalan",
+  "feed.actions.longest": "Pajalanan pangpanjangna anu dipintonkeun butuh {duration} ({run}).",
+  "feed.filter.search": "Téangan pajalanan",
+  "feed.filter.all": "sadayana",
+  "feed.filter.event": "Kajadian",
+  "feed.filter.branch": "Cabang",
+  "feed.filter.clear": "Hapus saringan",
+  "feed.filter.shown": {
+    "other": "Sésana {n} sanggeus disaring."
+  },
   "security.source.advisories": "Piwuruk kaamanan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pamindaian kode",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "Ua pāhono GitHub {status}.",
   "feed.anError": "ma te hape",
+  "loader.loading": "Te faʻaʻī nei …",
+  "loader.next": {
+    "one": "Te faʻaʻāpīraʻa i muri nei i roto e {n} tetoni",
+    "other": "Te faʻaʻāpīraʻa i muri nei i roto e {n} tetoni"
+  },
+  "loader.paused": {
+    "one": "Ua vaiihohia te faʻaʻāpīraʻa hopeʻa nō te faʻaherehere i te mau aniraʻa a GitHub; te tamataraʻa i muri nei i roto e {n} tetoni",
+    "other": "Ua vaiihohia te faʻaʻāpīraʻa hopeʻa nō te faʻaherehere i te mau aniraʻa a GitHub; te tamataraʻa i muri nei i roto e {n} tetoni"
+  },
+  "loader.menu.hint": "pata ʻatau nō te mau māʻitiraʻa faʻaʻī faʻahou",
+  "loader.menu.title": "Faʻaʻī faʻahou",
+  "loader.menu.changes": "Te mau mea i taui noa, i teie nei",
+  "loader.menu.all": "Te mau horoʻaraʻa atoʻa, i teie nei",
+  "loader.menu.interval": "Ani faʻahou ma te ʻōtōmātī",
+  "loader.menu.seconds": {
+    "one": "i te mau {n} tetoni atoʻa",
+    "other": "i te mau {n} tetoni atoʻa"
+  },
+  "loader.menu.minutes": {
+    "one": "i te mau {n} minuti atoʻa",
+    "other": "i te mau {n} minuti atoʻa"
+  },
+  "loader.menu.off": "ʻaita roa",
+  "loader.menu.view": "Teie ʻāpapa, i teie nei",
+  "loader.menu.cache": "Haʻamoʻe i te mau pahonoraʻa a GitHub i roto i te vairaʻa poto",
+  "loader.menu.page": "Faʻaʻī faʻahou i te ʻapi",
+  "loader.overview.title": "Te faʻaʻī nei",
+  "loader.overview.running": {
+    "one": "{n} te horo nei",
+    "other": "{n} te horo nei"
+  },
+  "loader.overview.none": "ʻAita ā e mea i faʻaʻīhia.",
+  "loader.task.boot": "Te taiʻo nei i te mau tōroʻa e tō rātou meta",
+  "loader.task.view": "Te pāpaʻi nei i te {view}",
+  "loader.task.changes": "Te ui nei iā GitHub eaha tei taui",
+  "loader.task.everything": "Te ani nei iā GitHub i te mau horoʻaraʻa atoʻa",
   "loader.task.artifacts": "Te mau ʻaretefata o te horoʻaraʻa #{number}: {done} i nià i te {total}",
+  "loader.task.artifact": "ʻAretefata {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ʻaita i manuïa: {message}",
+  "feed.actions.pick": "Faʻaʻite i te mau tāmataraʻa o teie horoʻaraʻa",
+  "feed.actions.ended": "Haʻaotihia",
+  "feed.actions.duration": "Roaraʻa",
+  "feed.actions.running": "te horo nei",
+  "feed.actions.longest": "Ua rave te horoʻaraʻa roa roa aʻe i faʻaitehia {duration} ({run}).",
+  "feed.filter.search": "ʻImi i roto i te mau horoʻaraʻa",
+  "feed.filter.all": "pauroa",
+  "feed.filter.event": "Tupuraʻa",
+  "feed.filter.branch": "ʻĀmaʻa",
+  "feed.filter.clear": "Faʻaore i te mau māʻiti",
+  "feed.filter.shown": {
+    "one": "{n} e toe ra i muri aʻe i te māʻiti.",
+    "other": "E toe ra nā {n} i muri aʻe i te māʻiti."
+  },
   "security.source.advisories": "Mau aʻoraʻa",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Hiʻopoaraʻa code",

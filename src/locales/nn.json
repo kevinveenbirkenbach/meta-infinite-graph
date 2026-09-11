@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub svara {status}.",
   "feed.anError": "med ein feil",
+  "loader.loading": "Lastar …",
+  "loader.next": {
+    "one": "Neste oppdatering om {n} sekund",
+    "other": "Neste oppdatering om {n} sekund"
+  },
+  "loader.paused": {
+    "one": "Førre oppdatering vart hoppa over for å spara GitHub-kvoten; neste forsøk om {n} sekund",
+    "other": "Førre oppdatering vart hoppa over for å spara GitHub-kvoten; neste forsøk om {n} sekund"
+  },
+  "loader.menu.hint": "høgreklikk for val for å lasta på nytt",
+  "loader.menu.title": "Last på nytt",
+  "loader.menu.changes": "Berre det som er endra, no",
+  "loader.menu.all": "Alle køyringar, no",
+  "loader.menu.interval": "Spør igjen automatisk",
+  "loader.menu.seconds": {
+    "one": "kvart {n} sekund",
+    "other": "kvart {n}. sekund"
+  },
+  "loader.menu.minutes": {
+    "one": "kvart {n} minutt",
+    "other": "kvart {n}. minutt"
+  },
+  "loader.menu.off": "aldri",
+  "loader.menu.view": "Denne visinga, no",
+  "loader.menu.cache": "Gløym dei mellomlagra GitHub-svara",
+  "loader.menu.page": "Last sida på nytt",
+  "loader.overview.title": "Lastar",
+  "loader.overview.running": {
+    "one": "{n} køyrer",
+    "other": "{n} køyrer"
+  },
+  "loader.overview.none": "Ingenting er lasta enno.",
+  "loader.task.boot": "Les rollene og metaen deira",
+  "loader.task.view": "Teiknar {view}",
+  "loader.task.changes": "Spør GitHub kva som er endra",
+  "loader.task.everything": "Ber GitHub om alle køyringar",
   "loader.task.artifacts": "Artefakt frå køyring #{number}: {done} av {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "feila: {message}",
+  "feed.actions.pick": "Vis testane for denne køyringa",
+  "feed.actions.ended": "Avslutta",
+  "feed.actions.duration": "Varigheit",
+  "feed.actions.running": "køyrer",
+  "feed.actions.longest": "Den lengste viste køyringa tok {duration} ({run}).",
+  "feed.filter.search": "Søk i køyringane",
+  "feed.filter.all": "alle",
+  "feed.filter.event": "Hending",
+  "feed.filter.branch": "Grein",
+  "feed.filter.clear": "Fjern filtera",
+  "feed.filter.shown": {
+    "one": "{n} står att etter filtera.",
+    "other": "{n} står att etter filtera."
+  },
   "security.source.advisories": "Tryggleiksråd",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodeskanning",

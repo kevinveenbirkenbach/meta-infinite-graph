@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub dap {status}.",
   "feed.anError": "miz loek",
+  "loader.loading": "Cingq gazcaiq …",
+  "loader.next": {
+    "one": "Caj {n} miux le caiq moq",
+    "other": "Caj {n} miux le caiq moq"
+  },
+  "loader.paused": {
+    "one": "Baez moq gaxgonq ngaiz gvaq, vih hawj cingjgouz GitHub lw; caj {n} miux le caiq ra",
+    "other": "Baez moq gaxgonq ngaiz gvaq, vih hawj cingjgouz GitHub lw; caj {n} miux le caiq ra"
+  },
+  "loader.menu.hint": "baihgvaz gyaek, genj caiq gazcaiq",
+  "loader.menu.title": "Caiq gazcaiq",
+  "loader.menu.changes": "Dan gij bienq le, seizneix",
+  "loader.menu.all": "Sojmiz yinhhengz, seizneix",
+  "loader.menu.interval": "Swhdung caiq cam",
+  "loader.menu.seconds": {
+    "one": "moix {n} miux",
+    "other": "moix {n} miux"
+  },
+  "loader.menu.minutes": {
+    "one": "moix {n} faen",
+    "other": "moix {n} faen"
+  },
+  "loader.menu.off": "yungjyuenj mbouj",
+  "loader.menu.view": "Aen gyaengh neix, seizneix",
+  "loader.menu.cache": "Lumz gij dapfuk GitHub ndaw vanjcun",
+  "loader.menu.page": "Caiq gazcaiq mbaw",
+  "loader.overview.title": "Cingq gazcaiq",
+  "loader.overview.running": {
+    "one": "{n} aen cingq yinhhengz",
+    "other": "{n} aen cingq yinhhengz"
+  },
+  "loader.overview.none": "Lij caengz gazcaiq saek yiengh.",
+  "loader.task.boot": "Cingq doeg gij hong caeuq meta de",
+  "loader.task.view": "Cingq veh {view}",
+  "loader.task.changes": "Cingq cam GitHub gij bienq le",
+  "loader.task.everything": "Cingq cam GitHub sojmiz yinhhengz",
   "loader.task.artifacts": "Gij doxgaiq yinhhengz #{number}: {total} ndawde {done}",
+  "loader.task.artifact": "Doxgaiq {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "saetbaih: {message}",
+  "feed.actions.pick": "Yienh gij sawq aen yinhhengz neix",
+  "feed.actions.ended": "Gietsat",
+  "feed.actions.duration": "Seizgan",
+  "feed.actions.running": "cingq yinhhengz",
+  "feed.actions.longest": "Yinhhengz ceiq raez yienh okdaeuj yungh le {duration} ({run}).",
+  "feed.filter.search": "Ra youq ndaw gij yinhhengz",
+  "feed.filter.all": "daengx",
+  "feed.filter.event": "Saehgienh",
+  "feed.filter.branch": "Nga",
+  "feed.filter.clear": "Cawz gij genj",
+  "feed.filter.shown": {
+    "one": "Genj le lij miz {n} aen.",
+    "other": "Genj le lij miz {n} aen."
+  },
   "security.source.advisories": "Gij gienjyi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Saujmiuz daimaj",

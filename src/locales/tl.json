@@ -135,7 +135,60 @@
   },
   "feed.failed": "Sumagot ang GitHub ng {status}.",
   "feed.anError": "may error",
+  "loader.loading": "Nilo-load …",
+  "loader.next": {
+    "one": "Susunod na pag-reload sa loob ng {n} segundo",
+    "other": "Susunod na pag-reload sa loob ng {n} segundo"
+  },
+  "loader.paused": {
+    "one": "Nilaktawan ang huling pag-reload para matipid ang quota ng GitHub; susunod na subok sa loob ng {n} segundo",
+    "other": "Nilaktawan ang huling pag-reload para matipid ang quota ng GitHub; susunod na subok sa loob ng {n} segundo"
+  },
+  "loader.menu.hint": "i-right-click para sa mga opsyon sa pag-reload",
+  "loader.menu.title": "I-reload",
+  "loader.menu.changes": "Ang nagbago lamang, ngayon",
+  "loader.menu.all": "Lahat ng pagtakbo, ngayon",
+  "loader.menu.interval": "Awtomatikong magtanong muli",
+  "loader.menu.seconds": {
+    "one": "bawat {n} segundo",
+    "other": "bawat {n} segundo"
+  },
+  "loader.menu.minutes": {
+    "one": "bawat {n} minuto",
+    "other": "bawat {n} minuto"
+  },
+  "loader.menu.off": "hindi kailanman",
+  "loader.menu.view": "Ang tab na ito, ngayon",
+  "loader.menu.cache": "Kalimutan ang mga naka-cache na sagot ng GitHub",
+  "loader.menu.page": "I-reload ang pahina",
+  "loader.overview.title": "Nilo-load",
+  "loader.overview.running": {
+    "one": "{n} tumatakbo",
+    "other": "{n} tumatakbo"
+  },
+  "loader.overview.none": "Wala pang na-load.",
+  "loader.task.boot": "Binabasa ang mga tungkulin at ang kanilang meta",
+  "loader.task.view": "Iginuguhit ang {view}",
+  "loader.task.changes": "Tinatanong ang GitHub kung ano ang nagbago",
+  "loader.task.everything": "Hinihingi sa GitHub ang lahat ng pagtakbo",
   "loader.task.artifacts": "Mga artipakto ng pagtakbo #{number}: {done} sa {total}",
+  "loader.task.artifact": "Artipakto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "bumagsak: {message}",
+  "feed.actions.pick": "Ipakita ang mga pagsubok ng pagtakbong ito",
+  "feed.actions.ended": "Natapos",
+  "feed.actions.duration": "Tagal",
+  "feed.actions.running": "tumatakbo",
+  "feed.actions.longest": "Ang pinakamahabang pagtakbong ipinakita ay tumagal nang {duration} ({run}).",
+  "feed.filter.search": "Maghanap sa mga pagtakbo",
+  "feed.filter.all": "lahat",
+  "feed.filter.event": "Kaganapan",
+  "feed.filter.branch": "Sangay",
+  "feed.filter.clear": "Alisin ang mga pansala",
+  "feed.filter.shown": {
+    "one": "{n} ang natira pagkatapos ng pagsala.",
+    "other": "{n} ang natira pagkatapos ng pagsala."
+  },
   "security.source.advisories": "Mga abiso sa seguridad",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pag-scan ng code",

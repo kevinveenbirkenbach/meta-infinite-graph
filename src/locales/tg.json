@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub бо {status} ҷавоб дод.",
   "feed.anError": "бо хато",
+  "loader.loading": "Боркунӣ …",
+  "loader.next": {
+    "one": "Навсозии навбатӣ пас аз {n} сония",
+    "other": "Навсозии навбатӣ пас аз {n} сония"
+  },
+  "loader.paused": {
+    "one": "Навсозии охирин барои сарфаи ҳадди GitHub гузаронида шуд; кӯшиши навбатӣ пас аз {n} сония",
+    "other": "Навсозии охирин барои сарфаи ҳадди GitHub гузаронида шуд; кӯшиши навбатӣ пас аз {n} сония"
+  },
+  "loader.menu.hint": "барои имконоти аз нав боркунӣ тугмаи ростро пахш кунед",
+  "loader.menu.title": "Аз нав бор кардан",
+  "loader.menu.changes": "Танҳо он чи тағйир ёфт, ҳозир",
+  "loader.menu.all": "Ҳамаи иҷроҳо, ҳозир",
+  "loader.menu.interval": "Худкор аз нав пурсидан",
+  "loader.menu.seconds": {
+    "one": "ҳар {n} сония",
+    "other": "ҳар {n} сония"
+  },
+  "loader.menu.minutes": {
+    "one": "ҳар {n} дақиқа",
+    "other": "ҳар {n} дақиқа"
+  },
+  "loader.menu.off": "ҳеҷ гоҳ",
+  "loader.menu.view": "Ҳамин варақа, ҳозир",
+  "loader.menu.cache": "Ҷавобҳои кэшшудаи GitHub-ро фаромӯш кардан",
+  "loader.menu.page": "Саҳифаро аз нав бор кардан",
+  "loader.overview.title": "Боркунӣ",
+  "loader.overview.running": {
+    "one": "{n} дар иҷро",
+    "other": "{n} дар иҷро"
+  },
+  "loader.overview.none": "Ҳанӯз чизе бор нашудааст.",
+  "loader.task.boot": "Хондани нақшҳо ва метаи онҳо",
+  "loader.task.view": "Кашидани {view}",
+  "loader.task.changes": "Пурсидан аз GitHub, ки чӣ тағйир ёфт",
+  "loader.task.everything": "Дархости ҳамаи иҷроҳо аз GitHub",
   "loader.task.artifacts": "Артефактҳои иҷрои #{number}: {done} аз {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ноком шуд: {message}",
+  "feed.actions.pick": "Санҷишҳои ин иҷроро нишон додан",
+  "feed.actions.ended": "Анҷом ёфт",
+  "feed.actions.duration": "Давомнокӣ",
+  "feed.actions.running": "дар иҷро",
+  "feed.actions.longest": "Тӯлонитарин иҷрои нишондодашуда {duration} ({run}) давом кард.",
+  "feed.filter.search": "Ҷустуҷӯ дар иҷроҳо",
+  "feed.filter.all": "ҳама",
+  "feed.filter.event": "Рӯйдод",
+  "feed.filter.branch": "Шоха",
+  "feed.filter.clear": "Тоза кардани филтрҳо",
+  "feed.filter.shown": {
+    "one": "Пас аз филтрҳо {n} боқӣ мемонад.",
+    "other": "Пас аз филтрҳо {n} боқӣ мемонад."
+  },
   "security.source.advisories": "Огоҳиномаҳо",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Санҷиши код",

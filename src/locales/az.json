@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} cavabını verdi.",
   "feed.anError": "xəta ilə",
+  "loader.loading": "Yüklənir …",
+  "loader.next": {
+    "one": "Növbəti yeniləmə {n} saniyədən sonra",
+    "other": "Növbəti yeniləmə {n} saniyədən sonra"
+  },
+  "loader.paused": {
+    "one": "GitHub kvotasına qənaət etmək üçün son yeniləmə ötürüldü; növbəti cəhd {n} saniyədən sonra",
+    "other": "GitHub kvotasına qənaət etmək üçün son yeniləmə ötürüldü; növbəti cəhd {n} saniyədən sonra"
+  },
+  "loader.menu.hint": "yenidən yükləmə seçimləri üçün sağ klik edin",
+  "loader.menu.title": "Yenidən yüklə",
+  "loader.menu.changes": "Yalnız dəyişənlər, indi",
+  "loader.menu.all": "Hər icra, indi",
+  "loader.menu.interval": "Avtomatik yenidən soruş",
+  "loader.menu.seconds": {
+    "one": "hər {n} saniyədən bir",
+    "other": "hər {n} saniyədən bir"
+  },
+  "loader.menu.minutes": {
+    "one": "hər {n} dəqiqədən bir",
+    "other": "hər {n} dəqiqədən bir"
+  },
+  "loader.menu.off": "heç vaxt",
+  "loader.menu.view": "Bu vərəq, indi",
+  "loader.menu.cache": "Keşdəki GitHub cavablarını unut",
+  "loader.menu.page": "Səhifəni yenidən yüklə",
+  "loader.overview.title": "Yüklənir",
+  "loader.overview.running": {
+    "one": "{n} icra olunur",
+    "other": "{n} icra olunur"
+  },
+  "loader.overview.none": "Hələ heç nə yüklənməyib.",
+  "loader.task.boot": "Rollar və onların metası oxunur",
+  "loader.task.view": "{view} çəkilir",
+  "loader.task.changes": "GitHub-dan nəyin dəyişdiyi soruşulur",
+  "loader.task.everything": "GitHub-dan hər icra soruşulur",
   "loader.task.artifacts": "#{number} icrasının artefaktları: {done}/{total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "uğursuz oldu: {message}",
+  "feed.actions.pick": "Bu icranın testlərini göstər",
+  "feed.actions.ended": "Bitib",
+  "feed.actions.duration": "Müddət",
+  "feed.actions.running": "icra olunur",
+  "feed.actions.longest": "Göstərilən ən uzun icra {duration} çəkdi ({run}).",
+  "feed.filter.search": "İcralarda axtar",
+  "feed.filter.all": "hamısı",
+  "feed.filter.event": "Hadisə",
+  "feed.filter.branch": "Budaq",
+  "feed.filter.clear": "Filtrləri təmizlə",
+  "feed.filter.shown": {
+    "one": "Filtrlərdən sonra {n} qalır.",
+    "other": "Filtrlərdən sonra {n} qalır."
+  },
   "security.source.advisories": "Tövsiyələr",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kod skanlanması",

@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub གིས་ {status} ལན་བཏབ།",
   "feed.anError": "ནོར་འཁྲུལ་དང་བཅས།",
+  "loader.loading": "ནང་འཇུག་བྱེད་བཞིན …",
+  "loader.next": {
+    "other": "གསར་བརྗེ་རྗེས་མ་སྐར་ཆ་ {n} རྗེས།"
+  },
+  "loader.paused": {
+    "other": "GitHub གི་རེ་ཞུའི་ཚད་བཀག་སྲུང་ཆེད་གསར་བརྗེ་མཐའ་མ་མཆོང་ཡོད། ཚོད་ལྟ་རྗེས་མ་སྐར་ཆ་ {n} རྗེས།"
+  },
+  "loader.menu.hint": "བསྐྱར་དུ་ནང་འདྲེན་གྱི་འདེམས་ཚན་ཆེད་གཡས་མནན་བྱོས།",
+  "loader.menu.title": "བསྐྱར་དུ་ནང་འདྲེན།",
+  "loader.menu.changes": "འགྱུར་བ་བྱུང་བ་ཁོ་ན། ད་ལྟ།",
+  "loader.menu.all": "འཁོར་སྐྱོད་ཚང་མ། ད་ལྟ།",
+  "loader.menu.interval": "རང་འགུལ་གྱིས་བསྐྱར་དུ་འདྲི།",
+  "loader.menu.seconds": {
+    "other": "སྐར་ཆ་ {n} རེ་རེར།"
+  },
+  "loader.menu.minutes": {
+    "other": "སྐར་མ་ {n} རེ་རེར།"
+  },
+  "loader.menu.off": "ནམ་ཡང་མིན།",
+  "loader.menu.view": "ཤོག་བྱང་འདི། ད་ལྟ།",
+  "loader.menu.cache": "GitHub གི་ལན་གསོག་ཉར་བྱས་པ་བརྗེད།",
+  "loader.menu.page": "ཤོག་ངོས་བསྐྱར་དུ་ནང་འདྲེན།",
+  "loader.overview.title": "ནང་འཇུག་བྱེད་བཞིན",
+  "loader.overview.running": {
+    "other": "{n} འཁོར་སྐྱོད་བྱེད་བཞིན།"
+  },
+  "loader.overview.none": "ད་དུང་ཅི་ཡང་ནང་འཇུག་བྱས་མེད།",
+  "loader.task.boot": "ལས་འགན་དང་དེ་དག་གི་ meta ཀློག་བཞིན་",
+  "loader.task.view": "{view} འབྲི་བཞིན་",
+  "loader.task.changes": "GitHub ལ་འགྱུར་བ་ཅི་བྱུང་དྲི་བཞིན་",
+  "loader.task.everything": "GitHub ལ་འཁོར་སྐྱོད་ཚང་མ་དྲི་བཞིན་",
   "loader.task.artifacts": "འཁོར་སྐྱོད་ #{number} གི་གྲུབ་དངོས། {total} ལས་ {done}",
+  "loader.task.artifact": "གྲུབ་དངོས་ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ཕམ། {message}",
+  "feed.actions.pick": "འཁོར་སྐྱོད་འདིའི་བརྟག་དཔྱད་སྟོན།",
+  "feed.actions.ended": "མཇུག་སྒྲིལ།",
+  "feed.actions.duration": "དུས་ཡུན།",
+  "feed.actions.running": "འཁོར་སྐྱོད་བྱེད་བཞིན།",
+  "feed.actions.longest": "བསྟན་པའི་འཁོར་སྐྱོད་ནང་ནས་རིང་ཤོས་དེར་དུས་ཚོད་ {duration} འགོར་ ({run})།",
+  "feed.filter.search": "འཁོར་སྐྱོད་འཚོལ།",
+  "feed.filter.all": "ཚང་མ།",
+  "feed.filter.event": "བྱུང་བ།",
+  "feed.filter.branch": "ཡན་ལག",
+  "feed.filter.clear": "འཚག་མ་སེལ།",
+  "feed.filter.shown": {
+    "other": "འཚག་མའི་རྗེས་སུ་ {n} ལྷག་ཡོད།"
+  },
   "security.source.advisories": "བདེ་འཇགས་གསལ་བསྒྲགས།",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ཚབ་རྟགས་ཞིབ་བཤེར།",

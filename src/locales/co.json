@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub hà rispostu {status}.",
   "feed.anError": "cù un errore",
+  "loader.loading": "Caricamentu …",
+  "loader.next": {
+    "one": "Prossima attualizazione in {n} seconda",
+    "other": "Prossima attualizazione in {n} seconde"
+  },
+  "loader.paused": {
+    "one": "L'ultima attualizazione hè stata saltata per risparmià a quota GitHub; prossimu tentativu in {n} seconda",
+    "other": "L'ultima attualizazione hè stata saltata per risparmià a quota GitHub; prossimu tentativu in {n} seconde"
+  },
+  "loader.menu.hint": "cliccu dirittu per l'opzioni di ricaricamentu",
+  "loader.menu.title": "Ricaricà",
+  "loader.menu.changes": "Solu ciò chì hè cambiatu, avà",
+  "loader.menu.all": "Ogni esecuzione, avà",
+  "loader.menu.interval": "Dumandà torna automaticamente",
+  "loader.menu.seconds": {
+    "one": "ogni {n} seconda",
+    "other": "ogni {n} seconde"
+  },
+  "loader.menu.minutes": {
+    "one": "ogni {n} minutu",
+    "other": "ogni {n} minuti"
+  },
+  "loader.menu.off": "mai",
+  "loader.menu.view": "Sta scheda, avà",
+  "loader.menu.cache": "Scurdassi di e risposte GitHub in cache",
+  "loader.menu.page": "Ricaricà a pagina",
+  "loader.overview.title": "Caricamentu",
+  "loader.overview.running": {
+    "one": "{n} in esecuzione",
+    "other": "{n} in esecuzione"
+  },
+  "loader.overview.none": "Nunda hè statu caricatu per avà.",
+  "loader.task.boot": "Lettura di i roli è di i so meta",
+  "loader.task.view": "Disegnu di {view}",
+  "loader.task.changes": "Dumanda à GitHub ciò chì hè cambiatu",
+  "loader.task.everything": "Dumanda à GitHub d'ogni esecuzione",
   "loader.task.artifacts": "Artefatti di l'esecuzione #{number}: {done} nant'à {total}",
+  "loader.task.artifact": "Artefattu {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fallitu: {message}",
+  "feed.actions.pick": "Mustrà e prove di sta esecuzione",
+  "feed.actions.ended": "Finitu",
+  "feed.actions.duration": "Durata",
+  "feed.actions.running": "in esecuzione",
+  "feed.actions.longest": "L'esecuzione più longa mostrata hà duratu {duration} ({run}).",
+  "feed.filter.search": "Circà in l'esecuzioni",
+  "feed.filter.all": "tutti",
+  "feed.filter.event": "Avvenimentu",
+  "feed.filter.branch": "Ramu",
+  "feed.filter.clear": "Sguassà i filtri",
+  "feed.filter.shown": {
+    "one": "Ferma {n} dopu à i filtri.",
+    "other": "Fermanu {n} dopu à i filtri."
+  },
   "security.source.advisories": "Avvisi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Scansione di u codice",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yo fhindula {status}.",
   "feed.anError": "na vhukhakhi",
+  "loader.loading": "Zwi khou hwaliwa …",
+  "loader.next": {
+    "one": "Mvusuluso i tevhelaho nga murahu ha sekhondo ya {n}",
+    "other": "Mvusuluso i tevhelaho nga murahu ha sekhondo dza {n}"
+  },
+  "loader.paused": {
+    "one": "Mvusuluso wa u fhedza wo pfukiwa u itela u vhulunga tshipiḓa tsha GitHub; lingedzo ḽi tevhelaho nga murahu ha sekhondo ya {n}",
+    "other": "Mvusuluso wa u fhedza wo pfukiwa u itela u vhulunga tshipiḓa tsha GitHub; lingedzo ḽi tevhelaho nga murahu ha sekhondo dza {n}"
+  },
+  "loader.menu.hint": "kiḽikani nga tshanḓa tsha u ḽa u itela khetho dza u hwala hafhu",
+  "loader.menu.title": "Hwala hafhu",
+  "loader.menu.changes": "Zwo shandukaho fhedzi, zwino",
+  "loader.menu.all": "Tshimbidzo dzoṱhe, zwino",
+  "loader.menu.interval": "Vhudzisa hafhu nga nḓila ya othomathiki",
+  "loader.menu.seconds": {
+    "one": "sekhondo iṅwe na iṅwe ya {n}",
+    "other": "sekhondo dziṅwe na dziṅwe dza {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "minithi iṅwe na iṅwe ya {n}",
+    "other": "minithi dziṅwe na dziṅwe dza {n}"
+  },
+  "loader.menu.off": "na luthihi",
+  "loader.menu.view": "Thebu iyi, zwino",
+  "loader.menu.cache": "Hangwani phindulo dza GitHub dzo vhulungwaho kha khetshe",
+  "loader.menu.page": "Hwala hafhu siaṱari",
+  "loader.overview.title": "Zwi khou hwaliwa",
+  "loader.overview.running": {
+    "one": "{n} zwi khou tshimbila",
+    "other": "{n} zwi khou tshimbila"
+  },
+  "loader.overview.none": "A hu na tshe tsha hwaliwa zwazwino.",
+  "loader.task.boot": "Mishumo na meta yayo i khou vhaliwa",
+  "loader.task.view": "{view} i khou olwa",
+  "loader.task.changes": "GitHub i khou vhudziswa zwo shandukaho",
+  "loader.task.everything": "GitHub i khou humbelwa tshimbidzo dzoṱhe",
   "loader.task.artifacts": "Zwibveledzwa zwa tshimbidzo #{number}: {done} kha {total}",
+  "loader.task.artifact": "Tshibveledzwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "zwo kundelwa: {message}",
+  "feed.actions.pick": "Sumbedza ndingo dza tshimbidzo iyi",
+  "feed.actions.ended": "Zwo fhela",
+  "feed.actions.duration": "Tshifhinga tsho dzhiiwaho",
+  "feed.actions.running": "zwi khou tshimbila",
+  "feed.actions.longest": "Tshimbidzo ndapfu kha dzothe yo sumbedzwaho yo dzhia {duration} ({run}).",
+  "feed.filter.search": "Ṱoḓa kha tshimbidzo",
+  "feed.filter.all": "zwoṱhe",
+  "feed.filter.event": "Tshiitea",
+  "feed.filter.branch": "Tavhi",
+  "feed.filter.clear": "Bvisa zwisefo",
+  "feed.filter.shown": {
+    "one": "Ho sala {n} nga murahu ha zwisefo.",
+    "other": "Ho sala {n} nga murahu ha zwisefo."
+  },
   "security.source.advisories": "Nyeletshedzo",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "U ṱolisisa khoudu",

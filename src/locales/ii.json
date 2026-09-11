@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub ꉷꃚ {status}。",
   "feed.anError": "ꊻꃶꐥ",
+  "loader.loading": "ꏲꏦꊖ …",
+  "loader.next": {
+    "other": "{n} ꂿ ꈭ ꄲꍫꑟꊖꏖ"
+  },
+  "loader.paused": {
+    "other": "GitHub ꍓꇰꑩꏂ ꀋꑿ，ꀋꐥꄲꍫꑟꊖ；{n} ꂿ ꈭ ꄲꍫꑟꊖꏖ"
+  },
+  "loader.menu.hint": "ꑭꄅꏢ，ꄲꍫꑟꊖꏖꊸꄉ",
+  "loader.menu.title": "ꄲꍫꑟꊖꏖ",
+  "loader.menu.changes": "ꇰꑟꌠꑌ，ꀃꒉ",
+  "loader.menu.all": "ꒃꑟꐂꀮ，ꀃꒉ",
+  "loader.menu.interval": "ꊪꄏꑭꃲ",
+  "loader.menu.seconds": {
+    "other": "{n} ꂿ ꋍꊰ"
+  },
+  "loader.menu.minutes": {
+    "other": "{n} ꃀ ꋍꊰ"
+  },
+  "loader.menu.off": "ꀋꒃꑟ",
+  "loader.menu.view": "ꍓꇰꏂꄲ，ꀃꒉ",
+  "loader.menu.cache": "GitHub ꉷꃚꉷꋂꎭꍲ",
+  "loader.menu.page": "ꍗꑷꄲꍫꑟꊖꏖ",
+  "loader.overview.title": "ꏲꏦꊖ",
+  "loader.overview.running": {
+    "other": "{n} ꏲꏦꊖ"
+  },
+  "loader.overview.none": "ꃅꄜꀋꏲꏦꊖ。",
+  "loader.task.boot": "ꏮꌝꂾꑻꎼꄖꐎ",
+  "loader.task.view": "{view} ꁱꊖ",
+  "loader.task.changes": "GitHub ꇬꉛ ꇰꑟꌠ",
+  "loader.task.everything": "GitHub ꇬ ꒃꑟꐂꀮ ꉛ",
   "loader.task.artifacts": "ꒃꑟ #{number} ꍣꃶ：{done}/{total}",
+  "loader.task.artifact": "ꍣꃶ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ꉷꏂꀠ：{message}",
+  "feed.actions.pick": "ꒃꑟ ꋃꏂ ꂷꑣꏂ",
+  "feed.actions.ended": "ꐛꅉ",
+  "feed.actions.duration": "ꄮꈚ",
+  "feed.actions.running": "ꒃꑟꇬ",
+  "feed.actions.longest": "ꒃꑟ ꑳꅍ ꀋꐛ {duration} ({run})",
+  "feed.filter.search": "ꒃꑟꈌꏦ",
+  "feed.filter.all": "ꐂꀮ",
+  "feed.filter.event": "ꃅꅉ",
+  "feed.filter.branch": "ꃠꍝ",
+  "feed.filter.clear": "ꎭꑦꐂꀮꉌ",
+  "feed.filter.shown": {
+    "other": "ꎭꑦꈭ {n} ꇰꐥ。"
+  },
   "security.source.advisories": "ꌋꅇꉙꇬ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ꁱꂷꌙꂳ",

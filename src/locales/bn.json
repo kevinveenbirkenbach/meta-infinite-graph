@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub উত্তর দিয়েছে {status}।",
   "feed.anError": "একটি ত্রুটিসহ",
+  "loader.loading": "লোড হচ্ছে …",
+  "loader.next": {
+    "one": "পরবর্তী রিফ্রেশ {n} সেকেন্ডে",
+    "other": "পরবর্তী রিফ্রেশ {n} সেকেন্ডে"
+  },
+  "loader.paused": {
+    "one": "GitHub কোটা বাঁচাতে শেষ রিফ্রেশটি বাদ দেওয়া হয়েছে; পরবর্তী চেষ্টা {n} সেকেন্ডে",
+    "other": "GitHub কোটা বাঁচাতে শেষ রিফ্রেশটি বাদ দেওয়া হয়েছে; পরবর্তী চেষ্টা {n} সেকেন্ডে"
+  },
+  "loader.menu.hint": "রিলোড বিকল্পের জন্য রাইট-ক্লিক করুন",
+  "loader.menu.title": "রিলোড",
+  "loader.menu.changes": "শুধু যা বদলেছে, এখনই",
+  "loader.menu.all": "প্রতিটি রান, এখনই",
+  "loader.menu.interval": "স্বয়ংক্রিয়ভাবে আবার জিজ্ঞাসা করুন",
+  "loader.menu.seconds": {
+    "one": "প্রতি {n} সেকেন্ডে",
+    "other": "প্রতি {n} সেকেন্ডে"
+  },
+  "loader.menu.minutes": {
+    "one": "প্রতি {n} মিনিটে",
+    "other": "প্রতি {n} মিনিটে"
+  },
+  "loader.menu.off": "কখনো না",
+  "loader.menu.view": "এই ট্যাব, এখনই",
+  "loader.menu.cache": "ক্যাশে থাকা GitHub উত্তরগুলো ভুলে যান",
+  "loader.menu.page": "পৃষ্ঠা পুনরায় লোড করুন",
+  "loader.overview.title": "লোড হচ্ছে",
+  "loader.overview.running": {
+    "one": "{n}টি চলছে",
+    "other": "{n}টি চলছে"
+  },
+  "loader.overview.none": "এখনও কিছু লোড হয়নি।",
+  "loader.task.boot": "রোল ও তাদের মেটা পড়া হচ্ছে",
+  "loader.task.view": "{view} আঁকা হচ্ছে",
+  "loader.task.changes": "কী বদলেছে GitHub-কে জিজ্ঞাসা করা হচ্ছে",
+  "loader.task.everything": "প্রতিটি রানের জন্য GitHub-কে জিজ্ঞাসা করা হচ্ছে",
   "loader.task.artifacts": "রান #{number}-এর আর্টিফ্যাক্ট: {total}টির মধ্যে {done}টি",
+  "loader.task.artifact": "আর্টিফ্যাক্ট {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ব্যর্থ: {message}",
+  "feed.actions.pick": "এই রানের পরীক্ষাগুলো দেখান",
+  "feed.actions.ended": "শেষ",
+  "feed.actions.duration": "সময়কাল",
+  "feed.actions.running": "চলছে",
+  "feed.actions.longest": "দেখানো সবচেয়ে দীর্ঘ রানটি {duration} সময় নিয়েছে ({run})।",
+  "feed.filter.search": "রানগুলো খুঁজুন",
+  "feed.filter.all": "সব",
+  "feed.filter.event": "ঘটনা",
+  "feed.filter.branch": "ব্রাঞ্চ",
+  "feed.filter.clear": "ফিল্টারগুলো মুছুন",
+  "feed.filter.shown": {
+    "one": "ফিল্টারের পরে {n}টি বাকি আছে।",
+    "other": "ফিল্টারের পরে {n}টি বাকি আছে।"
+  },
   "security.source.advisories": "নিরাপত্তা পরামর্শ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "কোড স্ক্যানিং",

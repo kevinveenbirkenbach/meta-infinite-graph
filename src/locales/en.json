@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub answered {status}.",
   "feed.anError": "with an error",
+  "loader.loading": "Loading …",
+  "loader.next": {
+    "one": "Next refresh in {n} second",
+    "other": "Next refresh in {n} seconds"
+  },
+  "loader.paused": {
+    "one": "The last refresh was skipped to spare the GitHub quota; next try in {n} second",
+    "other": "The last refresh was skipped to spare the GitHub quota; next try in {n} seconds"
+  },
+  "loader.menu.hint": "right-click for reload options",
+  "loader.menu.title": "Reload",
+  "loader.menu.changes": "Only what changed, now",
+  "loader.menu.all": "Every run, now",
+  "loader.menu.interval": "Ask again automatically",
+  "loader.menu.seconds": {
+    "one": "every {n} second",
+    "other": "every {n} seconds"
+  },
+  "loader.menu.minutes": {
+    "one": "every {n} minute",
+    "other": "every {n} minutes"
+  },
+  "loader.menu.off": "never",
+  "loader.menu.view": "This tab, now",
+  "loader.menu.cache": "Forget the cached GitHub answers",
+  "loader.menu.page": "Reload the page",
+  "loader.overview.title": "Loading",
+  "loader.overview.running": {
+    "one": "{n} running",
+    "other": "{n} running"
+  },
+  "loader.overview.none": "Nothing has loaded yet.",
+  "loader.task.boot": "Reading the roles and their meta",
+  "loader.task.view": "Drawing {view}",
+  "loader.task.changes": "Asking GitHub what changed",
+  "loader.task.everything": "Asking GitHub for every run",
   "loader.task.artifacts": "Artifacts of run #{number}: {done} of {total}",
+  "loader.task.artifact": "Artifact {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "failed: {message}",
+  "feed.actions.pick": "Show this run's tests",
+  "feed.actions.ended": "Ended",
+  "feed.actions.duration": "Duration",
+  "feed.actions.running": "running",
+  "feed.actions.longest": "The longest run shown took {duration} ({run}).",
+  "feed.filter.search": "Search the runs",
+  "feed.filter.all": "all",
+  "feed.filter.event": "Event",
+  "feed.filter.branch": "Branch",
+  "feed.filter.clear": "Clear the filters",
+  "feed.filter.shown": {
+    "one": "{n} is left after the filters.",
+    "other": "{n} are left after the filters."
+  },
   "security.source.advisories": "Advisories",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Code scanning",

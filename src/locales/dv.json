@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ޖަވާބު ދިނީ {status}.",
   "feed.anError": "މައްސަލައަކާއެކު",
+  "loader.loading": "ލޯޑުވަނީ …",
+  "loader.next": {
+    "one": "ދެން ރިފްރެޝްވާނީ {n} ސިކުންތުން",
+    "other": "ދެން ރިފްރެޝްވާނީ {n} ސިކުންތުން"
+  },
+  "loader.paused": {
+    "one": "GitHub ގެ ކޯޓާ ރައްކާކުރުމަށް ފަހު ރިފްރެޝް ސްކިޕްކުރި؛ ދެން މަސައްކަތްކުރާނީ {n} ސިކުންތުން",
+    "other": "GitHub ގެ ކޯޓާ ރައްކާކުރުމަށް ފަހު ރިފްރެޝް ސްކިޕްކުރި؛ ދެން މަސައްކަތްކުރާނީ {n} ސިކުންތުން"
+  },
+  "loader.menu.hint": "ރީލޯޑް އިޚްތިޔާރުތަކަށް ކަނާތް ފަރާތުން ކްލިކްކުރޭ",
+  "loader.menu.title": "ރީލޯޑް",
+  "loader.menu.changes": "ބަދަލުވި އެއްޗެއް އެކަނި، މިހާރު",
+  "loader.menu.all": "ކޮންމެ ދުވުމެއް، މިހާރު",
+  "loader.menu.interval": "އޮޓޮމެޓިކުން އަލުން ސުވާލުކުރޭ",
+  "loader.menu.seconds": {
+    "one": "ކޮންމެ {n} ސިކުންތަކުން",
+    "other": "ކޮންމެ {n} ސިކުންތަކުން"
+  },
+  "loader.menu.minutes": {
+    "one": "ކޮންމެ {n} މިނިޓަކުން",
+    "other": "ކޮންމެ {n} މިނިޓަކުން"
+  },
+  "loader.menu.off": "ދުވަހަކުވެސް ނޫން",
+  "loader.menu.view": "މި ޓެބް، މިހާރު",
+  "loader.menu.cache": "ކޭޝްކުރި GitHub ޖަވާބުތައް ހަނދާންނައްތާލާ",
+  "loader.menu.page": "ޞަފްޙާ އަލުން ލޯޑްކުރޭ",
+  "loader.overview.title": "ލޯޑުވަނީ",
+  "loader.overview.running": {
+    "one": "{n} ދުވަނީ",
+    "other": "{n} ދުވަނީ"
+  },
+  "loader.overview.none": "އަދި އެއްވެސް އެއްޗެއް ލޯޑެއް ނުވޭ.",
+  "loader.task.boot": "ދައުރުތަކާއި އޭގެ މެޓާ ކިޔަނީ",
+  "loader.task.view": "{view} ކުރަހަނީ",
+  "loader.task.changes": "ބަދަލުވީ ކޮންއެއްޗެއްކަން GitHub އިން ސުވާލުކުރަނީ",
+  "loader.task.everything": "ކޮންމެ ދުވުމެއް GitHub އިން ސުވާލުކުރަނީ",
   "loader.task.artifacts": "ދުވުން #{number} ގެ އާޓިފެކްޓްތައް: {total} އިން {done}",
+  "loader.task.artifact": "އާޓިފެކްޓް {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ފެއިލްވި: {message}",
+  "feed.actions.pick": "މި ދުވުމުގެ ޓެސްޓްތައް ދައްކާ",
+  "feed.actions.ended": "ނިމުނު",
+  "feed.actions.duration": "މުއްދަތު",
+  "feed.actions.running": "ދުވަނީ",
+  "feed.actions.longest": "ދައްކާފައިވާ އެންމެ ދިގު ދުވުމަށް {duration} ނެގުނު ({run}).",
+  "feed.filter.search": "ދުވުންތަކުގައި ހޯދާ",
+  "feed.filter.all": "ހުރިހާ",
+  "feed.filter.event": "ހާދިސާ",
+  "feed.filter.branch": "ގޮފި",
+  "feed.filter.clear": "ފިލްޓަރުތައް ފޮހެލާ",
+  "feed.filter.shown": {
+    "one": "ފިލްޓަރުތަކަށް ފަހު {n} ބާކީ ހުރި.",
+    "other": "ފިލްޓަރުތަކަށް ފަހު {n} ބާކީ ހުރި."
+  },
   "security.source.advisories": "ނަސޭހަތްތައް",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ކޯޑް ސްކޭނިންގ",

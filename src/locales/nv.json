@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} néidiitʼą́.",
   "feed.anError": "anáhóotʼiʼ bił",
+  "loader.loading": "Nídííłtʼeeh …",
+  "loader.next": {
+    "one": "{n} tsʼíʼdí ahéeʼílkidgo nááʼádoolnííł",
+    "other": "{n} tsʼíʼdí ahéeʼílkidgo nááʼádoolnííł"
+  },
+  "loader.paused": {
+    "one": "Nááʼádoolnííłígíí doo ályaa da, GitHub bitsʼą́ą́ nídaʼídíłkid baa ákonízingo; {n} tsʼíʼdí ahéeʼílkidgo nááná bóhoneedlį́",
+    "other": "Nááʼádoolnííłígíí doo ályaa da, GitHub bitsʼą́ą́ nídaʼídíłkid baa ákonízingo; {n} tsʼíʼdí ahéeʼílkidgo nááná bóhoneedlį́"
+  },
+  "loader.menu.hint": "nishnáájígo ndíníłtsʼíʼ, nááʼádíílííłígíí bee ííshjání ádoolnííł",
+  "loader.menu.title": "Nááʼádíílííł",
+  "loader.menu.changes": "Tʼáá ánáádlaaígíí tʼéiyá, kʼad",
+  "loader.menu.all": "Naʼanish tʼáá ałtso, kʼad",
+  "loader.menu.interval": "Tʼáá bí nááná nídíłkid",
+  "loader.menu.seconds": {
+    "one": "tʼáá ałtso {n} tsʼíʼdí ahéeʼílkidgo",
+    "other": "tʼáá ałtso {n} tsʼíʼdí ahéeʼílkidgo"
+  },
+  "loader.menu.minutes": {
+    "one": "tʼáá ałtso {n} dah alzhingo",
+    "other": "tʼáá ałtso {n} dah alzhingo"
+  },
+  "loader.menu.off": "doo hwiizʼą́ da",
+  "loader.menu.view": "Díí ííshjání áhoolyaa, kʼad",
+  "loader.menu.cache": "GitHub bitsʼą́ą́dę́ę́ʼ haneʼ bee hólǫ́ǫ́ígíí bínáásdzíd",
+  "loader.menu.page": "Naaltsoos nááʼádíílííł",
+  "loader.overview.title": "Nídííłtʼeeh",
+  "loader.overview.running": {
+    "one": "{n} tʼah naʼanish",
+    "other": "{n} tʼah naʼanish"
+  },
+  "loader.overview.none": "Tʼah doo naaltʼeeh da.",
+  "loader.task.boot": "Naanish dóó bimeta yíníłtaʼ",
+  "loader.task.view": "{view} ályaa",
+  "loader.task.changes": "GitHub bínáádééłkid ánáádlaaígíí",
+  "loader.task.everything": "GitHub bínáádééłkid naʼanish tʼáá ałtso",
   "loader.task.artifacts": "Naʼanish #{number} ádaalyaaígíí: {total} bitsʼą́ą́dóó {done}",
+  "loader.task.artifact": "Ádaalyaaígíí {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "doo yiiłtsą́ą́ da: {message}",
+  "feed.actions.pick": "Díí naʼanish bee nídaʼídíłkid ííshjání ádíílííł",
+  "feed.actions.ended": "Ałtso",
+  "feed.actions.duration": "Bínáá",
+  "feed.actions.running": "tʼah naʼanish",
+  "feed.actions.longest": "Naʼanish nízaadgo ádíílííłígíí {duration} néineez ({run}).",
+  "feed.filter.search": "Naʼanish hanítaʼ",
+  "feed.filter.all": "tʼáá ałtsoh",
+  "feed.filter.event": "Ádahooníłígíí",
+  "feed.filter.branch": "Tsin bigaan",
+  "feed.filter.clear": "Hadaʼdiitʼį́ ádin ádíílííł",
+  "feed.filter.shown": {
+    "one": "Hadaʼdiitʼį́ bikéédę́ę́ʼ {n} naʼanish yiih naazį́.",
+    "other": "Hadaʼdiitʼį́ bikéédę́ę́ʼ {n} naʼanish yiih naazį́."
+  },
   "security.source.advisories": "Halneʼé",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kóod yínííłʼį́",

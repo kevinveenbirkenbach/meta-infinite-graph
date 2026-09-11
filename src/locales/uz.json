@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} deb javob berdi.",
   "feed.anError": "xato bilan",
+  "loader.loading": "Yuklanmoqda …",
+  "loader.next": {
+    "one": "Keyingi yangilash {n} soniyadan so‘ng",
+    "other": "Keyingi yangilash {n} soniyadan so‘ng"
+  },
+  "loader.paused": {
+    "one": "GitHub kvotasini tejash uchun oxirgi yangilash o‘tkazib yuborildi; keyingi urinish {n} soniyadan so‘ng",
+    "other": "GitHub kvotasini tejash uchun oxirgi yangilash o‘tkazib yuborildi; keyingi urinish {n} soniyadan so‘ng"
+  },
+  "loader.menu.hint": "qayta yuklash parametrlari uchun o‘ng tugmani bosing",
+  "loader.menu.title": "Qayta yuklash",
+  "loader.menu.changes": "Faqat o‘zgarganlari, hozir",
+  "loader.menu.all": "Barcha ishga tushirishlar, hozir",
+  "loader.menu.interval": "Avtomatik qayta so‘rash",
+  "loader.menu.seconds": {
+    "one": "har {n} soniyada",
+    "other": "har {n} soniyada"
+  },
+  "loader.menu.minutes": {
+    "one": "har {n} daqiqada",
+    "other": "har {n} daqiqada"
+  },
+  "loader.menu.off": "hech qachon",
+  "loader.menu.view": "Shu varaq, hozir",
+  "loader.menu.cache": "Keshdagi GitHub javoblarini unutish",
+  "loader.menu.page": "Sahifani qayta yuklash",
+  "loader.overview.title": "Yuklanmoqda",
+  "loader.overview.running": {
+    "one": "{n} ta bajarilmoqda",
+    "other": "{n} ta bajarilmoqda"
+  },
+  "loader.overview.none": "Hali hech narsa yuklanmadi.",
+  "loader.task.boot": "Rollar va ularning metama’lumotlari o‘qilmoqda",
+  "loader.task.view": "{view} chizilmoqda",
+  "loader.task.changes": "GitHub’dan nima o‘zgargani so‘ralmoqda",
+  "loader.task.everything": "GitHub’dan barcha ishga tushirishlar so‘ralmoqda",
   "loader.task.artifacts": "#{number}-ishga tushirish artefaktlari: {total} tadan {done} ta",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "muvaffaqiyatsiz: {message}",
+  "feed.actions.pick": "Bu ishga tushirishning testlarini ko‘rsatish",
+  "feed.actions.ended": "Tugagan",
+  "feed.actions.duration": "Davomiylik",
+  "feed.actions.running": "bajarilmoqda",
+  "feed.actions.longest": "Ko‘rsatilgan eng uzun ishga tushirish {duration} ({run}) davom etdi.",
+  "feed.filter.search": "Ishga tushirishlardan qidirish",
+  "feed.filter.all": "hammasi",
+  "feed.filter.event": "Hodisa",
+  "feed.filter.branch": "Tarmoq",
+  "feed.filter.clear": "Filtrlarni tozalash",
+  "feed.filter.shown": {
+    "one": "Filtrlardan so‘ng {n} ta qoldi.",
+    "other": "Filtrlardan so‘ng {n} ta qoldi."
+  },
   "security.source.advisories": "Xavfsizlik bildirishnomalari",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodni skanerlash",

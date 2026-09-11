@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub এ {status} উত্তৰ দিলে।",
   "feed.anError": "এটা ত্ৰুটিৰে",
+  "loader.loading": "ল'ড হৈ আছে …",
+  "loader.next": {
+    "one": "পৰৱৰ্তী সতেজকৰণ {n} ছেকেণ্ডত",
+    "other": "পৰৱৰ্তী সতেজকৰণ {n} ছেকেণ্ডত"
+  },
+  "loader.paused": {
+    "one": "GitHub ৰ কোটা বচাবলৈ শেষৰ সতেজকৰণ এৰি দিয়া হৈছে; পৰৱৰ্তী চেষ্টা {n} ছেকেণ্ডত",
+    "other": "GitHub ৰ কোটা বচাবলৈ শেষৰ সতেজকৰণ এৰি দিয়া হৈছে; পৰৱৰ্তী চেষ্টা {n} ছেকেণ্ডত"
+  },
+  "loader.menu.hint": "পুনৰ লোডৰ বিকল্পৰ বাবে ৰাইট-ক্লিক কৰক",
+  "loader.menu.title": "পুনৰ লোড",
+  "loader.menu.changes": "কেৱল যি সলনি হৈছে, এতিয়াই",
+  "loader.menu.all": "প্ৰতিটো চলন, এতিয়াই",
+  "loader.menu.interval": "স্বয়ংক্ৰিয়ভাৱে পুনৰ সোধক",
+  "loader.menu.seconds": {
+    "one": "প্ৰতি {n} ছেকেণ্ডত",
+    "other": "প্ৰতি {n} ছেকেণ্ডত"
+  },
+  "loader.menu.minutes": {
+    "one": "প্ৰতি {n} মিনিটত",
+    "other": "প্ৰতি {n} মিনিটত"
+  },
+  "loader.menu.off": "কেতিয়াও নহয়",
+  "loader.menu.view": "এই টেব, এতিয়াই",
+  "loader.menu.cache": "কেচ কৰা GitHub উত্তৰবোৰ পাহৰি যাওক",
+  "loader.menu.page": "পৃষ্ঠাটো পুনৰ লোড কৰক",
+  "loader.overview.title": "ল'ড হৈ আছে",
+  "loader.overview.running": {
+    "one": "{n}টা চলি আছে",
+    "other": "{n}টা চলি আছে"
+  },
+  "loader.overview.none": "এতিয়ালৈকে একো লোড হোৱা নাই।",
+  "loader.task.boot": "ভূমিকাসমূহ আৰু সেইবোৰৰ মেটা পঢ়ি থকা হৈছে",
+  "loader.task.view": "{view} আঁকি থকা হৈছে",
+  "loader.task.changes": "কি সলনি হৈছে GitHubক সোধা হৈছে",
+  "loader.task.everything": "প্ৰতিটো চলনৰ বাবে GitHubক সোধা হৈছে",
   "loader.task.artifacts": "চলন #{number}ৰ আৰ্টিফেক্ট: {total}টাৰ {done}টা",
+  "loader.task.artifact": "আৰ্টিফেক্ট {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "বিফল: {message}",
+  "feed.actions.pick": "এই চলনৰ পৰীক্ষাসমূহ দেখুৱাওক",
+  "feed.actions.ended": "শেষ হৈছিল",
+  "feed.actions.duration": "সময়কাল",
+  "feed.actions.running": "চলি আছে",
+  "feed.actions.longest": "দেখুওৱা আটাইতকৈ দীঘলীয়া চলনটোত {duration} লাগিছিল ({run})।",
+  "feed.filter.search": "চলনসমূহত সন্ধান কৰক",
+  "feed.filter.all": "সকলো",
+  "feed.filter.event": "ঘটনা",
+  "feed.filter.branch": "শাখা",
+  "feed.filter.clear": "ফিল্টাৰসমূহ আঁতৰাওক",
+  "feed.filter.shown": {
+    "one": "ফিল্টাৰৰ পিছত {n}টা বাকী আছে।",
+    "other": "ফিল্টাৰৰ পিছত {n}টা বাকী আছে।"
+  },
   "security.source.advisories": "পৰামৰ্শ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ক'ড স্কেনিং",

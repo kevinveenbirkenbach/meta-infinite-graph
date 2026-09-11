@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub respondit {status}.",
   "feed.anError": "cum errore",
+  "loader.loading": "Oneratur …",
+  "loader.next": {
+    "one": "Proxima renovatio post {n} secundam",
+    "other": "Proxima renovatio post {n} secundas"
+  },
+  "loader.paused": {
+    "one": "Ultima renovatio omissa est ut copiae GitHub parceretur; proximus conatus post {n} secundam",
+    "other": "Ultima renovatio omissa est ut copiae GitHub parceretur; proximus conatus post {n} secundas"
+  },
+  "loader.menu.hint": "dextro clicca ad optiones renovandi",
+  "loader.menu.title": "Renovare",
+  "loader.menu.changes": "Tantum quae mutata sunt, nunc",
+  "loader.menu.all": "Omnes cursus, nunc",
+  "loader.menu.interval": "Sponte iterum rogare",
+  "loader.menu.seconds": {
+    "one": "quaque {n} secunda",
+    "other": "singulis {n} secundis"
+  },
+  "loader.menu.minutes": {
+    "one": "quoque {n} minuto",
+    "other": "singulis {n} minutis"
+  },
+  "loader.menu.off": "numquam",
+  "loader.menu.view": "Hic aspectus, nunc",
+  "loader.menu.cache": "Responsa GitHub in memoria celeri oblivisci",
+  "loader.menu.page": "Paginam renovare",
+  "loader.overview.title": "Oneratur",
+  "loader.overview.running": {
+    "one": "{n} currit",
+    "other": "{n} currunt"
+  },
+  "loader.overview.none": "Nihil adhuc oneratum est.",
+  "loader.task.boot": "Munera eorumque metadata leguntur",
+  "loader.task.view": "{view} depingitur",
+  "loader.task.changes": "GitHub rogatur quid mutatum sit",
+  "loader.task.everything": "A GitHub omnes cursus petuntur",
   "loader.task.artifacts": "Artefacta cursus #{number}: {done} ex {total}",
+  "loader.task.artifact": "Artefactum {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "defecit: {message}",
+  "feed.actions.pick": "Probationes huius cursus ostendere",
+  "feed.actions.ended": "Finitum",
+  "feed.actions.duration": "Duratio",
+  "feed.actions.running": "in cursu",
+  "feed.actions.longest": "Cursus longissimus ostensus {duration} duravit ({run}).",
+  "feed.filter.search": "In cursibus quaerere",
+  "feed.filter.all": "omnia",
+  "feed.filter.event": "Eventus",
+  "feed.filter.branch": "Ramus",
+  "feed.filter.clear": "Cola removere",
+  "feed.filter.shown": {
+    "one": "Post cola {n} relinquitur.",
+    "other": "Post cola {n} relinquuntur."
+  },
   "security.source.advisories": "Monita",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Inspectio codicis",

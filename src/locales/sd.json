@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} جواب ڏنو.",
   "feed.anError": "غلطيءَ سان",
+  "loader.loading": "لوڊ ٿي رهيو آهي …",
+  "loader.next": {
+    "one": "ايندڙ ريفريش {n} سيڪنڊ ۾",
+    "other": "ايندڙ ريفريش {n} سيڪنڊ ۾"
+  },
+  "loader.paused": {
+    "one": "GitHub ڪوٽا بچائڻ لاءِ آخري ريفريش ڇڏيو ويو؛ ايندڙ ڪوشش {n} سيڪنڊ ۾",
+    "other": "GitHub ڪوٽا بچائڻ لاءِ آخري ريفريش ڇڏيو ويو؛ ايندڙ ڪوشش {n} سيڪنڊ ۾"
+  },
+  "loader.menu.hint": "ٻيهر لوڊ ڪرڻ جي اختيارن لاءِ ساڄي ڪلڪ ڪريو",
+  "loader.menu.title": "ٻيهر لوڊ ڪريو",
+  "loader.menu.changes": "رڳو جيڪو بدليو، هاڻي",
+  "loader.menu.all": "هر رن، هاڻي",
+  "loader.menu.interval": "پاڻمرادو ٻيهر پڇو",
+  "loader.menu.seconds": {
+    "one": "هر {n} سيڪنڊ کان پوءِ",
+    "other": "هر {n} سيڪنڊ کان پوءِ"
+  },
+  "loader.menu.minutes": {
+    "one": "هر {n} منٽ کان پوءِ",
+    "other": "هر {n} منٽ کان پوءِ"
+  },
+  "loader.menu.off": "ڪڏهن به نه",
+  "loader.menu.view": "هي منظر، هاڻي",
+  "loader.menu.cache": "ڪيش ٿيل GitHub جواب وساري ڇڏيو",
+  "loader.menu.page": "صفحو ٻيهر لوڊ ڪريو",
+  "loader.overview.title": "لوڊ ٿي رهيو آهي",
+  "loader.overview.running": {
+    "one": "{n} هلي رهيو آهي",
+    "other": "{n} هلي رهيا آهن"
+  },
+  "loader.overview.none": "اڃا تائين ڪجهه به لوڊ نه ٿيو آهي.",
+  "loader.task.boot": "ڪردار ۽ انهن جو ميٽا پڙهيو پيو وڃي",
+  "loader.task.view": "{view} ٺاهيو پيو وڃي",
+  "loader.task.changes": "GitHub کان پڇيو پيو وڃي ته ڇا بدليو",
+  "loader.task.everything": "GitHub کان هر رن گهري پئي وڃي",
   "loader.task.artifacts": "رن #{number} جا آرٽيفيڪٽ: {total} مان {done}",
+  "loader.task.artifact": "آرٽيفيڪٽ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ناڪام: {message}",
+  "feed.actions.pick": "هن رن جا ٽيسٽ ڏيکاريو",
+  "feed.actions.ended": "ختم ٿيو",
+  "feed.actions.duration": "مدو",
+  "feed.actions.running": "هلي رهيو آهي",
+  "feed.actions.longest": "ڏيکاريل سڀ کان ڊگهي رن {duration} ورتو ({run}).",
+  "feed.filter.search": "رن ڳوليو",
+  "feed.filter.all": "سڀ",
+  "feed.filter.event": "واقعو",
+  "feed.filter.branch": "شاخ",
+  "feed.filter.clear": "فلٽر صاف ڪريو",
+  "feed.filter.shown": {
+    "one": "فلٽرن کان پوءِ {n} بچيو آهي.",
+    "other": "فلٽرن کان پوءِ {n} بچيا آهن."
+  },
   "security.source.advisories": "صلاحون",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ڪوڊ اسڪيننگ",

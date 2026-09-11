@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub ຕອບ {status}.",
   "feed.anError": "ດ້ວຍຂໍ້ຜິດພາດ",
+  "loader.loading": "ກຳລັງໂຫຼດ …",
+  "loader.next": {
+    "other": "ໂຫຼດຄືນໃໝ່ຄັ້ງຕໍ່ໄປໃນອີກ {n} ວິນາທີ"
+  },
+  "loader.paused": {
+    "other": "ການໂຫຼດຄືນໃໝ່ຄັ້ງລ່າສຸດຖືກຂ້າມເພື່ອປະຫຍັດໂຄຕ້າ GitHub; ລອງໃໝ່ຄັ້ງຕໍ່ໄປໃນອີກ {n} ວິນາທີ"
+  },
+  "loader.menu.hint": "ຄລິກຂວາເພື່ອເບິ່ງຕົວເລືອກການໂຫຼດຄືນໃໝ່",
+  "loader.menu.title": "ໂຫຼດຄືນໃໝ່",
+  "loader.menu.changes": "ສະເພາະສິ່ງທີ່ປ່ຽນແປງ, ດຽວນີ້",
+  "loader.menu.all": "ທຸກການແລ່ນ, ດຽວນີ້",
+  "loader.menu.interval": "ຖາມຄືນໃໝ່ອັດຕະໂນມັດ",
+  "loader.menu.seconds": {
+    "other": "ທຸກໆ {n} ວິນາທີ"
+  },
+  "loader.menu.minutes": {
+    "other": "ທຸກໆ {n} ນາທີ"
+  },
+  "loader.menu.off": "ບໍ່ເຄີຍ",
+  "loader.menu.view": "ມຸມມອງນີ້, ດຽວນີ້",
+  "loader.menu.cache": "ລືມຄຳຕອບ GitHub ທີ່ເກັບໄວ້ໃນແຄຊ",
+  "loader.menu.page": "ໂຫຼດໜ້າຄືນໃໝ່",
+  "loader.overview.title": "ກຳລັງໂຫຼດ",
+  "loader.overview.running": {
+    "other": "{n} ກຳລັງແລ່ນ"
+  },
+  "loader.overview.none": "ຍັງບໍ່ມີຫຍັງໂຫຼດເທື່ອ.",
+  "loader.task.boot": "ກຳລັງອ່ານບົດບາດ ແລະ ເມຕາຂອງພວກມັນ",
+  "loader.task.view": "ກຳລັງແຕ້ມ {view}",
+  "loader.task.changes": "ກຳລັງຖາມ GitHub ວ່າມີຫຍັງປ່ຽນແປງ",
+  "loader.task.everything": "ກຳລັງຂໍທຸກການແລ່ນຈາກ GitHub",
   "loader.task.artifacts": "ອາຕິແຟັກຂອງການແລ່ນ #{number}: {done} ຈາກ {total}",
+  "loader.task.artifact": "ອາຕິແຟັກ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ລົ້ມເຫຼວ: {message}",
+  "feed.actions.pick": "ສະແດງການທົດສອບຂອງການແລ່ນນີ້",
+  "feed.actions.ended": "ສິ້ນສຸດ",
+  "feed.actions.duration": "ໄລຍະເວລາ",
+  "feed.actions.running": "ກຳລັງແລ່ນ",
+  "feed.actions.longest": "ການແລ່ນທີ່ຍາວທີ່ສຸດທີ່ສະແດງໃຊ້ເວລາ {duration} ({run}).",
+  "feed.filter.search": "ຄົ້ນຫາການແລ່ນ",
+  "feed.filter.all": "ທັງໝົດ",
+  "feed.filter.event": "ເຫດການ",
+  "feed.filter.branch": "ສາຂາ",
+  "feed.filter.clear": "ລ້າງຕົວກັ່ນຕອງ",
+  "feed.filter.shown": {
+    "other": "ຍັງເຫຼືອ {n} ລາຍການຫຼັງການກັ່ນຕອງ."
+  },
   "security.source.advisories": "ຄຳແນະນຳ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ການສະແກນໂຄດ",

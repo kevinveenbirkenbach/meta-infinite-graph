@@ -156,6 +156,7 @@ test('the cells of a line turn while its artifact downloads, then show how each 
   const cells = page.locator(`table.tests-matrix tr:has(th[data-role-name="${ROLE}"]) td.run-cell`);
   await expect.poll(() => cells.count(), { timeout: 30000 }).toBeGreaterThan(1);
   await expect(cells.locator('.cell-spin').first(), 'a line whose artifact is on its way turns').toBeVisible();
+  await expect(page.locator('#view-loader')).toHaveAttribute('data-state', 'loading');
 
   release();
   await expect(page.locator(`table.tests-matrix td.run-cell .cell-spin`)).toHaveCount(0);
@@ -180,4 +181,9 @@ test('a server without a token says so in the card', async ({ page }) => {
   }, '&run=900');
   const card = await hoverTest(page);
   await expect(card.locator('.fork-error')).toContainText('needs MIG_GITHUB_TOKEN');
+
+  await page.locator('#view-loader').hover();
+  const failed = page.locator('#loader-overview .loader-task-failed', { hasText: `Artifact playwright-compose-${ROLE}-1-debian-btrfs` });
+  await expect(failed, 'the overview names the download that failed and why').toContainText('needs MIG_GITHUB_TOKEN');
+  await expect(page.locator('#loader-overview .loader-task-done', { hasText: 'Artifacts of run #42: 2 of 2' })).toHaveCount(1);
 });

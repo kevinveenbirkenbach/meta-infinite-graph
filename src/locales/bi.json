@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub i ansa {status}.",
   "feed.anError": "wetem eror",
+  "loader.loading": "I stap lodem …",
+  "loader.next": {
+    "one": "Nekis rifres long {n} seken",
+    "other": "Nekis rifres long {n} seken"
+  },
+  "loader.paused": {
+    "one": "Laswan rifres i skip blong sevem kwota blong GitHub; nekis traem long {n} seken",
+    "other": "Laswan rifres i skip blong sevem kwota blong GitHub; nekis traem long {n} seken"
+  },
+  "loader.menu.hint": "kilik long raet saed blong ol joes blong lodem bakegen",
+  "loader.menu.title": "Lodem bakegen",
+  "loader.menu.changes": "Nomo samting we i jenis, naoia",
+  "loader.menu.all": "Evri ron, naoia",
+  "loader.menu.interval": "Askem bakegen otomatik",
+  "loader.menu.seconds": {
+    "one": "evri {n} seken",
+    "other": "evri {n} seken"
+  },
+  "loader.menu.minutes": {
+    "one": "evri {n} minit",
+    "other": "evri {n} minit"
+  },
+  "loader.menu.off": "neva",
+  "loader.menu.view": "Skrin ia, naoia",
+  "loader.menu.cache": "Fogetem ol ansa blong GitHub we i stap long kas",
+  "loader.menu.page": "Lodem pej bakegen",
+  "loader.overview.title": "I stap lodem",
+  "loader.overview.running": {
+    "one": "{n} i stap ron",
+    "other": "{n} i stap ron"
+  },
+  "loader.overview.none": "I no gat wan samting i lod yet.",
+  "loader.task.boot": "I stap ridim ol rol mo meta blong olgeta",
+  "loader.task.view": "I stap droem {view}",
+  "loader.task.changes": "I stap askem GitHub wanem i jenis",
+  "loader.task.everything": "I stap askem GitHub blong evri ron",
   "loader.task.artifacts": "Ol atifak blong ron #{number}: {done} long {total}",
+  "loader.task.artifact": "Atifak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "i fel: {message}",
+  "feed.actions.pick": "Soem ol tes blong ron ia",
+  "feed.actions.ended": "I finis",
+  "feed.actions.duration": "Hamas taem",
+  "feed.actions.running": "i stap ron",
+  "feed.actions.longest": "Ron we i longfala moa long olgeta we i soemaot i tekem {duration} ({run}).",
+  "feed.filter.search": "Lukaotem ol ron",
+  "feed.filter.all": "evriwan",
+  "feed.filter.event": "Samting we i statem",
+  "feed.filter.branch": "Brens",
+  "feed.filter.clear": "Klinim ol filta",
+  "feed.filter.shown": {
+    "one": "{n} i stap yet afta ol filta.",
+    "other": "{n} i stap yet afta ol filta."
+  },
   "security.source.advisories": "Ol advaes",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Jekem kod",

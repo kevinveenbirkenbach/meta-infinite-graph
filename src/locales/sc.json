@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub at respostu {status}.",
   "feed.anError": "cun un'errore",
+  "loader.loading": "Carrighende …",
+  "loader.next": {
+    "one": "Agiornamentu imbeniente in {n} segundu",
+    "other": "Agiornamentu imbeniente in {n} segundos"
+  },
+  "loader.paused": {
+    "one": "S'ùrtimu agiornamentu est istadu brincadu pro isparagnare sa cuota de GitHub; tentativu imbeniente in {n} segundu",
+    "other": "S'ùrtimu agiornamentu est istadu brincadu pro isparagnare sa cuota de GitHub; tentativu imbeniente in {n} segundos"
+  },
+  "loader.menu.hint": "clic destru pro sas optziones de torrare a carrigare",
+  "loader.menu.title": "Torra a carrigare",
+  "loader.menu.changes": "Isceti su chi est cambiadu, immoe",
+  "loader.menu.all": "Totu sas esecutziones, immoe",
+  "loader.menu.interval": "Torra a pregontare in automàticu",
+  "loader.menu.seconds": {
+    "one": "cada {n} segundu",
+    "other": "cada {n} segundos"
+  },
+  "loader.menu.minutes": {
+    "one": "cada {n} minutu",
+    "other": "cada {n} minutos"
+  },
+  "loader.menu.off": "mai",
+  "loader.menu.view": "Custa vista, immoe",
+  "loader.menu.cache": "Ismèntiga sas rispostas de GitHub sarvadas",
+  "loader.menu.page": "Torra a carrigare sa pàgina",
+  "loader.overview.title": "Carrighende",
+  "loader.overview.running": {
+    "one": "{n} in esecutzione",
+    "other": "{n} in esecutzione"
+  },
+  "loader.overview.none": "Nudda est istadu carrigadu ancora.",
+  "loader.task.boot": "Leghende sos rolos e sos metadatos issoro",
+  "loader.task.view": "Disinnende {view}",
+  "loader.task.changes": "Pregontende a GitHub su chi est cambiadu",
+  "loader.task.everything": "Pedende a GitHub totu sas esecutziones",
   "loader.task.artifacts": "Artefatos de s'esecutzione #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefatu {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fallidu: {message}",
+  "feed.actions.pick": "Ammustra sas proas de custa esecutzione",
+  "feed.actions.ended": "Acabbadu",
+  "feed.actions.duration": "Durada",
+  "feed.actions.running": "in esecutzione",
+  "feed.actions.longest": "S'esecutzione prus longa ammustrada at duradu {duration} ({run}).",
+  "feed.filter.search": "Chirca in sas esecutziones",
+  "feed.filter.all": "totu",
+  "feed.filter.event": "Eventu",
+  "feed.filter.branch": "Ramu",
+  "feed.filter.clear": "Lìmpia sos filtros",
+  "feed.filter.shown": {
+    "one": "A pustis de sos filtros abarrat {n}.",
+    "other": "A pustis de sos filtros abarrant {n}."
+  },
   "security.source.advisories": "Avisos",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Iscansione de su còdighe",

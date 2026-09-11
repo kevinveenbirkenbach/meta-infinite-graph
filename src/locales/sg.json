@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub akîri {status}.",
   "feed.anError": "na kpälë",
+  "loader.loading": "A yeke mû …",
+  "loader.next": {
+    "other": "Mûngö ngbene tî peko na yâ tî âsegöndo {n}"
+  },
+  "loader.paused": {
+    "other": "A zîa mûngö ngbene tî ndangbâ ngbanga tî bata âhûndängö tî GitHub; tarängö tî peko na yâ tî âsegöndo {n}"
+  },
+  "loader.menu.hint": "sâra kilîki na mbâgë tî kôli tî bâ âlêgë tî mûngö ngbene",
+  "loader.menu.title": "Mûngö ngbene",
+  "loader.menu.changes": "Gï âye so a changé, fadësô",
+  "loader.menu.all": "Âtambelängö kûê, fadësô",
+  "loader.menu.interval": "Hûnda ngbene lo mveni",
+  "loader.menu.seconds": {
+    "other": "ngoi kûê na âsegöndo {n}"
+  },
+  "loader.menu.minutes": {
+    "other": "ngoi kûê na âminiti {n}"
+  },
+  "loader.menu.off": "lâ oko pëpe",
+  "loader.menu.view": "Bängö sô, fadësô",
+  "loader.menu.cache": "Girisa âkîri tî GitHub so a bata",
+  "loader.menu.page": "Mû lêmbëtï ni ngbene",
+  "loader.overview.title": "A yeke mû",
+  "loader.overview.running": {
+    "other": "{n} ayeke gue"
+  },
+  "loader.overview.none": "Mbeni ye pëpe a mû ândö.",
+  "loader.task.boot": "A yeke dîko âkua na meta tî ala",
+  "loader.task.view": "A yeke sû {view}",
+  "loader.task.changes": "A yeke hûnda GitHub ye so a changé",
+  "loader.task.everything": "A yeke hûnda GitHub âtambelängö kûê",
   "loader.task.artifacts": "Âartéfact tî tambelängö #{number}: {done} na yâ tî {total}",
+  "loader.task.artifact": "Artéfact {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "a tï: {message}",
+  "feed.actions.pick": "Fa âtara tî tambelängö sô",
+  "feed.actions.ended": "A hunzi",
+  "feed.actions.duration": "Ngoi tî ni",
+  "feed.actions.running": "ayeke gue",
+  "feed.actions.longest": "Tambelängö so ayo ahon kue so a fa ni amû ngoi {duration} ({run}).",
+  "feed.filter.search": "Gi na yâ tî âtambelängö",
+  "feed.filter.all": "kûê",
+  "feed.filter.event": "Yê sô asï",
+  "feed.filter.branch": "Mbâgë",
+  "feed.filter.clear": "Lungûla âsoro",
+  "feed.filter.shown": {
+    "other": "{n} angbâ na pekô tî âsoro."
+  },
   "security.source.advisories": "Âwango",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Dîkongö kôdo",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub egespikon {status}.",
   "feed.anError": "ko pöl",
+  "loader.loading": "Lodam …",
+  "loader.next": {
+    "one": "Nulädam sököl pos sekun {n}",
+    "other": "Nulädam sököl pos sekuns {n}"
+  },
+  "loader.paused": {
+    "one": "Nulädam lätik pesäkipon ad spälön kvoti ela GitHub; steif sököl pos sekun {n}",
+    "other": "Nulädam lätik pesäkipon ad spälön kvoti ela GitHub; steif sököl pos sekuns {n}"
+  },
+  "loader.menu.hint": "klikolös detiko pro välots dönulodama",
+  "loader.menu.title": "Dönulodön",
+  "loader.menu.changes": "Te atos, kel pevotükon, anu",
+  "loader.menu.all": "Jäfidams valik, anu",
+  "loader.menu.interval": "Säkön dönu itjäfidiko",
+  "loader.menu.seconds": {
+    "one": "alik sekun {n}",
+    "other": "alik sekuns {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "alik minut {n}",
+    "other": "alik minuts {n}"
+  },
+  "loader.menu.off": "neai",
+  "loader.menu.view": "Logot at, anu",
+  "loader.menu.cache": "Glömön gespikis pememöl ela GitHub",
+  "loader.menu.page": "Dönulodön padi",
+  "loader.overview.title": "Lodam",
+  "loader.overview.running": {
+    "one": "{n} pajäfidöl",
+    "other": "{n} pajäfidöls"
+  },
+  "loader.overview.none": "Nos nog pelodon.",
+  "loader.task.boot": "Reidam rolas e metas onas",
+  "loader.task.view": "Magodam {view}",
+  "loader.task.changes": "Säkam GitHub-i, kis pevotükon",
+  "loader.task.everything": "Begam jäfidamis valik de GitHub",
   "loader.task.artifacts": "Dunots jäfidama #{number}: {done} se {total}",
+  "loader.task.artifact": "Dunot {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "no eplöpon: {message}",
+  "feed.actions.pick": "Jonön blufis jäfidama at",
+  "feed.actions.ended": "Pefinöl",
+  "feed.actions.duration": "Dul",
+  "feed.actions.running": "pajäfidöl",
+  "feed.actions.longest": "Jäfidam lunikün pejonöl edulon {duration} ({run}).",
+  "feed.filter.search": "Sukön in jäfidams",
+  "feed.filter.all": "valik",
+  "feed.filter.event": "Jenot",
+  "feed.filter.branch": "Tuig",
+  "feed.filter.clear": "Moükön sifis",
+  "feed.filter.shown": {
+    "one": "Pos sifs, blibos {n}.",
+    "other": "Pos sifs, blibons {n}."
+  },
   "security.source.advisories": "Konsäls",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Vestig koda",

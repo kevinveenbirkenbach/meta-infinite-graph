@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub ha respost {status}.",
   "feed.anError": "amb un error",
+  "loader.loading": "S'està carregant …",
+  "loader.next": {
+    "one": "Propera actualització d'aquí a {n} segon",
+    "many": "Propera actualització d'aquí a {n} de segons",
+    "other": "Propera actualització d'aquí a {n} segons"
+  },
+  "loader.paused": {
+    "one": "S'ha omès l'última actualització per estalviar la quota de GitHub; proper intent d'aquí a {n} segon",
+    "many": "S'ha omès l'última actualització per estalviar la quota de GitHub; proper intent d'aquí a {n} de segons",
+    "other": "S'ha omès l'última actualització per estalviar la quota de GitHub; proper intent d'aquí a {n} segons"
+  },
+  "loader.menu.hint": "clic dret per a les opcions de recàrrega",
+  "loader.menu.title": "Recarrega",
+  "loader.menu.changes": "Només el que ha canviat, ara",
+  "loader.menu.all": "Cada execució, ara",
+  "loader.menu.interval": "Torna a preguntar automàticament",
+  "loader.menu.seconds": {
+    "one": "cada {n} segon",
+    "many": "cada {n} de segons",
+    "other": "cada {n} segons"
+  },
+  "loader.menu.minutes": {
+    "one": "cada {n} minut",
+    "many": "cada {n} de minuts",
+    "other": "cada {n} minuts"
+  },
+  "loader.menu.off": "mai",
+  "loader.menu.view": "Aquesta pestanya, ara",
+  "loader.menu.cache": "Oblida les respostes de GitHub desades a la memòria cau",
+  "loader.menu.page": "Recarrega la pàgina",
+  "loader.overview.title": "Càrrega",
+  "loader.overview.running": {
+    "one": "{n} en execució",
+    "many": "{n} en execució",
+    "other": "{n} en execució"
+  },
+  "loader.overview.none": "Encara no s'ha carregat res.",
+  "loader.task.boot": "S'estan llegint els rols i les seves metadades",
+  "loader.task.view": "S'està dibuixant {view}",
+  "loader.task.changes": "S'està preguntant a GitHub què ha canviat",
+  "loader.task.everything": "S'està demanant a GitHub cada execució",
   "loader.task.artifacts": "Artefactes de l'execució #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefacte {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ha fallat: {message}",
+  "feed.actions.pick": "Mostra les proves d'aquesta execució",
+  "feed.actions.ended": "Finalitzat",
+  "feed.actions.duration": "Durada",
+  "feed.actions.running": "en execució",
+  "feed.actions.longest": "L'execució més llarga que es mostra ha durat {duration} ({run}).",
+  "feed.filter.search": "Cerca a les execucions",
+  "feed.filter.all": "tot",
+  "feed.filter.event": "Esdeveniment",
+  "feed.filter.branch": "Branca",
+  "feed.filter.clear": "Esborra els filtres",
+  "feed.filter.shown": {
+    "one": "En queda {n} després dels filtres.",
+    "many": "En queden {n} després dels filtres.",
+    "other": "En queden {n} després dels filtres."
+  },
   "security.source.advisories": "Avisos",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Escaneig de codi",

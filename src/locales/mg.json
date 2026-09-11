@@ -135,7 +135,60 @@
   },
   "feed.failed": "Namaly {status} i GitHub.",
   "feed.anError": "misy hadisoana",
+  "loader.loading": "Ampidirina …",
+  "loader.next": {
+    "one": "Fanavaozana manaraka afaka segondra {n}",
+    "other": "Fanavaozana manaraka afaka segondra {n}"
+  },
+  "loader.paused": {
+    "one": "Tsy natao ny fanavaozana farany mba hitahirizana ny fetran'ny GitHub; andrana manaraka afaka segondra {n}",
+    "other": "Tsy natao ny fanavaozana farany mba hitahirizana ny fetran'ny GitHub; andrana manaraka afaka segondra {n}"
+  },
+  "loader.menu.hint": "tsindrio amin'ny ankavanana ho an'ny safidy fampidirana indray",
+  "loader.menu.title": "Ampidiro indray",
+  "loader.menu.changes": "Izay niova ihany, izao",
+  "loader.menu.all": "Ny fandehanana rehetra, izao",
+  "loader.menu.interval": "Anontanio indray ho azy",
+  "loader.menu.seconds": {
+    "one": "isaky ny segondra {n}",
+    "other": "isaky ny segondra {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "isaky ny minitra {n}",
+    "other": "isaky ny minitra {n}"
+  },
+  "loader.menu.off": "tsy mihitsy",
+  "loader.menu.view": "Ity fijery ity, izao",
+  "loader.menu.cache": "Hadino ny valin'ny GitHub voatahiry",
+  "loader.menu.page": "Ampidiro indray ny pejy",
+  "loader.overview.title": "Ampidirina",
+  "loader.overview.running": {
+    "one": "{n} mandeha",
+    "other": "{n} mandeha"
+  },
+  "loader.overview.none": "Mbola tsy nisy nampidirina.",
+  "loader.task.boot": "Mamaky ny andraikitra sy ny meta-ny",
+  "loader.task.view": "Manao sary ny {view}",
+  "loader.task.changes": "Manontany an'i GitHub izay niova",
+  "loader.task.everything": "Mangataka amin'i GitHub ny fandehanana rehetra",
   "loader.task.artifacts": "Artefakta an'ny fandehanana #{number}: {done} amin'ny {total}",
+  "loader.task.artifact": "Artefakta {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "tsy nahomby: {message}",
+  "feed.actions.pick": "Asehoy ny fitsapana amin'ity fandehanana ity",
+  "feed.actions.ended": "Nifarana",
+  "feed.actions.duration": "Faharetana",
+  "feed.actions.running": "mandeha",
+  "feed.actions.longest": "Ny fandehanana lava indrindra naseho dia naharitra {duration} ({run}).",
+  "feed.filter.search": "Tadiavo ny fandehanana",
+  "feed.filter.all": "rehetra",
+  "feed.filter.event": "Hetsika",
+  "feed.filter.branch": "Sampana",
+  "feed.filter.clear": "Fafao ny sivana",
+  "feed.filter.shown": {
+    "one": "Fandehanana {n} no sisa aorian'ny sivana.",
+    "other": "Fandehanana {n} no sisa aorian'ny sivana."
+  },
   "security.source.advisories": "Torohevitra",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Fisavana kaody",

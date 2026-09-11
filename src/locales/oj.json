@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub gii-nakwetam {status}.",
   "feed.anError": "wanichigewin gaye",
+  "loader.loading": "Biidoonjigaade …",
+  "loader.next": {
+    "one": "Miinawaa da-biidoonjigaade {n} diba'iganensens apii",
+    "other": "Miinawaa da-biidoonjigaade {n} diba'iganensensan apii"
+  },
+  "loader.paused": {
+    "one": "Gaawiin gii-biidoonjigaadesinoon ji-ganawendamang GitHub andotamaagewinan; miinawaa da-gagwejitoon {n} diba'iganensens apii",
+    "other": "Gaawiin gii-biidoonjigaadesinoon ji-ganawendamang GitHub andotamaagewinan; miinawaa da-gagwejitoon {n} diba'iganensensan apii"
+  },
+  "loader.menu.hint": "ninjiing badakiganezh ji-waabandaman miinawaa-biidoon onaabandamowinan",
+  "loader.menu.title": "Miinawaa Biidoon",
+  "loader.menu.changes": "Eta gaa-aanjisemagak, noongom",
+  "loader.menu.all": "Endaso-maajiibizowin, noongom",
+  "loader.menu.interval": "Miinawaa gagwedwen iw-apii",
+  "loader.menu.seconds": {
+    "one": "endaso-{n} diba'iganensens",
+    "other": "endaso-{n} diba'iganensensan"
+  },
+  "loader.menu.minutes": {
+    "one": "endaso-{n} diba'iganens",
+    "other": "endaso-{n} diba'iganensan"
+  },
+  "loader.menu.off": "gaawiin wiikaa",
+  "loader.menu.view": "O'ow waabanjigan, noongom",
+  "loader.menu.cache": "Wanendan GitHub nakwetamowinan gaa-ganawenjigaadeg",
+  "loader.menu.page": "Miinawaa biidoon mazina'igan",
+  "loader.overview.title": "Biidoonjigaade",
+  "loader.overview.running": {
+    "one": "{n} noongom maajiibizo",
+    "other": "{n} noongom maajiibizowag"
+  },
+  "loader.overview.none": "Gaawiin gegoo biidoonjigaadesinoon.",
+  "loader.task.boot": "Agindaasowin anokiiwinan miinawaa meta",
+  "loader.task.view": "Mazinibii'igaade {view}",
+  "loader.task.changes": "Gagwedwewin GitHub wegonen gaa-aanjisemagak",
+  "loader.task.everything": "Gagwedwewin GitHub endaso-maajiibizowin",
   "loader.task.artifacts": "Ozhichiganan maajiibizowin #{number} onji: {done} / {total}",
+  "loader.task.artifact": "Ozhichigan {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "gaawiin gii-gashkitoosiin: {message}",
+  "feed.actions.pick": "Waabanda'iwen o'ow maajiibizowin gagwejitoowinan",
+  "feed.actions.ended": "Gii-giizhitaa",
+  "feed.actions.duration": "Apiichi-ginwenzh",
+  "feed.actions.running": "noongom maajiibizo",
+  "feed.actions.longest": "Maajiibizowin gaa-nawaj-ginwenzhig gaa-waabanda'iwemagak {duration} gii-ginwenzhin ({run}).",
+  "feed.filter.search": "Nandawaabandan maajiibizowinan",
+  "feed.filter.all": "gakina",
+  "feed.filter.event": "Ezhiwebak",
+  "feed.filter.branch": "Wadikwan",
+  "feed.filter.clear": "Webinan zhaabobiiginiganan",
+  "feed.filter.shown": {
+    "one": "{n} maajiibizowin ayaa ishkwaa-zhaabobiiginigeng.",
+    "other": "{n} maajiibizowinan ayaawan ishkwaa-zhaabobiiginigeng."
+  },
   "security.source.advisories": "Gagiikwewinan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ganawaabandamowin code",

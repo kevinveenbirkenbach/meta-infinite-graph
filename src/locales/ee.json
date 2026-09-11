@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ɖo eŋu be {status}.",
   "feed.anError": "kple vodada",
+  "loader.loading": "Ele nuwo tsɔm vɛ …",
+  "loader.next": {
+    "one": "Yeyewɔwɔ si kplɔe ɖo le sekend {n} me",
+    "other": "Yeyewɔwɔ si kplɔe ɖo le sekend {n} me"
+  },
+  "loader.paused": {
+    "one": "Wogblẽ yeyewɔwɔ mamlɛtɔ ɖi be GitHub ƒe biabiawo nasusɔ; agbagbadzedze si kplɔe ɖo le sekend {n} me",
+    "other": "Wogblẽ yeyewɔwɔ mamlɛtɔ ɖi be GitHub ƒe biabiawo nasusɔ; agbagbadzedze si kplɔe ɖo le sekend {n} me"
+  },
+  "loader.menu.hint": "zi ɖusime dzi hena gbugbɔgavɛ ƒe tiatiawo",
+  "loader.menu.title": "Gbugbɔe vɛ",
+  "loader.menu.changes": "Nu siwo trɔ ko, fifia",
+  "loader.menu.all": "Wɔwɔ ɖesiaɖe, fifia",
+  "loader.menu.interval": "Gabia le eɖokui si",
+  "loader.menu.seconds": {
+    "one": "sekend {n} ɖesiaɖe",
+    "other": "sekend {n} ɖesiaɖe"
+  },
+  "loader.menu.minutes": {
+    "one": "aɖabaƒoƒo {n} ɖesiaɖe",
+    "other": "aɖabaƒoƒo {n} ɖesiaɖe"
+  },
+  "loader.menu.off": "gbeɖe",
+  "loader.menu.view": "Nukpɔƒe sia, fifia",
+  "loader.menu.cache": "Ŋlɔ GitHub ƒe ŋuɖoɖo siwo le nudzraɖoƒe kpui la be",
+  "loader.menu.page": "Gbugbɔ axa la vɛ",
+  "loader.overview.title": "Ele nuwo tsɔm vɛ",
+  "loader.overview.running": {
+    "one": "{n} le edzi yim",
+    "other": "{n} le edzi yim"
+  },
+  "loader.overview.none": "Naneke meva haɖe o.",
+  "loader.task.boot": "Ele dɔdeasiwo kple woƒe meta xlẽm",
+  "loader.task.view": "Ele {view} ƒe nɔnɔmetata ɖem",
+  "loader.task.changes": "Ele GitHub biam nu siwo trɔ",
+  "loader.task.everything": "Ele GitHub biam wɔwɔ ɖesiaɖe",
   "loader.task.artifacts": "Wɔwɔ #{number} ƒe nuwɔwɔwo: {done} le {total} me",
+  "loader.task.artifact": "Nuwɔwɔ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "mede edzi o: {message}",
+  "feed.actions.pick": "Ɖe wɔwɔ sia ƒe dodokpɔwo fia",
+  "feed.actions.ended": "Ewu enu",
+  "feed.actions.duration": "Ɣeyiɣi didime",
+  "feed.actions.running": "ele edzi yim",
+  "feed.actions.longest": "Wɔwɔ didi wu si woɖe fia la xɔ {duration} ({run}).",
+  "feed.filter.search": "Di le wɔwɔwo me",
+  "feed.filter.all": "katã",
+  "feed.filter.event": "Nudzɔdzɔ",
+  "feed.filter.branch": "Alɔ",
+  "feed.filter.clear": "Tutu tiatiawo ɖa",
+  "feed.filter.shown": {
+    "one": "{n} susɔ le tiatia megbe.",
+    "other": "{n} susɔ le tiatia megbe."
+  },
   "security.source.advisories": "Aɖaŋuɖoɖowo",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kɔd me dzodzro",

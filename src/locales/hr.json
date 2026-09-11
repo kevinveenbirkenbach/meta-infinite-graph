@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub je odgovorio {status}.",
   "feed.anError": "s pogreškom",
+  "loader.loading": "Učitavanje …",
+  "loader.next": {
+    "one": "Sljedeće osvježavanje za {n} sekundu",
+    "few": "Sljedeće osvježavanje za {n} sekunde",
+    "other": "Sljedeće osvježavanje za {n} sekundi"
+  },
+  "loader.paused": {
+    "one": "Posljednje osvježavanje preskočeno je radi štednje GitHub kvote; sljedeći pokušaj za {n} sekundu",
+    "few": "Posljednje osvježavanje preskočeno je radi štednje GitHub kvote; sljedeći pokušaj za {n} sekunde",
+    "other": "Posljednje osvježavanje preskočeno je radi štednje GitHub kvote; sljedeći pokušaj za {n} sekundi"
+  },
+  "loader.menu.hint": "desni klik za mogućnosti ponovnog učitavanja",
+  "loader.menu.title": "Ponovno učitaj",
+  "loader.menu.changes": "Samo ono što se promijenilo, sada",
+  "loader.menu.all": "Sva pokretanja, sada",
+  "loader.menu.interval": "Automatski ponovno pitaj",
+  "loader.menu.seconds": {
+    "one": "svake {n} sekunde",
+    "few": "svake {n} sekunde",
+    "other": "svakih {n} sekundi"
+  },
+  "loader.menu.minutes": {
+    "one": "svake {n} minute",
+    "few": "svake {n} minute",
+    "other": "svakih {n} minuta"
+  },
+  "loader.menu.off": "nikad",
+  "loader.menu.view": "Ova kartica, sada",
+  "loader.menu.cache": "Zaboravi GitHub odgovore iz predmemorije",
+  "loader.menu.page": "Ponovno učitaj stranicu",
+  "loader.overview.title": "Učitavanje",
+  "loader.overview.running": {
+    "one": "{n} u tijeku",
+    "few": "{n} u tijeku",
+    "other": "{n} u tijeku"
+  },
+  "loader.overview.none": "Još ništa nije učitano.",
+  "loader.task.boot": "Čitanje uloga i njihovih meta podataka",
+  "loader.task.view": "Iscrtavanje prikaza {view}",
+  "loader.task.changes": "Pitam GitHub što se promijenilo",
+  "loader.task.everything": "Pitam GitHub za sva pokretanja",
   "loader.task.artifacts": "Artefakti pokretanja #{number}: {done} od {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "neuspjelo: {message}",
+  "feed.actions.pick": "Prikaži testove ovog pokretanja",
+  "feed.actions.ended": "Završeno",
+  "feed.actions.duration": "Trajanje",
+  "feed.actions.running": "u tijeku",
+  "feed.actions.longest": "Najdulje prikazano pokretanje trajalo je {duration} ({run}).",
+  "feed.filter.search": "Pretraži pokretanja",
+  "feed.filter.all": "sve",
+  "feed.filter.event": "Događaj",
+  "feed.filter.branch": "Grana",
+  "feed.filter.clear": "Očisti filtre",
+  "feed.filter.shown": {
+    "one": "Nakon filtara preostaje {n}.",
+    "few": "Nakon filtara preostaju {n}.",
+    "other": "Nakon filtara preostaje {n}."
+  },
   "security.source.advisories": "Sigurnosne obavijesti",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Skeniranje koda",

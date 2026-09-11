@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub دِیُت {status} جواب۔",
   "feed.anError": "غلطی سٟتؠ",
+  "loader.loading": "لوڈ گژھان …",
+  "loader.next": {
+    "one": "نوٚو ریفریش {n} سیکَنڈَس منٛز",
+    "other": "نوٚو ریفریش {n} سیکَنڈَن منٛز"
+  },
+  "loader.paused": {
+    "one": "GitHub کوٹا بچاونہٕ خٲطرٕ آو پٔتِم ریفریش ترٲوِتھ؛ نٔو کوشش {n} سیکَنڈَس منٛز",
+    "other": "GitHub کوٹا بچاونہٕ خٲطرٕ آو پٔتِم ریفریش ترٲوِتھ؛ نٔو کوشش {n} سیکَنڈَن منٛز"
+  },
+  "loader.menu.hint": "ریلوڈ اختیارن خٲطرٕ دٔچھِن کلِک کٔرِو",
+  "loader.menu.title": "دوبارٕ لوڈ کٔرِو",
+  "loader.menu.changes": "صِرف یُس بدلیوو، وۄنۍ",
+  "loader.menu.all": "سۄری چلُن، وۄنۍ",
+  "loader.menu.interval": "پانہٕ پانے دوبارٕ پرٛژھِو",
+  "loader.menu.seconds": {
+    "one": "ہر {n} سیکَنڈَس",
+    "other": "ہر {n} سیکَنڈَن"
+  },
+  "loader.menu.minutes": {
+    "one": "ہر {n} مِنَٹَس",
+    "other": "ہر {n} مِنَٹَن"
+  },
+  "loader.menu.off": "زانٛہہ نہ",
+  "loader.menu.view": "یہِ منظَر، وۄنۍ",
+  "loader.menu.cache": "کیش کَرنہٕ آمٕتۍ GitHub جواب مَشراوِو",
+  "loader.menu.page": "صفحہٕ دوبارٕ لوڈ کٔرِو",
+  "loader.overview.title": "لوڈ گژھان",
+  "loader.overview.running": {
+    "one": "{n} چلان",
+    "other": "{n} چلان"
+  },
+  "loader.overview.none": "وۄنۍ تام چھُنہٕ کینٛہہ لوڈ گومُت۔",
+  "loader.task.boot": "کِردار تہٕ تِہندۍ میٹا پرنہٕ یِوان",
+  "loader.task.view": "{view} بناونہٕ یِوان",
+  "loader.task.changes": "GitHub پرٛژھنہٕ یِوان زِ کیاہ بدلیوو",
+  "loader.task.everything": "GitHub نِشہِ سۄری چلُن مَنگنہٕ یِوان",
   "loader.task.artifacts": "چلُن #{number} ہٕنز آرٹیفیکٹ: {total} مَنٛز {done}",
+  "loader.task.artifact": "آرٹیفیکٹ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ناکام: {message}",
+  "feed.actions.pick": "یَتھ چلُن ہٕنٛد ٹیسٹ ہٲوِو",
+  "feed.actions.ended": "ختم گوٚمُت",
+  "feed.actions.duration": "مُدَت",
+  "feed.actions.running": "چلان",
+  "feed.actions.longest": "ہاونہٕ آمُت سارِوٕے کھوتہٕ زیٚوٚٹھ چلُن نیوٗن {duration} ({run})۔",
+  "feed.filter.search": "چلُن ژھٲنڈِو",
+  "feed.filter.all": "سٲری",
+  "feed.filter.event": "واقعہ",
+  "feed.filter.branch": "شاخ",
+  "feed.filter.clear": "فِلٹَر صاف کٔرِو",
+  "feed.filter.shown": {
+    "one": "فِلٹَرَن پتہٕ چھُ {n} بچیومُت۔",
+    "other": "فِلٹَرَن پتہٕ چھِ {n} بچیمٕتۍ۔"
+  },
   "security.source.advisories": "مشورٕ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "کوڈ سکینِنگ",

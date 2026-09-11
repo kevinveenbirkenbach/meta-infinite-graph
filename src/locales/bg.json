@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub отговори с {status}.",
   "feed.anError": "с грешка",
+  "loader.loading": "Зареждане …",
+  "loader.next": {
+    "one": "Следващо опресняване след {n} секунда",
+    "other": "Следващо опресняване след {n} секунди"
+  },
+  "loader.paused": {
+    "one": "Последното опресняване беше пропуснато, за да се пести квотата на GitHub; следващ опит след {n} секунда",
+    "other": "Последното опресняване беше пропуснато, за да се пести квотата на GitHub; следващ опит след {n} секунди"
+  },
+  "loader.menu.hint": "десен бутон за опции за презареждане",
+  "loader.menu.title": "Презареждане",
+  "loader.menu.changes": "Само промененото, сега",
+  "loader.menu.all": "Всяко изпълнение, сега",
+  "loader.menu.interval": "Питай отново автоматично",
+  "loader.menu.seconds": {
+    "one": "всяка {n} секунда",
+    "other": "на всеки {n} секунди"
+  },
+  "loader.menu.minutes": {
+    "one": "всяка {n} минута",
+    "other": "на всеки {n} минути"
+  },
+  "loader.menu.off": "никога",
+  "loader.menu.view": "Този раздел, сега",
+  "loader.menu.cache": "Забравяне на кешираните отговори от GitHub",
+  "loader.menu.page": "Презареждане на страницата",
+  "loader.overview.title": "Зареждане",
+  "loader.overview.running": {
+    "one": "{n} се изпълнява",
+    "other": "{n} се изпълняват"
+  },
+  "loader.overview.none": "Още нищо не е заредено.",
+  "loader.task.boot": "Четене на ролите и техните метаданни",
+  "loader.task.view": "Изчертаване на {view}",
+  "loader.task.changes": "Питане на GitHub какво се е променило",
+  "loader.task.everything": "Заявка към GitHub за всяко изпълнение",
   "loader.task.artifacts": "Артефакти от изпълнение #{number}: {done} от {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "неуспех: {message}",
+  "feed.actions.pick": "Показване на тестовете на това изпълнение",
+  "feed.actions.ended": "Завършено",
+  "feed.actions.duration": "Продължителност",
+  "feed.actions.running": "изпълнява се",
+  "feed.actions.longest": "Най-дългото показано изпълнение отне {duration} ({run}).",
+  "feed.filter.search": "Търсене в изпълненията",
+  "feed.filter.all": "всички",
+  "feed.filter.event": "Събитие",
+  "feed.filter.branch": "Клон",
+  "feed.filter.clear": "Изчистване на филтрите",
+  "feed.filter.shown": {
+    "one": "След филтрите остава {n}.",
+    "other": "След филтрите остават {n}."
+  },
   "security.source.advisories": "Бюлетини",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Сканиране на кода",

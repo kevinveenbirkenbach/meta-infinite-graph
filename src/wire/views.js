@@ -5,6 +5,12 @@ export function currentView() {
   return bySelector('input[name="view"]:checked', HTMLInputElement).value;
 }
 
+// Returns: the view's name as its menu entry reads, in the page's language.
+export function viewName(view) {
+  const label = document.querySelector(`label[for="view-${view}"]`);
+  return label ? label.textContent : view;
+}
+
 export const TEST_VIEWS = ['playwright', 'cli'];
 
 // Filling these from the working copy would put today's numbers under a past
@@ -36,11 +42,21 @@ export function disableMetaViews(missing) {
   }
 }
 
-export function wireViewMode(tableView, forkTree, testsView, feeds) {
+// Args:
+//   loader: the bottom bar's Loader, told which view is on screen and what it waits for.
+//   refresher: the FeedRefresher of the actions feed.
+export function wireViewMode(tableView, forkTree, testsView, feeds, loader, refresher) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
+  feeds.actions.onPick = run => {
+    testsView.pickRun(testsView.runs.keyOf(run), run);
+    const input = byId('view-playwright', HTMLInputElement);
+    input.checked = true;
+    input.dispatchEvent(new Event('change'));
+  };
   const apply = () => {
     const view = currentView();
+    loader.show(view);
     const tables = view !== 'graph';
     pane.classList.toggle('pane-front', tables);
     pane.classList.toggle('pane-back', !tables);
@@ -61,10 +77,12 @@ export function wireViewMode(tableView, forkTree, testsView, feeds) {
       button.classList.toggle('active', Boolean(sub));
       button.textContent = sub ? t(picked, { view: sub.textContent }) : t(plain);
     }
-    if (view === 'forks') forkTree.show();
-    else if (TEST_VIEWS.includes(view)) testsView.show(view);
-    else if (feeds[view]) feeds[view].show();
-    else if (tables) tableView.show(view);
+    const drawing = t('loader.task.view', { view: viewName(view) });
+    if (view === 'forks') loader.track(view, forkTree.show(), drawing);
+    else if (TEST_VIEWS.includes(view)) loader.track(view, testsView.show(view), drawing);
+    else if (feeds[view]) loader.track(view, feeds[view].show(), drawing);
+    else if (tables) loader.track(view, tableView.show(view), drawing);
+    refresher.restart();
   };
   for (const input of document.querySelectorAll('input[name="view"]')) {
     input.addEventListener('change', apply);

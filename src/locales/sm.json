@@ -135,7 +135,60 @@
   },
   "feed.failed": "Na tali mai GitHub {status}.",
   "feed.anError": "ma se sese",
+  "loader.loading": "O loʻo uta …",
+  "loader.next": {
+    "one": "O le isi toe faafou i le {n} sekone",
+    "other": "O le isi toe faafou i sekone e {n}"
+  },
+  "loader.paused": {
+    "one": "Na pasi le toe faafou mulimuli ina ia sefe ai le vaega a GitHub; o le isi taumafaiga i le {n} sekone",
+    "other": "Na pasi le toe faafou mulimuli ina ia sefe ai le vaega a GitHub; o le isi taumafaiga i sekone e {n}"
+  },
+  "loader.menu.hint": "kiliki taumatau mo filifiliga o le toe uta",
+  "loader.menu.title": "Toe uta",
+  "loader.menu.changes": "Na o mea na suia, nei",
+  "loader.menu.all": "Tamoʻega uma, nei",
+  "loader.menu.interval": "Toe fesili otometi",
+  "loader.menu.seconds": {
+    "one": "i le {n} sekone uma",
+    "other": "i sekone uma e {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "i le {n} minute uma",
+    "other": "i minute uma e {n}"
+  },
+  "loader.menu.off": "e leai lava",
+  "loader.menu.view": "Lenei vaaiga, nei",
+  "loader.menu.cache": "Faagalo tali a GitHub i le cache",
+  "loader.menu.page": "Toe uta le itulau",
+  "loader.overview.title": "O loʻo uta",
+  "loader.overview.running": {
+    "one": "{n} o loʻo tamoʻe",
+    "other": "{n} o loʻo tamoʻe"
+  },
+  "loader.overview.none": "E leʻi uta lava se mea.",
+  "loader.task.boot": "Faitau matafaioi ma a latou meta",
+  "loader.task.view": "Tusi {view}",
+  "loader.task.changes": "Fesili i le GitHub po o le a mea na suia",
+  "loader.task.everything": "Fesili i le GitHub mo tamoʻega uma",
   "loader.task.artifacts": "Atifeki o le tamoʻega #{number}: {done} mai le {total}",
+  "loader.task.artifact": "Atifeki {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "toilalo: {message}",
+  "feed.actions.pick": "Faaali suʻega o lenei tamoʻega",
+  "feed.actions.ended": "Uma",
+  "feed.actions.duration": "Umi o le taimi",
+  "feed.actions.running": "o loʻo tamoʻe",
+  "feed.actions.longest": "O le tamoʻega sili ona umi o loʻo faʻaalia na alu ai {duration} ({run}).",
+  "feed.filter.search": "Saili i tamoʻega",
+  "feed.filter.all": "uma",
+  "feed.filter.event": "Mea na tupu",
+  "feed.filter.branch": "Lala",
+  "feed.filter.clear": "Aveese faamama",
+  "feed.filter.shown": {
+    "one": "E {n} le tamoʻega o totoe pe a maeʻa faamama.",
+    "other": "E {n} tamoʻega o totoe pe a maeʻa faamama."
+  },
   "security.source.advisories": "Fautuaga",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Suʻesuʻeina o le code",

@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub 返回 {status}。",
   "feed.anError": "出现错误",
+  "loader.loading": "正在加载…",
+  "loader.next": {
+    "other": "{n} 秒后下次刷新"
+  },
+  "loader.paused": {
+    "other": "为节省 GitHub 额度，已跳过上次刷新；{n} 秒后重试"
+  },
+  "loader.menu.hint": "右键单击查看重新加载选项",
+  "loader.menu.title": "重新加载",
+  "loader.menu.changes": "仅变更内容，立即",
+  "loader.menu.all": "全部运行，立即",
+  "loader.menu.interval": "自动再次询问",
+  "loader.menu.seconds": {
+    "other": "每 {n} 秒"
+  },
+  "loader.menu.minutes": {
+    "other": "每 {n} 分钟"
+  },
+  "loader.menu.off": "从不",
+  "loader.menu.view": "当前标签页，立即",
+  "loader.menu.cache": "忘记已缓存的 GitHub 回答",
+  "loader.menu.page": "重新加载页面",
+  "loader.overview.title": "加载",
+  "loader.overview.running": {
+    "other": "{n} 个运行中"
+  },
+  "loader.overview.none": "尚未加载任何内容。",
+  "loader.task.boot": "正在读取角色及其元数据",
+  "loader.task.view": "正在绘制 {view}",
+  "loader.task.changes": "正在向 GitHub 查询变更内容",
+  "loader.task.everything": "正在向 GitHub 获取全部运行",
   "loader.task.artifacts": "运行 #{number} 的工件：{done} / {total}",
+  "loader.task.artifact": "工件 {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "失败：{message}",
+  "feed.actions.pick": "显示此运行的测试",
+  "feed.actions.ended": "结束时间",
+  "feed.actions.duration": "时长",
+  "feed.actions.running": "运行中",
+  "feed.actions.longest": "所示最长的运行耗时 {duration}（{run}）。",
+  "feed.filter.search": "搜索运行",
+  "feed.filter.all": "全部",
+  "feed.filter.event": "事件",
+  "feed.filter.branch": "分支",
+  "feed.filter.clear": "清除筛选",
+  "feed.filter.shown": {
+    "other": "筛选后剩余 {n} 个。"
+  },
   "security.source.advisories": "安全公告",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "代码扫描",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ezongisi {status}.",
   "feed.anError": "na libunga",
+  "loader.loading": "Ezali kozwa …",
+  "loader.next": {
+    "one": "Bozongisi sika oyo ekolanda na sima ya sekondi {n}",
+    "other": "Bozongisi sika oyo ekolanda na sima ya basekondi {n}"
+  },
+  "loader.paused": {
+    "one": "Bozongisi sika ya nsuka esalemaki te mpo na kobatela ndelo ya GitHub; komeka oyo ekolanda na sima ya sekondi {n}",
+    "other": "Bozongisi sika ya nsuka esalemaki te mpo na kobatela ndelo ya GitHub; komeka oyo ekolanda na sima ya basekondi {n}"
+  },
+  "loader.menu.hint": "fina na ngambo ya mobali mpo na maponi ya kozongisa",
+  "loader.menu.title": "Kozongisa",
+  "loader.menu.changes": "Kaka oyo ebongwani, sikoyo",
+  "loader.menu.all": "Botamboli nyonso, sikoyo",
+  "loader.menu.interval": "Kotuna lisusu na yango moko",
+  "loader.menu.seconds": {
+    "one": "mbala na mbala sima ya sekondi {n}",
+    "other": "mbala na mbala sima ya basekondi {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "mbala na mbala sima ya miniti {n}",
+    "other": "mbala na mbala sima ya baminiti {n}"
+  },
+  "loader.menu.off": "soki moke te",
+  "loader.menu.view": "Etalelo oyo, sikoyo",
+  "loader.menu.cache": "Kobosana biyano ya GitHub oyo ebombami",
+  "loader.menu.page": "Kozongisa lokasa",
+  "loader.overview.title": "Ezali kozwa",
+  "loader.overview.running": {
+    "one": "{n} ezali kotambola",
+    "other": "{n} ezali kotambola"
+  },
+  "loader.overview.none": "Eloko moko te ezwami naino.",
+  "loader.task.boot": "Ezali kotánga mikumba mpe meta na yango",
+  "loader.task.view": "Ezali kobenda elilingi ya {view}",
+  "loader.task.changes": "Ezali kotuna GitHub oyo ebongwani",
+  "loader.task.everything": "Ezali kotuna GitHub botamboli nyonso",
   "loader.task.artifacts": "Artefakti ya botamboli #{number}: {done} kati na {total}",
+  "loader.task.artifact": "Artefakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ekweyi: {message}",
+  "feed.actions.pick": "Lakisá mimekano ya botamboli oyo",
+  "feed.actions.ended": "Esili",
+  "feed.actions.duration": "Ntango",
+  "feed.actions.running": "ezali kotambola",
+  "feed.actions.longest": "Botamboli ya molai koleka oyo emonisami ezwaki {duration} ({run}).",
+  "feed.filter.search": "Koluka botamboli",
+  "feed.filter.all": "nyonso",
+  "feed.filter.event": "Likambo",
+  "feed.filter.branch": "Etámbe",
+  "feed.filter.clear": "Longola bopɔni",
+  "feed.filter.shown": {
+    "one": "Botamboli {n} etikali nsima ya bopɔni.",
+    "other": "Botamboli {n} etikali nsima ya bopɔni."
+  },
   "security.source.advisories": "Toli",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Botali ya kode",

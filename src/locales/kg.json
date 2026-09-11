@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub me vutula {status}.",
   "feed.anError": "ti kifu",
+  "loader.loading": "Ke nata …",
+  "loader.next": {
+    "one": "Kuvuandisa diaka ya nkaka na sekonde {n}",
+    "other": "Kuvuandisa diaka ya nkaka na sekonde {n}"
+  },
+  "loader.paused": {
+    "one": "Kuvuandisa diaka ya nsuka me katuka sambu na kubumba ndilu ya GitHub; kumeka ya nkaka na sekonde {n}",
+    "other": "Kuvuandisa diaka ya nsuka me katuka sambu na kubumba ndilu ya GitHub; kumeka ya nkaka na sekonde {n}"
+  },
+  "loader.menu.hint": "fina na diboko ya kuyinama sambu na bansola ya kunata diaka",
+  "loader.menu.title": "Nata diaka",
+  "loader.menu.changes": "Kaka yina me soba, ntangu yai",
+  "loader.menu.all": "Nsalulu yonso, ntangu yai",
+  "loader.menu.interval": "Yufula diaka yo mosi",
+  "loader.menu.seconds": {
+    "one": "konso sekonde {n}",
+    "other": "konso sekonde {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "konso minuti {n}",
+    "other": "konso minuti {n}"
+  },
+  "loader.menu.off": "ata fioti ve",
+  "loader.menu.view": "Kumonisa yayi, ntangu yai",
+  "loader.menu.cache": "Zimbakana bamvutu ya GitHub yina kele na kashe",
+  "loader.menu.page": "Nata lukaya diaka",
+  "loader.overview.title": "Ke nata",
+  "loader.overview.running": {
+    "one": "{n} ke sala",
+    "other": "{n} ke sala"
+  },
+  "loader.overview.none": "Kima mosi me nata ntete ve.",
+  "loader.task.boot": "Ke tanga bisalu ti meta na yo",
+  "loader.task.view": "Ke sona {view}",
+  "loader.task.changes": "Ke yufula GitHub yina me soba",
+  "loader.task.everything": "Ke lomba GitHub nsalulu yonso",
   "loader.task.artifacts": "Bima ya nsalulu #{number}: {done} na {total}",
+  "loader.task.artifact": "Kima ya nsalulu {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "me konda: {message}",
+  "feed.actions.pick": "Songa bimeka ya nsalulu yai",
+  "feed.actions.ended": "Me mana",
+  "feed.actions.duration": "Ntangu",
+  "feed.actions.running": "ke sala",
+  "feed.actions.longest": "Nsalulu ya nda kuluta yina me monisama bakaka {duration} ({run}).",
+  "feed.filter.search": "Sosa mu nsalulu",
+  "feed.filter.all": "yonso",
+  "feed.filter.event": "Dyambu",
+  "feed.filter.branch": "Tavi",
+  "feed.filter.clear": "Katula nsungula",
+  "feed.filter.shown": {
+    "one": "{n} me bikala na nima ya nsungula.",
+    "other": "{n} me bikala na nima ya nsungula."
+  },
   "security.source.advisories": "Malongi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kutala kodi",

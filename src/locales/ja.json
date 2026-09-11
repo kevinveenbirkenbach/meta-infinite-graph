@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub の応答: {status}。",
   "feed.anError": "エラーあり",
+  "loader.loading": "読み込み中 …",
+  "loader.next": {
+    "other": "次の更新まで {n} 秒"
+  },
+  "loader.paused": {
+    "other": "GitHub のリクエスト枠を節約するため前回の更新をスキップしました。次の試行まで {n} 秒"
+  },
+  "loader.menu.hint": "右クリックで再読み込みオプション",
+  "loader.menu.title": "再読み込み",
+  "loader.menu.changes": "変更分のみ、今すぐ",
+  "loader.menu.all": "すべての実行、今すぐ",
+  "loader.menu.interval": "自動で再問い合わせ",
+  "loader.menu.seconds": {
+    "other": "{n} 秒ごと"
+  },
+  "loader.menu.minutes": {
+    "other": "{n} 分ごと"
+  },
+  "loader.menu.off": "しない",
+  "loader.menu.view": "このタブ、今すぐ",
+  "loader.menu.cache": "キャッシュした GitHub の応答を破棄",
+  "loader.menu.page": "ページを再読み込み",
+  "loader.overview.title": "読み込み中",
+  "loader.overview.running": {
+    "other": "{n} 件実行中"
+  },
+  "loader.overview.none": "まだ何も読み込まれていません。",
+  "loader.task.boot": "ロールとそのメタデータを読み込み中",
+  "loader.task.view": "{view} を描画中",
+  "loader.task.changes": "GitHub に変更点を問い合わせ中",
+  "loader.task.everything": "GitHub にすべての実行を問い合わせ中",
   "loader.task.artifacts": "実行 #{number} のアーティファクト: {done} / {total}",
+  "loader.task.artifact": "アーティファクト {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "失敗: {message}",
+  "feed.actions.pick": "この実行のテストを表示",
+  "feed.actions.ended": "終了",
+  "feed.actions.duration": "所要時間",
+  "feed.actions.running": "実行中",
+  "feed.actions.longest": "表示中で最も長い実行は{duration}かかりました（{run}）。",
+  "feed.filter.search": "実行を検索",
+  "feed.filter.all": "すべて",
+  "feed.filter.event": "イベント",
+  "feed.filter.branch": "ブランチ",
+  "feed.filter.clear": "フィルターをクリア",
+  "feed.filter.shown": {
+    "other": "フィルター後に {n} 件が残っています。"
+  },
   "security.source.advisories": "アドバイザリ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "コードスキャン",

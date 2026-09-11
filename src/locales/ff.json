@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub jaabii {status}.",
   "feed.anError": "e juumre",
+  "loader.loading": "Nana loowa …",
+  "loader.next": {
+    "one": "Hesɗitingol garoowol e sekonde {n}",
+    "other": "Hesɗitingol garoowol e sekonji {n}"
+  },
+  "loader.paused": {
+    "one": "Hesɗitingol sakkitiingol diwaama ngam faddaade ɗaɓɓitanɗe GitHub; etagol garoowol e sekonde {n}",
+    "other": "Hesɗitingol sakkitiingol diwaama ngam faddaade ɗaɓɓitanɗe GitHub; etagol garoowol e sekonji {n}"
+  },
+  "loader.menu.hint": "dobo ñaamo ngam cuɓe loowtugol",
+  "loader.menu.title": "Loowtu",
+  "loader.menu.changes": "Ko waylii tan, jooni",
+  "loader.menu.all": "Doggol kala, jooni",
+  "loader.menu.interval": "Naamnito kadi e hoore mum",
+  "loader.menu.seconds": {
+    "one": "kala sekonde {n}",
+    "other": "kala sekonji {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "kala hojom {n}",
+    "other": "kala hojomaaji {n}"
+  },
+  "loader.menu.off": "abadaa",
+  "loader.menu.view": "Tabbere ndee, jooni",
+  "loader.menu.cache": "Yejjit jaabawuje GitHub mooftaaɗe e kaas",
+  "loader.menu.page": "Loowtu hello ngo",
+  "loader.overview.title": "Nana loowa",
+  "loader.overview.running": {
+    "one": "{n} ina yahra",
+    "other": "{n} ina yahra"
+  },
+  "loader.overview.none": "Alaa ko loowaa tawo.",
+  "loader.task.boot": "Nana janngee daaɗe e meta mum en",
+  "loader.task.view": "Nana natee {view}",
+  "loader.task.changes": "Nana naamnee GitHub ko waylii",
+  "loader.task.everything": "Nana naamnee GitHub doggol kala",
   "loader.task.artifacts": "Artefaaktuuji doggol #{number}: {done}/{total}",
+  "loader.task.artifact": "Artefaakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ronkii: {message}",
+  "feed.actions.pick": "Hollu ƴeewndooji ndee doggol",
+  "feed.actions.ended": "Gasii",
+  "feed.actions.duration": "Ɓooyngol",
+  "feed.actions.running": "ina yahra",
+  "feed.actions.longest": "Doggol ɓurngol juutde e ɗe njaltinaa ɓooyi {duration} ({run}).",
+  "feed.filter.search": "Yiylo e dogginaaji",
+  "feed.filter.all": "fof",
+  "feed.filter.event": "Huunde waɗnde",
+  "feed.filter.branch": "Calol",
+  "feed.filter.clear": "Momtu cuɓe",
+  "feed.filter.shown": {
+    "one": "{n} heddii caggal cuɓe.",
+    "other": "{n} heddii caggal cuɓe."
+  },
   "security.source.advisories": "Waajuuji",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ƴeewtaare kood",

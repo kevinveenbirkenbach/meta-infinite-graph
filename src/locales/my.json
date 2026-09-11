@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub က {status} ဖြင့် ပြန်ဖြေသည်။",
   "feed.anError": "အမှားတစ်ခုဖြင့်",
+  "loader.loading": "ဖွင့်နေသည် …",
+  "loader.next": {
+    "other": "နောက်တစ်ကြိမ် ပြန်လည်ဆန်းသစ်ခြင်း {n} စက္ကန့်အတွင်း"
+  },
+  "loader.paused": {
+    "other": "GitHub ခွဲတမ်းကို ချွေတာရန် နောက်ဆုံး ပြန်လည်ဆန်းသစ်ခြင်းကို ကျော်ခဲ့သည်၊ နောက်တစ်ကြိမ် ကြိုးစားမှု {n} စက္ကန့်အတွင်း"
+  },
+  "loader.menu.hint": "ပြန်ဖွင့်ရန် ရွေးချယ်စရာများအတွက် ညာကလစ်နှိပ်ပါ",
+  "loader.menu.title": "ပြန်ဖွင့်ရန်",
+  "loader.menu.changes": "ပြောင်းလဲသည်များသာ၊ ယခု",
+  "loader.menu.all": "လည်ပတ်မှုအားလုံး၊ ယခု",
+  "loader.menu.interval": "အလိုအလျောက် ပြန်မေးရန်",
+  "loader.menu.seconds": {
+    "other": "{n} စက္ကန့်တိုင်း"
+  },
+  "loader.menu.minutes": {
+    "other": "{n} မိနစ်တိုင်း"
+  },
+  "loader.menu.off": "ဘယ်တော့မှ",
+  "loader.menu.view": "ဤမြင်ကွင်း၊ ယခု",
+  "loader.menu.cache": "သိမ်းဆည်းထားသော GitHub အဖြေများကို မေ့ပစ်ရန်",
+  "loader.menu.page": "စာမျက်နှာကို ပြန်ဖွင့်ရန်",
+  "loader.overview.title": "ဖွင့်နေသည်",
+  "loader.overview.running": {
+    "other": "{n} ခု လည်ပတ်နေဆဲ"
+  },
+  "loader.overview.none": "မည်သည့်အရာမျှ မဖွင့်ရသေးပါ။",
+  "loader.task.boot": "အခန်းကဏ္ဍများနှင့် ၎င်းတို့၏ မက်တာကို ဖတ်နေသည်",
+  "loader.task.view": "{view} ကို ရေးဆွဲနေသည်",
+  "loader.task.changes": "ပြောင်းလဲသည်များကို GitHub ထံ မေးနေသည်",
+  "loader.task.everything": "လည်ပတ်မှုအားလုံးကို GitHub ထံ တောင်းနေသည်",
   "loader.task.artifacts": "လည်ပတ်မှု #{number} ၏ အာတီဖက်များ: {total} ခုအနက် {done} ခု",
+  "loader.task.artifact": "အာတီဖက် {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "မအောင်မြင်ပါ: {message}",
+  "feed.actions.pick": "ဤလည်ပတ်မှု၏ စမ်းသပ်မှုများကို ပြရန်",
+  "feed.actions.ended": "ပြီးဆုံးချိန်",
+  "feed.actions.duration": "ကြာချိန်",
+  "feed.actions.running": "လည်ပတ်နေဆဲ",
+  "feed.actions.longest": "ပြသထားသော အရှည်ဆုံး လည်ပတ်မှုသည် {duration} ကြာခဲ့သည် ({run})။",
+  "feed.filter.search": "လည်ပတ်မှုများ ရှာရန်",
+  "feed.filter.all": "အားလုံး",
+  "feed.filter.event": "ဖြစ်ရပ်",
+  "feed.filter.branch": "ဘရန့်ချ်",
+  "feed.filter.clear": "စစ်ထုတ်မှုများ ရှင်းရန်",
+  "feed.filter.shown": {
+    "other": "စစ်ထုတ်ပြီးနောက် {n} ခု ကျန်သည်။"
+  },
   "security.source.advisories": "အကြံပြုချက်များ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ကုဒ် စကင်ဖတ်ခြင်း",

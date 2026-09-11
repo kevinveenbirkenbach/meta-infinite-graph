@@ -135,7 +135,60 @@
   },
   "feed.failed": "I whakahoki a GitHub i te {status}.",
   "feed.anError": "me tētahi hapa",
+  "loader.loading": "E uta ana …",
+  "loader.next": {
+    "one": "Te whakahou e whai ake nei ā te {n} hēkona",
+    "other": "Te whakahou e whai ake nei ā te {n} hēkona"
+  },
+  "loader.paused": {
+    "one": "I hipa te whakahou whakamutunga kia tiakina te wāhanga o GitHub; te ngana e whai ake nei ā te {n} hēkona",
+    "other": "I hipa te whakahou whakamutunga kia tiakina te wāhanga o GitHub; te ngana e whai ake nei ā te {n} hēkona"
+  },
+  "loader.menu.hint": "pāwhiri matau mō ngā kōwhiringa uta anō",
+  "loader.menu.title": "Uta anō",
+  "loader.menu.changes": "Ko ngā mea anake i huri, ināianei",
+  "loader.menu.all": "Ngā rerenga katoa, ināianei",
+  "loader.menu.interval": "Pātai anō aunoa",
+  "loader.menu.seconds": {
+    "one": "ia {n} hēkona",
+    "other": "ia {n} hēkona"
+  },
+  "loader.menu.minutes": {
+    "one": "ia {n} meneti",
+    "other": "ia {n} meneti"
+  },
+  "loader.menu.off": "kore rawa",
+  "loader.menu.view": "Tēnei tirohanga, ināianei",
+  "loader.menu.cache": "Wareware ki ngā whakautu GitHub kua keteroki",
+  "loader.menu.page": "Uta anō te whārangi",
+  "loader.overview.title": "E uta ana",
+  "loader.overview.running": {
+    "one": "{n} e rere ana",
+    "other": "{n} e rere ana"
+  },
+  "loader.overview.none": "Kāore anō tētahi mea kia utaina.",
+  "loader.task.boot": "E pānui ana i ngā tūranga me ō rātou meta",
+  "loader.task.view": "E tuhi ana i {view}",
+  "loader.task.changes": "E pātai ana ki a GitHub he aha i huri",
+  "loader.task.everything": "E tono ana ki a GitHub mō ngā rerenga katoa",
   "loader.task.artifacts": "Ngā taonga hanga o te rerenga #{number}: {done} o {total}",
+  "loader.task.artifact": "Taonga hanga {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "i rahua: {message}",
+  "feed.actions.pick": "Whakaaturia ngā whakamātautau o tēnei rerenga",
+  "feed.actions.ended": "I mutu",
+  "feed.actions.duration": "Roanga",
+  "feed.actions.running": "e rere ana",
+  "feed.actions.longest": "Ko te rerenga roa rawa e whakaaturia ana, {duration} tōna roa ({run}).",
+  "feed.filter.search": "Rapua ngā rerenga",
+  "feed.filter.all": "katoa",
+  "feed.filter.event": "Takahanga",
+  "feed.filter.branch": "Peka",
+  "feed.filter.clear": "Ūkuia ngā tātari",
+  "feed.filter.shown": {
+    "one": "Ka toe te {n} i muri i ngā tātari.",
+    "other": "Ka toe ngā {n} i muri i ngā tātari."
+  },
   "security.source.advisories": "Ngā Tohutohu",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Matawai waehere",

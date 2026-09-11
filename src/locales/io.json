@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub respondis {status}.",
   "feed.anError": "kun eroro",
+  "loader.loading": "Kargante …",
+  "loader.next": {
+    "one": "Sequanta rinovigo pos {n} sekundo",
+    "other": "Sequanta rinovigo pos {n} sekundi"
+  },
+  "loader.paused": {
+    "one": "La lasta rinovigo esis omisita por sparar la quoto di GitHub; sequanta probo pos {n} sekundo",
+    "other": "La lasta rinovigo esis omisita por sparar la quoto di GitHub; sequanta probo pos {n} sekundi"
+  },
+  "loader.menu.hint": "dextra kliko por opcioni di ri-kargo",
+  "loader.menu.title": "Ri-kargar",
+  "loader.menu.changes": "Nur to quo chanjis, nun",
+  "loader.menu.all": "Omna exekuti, nun",
+  "loader.menu.interval": "Questionar itere automatale",
+  "loader.menu.seconds": {
+    "one": "omna {n} sekundo",
+    "other": "omna {n} sekundi"
+  },
+  "loader.menu.minutes": {
+    "one": "omna {n} minuto",
+    "other": "omna {n} minuti"
+  },
+  "loader.menu.off": "nultempe",
+  "loader.menu.view": "Ca vido, nun",
+  "loader.menu.cache": "Obliviar la respondi di GitHub en la kashmemorio",
+  "loader.menu.page": "Ri-kargar la pagino",
+  "loader.overview.title": "Kargante",
+  "loader.overview.running": {
+    "one": "{n} funcionanta",
+    "other": "{n} funcionanta"
+  },
+  "loader.overview.none": "Nulo ja kargesis.",
+  "loader.task.boot": "Lektante la roli e lia meta",
+  "loader.task.view": "Desegnante {view}",
+  "loader.task.changes": "Questionante GitHub pri quo chanjis",
+  "loader.task.everything": "Demandante de GitHub omna exekuti",
   "loader.task.artifacts": "Artefakti di exekuto #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefakto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "faliis: {message}",
+  "feed.actions.pick": "Montrar la testi di ca exekuto",
+  "feed.actions.ended": "Finita",
+  "feed.actions.duration": "Durado",
+  "feed.actions.running": "en exekuto",
+  "feed.actions.longest": "La maxim longa exekuto montrita duris {duration} ({run}).",
+  "feed.filter.search": "Serchar en la exekuti",
+  "feed.filter.all": "omni",
+  "feed.filter.event": "Evento",
+  "feed.filter.branch": "Brancho",
+  "feed.filter.clear": "Efacar la filtrili",
+  "feed.filter.shown": {
+    "one": "{n} restas pos la filtrili.",
+    "other": "{n} restas pos la filtrili."
+  },
   "security.source.advisories": "Avizi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Skanado di kodexo",

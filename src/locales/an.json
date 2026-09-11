@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ha respondiu {status}.",
   "feed.anError": "con una error",
+  "loader.loading": "Cargando …",
+  "loader.next": {
+    "one": "Siguient actualización en {n} segundo",
+    "other": "Siguient actualización en {n} segundos"
+  },
+  "loader.paused": {
+    "one": "S'ha omitiu a zaguera actualización pa aforrar a cuota de GitHub; siguient intento en {n} segundo",
+    "other": "S'ha omitiu a zaguera actualización pa aforrar a cuota de GitHub; siguient intento en {n} segundos"
+  },
+  "loader.menu.hint": "clic dreito pa opcions de recarga",
+  "loader.menu.title": "Recargar",
+  "loader.menu.changes": "Nomás lo que ha cambiau, agora",
+  "loader.menu.all": "Cada execución, agora",
+  "loader.menu.interval": "Tornar a preguntar automaticament",
+  "loader.menu.seconds": {
+    "one": "cada {n} segundo",
+    "other": "cada {n} segundos"
+  },
+  "loader.menu.minutes": {
+    "one": "cada {n} minuto",
+    "other": "cada {n} minutos"
+  },
+  "loader.menu.off": "nunca",
+  "loader.menu.view": "Ista pestanya, agora",
+  "loader.menu.cache": "Olvidar as respuestas de GitHub en caché",
+  "loader.menu.page": "Recargar a pachina",
+  "loader.overview.title": "Cargando",
+  "loader.overview.running": {
+    "one": "{n} en execución",
+    "other": "{n} en execución"
+  },
+  "loader.overview.none": "Encara no s'ha cargau cosa.",
+  "loader.task.boot": "Leyendo os rols y a suya meta",
+  "loader.task.view": "Dibuixando {view}",
+  "loader.task.changes": "Preguntando a GitHub qué ha cambiau",
+  "loader.task.everything": "Demandando a GitHub cada execución",
   "loader.task.artifacts": "Artefactos d'a execución #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefacto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ha fallau: {message}",
+  "feed.actions.pick": "Amostrar as prebas d'ista execución",
+  "feed.actions.ended": "Rematau",
+  "feed.actions.duration": "Durada",
+  "feed.actions.running": "en execución",
+  "feed.actions.longest": "A execución mas larga amostrada durió {duration} ({run}).",
+  "feed.filter.search": "Buscar en as execucions",
+  "feed.filter.all": "totz",
+  "feed.filter.event": "Evento",
+  "feed.filter.branch": "Rama",
+  "feed.filter.clear": "Limpiar os filtros",
+  "feed.filter.shown": {
+    "one": "Queda {n} dimpués d'os filtros.",
+    "other": "Quedan {n} dimpués d'os filtros."
+  },
   "security.source.advisories": "Avisos",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Analisi de codigo",

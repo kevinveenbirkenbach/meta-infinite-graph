@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} ଉତ୍ତର ଦେଲା।",
   "feed.anError": "ଏକ ତ୍ରୁଟି ସହ",
+  "loader.loading": "ଲୋଡ୍ ହେଉଛି …",
+  "loader.next": {
+    "one": "ପରବର୍ତ୍ତୀ ରିଫ୍ରେସ୍ {n} ସେକେଣ୍ଡରେ",
+    "other": "ପରବର୍ତ୍ତୀ ରିଫ୍ରେସ୍ {n} ସେକେଣ୍ଡରେ"
+  },
+  "loader.paused": {
+    "one": "GitHub କୋଟା ବଞ୍ଚାଇବା ପାଇଁ ଶେଷ ରିଫ୍ରେସ୍ ଛାଡ଼ି ଦିଆଗଲା; ପରବର୍ତ୍ତୀ ଚେଷ୍ଟା {n} ସେକେଣ୍ଡରେ",
+    "other": "GitHub କୋଟା ବଞ୍ଚାଇବା ପାଇଁ ଶେଷ ରିଫ୍ରେସ୍ ଛାଡ଼ି ଦିଆଗଲା; ପରବର୍ତ୍ତୀ ଚେଷ୍ଟା {n} ସେକେଣ୍ଡରେ"
+  },
+  "loader.menu.hint": "ପୁଣି ଲୋଡ୍ ବିକଳ୍ପ ପାଇଁ ଡାହାଣ-କ୍ଲିକ୍ କରନ୍ତୁ",
+  "loader.menu.title": "ପୁଣି ଲୋଡ୍ କରନ୍ତୁ",
+  "loader.menu.changes": "କେବଳ ଯାହା ବଦଳିଛି, ଏବେ",
+  "loader.menu.all": "ପ୍ରତ୍ୟେକ ଚାଳନା, ଏବେ",
+  "loader.menu.interval": "ସ୍ୱୟଂଚାଳିତ ଭାବେ ପୁଣି ପଚାରନ୍ତୁ",
+  "loader.menu.seconds": {
+    "one": "ପ୍ରତି {n} ସେକେଣ୍ଡରେ",
+    "other": "ପ୍ରତି {n} ସେକେଣ୍ଡରେ"
+  },
+  "loader.menu.minutes": {
+    "one": "ପ୍ରତି {n} ମିନିଟରେ",
+    "other": "ପ୍ରତି {n} ମିନିଟରେ"
+  },
+  "loader.menu.off": "କେବେ ନୁହେଁ",
+  "loader.menu.view": "ଏହି ଦୃଶ୍ୟ, ଏବେ",
+  "loader.menu.cache": "କ୍ୟାଶ୍ ହୋଇଥିବା GitHub ଉତ୍ତରଗୁଡ଼ିକ ଭୁଲିଯାଆନ୍ତୁ",
+  "loader.menu.page": "ପୃଷ୍ଠା ପୁଣି ଲୋଡ୍ କରନ୍ତୁ",
+  "loader.overview.title": "ଲୋଡ୍ ହେଉଛି",
+  "loader.overview.running": {
+    "one": "{n}ଟି ଚାଲୁଛି",
+    "other": "{n}ଟି ଚାଲୁଛି"
+  },
+  "loader.overview.none": "ଏପର୍ଯ୍ୟନ୍ତ କିଛି ଲୋଡ୍ ହୋଇନାହିଁ।",
+  "loader.task.boot": "ଭୂମିକା ଓ ସେମାନଙ୍କ ମେଟା ପଢ଼ାଯାଉଛି",
+  "loader.task.view": "{view} ଅଙ୍କନ ହେଉଛି",
+  "loader.task.changes": "GitHub କୁ କ'ଣ ବଦଳିଛି ପଚରାଯାଉଛି",
+  "loader.task.everything": "GitHub ରୁ ପ୍ରତ୍ୟେକ ଚାଳନା ମଗାଯାଉଛି",
   "loader.task.artifacts": "ଚାଳନା #{number} ର ଆର୍ଟିଫାକ୍ଟ: {total} ମଧ୍ୟରୁ {done}",
+  "loader.task.artifact": "ଆର୍ଟିଫାକ୍ଟ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ବିଫଳ: {message}",
+  "feed.actions.pick": "ଏହି ଚାଳନାର ପରୀକ୍ଷା ଦେଖାନ୍ତୁ",
+  "feed.actions.ended": "ସମାପ୍ତ",
+  "feed.actions.duration": "ଅବଧି",
+  "feed.actions.running": "ଚାଲୁଛି",
+  "feed.actions.longest": "ଦେଖାଯାଇଥିବା ସବୁଠାରୁ ଲମ୍ବା ଚାଳନା {duration} ନେଇଥିଲା ({run})।",
+  "feed.filter.search": "ଚାଳନା ଖୋଜନ୍ତୁ",
+  "feed.filter.all": "ସବୁ",
+  "feed.filter.event": "ଘଟଣା",
+  "feed.filter.branch": "ବ୍ରାଞ୍ଚ",
+  "feed.filter.clear": "ଫିଲ୍ଟର ହଟାନ୍ତୁ",
+  "feed.filter.shown": {
+    "one": "ଫିଲ୍ଟର ପରେ {n}ଟି ବାକି ଅଛି।",
+    "other": "ଫିଲ୍ଟର ପରେ {n}ଟି ବାକି ଅଛି।"
+  },
   "security.source.advisories": "ପରାମର୍ଶ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "କୋଡ୍ ସ୍କାନିଂ",

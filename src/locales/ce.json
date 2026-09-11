@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub-о {status} жоп делла.",
   "feed.anError": "гӀалатца",
+  "loader.loading": "Чуйолуш …",
+  "loader.next": {
+    "one": "РогӀера карлайаккхар {n} секунд даьлча",
+    "other": "РогӀера карлайаккхар {n} секунд даьлча"
+  },
+  "loader.paused": {
+    "one": "GitHub-ан квота ларйан тӀаьххьара карлайаккхар тӀехдаьлла; рогӀера хьажар {n} секунд даьлча",
+    "other": "GitHub-ан квота ларйан тӀаьххьара карлайаккхар тӀехдаьлла; рогӀера хьажар {n} секунд даьлча"
+  },
+  "loader.menu.hint": "юха чуяккхаран параметраш — аьтту кнопкица таӀаде",
+  "loader.menu.title": "Юха чуяккха",
+  "loader.menu.changes": "Хийцинарг бен, хӀинца",
+  "loader.menu.all": "Массо кхочушдар, хӀинца",
+  "loader.menu.interval": "Автоматически юха хатта",
+  "loader.menu.seconds": {
+    "one": "хӀор {n} секундехь",
+    "other": "хӀор {n} секундехь"
+  },
+  "loader.menu.minutes": {
+    "one": "хӀор {n} минотехь",
+    "other": "хӀор {n} минотехь"
+  },
+  "loader.menu.off": "цкъа а",
+  "loader.menu.view": "ХӀара вкладка, хӀинца",
+  "loader.menu.cache": "Кешехь долу GitHub-ан жоьпаш диц де",
+  "loader.menu.page": "АгӀо юха чуяккха",
+  "loader.overview.title": "Чуйолуш",
+  "loader.overview.running": {
+    "one": "{n} кхочушйеш ю",
+    "other": "{n} кхочушйеш ю"
+  },
+  "loader.overview.none": "ХӀинца а цхьа а хӀума чуйоьллина дац.",
+  "loader.task.boot": "Рольш а, церан мета а йоьшуш",
+  "loader.task.view": "{view} сурт хӀоттош",
+  "loader.task.changes": "GitHub-ера хоттуш: хӀун хийцаделла",
+  "loader.task.everything": "GitHub-ера массо кхочушдар доьхуш",
   "loader.task.artifacts": "#{number} кхочушдаран артефакташ: {done}/{total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ца делла: {message}",
+  "feed.actions.pick": "ХӀокху кхочушдаран тесташ гайта",
+  "feed.actions.ended": "Чекхъелла",
+  "feed.actions.duration": "Йохалла",
+  "feed.actions.running": "кхочушйеш ю",
+  "feed.actions.longest": "Гайтинчу кхочушдаршна юкъара уггар беха кхочушдар {duration} даьлла ({run}).",
+  "feed.filter.search": "Кхочушдарш лаха",
+  "feed.filter.all": "дерриг",
+  "feed.filter.event": "Хилларг",
+  "feed.filter.branch": "Га",
+  "feed.filter.clear": "Фильтраш цӀанбан",
+  "feed.filter.shown": {
+    "one": "Фильтрашна тӀаьхьа {n} дисина.",
+    "other": "Фильтрашна тӀаьхьа {n} дисина."
+  },
   "security.source.advisories": "Хьехамаш",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодан таллам",

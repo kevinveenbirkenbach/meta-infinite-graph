@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} amsǝna.",
   "feed.anError": "kuskurea",
+  "loader.loading": "Kawudǝ …",
+  "loader.next": {
+    "one": "Ngǝwu kawudǝ gǝrtǝ dakika {n}lan",
+    "other": "Ngǝwu kawudǝ gǝrtǝ dakikawa {n}lan"
+  },
+  "loader.paused": {
+    "one": "Ngǝwu kawudǝ ngǝwuro sǝdǝna GitHubbe kaso ragowa awo dǝ; kawudǝ gǝrtǝ dakika {n}lan",
+    "other": "Ngǝwu kawudǝ ngǝwuro sǝdǝna GitHubbe kaso ragowa awo dǝ; kawudǝ gǝrtǝ dakikawa {n}lan"
+  },
+  "loader.menu.hint": "kǝlanzǝ shiyi ngǝwu kawudǝbe zaɓinwa ro",
+  "loader.menu.title": "Ngǝwu kawudǝ",
+  "loader.menu.changes": "Awo kǝnjiyana kǝlkǝl, sa adǝ",
+  "loader.menu.all": "Gudǝ samma, sa adǝ",
+  "loader.menu.interval": "Rogǝ ngǝwu tambadǝ",
+  "loader.menu.seconds": {
+    "one": "dakika {n} laa laa",
+    "other": "dakikawa {n} laa laa"
+  },
+  "loader.menu.minutes": {
+    "one": "minti {n} laa laa",
+    "other": "mintiwa {n} laa laa"
+  },
+  "loader.menu.off": "abada ba",
+  "loader.menu.view": "Gani adǝ, sa adǝ",
+  "loader.menu.cache": "Cache-lan GitHub-be amsawa mandǝ",
+  "loader.menu.page": "Shafi ngǝwu kawudǝ",
+  "loader.overview.title": "Kawudǝ",
+  "loader.overview.running": {
+    "one": "{n} gudǝ dǝ",
+    "other": "{n} gudǝ dǝ"
+  },
+  "loader.overview.none": "Awo kawudǝna baa.",
+  "loader.task.boot": "Rolwa-a meta sandiyey karatudǝ",
+  "loader.task.view": "{view} zanadǝ",
+  "loader.task.changes": "GitHub-ro awo kǝnjiyana tambaydǝ",
+  "loader.task.everything": "GitHub-ro gudǝ samma tambaydǝ",
   "loader.task.artifacts": "Kayan fitarwa gudǝ #{number}be: {done} {total}lan",
+  "loader.task.artifact": "Kayan fitarwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "gǝnaba: {message}",
+  "feed.actions.pick": "Gudǝ adǝbe imtihanwa nunadǝ",
+  "feed.actions.ended": "Dajiǝna",
+  "feed.actions.duration": "Nǝm kurugu",
+  "feed.actions.running": "gudǝ dǝn",
+  "feed.actions.longest": "Gudǝ kurugu nunadǝna {duration} sǝdǝna ({run}).",
+  "feed.filter.search": "Gudǝwa nemdǝ",
+  "feed.filter.all": "samma",
+  "feed.filter.event": "Awo tawandǝ",
+  "feed.filter.branch": "Rashe",
+  "feed.filter.clear": "Tacewa gozǝ",
+  "feed.filter.shown": {
+    "one": "Tacewa baltǝ {n} ladǝna.",
+    "other": "Tacewa baltǝ {n} ladǝna."
+  },
   "security.source.advisories": "Shawarawa",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Lamba bindiyǝ",

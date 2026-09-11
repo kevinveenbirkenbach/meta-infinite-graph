@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} гэж хариулсан.",
   "feed.anError": "алдаатай",
+  "loader.loading": "Ачаалж байна …",
+  "loader.next": {
+    "one": "Дараагийн шинэчлэл {n} секундын дараа",
+    "other": "Дараагийн шинэчлэл {n} секундын дараа"
+  },
+  "loader.paused": {
+    "one": "GitHub-ийн квотыг хэмнэхийн тулд сүүлийн шинэчлэлийг алгассан; дараагийн оролдлого {n} секундын дараа",
+    "other": "GitHub-ийн квотыг хэмнэхийн тулд сүүлийн шинэчлэлийг алгассан; дараагийн оролдлого {n} секундын дараа"
+  },
+  "loader.menu.hint": "дахин ачаалах сонголтуудыг харахын тулд баруун товшино уу",
+  "loader.menu.title": "Дахин ачаалах",
+  "loader.menu.changes": "Зөвхөн өөрчлөгдсөнийг, одоо",
+  "loader.menu.all": "Бүх ажиллалтыг, одоо",
+  "loader.menu.interval": "Автоматаар дахин асуух",
+  "loader.menu.seconds": {
+    "one": "{n} секунд тутам",
+    "other": "{n} секунд тутам"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} минут тутам",
+    "other": "{n} минут тутам"
+  },
+  "loader.menu.off": "хэзээ ч",
+  "loader.menu.view": "Энэ харагдацыг, одоо",
+  "loader.menu.cache": "Кэшлэгдсэн GitHub хариултуудыг мартах",
+  "loader.menu.page": "Хуудсыг дахин ачаалах",
+  "loader.overview.title": "Ачаалж байна",
+  "loader.overview.running": {
+    "one": "{n} ажиллаж байна",
+    "other": "{n} ажиллаж байна"
+  },
+  "loader.overview.none": "Одоогоор юу ч ачаалагдаагүй байна.",
+  "loader.task.boot": "Үүргүүд болон тэдгээрийн метаг уншиж байна",
+  "loader.task.view": "{view} зурж байна",
+  "loader.task.changes": "GitHub-аас юу өөрчлөгдсөнийг асууж байна",
+  "loader.task.everything": "GitHub-аас бүх ажиллалтыг асууж байна",
   "loader.task.artifacts": "Ажиллалт #{number}-ийн артефактууд: {total}-аас {done}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "амжилтгүй: {message}",
+  "feed.actions.pick": "Энэ ажиллалтын тестүүдийг харуулах",
+  "feed.actions.ended": "Дууссан",
+  "feed.actions.duration": "Үргэлжлэх хугацаа",
+  "feed.actions.running": "ажиллаж байна",
+  "feed.actions.longest": "Харуулсан хамгийн урт ажиллалт {duration} үргэлжилсэн ({run}).",
+  "feed.filter.search": "Ажиллалт хайх",
+  "feed.filter.all": "бүгд",
+  "feed.filter.event": "Үйл явдал",
+  "feed.filter.branch": "Салбар",
+  "feed.filter.clear": "Шүүлтүүрийг цэвэрлэх",
+  "feed.filter.shown": {
+    "one": "Шүүлтүүрийн дараа {n} үлдлээ.",
+    "other": "Шүүлтүүрийн дараа {n} үлдлээ."
+  },
   "security.source.advisories": "Зөвлөмжүүд",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодын скан",

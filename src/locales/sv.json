@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub svarade {status}.",
   "feed.anError": "med ett fel",
+  "loader.loading": "Laddar …",
+  "loader.next": {
+    "one": "Nästa uppdatering om {n} sekund",
+    "other": "Nästa uppdatering om {n} sekunder"
+  },
+  "loader.paused": {
+    "one": "Den senaste uppdateringen hoppades över för att spara GitHub-kvoten; nästa försök om {n} sekund",
+    "other": "Den senaste uppdateringen hoppades över för att spara GitHub-kvoten; nästa försök om {n} sekunder"
+  },
+  "loader.menu.hint": "högerklicka för omladdningsalternativ",
+  "loader.menu.title": "Ladda om",
+  "loader.menu.changes": "Bara det som ändrats, nu",
+  "loader.menu.all": "Alla körningar, nu",
+  "loader.menu.interval": "Fråga igen automatiskt",
+  "loader.menu.seconds": {
+    "one": "med {n} sekunds mellanrum",
+    "other": "med {n} sekunders mellanrum"
+  },
+  "loader.menu.minutes": {
+    "one": "med {n} minuts mellanrum",
+    "other": "med {n} minuters mellanrum"
+  },
+  "loader.menu.off": "aldrig",
+  "loader.menu.view": "Den här fliken, nu",
+  "loader.menu.cache": "Glöm de cachade GitHub-svaren",
+  "loader.menu.page": "Ladda om sidan",
+  "loader.overview.title": "Laddar",
+  "loader.overview.running": {
+    "one": "{n} pågår",
+    "other": "{n} pågår"
+  },
+  "loader.overview.none": "Inget har laddats än.",
+  "loader.task.boot": "Läser rollerna och deras metadata",
+  "loader.task.view": "Ritar {view}",
+  "loader.task.changes": "Frågar GitHub vad som ändrats",
+  "loader.task.everything": "Hämtar alla körningar från GitHub",
   "loader.task.artifacts": "Artefakter för körning #{number}: {done} av {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "misslyckades: {message}",
+  "feed.actions.pick": "Visa den här körningens tester",
+  "feed.actions.ended": "Avslutad",
+  "feed.actions.duration": "Varaktighet",
+  "feed.actions.running": "pågår",
+  "feed.actions.longest": "Den längsta visade körningen tog {duration} ({run}).",
+  "feed.filter.search": "Sök bland körningarna",
+  "feed.filter.all": "alla",
+  "feed.filter.event": "Händelse",
+  "feed.filter.branch": "Gren",
+  "feed.filter.clear": "Rensa filtren",
+  "feed.filter.shown": {
+    "one": "{n} körning återstår efter filtren.",
+    "other": "{n} körningar återstår efter filtren."
+  },
   "security.source.advisories": "Säkerhetsmeddelanden",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Code scanning",

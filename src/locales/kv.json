@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub вочавидзис {status}.",
   "feed.anError": "мыжкӧд",
+  "loader.loading": "Пыртӧм …",
+  "loader.next": {
+    "one": "Мӧд выльмӧдӧм {n} секунд мысти",
+    "other": "Мӧд выльмӧдӧм {n} секунд мысти"
+  },
+  "loader.paused": {
+    "one": "Медбӧръя выльмӧдӧм лэдзӧма GitHub лимит видзӧм могысь; мӧд видлӧм {n} секунд мысти",
+    "other": "Медбӧръя выльмӧдӧм лэдзӧма GitHub лимит видзӧм могысь; мӧд видлӧм {n} секунд мысти"
+  },
+  "loader.menu.hint": "веськыд кнопка — выльысь пыртан вариантъяс",
+  "loader.menu.title": "Выльысь пыртны",
+  "loader.menu.changes": "Сӧмын вежсьӧмсӧ, ӧні",
+  "loader.menu.all": "Став уджалӧмъяс, ӧні",
+  "loader.menu.interval": "Ачыс выльысь юавны",
+  "loader.menu.seconds": {
+    "one": "быд {n} секунд",
+    "other": "быд {n} секунд"
+  },
+  "loader.menu.minutes": {
+    "one": "быд {n} минут",
+    "other": "быд {n} минут"
+  },
+  "loader.menu.off": "некор",
+  "loader.menu.view": "Тайӧ видзӧдлас, ӧні",
+  "loader.menu.cache": "Вунӧдны кэшын GitHub вочакывъяс",
+  "loader.menu.page": "Выльысь пыртны листбок",
+  "loader.overview.title": "Пыртӧм",
+  "loader.overview.running": {
+    "one": "{n} мунӧ",
+    "other": "{n} мунӧ"
+  },
+  "loader.overview.none": "Нинӧм на абу пыртӧма.",
+  "loader.task.boot": "Рольяс да найӧ метаданнӧйяс лыддьӧм",
+  "loader.task.view": "{view} серпасалӧм",
+  "loader.task.changes": "GitHub-ысь юалӧм, мый вежсьӧма",
+  "loader.task.everything": "GitHub-ысь став уджалӧмъяс корӧм",
   "loader.task.artifacts": "#{number} уджалӧмлӧн артефактъяс: {done} / {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "эз артмы: {message}",
+  "feed.actions.pick": "Петкӧдлыны тайӧ уджалӧмлысь тестъяс",
+  "feed.actions.ended": "Помасис",
+  "feed.actions.duration": "Кузта",
+  "feed.actions.running": "мунӧ",
+  "feed.actions.longest": "Петкӧдлӧм уджалӧмъяс пиысь медкузь уджалӧм нюжаліс {duration} ({run}).",
+  "feed.filter.search": "Корсьны уджалӧмъясысь",
+  "feed.filter.all": "ставыс",
+  "feed.filter.event": "Лоӧмтор",
+  "feed.filter.branch": "Ув",
+  "feed.filter.clear": "Весавны фильтръяс",
+  "feed.filter.shown": {
+    "one": "Фильтръяс бӧрын колис {n}.",
+    "other": "Фильтръяс бӧрын колис {n}."
+  },
   "security.source.advisories": "Индӧдъяс",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Код видлалӧм",

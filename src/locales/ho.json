@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ia haere {status}.",
   "feed.anError": "kerere ida",
+  "loader.loading": "Abia noho …",
+  "loader.next": {
+    "one": "Lou abia gabena be sekon {n} murinai",
+    "other": "Lou abia gabena be sekon {n} murinai"
+  },
+  "loader.paused": {
+    "one": "Lou abia gabena be idia rakatania, GitHub ena noinoi idia orea lasi totona; tohotohoa gabena be sekon {n} murinai",
+    "other": "Lou abia gabena be idia rakatania, GitHub ena noinoi idia orea lasi totona; tohotohoa gabena be sekon {n} murinai"
+  },
+  "loader.menu.hint": "kahana idiba kliki, lou abia gabena totona",
+  "loader.menu.title": "Lou abia",
+  "loader.menu.changes": "Idia haidaua gaudia sibona, harihari",
+  "loader.menu.all": "Heau ibounai, harihari",
+  "loader.menu.interval": "Ia sibona ese lou noinoi",
+  "loader.menu.seconds": {
+    "one": "sekon {n} ta ta",
+    "other": "sekon {n} ta ta"
+  },
+  "loader.menu.minutes": {
+    "one": "minit {n} ta ta",
+    "other": "minit {n} ta ta"
+  },
+  "loader.menu.off": "lasi mo",
+  "loader.menu.view": "Inai hahedinaraia, harihari",
+  "loader.menu.cache": "Kes lalonai GitHub edia haere laloa boio",
+  "loader.menu.page": "Pej lou abia",
+  "loader.overview.title": "Abia noho",
+  "loader.overview.running": {
+    "one": "{n} gaukara noho",
+    "other": "{n} gaukara noho"
+  },
+  "loader.overview.none": "Gau ta be abia lasi.",
+  "loader.task.boot": "Gaukara idia bona edia meta duahia noho",
+  "loader.task.view": "{view} laulauna karaia noho",
+  "loader.task.changes": "GitHub henanadai noho dahaka idia haidaua",
+  "loader.task.everything": "GitHub dekenai heau ibounai noia noho",
   "loader.task.artifacts": "Heau #{number} ena gaukara kohu: {done} {total} amo",
+  "loader.task.artifact": "Gaukara kohu {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ia dika: {message}",
+  "feed.actions.pick": "Inai heau ena hetoho ba hahedinaraia",
+  "feed.actions.ended": "Ia ore",
+  "feed.actions.duration": "Nega",
+  "feed.actions.running": "ia heau",
+  "feed.actions.longest": "Heau ia lata herea ia hahedinaraia ese nega {duration} ia abia ({run}).",
+  "feed.filter.search": "Heau idia tahua",
+  "feed.filter.all": "ibounai",
+  "feed.filter.event": "Gau ia vara",
+  "feed.filter.branch": "Rigina",
+  "feed.filter.clear": "Filta idia kokia",
+  "feed.filter.shown": {
+    "one": "Filta murinai {n} ia noho.",
+    "other": "Filta murinai {n} idia noho."
+  },
   "security.source.advisories": "Sisiba",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodi tahua",

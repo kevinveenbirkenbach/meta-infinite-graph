@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} என்று பதிலளித்தது.",
   "feed.anError": "பிழையுடன்",
+  "loader.loading": "ஏற்றப்படுகிறது …",
+  "loader.next": {
+    "one": "அடுத்த புதுப்பிப்பு {n} விநாடியில்",
+    "other": "அடுத்த புதுப்பிப்பு {n} விநாடிகளில்"
+  },
+  "loader.paused": {
+    "one": "GitHub ஒதுக்கீட்டைச் சேமிக்க கடைசி புதுப்பிப்பு தவிர்க்கப்பட்டது; அடுத்த முயற்சி {n} விநாடியில்",
+    "other": "GitHub ஒதுக்கீட்டைச் சேமிக்க கடைசி புதுப்பிப்பு தவிர்க்கப்பட்டது; அடுத்த முயற்சி {n} விநாடிகளில்"
+  },
+  "loader.menu.hint": "மீண்டும் ஏற்றும் விருப்பங்களுக்கு வலது-கிளிக் செய்யவும்",
+  "loader.menu.title": "மீண்டும் ஏற்று",
+  "loader.menu.changes": "மாறியவை மட்டும், இப்போது",
+  "loader.menu.all": "அனைத்து ஓட்டங்களும், இப்போது",
+  "loader.menu.interval": "தானாக மீண்டும் கேள்",
+  "loader.menu.seconds": {
+    "one": "ஒவ்வொரு {n} விநாடிக்கும்",
+    "other": "ஒவ்வொரு {n} விநாடிகளுக்கும்"
+  },
+  "loader.menu.minutes": {
+    "one": "ஒவ்வொரு {n} நிமிடத்துக்கும்",
+    "other": "ஒவ்வொரு {n} நிமிடங்களுக்கும்"
+  },
+  "loader.menu.off": "ஒருபோதும் இல்லை",
+  "loader.menu.view": "இந்தத் தாவல், இப்போது",
+  "loader.menu.cache": "தற்காலிகமாகச் சேமித்த GitHub பதில்களை மற",
+  "loader.menu.page": "பக்கத்தை மீண்டும் ஏற்று",
+  "loader.overview.title": "ஏற்றுதல்",
+  "loader.overview.running": {
+    "one": "{n} இயங்குகிறது",
+    "other": "{n} இயங்குகின்றன"
+  },
+  "loader.overview.none": "இதுவரை எதுவும் ஏற்றப்படவில்லை.",
+  "loader.task.boot": "பாத்திரங்களையும் அவற்றின் மெட்டாவையும் படிக்கிறது",
+  "loader.task.view": "{view} வரையப்படுகிறது",
+  "loader.task.changes": "என்ன மாறியது என GitHub-இடம் கேட்கிறது",
+  "loader.task.everything": "அனைத்து ஓட்டங்களையும் GitHub-இடம் கேட்கிறது",
   "loader.task.artifacts": "ஓட்டம் #{number} இன் ஆர்ட்டிஃபாக்ட்கள்: {total} இல் {done}",
+  "loader.task.artifact": "ஆர்ட்டிஃபாக்ட் {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "தோல்வி: {message}",
+  "feed.actions.pick": "இந்த ஓட்டத்தின் சோதனைகளைக் காட்டு",
+  "feed.actions.ended": "முடிந்தது",
+  "feed.actions.duration": "கால அளவு",
+  "feed.actions.running": "இயங்குகிறது",
+  "feed.actions.longest": "காட்டப்பட்டுள்ள மிக நீண்ட ஓட்டம் {duration} ({run}) எடுத்தது.",
+  "feed.filter.search": "ஓட்டங்களில் தேடு",
+  "feed.filter.all": "அனைத்தும்",
+  "feed.filter.event": "நிகழ்வு",
+  "feed.filter.branch": "கிளை",
+  "feed.filter.clear": "வடிகட்டிகளை அழி",
+  "feed.filter.shown": {
+    "one": "வடிகட்டிகளுக்குப் பிறகு {n} மீதமுள்ளது.",
+    "other": "வடிகட்டிகளுக்குப் பிறகு {n} மீதமுள்ளன."
+  },
   "security.source.advisories": "பாதுகாப்பு அறிவுறுத்தல்கள்",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "குறியீட்டு ஸ்கேனிங்",

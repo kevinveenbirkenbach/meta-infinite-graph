@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub-მა უპასუხა {status}.",
   "feed.anError": "შეცდომით",
+  "loader.loading": "იტვირთება …",
+  "loader.next": {
+    "one": "შემდეგი განახლება {n} წამში",
+    "other": "შემდეგი განახლება {n} წამში"
+  },
+  "loader.paused": {
+    "one": "ბოლო განახლება გამოტოვდა GitHub-ის ლიმიტის დასაზოგად; შემდეგი ცდა {n} წამში",
+    "other": "ბოლო განახლება გამოტოვდა GitHub-ის ლიმიტის დასაზოგად; შემდეგი ცდა {n} წამში"
+  },
+  "loader.menu.hint": "მარჯვენა დაწკაპუნება გადატვირთვის ვარიანტებისთვის",
+  "loader.menu.title": "გადატვირთვა",
+  "loader.menu.changes": "მხოლოდ შეცვლილი, ახლავე",
+  "loader.menu.all": "ყველა გაშვება, ახლავე",
+  "loader.menu.interval": "ავტომატური ხელახალი მოთხოვნა",
+  "loader.menu.seconds": {
+    "one": "ყოველ {n} წამში",
+    "other": "ყოველ {n} წამში"
+  },
+  "loader.menu.minutes": {
+    "one": "ყოველ {n} წუთში",
+    "other": "ყოველ {n} წუთში"
+  },
+  "loader.menu.off": "არასოდეს",
+  "loader.menu.view": "ეს ჩანართი, ახლავე",
+  "loader.menu.cache": "ქეშირებული GitHub პასუხების დავიწყება",
+  "loader.menu.page": "გვერდის გადატვირთვა",
+  "loader.overview.title": "იტვირთება",
+  "loader.overview.running": {
+    "one": "{n} მიმდინარეობს",
+    "other": "{n} მიმდინარეობს"
+  },
+  "loader.overview.none": "ჯერ არაფერი ჩატვირთულა.",
+  "loader.task.boot": "როლებისა და მათი მეტას წაკითხვა",
+  "loader.task.view": "{view}-ის დახატვა",
+  "loader.task.changes": "GitHub-ს ვეკითხებით, რა შეიცვალა",
+  "loader.task.everything": "GitHub-იდან ყველა გაშვების მოთხოვნა",
   "loader.task.artifacts": "გაშვება #{number}-ის არტეფაქტები: {done} {total}-დან",
+  "loader.task.artifact": "არტეფაქტი {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ვერ მოხერხდა: {message}",
+  "feed.actions.pick": "ამ გაშვების ტესტების ჩვენება",
+  "feed.actions.ended": "დასრულდა",
+  "feed.actions.duration": "ხანგრძლივობა",
+  "feed.actions.running": "მიმდინარეობს",
+  "feed.actions.longest": "ნაჩვენები ყველაზე ხანგრძლივი გაშვება გაგრძელდა {duration} ({run}).",
+  "feed.filter.search": "გაშვებებში ძიება",
+  "feed.filter.all": "ყველა",
+  "feed.filter.event": "მოვლენა",
+  "feed.filter.branch": "ტოტი",
+  "feed.filter.clear": "ფილტრების გასუფთავება",
+  "feed.filter.shown": {
+    "one": "ფილტრების შემდეგ დარჩა {n}.",
+    "other": "ფილტრების შემდეგ დარჩა {n}."
+  },
   "security.source.advisories": "ბიულეტენები",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "კოდის სკანირება",

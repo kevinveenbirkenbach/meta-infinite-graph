@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ombohovái {status}.",
   "feed.anError": "peteĩ jejavy ndive",
+  "loader.loading": "Oñemyenyhẽ …",
+  "loader.next": {
+    "one": "Ñembopyahu upeiguáva {n} aravoʼive rire",
+    "other": "Ñembopyahu upeiguáva {n} aravoʼive rire"
+  },
+  "loader.paused": {
+    "one": "Ñembopyahu pahaguéva ojepoi ani hag̃ua opa GitHub jerure aravo pegua; ñehaʼã upeiguáva {n} aravoʼive rire",
+    "other": "Ñembopyahu pahaguéva ojepoi ani hag̃ua opa GitHub jerure aravo pegua; ñehaʼã upeiguáva {n} aravoʼive rire"
+  },
+  "loader.menu.hint": "ejopy akatúa gotyo reiporavo hag̃ua myenyhẽjey",
+  "loader.menu.title": "Emyenyhẽjey",
+  "loader.menu.changes": "Oñemoambuéva añoite, koʼág̃a",
+  "loader.menu.all": "Opaite ñemboguata, koʼág̃a",
+  "loader.menu.interval": "Eporandujey ijehegui",
+  "loader.menu.seconds": {
+    "one": "opa {n} aravoʼive",
+    "other": "opa {n} aravoʼive"
+  },
+  "loader.menu.minutes": {
+    "one": "opa {n} aravoʼi",
+    "other": "opa {n} aravoʼi"
+  },
+  "loader.menu.off": "arakaʼeve",
+  "loader.menu.view": "Ko jehechauka, koʼág̃a",
+  "loader.menu.cache": "Ehesarái GitHub mbohovái caché-pe oĩva",
+  "loader.menu.page": "Emyenyhẽjey kuatiarogue",
+  "loader.overview.title": "Oñemyenyhẽ",
+  "loader.overview.running": {
+    "one": "{n} oñemboguata hína",
+    "other": "{n} oñemboguata hína"
+  },
+  "loader.overview.none": "Ndaipóri gueteri mbaʼeve oñemyenyhẽva.",
+  "loader.task.boot": "Oñemoñeʼẽ rolkuéra ha imeta",
+  "loader.task.view": "Oñembohaʼanga {view}",
+  "loader.task.changes": "Oñeporandu GitHub-pe mbaʼépa oñemoambue",
+  "loader.task.everything": "Ojerure GitHub-pe opaite ñemboguata",
   "loader.task.artifacts": "Artefacto ñemboguata #{number} pegua: {done} {total} apytégui",
+  "loader.task.artifact": "Artefacto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ndoikói: {message}",
+  "feed.actions.pick": "Ehechauka ko ñemboguata ñehaʼãkuéra",
+  "feed.actions.ended": "Opa",
+  "feed.actions.duration": "Aravo pukukue",
+  "feed.actions.running": "oñemboguata hína",
+  "feed.actions.longest": "Ñemboguata ipukuvéva ojehechaukáva ogueraha {duration} ({run}).",
+  "feed.filter.search": "Eheka ñemboguata ryepýpe",
+  "feed.filter.all": "opavave",
+  "feed.filter.event": "Mbaʼe ojehúva",
+  "feed.filter.branch": "Rakã",
+  "feed.filter.clear": "Emopotĩ yrupẽkuéra",
+  "feed.filter.shown": {
+    "one": "Opyta {n} yrupẽ rire.",
+    "other": "Opyta {n} yrupẽ rire."
+  },
   "security.source.advisories": "Momarandu tekorosãre",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Código ñehesaʼỹijo",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub bersiv da: {status}.",
   "feed.anError": "bi çewtiyekê",
+  "loader.loading": "Tê barkirin …",
+  "loader.next": {
+    "one": "Nûkirina din di {n} çirkeyê de",
+    "other": "Nûkirina din di {n} çirkeyan de"
+  },
+  "loader.paused": {
+    "one": "Nûkirina dawî hat derbaskirin da ku kotaya GitHub were parastin; hewldana din di {n} çirkeyê de",
+    "other": "Nûkirina dawî hat derbaskirin da ku kotaya GitHub were parastin; hewldana din di {n} çirkeyan de"
+  },
+  "loader.menu.hint": "ji bo vebijarkên nûkirinê klîka rastê bike",
+  "loader.menu.title": "Ji nû ve bar bike",
+  "loader.menu.changes": "Tenê yên guherîne, niha",
+  "loader.menu.all": "Hemû xebitandin, niha",
+  "loader.menu.interval": "Bixweber dîsa bipirse",
+  "loader.menu.seconds": {
+    "one": "her {n} çirkeyê",
+    "other": "her {n} çirkeyan"
+  },
+  "loader.menu.minutes": {
+    "one": "her {n} deqeyê",
+    "other": "her {n} deqeyan"
+  },
+  "loader.menu.off": "qet",
+  "loader.menu.view": "Ev dîmen, niha",
+  "loader.menu.cache": "Bersivên GitHub ên di cache de ji bîr bike",
+  "loader.menu.page": "Rûpelê ji nû ve bar bike",
+  "loader.overview.title": "Tê barkirin",
+  "loader.overview.running": {
+    "one": "{n} dixebite",
+    "other": "{n} dixebitin"
+  },
+  "loader.overview.none": "Hêj tiştek nehatiye barkirin.",
+  "loader.task.boot": "Rol û meta ya wan tên xwendin",
+  "loader.task.view": "{view} tê xêzkirin",
+  "loader.task.changes": "Ji GitHub tê pirsîn ka çi guherî",
+  "loader.task.everything": "Ji GitHub hemû xebitandin tên xwestin",
   "loader.task.artifacts": "Artefaktên xebitandina #{number}: {done} ji {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "bi ser neket: {message}",
+  "feed.actions.pick": "Ceribandinên vê xebitandinê nîşan bide",
+  "feed.actions.ended": "Qediya",
+  "feed.actions.duration": "Dirêjahî",
+  "feed.actions.running": "didome",
+  "feed.actions.longest": "Xebitandina herî dirêj a hatî nîşandan {duration} dom kir ({run}).",
+  "feed.filter.search": "Di xebitandinan de bigere",
+  "feed.filter.all": "hemû",
+  "feed.filter.event": "Bûyer",
+  "feed.filter.branch": "Şax",
+  "feed.filter.clear": "Parzûnan paqij bike",
+  "feed.filter.shown": {
+    "one": "Piştî parzûnan {n} ma.",
+    "other": "Piştî parzûnan {n} man."
+  },
   "security.source.advisories": "Agahdariyên ewlehiyê",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Skankirina kodê",

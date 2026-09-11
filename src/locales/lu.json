@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yalondolola {status}.",
   "feed.anError": "na kilubo",
+  "loader.loading": "Kuleta …",
+  "loader.next": {
+    "one": "Kuleta monka kukwabo mu sekunda {n}",
+    "other": "Kuleta monka kukwabo mu bisekunda {n}"
+  },
+  "loader.paused": {
+    "one": "Kuleta monka kwa mfulo kwapitwa mwanda wa kulama bipangulwa bya GitHub; kweseka kukwabo mu sekunda {n}",
+    "other": "Kuleta monka kwa mfulo kwapitwa mwanda wa kulama bipangulwa bya GitHub; kweseka kukwabo mu bisekunda {n}"
+  },
+  "loader.menu.hint": "kanda ku lulyo mwanda wa kutonga muswelo wa kuleta monka",
+  "loader.menu.title": "Kuleta monka",
+  "loader.menu.changes": "Enka byashinta, pano",
+  "loader.menu.all": "Kwendeja konso, pano",
+  "loader.menu.interval": "Kwipangula monka abe bunka",
+  "loader.menu.seconds": {
+    "one": "pa sekunda {n} yonso",
+    "other": "pa bisekunda {n} byonso"
+  },
+  "loader.menu.minutes": {
+    "one": "pa minite {n} yonso",
+    "other": "pa baminite {n} bonso"
+  },
+  "loader.menu.off": "nansha dimo",
+  "loader.menu.view": "Kino kimweneko, pano",
+  "loader.menu.cache": "Vulamo malondololo a GitHub alamwe",
+  "loader.menu.page": "Leta monka paje",
+  "loader.overview.title": "Kuleta",
+  "loader.overview.running": {
+    "one": "{n} ukidi kwendeja",
+    "other": "{n} bikidi kwendeja"
+  },
+  "loader.overview.none": "Kintu nansha kimo kekyaletwapo.",
+  "loader.task.boot": "Kutanga mingilo ne meta yayo",
+  "loader.task.view": "Kufunda {view}",
+  "loader.task.changes": "Kwipangula GitHub byashinta",
+  "loader.task.everything": "Kwipangula GitHub kwendeja konso",
   "loader.task.artifacts": "Artefakte ya kwendeja #{number}: {done} pa {total}",
+  "loader.task.artifact": "Artefakte {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "kwakankalwa: {message}",
+  "feed.actions.pick": "Mwesha matompo a kuno kwendeja",
+  "feed.actions.ended": "Kyapwile",
+  "feed.actions.duration": "Bule bwa kitatyi",
+  "feed.actions.running": "ukidi kwendeja",
+  "feed.actions.longest": "Kwendeja kwa bule bukatampe kumwesibwe kwasendele {duration} ({run}).",
+  "feed.filter.search": "Kimba kwendeja",
+  "feed.filter.all": "byonso",
+  "feed.filter.event": "Mwanda",
+  "feed.filter.branch": "Musampi",
+  "feed.filter.clear": "Katula bisenselo",
+  "feed.filter.shown": {
+    "one": "Kwendeja {n} kushele panyuma pa bisenselo.",
+    "other": "Kwendeja {n} kushele panyuma pa bisenselo."
+  },
   "security.source.advisories": "Malombolo",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kutala kode",

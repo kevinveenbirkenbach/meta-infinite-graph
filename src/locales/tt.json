@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} дип җавап бирде.",
   "feed.anError": "хата белән",
+  "loader.loading": "Йөкләнә …",
+  "loader.next": {
+    "one": "Киләсе яңарту {n} секундтан соң",
+    "other": "Киләсе яңарту {n} секундтан соң"
+  },
+  "loader.paused": {
+    "one": "GitHub квотасын саклау өчен соңгы яңарту төшереп калдырылды; киләсе омтылыш {n} секундтан соң",
+    "other": "GitHub квотасын саклау өчен соңгы яңарту төшереп калдырылды; киләсе омтылыш {n} секундтан соң"
+  },
+  "loader.menu.hint": "яңадан йөкләү параметрлары өчен уң төймә белән басыгыз",
+  "loader.menu.title": "Яңадан йөкләү",
+  "loader.menu.changes": "Үзгәргәне генә, хәзер",
+  "loader.menu.all": "Барлык җибәрелешләр, хәзер",
+  "loader.menu.interval": "Автоматик рәвештә кабат сорау",
+  "loader.menu.seconds": {
+    "one": "һәр {n} секунд саен",
+    "other": "һәр {n} секунд саен"
+  },
+  "loader.menu.minutes": {
+    "one": "һәр {n} минут саен",
+    "other": "һәр {n} минут саен"
+  },
+  "loader.menu.off": "беркайчан да",
+  "loader.menu.view": "Бу кыстыргыч, хәзер",
+  "loader.menu.cache": "Кэштагы GitHub җавапларын онытырга",
+  "loader.menu.page": "Битне яңадан йөкләү",
+  "loader.overview.title": "Йөкләү",
+  "loader.overview.running": {
+    "one": "{n} бара",
+    "other": "{n} бара"
+  },
+  "loader.overview.none": "Әлегә бернәрсә дә йөкләнмәде.",
+  "loader.task.boot": "Рольләр һәм аларның метасы укыла",
+  "loader.task.view": "{view} ясала",
+  "loader.task.changes": "GitHub'тан нәрсә үзгәргәне сорала",
+  "loader.task.everything": "GitHub'тан барлык җибәрелешләр сорала",
   "loader.task.artifacts": "#{number} җибәрелеш артефактлары: {total} арасыннан {done}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "уңышсыз: {message}",
+  "feed.actions.pick": "Бу җибәрелешнең тестларын күрсәтү",
+  "feed.actions.ended": "Тәмамланды",
+  "feed.actions.duration": "Дәвамлылык",
+  "feed.actions.running": "бара",
+  "feed.actions.longest": "Күрсәтелгән иң озын җибәрелеш {duration} ({run}) дәвам итте.",
+  "feed.filter.search": "Җибәрелешләрдән эзләү",
+  "feed.filter.all": "барысы",
+  "feed.filter.event": "Вакыйга",
+  "feed.filter.branch": "Тармак",
+  "feed.filter.clear": "Фильтрларны чистарту",
+  "feed.filter.shown": {
+    "one": "Фильтрлардан соң {n} калды.",
+    "other": "Фильтрлардан соң {n} калды."
+  },
   "security.source.advisories": "Куркынычсызлык белдерүләре",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодны тикшерү",

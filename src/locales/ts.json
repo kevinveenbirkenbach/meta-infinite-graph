@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yi hlamurile {status}.",
   "feed.anError": "hi xihoxo",
+  "loader.loading": "Ku layicha …",
+  "loader.next": {
+    "one": "Ku pfuxeta loku landzelaka endzhaku ka sekoni ya {n}",
+    "other": "Ku pfuxeta loku landzelaka endzhaku ka tisekoni ta {n}"
+  },
+  "loader.paused": {
+    "one": "Ku pfuxeta ko hetelela ku tluriwile ku hlayisa mpimo wa GitHub; ku ringeta loku landzelaka endzhaku ka sekoni ya {n}",
+    "other": "Ku pfuxeta ko hetelela ku tluriwile ku hlayisa mpimo wa GitHub; ku ringeta loku landzelaka endzhaku ka tisekoni ta {n}"
+  },
+  "loader.menu.hint": "tsindzela hi le xinene ku kuma swihlawulekisi swa ku layicha nakambe",
+  "loader.menu.title": "Layicha nakambe",
+  "loader.menu.changes": "Leswi cinciweke ntsena, sweswi",
+  "loader.menu.all": "Ku tirha hinkwako, sweswi",
+  "loader.menu.interval": "Vutisa nakambe hi ku tiendlekela",
+  "loader.menu.seconds": {
+    "one": "sekoni yin'wana na yin'wana ya {n}",
+    "other": "tisekoni tin'wana na tin'wana ta {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "minete yin'wana na yin'wana ya {n}",
+    "other": "timinete tin'wana na tin'wana ta {n}"
+  },
+  "loader.menu.off": "nikatsongo",
+  "loader.menu.view": "Thebe leyi, sweswi",
+  "loader.menu.cache": "Rivala tinhlamulo ta GitHub leti hlayisiweke eka cache",
+  "loader.menu.page": "Layicha tluka nakambe",
+  "loader.overview.title": "Ku layicha",
+  "loader.overview.running": {
+    "one": "{n} ka ha tirha",
+    "other": "{n} ka ha tirha"
+  },
+  "loader.overview.none": "Ku hava lexi layichiweke ku fikela sweswi.",
+  "loader.task.boot": "Ku hlaya mintirho na meta ya yona",
+  "loader.task.view": "Ku dirowa {view}",
+  "loader.task.changes": "Ku vutisa GitHub leswi cinciweke",
+  "loader.task.everything": "Ku kombela GitHub ku tirha hinkwako",
   "loader.task.artifacts": "Swiendliwa swa ku tirha #{number}: {done} eka {total}",
+  "loader.task.artifact": "Xiendliwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "swi tsandzekile: {message}",
+  "feed.actions.pick": "Kombisa swikambelo swa ku tirha loku",
+  "feed.actions.ended": "Herile",
+  "feed.actions.duration": "Vulehi bya nkarhi",
+  "feed.actions.running": "ka ha tirha",
+  "feed.actions.longest": "Ku tirha loku leheke ngopfu loku kombisiweke ku teke {duration} ({run}).",
+  "feed.filter.search": "Lava eka ku tirha",
+  "feed.filter.all": "hinkwaswo",
+  "feed.filter.event": "Xiendlakalo",
+  "feed.filter.branch": "Rhavi",
+  "feed.filter.clear": "Susa tisefa",
+  "feed.filter.shown": {
+    "one": "Ku sale {n} endzhaku ka ku sefa.",
+    "other": "Ku sale {n} endzhaku ka ku sefa."
+  },
   "security.source.advisories": "Switsundzuxo",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ku kambela khodi",

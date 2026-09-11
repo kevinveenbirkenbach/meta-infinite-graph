@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub buae {status}.",
   "feed.anError": "ne mfomso",
+  "loader.loading": "Ɛreba …",
+  "loader.next": {
+    "one": "Foforɔyɛ a edi hɔ wɔ sɛkɛn {n} mu",
+    "other": "Foforɔyɛ a edi hɔ wɔ sɛkɛn {n} mu"
+  },
+  "loader.paused": {
+    "one": "Wɔtoo foforɔyɛ a etwa to no mu sɛnea GitHub abisa no bɛkora; mmɔden a edi hɔ wɔ sɛkɛn {n} mu",
+    "other": "Wɔtoo foforɔyɛ a etwa to no mu sɛnea GitHub abisa no bɛkora; mmɔden a edi hɔ wɔ sɛkɛn {n} mu"
+  },
+  "loader.menu.hint": "mia nifa so hwɛ akwan a wɔfa so san bɔ",
+  "loader.menu.title": "San bɔ",
+  "loader.menu.changes": "Nea asesa nko ara, seisei",
+  "loader.menu.all": "Mmirika nyinaa, seisei",
+  "loader.menu.interval": "San bisa ankasa",
+  "loader.menu.seconds": {
+    "one": "sɛkɛn {n} biara",
+    "other": "sɛkɛn {n} biara"
+  },
+  "loader.menu.minutes": {
+    "one": "simma {n} biara",
+    "other": "simma {n} biara"
+  },
+  "loader.menu.off": "mmisa da",
+  "loader.menu.view": "Nhwɛe yi, seisei",
+  "loader.menu.cache": "Werɛ mfi GitHub mmuae a wɔakora wɔ cache mu no",
+  "loader.menu.page": "San bɔ krataafa no",
+  "loader.overview.title": "Ɛreba",
+  "loader.overview.running": {
+    "one": "{n} ɛretu mmirika",
+    "other": "{n} ɛretu mmirika"
+  },
+  "loader.overview.none": "Biribiara mmaeɛ da.",
+  "loader.task.boot": "Ɛrekenkan dwumadi ne wɔn meta",
+  "loader.task.view": "Ɛreyɛ {view} mfonini",
+  "loader.task.changes": "Ɛrebisa GitHub nea asesa",
+  "loader.task.everything": "Ɛrebisa GitHub mmirika nyinaa",
   "loader.task.artifacts": "Mmirika #{number} adeyɛde: {done} wɔ {total} mu",
+  "loader.task.artifact": "Adeyɛde {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ankɔ yie: {message}",
+  "feed.actions.pick": "Kyerɛ mmirika yi nsɔhwɛ",
+  "feed.actions.ended": "Ɛwiee",
+  "feed.actions.duration": "Bere tenten",
+  "feed.actions.running": "ɛretu mmirika",
+  "feed.actions.longest": "Mmirika a ɛware sen biara a wɔada no adi no dii bere {duration} ({run}).",
+  "feed.filter.search": "Hwehwɛ mmirika no mu",
+  "feed.filter.all": "ne nyinaa",
+  "feed.filter.event": "Asɛm a esii",
+  "feed.filter.branch": "Dubaa",
+  "feed.filter.clear": "Pepa nyiyimu no",
+  "feed.filter.shown": {
+    "one": "{n} na aka wɔ nyiyimu akyi.",
+    "other": "{n} na aka wɔ nyiyimu akyi."
+  },
   "security.source.advisories": "Afotusɛm",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Koodu hwehwɛ",

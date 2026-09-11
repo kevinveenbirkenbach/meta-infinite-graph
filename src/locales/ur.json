@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub نے {status} جواب دیا۔",
   "feed.anError": "خرابی کے ساتھ",
+  "loader.loading": "لوڈ ہو رہا ہے …",
+  "loader.next": {
+    "one": "اگلا ریفریش {n} سیکنڈ میں",
+    "other": "اگلا ریفریش {n} سیکنڈ میں"
+  },
+  "loader.paused": {
+    "one": "GitHub کوٹہ بچانے کے لیے پچھلا ریفریش چھوڑ دیا گیا؛ اگلی کوشش {n} سیکنڈ میں",
+    "other": "GitHub کوٹہ بچانے کے لیے پچھلا ریفریش چھوڑ دیا گیا؛ اگلی کوشش {n} سیکنڈ میں"
+  },
+  "loader.menu.hint": "دوبارہ لوڈ کے اختیارات کے لیے دایاں کلک کریں",
+  "loader.menu.title": "دوبارہ لوڈ کریں",
+  "loader.menu.changes": "صرف جو بدلا، ابھی",
+  "loader.menu.all": "تمام رنز، ابھی",
+  "loader.menu.interval": "خودکار طور پر دوبارہ پوچھیں",
+  "loader.menu.seconds": {
+    "one": "ہر {n} سیکنڈ بعد",
+    "other": "ہر {n} سیکنڈ بعد"
+  },
+  "loader.menu.minutes": {
+    "one": "ہر {n} منٹ بعد",
+    "other": "ہر {n} منٹ بعد"
+  },
+  "loader.menu.off": "کبھی نہیں",
+  "loader.menu.view": "یہ ٹیب، ابھی",
+  "loader.menu.cache": "کیش شدہ GitHub جوابات بھول جائیں",
+  "loader.menu.page": "صفحہ دوبارہ لوڈ کریں",
+  "loader.overview.title": "لوڈ ہو رہا ہے",
+  "loader.overview.running": {
+    "one": "{n} جاری",
+    "other": "{n} جاری"
+  },
+  "loader.overview.none": "ابھی تک کچھ لوڈ نہیں ہوا۔",
+  "loader.task.boot": "کردار اور ان کا میٹا پڑھا جا رہا ہے",
+  "loader.task.view": "{view} بنایا جا رہا ہے",
+  "loader.task.changes": "GitHub سے پوچھا جا رہا ہے کہ کیا بدلا",
+  "loader.task.everything": "GitHub سے تمام رنز مانگے جا رہے ہیں",
   "loader.task.artifacts": "رن #{number} کے آرٹیفیکٹس: {total} میں سے {done}",
+  "loader.task.artifact": "آرٹیفیکٹ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ناکام: {message}",
+  "feed.actions.pick": "اس رن کے ٹیسٹ دکھائیں",
+  "feed.actions.ended": "اختتام",
+  "feed.actions.duration": "دورانیہ",
+  "feed.actions.running": "جاری",
+  "feed.actions.longest": "دکھائے گئے سب سے طویل رن میں {duration} ({run}) لگے۔",
+  "feed.filter.search": "رنز میں تلاش کریں",
+  "feed.filter.all": "سب",
+  "feed.filter.event": "ایونٹ",
+  "feed.filter.branch": "برانچ",
+  "feed.filter.clear": "فلٹرز صاف کریں",
+  "feed.filter.shown": {
+    "one": "فلٹرز کے بعد {n} باقی ہے۔",
+    "other": "فلٹرز کے بعد {n} باقی ہیں۔"
+  },
   "security.source.advisories": "ایڈوائزریز",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "کوڈ اسکیننگ",

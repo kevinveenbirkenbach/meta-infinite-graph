@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub kiggutiruq {status}.",
   "feed.anError": "tammaŋniqłuni",
+  "loader.loading": "Tigusiruq …",
+  "loader.next": {
+    "one": "Utiqtitchiniq aglaan {n} sikunmi",
+    "other": "Utiqtitchiniq aglaan {n} sikunni"
+  },
+  "loader.paused": {
+    "one": "Kiŋuliq utiqtitchiniq qaaŋiqsuġaa GitHub-ŋum apiqsruutiŋit sassami iḷiŋaruat nakuuŋniaġlugich; aglaan savaktitchiniq {n} sikunmi",
+    "other": "Kiŋuliq utiqtitchiniq qaaŋiqsuġaa GitHub-ŋum apiqsruutiŋit sassami iḷiŋaruat nakuuŋniaġlugich; aglaan savaktitchiniq {n} sikunni"
+  },
+  "loader.menu.hint": "taliqpiŋmun tuugiñ utiqtitchiniġmun piksrat",
+  "loader.menu.title": "Utiqtitchiñ",
+  "loader.menu.changes": "Allaŋŋuqtuat kisiŋisa, pakma",
+  "loader.menu.all": "Savaktitchiniit iluqaisa, pakma",
+  "loader.menu.interval": "Apiqsruġiñ tuvlilugu iŋmiŋnik",
+  "loader.menu.seconds": {
+    "one": "sikun {n} tamaitna",
+    "other": "sikunit {n} tamaitna"
+  },
+  "loader.menu.minutes": {
+    "one": "minit {n} tamaitna",
+    "other": "minitit {n} tamaitna"
+  },
+  "loader.menu.off": "qaŋaġluunniiñ",
+  "loader.menu.view": "Una qiñiġusiq, pakma",
+  "loader.menu.cache": "Puiġuġiñ GitHub kiuŋit iḷiġaġmi",
+  "loader.menu.page": "Utiqtitchiñ makpiġaaq",
+  "loader.overview.title": "Tigusiruq",
+  "loader.overview.running": {
+    "one": "{n} savaktuq",
+    "other": "{n} savaktut"
+  },
+  "loader.overview.none": "Suli sumik tigusiqanngitchuq.",
+  "loader.task.boot": "Taiguaqtuq savaanik meta-ŋisiġlu",
+  "loader.task.view": "{view} titiqqiqtuq",
+  "loader.task.changes": "GitHub apiqsruqtuq sumik allaŋŋuqtuanik",
+  "loader.task.everything": "GitHub apiqsruqtuq savaktitchiniit iluqaisa",
   "loader.task.artifacts": "Savaktitchiniq #{number} sanaaŋi: {done} {total}-mit",
+  "loader.task.artifact": "Sanaaq {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "piyuŋŋitchuq: {message}",
+  "feed.actions.pick": "Tautuktitchiñ uuktuutit savaktitchiniġmi uvani",
+  "feed.actions.ended": "Nuŋuttuaq",
+  "feed.actions.duration": "Sivisutigiŋa",
+  "feed.actions.running": "savaktuq",
+  "feed.actions.longest": "Savaktitchiniq sivisunŋaaqtuaq tautuktitaq sivisutigiŋa {duration} ({run}).",
+  "feed.filter.search": "Ivaqliñ savaktitchiŋich",
+  "feed.filter.all": "iḷuqaan",
+  "feed.filter.event": "Pisuaq",
+  "feed.filter.branch": "Avguun",
+  "feed.filter.clear": "Piiġuŋ aviktuutit",
+  "feed.filter.shown": {
+    "one": "{n} iñiqsuq aviktuutit kiŋuaġni.",
+    "other": "{n} iñiqsut aviktuutit kiŋuaġni."
+  },
   "security.source.advisories": "Uqallautit",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kuut qiñiqtuġun",

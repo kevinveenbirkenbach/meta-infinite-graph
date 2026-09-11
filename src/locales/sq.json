@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub u përgjigj {status}.",
   "feed.anError": "me një gabim",
+  "loader.loading": "Po ngarkohet …",
+  "loader.next": {
+    "one": "Rifreskimi i radhës pas {n} sekonde",
+    "other": "Rifreskimi i radhës pas {n} sekondash"
+  },
+  "loader.paused": {
+    "one": "Rifreskimi i fundit u anashkalua për të kursyer kuotën e GitHub-it; prova e radhës pas {n} sekonde",
+    "other": "Rifreskimi i fundit u anashkalua për të kursyer kuotën e GitHub-it; prova e radhës pas {n} sekondash"
+  },
+  "loader.menu.hint": "klikim i djathtë për opsionet e ringarkimit",
+  "loader.menu.title": "Ringarko",
+  "loader.menu.changes": "Vetëm çfarë ndryshoi, tani",
+  "loader.menu.all": "Të gjitha ekzekutimet, tani",
+  "loader.menu.interval": "Pyet sërish automatikisht",
+  "loader.menu.seconds": {
+    "one": "çdo {n} sekondë",
+    "other": "çdo {n} sekonda"
+  },
+  "loader.menu.minutes": {
+    "one": "çdo {n} minutë",
+    "other": "çdo {n} minuta"
+  },
+  "loader.menu.off": "kurrë",
+  "loader.menu.view": "Kjo skedë, tani",
+  "loader.menu.cache": "Harro përgjigjet e ruajtura të GitHub-it",
+  "loader.menu.page": "Ringarko faqen",
+  "loader.overview.title": "Ngarkimi",
+  "loader.overview.running": {
+    "one": "{n} në ekzekutim",
+    "other": "{n} në ekzekutim"
+  },
+  "loader.overview.none": "Ende nuk është ngarkuar asgjë.",
+  "loader.task.boot": "Po lexohen rolet dhe metadatat e tyre",
+  "loader.task.view": "Po vizatohet {view}",
+  "loader.task.changes": "Po pyetet GitHub se çfarë ndryshoi",
+  "loader.task.everything": "Po kërkohen nga GitHub të gjitha ekzekutimet",
   "loader.task.artifacts": "Artefaktet e ekzekutimit #{number}: {done} nga {total}",
+  "loader.task.artifact": "Artefakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "dështoi: {message}",
+  "feed.actions.pick": "Shfaq testet e këtij ekzekutimi",
+  "feed.actions.ended": "Përfunduar",
+  "feed.actions.duration": "Kohëzgjatja",
+  "feed.actions.running": "në ekzekutim",
+  "feed.actions.longest": "Ekzekutimi më i gjatë i shfaqur zgjati {duration} ({run}).",
+  "feed.filter.search": "Kërko në ekzekutime",
+  "feed.filter.all": "të gjitha",
+  "feed.filter.event": "Ngjarja",
+  "feed.filter.branch": "Dega",
+  "feed.filter.clear": "Pastro filtrat",
+  "feed.filter.shown": {
+    "one": "Pas filtrave mbetet {n}.",
+    "other": "Pas filtrave mbeten {n}."
+  },
   "security.source.advisories": "Këshillat e sigurisë",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Skanimi i kodit",

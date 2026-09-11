@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub atbildēja {status}.",
   "feed.anError": "ar kļūdu",
+  "loader.loading": "Ielādē …",
+  "loader.next": {
+    "zero": "Nākamā atsvaidzināšana pēc {n} sekundēm",
+    "one": "Nākamā atsvaidzināšana pēc {n} sekundes",
+    "other": "Nākamā atsvaidzināšana pēc {n} sekundēm"
+  },
+  "loader.paused": {
+    "zero": "Pēdējā atsvaidzināšana tika izlaista, lai taupītu GitHub limitu; nākamais mēģinājums pēc {n} sekundēm",
+    "one": "Pēdējā atsvaidzināšana tika izlaista, lai taupītu GitHub limitu; nākamais mēģinājums pēc {n} sekundes",
+    "other": "Pēdējā atsvaidzināšana tika izlaista, lai taupītu GitHub limitu; nākamais mēģinājums pēc {n} sekundēm"
+  },
+  "loader.menu.hint": "ar peles labo pogu atveriet pārlādes opcijas",
+  "loader.menu.title": "Pārlādēt",
+  "loader.menu.changes": "Tikai to, kas mainījies, tagad",
+  "loader.menu.all": "Visas palaišanas, tagad",
+  "loader.menu.interval": "Jautāt vēlreiz automātiski",
+  "loader.menu.seconds": {
+    "zero": "ik pēc {n} sekundēm",
+    "one": "ik pēc {n} sekundes",
+    "other": "ik pēc {n} sekundēm"
+  },
+  "loader.menu.minutes": {
+    "zero": "ik pēc {n} minūtēm",
+    "one": "ik pēc {n} minūtes",
+    "other": "ik pēc {n} minūtēm"
+  },
+  "loader.menu.off": "nekad",
+  "loader.menu.view": "Šo skatu, tagad",
+  "loader.menu.cache": "Aizmirst kešatmiņā saglabātās GitHub atbildes",
+  "loader.menu.page": "Pārlādēt lapu",
+  "loader.overview.title": "Ielādē",
+  "loader.overview.running": {
+    "zero": "{n} notiek",
+    "one": "{n} notiek",
+    "other": "{n} notiek"
+  },
+  "loader.overview.none": "Vēl nekas nav ielādēts.",
+  "loader.task.boot": "Nolasa lomas un to metadatus",
+  "loader.task.view": "Zīmē {view}",
+  "loader.task.changes": "Jautā GitHub, kas mainījies",
+  "loader.task.everything": "Pieprasa GitHub visas palaišanas",
   "loader.task.artifacts": "Palaišanas #{number} artefakti: {done} no {total}",
+  "loader.task.artifact": "Artefakts {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "neizdevās: {message}",
+  "feed.actions.pick": "Rādīt šīs palaišanas testus",
+  "feed.actions.ended": "Beigts",
+  "feed.actions.duration": "Ilgums",
+  "feed.actions.running": "notiek",
+  "feed.actions.longest": "Ilgākā parādītā palaišana ilga {duration} ({run}).",
+  "feed.filter.search": "Meklēt palaišanas",
+  "feed.filter.all": "visi",
+  "feed.filter.event": "Notikums",
+  "feed.filter.branch": "Zars",
+  "feed.filter.clear": "Notīrīt filtrus",
+  "feed.filter.shown": {
+    "zero": "Pēc filtriem palika {n} palaišanu.",
+    "one": "Pēc filtriem palika {n} palaišana.",
+    "other": "Pēc filtriem palika {n} palaišanas."
+  },
   "security.source.advisories": "Ieteikumi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Koda skenēšana",

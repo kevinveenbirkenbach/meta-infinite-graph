@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub-ը պատասխանեց {status}։",
   "feed.anError": "սխալով",
+  "loader.loading": "Բեռնում …",
+  "loader.next": {
+    "one": "Հաջորդ թարմացումը {n} վայրկյանից",
+    "other": "Հաջորդ թարմացումը {n} վայրկյանից"
+  },
+  "loader.paused": {
+    "one": "Վերջին թարմացումը բաց է թողնվել GitHub-ի սահմանաչափը խնայելու համար, հաջորդ փորձը {n} վայրկյանից",
+    "other": "Վերջին թարմացումը բաց է թողնվել GitHub-ի սահմանաչափը խնայելու համար, հաջորդ փորձը {n} վայրկյանից"
+  },
+  "loader.menu.hint": "աջ սեղմում՝ վերաբեռնման ընտրանքների համար",
+  "loader.menu.title": "Վերաբեռնել",
+  "loader.menu.changes": "Միայն փոփոխվածը, հիմա",
+  "loader.menu.all": "Բոլոր գործարկումները, հիմա",
+  "loader.menu.interval": "Ավտոմատ կրկին հարցնել",
+  "loader.menu.seconds": {
+    "one": "{n} վայրկյանը մեկ",
+    "other": "{n} վայրկյանը մեկ"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} րոպեն մեկ",
+    "other": "{n} րոպեն մեկ"
+  },
+  "loader.menu.off": "երբեք",
+  "loader.menu.view": "Այս ներդիրը, հիմա",
+  "loader.menu.cache": "Մոռանալ քեշավորված GitHub պատասխանները",
+  "loader.menu.page": "Վերաբեռնել էջը",
+  "loader.overview.title": "Բեռնում",
+  "loader.overview.running": {
+    "one": "{n} ընթացքում",
+    "other": "{n} ընթացքում"
+  },
+  "loader.overview.none": "Դեռ ոչինչ չի բեռնվել։",
+  "loader.task.boot": "Դերերի և դրանց մետատվյալների ընթերցում",
+  "loader.task.view": "{view}-ի գծագրում",
+  "loader.task.changes": "GitHub-ին հարցում, թե ինչ է փոխվել",
+  "loader.task.everything": "GitHub-ից բոլոր գործարկումների հարցում",
   "loader.task.artifacts": "#{number} գործարկման արտեֆակտներ՝ {done} / {total}",
+  "loader.task.artifact": "Արտեֆակտ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ձախողված՝ {message}",
+  "feed.actions.pick": "Ցույց տալ այս գործարկման թեստերը",
+  "feed.actions.ended": "Ավարտված",
+  "feed.actions.duration": "Տևողություն",
+  "feed.actions.running": "ընթացքում",
+  "feed.actions.longest": "Ցուցադրված ամենաերկար գործարկումը տևել է {duration} ({run})։",
+  "feed.filter.search": "Որոնել գործարկումներում",
+  "feed.filter.all": "բոլորը",
+  "feed.filter.event": "Իրադարձություն",
+  "feed.filter.branch": "Ճյուղ",
+  "feed.filter.clear": "Մաքրել զտիչները",
+  "feed.filter.shown": {
+    "one": "Զտիչներից հետո մնացել է {n}։",
+    "other": "Զտիչներից հետո մնացել է {n}։"
+  },
   "security.source.advisories": "Անվտանգության ծանուցումներ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Կոդի սկանավորում",

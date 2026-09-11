@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub e arabile {status}.",
   "feed.anError": "ka phoso",
+  "loader.loading": "Ho kenngwa …",
+  "loader.next": {
+    "one": "Ntjhafatso e latelang ka motsotswana o {n}",
+    "other": "Ntjhafatso e latelang ka metsotswana e {n}"
+  },
+  "loader.paused": {
+    "one": "Ntjhafatso ya ho qetela e tlodilwe ho boloka kabelo ya GitHub; teko e latelang ka motsotswana o {n}",
+    "other": "Ntjhafatso ya ho qetela e tlodilwe ho boloka kabelo ya GitHub; teko e latelang ka metsotswana e {n}"
+  },
+  "loader.menu.hint": "tobetsa ka ho le letona bakeng sa dikgetho tsa ho kenya hape",
+  "loader.menu.title": "Kenya hape",
+  "loader.menu.changes": "Feela se fetohileng, jwale",
+  "loader.menu.all": "Ditsamaiso tsohle, jwale",
+  "loader.menu.interval": "Botsa hape ka boiketsetso",
+  "loader.menu.seconds": {
+    "one": "motsotswana o mong le o mong o {n}",
+    "other": "metsotswana e meng le e meng e {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "motsotso o mong le o mong o {n}",
+    "other": "metsotso e meng le e meng e {n}"
+  },
+  "loader.menu.off": "le ka mohla",
+  "loader.menu.view": "Thebo ena, jwale",
+  "loader.menu.cache": "Lebala dikarabo tsa GitHub tse bolokilweng ho cache",
+  "loader.menu.page": "Kenya leqephe hape",
+  "loader.overview.title": "Ho kenngwa",
+  "loader.overview.running": {
+    "one": "{n} e ntse e tsamaya",
+    "other": "{n} di ntse di tsamaya"
+  },
+  "loader.overview.none": "Ha ho letho le kentsweng hajwale.",
+  "loader.task.boot": "Ho balwa dikarolo le meta ya tsona",
+  "loader.task.view": "Ho takwa {view}",
+  "loader.task.changes": "Ho botswa GitHub se fetohileng",
+  "loader.task.everything": "Ho kopuwa ditsamaiso tsohle ho GitHub",
   "loader.task.artifacts": "Dihlahiswa tsa tsamaiso #{number}: {done} ho tse {total}",
+  "loader.task.artifact": "Sehlahiswa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "e hlolehile: {message}",
+  "feed.actions.pick": "Bontsha diteko tsa tsamaiso ena",
+  "feed.actions.ended": "E fedile",
+  "feed.actions.duration": "Botelele ba nako",
+  "feed.actions.running": "e ntse e tsamaya",
+  "feed.actions.longest": "Tsamaiso e telele ka ho fetisisa e bontshitsweng e nkile {duration} ({run}).",
+  "feed.filter.search": "Batla ditsamaisong",
+  "feed.filter.all": "tsohle",
+  "feed.filter.event": "Ketsahalo",
+  "feed.filter.branch": "Lekala",
+  "feed.filter.clear": "Hlakola disefe",
+  "feed.filter.shown": {
+    "one": "Ho setse tsamaiso e {n} ka mora disefe.",
+    "other": "Ho setse ditsamaiso tse {n} ka mora disefe."
+  },
   "security.source.advisories": "Dikeletso",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ho hlahloba khoutu",

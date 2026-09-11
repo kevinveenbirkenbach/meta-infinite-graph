@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} ಉತ್ತರಿಸಿತು.",
   "feed.anError": "ದೋಷದೊಂದಿಗೆ",
+  "loader.loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ …",
+  "loader.next": {
+    "one": "ಮುಂದಿನ ರಿಫ್ರೆಶ್ {n} ಸೆಕೆಂಡಿನಲ್ಲಿ",
+    "other": "ಮುಂದಿನ ರಿಫ್ರೆಶ್ {n} ಸೆಕೆಂಡುಗಳಲ್ಲಿ"
+  },
+  "loader.paused": {
+    "one": "GitHub ಕೋಟಾವನ್ನು ಉಳಿಸಲು ಕೊನೆಯ ರಿಫ್ರೆಶ್ ಬಿಟ್ಟುಬಿಡಲಾಗಿದೆ; ಮುಂದಿನ ಪ್ರಯತ್ನ {n} ಸೆಕೆಂಡಿನಲ್ಲಿ",
+    "other": "GitHub ಕೋಟಾವನ್ನು ಉಳಿಸಲು ಕೊನೆಯ ರಿಫ್ರೆಶ್ ಬಿಟ್ಟುಬಿಡಲಾಗಿದೆ; ಮುಂದಿನ ಪ್ರಯತ್ನ {n} ಸೆಕೆಂಡುಗಳಲ್ಲಿ"
+  },
+  "loader.menu.hint": "ಮರುಲೋಡ್ ಆಯ್ಕೆಗಳಿಗಾಗಿ ಬಲ-ಕ್ಲಿಕ್ ಮಾಡಿ",
+  "loader.menu.title": "ಮರುಲೋಡ್ ಮಾಡಿ",
+  "loader.menu.changes": "ಬದಲಾದದ್ದು ಮಾತ್ರ, ಈಗ",
+  "loader.menu.all": "ಎಲ್ಲಾ ಚಾಲನೆಗಳು, ಈಗ",
+  "loader.menu.interval": "ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮತ್ತೆ ಕೇಳಿ",
+  "loader.menu.seconds": {
+    "one": "ಪ್ರತಿ {n} ಸೆಕೆಂಡಿಗೆ",
+    "other": "ಪ್ರತಿ {n} ಸೆಕೆಂಡುಗಳಿಗೆ"
+  },
+  "loader.menu.minutes": {
+    "one": "ಪ್ರತಿ {n} ನಿಮಿಷಕ್ಕೆ",
+    "other": "ಪ್ರತಿ {n} ನಿಮಿಷಗಳಿಗೆ"
+  },
+  "loader.menu.off": "ಎಂದಿಗೂ ಇಲ್ಲ",
+  "loader.menu.view": "ಈ ಟ್ಯಾಬ್, ಈಗ",
+  "loader.menu.cache": "ಕ್ಯಾಶ್ ಮಾಡಿದ GitHub ಉತ್ತರಗಳನ್ನು ಮರೆತುಬಿಡಿ",
+  "loader.menu.page": "ಪುಟವನ್ನು ಮರುಲೋಡ್ ಮಾಡಿ",
+  "loader.overview.title": "ಲೋಡ್ ಆಗುತ್ತಿದೆ",
+  "loader.overview.running": {
+    "one": "{n} ಚಾಲನೆಯಲ್ಲಿದೆ",
+    "other": "{n} ಚಾಲನೆಯಲ್ಲಿವೆ"
+  },
+  "loader.overview.none": "ಇನ್ನೂ ಏನೂ ಲೋಡ್ ಆಗಿಲ್ಲ.",
+  "loader.task.boot": "ಪಾತ್ರಗಳು ಮತ್ತು ಅವುಗಳ ಮೆಟಾವನ್ನು ಓದಲಾಗುತ್ತಿದೆ",
+  "loader.task.view": "{view} ಅನ್ನು ಚಿತ್ರಿಸಲಾಗುತ್ತಿದೆ",
+  "loader.task.changes": "ಏನು ಬದಲಾಗಿದೆ ಎಂದು GitHub ಅನ್ನು ಕೇಳಲಾಗುತ್ತಿದೆ",
+  "loader.task.everything": "ಎಲ್ಲಾ ಚಾಲನೆಗಳಿಗಾಗಿ GitHub ಅನ್ನು ಕೇಳಲಾಗುತ್ತಿದೆ",
   "loader.task.artifacts": "ಚಾಲನೆ #{number} ರ ಆರ್ಟಿಫ್ಯಾಕ್ಟ್‌ಗಳು: {total} ರಲ್ಲಿ {done}",
+  "loader.task.artifact": "ಆರ್ಟಿಫ್ಯಾಕ್ಟ್ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ವಿಫಲ: {message}",
+  "feed.actions.pick": "ಈ ಚಾಲನೆಯ ಪರೀಕ್ಷೆಗಳನ್ನು ತೋರಿಸಿ",
+  "feed.actions.ended": "ಮುಗಿದಿದೆ",
+  "feed.actions.duration": "ಅವಧಿ",
+  "feed.actions.running": "ಚಾಲನೆಯಲ್ಲಿದೆ",
+  "feed.actions.longest": "ತೋರಿಸಿರುವ ಅತಿ ಉದ್ದದ ಚಾಲನೆ {duration} ತೆಗೆದುಕೊಂಡಿತು ({run}).",
+  "feed.filter.search": "ಚಾಲನೆಗಳಲ್ಲಿ ಹುಡುಕಿ",
+  "feed.filter.all": "ಎಲ್ಲಾ",
+  "feed.filter.event": "ಘಟನೆ",
+  "feed.filter.branch": "ಶಾಖೆ",
+  "feed.filter.clear": "ಫಿಲ್ಟರ್‌ಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ",
+  "feed.filter.shown": {
+    "one": "ಫಿಲ್ಟರ್‌ಗಳ ನಂತರ {n} ಉಳಿದಿದೆ.",
+    "other": "ಫಿಲ್ಟರ್‌ಗಳ ನಂತರ {n} ಉಳಿದಿವೆ."
+  },
   "security.source.advisories": "ಭದ್ರತಾ ಸಲಹೆಗಳು",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ಕೋಡ್ ಸ್ಕ್ಯಾನಿಂಗ್",

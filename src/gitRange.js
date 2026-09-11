@@ -89,6 +89,13 @@ export class GitRange {
     return new Date(this.until).toISOString();
   }
 
+  // Returns: whether the right handle sits at the far right. The mirror is
+  //   fetched at start and lags, so for what GitHub answers live that means up
+  //   to now, not up to the newest mirrored commit.
+  latest() {
+    return this.position(this.until) >= GitRange.STEPS;
+  }
+
   _render() {
     const host = document.getElementById('git-range');
     if (!host) return;

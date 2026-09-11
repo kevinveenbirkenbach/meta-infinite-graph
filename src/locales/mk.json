@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub одговори {status}.",
   "feed.anError": "со грешка",
+  "loader.loading": "Се вчитува …",
+  "loader.next": {
+    "one": "Следно освежување за {n} секунда",
+    "other": "Следно освежување за {n} секунди"
+  },
+  "loader.paused": {
+    "one": "Последното освежување е прескокнато за да се штеди квотата на GitHub; следен обид за {n} секунда",
+    "other": "Последното освежување е прескокнато за да се штеди квотата на GitHub; следен обид за {n} секунди"
+  },
+  "loader.menu.hint": "десен клик за опции за повторно вчитување",
+  "loader.menu.title": "Повторно вчитај",
+  "loader.menu.changes": "Само она што се променило, сега",
+  "loader.menu.all": "Секое извршување, сега",
+  "loader.menu.interval": "Прашувај повторно автоматски",
+  "loader.menu.seconds": {
+    "one": "секоја {n} секунда",
+    "other": "секои {n} секунди"
+  },
+  "loader.menu.minutes": {
+    "one": "секоја {n} минута",
+    "other": "секои {n} минути"
+  },
+  "loader.menu.off": "никогаш",
+  "loader.menu.view": "Овој приказ, сега",
+  "loader.menu.cache": "Заборави ги кешираните одговори од GitHub",
+  "loader.menu.page": "Повторно вчитај ја страницата",
+  "loader.overview.title": "Вчитување",
+  "loader.overview.running": {
+    "one": "{n} во тек",
+    "other": "{n} во тек"
+  },
+  "loader.overview.none": "Сè уште ништо не е вчитано.",
+  "loader.task.boot": "Се читаат улогите и нивните метаподатоци",
+  "loader.task.view": "Се исцртува {view}",
+  "loader.task.changes": "Се прашува GitHub што се променило",
+  "loader.task.everything": "Се бара од GitHub секое извршување",
   "loader.task.artifacts": "Артефакти на извршување #{number}: {done} од {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "неуспешно: {message}",
+  "feed.actions.pick": "Прикажи ги тестовите на ова извршување",
+  "feed.actions.ended": "Завршено",
+  "feed.actions.duration": "Времетраење",
+  "feed.actions.running": "во тек",
+  "feed.actions.longest": "Најдолгото прикажано извршување траеше {duration} ({run}).",
+  "feed.filter.search": "Барај извршувања",
+  "feed.filter.all": "сите",
+  "feed.filter.event": "Настан",
+  "feed.filter.branch": "Гранка",
+  "feed.filter.clear": "Исчисти ги филтрите",
+  "feed.filter.shown": {
+    "one": "По филтрите останува {n} извршување.",
+    "other": "По филтрите остануваат {n} извршувања."
+  },
   "security.source.advisories": "Совети",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Скенирање код",

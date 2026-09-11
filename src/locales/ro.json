@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub a răspuns {status}.",
   "feed.anError": "cu o eroare",
+  "loader.loading": "Se încarcă …",
+  "loader.next": {
+    "one": "Următoarea reîmprospătare în {n} secundă",
+    "few": "Următoarea reîmprospătare în {n} secunde",
+    "other": "Următoarea reîmprospătare în {n} de secunde"
+  },
+  "loader.paused": {
+    "one": "Ultima reîmprospătare a fost omisă pentru a economisi cota GitHub; următoarea încercare în {n} secundă",
+    "few": "Ultima reîmprospătare a fost omisă pentru a economisi cota GitHub; următoarea încercare în {n} secunde",
+    "other": "Ultima reîmprospătare a fost omisă pentru a economisi cota GitHub; următoarea încercare în {n} de secunde"
+  },
+  "loader.menu.hint": "clic dreapta pentru opțiunile de reîncărcare",
+  "loader.menu.title": "Reîncarcă",
+  "loader.menu.changes": "Doar ce s-a schimbat, acum",
+  "loader.menu.all": "Toate rulările, acum",
+  "loader.menu.interval": "Întreabă din nou automat",
+  "loader.menu.seconds": {
+    "one": "la fiecare {n} secundă",
+    "few": "la fiecare {n} secunde",
+    "other": "la fiecare {n} de secunde"
+  },
+  "loader.menu.minutes": {
+    "one": "la fiecare {n} minut",
+    "few": "la fiecare {n} minute",
+    "other": "la fiecare {n} de minute"
+  },
+  "loader.menu.off": "niciodată",
+  "loader.menu.view": "Această vizualizare, acum",
+  "loader.menu.cache": "Uită răspunsurile GitHub din cache",
+  "loader.menu.page": "Reîncarcă pagina",
+  "loader.overview.title": "Se încarcă",
+  "loader.overview.running": {
+    "one": "{n} în desfășurare",
+    "few": "{n} în desfășurare",
+    "other": "{n} în desfășurare"
+  },
+  "loader.overview.none": "Nu s-a încărcat încă nimic.",
+  "loader.task.boot": "Se citesc rolurile și metadatele lor",
+  "loader.task.view": "Se desenează {view}",
+  "loader.task.changes": "Se întreabă GitHub ce s-a schimbat",
+  "loader.task.everything": "Se cer de la GitHub toate rulările",
   "loader.task.artifacts": "Artefactele rulării #{number}: {done} din {total}",
+  "loader.task.artifact": "Artefactul {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "a eșuat: {message}",
+  "feed.actions.pick": "Afișează testele acestei rulări",
+  "feed.actions.ended": "Încheiat",
+  "feed.actions.duration": "Durată",
+  "feed.actions.running": "în desfășurare",
+  "feed.actions.longest": "Cea mai lungă rulare afișată a durat {duration} ({run}).",
+  "feed.filter.search": "Caută rulări",
+  "feed.filter.all": "toate",
+  "feed.filter.event": "Eveniment",
+  "feed.filter.branch": "Ramură",
+  "feed.filter.clear": "Șterge filtrele",
+  "feed.filter.shown": {
+    "one": "După filtre rămâne {n}.",
+    "few": "După filtre rămân {n}.",
+    "other": "După filtre rămân {n}."
+  },
   "security.source.advisories": "Recomandări",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Scanarea codului",

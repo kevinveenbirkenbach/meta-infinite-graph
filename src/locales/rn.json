@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yishuye {status}.",
   "feed.anError": "n'ikosa",
+  "loader.loading": "Birapakirwa …",
+  "loader.next": {
+    "one": "Isubiramwo rikurikira mu segonda {n}",
+    "other": "Isubiramwo rikurikira mu masegonda {n}"
+  },
+  "loader.paused": {
+    "one": "Isubiramwo riheruka ryasimbuwe kugira hazigamwe igipimo ca GitHub; ikigeragezo gikurikira mu segonda {n}",
+    "other": "Isubiramwo riheruka ryasimbuwe kugira hazigamwe igipimo ca GitHub; ikigeragezo gikurikira mu masegonda {n}"
+  },
+  "loader.menu.hint": "fyonda iburyo kugira ubone uburyo bwo gusubira gupakira",
+  "loader.menu.title": "Subira upakire",
+  "loader.menu.changes": "Ivyahindutse gusa, ubu",
+  "loader.menu.all": "Ikorwa ryose, ubu",
+  "loader.menu.interval": "Subira ubaze mu buryo bwikora",
+  "loader.menu.seconds": {
+    "one": "uko haciye segonda {n}",
+    "other": "uko haciye amasegonda {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "uko haciye umunota {n}",
+    "other": "uko haciye iminota {n}"
+  },
+  "loader.menu.off": "nta na rimwe",
+  "loader.menu.view": "Iyi shusho, ubu",
+  "loader.menu.cache": "Ibagira inyishu za GitHub zabitswe",
+  "loader.menu.page": "Subira upakire urupapuro",
+  "loader.overview.title": "Birapakirwa",
+  "loader.overview.running": {
+    "one": "{n} iriko irakorwa",
+    "other": "{n} ziriko zirakorwa"
+  },
+  "loader.overview.none": "Nta kintu na kimwe carapakirwa.",
+  "loader.task.boot": "Hasomwa imirimo na meta yayo",
+  "loader.task.view": "Harashushanywa {view}",
+  "loader.task.changes": "Harabazwa GitHub ivyahindutse",
+  "loader.task.everything": "Harasabwa GitHub ikorwa ryose",
   "loader.task.artifacts": "Artefakti z'ikorwa #{number}: {done} kuri {total}",
+  "loader.task.artifact": "Artefakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "vyananiranye: {message}",
+  "feed.actions.pick": "Erekana ibigeragezo vy'iri korwa",
+  "feed.actions.ended": "Vyarangiye",
+  "feed.actions.duration": "Igihe vyamaze",
+  "feed.actions.running": "biriko birakorwa",
+  "feed.actions.longest": "Ikorwa rirerire kuruta ayandi ryerekanwe ryamaze {duration} ({run}).",
+  "feed.filter.search": "Rondera amakorwa",
+  "feed.filter.all": "vyose",
+  "feed.filter.event": "Ikiba",
+  "feed.filter.branch": "Ishami",
+  "feed.filter.clear": "Kuraho utuyunguruzo",
+  "feed.filter.shown": {
+    "one": "Hasigaye {n} inyuma yo kuyungurura.",
+    "other": "Hasigaye {n} inyuma yo kuyungurura."
+  },
   "security.source.advisories": "Impanuro",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Gusuzuma kode",

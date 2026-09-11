@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub дзуапп радта {status}.",
   "feed.anError": "рæдыдимæ",
+  "loader.loading": "Бавгæнгæ цæуы …",
+  "loader.next": {
+    "one": "Иннæ ногкæнынад {n} секунды фæстæ",
+    "other": "Иннæ ногкæнынад {n} секунды фæстæ"
+  },
+  "loader.paused": {
+    "one": "Фæстаг ногкæнынад ныууагътам GitHub-ы квотæ бахъахъхъæнынæн; иннæ фæлварæн {n} секунды фæстæ",
+    "other": "Фæстаг ногкæнынад ныууагътам GitHub-ы квотæ бахъахъхъæнынæн; иннæ фæлварæн {n} секунды фæстæ"
+  },
+  "loader.menu.hint": "рахиз æлхъывд – ногæй бавгæнынæн фадæттæ",
+  "loader.menu.title": "Ногæй бавгæнын",
+  "loader.menu.changes": "Æрмæст цы аивта, уый, ныр",
+  "loader.menu.all": "Алы цыд, ныр",
+  "loader.menu.interval": "Ногæй бафæрсын автоматон æгъдауæй",
+  "loader.menu.seconds": {
+    "one": "алы {n} секунды",
+    "other": "алы {n} секунды"
+  },
+  "loader.menu.minutes": {
+    "one": "алы {n} минуты",
+    "other": "алы {n} минуты"
+  },
+  "loader.menu.off": "никуы",
+  "loader.menu.view": "Ацы æвдыст, ныр",
+  "loader.menu.cache": "Кэшы ис GitHub-ы дзуæппытæ ферох кæнын",
+  "loader.menu.page": "Фарс ногæй бавгæнын",
+  "loader.overview.title": "Бавгæнын",
+  "loader.overview.running": {
+    "one": "{n} цæуы",
+    "other": "{n} цæуынц"
+  },
+  "loader.overview.none": "Ноджы ницы бавгæд.",
+  "loader.task.boot": "Рольтæ æмæ сæ мета кæсын",
+  "loader.task.view": "{view} нывгæнгæ цæуы",
+  "loader.task.changes": "GitHub-æй фæрсын, цы аивта",
+  "loader.task.everything": "GitHub-æй алы цыд домын",
   "loader.task.artifacts": "Цыд #{number}-ы артефакттæ: {total}-æй {done}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "нæ рауад: {message}",
+  "feed.actions.pick": "Ацы цыды тесттæ равдисын",
+  "feed.actions.ended": "Фæци",
+  "feed.actions.duration": "Дæргъ",
+  "feed.actions.running": "цæуы",
+  "feed.actions.longest": "Æвдыст цыдтæй дæргъдæр ахаста {duration} ({run}).",
+  "feed.filter.search": "Цыдтæ агурын",
+  "feed.filter.all": "æппæт",
+  "feed.filter.event": "Цау",
+  "feed.filter.branch": "Къабаз",
+  "feed.filter.clear": "Фильтртæ асыгъдæг кæнын",
+  "feed.filter.shown": {
+    "one": "Фильтрты фæстæ баззад {n}.",
+    "other": "Фильтрты фæстæ баззад {n}."
+  },
   "security.source.advisories": "Уынаффæтæ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Коды бæрæг кæнын",

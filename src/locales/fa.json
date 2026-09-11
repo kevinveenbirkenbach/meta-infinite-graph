@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub پاسخ داد {status}.",
   "feed.anError": "با خطا",
+  "loader.loading": "در حال بارگذاری …",
+  "loader.next": {
+    "one": "تازه‌سازی بعدی تا {n} ثانیه دیگر",
+    "other": "تازه‌سازی بعدی تا {n} ثانیه دیگر"
+  },
+  "loader.paused": {
+    "one": "آخرین تازه‌سازی برای صرفه‌جویی در سهمیهٔ GitHub رد شد؛ تلاش بعدی تا {n} ثانیه دیگر",
+    "other": "آخرین تازه‌سازی برای صرفه‌جویی در سهمیهٔ GitHub رد شد؛ تلاش بعدی تا {n} ثانیه دیگر"
+  },
+  "loader.menu.hint": "برای گزینه‌های بارگذاری دوباره راست‌کلیک کنید",
+  "loader.menu.title": "بارگذاری دوباره",
+  "loader.menu.changes": "فقط آنچه تغییر کرده، همین حالا",
+  "loader.menu.all": "همهٔ اجراها، همین حالا",
+  "loader.menu.interval": "پرسش دوبارهٔ خودکار",
+  "loader.menu.seconds": {
+    "one": "هر {n} ثانیه",
+    "other": "هر {n} ثانیه"
+  },
+  "loader.menu.minutes": {
+    "one": "هر {n} دقیقه",
+    "other": "هر {n} دقیقه"
+  },
+  "loader.menu.off": "هرگز",
+  "loader.menu.view": "همین زبانه، همین حالا",
+  "loader.menu.cache": "فراموش کردن پاسخ‌های GitHub در حافظهٔ نهان",
+  "loader.menu.page": "بارگذاری دوبارهٔ صفحه",
+  "loader.overview.title": "در حال بارگذاری",
+  "loader.overview.running": {
+    "one": "{n} در حال اجرا",
+    "other": "{n} در حال اجرا"
+  },
+  "loader.overview.none": "هنوز چیزی بارگذاری نشده است.",
+  "loader.task.boot": "در حال خواندن نقش‌ها و فراداده‌هایشان",
+  "loader.task.view": "در حال ترسیم {view}",
+  "loader.task.changes": "در حال پرسیدن از GitHub که چه چیزی تغییر کرده",
+  "loader.task.everything": "در حال درخواست همهٔ اجراها از GitHub",
   "loader.task.artifacts": "آرتیفکت‌های اجرای #{number}: {done} از {total}",
+  "loader.task.artifact": "آرتیفکت {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ناموفق: {message}",
+  "feed.actions.pick": "نمایش آزمون‌های این اجرا",
+  "feed.actions.ended": "پایان",
+  "feed.actions.duration": "مدت",
+  "feed.actions.running": "در حال اجرا",
+  "feed.actions.longest": "طولانی‌ترین اجرای نمایش‌داده‌شده {duration} طول کشید ({run}).",
+  "feed.filter.search": "جستجو در اجراها",
+  "feed.filter.all": "همه",
+  "feed.filter.event": "رویداد",
+  "feed.filter.branch": "شاخه",
+  "feed.filter.clear": "پاک کردن فیلترها",
+  "feed.filter.shown": {
+    "one": "پس از فیلترها {n} مورد باقی می‌ماند.",
+    "other": "پس از فیلترها {n} مورد باقی می‌ماند."
+  },
   "security.source.advisories": "توصیه‌های امنیتی",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "اسکن کد",

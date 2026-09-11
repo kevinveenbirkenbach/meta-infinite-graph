@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub respondis {status}.",
   "feed.anError": "per eraro",
+  "loader.loading": "Ŝargante …",
+  "loader.next": {
+    "one": "Sekva aktualigo post {n} sekundo",
+    "other": "Sekva aktualigo post {n} sekundoj"
+  },
+  "loader.paused": {
+    "one": "La lasta aktualigo estis preterlasita por ŝpari la GitHub-kvoton; sekva provo post {n} sekundo",
+    "other": "La lasta aktualigo estis preterlasita por ŝpari la GitHub-kvoton; sekva provo post {n} sekundoj"
+  },
+  "loader.menu.hint": "dekstre alklaku por reŝargaj opcioj",
+  "loader.menu.title": "Reŝargi",
+  "loader.menu.changes": "Nur tio, kio ŝanĝiĝis, nun",
+  "loader.menu.all": "Ĉiu rulo, nun",
+  "loader.menu.interval": "Aŭtomate demandi denove",
+  "loader.menu.seconds": {
+    "one": "ĉiun {n} sekundon",
+    "other": "ĉiujn {n} sekundojn"
+  },
+  "loader.menu.minutes": {
+    "one": "ĉiun {n} minuton",
+    "other": "ĉiujn {n} minutojn"
+  },
+  "loader.menu.off": "neniam",
+  "loader.menu.view": "Ĉi tiu langeto, nun",
+  "loader.menu.cache": "Forgesi la kaŝmemorigitajn GitHub-respondojn",
+  "loader.menu.page": "Reŝargi la paĝon",
+  "loader.overview.title": "Ŝargado",
+  "loader.overview.running": {
+    "one": "{n} rulanta",
+    "other": "{n} rulantaj"
+  },
+  "loader.overview.none": "Nenio estas ŝargita ankoraŭ.",
+  "loader.task.boot": "Legante la rolojn kaj iliajn metadatumojn",
+  "loader.task.view": "Desegnante {view}",
+  "loader.task.changes": "Demandante GitHub, kio ŝanĝiĝis",
+  "loader.task.everything": "Petante de GitHub ĉiun rulon",
   "loader.task.artifacts": "Artefaktoj de rulo #{number}: {done} el {total}",
+  "loader.task.artifact": "Artefakto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "malsukcesis: {message}",
+  "feed.actions.pick": "Montri la testojn de ĉi tiu rulo",
+  "feed.actions.ended": "Finita",
+  "feed.actions.duration": "Daŭro",
+  "feed.actions.running": "rulanta",
+  "feed.actions.longest": "La plej longa montrita rulo daŭris {duration} ({run}).",
+  "feed.filter.search": "Serĉi en la ruloj",
+  "feed.filter.all": "ĉiuj",
+  "feed.filter.event": "Evento",
+  "feed.filter.branch": "Branĉo",
+  "feed.filter.clear": "Forigi la filtrojn",
+  "feed.filter.shown": {
+    "one": "Post la filtroj restas {n}.",
+    "other": "Post la filtroj restas {n}."
+  },
   "security.source.advisories": "Sekurecaj avizoj",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodskanado",

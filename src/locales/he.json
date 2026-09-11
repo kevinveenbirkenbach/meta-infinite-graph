@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub השיב {status}.",
   "feed.anError": "עם שגיאה",
+  "loader.loading": "טוען …",
+  "loader.next": {
+    "one": "הרענון הבא בעוד {n} שנייה",
+    "two": "הרענון הבא בעוד {n} שניות",
+    "other": "הרענון הבא בעוד {n} שניות"
+  },
+  "loader.paused": {
+    "one": "הרענון האחרון דולג כדי לחסוך במכסת GitHub; הניסיון הבא בעוד {n} שנייה",
+    "two": "הרענון האחרון דולג כדי לחסוך במכסת GitHub; הניסיון הבא בעוד {n} שניות",
+    "other": "הרענון האחרון דולג כדי לחסוך במכסת GitHub; הניסיון הבא בעוד {n} שניות"
+  },
+  "loader.menu.hint": "לחיצה ימנית לאפשרויות טעינה מחדש",
+  "loader.menu.title": "טעינה מחדש",
+  "loader.menu.changes": "רק מה שהשתנה, עכשיו",
+  "loader.menu.all": "כל ההרצות, עכשיו",
+  "loader.menu.interval": "שאילה חוזרת אוטומטית",
+  "loader.menu.seconds": {
+    "one": "כל {n} שנייה",
+    "two": "כל {n} שניות",
+    "other": "כל {n} שניות"
+  },
+  "loader.menu.minutes": {
+    "one": "כל {n} דקה",
+    "two": "כל {n} דקות",
+    "other": "כל {n} דקות"
+  },
+  "loader.menu.off": "אף פעם",
+  "loader.menu.view": "הכרטיסייה הזו, עכשיו",
+  "loader.menu.cache": "מחיקת תשובות GitHub מהמטמון",
+  "loader.menu.page": "טעינת הדף מחדש",
+  "loader.overview.title": "טוען",
+  "loader.overview.running": {
+    "one": "{n} בתהליך",
+    "two": "{n} בתהליך",
+    "other": "{n} בתהליך"
+  },
+  "loader.overview.none": "עדיין לא נטען דבר.",
+  "loader.task.boot": "קורא את התפקידים ואת המטא שלהם",
+  "loader.task.view": "מצייר את {view}",
+  "loader.task.changes": "שואל את GitHub מה השתנה",
+  "loader.task.everything": "מבקש מ-GitHub את כל ההרצות",
   "loader.task.artifacts": "ארטיפקטים של הרצה #{number}: {done} מתוך {total}",
+  "loader.task.artifact": "ארטיפקט {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "נכשל: {message}",
+  "feed.actions.pick": "הצגת הבדיקות של הרצה זו",
+  "feed.actions.ended": "הסתיים",
+  "feed.actions.duration": "משך",
+  "feed.actions.running": "בביצוע",
+  "feed.actions.longest": "ההרצה הארוכה ביותר המוצגת נמשכה {duration} ({run}).",
+  "feed.filter.search": "חיפוש בהרצות",
+  "feed.filter.all": "הכול",
+  "feed.filter.event": "אירוע",
+  "feed.filter.branch": "ענף",
+  "feed.filter.clear": "ניקוי המסננים",
+  "feed.filter.shown": {
+    "one": "נותרה {n} אחרי הסינון.",
+    "two": "נותרו {n} אחרי הסינון.",
+    "other": "נותרו {n} אחרי הסינון."
+  },
   "security.source.advisories": "ייעוצי אבטחה",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "סריקת קוד",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} എന്ന് മറുപടി നൽകി.",
   "feed.anError": "ഒരു പിശകോടെ",
+  "loader.loading": "ലോഡ് ചെയ്യുന്നു …",
+  "loader.next": {
+    "one": "അടുത്ത പുതുക്കൽ {n} സെക്കൻഡിനുള്ളിൽ",
+    "other": "അടുത്ത പുതുക്കൽ {n} സെക്കൻഡിനുള്ളിൽ"
+  },
+  "loader.paused": {
+    "one": "GitHub പരിധി ലാഭിക്കാൻ അവസാനത്തെ പുതുക്കൽ ഒഴിവാക്കി; അടുത്ത ശ്രമം {n} സെക്കൻഡിനുള്ളിൽ",
+    "other": "GitHub പരിധി ലാഭിക്കാൻ അവസാനത്തെ പുതുക്കൽ ഒഴിവാക്കി; അടുത്ത ശ്രമം {n} സെക്കൻഡിനുള്ളിൽ"
+  },
+  "loader.menu.hint": "വീണ്ടും ലോഡ് ചെയ്യാനുള്ള ഓപ്ഷനുകൾക്കായി വലത്-ക്ലിക്ക് ചെയ്യുക",
+  "loader.menu.title": "വീണ്ടും ലോഡ് ചെയ്യുക",
+  "loader.menu.changes": "മാറിയവ മാത്രം, ഇപ്പോൾ",
+  "loader.menu.all": "എല്ലാ റണ്ണുകളും, ഇപ്പോൾ",
+  "loader.menu.interval": "സ്വയമേവ വീണ്ടും ചോദിക്കുക",
+  "loader.menu.seconds": {
+    "one": "ഓരോ {n} സെക്കൻഡിലും",
+    "other": "ഓരോ {n} സെക്കൻഡിലും"
+  },
+  "loader.menu.minutes": {
+    "one": "ഓരോ {n} മിനിറ്റിലും",
+    "other": "ഓരോ {n} മിനിറ്റിലും"
+  },
+  "loader.menu.off": "ഒരിക്കലുമില്ല",
+  "loader.menu.view": "ഈ കാഴ്ച, ഇപ്പോൾ",
+  "loader.menu.cache": "കാഷെ ചെയ്ത GitHub ഉത്തരങ്ങൾ മറക്കുക",
+  "loader.menu.page": "പേജ് വീണ്ടും ലോഡ് ചെയ്യുക",
+  "loader.overview.title": "ലോഡ് ചെയ്യുന്നു",
+  "loader.overview.running": {
+    "one": "{n} പ്രവർത്തിക്കുന്നു",
+    "other": "{n} പ്രവർത്തിക്കുന്നു"
+  },
+  "loader.overview.none": "ഇതുവരെ ഒന്നും ലോഡ് ചെയ്തിട്ടില്ല.",
+  "loader.task.boot": "റോളുകളും അവയുടെ മെറ്റയും വായിക്കുന്നു",
+  "loader.task.view": "{view} വരയ്ക്കുന്നു",
+  "loader.task.changes": "എന്താണ് മാറിയതെന്ന് GitHub-നോട് ചോദിക്കുന്നു",
+  "loader.task.everything": "എല്ലാ റണ്ണുകളും GitHub-നോട് ചോദിക്കുന്നു",
   "loader.task.artifacts": "റൺ #{number}-ന്റെ ആർട്ടിഫാക്റ്റുകൾ: {total}-ൽ {done}",
+  "loader.task.artifact": "ആർട്ടിഫാക്റ്റ് {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "പരാജയപ്പെട്ടു: {message}",
+  "feed.actions.pick": "ഈ റണ്ണിന്റെ ടെസ്റ്റുകൾ കാണിക്കുക",
+  "feed.actions.ended": "അവസാനിച്ചത്",
+  "feed.actions.duration": "ദൈർഘ്യം",
+  "feed.actions.running": "പ്രവർത്തിക്കുന്നു",
+  "feed.actions.longest": "കാണിച്ചിരിക്കുന്നതിൽ ഏറ്റവും ദൈർഘ്യമേറിയ റൺ {duration} എടുത്തു ({run}).",
+  "feed.filter.search": "റണ്ണുകൾ തിരയുക",
+  "feed.filter.all": "എല്ലാം",
+  "feed.filter.event": "ഇവന്റ്",
+  "feed.filter.branch": "ബ്രാഞ്ച്",
+  "feed.filter.clear": "ഫിൽട്ടറുകൾ മായ്ക്കുക",
+  "feed.filter.shown": {
+    "one": "ഫിൽട്ടറുകൾക്ക് ശേഷം {n} റൺ ശേഷിക്കുന്നു.",
+    "other": "ഫിൽട്ടറുകൾക്ക് ശേഷം {n} റണ്ണുകൾ ശേഷിക്കുന്നു."
+  },
   "security.source.advisories": "സുരക്ഷാ ഉപദേശങ്ങൾ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "കോഡ് സ്കാനിംഗ്",

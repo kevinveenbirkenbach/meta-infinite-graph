@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub e arabile {status}.",
   "feed.anError": "ka phoso",
+  "loader.loading": "Go laelwa …",
+  "loader.next": {
+    "one": "Ntšhafatso e e latelang mo motsotswaneng o le {n}",
+    "other": "Ntšhafatso e e latelang mo metsotswaneng e le {n}"
+  },
+  "loader.paused": {
+    "one": "Ntšhafatso ya bofelo e tlodilwe go boloka kabelo ya GitHub; teko e e latelang mo motsotswaneng o le {n}",
+    "other": "Ntšhafatso ya bofelo e tlodilwe go boloka kabelo ya GitHub; teko e e latelang mo metsotswaneng e le {n}"
+  },
+  "loader.menu.hint": "tobetsa ka fa mojeng go bona dikgetho tsa go laela gape",
+  "loader.menu.title": "Laela gape",
+  "loader.menu.changes": "Se se fetogileng fela, jaanong",
+  "loader.menu.all": "Ditsamaiso tsotlhe, jaanong",
+  "loader.menu.interval": "Botsa gape ka boitiriso",
+  "loader.menu.seconds": {
+    "one": "motsotswana mongwe le mongwe o le {n}",
+    "other": "metsotswana nngwe le nngwe e le {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "motsotso mongwe le mongwe o le {n}",
+    "other": "metsotso nngwe le nngwe e le {n}"
+  },
+  "loader.menu.off": "le ka motlha",
+  "loader.menu.view": "Pono e, jaanong",
+  "loader.menu.cache": "Lebala dikarabo tsa GitHub tse di mo polokelong ya nakwana",
+  "loader.menu.page": "Laela tsebe gape",
+  "loader.overview.title": "Go laelwa",
+  "loader.overview.running": {
+    "one": "{n} e sa ntse e tsamaya",
+    "other": "{n} di sa ntse di tsamaya"
+  },
+  "loader.overview.none": "Ga go sepe se se laetsweng go fitlha jaanong.",
+  "loader.task.boot": "Go balwa dikarolo le meta ya tsone",
+  "loader.task.view": "Go tshwantshiwa {view}",
+  "loader.task.changes": "Go bodiwa GitHub gore go fetogile eng",
+  "loader.task.everything": "Go kopiwa ditsamaiso tsotlhe mo GitHub",
   "loader.task.artifacts": "Ditlhagiswa tsa tsamaiso #{number}: {done} mo go {total}",
+  "loader.task.artifact": "Setlhagiswa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "e paletswe: {message}",
+  "feed.actions.pick": "Bontsha diteko tsa tsamaiso e",
+  "feed.actions.ended": "E fedile",
+  "feed.actions.duration": "Boleele jwa nako",
+  "feed.actions.running": "e sa ntse e tsamaya",
+  "feed.actions.longest": "Tsamaiso e telele go gaisa e e bontshitsweng e tsere {duration} ({run}).",
+  "feed.filter.search": "Batla mo ditsamaisong",
+  "feed.filter.all": "tsotlhe",
+  "feed.filter.event": "Tiragalo",
+  "feed.filter.branch": "Kala",
+  "feed.filter.clear": "Phimola disesefi",
+  "feed.filter.shown": {
+    "one": "Go setse tsamaiso e le {n} morago ga disesefi.",
+    "other": "Go setse ditsamaiso di le {n} morago ga disesefi."
+  },
   "security.source.advisories": "Dikgakololo",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Go sekaseka khoutu",

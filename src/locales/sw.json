@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ilijibu {status}.",
   "feed.anError": "kwa hitilafu",
+  "loader.loading": "Inapakia …",
+  "loader.next": {
+    "one": "Uonyeshaji upya unaofuata baada ya sekunde {n}",
+    "other": "Uonyeshaji upya unaofuata baada ya sekunde {n}"
+  },
+  "loader.paused": {
+    "one": "Uonyeshaji upya wa mwisho uliachwa ili kuokoa kiasi cha GitHub; jaribio linalofuata baada ya sekunde {n}",
+    "other": "Uonyeshaji upya wa mwisho uliachwa ili kuokoa kiasi cha GitHub; jaribio linalofuata baada ya sekunde {n}"
+  },
+  "loader.menu.hint": "bofya kulia kwa chaguo za kupakia upya",
+  "loader.menu.title": "Pakia upya",
+  "loader.menu.changes": "Kilichobadilika tu, sasa",
+  "loader.menu.all": "Uendeshaji wote, sasa",
+  "loader.menu.interval": "Uliza tena kiotomatiki",
+  "loader.menu.seconds": {
+    "one": "kila sekunde {n}",
+    "other": "kila sekunde {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "kila dakika {n}",
+    "other": "kila dakika {n}"
+  },
+  "loader.menu.off": "kamwe",
+  "loader.menu.view": "Kichupo hiki, sasa",
+  "loader.menu.cache": "Sahau majibu ya GitHub yaliyohifadhiwa kwenye akiba",
+  "loader.menu.page": "Pakia upya ukurasa",
+  "loader.overview.title": "Inapakia",
+  "loader.overview.running": {
+    "one": "{n} inaendelea",
+    "other": "{n} zinaendelea"
+  },
+  "loader.overview.none": "Hakuna kilichopakiwa bado.",
+  "loader.task.boot": "Inasoma majukumu na meta yake",
+  "loader.task.view": "Inachora {view}",
+  "loader.task.changes": "Inauliza GitHub kilichobadilika",
+  "loader.task.everything": "Inaomba GitHub uendeshaji wote",
   "loader.task.artifacts": "Artifakti za uendeshaji #{number}: {done} kati ya {total}",
+  "loader.task.artifact": "Artifakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "imeshindwa: {message}",
+  "feed.actions.pick": "Onyesha majaribio ya uendeshaji huu",
+  "feed.actions.ended": "Iliisha",
+  "feed.actions.duration": "Muda",
+  "feed.actions.running": "inaendelea",
+  "feed.actions.longest": "Uendeshaji mrefu zaidi ulioonyeshwa ulichukua {duration} ({run}).",
+  "feed.filter.search": "Tafuta uendeshaji",
+  "feed.filter.all": "zote",
+  "feed.filter.event": "Tukio",
+  "feed.filter.branch": "Tawi",
+  "feed.filter.clear": "Futa vichujio",
+  "feed.filter.shown": {
+    "one": "{n} imebaki baada ya vichujio.",
+    "other": "{n} zimebaki baada ya vichujio."
+  },
   "security.source.advisories": "Ushauri wa usalama",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Uchanganuzi wa msimbo",

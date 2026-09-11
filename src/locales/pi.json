@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} इति पटिवदि।",
   "feed.anError": "दोसेन",
+  "loader.loading": "आरोपीयति …",
+  "loader.next": {
+    "one": "अनन्तरं नवीकरणं {n} खणे",
+    "other": "अनन्तरं नवीकरणं {n} खणेसु"
+  },
+  "loader.paused": {
+    "one": "GitHub याचनाभागं रक्खितुं पच्छिमं नवीकरणं अतिक्कन्तं; अनन्तरो वायामो {n} खणे",
+    "other": "GitHub याचनाभागं रक्खितुं पच्छिमं नवीकरणं अतिक्कन्तं; अनन्तरो वायामो {n} खणेसु"
+  },
+  "loader.menu.hint": "पुन आरोपनविकप्पानं दक्खिणक्लिकं करोहि",
+  "loader.menu.title": "पुन आरोपेहि",
+  "loader.menu.changes": "यं परिवत्तितं तमेव, इदानि",
+  "loader.menu.all": "सब्बानि पवत्तनानि, इदानि",
+  "loader.menu.interval": "सयमेव पुन पुच्छ",
+  "loader.menu.seconds": {
+    "one": "पच्चेकं {n} खणे",
+    "other": "पच्चेकं {n} खणेसु"
+  },
+  "loader.menu.minutes": {
+    "one": "पच्चेकं {n} मुहुत्ते",
+    "other": "पच्चेकं {n} मुहुत्तेसु"
+  },
+  "loader.menu.off": "न कदाचि",
+  "loader.menu.view": "इदं दस्सनं, इदानि",
+  "loader.menu.cache": "सञ्चितानि GitHub पटिवचनानि विस्सरेहि",
+  "loader.menu.page": "पिट्ठं पुन आरोपेहि",
+  "loader.overview.title": "आरोपीयति",
+  "loader.overview.running": {
+    "one": "{n} पवत्तति",
+    "other": "{n} पवत्तन्ति"
+  },
+  "loader.overview.none": "न किञ्चि ताव आरोपितं।",
+  "loader.task.boot": "किच्चानि तेसं meta च पठीयन्ति",
+  "loader.task.view": "{view} लिखीयति",
+  "loader.task.changes": "GitHub पुच्छीयति किं परिवत्तितं",
+  "loader.task.everything": "GitHub सब्बानि पवत्तनानि याचीयति",
   "loader.task.artifacts": "पवत्तनस्स #{number} कतभण्डानि: {total} तो {done}",
+  "loader.task.artifact": "कतभण्डं {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "विफलं: {message}",
+  "feed.actions.pick": "इमस्स पवत्तनस्स परिक्खा दस्सेहि",
+  "feed.actions.ended": "निट्ठितं",
+  "feed.actions.duration": "कालपरिमाणं",
+  "feed.actions.running": "पवत्तति",
+  "feed.actions.longest": "दस्सितेसु दीघतमं पवत्तनं {duration} कालं पवत्ति ({run}).",
+  "feed.filter.search": "पवत्तनानि परियेसाहि",
+  "feed.filter.all": "सब्बानि",
+  "feed.filter.event": "घटना",
+  "feed.filter.branch": "साखा",
+  "feed.filter.clear": "परिस्सावनानि अपनेहि",
+  "feed.filter.shown": {
+    "one": "परिस्सावनतो पच्छा {n} अवसिट्ठं।",
+    "other": "परिस्सावनतो पच्छा {n} अवसिट्ठानि।"
+  },
   "security.source.advisories": "ओवादा",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "कोडपरिक्खणं",

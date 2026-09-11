@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub បានឆ្លើយ {status}។",
   "feed.anError": "មានកំហុស",
+  "loader.loading": "កំពុងផ្ទុក …",
+  "loader.next": {
+    "other": "ការផ្ទុកឡើងវិញបន្ទាប់ក្នុងរយៈពេល {n} វិនាទី"
+  },
+  "loader.paused": {
+    "other": "ការផ្ទុកឡើងវិញចុងក្រោយត្រូវបានរំលង ដើម្បីសន្សំកូតា GitHub ការព្យាយាមបន្ទាប់ក្នុងរយៈពេល {n} វិនាទី"
+  },
+  "loader.menu.hint": "ចុចកណ្ដុរស្ដាំសម្រាប់ជម្រើសផ្ទុកឡើងវិញ",
+  "loader.menu.title": "ផ្ទុកឡើងវិញ",
+  "loader.menu.changes": "តែអ្វីដែលបានផ្លាស់ប្ដូរ ឥឡូវនេះ",
+  "loader.menu.all": "ដំណើរការទាំងអស់ ឥឡូវនេះ",
+  "loader.menu.interval": "សួរម្ដងទៀតដោយស្វ័យប្រវត្តិ",
+  "loader.menu.seconds": {
+    "other": "រៀងរាល់ {n} វិនាទី"
+  },
+  "loader.menu.minutes": {
+    "other": "រៀងរាល់ {n} នាទី"
+  },
+  "loader.menu.off": "មិនដែល",
+  "loader.menu.view": "ផ្ទាំងនេះ ឥឡូវនេះ",
+  "loader.menu.cache": "បំភ្លេចចម្លើយ GitHub ក្នុងឃ្លាំងសម្ងាត់",
+  "loader.menu.page": "ផ្ទុកទំព័រឡើងវិញ",
+  "loader.overview.title": "កំពុងផ្ទុក",
+  "loader.overview.running": {
+    "other": "{n} កំពុងដំណើរការ"
+  },
+  "loader.overview.none": "មិនទាន់មានអ្វីត្រូវបានផ្ទុកនៅឡើយទេ។",
+  "loader.task.boot": "កំពុងអានតួនាទី និងទិន្នន័យមេតារបស់វា",
+  "loader.task.view": "កំពុងគូរ {view}",
+  "loader.task.changes": "កំពុងសួរ GitHub ថាមានអ្វីផ្លាស់ប្ដូរ",
+  "loader.task.everything": "កំពុងស្នើសុំដំណើរការទាំងអស់ពី GitHub",
   "loader.task.artifacts": "កញ្ចប់លទ្ធផលនៃដំណើរការ #{number}៖ {done} ក្នុងចំណោម {total}",
+  "loader.task.artifact": "កញ្ចប់លទ្ធផល {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "បរាជ័យ៖ {message}",
+  "feed.actions.pick": "បង្ហាញតេស្តនៃដំណើរការនេះ",
+  "feed.actions.ended": "បានបញ្ចប់",
+  "feed.actions.duration": "រយៈពេល",
+  "feed.actions.running": "កំពុងដំណើរការ",
+  "feed.actions.longest": "ដំណើរការវែងជាងគេដែលបានបង្ហាញ ចំណាយពេល {duration} ({run})។",
+  "feed.filter.search": "ស្វែងរកការដំណើរការ",
+  "feed.filter.all": "ទាំងអស់",
+  "feed.filter.event": "ព្រឹត្តិការណ៍",
+  "feed.filter.branch": "សាខា",
+  "feed.filter.clear": "សម្អាតតម្រង",
+  "feed.filter.shown": {
+    "other": "នៅសល់ {n} បន្ទាប់ពីតម្រង។"
+  },
   "security.source.advisories": "សេចក្ដីជូនដំណឹងសុវត្ថិភាព",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ការស្កេនកូដ",

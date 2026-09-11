@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub antwortete mit {status}.",
   "feed.anError": "mit einem Fehler",
+  "loader.loading": "Lädt …",
+  "loader.next": {
+    "one": "Nächste Aktualisierung in {n} Sekunde",
+    "other": "Nächste Aktualisierung in {n} Sekunden"
+  },
+  "loader.paused": {
+    "one": "Die letzte Aktualisierung wurde ausgelassen, um das GitHub-Kontingent zu schonen; nächster Versuch in {n} Sekunde",
+    "other": "Die letzte Aktualisierung wurde ausgelassen, um das GitHub-Kontingent zu schonen; nächster Versuch in {n} Sekunden"
+  },
+  "loader.menu.hint": "Rechtsklick für Optionen zum Neuladen",
+  "loader.menu.title": "Neu laden",
+  "loader.menu.changes": "Nur das Geänderte, jetzt",
+  "loader.menu.all": "Jeden Lauf, jetzt",
+  "loader.menu.interval": "Automatisch erneut fragen",
+  "loader.menu.seconds": {
+    "one": "alle {n} Sekunde",
+    "other": "alle {n} Sekunden"
+  },
+  "loader.menu.minutes": {
+    "one": "alle {n} Minute",
+    "other": "alle {n} Minuten"
+  },
+  "loader.menu.off": "nie",
+  "loader.menu.view": "Dieser Tab, jetzt",
+  "loader.menu.cache": "GitHub-Antworten im Cache vergessen",
+  "loader.menu.page": "Seite neu laden",
+  "loader.overview.title": "Laden",
+  "loader.overview.running": {
+    "one": "{n} läuft",
+    "other": "{n} laufen"
+  },
+  "loader.overview.none": "Noch nichts geladen.",
+  "loader.task.boot": "Lese die Rollen und ihre Metadaten",
+  "loader.task.view": "Zeichne {view}",
+  "loader.task.changes": "Frage GitHub, was sich geändert hat",
+  "loader.task.everything": "Frage GitHub nach jedem Lauf",
   "loader.task.artifacts": "Artefakte von Lauf #{number}: {done} von {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fehlgeschlagen: {message}",
+  "feed.actions.pick": "Tests dieses Laufs anzeigen",
+  "feed.actions.ended": "Beendet",
+  "feed.actions.duration": "Dauer",
+  "feed.actions.running": "läuft",
+  "feed.actions.longest": "Der längste angezeigte Lauf dauerte {duration} ({run}).",
+  "feed.filter.search": "Läufe durchsuchen",
+  "feed.filter.all": "alle",
+  "feed.filter.event": "Ereignis",
+  "feed.filter.branch": "Branch",
+  "feed.filter.clear": "Filter zurücksetzen",
+  "feed.filter.shown": {
+    "one": "Nach den Filtern bleibt {n} übrig.",
+    "other": "Nach den Filtern bleiben {n} übrig."
+  },
   "security.source.advisories": "Sicherheitshinweise",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Code-Scanning",

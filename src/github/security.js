@@ -64,8 +64,10 @@ export class GitHubSecurity {
     render(html`<${Security} note=${note} repos=${repos} readings=${readings} findings=${findings} />`, this.root);
   }
 
+  // Args:
+  //   fresh: true asks GitHub again rather than the cache.
   // Returns: every finding of the selected repositories, worst first.
-  async show() {
+  async show(fresh = false) {
     this.container.replaceChildren(this.root);
     this._paint(t('feed.asking'), [], {}, null);
     const repos = selectedRepos(this.range);
@@ -76,7 +78,7 @@ export class GitHubSecurity {
     await this.api.detectProxy();
     const readings = {};
     await Promise.all(repos.flatMap(repo => Object.keys(GitHubSecurity.SOURCES).map(async name => {
-      readings[`${repo} ${name}`] = await this._read(repo, name);
+      readings[`${repo} ${name}`] = await this._read(repo, name, fresh);
     })));
     const findings = Object.values(readings).flatMap(reading => reading.findings || [])
       .sort((one, other) => (RANK[one.severity] ?? 9) - (RANK[other.severity] ?? 9)
@@ -85,11 +87,11 @@ export class GitHubSecurity {
     return findings;
   }
 
-  async _read(repo, name) {
+  async _read(repo, name, fresh) {
     const source = GitHubSecurity.SOURCES[name];
     if (this.api.proxied && !this.api.alerts && !source.open) return { state: 'withheld' };
     try {
-      const entries = await this.api.get(source.path(repo), false);
+      const entries = await this.api.get(source.path(repo), false, fresh);
       const findings = (Array.isArray(entries) ? entries : []).map(entry => ({
         ...source.row(entry), repo, source: name,
       }));

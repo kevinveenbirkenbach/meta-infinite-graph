@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub menjawab {status}.",
   "feed.anError": "dengan galat",
+  "loader.loading": "Memuat …",
+  "loader.next": {
+    "other": "Penyegaran berikutnya dalam {n} detik"
+  },
+  "loader.paused": {
+    "other": "Penyegaran terakhir dilewati untuk menghemat kuota GitHub; percobaan berikutnya dalam {n} detik"
+  },
+  "loader.menu.hint": "klik kanan untuk opsi muat ulang",
+  "loader.menu.title": "Muat ulang",
+  "loader.menu.changes": "Hanya yang berubah, sekarang",
+  "loader.menu.all": "Semua run, sekarang",
+  "loader.menu.interval": "Tanyakan lagi secara otomatis",
+  "loader.menu.seconds": {
+    "other": "setiap {n} detik"
+  },
+  "loader.menu.minutes": {
+    "other": "setiap {n} menit"
+  },
+  "loader.menu.off": "tidak pernah",
+  "loader.menu.view": "Tab ini, sekarang",
+  "loader.menu.cache": "Lupakan jawaban GitHub yang ada di cache",
+  "loader.menu.page": "Muat ulang halaman",
+  "loader.overview.title": "Memuat",
+  "loader.overview.running": {
+    "other": "{n} berjalan"
+  },
+  "loader.overview.none": "Belum ada yang dimuat.",
+  "loader.task.boot": "Membaca peran dan meta-nya",
+  "loader.task.view": "Menggambar {view}",
+  "loader.task.changes": "Menanyakan GitHub apa yang berubah",
+  "loader.task.everything": "Meminta semua run dari GitHub",
   "loader.task.artifacts": "Artefak run #{number}: {done} dari {total}",
+  "loader.task.artifact": "Artefak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "gagal: {message}",
+  "feed.actions.pick": "Tampilkan tes eksekusi ini",
+  "feed.actions.ended": "Selesai",
+  "feed.actions.duration": "Durasi",
+  "feed.actions.running": "berjalan",
+  "feed.actions.longest": "Eksekusi terlama yang ditampilkan memakan waktu {duration} ({run}).",
+  "feed.filter.search": "Cari di jalannya workflow",
+  "feed.filter.all": "semua",
+  "feed.filter.event": "Peristiwa",
+  "feed.filter.branch": "Cabang",
+  "feed.filter.clear": "Hapus filter",
+  "feed.filter.shown": {
+    "other": "{n} tersisa setelah filter."
+  },
   "security.source.advisories": "Imbauan keamanan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pemindaian kode",

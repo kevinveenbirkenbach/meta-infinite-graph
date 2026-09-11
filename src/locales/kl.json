@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status}-mik akivoq.",
   "feed.anError": "kukkunermik",
+  "loader.loading": "Aaneqarpoq …",
+  "loader.next": {
+    "one": "Nutarterineq tulleq sekundi {n} qaangiuppat",
+    "other": "Nutarterineq tulleq sekundit {n} qaangiuppata"
+  },
+  "loader.paused": {
+    "one": "Nutarterineq kingulleq qaangerneqarpoq GitHub-ip qinnutinik killiliussaa sipaarniarlugu; misileeqqinneq tulleq sekundi {n} qaangiuppat",
+    "other": "Nutarterineq kingulleq qaangerneqarpoq GitHub-ip qinnutinik killiliussaa sipaarniarlugu; misileeqqinneq tulleq sekundit {n} qaangiuppata"
+  },
+  "loader.menu.hint": "nutaamik aajunissamut periarfissat talerperlermik tooruk",
+  "loader.menu.title": "Nutaamik aajuk",
+  "loader.menu.changes": "Allanngortut kisimik, maanna",
+  "loader.menu.all": "Ingerlatsinerit tamarmik, maanna",
+  "loader.menu.interval": "Nammineq apeqqiteqqilaaruk",
+  "loader.menu.seconds": {
+    "one": "sekundi {n} tamaasa",
+    "other": "sekundit {n} tamaasa"
+  },
+  "loader.menu.minutes": {
+    "one": "minutsi {n} tamaasa",
+    "other": "minutsit {n} tamaasa"
+  },
+  "loader.menu.off": "qaqugukkulluunniit",
+  "loader.menu.view": "Takussutissiaq una, maanna",
+  "loader.menu.cache": "GitHub-ip akissutai cachimiittut puiguguk",
+  "loader.menu.page": "Qupperneq nutaamik aajuk",
+  "loader.overview.title": "Aaneqarpoq",
+  "loader.overview.running": {
+    "one": "{n} ingerlavoq",
+    "other": "{n} ingerlapput"
+  },
+  "loader.overview.none": "Suli sumik aaneqanngilaq.",
+  "loader.task.boot": "Atorfiit metaallu atuarneqarput",
+  "loader.task.view": "{view} titartarneqarpoq",
+  "loader.task.changes": "GitHub apeqqutigineqarpoq suut allanngorsimanersut",
+  "loader.task.everything": "GitHub-imit ingerlatsinerit tamarmik aaneqarput",
   "loader.task.artifacts": "Ingerlatsineq #{number}-ip artefaktii: {done} / {total}",
+  "loader.task.artifact": "Artefakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "iluatsinngilaq: {message}",
+  "feed.actions.pick": "Ingerlatsinerup matuma misiliutai takutikkit",
+  "feed.actions.ended": "Naammassineqarpoq",
+  "feed.actions.duration": "Sivisussusia",
+  "feed.actions.running": "ingerlavoq",
+  "feed.actions.longest": "Ingerlatsineq takutinneqartoq sivisunerpaaq {duration}-mik sivisussuseqarpoq ({run}).",
+  "feed.filter.search": "Ingerlatsinerni ujaarit",
+  "feed.filter.all": "tamarmik",
+  "feed.filter.event": "Pisoq",
+  "feed.filter.branch": "Branchi",
+  "feed.filter.clear": "Immikkoortiterinerit peerkit",
+  "feed.filter.shown": {
+    "one": "Immikkoortiterinerup kingorna {n} sinneruvoq.",
+    "other": "Immikkoortiterinerup kingorna {n} sinneruput."
+  },
   "security.source.advisories": "Siunnersuutit",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodip misissorneqarnera",

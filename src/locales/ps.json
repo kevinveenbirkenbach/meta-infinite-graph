@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ځواب ورکړ: {status}.",
   "feed.anError": "له تېروتنې سره",
+  "loader.loading": "پورته کېږي …",
+  "loader.next": {
+    "one": "راتلونکی تازه کول په {n} ثانیه کې",
+    "other": "راتلونکی تازه کول په {n} ثانیو کې"
+  },
+  "loader.paused": {
+    "one": "وروستی تازه کول د GitHub د ونډې د سپمولو لپاره پرېښودل شو؛ راتلونکې هڅه په {n} ثانیه کې",
+    "other": "وروستی تازه کول د GitHub د ونډې د سپمولو لپاره پرېښودل شو؛ راتلونکې هڅه په {n} ثانیو کې"
+  },
+  "loader.menu.hint": "د بیا پورته کولو انتخابونو لپاره ښي کلیک وکړئ",
+  "loader.menu.title": "بیا پورته کول",
+  "loader.menu.changes": "یوازې هغه څه چې بدل شوي، اوس",
+  "loader.menu.all": "هره چلېدنه، اوس",
+  "loader.menu.interval": "په خپلکاره ډول بیا وپوښتئ",
+  "loader.menu.seconds": {
+    "one": "په هره {n} ثانیه کې",
+    "other": "په هرو {n} ثانیو کې"
+  },
+  "loader.menu.minutes": {
+    "one": "په هره {n} دقیقه کې",
+    "other": "په هرو {n} دقیقو کې"
+  },
+  "loader.menu.off": "هېڅکله",
+  "loader.menu.view": "دا ننداره، اوس",
+  "loader.menu.cache": "د GitHub زېرمه شوي ځوابونه هېر کړئ",
+  "loader.menu.page": "پاڼه بیا پورته کړئ",
+  "loader.overview.title": "پورته کېږي",
+  "loader.overview.running": {
+    "one": "{n} روان دی",
+    "other": "{n} روان دي"
+  },
+  "loader.overview.none": "تر اوسه هېڅ نه دي پورته شوي.",
+  "loader.task.boot": "رولونه او د هغوی مېټا لوستل کېږي",
+  "loader.task.view": "{view} انځورېږي",
+  "loader.task.changes": "له GitHub نه پوښتل کېږي چې څه بدل شوي",
+  "loader.task.everything": "له GitHub نه هره چلېدنه غوښتل کېږي",
   "loader.task.artifacts": "د چلېدنې #{number} آرټيفکټونه: له {total} څخه {done}",
+  "loader.task.artifact": "آرټيفکټ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ناکام شو: {message}",
+  "feed.actions.pick": "د دې چلېدنې ازموینې وښیئ",
+  "feed.actions.ended": "پای ته رسېدلی",
+  "feed.actions.duration": "موده",
+  "feed.actions.running": "روان دی",
+  "feed.actions.longest": "تر ټولو اوږده ښودل شوې چلېدنه {duration} ونیوه ({run}).",
+  "feed.filter.search": "چلېدنې ولټوئ",
+  "feed.filter.all": "ټول",
+  "feed.filter.event": "پېښه",
+  "feed.filter.branch": "څانګه",
+  "feed.filter.clear": "چاڼګرونه پاک کړئ",
+  "feed.filter.shown": {
+    "one": "له چاڼګرونو وروسته {n} پاتې دی.",
+    "other": "له چاڼګرونو وروسته {n} پاتې دي."
+  },
   "security.source.advisories": "مشورې",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "د کوډ سکن",

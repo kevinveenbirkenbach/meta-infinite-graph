@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ने {status} उत्तर दिया।",
   "feed.anError": "त्रुटि के साथ",
+  "loader.loading": "लोड हो रहा है …",
+  "loader.next": {
+    "one": "अगला रिफ़्रेश {n} सेकंड में",
+    "other": "अगला रिफ़्रेश {n} सेकंड में"
+  },
+  "loader.paused": {
+    "one": "GitHub कोटा बचाने के लिए पिछला रिफ़्रेश छोड़ दिया गया; अगला प्रयास {n} सेकंड में",
+    "other": "GitHub कोटा बचाने के लिए पिछला रिफ़्रेश छोड़ दिया गया; अगला प्रयास {n} सेकंड में"
+  },
+  "loader.menu.hint": "रीलोड विकल्पों के लिए राइट-क्लिक करें",
+  "loader.menu.title": "फिर से लोड करें",
+  "loader.menu.changes": "केवल जो बदला है, अभी",
+  "loader.menu.all": "सभी रन, अभी",
+  "loader.menu.interval": "अपने आप फिर से पूछें",
+  "loader.menu.seconds": {
+    "one": "हर {n} सेकंड",
+    "other": "हर {n} सेकंड"
+  },
+  "loader.menu.minutes": {
+    "one": "हर {n} मिनट",
+    "other": "हर {n} मिनट"
+  },
+  "loader.menu.off": "कभी नहीं",
+  "loader.menu.view": "यह टैब, अभी",
+  "loader.menu.cache": "कैश किए गए GitHub उत्तर भूल जाएँ",
+  "loader.menu.page": "पेज फिर से लोड करें",
+  "loader.overview.title": "लोड हो रहा है",
+  "loader.overview.running": {
+    "one": "{n} चल रहा है",
+    "other": "{n} चल रहे हैं"
+  },
+  "loader.overview.none": "अभी तक कुछ भी लोड नहीं हुआ है।",
+  "loader.task.boot": "भूमिकाएँ और उनका मेटा पढ़ा जा रहा है",
+  "loader.task.view": "{view} बनाया जा रहा है",
+  "loader.task.changes": "GitHub से पूछा जा रहा है कि क्या बदला",
+  "loader.task.everything": "GitHub से सभी रन माँगे जा रहे हैं",
   "loader.task.artifacts": "रन #{number} के आर्टिफ़ैक्ट: {total} में से {done}",
+  "loader.task.artifact": "आर्टिफ़ैक्ट {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "विफल: {message}",
+  "feed.actions.pick": "इस रन के परीक्षण दिखाएँ",
+  "feed.actions.ended": "समाप्त हुआ",
+  "feed.actions.duration": "अवधि",
+  "feed.actions.running": "चल रहा है",
+  "feed.actions.longest": "दिखाए गए सबसे लंबे रन में {duration} लगे ({run}).",
+  "feed.filter.search": "रन में खोजें",
+  "feed.filter.all": "सभी",
+  "feed.filter.event": "इवेंट",
+  "feed.filter.branch": "ब्रांच",
+  "feed.filter.clear": "फ़िल्टर हटाएँ",
+  "feed.filter.shown": {
+    "one": "फ़िल्टर के बाद {n} बचा है।",
+    "other": "फ़िल्टर के बाद {n} बचे हैं।"
+  },
   "security.source.advisories": "सुरक्षा सलाहें",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "कोड स्कैनिंग",

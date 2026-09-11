@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ya yamukula {status}.",
   "feed.anError": "nepuko",
+  "loader.loading": "Tapu etwa …",
+  "loader.next": {
+    "one": "Etelo we tali landula mosekonde {n}",
+    "other": "Etelo we tali landula moosekonde {n}"
+  },
+  "loader.paused": {
+    "one": "Etelo we lyahugunina olya pitwa po opo ku gamenwe omaindilo ga GitHub; ekendabalo tali landula mosekonde {n}",
+    "other": "Etelo we lyahugunina olya pitwa po opo ku gamenwe omaindilo ga GitHub; ekendabalo tali landula moosekonde {n}"
+  },
+  "loader.menu.hint": "kliki kolulyo opo u mone omahogololo gokwetela we",
+  "loader.menu.title": "Etela we",
+  "loader.menu.changes": "Ashike shoka sha lunduluka, ngashingeyi",
+  "loader.menu.all": "Omalongitho agehe, ngashingeyi",
+  "loader.menu.interval": "Pula we kuye mwene",
+  "loader.menu.seconds": {
+    "one": "kehe sekonde {n}",
+    "other": "kehe oosekonde {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "kehe minute {n}",
+    "other": "kehe ominute {n}"
+  },
+  "loader.menu.off": "nando",
+  "loader.menu.view": "Eulikilo ndika, ngashingeyi",
+  "loader.menu.cache": "Dimbwa omayamukulo ga GitHub ga pungulwa",
+  "loader.menu.page": "Etela we epandja",
+  "loader.overview.title": "Tapu etwa",
+  "loader.overview.running": {
+    "one": "{n} tali longwa",
+    "other": "{n} taya longwa"
+  },
+  "loader.overview.none": "Kaku na sha etwa natango.",
+  "loader.task.boot": "Tapu leshwa oonkandangala nometa yadho",
+  "loader.task.view": "Tapu ningwa ethano lya {view}",
+  "loader.task.changes": "Tapu pulwa GitHub shoka sha lunduluka",
+  "loader.task.everything": "Tapu pulwa GitHub omalongitho agehe",
   "loader.task.artifacts": "Oartefakta dhelongitho #{number}: {done} mu {total}",
+  "loader.task.artifact": "Oartefakta {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "inali enda nawa: {message}",
+  "feed.actions.pick": "Ulika omakeshelo gelongitho ndika",
+  "feed.actions.ended": "Sha pwa",
+  "feed.actions.duration": "Uule wethimbo",
+  "feed.actions.running": "tali longwa",
+  "feed.actions.longest": "Elongitho lyo lile unene tali ulikwa lya kutha {duration} ({run}).",
+  "feed.filter.search": "Konga omalongitho",
+  "feed.filter.all": "ayihe",
+  "feed.filter.event": "Oshiningwanima",
+  "feed.filter.branch": "Oshitayi",
+  "feed.filter.clear": "Dhima iihogololi",
+  "feed.filter.shown": {
+    "one": "Elongitho {n} lya hupa konima yiihogololi.",
+    "other": "Omalongitho {n} ga hupa konima yiihogololi."
+  },
   "security.source.advisories": "Omayele",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Okukonakona ikoodi",

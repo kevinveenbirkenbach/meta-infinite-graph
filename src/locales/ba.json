@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} яуабын бирҙе.",
   "feed.anError": "хата менән",
+  "loader.loading": "Йөкләнә …",
+  "loader.next": {
+    "one": "Киләһе яңыртыу {n} секундтан һуң",
+    "other": "Киләһе яңыртыу {n} секундтан һуң"
+  },
+  "loader.paused": {
+    "one": "GitHub квотаһын һаҡлау өсөн һуңғы яңыртыу үткәреп ебәрелде; киләһе тырышыу {n} секундтан һуң",
+    "other": "GitHub квотаһын һаҡлау өсөн һуңғы яңыртыу үткәреп ебәрелде; киләһе тырышыу {n} секундтан һуң"
+  },
+  "loader.menu.hint": "яңынан йөкләү параметрҙары өсөн уң яҡ төймә менән баҫығыҙ",
+  "loader.menu.title": "Яңынан йөкләү",
+  "loader.menu.changes": "Үҙгәргәне генә, хәҙер",
+  "loader.menu.all": "Һәр башҡарыу, хәҙер",
+  "loader.menu.interval": "Автоматик рәүештә ҡабат һорарға",
+  "loader.menu.seconds": {
+    "one": "{n} секунд һайын",
+    "other": "{n} секунд һайын"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} минут һайын",
+    "other": "{n} минут һайын"
+  },
+  "loader.menu.off": "бер ҡасан да",
+  "loader.menu.view": "Ошо вкладка, хәҙер",
+  "loader.menu.cache": "Кэштағы GitHub яуаптарын онотоу",
+  "loader.menu.page": "Битте яңынан йөкләргә",
+  "loader.overview.title": "Йөкләнә",
+  "loader.overview.running": {
+    "one": "{n} башҡарыла",
+    "other": "{n} башҡарыла"
+  },
+  "loader.overview.none": "Әлегә бер нәмә лә йөкләнмәне.",
+  "loader.task.boot": "Ролдәр һәм уларҙың метаһы уҡыла",
+  "loader.task.view": "{view} һыҙыла",
+  "loader.task.changes": "GitHub-тан нимә үҙгәргәне һорала",
+  "loader.task.everything": "GitHub-тан һәр башҡарыу һорала",
   "loader.task.artifacts": "#{number} башҡарыуының артефакттары: {done}/{total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "уңышһыҙ: {message}",
+  "feed.actions.pick": "Был башҡарыуҙың тестарын күрһәтергә",
+  "feed.actions.ended": "Тамамланған",
+  "feed.actions.duration": "Оҙайлылыҡ",
+  "feed.actions.running": "башҡарыла",
+  "feed.actions.longest": "Күрһәтелгән иң оҙон башҡарыу {duration} дауам итте ({run}).",
+  "feed.filter.search": "Башҡарыуҙарҙан эҙләү",
+  "feed.filter.all": "барыһы",
+  "feed.filter.event": "Ваҡиға",
+  "feed.filter.branch": "Тармаҡ",
+  "feed.filter.clear": "Фильтрҙарҙы таҙартыу",
+  "feed.filter.shown": {
+    "one": "Фильтрҙарҙан һуң {n} ҡалды.",
+    "other": "Фильтрҙарҙан һуң {n} ҡалды."
+  },
   "security.source.advisories": "Кәңәштәр",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодты тикшереү",

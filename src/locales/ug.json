@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} دەپ جاۋاب بەردى.",
   "feed.anError": "خاتالىق بىلەن",
+  "loader.loading": "يۈكلىنىۋاتىدۇ …",
+  "loader.next": {
+    "one": "كېيىنكى يېڭىلاش {n} سېكۇنتتىن كېيىن",
+    "other": "كېيىنكى يېڭىلاش {n} سېكۇنتتىن كېيىن"
+  },
+  "loader.paused": {
+    "one": "GitHub نورمىسىنى تېجەش ئۈچۈن ئالدىنقى يېڭىلاش ئاتلاپ ئۆتۈلدى؛ كېيىنكى ئۇرۇنۇش {n} سېكۇنتتىن كېيىن",
+    "other": "GitHub نورمىسىنى تېجەش ئۈچۈن ئالدىنقى يېڭىلاش ئاتلاپ ئۆتۈلدى؛ كېيىنكى ئۇرۇنۇش {n} سېكۇنتتىن كېيىن"
+  },
+  "loader.menu.hint": "قايتا يۈكلەش تاللانمىلىرى ئۈچۈن ئوڭ چېكىڭ",
+  "loader.menu.title": "قايتا يۈكلەش",
+  "loader.menu.changes": "پەقەت ئۆزگەرگەنلىرى، ھازىر",
+  "loader.menu.all": "بارلىق ئىجرالار، ھازىر",
+  "loader.menu.interval": "ئاپتوماتىك قايتا سوراش",
+  "loader.menu.seconds": {
+    "one": "ھەر {n} سېكۇنتتا",
+    "other": "ھەر {n} سېكۇنتتا"
+  },
+  "loader.menu.minutes": {
+    "one": "ھەر {n} مىنۇتتا",
+    "other": "ھەر {n} مىنۇتتا"
+  },
+  "loader.menu.off": "ھەرگىز",
+  "loader.menu.view": "بۇ بەتكۈچ، ھازىر",
+  "loader.menu.cache": "غەملەكتىكى GitHub جاۋابلىرىنى ئۇنتۇش",
+  "loader.menu.page": "بەتنى قايتا يۈكلەش",
+  "loader.overview.title": "يۈكلەش",
+  "loader.overview.running": {
+    "one": "{n} ئىجرا بولۇۋاتىدۇ",
+    "other": "{n} ئىجرا بولۇۋاتىدۇ"
+  },
+  "loader.overview.none": "تېخى ھېچنېمە يۈكلەنمىدى.",
+  "loader.task.boot": "روللار ۋە ئۇلارنىڭ مېتا ئۇچۇرى ئوقۇلۇۋاتىدۇ",
+  "loader.task.view": "{view} سىزىلىۋاتىدۇ",
+  "loader.task.changes": "GitHub دىن نېمىلەرنىڭ ئۆزگەرگەنلىكى سورىلىۋاتىدۇ",
+  "loader.task.everything": "GitHub دىن بارلىق ئىجرالار سورىلىۋاتىدۇ",
   "loader.task.artifacts": "#{number} ئىجرانىڭ ئارتىفاكتلىرى: {total} دىن {done}",
+  "loader.task.artifact": "ئارتىفاكت {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "مەغلۇپ بولدى: {message}",
+  "feed.actions.pick": "بۇ ئىجرانىڭ سىناقلىرىنى كۆرسىتىش",
+  "feed.actions.ended": "تۈگىگەن",
+  "feed.actions.duration": "داۋاملىشىش ۋاقتى",
+  "feed.actions.running": "ئىجرا بولۇۋاتىدۇ",
+  "feed.actions.longest": "كۆرسىتىلگەن ئەڭ ئۇزۇن ئىجرا {duration} ({run}) ۋاقىت ئالدى.",
+  "feed.filter.search": "ئىجرالاردىن ئىزدەش",
+  "feed.filter.all": "ھەممىسى",
+  "feed.filter.event": "ھادىسە",
+  "feed.filter.branch": "تارماق",
+  "feed.filter.clear": "سۈزگۈچلەرنى تازىلاش",
+  "feed.filter.shown": {
+    "one": "سۈزگۈچتىن كېيىن {n} قالدى.",
+    "other": "سۈزگۈچتىن كېيىن {n} قالدى."
+  },
   "security.source.advisories": "بىخەتەرلىك ئۇقتۇرۇشلىرى",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "كود تەكشۈرۈش",

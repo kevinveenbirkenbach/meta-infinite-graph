@@ -6,6 +6,7 @@ export class GitHubApi {
     this.base = 'https://api.github.com';
     this.proxied = false;
     this.alerts = false;
+    this.onFetch = null;
   }
 
   // Memoised and awaited by every request: a deep link straight into the fork
@@ -93,16 +94,21 @@ export class GitHubApi {
   //   paginate: false stops at the first page. A caller that only draws a
   //     window must not walk the whole history: /commits on a busy repository
   //     is thousands of commits and dozens of requests.
-  get(path, paginate = true) {
-    const hit = this.cached(path);
+  //   fresh: true asks GitHub even when the cache still holds an answer.
+  //   store: false keeps the answer out of the cache, for a path that is
+  //     asked once and never again, such as a query for what changed since.
+  get(path, paginate = true, fresh = false, store = true) {
+    const hit = fresh ? null : this.cached(path);
     if (hit) return Promise.resolve(hit);
     if (this.memory.has(path)) return this.memory.get(path);
 
     const pending = this.detectProxy()
       .then(() => this._walk(path, null, paginate))
       .then(data => {
-        this._store()[path] = { at: Date.now(), data };
-        this._persist();
+        if (store) {
+          this._store()[path] = { at: Date.now(), data };
+          this._persist();
+        }
         this.memory.delete(path);
         return data;
       })
@@ -112,6 +118,7 @@ export class GitHubApi {
       });
 
     this.memory.set(path, pending);
+    if (this.onFetch) this.onFetch(path, pending);
     return pending;
   }
 

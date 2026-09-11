@@ -26,6 +26,31 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
   family, whether role names read as text or as icons, and how far the idle
   view shows through the active one.
 - **A bottom navigator** carries the loading status and the project credits.
+  At its left edge a circle turns while the tab on screen waits for its data.
+  On the **Actions** tab a filling slice shows how long until the runs of every
+  ticked repository are asked for again, every 60 seconds by default and while
+  the tab is visible. `?refresh=<seconds>` changes the interval and
+  `?refresh=0` turns it off. A refresh that would leave 10 or fewer GitHub
+  requests for the hour is skipped.
+
+  A refresh asks each repository only for what changed: the runs created since
+  the oldest run that was still going at the last answer, or since the newest
+  run when none was. One request per repository still, but a far smaller
+  answer, and it is kept out of the browser cache.
+
+  Hovering the circle, or giving it focus, lists what the page loads: the
+  start, every tab drawn, each GitHub request, each artifact download and the
+  run's artifacts as a whole with how many are in. Each line says whether it
+  is still going, done or failed, how long it took, and why it failed. Loads
+  still going stay listed, and so do the last 30 finished ones; the list
+  follows along while it is open. Requests and downloads are listed without
+  turning the circle, which turns for the tab on screen only.
+
+  Right-clicking the circle, or Enter while it has focus, opens the reloads of
+  the tab on screen. The **Actions** tab offers what changed or every run right
+  now and the refresh interval; the other GitHub and mirror tabs offer to draw
+  themselves again. Every tab can forget the cached GitHub answers or reload
+  the page.
 - **Every switch is in the URL.** View, start role, facets, edge kinds, the
   variant and symbol switches, theme, font size, font family and the
   transparency all round-trip through the query string, so a reload or a shared
@@ -96,9 +121,10 @@ instead: the `cli.timeout` from `meta/tests.yml`, the `*_ENABLED` keys of
 #### Actions run
 
 The **Actions run** menu above the Playwright table lists the recent runs of
-the root repository that deploy (📤 Push, 🔀 Pull Request, 🕹️ Manual). The URL
-carries the picked run as `?run=<id>`, or `?run=<owner/name>@<id>` for a
-fork's run. The table then marks each line whose role
+the root repository that deploy (📤 Push, 🔀 Pull Request, 🕹️ Manual). Clicking
+a run in the **Actions** tab opens the Playwright table held against that run,
+a fork's run included. The URL carries it as `?run=<id>`, or
+`?run=<owner/name>@<id>` for a fork. The table then marks each line whose role
 and variant uploaded a `playwright-<mode>-<role>-<variant>-…` artifact in that
 run with ▶ and dims the rest.
 
@@ -254,6 +280,27 @@ Direct calls need `https://api.github.com` in the `connect-src` of the
 deployment's content security policy; without it the browser blocks every call
 and only this view goes dark. A server token removes that requirement, because
 then every call is same origin.
+
+### Actions
+
+The **Actions** tab lists the workflow runs of every repository ticked in the
+sources menu, newest first, up to 100 per repository. Each row gives the start
+and end in the viewer's time zone, or `running`, and how long the run took as
+`h:mm:ss`, so far for one still going; the note names the longest run shown.
+The time window's left
+handle narrows them; its right handle at the far right means up to now, since
+the git mirror behind the window is fetched at start and lags behind GitHub.
+
+The filter bar above the table narrows the rows without asking GitHub again:
+a search over the run's title, workflow, branch, event and number, and one menu
+each for result, event, workflow, branch and repository, filled with the
+values the window holds and how often each occurs. Every filter is in the URL
+as `?search=`, `?result=`, `?event=`, `?workflow=`, `?branch=` and
+`?repository=`.
+
+A list the browser cache answers is shown at once and then caught up with what
+changed since. Clicking a run opens its [Actions run](#actions-run) in the
+Playwright table.
 
 ### Security
 

@@ -135,7 +135,60 @@
   },
   "feed.failed": "Manoppe i GitHub {status}.",
   "feed.anError": "yan linachi",
+  "loader.loading": "Ma kakarga …",
+  "loader.next": {
+    "one": "I sigiente na nina'nuebu gi {n} sigundo",
+    "other": "I sigiente na nina'nuebu gi {n} sigundo"
+  },
+  "loader.paused": {
+    "one": "Ma lachai i ottimo na nina'nuebu para u ma adahi i kuota GitHub; i sigiente na chagi gi {n} sigundo",
+    "other": "Ma lachai i ottimo na nina'nuebu para u ma adahi i kuota GitHub; i sigiente na chagi gi {n} sigundo"
+  },
+  "loader.menu.hint": "pacha i agapa' para i opsion nina'kåtga ta'lo",
+  "loader.menu.title": "Na'kåtga ta'lo",
+  "loader.menu.changes": "Ha' ni tinilaika, på'go",
+  "loader.menu.all": "Todu i kinalamten, på'go",
+  "loader.menu.interval": "Faisen ta'lo ni automåtiku",
+  "loader.menu.seconds": {
+    "one": "kada {n} sigundo",
+    "other": "kada {n} sigundo"
+  },
+  "loader.menu.minutes": {
+    "one": "kada {n} minutu",
+    "other": "kada {n} minutu"
+  },
+  "loader.menu.off": "ni ngai'an",
+  "loader.menu.view": "Este na finanu'i, på'go",
+  "loader.menu.cache": "Maleffa i ineppe GitHub siha gi cache",
+  "loader.menu.page": "Na'kåtga ta'lo i påhina",
+  "loader.overview.title": "Ma kakarga",
+  "loader.overview.running": {
+    "one": "{n} ha kakalamten",
+    "other": "{n} ha kakalamten"
+  },
+  "loader.overview.none": "Taya' ni hafa ma katga trabiha.",
+  "loader.task.boot": "Ma taitai i papet siha yan i meta-ñiha",
+  "loader.task.view": "Ma pinta {view}",
+  "loader.task.changes": "Ma faisen GitHub hafa tinilaika",
+  "loader.task.everything": "Ma faisen GitHub todu i kinalamten",
   "loader.task.artifacts": "Artefakto siha gi kinalamten #{number}: {done} gi {total}",
+  "loader.task.artifact": "Artefakto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ti malofan: {message}",
+  "feed.actions.pick": "Na'annok i prueba siha gi este na kinalamten",
+  "feed.actions.ended": "Munhåyan",
+  "feed.actions.duration": "Inanakko'",
+  "feed.actions.running": "ha kakalamten",
+  "feed.actions.longest": "I mas anakko' na kinalamten ni mafa'nu'i, mañule' {duration} ({run}).",
+  "feed.filter.search": "Aliligao i kinalamten siha",
+  "feed.filter.all": "todu",
+  "feed.filter.event": "Susedi",
+  "feed.filter.branch": "Rama",
+  "feed.filter.clear": "Na'gasgas i filtro siha",
+  "feed.filter.shown": {
+    "one": "{n} ha' gumaigi despues di i filtro siha.",
+    "other": "{n} ha' gumaigi despues di i filtro siha."
+  },
   "security.source.advisories": "Konsehu siha",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ma'eksaminan kodigu",

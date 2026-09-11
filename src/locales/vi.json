@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub trả lời {status}.",
   "feed.anError": "kèm lỗi",
+  "loader.loading": "Đang tải …",
+  "loader.next": {
+    "other": "Làm mới tiếp theo sau {n} giây"
+  },
+  "loader.paused": {
+    "other": "Lần làm mới gần nhất đã bị bỏ qua để tiết kiệm hạn mức GitHub; lần thử tiếp theo sau {n} giây"
+  },
+  "loader.menu.hint": "nhấp chuột phải để xem tùy chọn tải lại",
+  "loader.menu.title": "Tải lại",
+  "loader.menu.changes": "Chỉ phần đã thay đổi, ngay bây giờ",
+  "loader.menu.all": "Mọi lượt chạy, ngay bây giờ",
+  "loader.menu.interval": "Tự động hỏi lại",
+  "loader.menu.seconds": {
+    "other": "mỗi {n} giây"
+  },
+  "loader.menu.minutes": {
+    "other": "mỗi {n} phút"
+  },
+  "loader.menu.off": "không bao giờ",
+  "loader.menu.view": "Thẻ này, ngay bây giờ",
+  "loader.menu.cache": "Quên các câu trả lời GitHub trong bộ nhớ đệm",
+  "loader.menu.page": "Tải lại trang",
+  "loader.overview.title": "Đang tải",
+  "loader.overview.running": {
+    "other": "{n} đang chạy"
+  },
+  "loader.overview.none": "Chưa có gì được tải.",
+  "loader.task.boot": "Đang đọc vai trò và meta của chúng",
+  "loader.task.view": "Đang vẽ {view}",
+  "loader.task.changes": "Đang hỏi GitHub những gì đã thay đổi",
+  "loader.task.everything": "Đang yêu cầu GitHub mọi lượt chạy",
   "loader.task.artifacts": "Tạo phẩm của lượt chạy #{number}: {done} trên {total}",
+  "loader.task.artifact": "Tạo phẩm {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "thất bại: {message}",
+  "feed.actions.pick": "Hiển thị các kiểm thử của lượt chạy này",
+  "feed.actions.ended": "Kết thúc",
+  "feed.actions.duration": "Thời lượng",
+  "feed.actions.running": "đang chạy",
+  "feed.actions.longest": "Lượt chạy dài nhất được hiển thị mất {duration} ({run}).",
+  "feed.filter.search": "Tìm trong các lượt chạy",
+  "feed.filter.all": "tất cả",
+  "feed.filter.event": "Sự kiện",
+  "feed.filter.branch": "Nhánh",
+  "feed.filter.clear": "Xóa bộ lọc",
+  "feed.filter.shown": {
+    "other": "Còn lại {n} sau khi lọc."
+  },
   "security.source.advisories": "Khuyến cáo bảo mật",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Quét mã",

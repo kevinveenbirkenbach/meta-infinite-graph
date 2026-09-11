@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub a respondou {status}.",
   "feed.anError": "avou ene aroke",
+  "loader.loading": "Dji tchedje …",
+  "loader.next": {
+    "one": "Li shuvant ritchedjaedje dins {n} segonde",
+    "other": "Li shuvant ritchedjaedje dins {n} segondes"
+  },
+  "loader.paused": {
+    "one": "Li dierin ritchedjaedje a stî passé po spågnî l' cote di GitHub; li shuvant côp dins {n} segonde",
+    "other": "Li dierin ritchedjaedje a stî passé po spågnî l' cote di GitHub; li shuvant côp dins {n} segondes"
+  },
+  "loader.menu.hint": "clitchî a droete po les tchûzes di ritchedjaedje",
+  "loader.menu.title": "Ritcherdjî",
+  "loader.menu.changes": "Seulmint çou k' a candjî, asteure",
+  "loader.menu.all": "Tos les enondaedjes, asteure",
+  "loader.menu.interval": "Ridemander tot seu",
+  "loader.menu.seconds": {
+    "one": "totes les {n} segonde",
+    "other": "totes les {n} segondes"
+  },
+  "loader.menu.minutes": {
+    "one": "totes les {n} munute",
+    "other": "totes les {n} munutes"
+  },
+  "loader.menu.off": "måy",
+  "loader.menu.view": "Cist onglet chal, asteure",
+  "loader.menu.cache": "Rovyî les responses di GitHub el muchete",
+  "loader.menu.page": "Ritcherdjî l' pådje",
+  "loader.overview.title": "Dji tchedje",
+  "loader.overview.running": {
+    "one": "{n} tot corant",
+    "other": "{n} tot corant"
+  },
+  "loader.overview.none": "Rén n' a co stî tchedjî.",
+  "loader.task.boot": "Dji lé les roles et leus meta",
+  "loader.task.view": "Dji dessinne {view}",
+  "loader.task.changes": "Dji dmande a GitHub çou k' a candjî",
+  "loader.task.everything": "Dji dmande a GitHub tos les enondaedjes",
   "loader.task.artifacts": "Årtefactes di l' enondaedje #{number}: {done} so {total}",
+  "loader.task.artifact": "Årtefacte {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "raté: {message}",
+  "feed.actions.pick": "Mostrer les sayes di cist enondaedje ci",
+  "feed.actions.ended": "Fini",
+  "feed.actions.duration": "Durêye",
+  "feed.actions.running": "tot corant",
+  "feed.actions.longest": "Li pus long enondaedje mostré a duré {duration} ({run}).",
+  "feed.filter.search": "Cweri dins les enondaedjes",
+  "feed.filter.all": "tos",
+  "feed.filter.event": "Evenmint",
+  "feed.filter.branch": "Brantche",
+  "feed.filter.clear": "Netyî les passetes",
+  "feed.filter.shown": {
+    "one": "{n} dimeure après les passetes.",
+    "other": "{n} dimeurèt après les passetes."
+  },
   "security.source.advisories": "Avertixhmints",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Scanaedje do côde",

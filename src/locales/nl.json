@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub antwoordde {status}.",
   "feed.anError": "met een fout",
+  "loader.loading": "Laden …",
+  "loader.next": {
+    "one": "Volgende verversing over {n} seconde",
+    "other": "Volgende verversing over {n} seconden"
+  },
+  "loader.paused": {
+    "one": "De laatste verversing is overgeslagen om het GitHub-quotum te sparen; volgende poging over {n} seconde",
+    "other": "De laatste verversing is overgeslagen om het GitHub-quotum te sparen; volgende poging over {n} seconden"
+  },
+  "loader.menu.hint": "rechtsklik voor herlaadopties",
+  "loader.menu.title": "Herladen",
+  "loader.menu.changes": "Alleen wat veranderd is, nu",
+  "loader.menu.all": "Alle runs, nu",
+  "loader.menu.interval": "Automatisch opnieuw vragen",
+  "loader.menu.seconds": {
+    "one": "elke {n} seconde",
+    "other": "elke {n} seconden"
+  },
+  "loader.menu.minutes": {
+    "one": "elke {n} minuut",
+    "other": "elke {n} minuten"
+  },
+  "loader.menu.off": "nooit",
+  "loader.menu.view": "Deze weergave, nu",
+  "loader.menu.cache": "Vergeet de gecachete GitHub-antwoorden",
+  "loader.menu.page": "Pagina herladen",
+  "loader.overview.title": "Laden",
+  "loader.overview.running": {
+    "one": "{n} bezig",
+    "other": "{n} bezig"
+  },
+  "loader.overview.none": "Er is nog niets geladen.",
+  "loader.task.boot": "De rollen en hun meta lezen",
+  "loader.task.view": "{view} tekenen",
+  "loader.task.changes": "GitHub vragen wat er veranderd is",
+  "loader.task.everything": "GitHub om alle runs vragen",
   "loader.task.artifacts": "Artefacten van run #{number}: {done} van {total}",
+  "loader.task.artifact": "Artefact {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "mislukt: {message}",
+  "feed.actions.pick": "Tests van deze run tonen",
+  "feed.actions.ended": "Beëindigd",
+  "feed.actions.duration": "Duur",
+  "feed.actions.running": "loopt",
+  "feed.actions.longest": "De langste getoonde run duurde {duration} ({run}).",
+  "feed.filter.search": "Runs doorzoeken",
+  "feed.filter.all": "alle",
+  "feed.filter.event": "Gebeurtenis",
+  "feed.filter.branch": "Branch",
+  "feed.filter.clear": "Filters wissen",
+  "feed.filter.shown": {
+    "one": "Na de filters blijft er {n} over.",
+    "other": "Na de filters blijven er {n} over."
+  },
   "security.source.advisories": "Beveiligingsadviezen",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Codescan",

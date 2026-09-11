@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub dáhùn {status}.",
   "feed.anError": "pẹ̀lú àṣìṣe",
+  "loader.loading": "Ń gbé e wọlé …",
+  "loader.next": {
+    "other": "Ìsọdọ̀tun tó kàn ní ìṣẹ́jú-àáyá {n}"
+  },
+  "loader.paused": {
+    "other": "A fo ìsọdọ̀tun tó kẹ́yìn láti ṣọ́ ìpín GitHub; ìgbìyànjú tó kàn ní ìṣẹ́jú-àáyá {n}"
+  },
+  "loader.menu.hint": "tẹ bọ́tìnnì ọ̀tún fún àwọn àṣàyàn ìtúngbé",
+  "loader.menu.title": "Tún gbé",
+  "loader.menu.changes": "Ohun tó yí padà nìkan, nísinsìnyí",
+  "loader.menu.all": "Gbogbo ìṣiṣẹ́, nísinsìnyí",
+  "loader.menu.interval": "Tún béèrè fúnra rẹ̀",
+  "loader.menu.seconds": {
+    "other": "ní gbogbo ìṣẹ́jú-àáyá {n}"
+  },
+  "loader.menu.minutes": {
+    "other": "ní gbogbo ìṣẹ́jú {n}"
+  },
+  "loader.menu.off": "láéláé",
+  "loader.menu.view": "Táàbù yìí, nísinsìnyí",
+  "loader.menu.cache": "Gbàgbé àwọn ìdáhùn GitHub tí a fi pamọ́",
+  "loader.menu.page": "Tún ojú-ìwé náà gbé",
+  "loader.overview.title": "Ń gbé e wọlé",
+  "loader.overview.running": {
+    "other": "{n} ń ṣiṣẹ́"
+  },
+  "loader.overview.none": "Kò sí ohun tí a ti gbé wọlé síbẹ̀.",
+  "loader.task.boot": "Ń ka àwọn ipa àti meta wọn",
+  "loader.task.view": "Ń ya {view}",
+  "loader.task.changes": "Ń béèrè lọ́wọ́ GitHub ohun tó yí padà",
+  "loader.task.everything": "Ń béèrè gbogbo ìṣiṣẹ́ lọ́wọ́ GitHub",
   "loader.task.artifacts": "Àwọn àtọwọ́dá ìṣiṣẹ́ #{number}: {done} nínú {total}",
+  "loader.task.artifact": "Àtọwọ́dá {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "kùnà: {message}",
+  "feed.actions.pick": "Fi àwọn ìdánwò ìṣiṣẹ́ yìí hàn",
+  "feed.actions.ended": "Parí",
+  "feed.actions.duration": "Àkókò tí ó gbà",
+  "feed.actions.running": "ń ṣiṣẹ́",
+  "feed.actions.longest": "Ìṣiṣẹ́ tó gùn jùlọ tí a fihàn gba {duration} ({run}).",
+  "feed.filter.search": "Wá nínú àwọn ìṣiṣẹ́",
+  "feed.filter.all": "gbogbo",
+  "feed.filter.event": "Ìṣẹ̀lẹ̀",
+  "feed.filter.branch": "Ẹ̀ka",
+  "feed.filter.clear": "Pa àwọn àlẹ̀mọ́ rẹ́",
+  "feed.filter.shown": {
+    "other": "{n} ló kù lẹ́yìn àlẹ̀mọ́."
+  },
   "security.source.advisories": "Àwọn ìmọ̀ràn ààbò",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ṣíṣàyẹ̀wò kóòdù",

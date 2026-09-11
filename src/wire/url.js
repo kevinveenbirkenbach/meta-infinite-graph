@@ -39,7 +39,14 @@ function registerMatrixUrl(matrixView) {
 
 // Returns: the promises of the switches the URL turned on, which have to
 // settle before the first view is drawn.
-export function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches }) {
+export function restoreFromUrl({
+  sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches, refresher, feeds,
+}) {
+  for (const name of Object.keys(feeds.actions.filters)) {
+    urlState.register(name, () => feeds.actions.filters[name], value => {
+      feeds.actions.filters[name] = value;
+    }, '');
+  }
   const pending = [];
   const edgeDefault = checkedEdges();
   urlState
@@ -66,6 +73,7 @@ export function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, ma
       byId('design-tags', HTMLInputElement).checked = forkTree.tags;
     }, 'false')
     .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
+    .register('refresh', () => String(refresher.seconds), value => refresher.setSeconds(Number(value)), '60')
     .register('run', () => testsView.runs.key(), value => {
       if (/^([\w.-]+\/[\w.-]+@)?\d+$/.test(value)) testsView.pickRun(value);
     }, '')

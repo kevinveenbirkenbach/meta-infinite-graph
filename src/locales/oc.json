@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub a respondut {status}.",
   "feed.anError": "amb una error",
+  "loader.loading": "Cargament …",
+  "loader.next": {
+    "one": "Actualizacion seguenta dins {n} segonda",
+    "other": "Actualizacion seguenta dins {n} segondas"
+  },
+  "loader.paused": {
+    "one": "La darrièra actualizacion es estada sautada per esparnhar lo quòta GitHub; ensag seguent dins {n} segonda",
+    "other": "La darrièra actualizacion es estada sautada per esparnhar lo quòta GitHub; ensag seguent dins {n} segondas"
+  },
+  "loader.menu.hint": "clic drech per las opcions de recargament",
+  "loader.menu.title": "Recargar",
+  "loader.menu.changes": "Sonque çò que cambièt, ara",
+  "loader.menu.all": "Totas las execucions, ara",
+  "loader.menu.interval": "Tornar demandar automaticament",
+  "loader.menu.seconds": {
+    "one": "cada {n} segonda",
+    "other": "cada {n} segondas"
+  },
+  "loader.menu.minutes": {
+    "one": "cada {n} minuta",
+    "other": "cada {n} minutas"
+  },
+  "loader.menu.off": "jamai",
+  "loader.menu.view": "Aquesta vista, ara",
+  "loader.menu.cache": "Oblidar las responsas de GitHub gardadas en cache",
+  "loader.menu.page": "Recargar la pagina",
+  "loader.overview.title": "Cargament",
+  "loader.overview.running": {
+    "one": "{n} en cors",
+    "other": "{n} en cors"
+  },
+  "loader.overview.none": "Res es pas encara estat cargat.",
+  "loader.task.boot": "Lectura dels ròtles e de lors metadonadas",
+  "loader.task.view": "Dessenh de {view}",
+  "loader.task.changes": "Demanda a GitHub de çò que cambièt",
+  "loader.task.everything": "Demanda a GitHub de totas las execucions",
   "loader.task.artifacts": "Artefactes de l'execucion #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefacte {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fracàs: {message}",
+  "feed.actions.pick": "Afichar los tèsts d'aquesta execucion",
+  "feed.actions.ended": "Acabat",
+  "feed.actions.duration": "Durada",
+  "feed.actions.running": "en cors",
+  "feed.actions.longest": "L'execucion mai longa afichada a durat {duration} ({run}).",
+  "feed.filter.search": "Cercar dins las execucions",
+  "feed.filter.all": "totes",
+  "feed.filter.event": "Eveniment",
+  "feed.filter.branch": "Branca",
+  "feed.filter.clear": "Escafar los filtres",
+  "feed.filter.shown": {
+    "one": "Demòra {n} aprèp los filtres.",
+    "other": "Demòran {n} aprèp los filtres."
+  },
   "security.source.advisories": "Avisaments",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Analisi del còdi",

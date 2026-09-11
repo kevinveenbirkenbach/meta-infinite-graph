@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub je odgovorio {status}.",
   "feed.anError": "s greškom",
+  "loader.loading": "Učitavanje …",
+  "loader.next": {
+    "one": "Sljedeće osvježavanje za {n} sekundu",
+    "few": "Sljedeće osvježavanje za {n} sekunde",
+    "other": "Sljedeće osvježavanje za {n} sekundi"
+  },
+  "loader.paused": {
+    "one": "Posljednje osvježavanje je preskočeno radi uštede GitHub kvote; sljedeći pokušaj za {n} sekundu",
+    "few": "Posljednje osvježavanje je preskočeno radi uštede GitHub kvote; sljedeći pokušaj za {n} sekunde",
+    "other": "Posljednje osvježavanje je preskočeno radi uštede GitHub kvote; sljedeći pokušaj za {n} sekundi"
+  },
+  "loader.menu.hint": "desni klik za opcije ponovnog učitavanja",
+  "loader.menu.title": "Ponovo učitaj",
+  "loader.menu.changes": "Samo ono što se promijenilo, sada",
+  "loader.menu.all": "Svako pokretanje, sada",
+  "loader.menu.interval": "Automatski pitaj ponovo",
+  "loader.menu.seconds": {
+    "one": "svake {n} sekunde",
+    "few": "svake {n} sekunde",
+    "other": "svakih {n} sekundi"
+  },
+  "loader.menu.minutes": {
+    "one": "svake {n} minute",
+    "few": "svake {n} minute",
+    "other": "svakih {n} minuta"
+  },
+  "loader.menu.off": "nikad",
+  "loader.menu.view": "Ova kartica, sada",
+  "loader.menu.cache": "Zaboravi keširane GitHub odgovore",
+  "loader.menu.page": "Ponovo učitaj stranicu",
+  "loader.overview.title": "Učitavanje",
+  "loader.overview.running": {
+    "one": "{n} u toku",
+    "few": "{n} u toku",
+    "other": "{n} u toku"
+  },
+  "loader.overview.none": "Još ništa nije učitano.",
+  "loader.task.boot": "Čitanje uloga i njihovih meta podataka",
+  "loader.task.view": "Iscrtavanje: {view}",
+  "loader.task.changes": "Pitanje GitHubu šta se promijenilo",
+  "loader.task.everything": "Traženje svakog pokretanja od GitHuba",
   "loader.task.artifacts": "Artefakti pokretanja #{number}: {done} od {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "nije uspjelo: {message}",
+  "feed.actions.pick": "Prikaži testove ovog pokretanja",
+  "feed.actions.ended": "Završeno",
+  "feed.actions.duration": "Trajanje",
+  "feed.actions.running": "u toku",
+  "feed.actions.longest": "Najduže prikazano pokretanje trajalo je {duration} ({run}).",
+  "feed.filter.search": "Pretraži pokretanja",
+  "feed.filter.all": "sve",
+  "feed.filter.event": "Događaj",
+  "feed.filter.branch": "Grana",
+  "feed.filter.clear": "Očisti filtere",
+  "feed.filter.shown": {
+    "one": "Nakon filtera ostaje {n}.",
+    "few": "Nakon filtera ostaju {n}.",
+    "other": "Nakon filtera ostaje {n}."
+  },
   "security.source.advisories": "Sigurnosni savjeti",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Skeniranje koda",

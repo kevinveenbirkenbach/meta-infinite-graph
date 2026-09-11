@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yayankha {status}.",
   "feed.anError": "ndi vuto",
+  "loader.loading": "Tikukweza …",
+  "loader.next": {
+    "one": "Kutsitsimutsa kotsatira mu sekondi {n}",
+    "other": "Kutsitsimutsa kotsatira mu masekondi {n}"
+  },
+  "loader.paused": {
+    "one": "Kutsitsimutsa komaliza kudadumphidwa kuti tisunge gawo la GitHub; kuyesa kotsatira mu sekondi {n}",
+    "other": "Kutsitsimutsa komaliza kudadumphidwa kuti tisunge gawo la GitHub; kuyesa kotsatira mu masekondi {n}"
+  },
+  "loader.menu.hint": "dinani kumanja kuti muone njira zokwezanso",
+  "loader.menu.title": "Kwezaninso",
+  "loader.menu.changes": "Zokhazo zasintha, tsopano",
+  "loader.menu.all": "Kuyendetsa konse, tsopano",
+  "loader.menu.interval": "Funsanso zokha",
+  "loader.menu.seconds": {
+    "one": "sekondi {n} iliyonse",
+    "other": "masekondi {n} aliwonse"
+  },
+  "loader.menu.minutes": {
+    "one": "mphindi {n} iliyonse",
+    "other": "mphindi {n} zilizonse"
+  },
+  "loader.menu.off": "ayi konse",
+  "loader.menu.view": "Chiwonetserochi, tsopano",
+  "loader.menu.cache": "Iwalani mayankho a GitHub osungidwa",
+  "loader.menu.page": "Kwezaninso tsamba",
+  "loader.overview.title": "Tikukweza",
+  "loader.overview.running": {
+    "one": "{n} ikuyenda",
+    "other": "{n} zikuyenda"
+  },
+  "loader.overview.none": "Palibe chomwe chakwezedwa pakadali pano.",
+  "loader.task.boot": "Tikuwerenga maudindo ndi meta yake",
+  "loader.task.view": "Tikujambula {view}",
+  "loader.task.changes": "Tikufunsa GitHub zomwe zasintha",
+  "loader.task.everything": "Tikupempha GitHub kuyendetsa konse",
   "loader.task.artifacts": "Zopangidwa za kuyendetsa #{number}: {done} mwa {total}",
+  "loader.task.artifact": "Chopangidwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "zalephera: {message}",
+  "feed.actions.pick": "Onetsani mayeso a kuyendetsa uku",
+  "feed.actions.ended": "Zinatha",
+  "feed.actions.duration": "Nthawi",
+  "feed.actions.running": "kukuyenda",
+  "feed.actions.longest": "Kuyendetsa kotalika kwambiri komwe kwasonyezedwa kunatenga {duration} ({run}).",
+  "feed.filter.search": "Sakani kuyendetsa",
+  "feed.filter.all": "zonse",
+  "feed.filter.event": "Chochitika",
+  "feed.filter.branch": "Nthambi",
+  "feed.filter.clear": "Chotsani masefa",
+  "feed.filter.shown": {
+    "one": "Kwatsala {n} pambuyo pa masefa.",
+    "other": "Kwatsala {n} pambuyo pa masefa."
+  },
   "security.source.advisories": "Malangizo",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kusanthula khodi",

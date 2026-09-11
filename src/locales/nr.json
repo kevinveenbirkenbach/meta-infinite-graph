@@ -135,7 +135,60 @@
   },
   "feed.failed": "I-GitHub iphendule nge-{status}.",
   "feed.anError": "ngephutha",
+  "loader.loading": "Kuyalayishwa …",
+  "loader.next": {
+    "one": "Ukuvuselelwa okulandelako kumzuzwana ongu-{n}",
+    "other": "Ukuvuselelwa okulandelako emizuzwaneni engu-{n}"
+  },
+  "loader.paused": {
+    "one": "Ukuvuselelwa kokugcina kweqiwe ukuze konge isabelo se-GitHub; umzamo olandelako kumzuzwana ongu-{n}",
+    "other": "Ukuvuselelwa kokugcina kweqiwe ukuze konge isabelo se-GitHub; umzamo olandelako emizuzwaneni engu-{n}"
+  },
+  "loader.menu.hint": "qhwarhaza ngesidla ukuze uthole iinkhetho zokulayisha kabutjha",
+  "loader.menu.title": "Layisha kabutjha",
+  "loader.menu.changes": "Okutjhugulukileko kwaphela, njenganje",
+  "loader.menu.all": "Koke ukusetjenziswa, njenganje",
+  "loader.menu.interval": "Buza godu ngokuzenzakalela",
+  "loader.menu.seconds": {
+    "one": "qobe mzuzwana ongu-{n}",
+    "other": "qobe mizuzwana engu-{n}"
+  },
+  "loader.menu.minutes": {
+    "one": "qobe mzuzu ongu-{n}",
+    "other": "qobe mizuzu engu-{n}"
+  },
+  "loader.menu.off": "akukho nanini",
+  "loader.menu.view": "Umbono lo, njenganje",
+  "loader.menu.cache": "Khohlwa iimpendulo ze-GitHub ezibulungiweko",
+  "loader.menu.page": "Layisha kabutjha ikhasi",
+  "loader.overview.title": "Kuyalayishwa",
+  "loader.overview.running": {
+    "one": "{n} kusasebenza",
+    "other": "{n} kusasebenza"
+  },
+  "loader.overview.none": "Akukho okulayishiweko okwanje.",
+  "loader.task.boot": "Kufundwa iindima nemeta yazo",
+  "loader.task.view": "Kudwetjwa {view}",
+  "loader.task.changes": "Kubuzwa ku-GitHub okutjhugulukileko",
+  "loader.task.everything": "Kubawa koke ukusetjenziswa ku-GitHub",
   "loader.task.artifacts": "Ii-athifekthi zokusetjenziswa #{number}: {done} kwe-{total}",
+  "loader.task.artifact": "I-athifekthi {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "kwehlulekile: {message}",
+  "feed.actions.pick": "Tjengisa amalingo walokhu kusetjenziswa",
+  "feed.actions.ended": "Kuphelile",
+  "feed.actions.duration": "Isikhathi",
+  "feed.actions.running": "kusasebenza",
+  "feed.actions.longest": "Ukusetjenziswa okude khulu okutjengisiweko kuthethe {duration} ({run}).",
+  "feed.filter.search": "Funa ukusetjenziswa",
+  "feed.filter.all": "koke",
+  "feed.filter.event": "Isenzakalo",
+  "feed.filter.branch": "Igatja",
+  "feed.filter.clear": "Susa iinhlungi",
+  "feed.filter.shown": {
+    "one": "Kusele {n} ngemva kweenhlungi.",
+    "other": "Kusele {n} ngemva kweenhlungi."
+  },
   "security.source.advisories": "Amacebiso",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ukuhlola ikhowudi",

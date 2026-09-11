@@ -135,7 +135,60 @@
   },
   "feed.failed": "I-GitHub iphendule ngo-{status}.",
   "feed.anError": "nephutha",
+  "loader.loading": "Kulayishwa …",
+  "loader.next": {
+    "one": "Ukuvuselela okulandelayo ngemuva komzuzwana ongu-{n}",
+    "other": "Ukuvuselela okulandelayo ngemuva kwemizuzwana engu-{n}"
+  },
+  "loader.paused": {
+    "one": "Ukuvuselela kokugcina kweqiwe ukuze kongiwe isabelo se-GitHub; umzamo olandelayo ngemuva komzuzwana ongu-{n}",
+    "other": "Ukuvuselela kokugcina kweqiwe ukuze kongiwe isabelo se-GitHub; umzamo olandelayo ngemuva kwemizuzwana engu-{n}"
+  },
+  "loader.menu.hint": "chofoza ngakwesokudla ukuze uthole izinketho zokulayisha kabusha",
+  "loader.menu.title": "Layisha kabusha",
+  "loader.menu.changes": "Okushintshile kuphela, manje",
+  "loader.menu.all": "Ukusebenza konke, manje",
+  "loader.menu.interval": "Buza futhi ngokuzenzakalelayo",
+  "loader.menu.seconds": {
+    "one": "njalo ngemuva komzuzwana ongu-{n}",
+    "other": "njalo ngemuva kwemizuzwana engu-{n}"
+  },
+  "loader.menu.minutes": {
+    "one": "njalo ngemuva komzuzu ongu-{n}",
+    "other": "njalo ngemuva kwemizuzu engu-{n}"
+  },
+  "loader.menu.off": "neze",
+  "loader.menu.view": "Le thebhu, manje",
+  "loader.menu.cache": "Khohlwa izimpendulo ze-GitHub ezigcinwe kukhesi",
+  "loader.menu.page": "Layisha kabusha ikhasi",
+  "loader.overview.title": "Kulayishwa",
+  "loader.overview.running": {
+    "one": "{n} kusasebenza",
+    "other": "{n} kusasebenza"
+  },
+  "loader.overview.none": "Akukho okulayishiwe okwamanje.",
+  "loader.task.boot": "Kufundwa izindima ne-meta yazo",
+  "loader.task.view": "Kudwetshwa {view}",
+  "loader.task.changes": "Kubuzwa ku-GitHub okushintshile",
+  "loader.task.everything": "Kucelwa ku-GitHub konke ukusebenza",
   "loader.task.artifacts": "Imikhiqizo yokusebenza #{number}: {done} kokungu-{total}",
+  "loader.task.artifact": "Umkhiqizo {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "kwehlulekile: {message}",
+  "feed.actions.pick": "Bonisa izivivinyo zalokhu kusebenza",
+  "feed.actions.ended": "Kuphelile",
+  "feed.actions.duration": "Ubude besikhathi",
+  "feed.actions.running": "kusasebenza",
+  "feed.actions.longest": "Ukusebenza okude kakhulu okuboniswayo kuthathe {duration} ({run}).",
+  "feed.filter.search": "Sesha ekusebenzeni",
+  "feed.filter.all": "konke",
+  "feed.filter.event": "Isehlakalo",
+  "feed.filter.branch": "Igatsha",
+  "feed.filter.clear": "Susa izihlungi",
+  "feed.filter.shown": {
+    "one": "Kusele {n} ngemva kokuhlunga.",
+    "other": "Kusele {n} ngemva kokuhlunga."
+  },
   "security.source.advisories": "Izeluleko",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ukuskena ikhodi",

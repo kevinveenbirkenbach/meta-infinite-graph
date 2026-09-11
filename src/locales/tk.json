@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} jogabyny berdi.",
   "feed.anError": "ýalňyşlyk bilen",
+  "loader.loading": "Ýüklenýär …",
+  "loader.next": {
+    "one": "Indiki täzeleme {n} sekuntdan soň",
+    "other": "Indiki täzeleme {n} sekuntdan soň"
+  },
+  "loader.paused": {
+    "one": "GitHub kwotasyny tygşytlamak üçin soňky täzeleme ötürildi; indiki synanyşyk {n} sekuntdan soň",
+    "other": "GitHub kwotasyny tygşytlamak üçin soňky täzeleme ötürildi; indiki synanyşyk {n} sekuntdan soň"
+  },
+  "loader.menu.hint": "täzeden ýüklemek opsiýalary üçin sag düwme bilen basyň",
+  "loader.menu.title": "Täzeden ýükle",
+  "loader.menu.changes": "Diňe üýtgänler, häzir",
+  "loader.menu.all": "Ähli işledilişler, häzir",
+  "loader.menu.interval": "Awtomatik gaýtadan sora",
+  "loader.menu.seconds": {
+    "one": "her {n} sekuntda",
+    "other": "her {n} sekuntda"
+  },
+  "loader.menu.minutes": {
+    "one": "her {n} minutda",
+    "other": "her {n} minutda"
+  },
+  "loader.menu.off": "hiç haçan",
+  "loader.menu.view": "Şu salma, häzir",
+  "loader.menu.cache": "Keşdäki GitHub jogaplaryny ýatdan çykar",
+  "loader.menu.page": "Sahypany täzeden ýükle",
+  "loader.overview.title": "Ýüklenýär",
+  "loader.overview.running": {
+    "one": "{n} işleýär",
+    "other": "{n} işleýär"
+  },
+  "loader.overview.none": "Entek hiç zat ýüklenmedi.",
+  "loader.task.boot": "Rollar we olaryň meta maglumatlary okalýar",
+  "loader.task.view": "{view} çyzylýar",
+  "loader.task.changes": "GitHub-dan näme üýtgändigi soralýar",
+  "loader.task.everything": "GitHub-dan ähli işledilişler soralýar",
   "loader.task.artifacts": "#{number} işledilişiň artefaktlary: {total}-dan {done}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "şowsuz: {message}",
+  "feed.actions.pick": "Bu işledilişiň synaglaryny görkez",
+  "feed.actions.ended": "Tamamlandy",
+  "feed.actions.duration": "Dowamlylygy",
+  "feed.actions.running": "işleýär",
+  "feed.actions.longest": "Görkezilen iň uzak işlediliş {duration} ({run}) dowam etdi.",
+  "feed.filter.search": "Işledilişlerde gözle",
+  "feed.filter.all": "hemmesi",
+  "feed.filter.event": "Waka",
+  "feed.filter.branch": "Şaha",
+  "feed.filter.clear": "Süzgüçleri arassala",
+  "feed.filter.shown": {
+    "one": "Süzgüçlerden soň {n} galdy.",
+    "other": "Süzgüçlerden soň {n} galdy."
+  },
   "security.source.advisories": "Howpsuzlyk maslahatlary",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kod barlagy",

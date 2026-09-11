@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} жауабын берді.",
   "feed.anError": "қатемен",
+  "loader.loading": "Жүктелуде …",
+  "loader.next": {
+    "one": "Келесі жаңарту {n} секундтан кейін",
+    "other": "Келесі жаңарту {n} секундтан кейін"
+  },
+  "loader.paused": {
+    "one": "GitHub квотасын үнемдеу үшін соңғы жаңарту өткізіп жіберілді; келесі әрекет {n} секундтан кейін",
+    "other": "GitHub квотасын үнемдеу үшін соңғы жаңарту өткізіп жіберілді; келесі әрекет {n} секундтан кейін"
+  },
+  "loader.menu.hint": "қайта жүктеу параметрлері үшін оң жақ шерту",
+  "loader.menu.title": "Қайта жүктеу",
+  "loader.menu.changes": "Тек өзгергені, қазір",
+  "loader.menu.all": "Барлық іске қосылымдар, қазір",
+  "loader.menu.interval": "Автоматты түрде қайта сұрау",
+  "loader.menu.seconds": {
+    "one": "әр {n} секунд сайын",
+    "other": "әр {n} секунд сайын"
+  },
+  "loader.menu.minutes": {
+    "one": "әр {n} минут сайын",
+    "other": "әр {n} минут сайын"
+  },
+  "loader.menu.off": "ешқашан",
+  "loader.menu.view": "Осы қойынды, қазір",
+  "loader.menu.cache": "Кэштегі GitHub жауаптарын ұмыту",
+  "loader.menu.page": "Бетті қайта жүктеу",
+  "loader.overview.title": "Жүктелуде",
+  "loader.overview.running": {
+    "one": "{n} орындалуда",
+    "other": "{n} орындалуда"
+  },
+  "loader.overview.none": "Әзірге ештеңе жүктелген жоқ.",
+  "loader.task.boot": "Рөлдер мен олардың метадеректерін оқу",
+  "loader.task.view": "{view} сызылуда",
+  "loader.task.changes": "GitHub-тан не өзгергенін сұрау",
+  "loader.task.everything": "GitHub-тан барлық іске қосылымдарды сұрау",
   "loader.task.artifacts": "#{number} іске қосылымның артефактілері: {done} / {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "сәтсіз: {message}",
+  "feed.actions.pick": "Осы іске қосылымның тесттерін көрсету",
+  "feed.actions.ended": "Аяқталған",
+  "feed.actions.duration": "Ұзақтығы",
+  "feed.actions.running": "орындалуда",
+  "feed.actions.longest": "Көрсетілген ең ұзақ іске қосылым {duration} уақыт алды ({run}).",
+  "feed.filter.search": "Іске қосылымдардан іздеу",
+  "feed.filter.all": "барлығы",
+  "feed.filter.event": "Оқиға",
+  "feed.filter.branch": "Тармақ",
+  "feed.filter.clear": "Сүзгілерді тазалау",
+  "feed.filter.shown": {
+    "one": "Сүзгілерден кейін {n} қалды.",
+    "other": "Сүзгілерден кейін {n} қалды."
+  },
   "security.source.advisories": "Бюллетеньдер",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодты сканерлеу",

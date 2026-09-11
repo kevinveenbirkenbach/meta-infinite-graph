@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ĩcokirie {status}.",
   "feed.anError": "na ihĩtia",
+  "loader.loading": "Nĩ kũrehe …",
+  "loader.next": {
+    "one": "Gũcokia kũngĩ thutha wa thekondi {n}",
+    "other": "Gũcokia kũngĩ thutha wa thekondi {n}"
+  },
+  "loader.paused": {
+    "one": "Gũcokia kwa mũthia gwatigwo nĩguo kũiga mahoya ma GitHub; kũgeria kũngĩ thutha wa thekondi {n}",
+    "other": "Gũcokia kwa mũthia gwatigwo nĩguo kũiga mahoya ma GitHub; kũgeria kũngĩ thutha wa thekondi {n}"
+  },
+  "loader.menu.hint": "hihinya na ũrĩo nĩguo wone mahitho ma gũcokia",
+  "loader.menu.title": "Cookia",
+  "loader.menu.changes": "Kĩrĩa kĩgarũrũkĩte tu, rĩu",
+  "loader.menu.all": "Gũthiĩ guothe, rĩu",
+  "loader.menu.interval": "Ũria rĩngĩ o kĩyũmbaini",
+  "loader.menu.seconds": {
+    "one": "o thekondi {n}",
+    "other": "o thekondi {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "o ndagĩka {n}",
+    "other": "o ndagĩka {n}"
+  },
+  "loader.menu.off": "o na rĩmwe",
+  "loader.menu.view": "Kĩonereria gĩkĩ, rĩu",
+  "loader.menu.cache": "Riganĩrwo nĩ macokio ma GitHub marĩa maigĩtwo",
+  "loader.menu.page": "Cookia ũrupa",
+  "loader.overview.title": "Nĩ kũrehe",
+  "loader.overview.running": {
+    "one": "{n} nĩ ĩrathiĩ",
+    "other": "{n} nĩ irathiĩ"
+  },
+  "loader.overview.none": "Gũtirĩ kĩndũ kĩrehetwo o na rĩu.",
+  "loader.task.boot": "Nĩ gũthoma mawĩra na meta yamo",
+  "loader.task.view": "Nĩ gũcora {view}",
+  "loader.task.changes": "Nĩ kũũria GitHub kĩrĩa kĩgarũrũkĩte",
+  "loader.task.everything": "Nĩ kũũria GitHub gũthiĩ guothe",
   "loader.task.artifacts": "Indo iria ithondeketwo cia gũthiĩ #{number}: {done} harĩ {total}",
+  "loader.task.artifact": "Kĩrĩa gĩthondeketwo {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "yaremwo: {message}",
+  "feed.actions.pick": "Onania magerio ma gũthiĩ gũkũ",
+  "feed.actions.ended": "Ĩrĩkĩtie",
+  "feed.actions.duration": "Ihinda",
+  "feed.actions.running": "ĩgũthiĩ",
+  "feed.actions.longest": "Gũthiĩ kũraihu makĩria kuonanĩtio kwoire {duration} ({run}).",
+  "feed.filter.search": "Caria mathiĩ-inĩ",
+  "feed.filter.all": "ciothe",
+  "feed.filter.event": "Ũndũ",
+  "feed.filter.branch": "Rũhonge",
+  "feed.filter.clear": "Eheria itũtũri",
+  "feed.filter.shown": {
+    "one": "{n} nĩrĩatigara thutha wa itũtũri.",
+    "other": "{n} nĩmatigara thutha wa itũtũri."
+  },
   "security.source.advisories": "Mataaro",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Gũthuthuria kodi",

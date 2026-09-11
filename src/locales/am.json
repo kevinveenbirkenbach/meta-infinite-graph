@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} መለሰ።",
   "feed.anError": "ከስህተት ጋር",
+  "loader.loading": "በመጫን ላይ …",
+  "loader.next": {
+    "one": "ቀጣዩ ማደስ በ{n} ሰከንድ ውስጥ",
+    "other": "ቀጣዩ ማደስ በ{n} ሰከንዶች ውስጥ"
+  },
+  "loader.paused": {
+    "one": "የGitHub ኮታን ለመቆጠብ የመጨረሻው ማደስ ተዘሏል፤ ቀጣዩ ሙከራ በ{n} ሰከንድ ውስጥ",
+    "other": "የGitHub ኮታን ለመቆጠብ የመጨረሻው ማደስ ተዘሏል፤ ቀጣዩ ሙከራ በ{n} ሰከንዶች ውስጥ"
+  },
+  "loader.menu.hint": "ለዳግም መጫን አማራጮች በቀኝ ጠቅ ያድርጉ",
+  "loader.menu.title": "እንደገና ጫን",
+  "loader.menu.changes": "የተለወጠውን ብቻ፣ አሁን",
+  "loader.menu.all": "እያንዳንዱን ሩጫ፣ አሁን",
+  "loader.menu.interval": "በራስ-ሰር እንደገና ጠይቅ",
+  "loader.menu.seconds": {
+    "one": "በየ{n} ሰከንዱ",
+    "other": "በየ{n} ሰከንዱ"
+  },
+  "loader.menu.minutes": {
+    "one": "በየ{n} ደቂቃው",
+    "other": "በየ{n} ደቂቃው"
+  },
+  "loader.menu.off": "በጭራሽ",
+  "loader.menu.view": "ይህ ትር፣ አሁን",
+  "loader.menu.cache": "የተሸጎጡትን የGitHub ምላሾች እርሳ",
+  "loader.menu.page": "ገጹን እንደገና ጫን",
+  "loader.overview.title": "በመጫን ላይ",
+  "loader.overview.running": {
+    "one": "{n} በሂደት ላይ",
+    "other": "{n} በሂደት ላይ"
+  },
+  "loader.overview.none": "እስካሁን ምንም አልተጫነም።",
+  "loader.task.boot": "ሚናዎቹንና ሜታቸውን በማንበብ ላይ",
+  "loader.task.view": "{view}ን በመሳል ላይ",
+  "loader.task.changes": "ምን እንደተለወጠ GitHubን በመጠየቅ ላይ",
+  "loader.task.everything": "እያንዳንዱን ሩጫ GitHubን በመጠየቅ ላይ",
   "loader.task.artifacts": "የሩጫ #{number} አርቲፋክቶች፦ {done} ከ{total}",
+  "loader.task.artifact": "አርቲፋክት {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "አልተሳካም፦ {message}",
+  "feed.actions.pick": "የዚህን ሩጫ ሙከራዎች አሳይ",
+  "feed.actions.ended": "የተጠናቀቀ",
+  "feed.actions.duration": "የቆይታ ጊዜ",
+  "feed.actions.running": "በሂደት ላይ",
+  "feed.actions.longest": "ከሚታዩት ሩጫዎች ረጅሙ {duration} ፈጅቷል ({run})።",
+  "feed.filter.search": "ሩጫዎቹን ፈልግ",
+  "feed.filter.all": "ሁሉም",
+  "feed.filter.event": "ክስተት",
+  "feed.filter.branch": "ቅርንጫፍ",
+  "feed.filter.clear": "ማጣሪያዎቹን አጽዳ",
+  "feed.filter.shown": {
+    "one": "ከማጣሪያዎቹ በኋላ {n} ቀርቷል።",
+    "other": "ከማጣሪያዎቹ በኋላ {n} ቀርተዋል።"
+  },
   "security.source.advisories": "የደህንነት ምክሮች",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "የኮድ ቅኝት",

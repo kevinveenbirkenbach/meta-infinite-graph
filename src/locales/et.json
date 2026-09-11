@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub vastas koodiga {status}.",
   "feed.anError": "veaga",
+  "loader.loading": "Laadimine …",
+  "loader.next": {
+    "one": "Järgmine värskendus {n} sekundi pärast",
+    "other": "Järgmine värskendus {n} sekundi pärast"
+  },
+  "loader.paused": {
+    "one": "Viimane värskendus jäeti GitHubi kvoodi säästmiseks vahele; järgmine katse {n} sekundi pärast",
+    "other": "Viimane värskendus jäeti GitHubi kvoodi säästmiseks vahele; järgmine katse {n} sekundi pärast"
+  },
+  "loader.menu.hint": "paremklõps uuesti laadimise valikute jaoks",
+  "loader.menu.title": "Laadi uuesti",
+  "loader.menu.changes": "Ainult muutunu, kohe",
+  "loader.menu.all": "Iga käivitus, kohe",
+  "loader.menu.interval": "Küsi automaatselt uuesti",
+  "loader.menu.seconds": {
+    "one": "iga {n} sekundi järel",
+    "other": "iga {n} sekundi järel"
+  },
+  "loader.menu.minutes": {
+    "one": "iga {n} minuti järel",
+    "other": "iga {n} minuti järel"
+  },
+  "loader.menu.off": "mitte kunagi",
+  "loader.menu.view": "See vahekaart, kohe",
+  "loader.menu.cache": "Unusta vahemälus olevad GitHubi vastused",
+  "loader.menu.page": "Laadi leht uuesti",
+  "loader.overview.title": "Laadimine",
+  "loader.overview.running": {
+    "one": "{n} käib",
+    "other": "{n} käib"
+  },
+  "loader.overview.none": "Veel pole midagi laaditud.",
+  "loader.task.boot": "Rollide ja nende meta lugemine",
+  "loader.task.view": "{view} joonistamine",
+  "loader.task.changes": "GitHubilt küsimine, mis muutus",
+  "loader.task.everything": "GitHubilt iga käivituse küsimine",
   "loader.task.artifacts": "Käivituse #{number} artefaktid: {done}/{total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ebaõnnestus: {message}",
+  "feed.actions.pick": "Näita selle käivituse teste",
+  "feed.actions.ended": "Lõpetatud",
+  "feed.actions.duration": "Kestus",
+  "feed.actions.running": "käib",
+  "feed.actions.longest": "Pikim kuvatud käivitus kestis {duration} ({run}).",
+  "feed.filter.search": "Otsi käivitustest",
+  "feed.filter.all": "kõik",
+  "feed.filter.event": "Sündmus",
+  "feed.filter.branch": "Haru",
+  "feed.filter.clear": "Tühjenda filtrid",
+  "feed.filter.shown": {
+    "one": "Pärast filtreid jääb alles {n}.",
+    "other": "Pärast filtreid jääb alles {n}."
+  },
   "security.source.advisories": "Turvateated",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Koodi skannimine",

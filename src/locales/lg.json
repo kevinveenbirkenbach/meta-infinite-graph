@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yaddamu {status}.",
   "feed.anError": "n'ensobi",
+  "loader.loading": "Ntikka …",
+  "loader.next": {
+    "one": "Okuzza obuggya okuddako mu katikitiki {n}",
+    "other": "Okuzza obuggya okuddako mu butikitiki {n}"
+  },
+  "loader.paused": {
+    "one": "Okuzza obuggya okuwedde kwabuukiddwa okukekkereza omugatte gwa GitHub; okugezaako okuddako mu katikitiki {n}",
+    "other": "Okuzza obuggya okuwedde kwabuukiddwa okukekkereza omugatte gwa GitHub; okugezaako okuddako mu butikitiki {n}"
+  },
+  "loader.menu.hint": "nyiga ku ddyo okufuna engeri z'okuddamu okutikka",
+  "loader.menu.title": "Ddamu otikke",
+  "loader.menu.changes": "Ebyakyuse byokka, kati",
+  "loader.menu.all": "Emirundi gyonna, kati",
+  "loader.menu.interval": "Ddamu okubuuza ku bwakyo",
+  "loader.menu.seconds": {
+    "one": "buli katikitiki {n}",
+    "other": "buli butikitiki {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "buli ddakiika {n}",
+    "other": "buli ddakiika {n}"
+  },
+  "loader.menu.off": "tekikola",
+  "loader.menu.view": "Endaba eno, kati",
+  "loader.menu.cache": "Werabire eby'okuddamu bya GitHub ebiterekeddwa",
+  "loader.menu.page": "Ddamu otikke olupapula",
+  "loader.overview.title": "Ntikka",
+  "loader.overview.running": {
+    "one": "{n} kikola",
+    "other": "{n} bikola"
+  },
+  "loader.overview.none": "Tewali kintu kyali kitikkiddwa.",
+  "loader.task.boot": "Nsoma emirimu ne meta yaagyo",
+  "loader.task.view": "Nkuba ekifaananyi kya {view}",
+  "loader.task.changes": "Mbuuza GitHub ebyakyuse",
+  "loader.task.everything": "Nsaba GitHub emirundi gyonna",
   "loader.task.artifacts": "Ebyakolebwa mu mulundi #{number}: {done} ku {total}",
+  "loader.task.artifact": "Ekyakolebwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "kulemye: {message}",
+  "feed.actions.pick": "Laga okugezesa kw'omulundi guno",
+  "feed.actions.ended": "Kyaggwa",
+  "feed.actions.duration": "Obuwanvu bw'ekiseera",
+  "feed.actions.running": "kikyagenda",
+  "feed.actions.longest": "Omulundi ogusinga obuwanvu ogulagiddwa gwatwala {duration} ({run}).",
+  "feed.filter.search": "Noonya mu mirundi",
+  "feed.filter.all": "byonna",
+  "feed.filter.event": "Ekibaddewo",
+  "feed.filter.branch": "Ettabi",
+  "feed.filter.clear": "Ggyawo ebisengejja",
+  "feed.filter.shown": {
+    "one": "{n} gusigaddewo oluvannyuma lw'okusengejja.",
+    "other": "{n} gisigaddewo oluvannyuma lw'okusengejja."
+  },
   "security.source.advisories": "Amagezi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Okwekenneenya koodi",

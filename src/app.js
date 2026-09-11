@@ -5,8 +5,11 @@ import { ForkTree } from './fork/tree.js';
 import { GitRange } from './gitRange.js';
 import { GitHubApi } from './github/api.js';
 import { GitHubFeed } from './github/feed.js';
+import { FeedRefresher } from './github/refresh.js';
 import { GitHubSecurity } from './github/security.js';
 import { t } from './i18n.js';
+import { Loader } from './loader/indicator.js';
+import { wireLoaderOverview } from './loader/overview.js';
 import { MatrixView } from './matrix/view.js';
 import { MetaGraph } from './meta/graph.js';
 import { MetaTables } from './meta/tables.js';
@@ -22,8 +25,9 @@ import { wireDesign } from './wire/design.js';
 import { wireForks } from './wire/forks.js';
 import { wireGraphCards, wireRoleSelect } from './wire/graph.js';
 import { wireControls, wireDataSwitches } from './wire/switches.js';
+import { wireReload } from './wire/reload.js';
 import { restoreFromUrl } from './wire/url.js';
-import { disableMetaViews, redraw, wirePanels, wireViewMode } from './wire/views.js';
+import { currentView, disableMetaViews, redraw, wirePanels, wireViewMode } from './wire/views.js';
 
 // app.js
 //
@@ -36,6 +40,8 @@ Object.assign(window, { PlaywrightMatrix, RoleInfo, TableView, TestsView, UrlSta
 
 setStatus(t('status.scanning'));
 
+const loader = new Loader(document.getElementById('view-loader'));
+wireLoaderOverview(document.getElementById('view-loader'), loader);
 wirePanels();
 wireDesign(graphRenderer);
 
@@ -53,7 +59,7 @@ window.gitRange = gitRange;
 
 // Before the scan: a right handle in the past means the tables read the roles
 // tree of that commit, not the mounted working copy.
-gitRange.load()
+loader.track('*', gitRange.load()
   .then(catalog => (catalog ? GitRange.rewind(gitRange.head(), gitRange.treeRef()) : null))
   .then(GitRange.inspect)
   .then(({ rewound, missing }) => {
@@ -100,6 +106,9 @@ gitRange.load()
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables'),
       new TestRuns(forkTree.api, () => (gitRange.catalog ? gitRange.catalog.root : forkTree.root))
     );
+    testsView.track = (promise, label) => loader.track('playwright', promise, label);
+    testsView.runs.onLoad = (name, promise) => loader.track(null, promise, t('loader.task.artifact', { name }));
+    forkTree.api.onFetch = (path, promise) => loader.track(null, promise, t('loader.task.github', { path }));
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
       metaGraph, selectionManager, graphRenderer, autoResolver
@@ -124,9 +133,11 @@ gitRange.load()
     uiManager.buildFacetControls();
     sel.value = ranked[0];
 
+    const refresher = new FeedRefresher(feeds.actions, loader, () => currentView() === 'actions');
     const pending = restoreFromUrl({
-      sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches,
+      sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches, refresher, feeds,
     });
+    feeds.actions.onFilter = () => urlState.capture();
     tableView.setFilters(uiManager.filters());
     wireControls({ testsView, matrixView, roleInfo, forkTree });
     wireForks(forkTree, cardHost);
@@ -134,7 +145,31 @@ gitRange.load()
     // takes __mig as ready any earlier can grab a row the redraw then replaces
     // under its pointer.
     return Promise.all(pending).then(() => {
-      wireViewMode(tableView, forkTree, testsView, feeds);
+      wireViewMode(tableView, forkTree, testsView, feeds, loader, refresher);
+      wireReload({
+        anchor: document.getElementById('view-loader'),
+        loader,
+        refresher,
+        api: forkTree.api,
+        onChange: () => urlState.capture(),
+        reloads: {
+          forks: () => {
+            forkTree.invalidate();
+            return forkTree.show();
+          },
+          playwright: () => {
+            testsView.invalidate();
+            return testsView.show('playwright');
+          },
+          cli: () => {
+            testsView.invalidate();
+            return testsView.show('cli');
+          },
+          commits: () => feeds.commits.show(),
+          pulls: () => feeds.pulls.show(true),
+          security: () => feeds.security.show(true),
+        },
+      });
       uiManager.onSelectionChange();
       urlState.capture();
       window.__mig = {
@@ -147,4 +182,4 @@ gitRange.load()
   .catch(err => {
     console.error('Init error', err);
     setStatus(t('status.failed', { message: err.message }));
-  });
+  }), t('loader.task.boot'));

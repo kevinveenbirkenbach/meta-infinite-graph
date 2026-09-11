@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub-ek {status} erantzun du.",
   "feed.anError": "errore batekin",
+  "loader.loading": "Kargatzen …",
+  "loader.next": {
+    "one": "Hurrengo freskatzea {n} segundo barru",
+    "other": "Hurrengo freskatzea {n} segundo barru"
+  },
+  "loader.paused": {
+    "one": "Azken freskatzea saltatu egin da GitHub-en kuota aurrezteko; hurrengo saiakera {n} segundo barru",
+    "other": "Azken freskatzea saltatu egin da GitHub-en kuota aurrezteko; hurrengo saiakera {n} segundo barru"
+  },
+  "loader.menu.hint": "egin eskuineko klik birkargatzeko aukeretarako",
+  "loader.menu.title": "Birkargatu",
+  "loader.menu.changes": "Aldatu dena soilik, orain",
+  "loader.menu.all": "Exekuzio guztiak, orain",
+  "loader.menu.interval": "Galdetu berriro automatikoki",
+  "loader.menu.seconds": {
+    "one": "{n} segundoro",
+    "other": "{n} segundoro"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} minuturo",
+    "other": "{n} minuturo"
+  },
+  "loader.menu.off": "inoiz ez",
+  "loader.menu.view": "Fitxa hau, orain",
+  "loader.menu.cache": "Ahaztu cacheko GitHub-en erantzunak",
+  "loader.menu.page": "Birkargatu orria",
+  "loader.overview.title": "Kargatzen",
+  "loader.overview.running": {
+    "one": "{n} exekutatzen",
+    "other": "{n} exekutatzen"
+  },
+  "loader.overview.none": "Oraindik ez da ezer kargatu.",
+  "loader.task.boot": "Rolak eta haien metadatuak irakurtzen",
+  "loader.task.view": "{view} marrazten",
+  "loader.task.changes": "GitHub-i zer aldatu den galdetzen",
+  "loader.task.everything": "GitHub-i exekuzio guztiak eskatzen",
   "loader.task.artifacts": "#{number} exekuzioaren artefaktuak: {done}/{total}",
+  "loader.task.artifact": "Artefaktua: {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "huts egin du: {message}",
+  "feed.actions.pick": "Erakutsi exekuzio honen probak",
+  "feed.actions.ended": "Amaitua",
+  "feed.actions.duration": "Iraupena",
+  "feed.actions.running": "exekutatzen",
+  "feed.actions.longest": "Erakutsitako exekuziorik luzeenak {duration} iraun zuen ({run}).",
+  "feed.filter.search": "Bilatu exekuzioetan",
+  "feed.filter.all": "denak",
+  "feed.filter.event": "Gertaera",
+  "feed.filter.branch": "Adarra",
+  "feed.filter.clear": "Garbitu iragazkiak",
+  "feed.filter.shown": {
+    "one": "Iragazkien ondoren {n} geratzen da.",
+    "other": "Iragazkien ondoren {n} geratzen dira."
+  },
   "security.source.advisories": "Aholkuak",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kode-eskaneatzea",

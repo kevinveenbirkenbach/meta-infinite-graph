@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ले {status} जवाफ दियो।",
   "feed.anError": "त्रुटिसहित",
+  "loader.loading": "लोड हुँदैछ …",
+  "loader.next": {
+    "one": "अर्को रिफ्रेस {n} सेकेन्डमा",
+    "other": "अर्को रिफ्रेस {n} सेकेन्डमा"
+  },
+  "loader.paused": {
+    "one": "GitHub कोटा बचाउन पछिल्लो रिफ्रेस छोडियो; अर्को प्रयास {n} सेकेन्डमा",
+    "other": "GitHub कोटा बचाउन पछिल्लो रिफ्रेस छोडियो; अर्को प्रयास {n} सेकेन्डमा"
+  },
+  "loader.menu.hint": "पुनः लोड विकल्पहरूका लागि दायाँ-क्लिक गर्नुहोस्",
+  "loader.menu.title": "पुनः लोड गर्नुहोस्",
+  "loader.menu.changes": "परिवर्तन भएको मात्र, अहिले",
+  "loader.menu.all": "हरेक रन, अहिले",
+  "loader.menu.interval": "स्वचालित रूपमा फेरि सोध्नुहोस्",
+  "loader.menu.seconds": {
+    "one": "हरेक {n} सेकेन्डमा",
+    "other": "हरेक {n} सेकेन्डमा"
+  },
+  "loader.menu.minutes": {
+    "one": "हरेक {n} मिनेटमा",
+    "other": "हरेक {n} मिनेटमा"
+  },
+  "loader.menu.off": "कहिल्यै होइन",
+  "loader.menu.view": "यो दृश्य, अहिले",
+  "loader.menu.cache": "क्यास गरिएका GitHub उत्तरहरू बिर्सनुहोस्",
+  "loader.menu.page": "पृष्ठ पुनः लोड गर्नुहोस्",
+  "loader.overview.title": "लोड हुँदैछ",
+  "loader.overview.running": {
+    "one": "{n} चलिरहेको",
+    "other": "{n} चलिरहेका"
+  },
+  "loader.overview.none": "अहिलेसम्म केही पनि लोड भएको छैन।",
+  "loader.task.boot": "भूमिकाहरू र तिनका मेटा पढ्दै",
+  "loader.task.view": "{view} कोर्दै",
+  "loader.task.changes": "GitHub लाई के परिवर्तन भयो सोध्दै",
+  "loader.task.everything": "GitHub सँग हरेक रन माग्दै",
   "loader.task.artifacts": "रन #{number} का आर्टिफ्याक्टहरू: {total} मध्ये {done}",
+  "loader.task.artifact": "आर्टिफ्याक्ट {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "असफल: {message}",
+  "feed.actions.pick": "यो रनका परीक्षणहरू देखाउनुहोस्",
+  "feed.actions.ended": "सकिएको",
+  "feed.actions.duration": "अवधि",
+  "feed.actions.running": "चलिरहेको",
+  "feed.actions.longest": "देखाइएका मध्ये सबैभन्दा लामो रनले {duration} लियो ({run}).",
+  "feed.filter.search": "रनहरू खोज्नुहोस्",
+  "feed.filter.all": "सबै",
+  "feed.filter.event": "घटना",
+  "feed.filter.branch": "शाखा",
+  "feed.filter.clear": "फिल्टरहरू हटाउनुहोस्",
+  "feed.filter.shown": {
+    "one": "फिल्टरपछि {n} रन बाँकी छ।",
+    "other": "फिल्टरपछि {n} रनहरू बाँकी छन्।"
+  },
   "security.source.advisories": "सुरक्षा सल्लाहहरू",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "कोड स्क्यानिङ",

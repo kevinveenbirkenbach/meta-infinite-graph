@@ -135,7 +135,60 @@
   },
   "feed.failed": "A GitHub válasza: {status}.",
   "feed.anError": "hibával",
+  "loader.loading": "Betöltés …",
+  "loader.next": {
+    "one": "Következő frissítés {n} másodperc múlva",
+    "other": "Következő frissítés {n} másodperc múlva"
+  },
+  "loader.paused": {
+    "one": "Az utolsó frissítés kimaradt a GitHub-keret kímélése érdekében; következő próbálkozás {n} másodperc múlva",
+    "other": "Az utolsó frissítés kimaradt a GitHub-keret kímélése érdekében; következő próbálkozás {n} másodperc múlva"
+  },
+  "loader.menu.hint": "jobb klikk az újratöltési beállításokhoz",
+  "loader.menu.title": "Újratöltés",
+  "loader.menu.changes": "Csak ami változott, most",
+  "loader.menu.all": "Minden futtatás, most",
+  "loader.menu.interval": "Automatikus újrakérdezés",
+  "loader.menu.seconds": {
+    "one": "{n} másodpercenként",
+    "other": "{n} másodpercenként"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} percenként",
+    "other": "{n} percenként"
+  },
+  "loader.menu.off": "soha",
+  "loader.menu.view": "Ez a lap, most",
+  "loader.menu.cache": "Gyorsítótárazott GitHub-válaszok elfelejtése",
+  "loader.menu.page": "Az oldal újratöltése",
+  "loader.overview.title": "Betöltés",
+  "loader.overview.running": {
+    "one": "{n} folyamatban",
+    "other": "{n} folyamatban"
+  },
+  "loader.overview.none": "Még semmi sem töltődött be.",
+  "loader.task.boot": "A szerepkörök és metaadataik beolvasása",
+  "loader.task.view": "{view} megrajzolása",
+  "loader.task.changes": "A GitHub megkérdezése, mi változott",
+  "loader.task.everything": "Az összes futtatás lekérése a GitHubról",
   "loader.task.artifacts": "Futtatás #{number} artefaktumai: {done} / {total}",
+  "loader.task.artifact": "Artefaktum: {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "sikertelen: {message}",
+  "feed.actions.pick": "E futtatás tesztjeinek megjelenítése",
+  "feed.actions.ended": "Befejezve",
+  "feed.actions.duration": "Időtartam",
+  "feed.actions.running": "fut",
+  "feed.actions.longest": "A leghosszabb megjelenített futtatás {duration} ideig tartott ({run}).",
+  "feed.filter.search": "Keresés a futtatásokban",
+  "feed.filter.all": "mind",
+  "feed.filter.event": "Esemény",
+  "feed.filter.branch": "Ág",
+  "feed.filter.clear": "Szűrők törlése",
+  "feed.filter.shown": {
+    "one": "A szűrők után {n} maradt.",
+    "other": "A szűrők után {n} maradt."
+  },
   "security.source.advisories": "Biztonsági közlemények",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kódvizsgálat",

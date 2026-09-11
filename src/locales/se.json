@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub vástidii {status}.",
   "feed.anError": "meattáhusain",
+  "loader.loading": "Viežžá …",
+  "loader.next": {
+    "one": "Boahtte ođasmahttin {n} sekundda geažes",
+    "two": "Boahtte ođasmahttin {n} sekundda geažes",
+    "other": "Boahtte ođasmahttin {n} sekundda geažes"
+  },
+  "loader.paused": {
+    "one": "Maŋimuš ođasmahttin šluhttejuvvui GitHub-kvohta seastima dihte; boahtte geahččaleapmi {n} sekundda geažes",
+    "two": "Maŋimuš ođasmahttin šluhttejuvvui GitHub-kvohta seastima dihte; boahtte geahččaleapmi {n} sekundda geažes",
+    "other": "Maŋimuš ođasmahttin šluhttejuvvui GitHub-kvohta seastima dihte; boahtte geahččaleapmi {n} sekundda geažes"
+  },
+  "loader.menu.hint": "coahkkal olgeš boaluin oažžut ođđasit viežžama molssaeavttuid",
+  "loader.menu.title": "Viežža ođđasit",
+  "loader.menu.changes": "Dušše dat mii rievddai, dál",
+  "loader.menu.all": "Buot vuodjimat, dál",
+  "loader.menu.interval": "Jeara fas automáhtalaččat",
+  "loader.menu.seconds": {
+    "one": "juohke {n} sekundda",
+    "two": "juohke {n} sekundda",
+    "other": "juohke {n} sekundda"
+  },
+  "loader.menu.minutes": {
+    "one": "juohke {n} minuhta",
+    "two": "juohke {n} minuhta",
+    "other": "juohke {n} minuhta"
+  },
+  "loader.menu.off": "ii goassege",
+  "loader.menu.view": "Dát gilkor, dál",
+  "loader.menu.cache": "Vajáldahte GitHub-vástádusaid gaskaboddosis",
+  "loader.menu.page": "Viežža siiddu ođđasit",
+  "loader.overview.title": "Viežžá",
+  "loader.overview.running": {
+    "one": "{n} vuodjimin",
+    "two": "{n} vuodjimin",
+    "other": "{n} vuodjimin"
+  },
+  "loader.overview.none": "Ii mihkkege leat vel viežžojuvvon.",
+  "loader.task.boot": "Lohká rollaid ja daid metadieđuid",
+  "loader.task.view": "Sárgu {view}",
+  "loader.task.changes": "Jearrá GitHubas mii rievddai",
+  "loader.task.everything": "Jearrá GitHubas buot vuodjimiid",
   "loader.task.artifacts": "Vuodjima #{number} artefávttat: {done} / {total}",
+  "loader.task.artifact": "Artefákta {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ii lihkostuvvan: {message}",
+  "feed.actions.pick": "Čájet dán vuodjima testaid",
+  "feed.actions.ended": "Loahpahuvvon",
+  "feed.actions.duration": "Bistin",
+  "feed.actions.running": "vuodjimin",
+  "feed.actions.longest": "Guhkimus čájehuvvon vuodjin bisttii {duration} ({run}).",
+  "feed.filter.search": "Oza vuodjimiin",
+  "feed.filter.all": "buot",
+  "feed.filter.event": "Dáhpáhus",
+  "feed.filter.branch": "Oaksi",
+  "feed.filter.clear": "Sihko sillemiid",
+  "feed.filter.shown": {
+    "one": "{n} báhcá sillemiid maŋŋá.",
+    "two": "{n} báhciba sillemiid maŋŋá.",
+    "other": "{n} báhcet sillemiid maŋŋá."
+  },
   "security.source.advisories": "Rávvagat",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodaskánnen",

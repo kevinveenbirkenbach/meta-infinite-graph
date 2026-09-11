@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub vastasi koodilla {status}.",
   "feed.anError": "virheellä",
+  "loader.loading": "Ladataan …",
+  "loader.next": {
+    "one": "Seuraava päivitys {n} sekunnin kuluttua",
+    "other": "Seuraava päivitys {n} sekunnin kuluttua"
+  },
+  "loader.paused": {
+    "one": "Edellinen päivitys ohitettiin GitHubin kiintiön säästämiseksi; seuraava yritys {n} sekunnin kuluttua",
+    "other": "Edellinen päivitys ohitettiin GitHubin kiintiön säästämiseksi; seuraava yritys {n} sekunnin kuluttua"
+  },
+  "loader.menu.hint": "napsauta hiiren kakkospainikkeella nähdäksesi uudelleenlatausvalinnat",
+  "loader.menu.title": "Lataa uudelleen",
+  "loader.menu.changes": "Vain muuttunut, nyt",
+  "loader.menu.all": "Jokainen ajo, nyt",
+  "loader.menu.interval": "Kysy automaattisesti uudelleen",
+  "loader.menu.seconds": {
+    "one": "{n} sekunnin välein",
+    "other": "{n} sekunnin välein"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} minuutin välein",
+    "other": "{n} minuutin välein"
+  },
+  "loader.menu.off": "ei koskaan",
+  "loader.menu.view": "Tämä välilehti, nyt",
+  "loader.menu.cache": "Unohda välimuistiin tallennetut GitHub-vastaukset",
+  "loader.menu.page": "Lataa sivu uudelleen",
+  "loader.overview.title": "Ladataan",
+  "loader.overview.running": {
+    "one": "{n} käynnissä",
+    "other": "{n} käynnissä"
+  },
+  "loader.overview.none": "Mitään ei ole vielä ladattu.",
+  "loader.task.boot": "Luetaan rooleja ja niiden metatietoja",
+  "loader.task.view": "Piirretään: {view}",
+  "loader.task.changes": "Kysytään GitHubilta, mikä muuttui",
+  "loader.task.everything": "Pyydetään GitHubilta jokainen ajo",
   "loader.task.artifacts": "Ajon #{number} artefaktit: {done}/{total}",
+  "loader.task.artifact": "Artefakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "epäonnistui: {message}",
+  "feed.actions.pick": "Näytä tämän ajon testit",
+  "feed.actions.ended": "Päättynyt",
+  "feed.actions.duration": "Kesto",
+  "feed.actions.running": "käynnissä",
+  "feed.actions.longest": "Pisin näytetty ajo kesti {duration} ({run}).",
+  "feed.filter.search": "Hae ajoista",
+  "feed.filter.all": "kaikki",
+  "feed.filter.event": "Tapahtuma",
+  "feed.filter.branch": "Haara",
+  "feed.filter.clear": "Tyhjennä suodattimet",
+  "feed.filter.shown": {
+    "one": "Suodattimien jälkeen jäljellä on {n}.",
+    "other": "Suodattimien jälkeen jäljellä on {n}."
+  },
   "security.source.advisories": "Tiedotteet",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Koodin skannaus",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub reponn {status}.",
   "feed.anError": "ak yon erè",
+  "loader.loading": "Ap chaje …",
+  "loader.next": {
+    "one": "Pwochen rafrechisman nan {n} segonn",
+    "other": "Pwochen rafrechisman nan {n} segonn"
+  },
+  "loader.paused": {
+    "one": "Dènye rafrechisman an te sote pou ekonomize kota GitHub la; pwochen esè nan {n} segonn",
+    "other": "Dènye rafrechisman an te sote pou ekonomize kota GitHub la; pwochen esè nan {n} segonn"
+  },
+  "loader.menu.hint": "klike adwat pou opsyon rechajman",
+  "loader.menu.title": "Rechaje",
+  "loader.menu.changes": "Sèlman sa ki chanje, kounye a",
+  "loader.menu.all": "Tout egzekisyon, kounye a",
+  "loader.menu.interval": "Mande ankò otomatikman",
+  "loader.menu.seconds": {
+    "one": "chak {n} segonn",
+    "other": "chak {n} segonn"
+  },
+  "loader.menu.minutes": {
+    "one": "chak {n} minit",
+    "other": "chak {n} minit"
+  },
+  "loader.menu.off": "janm",
+  "loader.menu.view": "Onglè sa a, kounye a",
+  "loader.menu.cache": "Bliye repons GitHub ki nan kach la",
+  "loader.menu.page": "Rechaje paj la",
+  "loader.overview.title": "Ap chaje",
+  "loader.overview.running": {
+    "one": "{n} an kou",
+    "other": "{n} an kou"
+  },
+  "loader.overview.none": "Poko gen anyen ki chaje.",
+  "loader.task.boot": "Ap li wòl yo ak meta yo",
+  "loader.task.view": "Ap desine {view}",
+  "loader.task.changes": "Ap mande GitHub sa ki chanje",
+  "loader.task.everything": "Ap mande GitHub tout egzekisyon yo",
   "loader.task.artifacts": "Artefak egzekisyon #{number}: {done} sou {total}",
+  "loader.task.artifact": "Artefak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "echwe: {message}",
+  "feed.actions.pick": "Montre tès egzekisyon sa a",
+  "feed.actions.ended": "Fini",
+  "feed.actions.duration": "Dire",
+  "feed.actions.running": "an kou",
+  "feed.actions.longest": "Egzekisyon ki pi long yo montre a te dire {duration} ({run}).",
+  "feed.filter.search": "Chèche nan egzekisyon yo",
+  "feed.filter.all": "tout",
+  "feed.filter.event": "Evènman",
+  "feed.filter.branch": "Branch",
+  "feed.filter.clear": "Efase filtè yo",
+  "feed.filter.shown": {
+    "one": "{n} rete apre filtè yo.",
+    "other": "{n} rete apre filtè yo."
+  },
   "security.source.advisories": "Avi sekirite",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Analiz kòd",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} deebise.",
   "feed.anError": "dogoggora waliin",
+  "loader.loading": "Fe'amaa jira …",
+  "loader.next": {
+    "one": "Haaromsi itti aanu sekondii {n} keessatti",
+    "other": "Haaromsi itti aanu sekondiiwwan {n} keessatti"
+  },
+  "loader.paused": {
+    "one": "Haaromsi dhumaa kootaa GitHub qusachuuf irra darbameera; yaaliin itti aanu sekondii {n} keessatti",
+    "other": "Haaromsi dhumaa kootaa GitHub qusachuuf irra darbameera; yaaliin itti aanu sekondiiwwan {n} keessatti"
+  },
+  "loader.menu.hint": "filannoowwan irra deebi'ii fe'uuf mirgaan cuqaasi",
+  "loader.menu.title": "Irra deebi'ii fe'i",
+  "loader.menu.changes": "Kan jijjiirame qofa, amma",
+  "loader.menu.all": "Raawwii hunda, amma",
+  "loader.menu.interval": "Ofumaan irra deebi'ii gaafadhu",
+  "loader.menu.seconds": {
+    "one": "sekondii {n} hunda",
+    "other": "sekondiiwwan {n} hunda"
+  },
+  "loader.menu.minutes": {
+    "one": "daqiiqaa {n} hunda",
+    "other": "daqiiqaawwan {n} hunda"
+  },
+  "loader.menu.off": "gonkumaa",
+  "loader.menu.view": "Mul'annoo kana, amma",
+  "loader.menu.cache": "Deebii GitHub kuufame irraanfadhu",
+  "loader.menu.page": "Fuula irra deebi'ii fe'i",
+  "loader.overview.title": "Fe'amaa jira",
+  "loader.overview.running": {
+    "one": "{n} raawwatamaa jira",
+    "other": "{n} raawwatamaa jiru"
+  },
+  "loader.overview.none": "Ammaaf wanti fe'ame hin jiru.",
+  "loader.task.boot": "Gaheewwanii fi meetaa isaanii dubbisaa jira",
+  "loader.task.view": "{view} fakkeessaa jira",
+  "loader.task.changes": "GitHub waan jijjiirame gaafachaa jira",
+  "loader.task.everything": "GitHub raawwii hunda gaafachaa jira",
   "loader.task.artifacts": "Artifaaktota raawwii #{number}: {total} keessaa {done}",
+  "loader.task.artifact": "Artifaaktii {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "hin milkoofne: {message}",
+  "feed.actions.pick": "Qormaatota raawwii kanaa agarsiisi",
+  "feed.actions.ended": "Xumurame",
+  "feed.actions.duration": "Turtii",
+  "feed.actions.running": "raawwatamaa jira",
+  "feed.actions.longest": "Raawwiin agarsiifame keessaa inni dheeraan {duration} fudhate ({run}).",
+  "feed.filter.search": "Raawwiiwwan barbaadi",
+  "feed.filter.all": "hunda",
+  "feed.filter.event": "Taatee",
+  "feed.filter.branch": "Damee",
+  "feed.filter.clear": "Calaltuuwwan haqi",
+  "feed.filter.shown": {
+    "one": "Calaltuu booda {n} hafe.",
+    "other": "Calaltuu booda {n} hafan."
+  },
   "security.source.advisories": "Gorsawwan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Sakatta'iinsa koodii",

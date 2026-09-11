@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub respondeva {status}.",
   "feed.anError": "con un error",
+  "loader.loading": "Cargante …",
+  "loader.next": {
+    "one": "Proxime actualisation in {n} secunda",
+    "other": "Proxime actualisation in {n} secundas"
+  },
+  "loader.paused": {
+    "one": "Le ultime actualisation esseva saltate pro sparniar le quota de GitHub; proxime tentativa in {n} secunda",
+    "other": "Le ultime actualisation esseva saltate pro sparniar le quota de GitHub; proxime tentativa in {n} secundas"
+  },
+  "loader.menu.hint": "clic dextere pro optiones de recargamento",
+  "loader.menu.title": "Recargar",
+  "loader.menu.changes": "Solmente lo que ha cambiate, ora",
+  "loader.menu.all": "Tote le executiones, ora",
+  "loader.menu.interval": "Demandar de novo automaticamente",
+  "loader.menu.seconds": {
+    "one": "cata {n} secunda",
+    "other": "cata {n} secundas"
+  },
+  "loader.menu.minutes": {
+    "one": "cata {n} minuta",
+    "other": "cata {n} minutas"
+  },
+  "loader.menu.off": "nunquam",
+  "loader.menu.view": "Iste vista, ora",
+  "loader.menu.cache": "Oblidar le responsas de GitHub in le cache",
+  "loader.menu.page": "Recargar le pagina",
+  "loader.overview.title": "Cargante",
+  "loader.overview.running": {
+    "one": "{n} in curso",
+    "other": "{n} in curso"
+  },
+  "loader.overview.none": "Nihil ha ancora essite cargate.",
+  "loader.task.boot": "Legente le rolos e lor meta",
+  "loader.task.view": "Designante {view}",
+  "loader.task.changes": "Demandante a GitHub lo que ha cambiate",
+  "loader.task.everything": "Demandante a GitHub tote le executiones",
   "loader.task.artifacts": "Artefactos del execution #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefacto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fallite: {message}",
+  "feed.actions.pick": "Monstrar le tests de iste execution",
+  "feed.actions.ended": "Terminate",
+  "feed.actions.duration": "Duration",
+  "feed.actions.running": "in curso",
+  "feed.actions.longest": "Le execution le plus longe monstrate durava {duration} ({run}).",
+  "feed.filter.search": "Cercar in le executiones",
+  "feed.filter.all": "totes",
+  "feed.filter.event": "Evento",
+  "feed.filter.branch": "Branca",
+  "feed.filter.clear": "Deler le filtros",
+  "feed.filter.shown": {
+    "one": "{n} remane post le filtros.",
+    "other": "{n} remane post le filtros."
+  },
   "security.source.advisories": "Avisos de securitate",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Scansion de codice",

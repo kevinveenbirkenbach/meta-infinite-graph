@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} yeceeh.",
   "feed.anError": "galat luk",
+  "loader.loading": "Oobisaanam …",
+  "loader.next": {
+    "one": "Tan qusbinsa {n} sekond lakal",
+    "other": "Tan qusbinsa {n} sekondooli lakal"
+  },
+  "loader.paused": {
+    "one": "Elle raqte qusbinsa GitHub esserooli dooba duudak hawwentem; tan maxco {n} sekond lakal",
+    "other": "Elle raqte qusbinsa GitHub esserooli dooba duudak hawwentem; tan maxco {n} sekondooli lakal"
+  },
+  "loader.menu.hint": "qusbinsa doorittoh midgaa kliik ab",
+  "loader.menu.title": "Qusbinsa",
+  "loader.menu.changes": "Geddalte tu bicsa, away",
+  "loader.menu.all": "Gexo kulli, away",
+  "loader.menu.interval": "Isi-isik qusbah esser",
+  "loader.menu.seconds": {
+    "one": "kulli {n} sekond",
+    "other": "kulli {n} sekondooli"
+  },
+  "loader.menu.minutes": {
+    "one": "kulli {n} daqiiqa",
+    "other": "kulli {n} daqiiqooli"
+  },
+  "loader.menu.off": "abadan",
+  "loader.menu.view": "Tah uble, away",
+  "loader.menu.cache": "Kaashi GitHub dabooli bayis",
+  "loader.menu.page": "Tah qangal qusbah fak",
+  "loader.overview.title": "Oobisaanam",
+  "loader.overview.running": {
+    "one": "{n} gexak yan",
+    "other": "{n} gexak yan"
+  },
+  "loader.overview.none": "Kaadu tu ma oobisimta.",
+  "loader.task.boot": "Roolitte kee tet meta akriya",
+  "loader.task.view": "{view} xagissa",
+  "loader.task.changes": "GitHub geddalte tu esserta",
+  "loader.task.everything": "GitHub gexo kulli esserta",
   "loader.task.artifacts": "Gexo #{number} artifakti: {done}/{total}",
+  "loader.task.artifact": "Artifakti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ma yewqinna: {message}",
+  "feed.actions.pick": "Tah gexoh tajribooli uybulus",
+  "feed.actions.ended": "Gufte",
+  "feed.actions.duration": "Wakti",
+  "feed.actions.running": "gexak yan",
+  "feed.actions.longest": "Uybulsime gexooli addal dheerih tan gexo {duration} beyte ({run}).",
+  "feed.filter.search": "Gexooli gorris",
+  "feed.filter.all": "ummaan",
+  "feed.filter.event": "Xaadisa",
+  "feed.filter.branch": "Farqi",
+  "feed.filter.clear": "Siritte cab",
+  "feed.filter.shown": {
+    "one": "Sirittek lakal {n} raaqe.",
+    "other": "Sirittek lakal {n} raaqen."
+  },
   "security.source.advisories": "Amaanih kassishooli",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Koodih ubullo",

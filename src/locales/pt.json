@@ -139,7 +139,66 @@
   },
   "feed.failed": "O GitHub respondeu {status}.",
   "feed.anError": "com um erro",
+  "loader.loading": "Carregando …",
+  "loader.next": {
+    "one": "Próxima atualização em {n} segundo",
+    "many": "Próxima atualização em {n} segundos",
+    "other": "Próxima atualização em {n} segundos"
+  },
+  "loader.paused": {
+    "one": "A última atualização foi pulada para poupar a cota do GitHub; próxima tentativa em {n} segundo",
+    "many": "A última atualização foi pulada para poupar a cota do GitHub; próxima tentativa em {n} segundos",
+    "other": "A última atualização foi pulada para poupar a cota do GitHub; próxima tentativa em {n} segundos"
+  },
+  "loader.menu.hint": "clique com o botão direito para opções de recarregamento",
+  "loader.menu.title": "Recarregar",
+  "loader.menu.changes": "Só o que mudou, agora",
+  "loader.menu.all": "Todas as execuções, agora",
+  "loader.menu.interval": "Perguntar de novo automaticamente",
+  "loader.menu.seconds": {
+    "one": "a cada {n} segundo",
+    "many": "a cada {n} segundos",
+    "other": "a cada {n} segundos"
+  },
+  "loader.menu.minutes": {
+    "one": "a cada {n} minuto",
+    "many": "a cada {n} minutos",
+    "other": "a cada {n} minutos"
+  },
+  "loader.menu.off": "nunca",
+  "loader.menu.view": "Esta vista, agora",
+  "loader.menu.cache": "Esquecer as respostas do GitHub em cache",
+  "loader.menu.page": "Recarregar a página",
+  "loader.overview.title": "Carregando",
+  "loader.overview.running": {
+    "one": "{n} em execução",
+    "many": "{n} em execução",
+    "other": "{n} em execução"
+  },
+  "loader.overview.none": "Nada foi carregado ainda.",
+  "loader.task.boot": "Lendo os papéis e sua meta",
+  "loader.task.view": "Desenhando {view}",
+  "loader.task.changes": "Perguntando ao GitHub o que mudou",
+  "loader.task.everything": "Pedindo ao GitHub todas as execuções",
   "loader.task.artifacts": "Artefatos da execução #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefato {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "falhou: {message}",
+  "feed.actions.pick": "Mostrar os testes desta execução",
+  "feed.actions.ended": "Terminado",
+  "feed.actions.duration": "Duração",
+  "feed.actions.running": "em execução",
+  "feed.actions.longest": "A execução mais longa apresentada demorou {duration} ({run}).",
+  "feed.filter.search": "Pesquisar execuções",
+  "feed.filter.all": "todos",
+  "feed.filter.event": "Evento",
+  "feed.filter.branch": "Branch",
+  "feed.filter.clear": "Limpar os filtros",
+  "feed.filter.shown": {
+    "one": "Resta {n} após os filtros.",
+    "many": "Restam {n} após os filtros.",
+    "other": "Restam {n} após os filtros."
+  },
   "security.source.advisories": "Avisos",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Varredura de código",

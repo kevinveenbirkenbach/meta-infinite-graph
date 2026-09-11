@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} መሊሱ።",
   "feed.anError": "ምስ ጌጋ",
+  "loader.loading": "ይጽዓን ኣሎ …",
+  "loader.next": {
+    "one": "ዝቕጽል ምሕዳስ ድሕሪ {n} ካልኢት",
+    "other": "ዝቕጽል ምሕዳስ ድሕሪ {n} ካልኢታት"
+  },
+  "loader.paused": {
+    "one": "ናይ GitHub ኮታ ንምዕቃብ እቲ ዝሓለፈ ምሕዳስ ተሰጊሩ፤ ዝቕጽል ፈተነ ድሕሪ {n} ካልኢት",
+    "other": "ናይ GitHub ኮታ ንምዕቃብ እቲ ዝሓለፈ ምሕዳስ ተሰጊሩ፤ ዝቕጽል ፈተነ ድሕሪ {n} ካልኢታት"
+  },
+  "loader.menu.hint": "ንኣማራጺታት ዳግማይ ምጽዓን የማናይ ጠውቕ ግበሩ",
+  "loader.menu.title": "ዳግማይ ጽዓን",
+  "loader.menu.changes": "ዝተቐየረ ጥራይ፣ ሕጂ",
+  "loader.menu.all": "ኩሉ ምስራሕ፣ ሕጂ",
+  "loader.menu.interval": "ብኣውቶማቲክ እንደገና ሕተት",
+  "loader.menu.seconds": {
+    "one": "ኣብ ነፍሲ ወከፍ {n} ካልኢት",
+    "other": "ኣብ ነፍሲ ወከፍ {n} ካልኢታት"
+  },
+  "loader.menu.minutes": {
+    "one": "ኣብ ነፍሲ ወከፍ {n} ደቒቕ",
+    "other": "ኣብ ነፍሲ ወከፍ {n} ደቓይቕ"
+  },
+  "loader.menu.off": "ፈጺሙ",
+  "loader.menu.view": "እዚ ታብ፣ ሕጂ",
+  "loader.menu.cache": "ዝተዓቀበ መልስታት GitHub ረስዕ",
+  "loader.menu.page": "ገጽ ዳግማይ ጽዓን",
+  "loader.overview.title": "ምጽዓን",
+  "loader.overview.running": {
+    "one": "{n} ይሰርሕ ኣሎ",
+    "other": "{n} ይሰርሑ ኣለዉ"
+  },
+  "loader.overview.none": "ክሳብ ሕጂ ዝተጻዕነ የለን።",
+  "loader.task.boot": "ግደታትን ሜታኦምን ይንበቡ ኣለዉ",
+  "loader.task.view": "{view} ይስኣል ኣሎ",
+  "loader.task.changes": "GitHub እንታይ ከም ዝተቐየረ ይሕተት ኣሎ",
+  "loader.task.everything": "ካብ GitHub ኩሉ ምስራሕ ይሕተት ኣሎ",
   "loader.task.artifacts": "ኣርቲፋክትታት ናይ ምስራሕ #{number}: {done} ካብ {total}",
+  "loader.task.artifact": "ኣርቲፋክት {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ፈሺሉ: {message}",
+  "feed.actions.pick": "ፈተናታት ናይዚ ምስራሕ ኣርኢ",
+  "feed.actions.ended": "ዝተወደአ",
+  "feed.actions.duration": "ንውሓት ግዜ",
+  "feed.actions.running": "ይሰርሕ ኣሎ",
+  "feed.actions.longest": "እቲ ዝተራእየ ዝነውሐ ምስራሕ {duration} ({run}) ወሲዱ።",
+  "feed.filter.search": "ኣብ ምስራሓት ድለ",
+  "feed.filter.all": "ኩሉ",
+  "feed.filter.event": "ፍጻመ",
+  "feed.filter.branch": "ጨንፈር",
+  "feed.filter.clear": "መጻረዪታት ኣልግስ",
+  "feed.filter.shown": {
+    "one": "ድሕሪ መጻረዪታት {n} ተሪፉ።",
+    "other": "ድሕሪ መጻረዪታት {n} ተሪፎም።"
+  },
   "security.source.advisories": "ምኽርታት",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ምርመራ ኮድ",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ya amsa da {status}.",
   "feed.anError": "da kuskure",
+  "loader.loading": "Ana lodawa …",
+  "loader.next": {
+    "one": "Sabuntawa ta gaba cikin daƙiƙa {n}",
+    "other": "Sabuntawa ta gaba cikin daƙiƙoƙi {n}"
+  },
+  "loader.paused": {
+    "one": "An tsallake sabuntawa ta ƙarshe don adana kasafin GitHub; ƙoƙari na gaba cikin daƙiƙa {n}",
+    "other": "An tsallake sabuntawa ta ƙarshe don adana kasafin GitHub; ƙoƙari na gaba cikin daƙiƙoƙi {n}"
+  },
+  "loader.menu.hint": "danna dama don zaɓuɓɓukan sake lodawa",
+  "loader.menu.title": "Sake loda",
+  "loader.menu.changes": "Abin da ya canza kawai, yanzu",
+  "loader.menu.all": "Duk gudanarwa, yanzu",
+  "loader.menu.interval": "Sake tambaya ta atomatik",
+  "loader.menu.seconds": {
+    "one": "kowane daƙiƙa {n}",
+    "other": "kowane daƙiƙoƙi {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "kowane minti {n}",
+    "other": "kowane mintuna {n}"
+  },
+  "loader.menu.off": "ba zai taɓa ba",
+  "loader.menu.view": "Wannan kallo, yanzu",
+  "loader.menu.cache": "Manta amsoshin GitHub da ke ma'ajiyar wucin gadi",
+  "loader.menu.page": "Sake loda shafin",
+  "loader.overview.title": "Ana lodawa",
+  "loader.overview.running": {
+    "one": "{n} na gudana",
+    "other": "{n} na gudana"
+  },
+  "loader.overview.none": "Babu abin da aka loda tukuna.",
+  "loader.task.boot": "Ana karanta matsayoyi da meta nasu",
+  "loader.task.view": "Ana zana {view}",
+  "loader.task.changes": "Ana tambayar GitHub abin da ya canza",
+  "loader.task.everything": "Ana neman duk gudanarwa daga GitHub",
   "loader.task.artifacts": "Kayan fitarwa na gudanarwa #{number}: {done} daga cikin {total}",
+  "loader.task.artifact": "Kayan fitarwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ya gaza: {message}",
+  "feed.actions.pick": "Nuna gwaje-gwajen wannan gudanarwa",
+  "feed.actions.ended": "An gama",
+  "feed.actions.duration": "Tsawon lokaci",
+  "feed.actions.running": "yana gudana",
+  "feed.actions.longest": "Gudanarwa mafi tsawo da aka nuna ta ɗauki {duration} ({run}).",
+  "feed.filter.search": "Nemi a cikin gudanarwa",
+  "feed.filter.all": "duka",
+  "feed.filter.event": "Lamari",
+  "feed.filter.branch": "Reshe",
+  "feed.filter.clear": "Share tacewa",
+  "feed.filter.shown": {
+    "one": "{n} ya rage bayan tacewa.",
+    "other": "{n} sun rage bayan tacewa."
+  },
   "security.source.advisories": "Shawarwari",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Binciken lamba",

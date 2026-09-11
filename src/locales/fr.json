@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub a répondu {status}.",
   "feed.anError": "par une erreur",
+  "loader.loading": "Chargement …",
+  "loader.next": {
+    "one": "Prochaine actualisation dans {n} seconde",
+    "many": "Prochaine actualisation dans {n} de secondes",
+    "other": "Prochaine actualisation dans {n} secondes"
+  },
+  "loader.paused": {
+    "one": "La dernière actualisation a été ignorée pour ménager le quota GitHub ; prochain essai dans {n} seconde",
+    "many": "La dernière actualisation a été ignorée pour ménager le quota GitHub ; prochain essai dans {n} de secondes",
+    "other": "La dernière actualisation a été ignorée pour ménager le quota GitHub ; prochain essai dans {n} secondes"
+  },
+  "loader.menu.hint": "clic droit pour les options de rechargement",
+  "loader.menu.title": "Recharger",
+  "loader.menu.changes": "Seulement ce qui a changé, maintenant",
+  "loader.menu.all": "Toutes les exécutions, maintenant",
+  "loader.menu.interval": "Redemander automatiquement",
+  "loader.menu.seconds": {
+    "one": "toutes les {n} seconde",
+    "many": "toutes les {n} de secondes",
+    "other": "toutes les {n} secondes"
+  },
+  "loader.menu.minutes": {
+    "one": "toutes les {n} minute",
+    "many": "toutes les {n} de minutes",
+    "other": "toutes les {n} minutes"
+  },
+  "loader.menu.off": "jamais",
+  "loader.menu.view": "Cet onglet, maintenant",
+  "loader.menu.cache": "Oublier les réponses GitHub en cache",
+  "loader.menu.page": "Recharger la page",
+  "loader.overview.title": "Chargement",
+  "loader.overview.running": {
+    "one": "{n} en cours",
+    "many": "{n} en cours",
+    "other": "{n} en cours"
+  },
+  "loader.overview.none": "Rien n’a encore été chargé.",
+  "loader.task.boot": "Lecture des rôles et de leurs métadonnées",
+  "loader.task.view": "Rendu de {view}",
+  "loader.task.changes": "Demande à GitHub de ce qui a changé",
+  "loader.task.everything": "Demande à GitHub de toutes les exécutions",
   "loader.task.artifacts": "Artefacts de l’exécution #{number} : {done} sur {total}",
+  "loader.task.artifact": "Artefact {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "échec : {message}",
+  "feed.actions.pick": "Afficher les tests de cette exécution",
+  "feed.actions.ended": "Terminé",
+  "feed.actions.duration": "Durée",
+  "feed.actions.running": "en cours",
+  "feed.actions.longest": "L'exécution la plus longue affichée a duré {duration} ({run}).",
+  "feed.filter.search": "Rechercher dans les exécutions",
+  "feed.filter.all": "tous",
+  "feed.filter.event": "Événement",
+  "feed.filter.branch": "Branche",
+  "feed.filter.clear": "Effacer les filtres",
+  "feed.filter.shown": {
+    "one": "{n} reste après les filtres.",
+    "many": "{n} restent après les filtres.",
+    "other": "{n} restent après les filtres."
+  },
   "security.source.advisories": "Avis de sécurité",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Analyse du code",

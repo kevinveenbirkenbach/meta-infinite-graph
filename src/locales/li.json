@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub antwoordde {status}.",
   "feed.anError": "mèt 'n fout",
+  "loader.loading": "Laje …",
+  "loader.next": {
+    "one": "Volgende verversing in {n} seconde",
+    "other": "Volgende verversing in {n} seconde"
+  },
+  "loader.paused": {
+    "one": "De lèste verversing is euvergeslage um 't GitHub-quotum te spare; volgende poging in {n} seconde",
+    "other": "De lèste verversing is euvergeslage um 't GitHub-quotum te spare; volgende poging in {n} seconde"
+  },
+  "loader.menu.hint": "rechsklik veur opties um opnuuj te laje",
+  "loader.menu.title": "Opnuuj laje",
+  "loader.menu.changes": "Allein wat veranderd is, noe",
+  "loader.menu.all": "Alle loupe, noe",
+  "loader.menu.interval": "Automatisch opnuuj vraoge",
+  "loader.menu.seconds": {
+    "one": "elke {n} seconde",
+    "other": "elke {n} seconde"
+  },
+  "loader.menu.minutes": {
+    "one": "elke {n} minuut",
+    "other": "elke {n} minute"
+  },
+  "loader.menu.off": "noets",
+  "loader.menu.view": "Dees weergaaf, noe",
+  "loader.menu.cache": "Vergaet de bewaorde GitHub-antwoorde",
+  "loader.menu.page": "De pagina opnuuj laje",
+  "loader.overview.title": "Laje",
+  "loader.overview.running": {
+    "one": "{n} loupt",
+    "other": "{n} loupe"
+  },
+  "loader.overview.none": "Nog niks gelaje.",
+  "loader.task.boot": "De rolle en hun meta weure gelaze",
+  "loader.task.view": "{view} weurt getekend",
+  "loader.task.changes": "GitHub weurt gevraog wat veranderd is",
+  "loader.task.everything": "GitHub weurt gevraog nao alle loupe",
   "loader.task.artifacts": "Artefakte vaan loup #{number}: {done} vaan {total}",
+  "loader.task.artifact": "Artefak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "mislök: {message}",
+  "feed.actions.pick": "Teste vaan deze loup toene",
+  "feed.actions.ended": "Geïndig",
+  "feed.actions.duration": "Duur",
+  "feed.actions.running": "loupt",
+  "feed.actions.longest": "De langste getuinde loup doerde {duration} ({run}).",
+  "feed.filter.search": "Loupe zeuke",
+  "feed.filter.all": "alles",
+  "feed.filter.event": "Gebäörtenis",
+  "feed.filter.branch": "Tak",
+  "feed.filter.clear": "De filters wisse",
+  "feed.filter.shown": {
+    "one": "{n} blief euver nao de filters.",
+    "other": "{n} blieve euver nao de filters."
+  },
   "security.source.advisories": "Advieze",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Codescan",

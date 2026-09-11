@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ѿвѣща {status}.",
   "feed.anError": "съ погрѣшенїемъ",
+  "loader.loading": "Прїемлетсѧ …",
+  "loader.next": {
+    "one": "Слѣдꙋющее ѡбновленїе чрезъ {n} мгновенїе",
+    "other": "Слѣдꙋющее ѡбновленїе чрезъ {n} мгновенїй"
+  },
+  "loader.paused": {
+    "one": "Послѣднее ѡбновленїе пропꙋщено, да сохранитсѧ мѣра прошенїй GitHub; слѣдꙋющее покꙋшенїе чрезъ {n} мгновенїе",
+    "other": "Послѣднее ѡбновленїе пропꙋщено, да сохранитсѧ мѣра прошенїй GitHub; слѣдꙋющее покꙋшенїе чрезъ {n} мгновенїй"
+  },
+  "loader.menu.hint": "десноє нажатїе — ꙋставы паки прочтенїѧ",
+  "loader.menu.title": "Паки прочести",
+  "loader.menu.changes": "Токмѡ измѣнившееся, нынѣ",
+  "loader.menu.all": "Всѧко совершенїе, нынѣ",
+  "loader.menu.interval": "Самодвижнѡ паки вопрошати",
+  "loader.menu.seconds": {
+    "one": "всѧкѡ {n} мгновенїе",
+    "other": "всѧкѡ {n} мгновенїй"
+  },
+  "loader.menu.minutes": {
+    "one": "всѧкѡ {n} минꙋтꙋ",
+    "other": "всѧкѡ {n} минꙋтъ"
+  },
+  "loader.menu.off": "никогдаже",
+  "loader.menu.view": "Сїе зрѣлище, нынѣ",
+  "loader.menu.cache": "Забыти запасъ ѿвѣтѡвъ GitHub",
+  "loader.menu.page": "Паки прочести листъ",
+  "loader.overview.title": "Прїемлетсѧ",
+  "loader.overview.running": {
+    "one": "{n} совершаетсѧ",
+    "other": "{n} совершаютсѧ"
+  },
+  "loader.overview.none": "Ничтоже ещё прїѧто бысть.",
+  "loader.task.boot": "Чтенїе чинѡвъ и мета ихъ",
+  "loader.task.view": "Начертанїе {view}",
+  "loader.task.changes": "Вопрошаемъ GitHub, что измѣнисѧ",
+  "loader.task.everything": "Вопрошаемъ GitHub ѡ всѧкомъ совершенїи",
   "loader.task.artifacts": "Издѣлїѧ совершенїѧ #{number}: {done} ѿ {total}",
+  "loader.task.artifact": "Издѣлїе {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "падесѧ: {message}",
+  "feed.actions.pick": "Показати искꙋшенїѧ сегѡ совершенїѧ",
+  "feed.actions.ended": "Скончанѡ",
+  "feed.actions.duration": "Продолженїе",
+  "feed.actions.running": "совершаетсѧ",
+  "feed.actions.longest": "Долгѣйшее ѿ показанныхъ совершенїй продолжисѧ {duration} ({run}).",
+  "feed.filter.search": "Искати въ совершенїихъ",
+  "feed.filter.all": "вси",
+  "feed.filter.event": "Событїе",
+  "feed.filter.branch": "Вѣтвь",
+  "feed.filter.clear": "Ѡчистити отборы",
+  "feed.filter.shown": {
+    "one": "По отборѣхъ ѡстасѧ {n}.",
+    "other": "По отборѣхъ ѡсташасѧ {n}."
+  },
   "security.source.advisories": "Совѣти",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Испытанїе кѡда",

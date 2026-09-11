@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub huet {status} geäntwert.",
   "feed.anError": "mat engem Feeler",
+  "loader.loading": "Gëtt gelueden …",
+  "loader.next": {
+    "one": "Nächst Aktualiséierung an {n} Sekonn",
+    "other": "Nächst Aktualiséierung an {n} Sekonnen"
+  },
+  "loader.paused": {
+    "one": "Déi lescht Aktualiséierung gouf iwwersprongen, fir de GitHub-Kontingent ze schounen; nächste Versuch an {n} Sekonn",
+    "other": "Déi lescht Aktualiséierung gouf iwwersprongen, fir de GitHub-Kontingent ze schounen; nächste Versuch an {n} Sekonnen"
+  },
+  "loader.menu.hint": "Rietsklick fir Optiounen zum nei Lueden",
+  "loader.menu.title": "Nei lueden",
+  "loader.menu.changes": "Just dat, wat geännert huet, elo",
+  "loader.menu.all": "All Leef, elo",
+  "loader.menu.interval": "Automatesch nach eng Kéier froen",
+  "loader.menu.seconds": {
+    "one": "all {n} Sekonn",
+    "other": "all {n} Sekonnen"
+  },
+  "loader.menu.minutes": {
+    "one": "all {n} Minutt",
+    "other": "all {n} Minutten"
+  },
+  "loader.menu.off": "ni",
+  "loader.menu.view": "Dësen Tab, elo",
+  "loader.menu.cache": "Déi gespäichert GitHub-Äntwerten aus dem Cache vergiessen",
+  "loader.menu.page": "D'Säit nei lueden",
+  "loader.overview.title": "Lueden",
+  "loader.overview.running": {
+    "one": "{n} leeft",
+    "other": "{n} lafen"
+  },
+  "loader.overview.none": "Nach näischt gelueden.",
+  "loader.task.boot": "D'Rollen an hir Meta ginn gelies",
+  "loader.task.view": "{view} gëtt gezeechent",
+  "loader.task.changes": "GitHub gëtt gefrot, wat geännert huet",
+  "loader.task.everything": "GitHub gëtt no alle Leef gefrot",
   "loader.task.artifacts": "Artefakte vum Laf #{number}: {done} vun {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "feelgeschloen: {message}",
+  "feed.actions.pick": "D'Tester vun dësem Laf weisen",
+  "feed.actions.ended": "Ofgeschloss",
+  "feed.actions.duration": "Dauer",
+  "feed.actions.running": "leeft",
+  "feed.actions.longest": "De längste gewisene Laf huet {duration} gedauert ({run}).",
+  "feed.filter.search": "An de Leef sichen",
+  "feed.filter.all": "all",
+  "feed.filter.event": "Evenement",
+  "feed.filter.branch": "Branche",
+  "feed.filter.clear": "Filteren ewechmaachen",
+  "feed.filter.shown": {
+    "one": "No de Filteren bleift {n} iwwreg.",
+    "other": "No de Filteren bleiwen {n} iwwreg."
+  },
   "security.source.advisories": "Hiweiser",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Code-Scan",

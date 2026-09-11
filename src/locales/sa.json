@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} इति उत्तरम् अददात्।",
   "feed.anError": "दोषेण सह",
+  "loader.loading": "आरोप्यते …",
+  "loader.next": {
+    "one": "अग्रिमं नवीकरणं {n} क्षणे",
+    "other": "अग्रिमं नवीकरणं {n} क्षणेषु"
+  },
+  "loader.paused": {
+    "one": "GitHub-अनुरोधभागस्य रक्षणाय अन्तिमं नवीकरणं त्यक्तम्; अग्रिमः प्रयासः {n} क्षणे",
+    "other": "GitHub-अनुरोधभागस्य रक्षणाय अन्तिमं नवीकरणं त्यक्तम्; अग्रिमः प्रयासः {n} क्षणेषु"
+  },
+  "loader.menu.hint": "पुनरारोपणविकल्पेभ्यः दक्षिणक्लिक् करोतु",
+  "loader.menu.title": "पुनः आरोपयतु",
+  "loader.menu.changes": "यत् परिवर्तितं तदेव, अधुना",
+  "loader.menu.all": "सर्वाणि चालनानि, अधुना",
+  "loader.menu.interval": "स्वयमेव पुनः पृच्छतु",
+  "loader.menu.seconds": {
+    "one": "प्रत्येकं {n} क्षणे",
+    "other": "प्रत्येकं {n} क्षणेषु"
+  },
+  "loader.menu.minutes": {
+    "one": "प्रत्येकं {n} निमेषे",
+    "other": "प्रत्येकं {n} निमेषेषु"
+  },
+  "loader.menu.off": "कदापि न",
+  "loader.menu.view": "इदं दृश्यम्, अधुना",
+  "loader.menu.cache": "संगृहीतानि GitHub-उत्तराणि विस्मरतु",
+  "loader.menu.page": "पृष्ठं पुनः आरोपयतु",
+  "loader.overview.title": "आरोप्यते",
+  "loader.overview.running": {
+    "one": "{n} प्रचलति",
+    "other": "{n} प्रचलन्ति"
+  },
+  "loader.overview.none": "अद्यापि किमपि न आरोपितम्।",
+  "loader.task.boot": "भूमिकाः तासां मेटा च पठ्यन्ते",
+  "loader.task.view": "{view} चित्र्यते",
+  "loader.task.changes": "GitHub पृच्छ्यते किं परिवर्तितम् इति",
+  "loader.task.everything": "GitHub सर्वाणि चालनानि याच्यते",
   "loader.task.artifacts": "चालनस्य #{number} कृतवस्तूनि: {total} मध्ये {done}",
+  "loader.task.artifact": "कृतवस्तु {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "विफलम्: {message}",
+  "feed.actions.pick": "अस्य चालनस्य परीक्षाः दर्शयतु",
+  "feed.actions.ended": "समाप्तम्",
+  "feed.actions.duration": "अवधिः",
+  "feed.actions.running": "प्रचलति",
+  "feed.actions.longest": "प्रदर्शितेषु दीर्घतमं चालनं {duration} यावत् अचलत् ({run})।",
+  "feed.filter.search": "चालनानि अन्विष्यतु",
+  "feed.filter.all": "सर्वाणि",
+  "feed.filter.event": "घटना",
+  "feed.filter.branch": "शाखा",
+  "feed.filter.clear": "निस्यन्दकानि अपाकरोतु",
+  "feed.filter.shown": {
+    "one": "निस्यन्दनानन्तरं {n} अवशिष्टम्।",
+    "other": "निस्यन्दनानन्तरं {n} अवशिष्टानि।"
+  },
   "security.source.advisories": "परामर्शाः",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "सङ्केतपरीक्षणम्",

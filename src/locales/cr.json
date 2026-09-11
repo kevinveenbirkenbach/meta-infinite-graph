@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ᐃᑌᐧᐤ {status}.",
   "feed.anError": "ᐘᓂᑑᑕᒧᐏᐣ ᐅᐦᒋ",
+  "loader.loading": "ᐊᐢᑕᐸᔨᐤ …",
+  "loader.next": {
+    "one": "ᐊᐢᑭᐦᒋᑫᐏᐣ {n} ᒋᐸᐦᐃᑲᓂᓯᐢ ᐃᐢᑯ",
+    "other": "ᐊᐢᑭᐦᒋᑫᐏᐣ {n} ᒋᐸᐦᐃᑲᓂᓯᓴ ᐃᐢᑯ"
+  },
+  "loader.paused": {
+    "one": "ᐊᐢᑭᐦᒋᑫᐏᐣ ᐹᐢᒋᐸᔨᐤ GitHub ᓇᑐᑕᒫᑫᐏᓇ ᑕᑲᓇᐏᐸᐦᑕᒥᐦᐠ; ᑭᑕᑯᒋᐦᑖᐣ {n} ᒋᐸᐦᐃᑲᓂᓯᐢ ᐃᐢᑯ",
+    "other": "ᐊᐢᑭᐦᒋᑫᐏᐣ ᐹᐢᒋᐸᔨᐤ GitHub ᓇᑐᑕᒫᑫᐏᓇ ᑕᑲᓇᐏᐸᐦᑕᒥᐦᐠ; ᑭᑕᑯᒋᐦᑖᐣ {n} ᒋᐸᐦᐃᑲᓂᓯᓴ ᐃᐢᑯ"
+  },
+  "loader.menu.hint": "ᑭᒋᒋᐦᒡ ᓂᑕᐦᐃᐢᑫᐣ: ᑮᐦᑖᐧᒼ ᐅᓰᐦᑕ",
+  "loader.menu.title": "ᑮᐦᑖᐧᒼ ᐅᓰᐦᑕ",
+  "loader.menu.changes": "ᐊᓂᒪ ᐯᔭᑾᐤ ᑳ ᒣᐢᑯᒋᐸᔨᐠ, ᐊᓄᐦᐨ",
+  "loader.menu.all": "ᑲᐦᑭᔭᐤ ᐱᒥᐸᔨᐏᓇ, ᐊᓄᐦᐨ",
+  "loader.menu.interval": "ᑭᐦᑖᐧᒼ ᑲᑫᐧᒋᒥᐤ",
+  "loader.menu.seconds": {
+    "one": "ᑲᐦᑭᔭᐤ {n} ᒋᐸᐦᐃᑲᓂᓯᐢ",
+    "other": "ᑲᐦᑭᔭᐤ {n} ᒋᐸᐦᐃᑲᓂᓯᓴ"
+  },
+  "loader.menu.minutes": {
+    "one": "ᑲᐦᑭᔭᐤ {n} ᒥᓂᐟ",
+    "other": "ᑲᐦᑭᔭᐤ {n} ᒥᓂᑕ"
+  },
+  "loader.menu.off": "ᓇᒪ ᐑᐦᑳᐨ",
+  "loader.menu.view": "ᐊᐅᒪ ᐊᐧᐸᐦᑕᒧᐏᐣ, ᐊᓄᐦᐨ",
+  "loader.menu.cache": "ᑳᓰᓇ GitHub ᓇᐦᐊᐢᑖᓱᐏᐣ",
+  "loader.menu.page": "ᑮᐦᑖᐧᒼ ᐅᓰᐦᑕ ᒪᓯᓇᐦᐃᑲᓂᐢ",
+  "loader.overview.title": "ᐊᐢᑕᐸᔨᐤ",
+  "loader.overview.running": {
+    "one": "{n} ᐱᒥᐸᔨᐤ",
+    "other": "{n} ᐱᒥᐸᔨᐤᐠ"
+  },
+  "loader.overview.none": "ᓇᒨᔭ ᒋᔾᐱᐦ ᑫᒁᐣ ᐊᐢᑕᐸᔨᐤ᙮",
+  "loader.task.boot": "ᐊᑐᐢᑫᐏᓇ ᐁ ᐊᔭᒥᐦᑕᒥᐦᐠ ᒥᓇ ᐅᑎ meta",
+  "loader.task.view": "{view} ᐁ ᒪᓯᓇᐦᐃᑫᐦᐠ",
+  "loader.task.changes": "GitHub ᐁ ᑲᑫᐧᒋᒥᐦᐠ ᑳ ᒣᐢᑯᒋᐸᔨᐠ",
+  "loader.task.everything": "GitHub ᐁ ᑲᑫᐧᒋᒥᐦᐠ ᑲᐦᑭᔭᐤ ᐱᒥᐸᔨᐏᓇ",
   "loader.task.artifacts": "ᐱᒥᐸᔨᐏᐣ #{number} ᐅᔑᐦᒋᑲᓇ: {done}/{total}",
+  "loader.task.artifact": "ᐅᔑᐦᒋᑲᐣ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ᒪᔭᐸᔨᐤ: {message}",
+  "feed.actions.pick": "ᓅᑯᑖ ᐅᑯ ᑯᒋᐦᑖᐏᓇ ᐅᐦᒋ ᐊᓐᒪ ᐱᒥᐸᔨᐏᐣ",
+  "feed.actions.ended": "ᑳᑮᓯᐸᔨᐠ",
+  "feed.actions.duration": "ᑖᐣ ᑭᓄᐙᐠ",
+  "feed.actions.running": "ᐱᒥᐸᔨᐤ",
+  "feed.actions.longest": "ᒫᐘᒋ ᑭᓄᐙᐤ ᐱᒥᐸᔨᐏᐣ {duration} ᑮᐱᒥᐸᔨᐤ ({run}).",
+  "feed.filter.search": "ᓂᑐᓇ ᐱᒥᐸᔨᐏᓇ",
+  "feed.filter.all": "ᑲᐦᑭᔭᐤ",
+  "feed.filter.event": "ᐃᐢᐸᔨᐏᐣ",
+  "feed.filter.branch": "ᐘᑎᐦᑲᐧᐣ",
+  "feed.filter.clear": "ᐸᑭᑌᓂ ᓇᐘᓲᓂᑫᐏᓇ",
+  "feed.filter.shown": {
+    "one": "{n} ᐁᐢᑲᐧ ᐊᔭᐤ᙮",
+    "other": "{n} ᐁᐢᑲᐧ ᐊᔭᐘᐠ᙮"
+  },
   "security.source.advisories": "ᑭᐢᑫᔨᐦᑕᒧᐦᐃᐍᐏᓇ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "code-ᓇᓇᑲᒋᐦᑖᐏᐣ",

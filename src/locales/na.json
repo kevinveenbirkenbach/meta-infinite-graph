@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ãnter {status}.",
   "feed.anError": "ma ero",
+  "loader.loading": "Rod …",
+  "loader.next": {
+    "one": "Rirod ãdo ijeiji {n} tekon",
+    "other": "Rirod ãdo ijeiji {n} tekon"
+  },
+  "loader.paused": {
+    "one": "Rirod ubwe eko, bwe rimit GitHub; rirod ãdo ijeiji {n} tekon",
+    "other": "Rirod ubwe eko, bwe rimit GitHub; rirod ãdo ijeiji {n} tekon"
+  },
+  "loader.menu.hint": "kilik ijeiji mat ñaga tuwaijin rirod",
+  "loader.menu.title": "Rirod",
+  "loader.menu.changes": "Ñaga oiyeiy ñaga, enim",
+  "loader.menu.all": "Ran ot, enim",
+  "loader.menu.interval": "Ekaiyo ubwe",
+  "loader.menu.seconds": {
+    "one": "ijeiji {n} tekon ot",
+    "other": "ijeiji {n} tekon ot"
+  },
+  "loader.menu.minutes": {
+    "one": "ijeiji {n} minit ot",
+    "other": "ijeiji {n} minit ot"
+  },
+  "loader.menu.off": "eko tugagin",
+  "loader.menu.view": "Jo ñaga, enim",
+  "loader.menu.cache": "Ekaiyo ñaga GitHub ikiba",
+  "loader.menu.page": "Rirod peij",
+  "loader.overview.title": "Rod",
+  "loader.overview.running": {
+    "one": "{n} ũge ran",
+    "other": "{n} ũge ran"
+  },
+  "loader.overview.none": "Eko ñaga rod.",
+  "loader.task.boot": "Rid rol me meta",
+  "loader.task.view": "Ekeiy {view}",
+  "loader.task.changes": "Anga GitHub ñaga oiyeiy",
+  "loader.task.everything": "Anga GitHub ran ot",
   "loader.task.artifacts": "Artifak ran #{number}: {done} ijeiji {total}",
+  "loader.task.artifact": "Artifak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "eko: {message}",
+  "feed.actions.pick": "Jo teset ijeiji ran ñaga",
+  "feed.actions.ended": "Pinit",
+  "feed.actions.duration": "Tãim",
+  "feed.actions.running": "ũge ran",
+  "feed.actions.longest": "Ran ebaga ijeiji eõ {duration} ({run}).",
+  "feed.filter.search": "Tjet ran",
+  "feed.filter.all": "dogin",
+  "feed.filter.event": "Ivent",
+  "feed.filter.branch": "Brenj",
+  "feed.filter.clear": "Kakiren pirta",
+  "feed.filter.shown": {
+    "one": "{n} ran ekaŋ ijeiji pirta.",
+    "other": "{n} ran ekaŋ ijeiji pirta."
+  },
   "security.source.advisories": "Adbaij",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Sukan kod",

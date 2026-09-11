@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ha respundì {status}.",
   "feed.anError": "cun ina errur",
+  "loader.loading": "Chargiar …",
+  "loader.next": {
+    "one": "Proxima actualisaziun en {n} secunda",
+    "other": "Proxima actualisaziun en {n} secundas"
+  },
+  "loader.paused": {
+    "one": "L'ultima actualisaziun è vegnida surita per spargnar il contingent da GitHub; proxima emprova en {n} secunda",
+    "other": "L'ultima actualisaziun è vegnida surita per spargnar il contingent da GitHub; proxima emprova en {n} secundas"
+  },
+  "loader.menu.hint": "clic dretg per las opziuns da chargiar da nov",
+  "loader.menu.title": "Chargiar da nov",
+  "loader.menu.changes": "Mo quai ch'è sa midà, ussa",
+  "loader.menu.all": "Mintga execuziun, ussa",
+  "loader.menu.interval": "Dumandar puspè automaticamain",
+  "loader.menu.seconds": {
+    "one": "mintga {n} secunda",
+    "other": "mintga {n} secundas"
+  },
+  "loader.menu.minutes": {
+    "one": "mintga {n} minuta",
+    "other": "mintga {n} minutas"
+  },
+  "loader.menu.off": "mai",
+  "loader.menu.view": "Questa vista, ussa",
+  "loader.menu.cache": "Emblidar las respostas da GitHub memorisadas",
+  "loader.menu.page": "Chargiar da nov la pagina",
+  "loader.overview.title": "Chargiar",
+  "loader.overview.running": {
+    "one": "{n} en execuziun",
+    "other": "{n} en execuziun"
+  },
+  "loader.overview.none": "Anc nagut n'è vegnì chargià.",
+  "loader.task.boot": "Leger las rollas e lur meta",
+  "loader.task.view": "Dissegnar {view}",
+  "loader.task.changes": "Dumandar GitHub tge ch'è sa midà",
+  "loader.task.everything": "Dumandar GitHub mintga execuziun",
   "loader.task.artifacts": "Artefacts da l'execuziun #{number}: {done} da {total}",
+  "loader.task.artifact": "Artefact {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "betg reussì: {message}",
+  "feed.actions.pick": "Mussar ils tests da questa execuziun",
+  "feed.actions.ended": "Terminà",
+  "feed.actions.duration": "Durada",
+  "feed.actions.running": "en execuziun",
+  "feed.actions.longest": "L'execuziun la pli lunga mussada ha durà {duration} ({run}).",
+  "feed.filter.search": "Tschertgar execuziuns",
+  "feed.filter.all": "tuts",
+  "feed.filter.event": "Eveniment",
+  "feed.filter.branch": "Rom",
+  "feed.filter.clear": "Stizzar ils filters",
+  "feed.filter.shown": {
+    "one": "Suenter ils filters resta {n}.",
+    "other": "Suenter ils filters restan {n}."
+  },
   "security.source.advisories": "Cussegls",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Analisa dal code",

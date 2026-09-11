@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub ตอบกลับ {status}",
   "feed.anError": "พร้อมข้อผิดพลาด",
+  "loader.loading": "กำลังโหลด …",
+  "loader.next": {
+    "other": "รีเฟรชครั้งถัดไปใน {n} วินาที"
+  },
+  "loader.paused": {
+    "other": "ข้ามการรีเฟรชครั้งล่าสุดเพื่อประหยัดโควตา GitHub ลองใหม่ครั้งถัดไปใน {n} วินาที"
+  },
+  "loader.menu.hint": "คลิกขวาเพื่อดูตัวเลือกการโหลดใหม่",
+  "loader.menu.title": "โหลดใหม่",
+  "loader.menu.changes": "เฉพาะส่วนที่เปลี่ยน ตอนนี้",
+  "loader.menu.all": "การรันทั้งหมด ตอนนี้",
+  "loader.menu.interval": "ถามใหม่อัตโนมัติ",
+  "loader.menu.seconds": {
+    "other": "ทุก {n} วินาที"
+  },
+  "loader.menu.minutes": {
+    "other": "ทุก {n} นาที"
+  },
+  "loader.menu.off": "ไม่เคย",
+  "loader.menu.view": "แท็บนี้ ตอนนี้",
+  "loader.menu.cache": "ลืมคำตอบ GitHub ที่แคชไว้",
+  "loader.menu.page": "โหลดหน้าใหม่",
+  "loader.overview.title": "กำลังโหลด",
+  "loader.overview.running": {
+    "other": "กำลังรัน {n} รายการ"
+  },
+  "loader.overview.none": "ยังไม่มีอะไรโหลดเสร็จ",
+  "loader.task.boot": "กำลังอ่านบทบาทและเมตาของบทบาท",
+  "loader.task.view": "กำลังวาด {view}",
+  "loader.task.changes": "กำลังถาม GitHub ว่ามีอะไรเปลี่ยน",
+  "loader.task.everything": "กำลังขอการรันทั้งหมดจาก GitHub",
   "loader.task.artifacts": "อาร์ติแฟกต์ของการรัน #{number}: {done} จาก {total}",
+  "loader.task.artifact": "อาร์ติแฟกต์ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ล้มเหลว: {message}",
+  "feed.actions.pick": "แสดงการทดสอบของการรันนี้",
+  "feed.actions.ended": "สิ้นสุดเมื่อ",
+  "feed.actions.duration": "ระยะเวลา",
+  "feed.actions.running": "กำลังรัน",
+  "feed.actions.longest": "การรันที่นานที่สุดที่แสดงใช้เวลา {duration} ({run})",
+  "feed.filter.search": "ค้นหาการรัน",
+  "feed.filter.all": "ทั้งหมด",
+  "feed.filter.event": "เหตุการณ์",
+  "feed.filter.branch": "สาขา",
+  "feed.filter.clear": "ล้างตัวกรอง",
+  "feed.filter.shown": {
+    "other": "เหลือ {n} รายการหลังใช้ตัวกรอง"
+  },
   "security.source.advisories": "คำแนะนำด้านความปลอดภัย",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "การสแกนโค้ด",

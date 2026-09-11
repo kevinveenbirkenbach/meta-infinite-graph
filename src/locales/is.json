@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub svaraði {status}.",
   "feed.anError": "með villu",
+  "loader.loading": "Hleð …",
+  "loader.next": {
+    "one": "Næsta uppfærsla eftir {n} sekúndu",
+    "other": "Næsta uppfærsla eftir {n} sekúndur"
+  },
+  "loader.paused": {
+    "one": "Síðustu uppfærslu var sleppt til að spara GitHub-kvótann; næsta tilraun eftir {n} sekúndu",
+    "other": "Síðustu uppfærslu var sleppt til að spara GitHub-kvótann; næsta tilraun eftir {n} sekúndur"
+  },
+  "loader.menu.hint": "hægrismelltu fyrir endurhleðsluvalkosti",
+  "loader.menu.title": "Endurhlaða",
+  "loader.menu.changes": "Aðeins það sem breyttist, núna",
+  "loader.menu.all": "Allar keyrslur, núna",
+  "loader.menu.interval": "Spyrja aftur sjálfkrafa",
+  "loader.menu.seconds": {
+    "one": "á {n} sekúndu fresti",
+    "other": "á {n} sekúndna fresti"
+  },
+  "loader.menu.minutes": {
+    "one": "á {n} mínútu fresti",
+    "other": "á {n} mínútna fresti"
+  },
+  "loader.menu.off": "aldrei",
+  "loader.menu.view": "Þessi flipi, núna",
+  "loader.menu.cache": "Gleyma GitHub-svörum í skyndiminni",
+  "loader.menu.page": "Endurhlaða síðuna",
+  "loader.overview.title": "Hleð",
+  "loader.overview.running": {
+    "one": "{n} í gangi",
+    "other": "{n} í gangi"
+  },
+  "loader.overview.none": "Ekkert hefur verið hlaðið enn.",
+  "loader.task.boot": "Les hlutverkin og lýsigögn þeirra",
+  "loader.task.view": "Teikna {view}",
+  "loader.task.changes": "Spyr GitHub hvað breyttist",
+  "loader.task.everything": "Bið GitHub um allar keyrslur",
   "loader.task.artifacts": "Afurðir keyrslu #{number}: {done} af {total}",
+  "loader.task.artifact": "Afurð {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "mistókst: {message}",
+  "feed.actions.pick": "Sýna prófanir þessarar keyrslu",
+  "feed.actions.ended": "Lokið",
+  "feed.actions.duration": "Tímalengd",
+  "feed.actions.running": "í gangi",
+  "feed.actions.longest": "Lengsta keyrslan sem sýnd er tók {duration} ({run}).",
+  "feed.filter.search": "Leita í keyrslum",
+  "feed.filter.all": "öll",
+  "feed.filter.event": "Atburður",
+  "feed.filter.branch": "Grein",
+  "feed.filter.clear": "Hreinsa síur",
+  "feed.filter.shown": {
+    "one": "Eftir síun er {n} eftir.",
+    "other": "Eftir síun eru {n} eftir."
+  },
   "security.source.advisories": "Öryggistilkynningar",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kóðaskönnun",

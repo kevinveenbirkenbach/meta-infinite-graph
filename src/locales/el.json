@@ -135,7 +135,60 @@
   },
   "feed.failed": "Το GitHub απάντησε {status}.",
   "feed.anError": "με σφάλμα",
+  "loader.loading": "Φόρτωση …",
+  "loader.next": {
+    "one": "Επόμενη ανανέωση σε {n} δευτερόλεπτο",
+    "other": "Επόμενη ανανέωση σε {n} δευτερόλεπτα"
+  },
+  "loader.paused": {
+    "one": "Η τελευταία ανανέωση παραλείφθηκε για εξοικονόμηση του ορίου του GitHub· επόμενη προσπάθεια σε {n} δευτερόλεπτο",
+    "other": "Η τελευταία ανανέωση παραλείφθηκε για εξοικονόμηση του ορίου του GitHub· επόμενη προσπάθεια σε {n} δευτερόλεπτα"
+  },
+  "loader.menu.hint": "δεξί κλικ για επιλογές επαναφόρτωσης",
+  "loader.menu.title": "Επαναφόρτωση",
+  "loader.menu.changes": "Μόνο ό,τι άλλαξε, τώρα",
+  "loader.menu.all": "Κάθε εκτέλεση, τώρα",
+  "loader.menu.interval": "Αυτόματη επανάληψη ερώτησης",
+  "loader.menu.seconds": {
+    "one": "κάθε {n} δευτερόλεπτο",
+    "other": "κάθε {n} δευτερόλεπτα"
+  },
+  "loader.menu.minutes": {
+    "one": "κάθε {n} λεπτό",
+    "other": "κάθε {n} λεπτά"
+  },
+  "loader.menu.off": "ποτέ",
+  "loader.menu.view": "Αυτή η καρτέλα, τώρα",
+  "loader.menu.cache": "Ξέχνα τις απαντήσεις του GitHub από την κρυφή μνήμη",
+  "loader.menu.page": "Επαναφόρτωση της σελίδας",
+  "loader.overview.title": "Φόρτωση",
+  "loader.overview.running": {
+    "one": "{n} εκτελείται",
+    "other": "{n} εκτελούνται"
+  },
+  "loader.overview.none": "Δεν έχει φορτωθεί τίποτα ακόμη.",
+  "loader.task.boot": "Ανάγνωση των ρόλων και των meta τους",
+  "loader.task.view": "Σχεδίαση {view}",
+  "loader.task.changes": "Ερώτηση στο GitHub για το τι άλλαξε",
+  "loader.task.everything": "Αίτημα στο GitHub για κάθε εκτέλεση",
   "loader.task.artifacts": "Τεχνουργήματα της εκτέλεσης #{number}: {done} από {total}",
+  "loader.task.artifact": "Τεχνούργημα {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "απέτυχε: {message}",
+  "feed.actions.pick": "Εμφάνιση δοκιμών αυτής της εκτέλεσης",
+  "feed.actions.ended": "Ολοκληρώθηκε",
+  "feed.actions.duration": "Διάρκεια",
+  "feed.actions.running": "εκτελείται",
+  "feed.actions.longest": "Η μεγαλύτερη εκτέλεση που εμφανίζεται διήρκεσε {duration} ({run}).",
+  "feed.filter.search": "Αναζήτηση στις εκτελέσεις",
+  "feed.filter.all": "όλα",
+  "feed.filter.event": "Συμβάν",
+  "feed.filter.branch": "Κλάδος",
+  "feed.filter.clear": "Εκκαθάριση φίλτρων",
+  "feed.filter.shown": {
+    "one": "Μετά τα φίλτρα απομένει {n}.",
+    "other": "Μετά τα φίλτρα απομένουν {n}."
+  },
   "security.source.advisories": "Συμβουλές ασφαλείας",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Σάρωση κώδικα",

@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub menjawab {status}.",
   "feed.anError": "dengan ralat",
+  "loader.loading": "Memuatkan …",
+  "loader.next": {
+    "other": "Muat semula seterusnya dalam {n} saat"
+  },
+  "loader.paused": {
+    "other": "Muat semula terakhir dilangkau untuk menjimatkan kuota GitHub; cubaan seterusnya dalam {n} saat"
+  },
+  "loader.menu.hint": "klik kanan untuk pilihan muat semula",
+  "loader.menu.title": "Muat semula",
+  "loader.menu.changes": "Hanya yang berubah, sekarang",
+  "loader.menu.all": "Setiap larian, sekarang",
+  "loader.menu.interval": "Tanya semula secara automatik",
+  "loader.menu.seconds": {
+    "other": "setiap {n} saat"
+  },
+  "loader.menu.minutes": {
+    "other": "setiap {n} minit"
+  },
+  "loader.menu.off": "tidak pernah",
+  "loader.menu.view": "Paparan ini, sekarang",
+  "loader.menu.cache": "Lupakan jawapan GitHub dalam cache",
+  "loader.menu.page": "Muat semula halaman",
+  "loader.overview.title": "Memuatkan",
+  "loader.overview.running": {
+    "other": "{n} sedang berjalan"
+  },
+  "loader.overview.none": "Belum ada apa-apa yang dimuatkan.",
+  "loader.task.boot": "Membaca peranan dan meta mereka",
+  "loader.task.view": "Melukis {view}",
+  "loader.task.changes": "Bertanya kepada GitHub apa yang berubah",
+  "loader.task.everything": "Meminta setiap larian daripada GitHub",
   "loader.task.artifacts": "Artifak larian #{number}: {done} daripada {total}",
+  "loader.task.artifact": "Artifak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "gagal: {message}",
+  "feed.actions.pick": "Papar ujian larian ini",
+  "feed.actions.ended": "Tamat",
+  "feed.actions.duration": "Tempoh",
+  "feed.actions.running": "sedang berjalan",
+  "feed.actions.longest": "Larian terpanjang yang dipaparkan mengambil masa {duration} ({run}).",
+  "feed.filter.search": "Cari larian",
+  "feed.filter.all": "semua",
+  "feed.filter.event": "Peristiwa",
+  "feed.filter.branch": "Cabang",
+  "feed.filter.clear": "Kosongkan penapis",
+  "feed.filter.shown": {
+    "other": "{n} larian tinggal selepas penapisan."
+  },
   "security.source.advisories": "Nasihat",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Imbasan kod",

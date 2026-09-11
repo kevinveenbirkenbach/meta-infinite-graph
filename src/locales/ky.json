@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} деп жооп берди.",
   "feed.anError": "ката менен",
+  "loader.loading": "Жүктөлүүдө …",
+  "loader.next": {
+    "one": "Кийинки жаңыртуу {n} секунддан кийин",
+    "other": "Кийинки жаңыртуу {n} секунддан кийин"
+  },
+  "loader.paused": {
+    "one": "GitHub квотасын үнөмдөө үчүн акыркы жаңыртуу өткөрүлүп жиберилди; кийинки аракет {n} секунддан кийин",
+    "other": "GitHub квотасын үнөмдөө үчүн акыркы жаңыртуу өткөрүлүп жиберилди; кийинки аракет {n} секунддан кийин"
+  },
+  "loader.menu.hint": "кайра жүктөө параметрлери үчүн оң чыкылдатуу",
+  "loader.menu.title": "Кайра жүктөө",
+  "loader.menu.changes": "Өзгөргөнү гана, азыр",
+  "loader.menu.all": "Бардык иштетүүлөр, азыр",
+  "loader.menu.interval": "Автоматтык түрдө кайра суроо",
+  "loader.menu.seconds": {
+    "one": "ар {n} секунд сайын",
+    "other": "ар {n} секунд сайын"
+  },
+  "loader.menu.minutes": {
+    "one": "ар {n} мүнөт сайын",
+    "other": "ар {n} мүнөт сайын"
+  },
+  "loader.menu.off": "эч качан",
+  "loader.menu.view": "Бул өтмөк, азыр",
+  "loader.menu.cache": "Кэштелген GitHub жоопторун унутуу",
+  "loader.menu.page": "Баракты кайра жүктөө",
+  "loader.overview.title": "Жүктөлүүдө",
+  "loader.overview.running": {
+    "one": "{n} иштеп жатат",
+    "other": "{n} иштеп жатат"
+  },
+  "loader.overview.none": "Азырынча эч нерсе жүктөлгөн жок.",
+  "loader.task.boot": "Ролдорду жана алардын meta маалыматын окуу",
+  "loader.task.view": "{view} тартылууда",
+  "loader.task.changes": "GitHub'тан эмне өзгөргөнүн суроо",
+  "loader.task.everything": "GitHub'тан бардык иштетүүлөрдү суроо",
   "loader.task.artifacts": "#{number} иштетүүнүн артефакттары: {done} / {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ишке ашкан жок: {message}",
+  "feed.actions.pick": "Бул иштетүүнүн тесттерин көрсөтүү",
+  "feed.actions.ended": "Аяктаган",
+  "feed.actions.duration": "Узактыгы",
+  "feed.actions.running": "иштеп жатат",
+  "feed.actions.longest": "Көрсөтүлгөн эң узак иштетүү {duration} созулду ({run}).",
+  "feed.filter.search": "Иштетүүлөрдөн издөө",
+  "feed.filter.all": "баары",
+  "feed.filter.event": "Окуя",
+  "feed.filter.branch": "Бутак",
+  "feed.filter.clear": "Чыпкаларды тазалоо",
+  "feed.filter.shown": {
+    "one": "Чыпкалардан кийин {n} калды.",
+    "other": "Чыпкалардан кийин {n} калды."
+  },
   "security.source.advisories": "Бюллетендер",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кодду сканерлөө",

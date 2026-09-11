@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ya nyamukula {status}.",
   "feed.anError": "nepuko",
+  "loader.loading": "Otai etwa …",
+  "loader.next": {
+    "one": "Okuyelifa kwa landula konima yosekonda {n}",
+    "other": "Okuyelifa kwa landula konima yeesekonda {n}"
+  },
+  "loader.paused": {
+    "one": "Okuyelifa kwaxuuninwa okwa ekwa po opo ku amenwe omaindilo aGitHub; eshunguluko tali landula konima yosekonda {n}",
+    "other": "Okuyelifa kwaxuuninwa okwa ekwa po opo ku amenwe omaindilo aGitHub; eshunguluko tali landula konima yeesekonda {n}"
+  },
+  "loader.menu.hint": "fina kolulyo opo u mone omahoololo okueta vali",
+  "loader.menu.title": "Eta vali",
+  "loader.menu.changes": "Osho sha lunduluka ashike, paife",
+  "loader.menu.all": "Eendo adishe, paife",
+  "loader.menu.interval": "Pula vali oko kwaye",
+  "loader.menu.seconds": {
+    "one": "keshe osekonda {n}",
+    "other": "keshe eesekonda {n}"
+  },
+  "loader.menu.minutes": {
+    "one": "keshe ominute {n}",
+    "other": "keshe eeminute {n}"
+  },
+  "loader.menu.off": "nande naini",
+  "loader.menu.view": "Etaleko eli, paife",
+  "loader.menu.cache": "Dimbwa omanyamukulo aGitHub mokashe",
+  "loader.menu.page": "Eta vali epandja",
+  "loader.overview.title": "Otai etwa",
+  "loader.overview.running": {
+    "one": "{n} otai longo",
+    "other": "{n} otai longo"
+  },
+  "loader.overview.none": "Kape na sha etwa natango.",
+  "loader.task.boot": "Otai leshwa oinakuwanifwa nometa yayo",
+  "loader.task.view": "Otai shangwa {view}",
+  "loader.task.changes": "Otai pulwa GitHub osho sha lunduluka",
+  "loader.task.everything": "Otai pulwa GitHub eendo adishe",
   "loader.task.artifacts": "Oiningwa yeendo #{number}: {done} mu {total}",
+  "loader.task.artifact": "Oshiningwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "inai wanifwa: {message}",
+  "feed.actions.pick": "Ulika omakondeko eendo eli",
+  "feed.actions.ended": "Ya xula",
+  "feed.actions.duration": "Oule wefimbo",
+  "feed.actions.running": "otai ende",
+  "feed.actions.longest": "Eendo lile unene la ulikwa la kwata {duration} ({run}).",
+  "feed.filter.search": "Konga momaendo",
+  "feed.filter.all": "aishe",
+  "feed.filter.event": "Oshiningwanima",
+  "feed.filter.branch": "Etai",
+  "feed.filter.clear": "Dima po oisefa",
+  "feed.filter.shown": {
+    "one": "{n} la fyaala konima yoisefa.",
+    "other": "{n} a fyaala konima yoisefa."
+  },
   "security.source.advisories": "Omayele",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Okukonakona okoode",

@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} जवाब देलस।",
   "feed.anError": "गलती के साथे",
+  "loader.loading": "लोड हो रहल बा …",
+  "loader.next": {
+    "one": "अगिला रिफ्रेश {n} सेकेंड में",
+    "other": "अगिला रिफ्रेश {n} सेकेंड में"
+  },
+  "loader.paused": {
+    "one": "GitHub कोटा बचावे खातिर पिछला रिफ्रेश छोड़ल गइल; अगिला कोसिस {n} सेकेंड में",
+    "other": "GitHub कोटा बचावे खातिर पिछला रिफ्रेश छोड़ल गइल; अगिला कोसिस {n} सेकेंड में"
+  },
+  "loader.menu.hint": "रीलोड विकल्प खातिर राइट-क्लिक करीं",
+  "loader.menu.title": "रीलोड",
+  "loader.menu.changes": "खाली जवन बदलल बा, अबहीं",
+  "loader.menu.all": "हर रन, अबहीं",
+  "loader.menu.interval": "अपने आप फेर से पूछीं",
+  "loader.menu.seconds": {
+    "one": "हर {n} सेकेंड पर",
+    "other": "हर {n} सेकेंड पर"
+  },
+  "loader.menu.minutes": {
+    "one": "हर {n} मिनट पर",
+    "other": "हर {n} मिनट पर"
+  },
+  "loader.menu.off": "कबो ना",
+  "loader.menu.view": "ई टैब, अबहीं",
+  "loader.menu.cache": "कैश कइल GitHub जवाब भुला दीं",
+  "loader.menu.page": "पन्ना फेर से लोड करीं",
+  "loader.overview.title": "लोड हो रहल बा",
+  "loader.overview.running": {
+    "one": "{n} चल रहल बा",
+    "other": "{n} गो चल रहल बा"
+  },
+  "loader.overview.none": "अबहीं ले कुछुओ लोड ना भइल बा।",
+  "loader.task.boot": "रोल आ ओकनी के मेटा पढ़ल जा रहल बा",
+  "loader.task.view": "{view} बनावल जा रहल बा",
+  "loader.task.changes": "GitHub से पूछल जा रहल बा कि का बदलल",
+  "loader.task.everything": "GitHub से हर रन मांगल जा रहल बा",
   "loader.task.artifacts": "रन #{number} के आर्टिफैक्ट: {total} में से {done}",
+  "loader.task.artifact": "आर्टिफैक्ट {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "फेल: {message}",
+  "feed.actions.pick": "एह रन के परीक्षण देखाईं",
+  "feed.actions.ended": "खतम भइल",
+  "feed.actions.duration": "अवधि",
+  "feed.actions.running": "चल रहल बा",
+  "feed.actions.longest": "देखावल सबसे लमहर रन में {duration} लागल ({run})।",
+  "feed.filter.search": "रन में खोजीं",
+  "feed.filter.all": "सब",
+  "feed.filter.event": "घटना",
+  "feed.filter.branch": "ब्रांच",
+  "feed.filter.clear": "फिल्टर हटाईं",
+  "feed.filter.shown": {
+    "one": "फिल्टर के बाद {n} बाचल बा।",
+    "other": "फिल्टर के बाद {n} गो बाचल बा।"
+  },
   "security.source.advisories": "सुरक्षा सलाह",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "कोड स्कैनिंग",

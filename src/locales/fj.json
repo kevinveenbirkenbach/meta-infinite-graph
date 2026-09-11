@@ -135,7 +135,60 @@
   },
   "feed.failed": "E sauma na GitHub {status}.",
   "feed.anError": "vata kei na cala",
+  "loader.loading": "Vakavodoki tiko …",
+  "loader.next": {
+    "one": "Vakavoui tarava ena {n} na sekodi",
+    "other": "Vakavoui tarava ena {n} na sekodi"
+  },
+  "loader.paused": {
+    "one": "A sega ni caka na vakavoui sa oti me maroroi kina na kerekere ni GitHub; na saga tarava ena {n} na sekodi",
+    "other": "A sega ni caka na vakavoui sa oti me maroroi kina na kerekere ni GitHub; na saga tarava ena {n} na sekodi"
+  },
+  "loader.menu.hint": "kiliki i matau me baleta na digidigi ni vakacuruma tale",
+  "loader.menu.title": "Vakacuruma tale",
+  "loader.menu.changes": "Ga na ka e veisau, ena gauna oqo",
+  "loader.menu.all": "Na cici kece, ena gauna oqo",
+  "loader.menu.interval": "Taro tale vakai koya",
+  "loader.menu.seconds": {
+    "one": "ena vei {n} na sekodi",
+    "other": "ena vei {n} na sekodi"
+  },
+  "loader.menu.minutes": {
+    "one": "ena vei {n} na miniti",
+    "other": "ena vei {n} na miniti"
+  },
+  "loader.menu.off": "sega vakadua",
+  "loader.menu.view": "Na ivakaraitaki oqo, ena gauna oqo",
+  "loader.menu.cache": "Guilecava na isau ni GitHub ena cache",
+  "loader.menu.page": "Vakacuruma tale na tabana",
+  "loader.overview.title": "Vakavodoki tiko",
+  "loader.overview.running": {
+    "one": "{n} sa cici tiko",
+    "other": "{n} sa cici tiko"
+  },
+  "loader.overview.none": "Sa bera ni vakavodoki e dua na ka.",
+  "loader.task.boot": "Wiliki tiko na itavi kei na nodra meta",
+  "loader.task.view": "Droini tiko na {view}",
+  "loader.task.changes": "Taroga tiko na GitHub se cava e veisau",
+  "loader.task.everything": "Kerea tiko na GitHub me baleta na cici kece",
   "loader.task.artifacts": "Na ka buli ni cici #{number}: {done} ena {total}",
+  "loader.task.artifact": "Ka buli {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "sega ni rawa: {message}",
+  "feed.actions.pick": "Vakaraitaka na vakatovotovo ni cici oqo",
+  "feed.actions.ended": "Oti",
+  "feed.actions.duration": "Balavu ni gauna",
+  "feed.actions.running": "sa cici tiko",
+  "feed.actions.longest": "Na cici e balavu duadua e vakaraitaki e taura e {duration} ({run}).",
+  "feed.filter.search": "Vakasaqara ena cici",
+  "feed.filter.all": "kece",
+  "feed.filter.event": "Vakavuna",
+  "feed.filter.branch": "Tabana",
+  "feed.filter.clear": "Bokoca na sivi",
+  "feed.filter.shown": {
+    "one": "E se vo e {n} ni oti na sivi.",
+    "other": "E se vo e {n} ni oti na sivi."
+  },
   "security.source.advisories": "Ivakasala",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Vakadidike ni kode",

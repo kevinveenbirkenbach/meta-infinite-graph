@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub iphendvule nge-{status}.",
   "feed.anError": "ngeliphutsa",
+  "loader.loading": "Kulayishwa …",
+  "loader.next": {
+    "one": "Kuvuselela lokulandzelako ngemuva kwemzuzwana lo-{n}",
+    "other": "Kuvuselela lokulandzelako ngemuva kwemizuzwana le-{n}"
+  },
+  "loader.paused": {
+    "one": "Kuvuselela kwekugcina kwengcwe kute kongiwe sabelo se-GitHub; kuzama lokulandzelako ngemuva kwemzuzwana lo-{n}",
+    "other": "Kuvuselela kwekugcina kwengcwe kute kongiwe sabelo se-GitHub; kuzama lokulandzelako ngemuva kwemizuzwana le-{n}"
+  },
+  "loader.menu.hint": "chofoza ngesekudla kute utfole tinketfo tekulayisha kabusha",
+  "loader.menu.title": "Layisha kabusha",
+  "loader.menu.changes": "Loko lokushintjile kuphela, nyalo",
+  "loader.menu.all": "Kusebenta konkhe, nyalo",
+  "loader.menu.interval": "Buta futsi ngekutentekela",
+  "loader.menu.seconds": {
+    "one": "njalo emzuzwaneni lo-{n}",
+    "other": "njalo emizuzwaneni le-{n}"
+  },
+  "loader.menu.minutes": {
+    "one": "njalo emzuzwini lo-{n}",
+    "other": "njalo emizuzwini le-{n}"
+  },
+  "loader.menu.off": "nanini",
+  "loader.menu.view": "Lelithebhu, nyalo",
+  "loader.menu.cache": "Khohlwa timphendvulo te-GitHub letigcinwe ku-cache",
+  "loader.menu.page": "Layisha kabusha likhasi",
+  "loader.overview.title": "Kulayishwa",
+  "loader.overview.running": {
+    "one": "{n} kusasebenta",
+    "other": "{n} kusasebenta"
+  },
+  "loader.overview.none": "Kute lokulayishiwe kwanyalo.",
+  "loader.task.boot": "Kufundvwa tindzima nemeta yato",
+  "loader.task.view": "Kudwetjwa {view}",
+  "loader.task.changes": "Kubutwa GitHub loko lokushintjile",
+  "loader.task.everything": "Kubutwa GitHub kusebenta konkhe",
   "loader.task.artifacts": "Imikhicito yekusebenta #{number}: {done} kulena {total}",
+  "loader.task.artifact": "Umkhicito {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "yehlulekile: {message}",
+  "feed.actions.pick": "Khombisa emavivinyo alokusebenta lokhu",
+  "feed.actions.ended": "Kuphelile",
+  "feed.actions.duration": "Budze besikhatsi",
+  "feed.actions.running": "kusasebenta",
+  "feed.actions.longest": "Kusebenta lokudze kakhulu lokukhonjisiwe kutsetse {duration} ({run}).",
+  "feed.filter.search": "Sesha kulokusebenta",
+  "feed.filter.all": "konkhe",
+  "feed.filter.event": "Sehlakalo",
+  "feed.filter.branch": "Ligatja",
+  "feed.filter.clear": "Sula tihlungi",
+  "feed.filter.shown": {
+    "one": "Kusele {n} ngemuva kwekuhlunga.",
+    "other": "Kusele {n} ngemuva kwekuhlunga."
+  },
   "security.source.advisories": "Temaseluleko",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kuhlola ikhodi",

@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub ye jaabi {status} di.",
   "feed.anError": "ni fili ye",
+  "loader.loading": "A bɛ doni …",
+  "loader.next": {
+    "other": "Kuraya nata bɛ kɛ segɔni {n} kɔnɔ"
+  },
+  "loader.paused": {
+    "other": "Kuraya laban bilala walasa ka GitHub ka ɲininkaliw mara; a bɛ lajɛ tugun segɔni {n} kɔnɔ"
+  },
+  "loader.menu.hint": "ka kilike kinin fɛ kura tali sugandiliw kama",
+  "loader.menu.title": "Kura ta",
+  "loader.menu.changes": "Min yɛlɛmana dɔrɔn, sisan",
+  "loader.menu.all": "Boli bɛɛ, sisan",
+  "loader.menu.interval": "Ka ɲininka tugun a yɛrɛ ma",
+  "loader.menu.seconds": {
+    "other": "segɔni {n} bɛɛ la"
+  },
+  "loader.menu.minutes": {
+    "other": "miniti {n} bɛɛ la"
+  },
+  "loader.menu.off": "abada",
+  "loader.menu.view": "Nin jiraliyɔrɔ, sisan",
+  "loader.menu.cache": "Ka ɲinɛ GitHub jaabi marali kɔ",
+  "loader.menu.page": "Ɲɛ kura ta",
+  "loader.overview.title": "A bɛ doni",
+  "loader.overview.running": {
+    "other": "{n} bɛ boli la"
+  },
+  "loader.overview.none": "Foyi ma doni fɔlɔ.",
+  "loader.task.boot": "Jɔyɔrɔw n'u ka meta bɛ kalan",
+  "loader.task.view": "{view} bɛ ja",
+  "loader.task.changes": "Ka GitHub ɲininka min yɛlɛmana",
+  "loader.task.everything": "Ka GitHub ɲininka boli bɛɛ la",
   "loader.task.artifacts": "Boli #{number} ka artefakitiw: {done}/{total}",
+  "loader.task.artifact": "Artefakiti {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "a ma ɲɛ: {message}",
+  "feed.actions.pick": "Nin boli in kɔrɔbɔliw jira",
+  "feed.actions.ended": "A banna",
+  "feed.actions.duration": "Waati hakɛ",
+  "feed.actions.running": "a bɛ boli la",
+  "feed.actions.longest": "Boli jan kosɛbɛ min jiralen don, o ye {duration} ta ({run}).",
+  "feed.filter.search": "Boliw ɲini",
+  "feed.filter.all": "bɛɛ",
+  "feed.filter.event": "Ko kɛlen",
+  "feed.filter.branch": "Bolofara",
+  "feed.filter.clear": "Sɛgɛsɛgɛliw bɔ",
+  "feed.filter.shown": {
+    "other": "{n} de tora sɛgɛsɛgɛliw kɔfɛ."
+  },
   "security.source.advisories": "Laadiliw",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodi sɛgɛsɛgɛli",

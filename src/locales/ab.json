@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub аҭак ҟанаҵеит {status}.",
   "feed.anError": "агха ацны",
+  "loader.loading": "Аҭагалара …",
+  "loader.next": {
+    "one": "Анаҩстәи арҿыцра {n} секунд ашьҭахь",
+    "other": "Анаҩстәи арҿыцра {n} секунд ашьҭахь"
+  },
+  "loader.paused": {
+    "one": "Иаҵыхәтәантәи арҿыцра ахыԥан GitHub аҳәарақәа рыхьчаразы; анаҩстәи аԥышәара {n} секунд ашьҭахь",
+    "other": "Иаҵыхәтәантәи арҿыцра ахыԥан GitHub аҳәарақәа рыхьчаразы; анаҩстәи аԥышәара {n} секунд ашьҭахь"
+  },
+  "loader.menu.hint": "арӷьа ақәыӷәӷәара — ҿыц аҭагалара апараметрқәа",
+  "loader.menu.title": "Ҿыц аҭагалара",
+  "loader.menu.changes": "Иԥсахыз мацара, уажәы",
+  "loader.menu.all": "Аларшәарақәа зегьы, уажәы",
+  "loader.menu.interval": "Автоматикала еиҭа азҵаара",
+  "loader.menu.seconds": {
+    "one": "{n} секунд ааҵыԥхьаӡа",
+    "other": "{n} секунд ааҵыԥхьаӡа"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} минут ааҵыԥхьаӡа",
+    "other": "{n} минут ааҵыԥхьаӡа"
+  },
+  "loader.menu.off": "аамҭакгьы",
+  "loader.menu.view": "Ари ахәаԥшра, уажәы",
+  "loader.menu.cache": "GitHub аҭакқәа ркеш аныхра",
+  "loader.menu.page": "Адаҟьа ҿыц аҭагалара",
+  "loader.overview.title": "Аҭагалара",
+  "loader.overview.running": {
+    "one": "{n} имҩаԥысуеит",
+    "other": "{n} имҩаԥысуеит"
+  },
+  "loader.overview.none": "Макьана акгьы аҭагалам.",
+  "loader.task.boot": "Аролқәеи рметадырқәеи рыԥхьара",
+  "loader.task.view": "{view} асахьаҭыхра",
+  "loader.task.changes": "GitHub иԥсахыз азҵаара",
+  "loader.task.everything": "GitHub аларшәарақәа зегьы азҵаара",
   "loader.task.artifacts": "Аларшәара #{number} аартефактқәа: {done}/{total}",
+  "loader.task.artifact": "Аартефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "иқәымҿиит: {message}",
+  "feed.actions.pick": "Ари аларшәара атестқәа раарԥшра",
+  "feed.actions.ended": "Иалгеит",
+  "feed.actions.duration": "Аамҭа",
+  "feed.actions.running": "имҩаԥысуеит",
+  "feed.actions.longest": "Иаарԥшыз аларшәарақәа зегь реиҳа иаауроу {duration} иаанагеит ({run}).",
+  "feed.filter.search": "Аларшәарақәа рыԥшаара",
+  "feed.filter.all": "зегьы",
+  "feed.filter.event": "Ахҭыс",
+  "feed.filter.branch": "Амахә",
+  "feed.filter.clear": "Афильтрқәа рыцқьара",
+  "feed.filter.shown": {
+    "one": "Афильтрқәа рышьҭахь {n} ааныжьуп.",
+    "other": "Афильтрқәа рышьҭахь {n} ааныжьуп."
+  },
   "security.source.advisories": "Агәаҽанҵарақәа",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Акод агәаҭара",

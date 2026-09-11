@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} ලෙස පිළිතුරු දුන්නේය.",
   "feed.anError": "දෝෂයක් සමඟ",
+  "loader.loading": "පූරණය කරමින් …",
+  "loader.next": {
+    "one": "ඊළඟ නැවුම් කිරීම තත්පර {n}කින්",
+    "other": "ඊළඟ නැවුම් කිරීම තත්පර {n}කින්"
+  },
+  "loader.paused": {
+    "one": "GitHub කෝටාව ඉතිරි කර ගැනීමට අවසන් නැවුම් කිරීම මඟ හරින ලදී; ඊළඟ උත්සාහය තත්පර {n}කින්",
+    "other": "GitHub කෝටාව ඉතිරි කර ගැනීමට අවසන් නැවුම් කිරීම මඟ හරින ලදී; ඊළඟ උත්සාහය තත්පර {n}කින්"
+  },
+  "loader.menu.hint": "නැවත පූරණ විකල්ප සඳහා දකුණු-ක්ලික් කරන්න",
+  "loader.menu.title": "නැවත පූරණය",
+  "loader.menu.changes": "වෙනස් වූ දේ පමණක්, දැන්",
+  "loader.menu.all": "සියලු ධාවන, දැන්",
+  "loader.menu.interval": "ස්වයංක්‍රීයව නැවත විමසන්න",
+  "loader.menu.seconds": {
+    "one": "සෑම තත්පර {n}කට වරක්",
+    "other": "සෑම තත්පර {n}කට වරක්"
+  },
+  "loader.menu.minutes": {
+    "one": "සෑම මිනිත්තු {n}කට වරක්",
+    "other": "සෑම මිනිත්තු {n}කට වරක්"
+  },
+  "loader.menu.off": "කිසිදා නැත",
+  "loader.menu.view": "මෙම ටැබය, දැන්",
+  "loader.menu.cache": "හැඹිලිගත GitHub පිළිතුරු අමතක කරන්න",
+  "loader.menu.page": "පිටුව නැවත පූරණය කරන්න",
+  "loader.overview.title": "පූරණය කරමින්",
+  "loader.overview.running": {
+    "one": "{n}ක් ධාවනය වෙමින්",
+    "other": "{n}ක් ධාවනය වෙමින්"
+  },
+  "loader.overview.none": "තවම කිසිවක් පූරණය වී නැත.",
+  "loader.task.boot": "භූමිකා සහ ඒවායේ මෙටා දත්ත කියවමින්",
+  "loader.task.view": "{view} අඳිමින්",
+  "loader.task.changes": "වෙනස් වූ දේ GitHub වෙතින් විමසමින්",
+  "loader.task.everything": "සියලු ධාවන GitHub වෙතින් විමසමින්",
   "loader.task.artifacts": "ධාවනය #{number} හි ආටිෆැක්ට්: {total} න් {done}",
+  "loader.task.artifact": "ආටිෆැක්ට් {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "අසමත් විය: {message}",
+  "feed.actions.pick": "මෙම ධාවනයේ පරීක්ෂණ පෙන්වන්න",
+  "feed.actions.ended": "අවසන් විය",
+  "feed.actions.duration": "කාලසීමාව",
+  "feed.actions.running": "ධාවනය වෙමින්",
+  "feed.actions.longest": "පෙන්වා ඇති දිගම ධාවනයට {duration} ({run}) ගත විය.",
+  "feed.filter.search": "ධාවන සොයන්න",
+  "feed.filter.all": "සියල්ල",
+  "feed.filter.event": "සිදුවීම",
+  "feed.filter.branch": "ශාඛාව",
+  "feed.filter.clear": "පෙරහන් ඉවත් කරන්න",
+  "feed.filter.shown": {
+    "one": "පෙරහන්වලින් පසු {n}ක් ඉතිරිව ඇත.",
+    "other": "පෙරහන්වලින් පසු {n}ක් ඉතිරිව ඇත."
+  },
   "security.source.advisories": "උපදේශන",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "කේත පරිලෝකනය",

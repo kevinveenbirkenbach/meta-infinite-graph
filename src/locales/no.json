@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub svarte {status}.",
   "feed.anError": "med en feil",
+  "loader.loading": "Laster …",
+  "loader.next": {
+    "one": "Neste oppdatering om {n} sekund",
+    "other": "Neste oppdatering om {n} sekunder"
+  },
+  "loader.paused": {
+    "one": "Forrige oppdatering ble hoppet over for å spare GitHub-kvoten; neste forsøk om {n} sekund",
+    "other": "Forrige oppdatering ble hoppet over for å spare GitHub-kvoten; neste forsøk om {n} sekunder"
+  },
+  "loader.menu.hint": "høyreklikk for alternativer for å laste inn på nytt",
+  "loader.menu.title": "Last inn på nytt",
+  "loader.menu.changes": "Bare det som er endret, nå",
+  "loader.menu.all": "Alle kjøringer, nå",
+  "loader.menu.interval": "Spør igjen automatisk",
+  "loader.menu.seconds": {
+    "one": "hvert {n} sekund",
+    "other": "hvert {n}. sekund"
+  },
+  "loader.menu.minutes": {
+    "one": "hvert {n} minutt",
+    "other": "hvert {n}. minutt"
+  },
+  "loader.menu.off": "aldri",
+  "loader.menu.view": "Denne visningen, nå",
+  "loader.menu.cache": "Glem de mellomlagrede GitHub-svarene",
+  "loader.menu.page": "Last inn siden på nytt",
+  "loader.overview.title": "Laster",
+  "loader.overview.running": {
+    "one": "{n} kjører",
+    "other": "{n} kjører"
+  },
+  "loader.overview.none": "Ingenting er lastet ennå.",
+  "loader.task.boot": "Leser rollene og metaen deres",
+  "loader.task.view": "Tegner {view}",
+  "loader.task.changes": "Spør GitHub hva som er endret",
+  "loader.task.everything": "Ber GitHub om alle kjøringer",
   "loader.task.artifacts": "Artefakter fra kjøring #{number}: {done} av {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "mislyktes: {message}",
+  "feed.actions.pick": "Vis testene for denne kjøringen",
+  "feed.actions.ended": "Avsluttet",
+  "feed.actions.duration": "Varighet",
+  "feed.actions.running": "kjører",
+  "feed.actions.longest": "Den lengste viste kjøringen tok {duration} ({run}).",
+  "feed.filter.search": "Søk i kjøringene",
+  "feed.filter.all": "alle",
+  "feed.filter.event": "Hendelse",
+  "feed.filter.branch": "Gren",
+  "feed.filter.clear": "Fjern filtrene",
+  "feed.filter.shown": {
+    "one": "{n} gjenstår etter filtrene.",
+    "other": "{n} gjenstår etter filtrene."
+  },
   "security.source.advisories": "Sikkerhetsråd",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodeskanning",

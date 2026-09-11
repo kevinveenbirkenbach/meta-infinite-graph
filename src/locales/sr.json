@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub је одговорио {status}.",
   "feed.anError": "грешком",
+  "loader.loading": "Учитавање …",
+  "loader.next": {
+    "one": "Следеће освежавање за {n} секунду",
+    "few": "Следеће освежавање за {n} секунде",
+    "other": "Следеће освежавање за {n} секунди"
+  },
+  "loader.paused": {
+    "one": "Последње освежавање је прескочено да би се штедела квота GitHub-а; следећи покушај за {n} секунду",
+    "few": "Последње освежавање је прескочено да би се штедела квота GitHub-а; следећи покушај за {n} секунде",
+    "other": "Последње освежавање је прескочено да би се штедела квота GitHub-а; следећи покушај за {n} секунди"
+  },
+  "loader.menu.hint": "десни клик за опције поновног учитавања",
+  "loader.menu.title": "Поново учитај",
+  "loader.menu.changes": "Само оно што се променило, сада",
+  "loader.menu.all": "Сва покретања, сада",
+  "loader.menu.interval": "Аутоматски питај поново",
+  "loader.menu.seconds": {
+    "one": "на сваку {n} секунду",
+    "few": "на сваке {n} секунде",
+    "other": "на сваких {n} секунди"
+  },
+  "loader.menu.minutes": {
+    "one": "на сваки {n} минут",
+    "few": "на свака {n} минута",
+    "other": "на сваких {n} минута"
+  },
+  "loader.menu.off": "никад",
+  "loader.menu.view": "Ова картица, сада",
+  "loader.menu.cache": "Заборави кеширане одговоре GitHub-а",
+  "loader.menu.page": "Поново учитај страницу",
+  "loader.overview.title": "Учитавање",
+  "loader.overview.running": {
+    "one": "{n} у току",
+    "few": "{n} у току",
+    "other": "{n} у току"
+  },
+  "loader.overview.none": "Још ништа није учитано.",
+  "loader.task.boot": "Читање улога и њихових мета-података",
+  "loader.task.view": "Исцртавање {view}",
+  "loader.task.changes": "Провера на GitHub-у шта се променило",
+  "loader.task.everything": "Преузимање свих покретања са GitHub-а",
   "loader.task.artifacts": "Артефакти покретања #{number}: {done} од {total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "неуспешно: {message}",
+  "feed.actions.pick": "Прикажи тестове овог покретања",
+  "feed.actions.ended": "Завршено",
+  "feed.actions.duration": "Трајање",
+  "feed.actions.running": "у току",
+  "feed.actions.longest": "Најдуже приказано покретање трајало је {duration} ({run}).",
+  "feed.filter.search": "Претражи покретања",
+  "feed.filter.all": "све",
+  "feed.filter.event": "Догађај",
+  "feed.filter.branch": "Грана",
+  "feed.filter.clear": "Обриши филтере",
+  "feed.filter.shown": {
+    "one": "После филтера остаје {n} покретање.",
+    "few": "После филтера остају {n} покретања.",
+    "other": "После филтера остаје {n} покретања."
+  },
   "security.source.advisories": "Безбедносна обавештења",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Скенирање кода",

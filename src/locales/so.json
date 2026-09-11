@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub wuxuu ku jawaabay {status}.",
   "feed.anError": "khalad",
+  "loader.loading": "Waxaa la soo rarayaa …",
+  "loader.next": {
+    "one": "Cusboonaysiinta xigta {n} ilbiriqsi kadib",
+    "other": "Cusboonaysiinta xigta {n} ilbiriqsi kadib"
+  },
+  "loader.paused": {
+    "one": "Cusboonaysiintii ugu dambeysay waa laga booday si loo badbaadiyo qoondada GitHub; isku dayga xiga {n} ilbiriqsi kadib",
+    "other": "Cusboonaysiintii ugu dambeysay waa laga booday si loo badbaadiyo qoondada GitHub; isku dayga xiga {n} ilbiriqsi kadib"
+  },
+  "loader.menu.hint": "midig-guji si aad u hesho doorashooyinka dib u soo rarka",
+  "loader.menu.title": "Dib u soo rar",
+  "loader.menu.changes": "Kaliya waxa isbeddelay, hadda",
+  "loader.menu.all": "Dhammaan socodsiinta, hadda",
+  "loader.menu.interval": "Si toos ah mar kale u weydii",
+  "loader.menu.seconds": {
+    "one": "{n} ilbiriqsi kasta",
+    "other": "{n} ilbiriqsi kasta"
+  },
+  "loader.menu.minutes": {
+    "one": "{n} daqiiqo kasta",
+    "other": "{n} daqiiqo kasta"
+  },
+  "loader.menu.off": "marna",
+  "loader.menu.view": "Tab-kan, hadda",
+  "loader.menu.cache": "Illow jawaabaha GitHub ee kaydsan",
+  "loader.menu.page": "Dib u soo rar bogga",
+  "loader.overview.title": "Soo raridda",
+  "loader.overview.running": {
+    "one": "{n} socda",
+    "other": "{n} socda"
+  },
+  "loader.overview.none": "Weli waxba lama soo rarin.",
+  "loader.task.boot": "Waxaa la akhrinayaa doorarka iyo meta-dooda",
+  "loader.task.view": "Waxaa la sawirayaa {view}",
+  "loader.task.changes": "GitHub waxaa la weydiinayaa waxa isbeddelay",
+  "loader.task.everything": "GitHub waxaa la weydiinayaa dhammaan socodsiinta",
   "loader.task.artifacts": "Wax-soo-saarka socodsiinta #{number}: {done} ka mid ah {total}",
+  "loader.task.artifact": "Wax-soo-saar {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fashilmay: {message}",
+  "feed.actions.pick": "Muuji tijaabooyinka socodsiintan",
+  "feed.actions.ended": "Dhammaaday",
+  "feed.actions.duration": "Muddada",
+  "feed.actions.running": "socda",
+  "feed.actions.longest": "Socodsiinta ugu dheer ee la muujiyey waxay qaadatay {duration} ({run}).",
+  "feed.filter.search": "Ka raadi socodsiinta",
+  "feed.filter.all": "dhammaan",
+  "feed.filter.event": "Dhacdo",
+  "feed.filter.branch": "Laan",
+  "feed.filter.clear": "Tirtir sifeeyayaasha",
+  "feed.filter.shown": {
+    "one": "{n} ayaa haray sifeynta kadib.",
+    "other": "{n} ayaa haray sifeynta kadib."
+  },
   "security.source.advisories": "Ogeysiisyada",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Baaritaanka koodhka",

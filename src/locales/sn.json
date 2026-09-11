@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub yakapindura {status}.",
   "feed.anError": "nekukanganisa",
+  "loader.loading": "Kurodha …",
+  "loader.next": {
+    "one": "Kuvandudza kunotevera musekonzi {n}",
+    "other": "Kuvandudza kunotevera mumasekonzi {n}"
+  },
+  "loader.paused": {
+    "one": "Kuvandudza kwekupedzisira kwakasvetukwa kuchengetedza chikamu cheGitHub; kuedza kunotevera musekonzi {n}",
+    "other": "Kuvandudza kwekupedzisira kwakasvetukwa kuchengetedza chikamu cheGitHub; kuedza kunotevera mumasekonzi {n}"
+  },
+  "loader.menu.hint": "dzvanya kurudyi kuti uwane sarudzo dzekurodha zvakare",
+  "loader.menu.title": "Rodha zvakare",
+  "loader.menu.changes": "Zvachinja chete, izvozvi",
+  "loader.menu.all": "Kumhanya kwese, izvozvi",
+  "loader.menu.interval": "Bvunza zvakare otomatiki",
+  "loader.menu.seconds": {
+    "one": "sekonzi {n} yega yega",
+    "other": "masekonzi {n} ega ega"
+  },
+  "loader.menu.minutes": {
+    "one": "miniti {n} yega yega",
+    "other": "maminiti {n} ega ega"
+  },
+  "loader.menu.off": "kwete",
+  "loader.menu.view": "Tebhu iyi, izvozvi",
+  "loader.menu.cache": "Kanganwa mhinduro dzeGitHub dziri mu cache",
+  "loader.menu.page": "Rodha peji zvakare",
+  "loader.overview.title": "Kurodha",
+  "loader.overview.running": {
+    "one": "{n} chiri kumhanya",
+    "other": "{n} zviri kumhanya"
+  },
+  "loader.overview.none": "Hapana chakarodhwa parizvino.",
+  "loader.task.boot": "Kuverenga mabasa nemeta yawo",
+  "loader.task.view": "Kudhirowa {view}",
+  "loader.task.changes": "Kubvunza GitHub zvachinja",
+  "loader.task.everything": "Kubvunza GitHub kumhanya kwese",
   "loader.task.artifacts": "Zvigadzirwa zvekumhanya #{number}: {done} kubva pa{total}",
+  "loader.task.artifact": "Chigadzirwa {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "zvakundikana: {message}",
+  "feed.actions.pick": "Ratidza miedzo yekumhanya uku",
+  "feed.actions.ended": "Zvakapera",
+  "feed.actions.duration": "Kureba kwenguva",
+  "feed.actions.running": "zvichiri kumhanya",
+  "feed.actions.longest": "Kumhanya kurefu kwazvo kunoratidzwa kwakatora {duration} ({run}).",
+  "feed.filter.search": "Tsvaga mukumhanya",
+  "feed.filter.all": "zvese",
+  "feed.filter.event": "Chiitiko",
+  "feed.filter.branch": "Bazi",
+  "feed.filter.clear": "Bvisa masefa",
+  "feed.filter.shown": {
+    "one": "{n} chasara mushure mekusefa.",
+    "other": "{n} zvasara mushure mekusefa."
+  },
   "security.source.advisories": "Zviziviso",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kuongorora kodhi",

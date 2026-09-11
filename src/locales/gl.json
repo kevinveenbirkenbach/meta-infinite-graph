@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub respondeu {status}.",
   "feed.anError": "cun erro",
+  "loader.loading": "Cargando …",
+  "loader.next": {
+    "one": "Próxima actualización en {n} segundo",
+    "other": "Próxima actualización en {n} segundos"
+  },
+  "loader.paused": {
+    "one": "Omitiuse a última actualización para aforrar a cota de GitHub; próximo intento en {n} segundo",
+    "other": "Omitiuse a última actualización para aforrar a cota de GitHub; próximo intento en {n} segundos"
+  },
+  "loader.menu.hint": "clic dereito para opcións de recarga",
+  "loader.menu.title": "Recargar",
+  "loader.menu.changes": "Só o que cambiou, agora",
+  "loader.menu.all": "Todas as execucións, agora",
+  "loader.menu.interval": "Preguntar de novo automaticamente",
+  "loader.menu.seconds": {
+    "one": "cada {n} segundo",
+    "other": "cada {n} segundos"
+  },
+  "loader.menu.minutes": {
+    "one": "cada {n} minuto",
+    "other": "cada {n} minutos"
+  },
+  "loader.menu.off": "nunca",
+  "loader.menu.view": "Esta lapela, agora",
+  "loader.menu.cache": "Esquecer as respostas de GitHub na caché",
+  "loader.menu.page": "Recargar a páxina",
+  "loader.overview.title": "Cargando",
+  "loader.overview.running": {
+    "one": "{n} en curso",
+    "other": "{n} en curso"
+  },
+  "loader.overview.none": "Aínda non se cargou nada.",
+  "loader.task.boot": "Lendo os roles e os seus metadatos",
+  "loader.task.view": "Debuxando {view}",
+  "loader.task.changes": "Preguntando a GitHub que cambiou",
+  "loader.task.everything": "Pedindo a GitHub todas as execucións",
   "loader.task.artifacts": "Artefactos da execución #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefacto {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fallou: {message}",
+  "feed.actions.pick": "Mostrar as probas desta execución",
+  "feed.actions.ended": "Finalizado",
+  "feed.actions.duration": "Duración",
+  "feed.actions.running": "en curso",
+  "feed.actions.longest": "A execución máis longa amosada durou {duration} ({run}).",
+  "feed.filter.search": "Buscar nas execucións",
+  "feed.filter.all": "todos",
+  "feed.filter.event": "Evento",
+  "feed.filter.branch": "Rama",
+  "feed.filter.clear": "Limpar os filtros",
+  "feed.filter.shown": {
+    "one": "Queda {n} tras os filtros.",
+    "other": "Quedan {n} tras os filtros."
+  },
   "security.source.advisories": "Avisos",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Análise de código",

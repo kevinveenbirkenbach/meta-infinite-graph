@@ -131,7 +131,54 @@
   },
   "feed.failed": "Na'e tali 'e GitHub 'a e {status}.",
   "feed.anError": "mo ha hala",
+  "loader.loading": "'Oku 'uta …",
+  "loader.next": {
+    "other": "Fakafo'ou hoko 'i he sekoni 'e {n}"
+  },
+  "loader.paused": {
+    "other": "Na'e pasi 'a e fakafo'ou faka'osi ke malu'i 'a e koota 'a GitHub; ko e feinga hoko 'i he sekoni 'e {n}"
+  },
+  "loader.menu.hint": "lomi to'omata'u ki he ngaahi fili ki he toe 'uta",
+  "loader.menu.title": "Toe 'uta",
+  "loader.menu.changes": "Ko e me'a pē na'e liliu, 'i he taimí ni",
+  "loader.menu.all": "Ngaahi lele kotoa, 'i he taimí ni",
+  "loader.menu.interval": "Toe 'eke faka'otometiki",
+  "loader.menu.seconds": {
+    "other": "'i he sekoni kotoa pē 'e {n}"
+  },
+  "loader.menu.minutes": {
+    "other": "'i he miniti kotoa pē 'e {n}"
+  },
+  "loader.menu.off": "'ikai ha taimi",
+  "loader.menu.view": "Ko e 'ata ko 'eni, 'i he taimí ni",
+  "loader.menu.cache": "Fakangalo'i 'a e ngaahi tali 'a GitHub 'i he kasi",
+  "loader.menu.page": "Toe 'uta 'a e peesi",
+  "loader.overview.title": "'Oku 'uta",
+  "loader.overview.running": {
+    "other": "'oku lele 'a e {n}"
+  },
+  "loader.overview.none": "Kei 'ikai ha me'a kuo 'uta.",
+  "loader.task.boot": "'Oku lau 'a e ngaahi fatongia mo honau meta",
+  "loader.task.view": "'Oku tā 'a e {view}",
+  "loader.task.changes": "'Oku 'eke ki he GitHub pe ko e hā na'e liliu",
+  "loader.task.everything": "'Oku kole ki he GitHub 'a e ngaahi lele kotoa",
   "loader.task.artifacts": "Ngaahi 'ātifeki 'o e lele #{number}: {done} 'i he {total}",
+  "loader.task.artifact": "'Ātifeki {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "tō: {message}",
+  "feed.actions.pick": "Fakahā 'a e ngaahi sivi 'o e lele ko 'eni",
+  "feed.actions.ended": "Ngata",
+  "feed.actions.duration": "Lōloa 'o e taimi",
+  "feed.actions.running": "'oku lele",
+  "feed.actions.longest": "Ko e lele lōloa taha 'oku fakahā na'e to'o {duration} ({run}).",
+  "feed.filter.search": "Kumi 'i he ngaahi lele",
+  "feed.filter.all": "kotoa",
+  "feed.filter.event": "Me'a na'e hoko",
+  "feed.filter.branch": "Va'a",
+  "feed.filter.clear": "Fakama'a 'a e ngaahi fakasivi",
+  "feed.filter.shown": {
+    "other": "'Oku toe 'a e {n} hili 'a e fakasivi."
+  },
   "security.source.advisories": "Ngaahi Fale'i",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Sivi kouti",

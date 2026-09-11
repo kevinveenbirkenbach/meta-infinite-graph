@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub tontu na {status}.",
   "feed.anError": "ak njuumte",
+  "loader.loading": "Mi ngi yeb …",
+  "loader.next": {
+    "other": "Yeesal bi ci topp ci {n} segond"
+  },
+  "loader.paused": {
+    "other": "Yeesal bi mujj dañu ko teggi ngir denc dayo bu GitHub; jéem bi ci topp ci {n} segond"
+  },
+  "loader.menu.hint": "bësal ndijoor ngir tànneefi yebaat",
+  "loader.menu.title": "Yebaat",
+  "loader.menu.changes": "Li soppiku rekk, léegi",
+  "loader.menu.all": "Doxin yépp, léegi",
+  "loader.menu.interval": "Laajaat ci boppam",
+  "loader.menu.seconds": {
+    "other": "{n} segond yu nekk"
+  },
+  "loader.menu.minutes": {
+    "other": "{n} minit yu nekk"
+  },
+  "loader.menu.off": "mukk",
+  "loader.menu.view": "Wone bii, léegi",
+  "loader.menu.cache": "Fatte tontu yu GitHub yi ñu denc",
+  "loader.menu.page": "Yebaat xët wi",
+  "loader.overview.title": "Mi ngi yeb",
+  "loader.overview.running": {
+    "other": "{n} mi ngi dox"
+  },
+  "loader.overview.none": "Dara yebbuwul ba léegi.",
+  "loader.task.boot": "Mi ngi jàng sas yi ak seeni meta",
+  "loader.task.view": "Mi ngi rëdd {view}",
+  "loader.task.changes": "Mi ngi laaj GitHub li soppiku",
+  "loader.task.everything": "Mi ngi laaj GitHub doxin yépp",
   "loader.task.artifacts": "Ndefar yu dox #{number}: {done} ci {total}",
+  "loader.task.artifact": "Ndefar {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "sànku na: {message}",
+  "feed.actions.pick": "Wone natt yi ci dox bii",
+  "feed.actions.ended": "Jeex na",
+  "feed.actions.duration": "Diir",
+  "feed.actions.running": "mi ngi dox",
+  "feed.actions.longest": "Dox bi gën a gudd ci yi ñu wone jël na {duration} ({run}).",
+  "feed.filter.search": "Seet ci dox yi",
+  "feed.filter.all": "lépp",
+  "feed.filter.event": "Xew-xew",
+  "feed.filter.branch": "Car",
+  "feed.filter.clear": "Dindi segg yi",
+  "feed.filter.shown": {
+    "other": "{n} des na ginnaaw segg yi."
+  },
   "security.source.advisories": "Digle yi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Saytu kood",

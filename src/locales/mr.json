@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ने {status} उत्तर दिले.",
   "feed.anError": "त्रुटीसह",
+  "loader.loading": "लोड होत आहे …",
+  "loader.next": {
+    "one": "पुढील रिफ्रेश {n} सेकंदात",
+    "other": "पुढील रिफ्रेश {n} सेकंदात"
+  },
+  "loader.paused": {
+    "one": "GitHub कोटा वाचवण्यासाठी मागील रिफ्रेश वगळला; पुढील प्रयत्न {n} सेकंदात",
+    "other": "GitHub कोटा वाचवण्यासाठी मागील रिफ्रेश वगळला; पुढील प्रयत्न {n} सेकंदात"
+  },
+  "loader.menu.hint": "पुन्हा लोड करण्याच्या पर्यायांसाठी उजवे-क्लिक करा",
+  "loader.menu.title": "पुन्हा लोड करा",
+  "loader.menu.changes": "फक्त जे बदलले ते, आता",
+  "loader.menu.all": "प्रत्येक धाव, आता",
+  "loader.menu.interval": "आपोआप पुन्हा विचारा",
+  "loader.menu.seconds": {
+    "one": "दर {n} सेकंदाला",
+    "other": "दर {n} सेकंदाला"
+  },
+  "loader.menu.minutes": {
+    "one": "दर {n} मिनिटाला",
+    "other": "दर {n} मिनिटाला"
+  },
+  "loader.menu.off": "कधीच नाही",
+  "loader.menu.view": "हे दृश्य, आता",
+  "loader.menu.cache": "कॅशे केलेली GitHub उत्तरे विसरा",
+  "loader.menu.page": "पृष्ठ पुन्हा लोड करा",
+  "loader.overview.title": "लोड होत आहे",
+  "loader.overview.running": {
+    "one": "{n} चालू आहे",
+    "other": "{n} चालू आहेत"
+  },
+  "loader.overview.none": "अजून काहीही लोड झालेले नाही.",
+  "loader.task.boot": "भूमिका आणि त्यांचा मेटा वाचत आहे",
+  "loader.task.view": "{view} रेखाटत आहे",
+  "loader.task.changes": "GitHub ला काय बदलले ते विचारत आहे",
+  "loader.task.everything": "GitHub कडे प्रत्येक धाव मागत आहे",
   "loader.task.artifacts": "धाव #{number} चे आर्टिफॅक्ट: {total} पैकी {done}",
+  "loader.task.artifact": "आर्टिफॅक्ट {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "अयशस्वी: {message}",
+  "feed.actions.pick": "या धावेच्या चाचण्या दाखवा",
+  "feed.actions.ended": "संपले",
+  "feed.actions.duration": "कालावधी",
+  "feed.actions.running": "चालू आहे",
+  "feed.actions.longest": "दाखवलेल्या धावांपैकी सर्वात लांब धावेला {duration} लागले ({run}).",
+  "feed.filter.search": "धावा शोधा",
+  "feed.filter.all": "सर्व",
+  "feed.filter.event": "घटना",
+  "feed.filter.branch": "शाखा",
+  "feed.filter.clear": "फिल्टर साफ करा",
+  "feed.filter.shown": {
+    "one": "फिल्टरनंतर {n} धाव शिल्लक आहे.",
+    "other": "फिल्टरनंतर {n} धावा शिल्लक आहेत."
+  },
   "security.source.advisories": "सुरक्षा सल्ले",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "कोड स्कॅनिंग",

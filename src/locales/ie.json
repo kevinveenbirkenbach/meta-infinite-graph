@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ha respondet {status}.",
   "feed.anError": "con un errore",
+  "loader.loading": "Cargante …",
+  "loader.next": {
+    "one": "Proxim actualisation in {n} seconde",
+    "other": "Proxim actualisation in {n} secondes"
+  },
+  "loader.paused": {
+    "one": "Li ultim actualisation esset saltat por sparniar li quota de GitHub; proxim prova in {n} seconde",
+    "other": "Li ultim actualisation esset saltat por sparniar li quota de GitHub; proxim prova in {n} secondes"
+  },
+  "loader.menu.hint": "clicca dextri por optiones de recargar",
+  "loader.menu.title": "Recargar",
+  "loader.menu.changes": "Solmen to quo ha changeat, nu",
+  "loader.menu.all": "Omni executiones, nu",
+  "loader.menu.interval": "Questionar denov automaticmen",
+  "loader.menu.seconds": {
+    "one": "chascun {n} seconde",
+    "other": "chascun {n} secondes"
+  },
+  "loader.menu.minutes": {
+    "one": "chascun {n} minute",
+    "other": "chascun {n} minutes"
+  },
+  "loader.menu.off": "nequande",
+  "loader.menu.view": "Ti-ci vise, nu",
+  "loader.menu.cache": "Obliviar li responses de GitHub in li cache",
+  "loader.menu.page": "Recargar li págine",
+  "loader.overview.title": "Cargante",
+  "loader.overview.running": {
+    "one": "{n} in curse",
+    "other": "{n} in curse"
+  },
+  "loader.overview.none": "Ancor nequó ha esset cargat.",
+  "loader.task.boot": "Leente li roles e lor meta",
+  "loader.task.view": "Designante {view}",
+  "loader.task.changes": "Questionante GitHub pri quo ha changeat",
+  "loader.task.everything": "Demandante de GitHub omni executiones",
   "loader.task.artifacts": "Artefactes del execution #{number}: {done} de {total}",
+  "loader.task.artifact": "Artefacte {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "fallit: {message}",
+  "feed.actions.pick": "Monstrar li testes de ti-ci execution",
+  "feed.actions.ended": "Finit",
+  "feed.actions.duration": "Durada",
+  "feed.actions.running": "in curse",
+  "feed.actions.longest": "Li max long execution monstrat durat {duration} ({run}).",
+  "feed.filter.search": "Serchar in li executiones",
+  "feed.filter.all": "omnis",
+  "feed.filter.event": "Eveniment",
+  "feed.filter.branch": "Branche",
+  "feed.filter.clear": "Efaciar li filtres",
+  "feed.filter.shown": {
+    "one": "{n} resta pos li filtres.",
+    "other": "{n} resta pos li filtres."
+  },
   "security.source.advisories": "Avises",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Scannation de code",

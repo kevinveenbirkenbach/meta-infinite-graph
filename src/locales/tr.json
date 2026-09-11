@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} yanıtını verdi.",
   "feed.anError": "bir hatayla",
+  "loader.loading": "Yükleniyor …",
+  "loader.next": {
+    "one": "Sonraki yenileme {n} saniye içinde",
+    "other": "Sonraki yenileme {n} saniye içinde"
+  },
+  "loader.paused": {
+    "one": "GitHub kotasını korumak için son yenileme atlandı; sonraki deneme {n} saniye içinde",
+    "other": "GitHub kotasını korumak için son yenileme atlandı; sonraki deneme {n} saniye içinde"
+  },
+  "loader.menu.hint": "yeniden yükleme seçenekleri için sağ tıklayın",
+  "loader.menu.title": "Yeniden yükle",
+  "loader.menu.changes": "Yalnızca değişenler, şimdi",
+  "loader.menu.all": "Tüm çalıştırmalar, şimdi",
+  "loader.menu.interval": "Otomatik olarak yeniden sor",
+  "loader.menu.seconds": {
+    "one": "her {n} saniyede",
+    "other": "her {n} saniyede"
+  },
+  "loader.menu.minutes": {
+    "one": "her {n} dakikada",
+    "other": "her {n} dakikada"
+  },
+  "loader.menu.off": "asla",
+  "loader.menu.view": "Bu sekme, şimdi",
+  "loader.menu.cache": "Önbellekteki GitHub yanıtlarını unut",
+  "loader.menu.page": "Sayfayı yeniden yükle",
+  "loader.overview.title": "Yükleniyor",
+  "loader.overview.running": {
+    "one": "{n} çalışıyor",
+    "other": "{n} çalışıyor"
+  },
+  "loader.overview.none": "Henüz hiçbir şey yüklenmedi.",
+  "loader.task.boot": "Roller ve metaları okunuyor",
+  "loader.task.view": "{view} çiziliyor",
+  "loader.task.changes": "GitHub'a nelerin değiştiği soruluyor",
+  "loader.task.everything": "GitHub'dan tüm çalıştırmalar isteniyor",
   "loader.task.artifacts": "#{number} numaralı çalıştırmanın yapıtları: {total} içinden {done}",
+  "loader.task.artifact": "Yapıt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "başarısız: {message}",
+  "feed.actions.pick": "Bu çalıştırmanın testlerini göster",
+  "feed.actions.ended": "Bitti",
+  "feed.actions.duration": "Süre",
+  "feed.actions.running": "çalışıyor",
+  "feed.actions.longest": "Gösterilen en uzun çalıştırma {duration} sürdü ({run}).",
+  "feed.filter.search": "Çalıştırmalarda ara",
+  "feed.filter.all": "tümü",
+  "feed.filter.event": "Olay",
+  "feed.filter.branch": "Dal",
+  "feed.filter.clear": "Filtreleri temizle",
+  "feed.filter.shown": {
+    "one": "Filtrelerden sonra {n} çalıştırma kaldı.",
+    "other": "Filtrelerden sonra {n} çalıştırma kaldı."
+  },
   "security.source.advisories": "Güvenlik bildirimleri",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kod taraması",

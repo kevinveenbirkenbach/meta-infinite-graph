@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub het {status} geantwoord.",
   "feed.anError": "met 'n fout",
+  "loader.loading": "Laai …",
+  "loader.next": {
+    "one": "Volgende verfrissing oor {n} sekonde",
+    "other": "Volgende verfrissing oor {n} sekondes"
+  },
+  "loader.paused": {
+    "one": "Die laaste verfrissing is oorgeslaan om die GitHub-kwota te spaar; volgende poging oor {n} sekonde",
+    "other": "Die laaste verfrissing is oorgeslaan om die GitHub-kwota te spaar; volgende poging oor {n} sekondes"
+  },
+  "loader.menu.hint": "regsklik vir herlaai-opsies",
+  "loader.menu.title": "Herlaai",
+  "loader.menu.changes": "Net wat verander het, nou",
+  "loader.menu.all": "Elke lopie, nou",
+  "loader.menu.interval": "Vra outomaties weer",
+  "loader.menu.seconds": {
+    "one": "elke {n} sekonde",
+    "other": "elke {n} sekondes"
+  },
+  "loader.menu.minutes": {
+    "one": "elke {n} minuut",
+    "other": "elke {n} minute"
+  },
+  "loader.menu.off": "nooit",
+  "loader.menu.view": "Hierdie oortjie, nou",
+  "loader.menu.cache": "Vergeet die gekaste GitHub-antwoorde",
+  "loader.menu.page": "Herlaai die bladsy",
+  "loader.overview.title": "Laai",
+  "loader.overview.running": {
+    "one": "{n} loop",
+    "other": "{n} loop"
+  },
+  "loader.overview.none": "Niks is nog gelaai nie.",
+  "loader.task.boot": "Lees die rolle en hul meta",
+  "loader.task.view": "Teken {view}",
+  "loader.task.changes": "Vra GitHub wat verander het",
+  "loader.task.everything": "Vra GitHub vir elke lopie",
   "loader.task.artifacts": "Artefakte van lopie #{number}: {done} van {total}",
+  "loader.task.artifact": "Artefak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "misluk: {message}",
+  "feed.actions.pick": "Wys hierdie lopie se toetse",
+  "feed.actions.ended": "Geëindig",
+  "feed.actions.duration": "Duur",
+  "feed.actions.running": "loop",
+  "feed.actions.longest": "Die langste lopie wat gewys word, het {duration} geduur ({run}).",
+  "feed.filter.search": "Deursoek die lopies",
+  "feed.filter.all": "alle",
+  "feed.filter.event": "Gebeurtenis",
+  "feed.filter.branch": "Tak",
+  "feed.filter.clear": "Maak die filters skoon",
+  "feed.filter.shown": {
+    "one": "{n} bly oor ná die filters.",
+    "other": "{n} bly oor ná die filters."
+  },
   "security.source.advisories": "Sekuriteitsadvies",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodeskandering",

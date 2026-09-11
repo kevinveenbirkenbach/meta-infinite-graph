@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub ear uwaak {status}.",
   "feed.anError": "ippān juon bōd",
+  "loader.loading": "Ej bōk …",
+  "loader.next": {
+    "one": "Bar bōk eo tok ilo {n} jekōn",
+    "other": "Bar bōk eo tok ilo {n} jekōn ko"
+  },
+  "loader.paused": {
+    "one": "Bar bōk eo āliktata kar jab kōm̧m̧an bwe en kōjparok kajjitōk ko an GitHub; kōjjeļaļ eo tok ilo {n} jekōn",
+    "other": "Bar bōk eo āliktata kar jab kōm̧m̧an bwe en kōjparok kajjitōk ko an GitHub; kōjjeļaļ eo tok ilo {n} jekōn ko"
+  },
+  "loader.menu.hint": "jiped ilo anmooṇ ñan kāālōt ko an bar bōk",
+  "loader.menu.title": "Bar bōk",
+  "loader.menu.changes": "Men ko wōt rar oktak, kiiō",
+  "loader.menu.all": "Aolep kōjerbal, kiiō",
+  "loader.menu.interval": "Bar kajjitōk make",
+  "loader.menu.seconds": {
+    "one": "aolep {n} jekōn",
+    "other": "aolep {n} jekōn ko"
+  },
+  "loader.menu.minutes": {
+    "one": "aolep {n} minit",
+    "other": "aolep {n} minit ko"
+  },
+  "loader.menu.off": "jamin",
+  "loader.menu.view": "Kilen lale in, kiiō",
+  "loader.menu.cache": "Meļọkļọk uwaak ko an GitHub rar kōjparok",
+  "loader.menu.page": "Bar bōk peij eo",
+  "loader.overview.title": "Ej bōk",
+  "loader.overview.running": {
+    "one": "{n} ej kōjerbal",
+    "other": "{n} rej kōjerbal"
+  },
+  "loader.overview.none": "Ejjañin wōt juon men ear bōk.",
+  "loader.task.boot": "Ej riiti jerbal ko im meta eo aer",
+  "loader.task.view": "Ej kōmmane pija in {view}",
+  "loader.task.changes": "Ej kajjitōk ippān GitHub ta eo ear oktak",
+  "loader.task.everything": "Ej kajjitōk ippān GitHub kōn aolep kōjerbal",
   "loader.task.artifacts": "Aatipak ko an kōjerbal #{number}: {done} jān {total}",
+  "loader.task.artifact": "Aatipak {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ear jab tōprak: {message}",
+  "feed.actions.pick": "Kwaļọk teej ko an kōjerbal in",
+  "feed.actions.ended": "Ejemļo̧k",
+  "feed.actions.duration": "Aitokan",
+  "feed.actions.running": "ej kōjerbal",
+  "feed.actions.longest": "Kōjerbal eo eaitok tata ilo ko kwaļọk ear bōk {duration} ({run}).",
+  "feed.filter.search": "Pukot kōjerbal ko",
+  "feed.filter.all": "aolep",
+  "feed.filter.event": "Waḷọk",
+  "feed.filter.branch": "Ra",
+  "feed.filter.clear": "Jolọk kāālōt ko",
+  "feed.filter.shown": {
+    "one": "{n} kōjerbal ej pād ālikin kāālōt ko.",
+    "other": "{n} kōjerbal ko rej pād ālikin kāālōt ko."
+  },
   "security.source.advisories": "Naan in rōjañ ko",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Etale kōōt",

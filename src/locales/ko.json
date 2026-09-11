@@ -131,7 +131,54 @@
   },
   "feed.failed": "GitHub 응답: {status}.",
   "feed.anError": "오류와 함께",
+  "loader.loading": "로드 중 …",
+  "loader.next": {
+    "other": "{n}초 후 다음 새로 고침"
+  },
+  "loader.paused": {
+    "other": "GitHub 한도를 아끼기 위해 마지막 새로 고침을 건너뛰었습니다. {n}초 후 다시 시도"
+  },
+  "loader.menu.hint": "마우스 오른쪽 버튼으로 새로 고침 옵션 열기",
+  "loader.menu.title": "새로 고침",
+  "loader.menu.changes": "변경된 것만, 지금",
+  "loader.menu.all": "모든 실행, 지금",
+  "loader.menu.interval": "자동으로 다시 요청",
+  "loader.menu.seconds": {
+    "other": "{n}초마다"
+  },
+  "loader.menu.minutes": {
+    "other": "{n}분마다"
+  },
+  "loader.menu.off": "안 함",
+  "loader.menu.view": "이 탭, 지금",
+  "loader.menu.cache": "캐시된 GitHub 응답 삭제",
+  "loader.menu.page": "페이지 새로 고침",
+  "loader.overview.title": "로드 중",
+  "loader.overview.running": {
+    "other": "{n}개 실행 중"
+  },
+  "loader.overview.none": "아직 로드된 항목이 없습니다.",
+  "loader.task.boot": "역할과 메타를 읽는 중",
+  "loader.task.view": "{view} 그리는 중",
+  "loader.task.changes": "GitHub에 변경 사항 요청 중",
+  "loader.task.everything": "GitHub에 모든 실행 요청 중",
   "loader.task.artifacts": "실행 #{number}의 아티팩트: {done}/{total}",
+  "loader.task.artifact": "아티팩트 {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "실패: {message}",
+  "feed.actions.pick": "이 실행의 테스트 표시",
+  "feed.actions.ended": "종료",
+  "feed.actions.duration": "소요 시간",
+  "feed.actions.running": "실행 중",
+  "feed.actions.longest": "표시된 가장 긴 실행은 {duration} 걸렸습니다({run}).",
+  "feed.filter.search": "실행 검색",
+  "feed.filter.all": "전체",
+  "feed.filter.event": "이벤트",
+  "feed.filter.branch": "브랜치",
+  "feed.filter.clear": "필터 지우기",
+  "feed.filter.shown": {
+    "other": "필터 적용 후 {n}개가 남았습니다."
+  },
   "security.source.advisories": "보안 권고",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "코드 스캔",

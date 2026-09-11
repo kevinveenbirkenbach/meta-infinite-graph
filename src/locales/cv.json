@@ -139,7 +139,66 @@
   },
   "feed.failed": "GitHub {status} тесе хуравларӗ.",
   "feed.anError": "йӑнӑшпа",
+  "loader.loading": "Тиенет …",
+  "loader.next": {
+    "zero": "Тепӗр ҫӗнетӳ {n} ҫеккунтран",
+    "one": "Тепӗр ҫӗнетӳ {n} ҫеккунтран",
+    "other": "Тепӗр ҫӗнетӳ {n} ҫеккунтран"
+  },
+  "loader.paused": {
+    "zero": "GitHub квотине перекетлес тесе юлашки ҫӗнетӗве сиктерсе хӑварнӑ; тепӗр хут тӑрӑшни {n} ҫеккунтран",
+    "one": "GitHub квотине перекетлес тесе юлашки ҫӗнетӗве сиктерсе хӑварнӑ; тепӗр хут тӑрӑшни {n} ҫеккунтран",
+    "other": "GitHub квотине перекетлес тесе юлашки ҫӗнетӗве сиктерсе хӑварнӑ; тепӗр хут тӑрӑшни {n} ҫеккунтран"
+  },
+  "loader.menu.hint": "ҫӗнӗрен тиеме параметрсем валли сылтӑм кнопкӑпа пусӑр",
+  "loader.menu.title": "Ҫӗнӗрен тие",
+  "loader.menu.changes": "Улшӑннине кӑна, халех",
+  "loader.menu.all": "Кашни ӗҫлетнине, халех",
+  "loader.menu.interval": "Хӑй тӗллӗн каллех ыйт",
+  "loader.menu.seconds": {
+    "zero": "кашни {n} ҫеккунтра",
+    "one": "кашни {n} ҫеккунтра",
+    "other": "кашни {n} ҫеккунтра"
+  },
+  "loader.menu.minutes": {
+    "zero": "кашни {n} минутра",
+    "one": "кашни {n} минутра",
+    "other": "кашни {n} минутра"
+  },
+  "loader.menu.off": "нихҫан та",
+  "loader.menu.view": "Ҫак вкладка, халех",
+  "loader.menu.cache": "Кэшри GitHub хуравӗсене ман",
+  "loader.menu.page": "Страницӑна ҫӗнӗрен тие",
+  "loader.overview.title": "Тиенет",
+  "loader.overview.running": {
+    "zero": "{n} пырать",
+    "one": "{n} пырать",
+    "other": "{n} пырать"
+  },
+  "loader.overview.none": "Халлӗхе нимӗн те тиенмен.",
+  "loader.task.boot": "Рольсемпе вӗсен meta вуланать",
+  "loader.task.view": "{view} ӳкерӗнет",
+  "loader.task.changes": "GitHub-ран мӗн улшӑннине ыйтатпӑр",
+  "loader.task.everything": "GitHub-ран кашни ӗҫлетнине ыйтатпӑр",
   "loader.task.artifacts": "#{number} ӗҫлетӳ артефакчӗсем: {done}/{total}",
+  "loader.task.artifact": "Артефакт {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "ӑнӑҫсӑр: {message}",
+  "feed.actions.pick": "Ҫак ӗҫлетнин тестсене кӑтарт",
+  "feed.actions.ended": "Вӗҫленнӗ",
+  "feed.actions.duration": "Вӑхӑт тӑршшӗ",
+  "feed.actions.running": "пырать",
+  "feed.actions.longest": "Кӑтартнӑ ӗҫлетнисенчен чи вӑрӑмми {duration} пынӑ ({run}).",
+  "feed.filter.search": "Ӗҫлетнисенче шыра",
+  "feed.filter.all": "пурте",
+  "feed.filter.event": "Пулӑм",
+  "feed.filter.branch": "Турат",
+  "feed.filter.clear": "Сӳзгӗчсене тасат",
+  "feed.filter.shown": {
+    "zero": "Сӳзгӗчсем хыҫҫӑн {n} юлчӗ.",
+    "one": "Сӳзгӗчсем хыҫҫӑн {n} юлчӗ.",
+    "other": "Сӳзгӗчсем хыҫҫӑн {n} юлчӗ."
+  },
   "security.source.advisories": "Канашсем",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Кода тӗрӗслени",

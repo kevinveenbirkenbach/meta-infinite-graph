@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub antwurde {status}.",
   "feed.anError": "mei in flater",
+  "loader.loading": "Lade …",
+  "loader.next": {
+    "one": "Folgjende fernijing oer {n} sekonde",
+    "other": "Folgjende fernijing oer {n} sekonden"
+  },
+  "loader.paused": {
+    "one": "De lêste fernijing is oerslein om it GitHub-kwotum te sparjen; folgjende besykjen oer {n} sekonde",
+    "other": "De lêste fernijing is oerslein om it GitHub-kwotum te sparjen; folgjende besykjen oer {n} sekonden"
+  },
+  "loader.menu.hint": "rjochtsklik foar opsjes foar opnij laden",
+  "loader.menu.title": "Opnij lade",
+  "loader.menu.changes": "Allinnich wat feroare is, no",
+  "loader.menu.all": "Alle runs, no",
+  "loader.menu.interval": "Automatysk opnij freegje",
+  "loader.menu.seconds": {
+    "one": "elke {n} sekonde",
+    "other": "elke {n} sekonden"
+  },
+  "loader.menu.minutes": {
+    "one": "elke {n} minút",
+    "other": "elke {n} minuten"
+  },
+  "loader.menu.off": "nea",
+  "loader.menu.view": "Dit ljepblêd, no",
+  "loader.menu.cache": "De GitHub-antwurden yn de cache ferjitte",
+  "loader.menu.page": "De side opnij lade",
+  "loader.overview.title": "Lade",
+  "loader.overview.running": {
+    "one": "{n} dwaande",
+    "other": "{n} dwaande"
+  },
+  "loader.overview.none": "Der is noch neat laden.",
+  "loader.task.boot": "De rollen en harren meta lêze",
+  "loader.task.view": "{view} tekenje",
+  "loader.task.changes": "GitHub freegje wat feroare is",
+  "loader.task.everything": "GitHub freegje om alle runs",
   "loader.task.artifacts": "Artefakten fan run #{number}: {done} fan {total}",
+  "loader.task.artifact": "Artefakt {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "mislearre: {message}",
+  "feed.actions.pick": "De tests fan dizze run sjen litte",
+  "feed.actions.ended": "Einige",
+  "feed.actions.duration": "Doer",
+  "feed.actions.running": "rint",
+  "feed.actions.longest": "De langste toande run duorre {duration} ({run}).",
+  "feed.filter.search": "Sykje yn de runs",
+  "feed.filter.all": "alle",
+  "feed.filter.event": "Barren",
+  "feed.filter.branch": "Tûke",
+  "feed.filter.clear": "Filters wiskje",
+  "feed.filter.shown": {
+    "one": "{n} bliuwt oer nei de filters.",
+    "other": "{n} bliuwe oer nei de filters."
+  },
   "security.source.advisories": "Advyzen",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Koadescan",

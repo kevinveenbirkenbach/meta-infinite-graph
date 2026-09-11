@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub האָט געענטפֿערט {status}.",
   "feed.anError": "מיט אַ פֿעלער",
+  "loader.loading": "לאָדט …",
+  "loader.next": {
+    "one": "די קומענדיקע באַנײַונג אין {n} סעקונדע",
+    "other": "די קומענדיקע באַנײַונג אין {n} סעקונדעס"
+  },
+  "loader.paused": {
+    "one": "די לעצטע באַנײַונג איז איבערגעהיפּערט געוואָרן כּדי צו שפּאָרן די GitHub־קוואָטע; דער קומענדיקער פּרוּוו אין {n} סעקונדע",
+    "other": "די לעצטע באַנײַונג איז איבערגעהיפּערט געוואָרן כּדי צו שפּאָרן די GitHub־קוואָטע; דער קומענדיקער פּרוּוו אין {n} סעקונדעס"
+  },
+  "loader.menu.hint": "רעכטס־קליקט פֿאַר איבערלאָד־אָפּציעס",
+  "loader.menu.title": "איבערלאָדן",
+  "loader.menu.changes": "נאָר וואָס האָט זיך געביטן, איצט",
+  "loader.menu.all": "אַלע לויפֿן, איצט",
+  "loader.menu.interval": "פֿרעגן ווידער אויטאָמאַטיש",
+  "loader.menu.seconds": {
+    "one": "יעדע {n} סעקונדע",
+    "other": "יעדע {n} סעקונדעס"
+  },
+  "loader.menu.minutes": {
+    "one": "יעדע {n} מינוט",
+    "other": "יעדע {n} מינוט"
+  },
+  "loader.menu.off": "קיין מאָל ניט",
+  "loader.menu.view": "דער דאָזיקער בליק, איצט",
+  "loader.menu.cache": "פֿאַרגעסן די געקעשטע GitHub־ענטפֿערס",
+  "loader.menu.page": "איבערלאָדן דעם בלאַט",
+  "loader.overview.title": "לאָדט",
+  "loader.overview.running": {
+    "one": "{n} לויפֿט",
+    "other": "{n} לויפֿן"
+  },
+  "loader.overview.none": "נאָך גאָרנישט ניט געלאָדן.",
+  "loader.task.boot": "לייענט די ראָלעס און זייער מעטאַ",
+  "loader.task.view": "צייכנט {view}",
+  "loader.task.changes": "פֿרעגט GitHub וואָס האָט זיך געביטן",
+  "loader.task.everything": "בעט GitHub אַלע לויפֿן",
   "loader.task.artifacts": "אַרטעפֿאַקטן פֿון לויף #{number}: {done} פֿון {total}",
+  "loader.task.artifact": "אַרטעפֿאַקט {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "דורכגעפֿאַלן: {message}",
+  "feed.actions.pick": "ווײַזן די טעסטן פֿון דעם לויף",
+  "feed.actions.ended": "געענדיקט",
+  "feed.actions.duration": "געדויער",
+  "feed.actions.running": "לויפֿט",
+  "feed.actions.longest": "דער לענגסטער געוויזענער לויף האָט געדויערט {duration} ({run}).",
+  "feed.filter.search": "זוכן אין די לויפֿן",
+  "feed.filter.all": "אַלע",
+  "feed.filter.event": "געשעעניש",
+  "feed.filter.branch": "צווײַג",
+  "feed.filter.clear": "אויסמעקן די פֿילטערס",
+  "feed.filter.shown": {
+    "one": "{n} בלײַבט נאָך די פֿילטערס.",
+    "other": "{n} בלײַבן נאָך די פֿילטערס."
+  },
   "security.source.advisories": "זיכערהייט־מעלדונגען",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "קאָד־סקאַנירונג",

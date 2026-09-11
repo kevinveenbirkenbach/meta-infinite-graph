@@ -135,7 +135,60 @@
   },
   "feed.failed": "GitHub {status} సమాధానం ఇచ్చింది.",
   "feed.anError": "లోపంతో",
+  "loader.loading": "లోడ్ అవుతోంది …",
+  "loader.next": {
+    "one": "తదుపరి రిఫ్రెష్ {n} సెకనులో",
+    "other": "తదుపరి రిఫ్రెష్ {n} సెకన్లలో"
+  },
+  "loader.paused": {
+    "one": "GitHub కోటాను ఆదా చేయడానికి చివరి రిఫ్రెష్ దాటవేయబడింది; తదుపరి ప్రయత్నం {n} సెకనులో",
+    "other": "GitHub కోటాను ఆదా చేయడానికి చివరి రిఫ్రెష్ దాటవేయబడింది; తదుపరి ప్రయత్నం {n} సెకన్లలో"
+  },
+  "loader.menu.hint": "రీలోడ్ ఎంపికల కోసం కుడి-క్లిక్ చేయండి",
+  "loader.menu.title": "మళ్లీ లోడ్ చేయి",
+  "loader.menu.changes": "మారినవి మాత్రమే, ఇప్పుడు",
+  "loader.menu.all": "అన్ని రన్‌లు, ఇప్పుడు",
+  "loader.menu.interval": "స్వయంచాలకంగా మళ్లీ అడుగు",
+  "loader.menu.seconds": {
+    "one": "ప్రతి {n} సెకనుకు",
+    "other": "ప్రతి {n} సెకన్లకు"
+  },
+  "loader.menu.minutes": {
+    "one": "ప్రతి {n} నిమిషానికి",
+    "other": "ప్రతి {n} నిమిషాలకు"
+  },
+  "loader.menu.off": "ఎప్పుడూ కాదు",
+  "loader.menu.view": "ఈ ట్యాబ్, ఇప్పుడు",
+  "loader.menu.cache": "కాష్ చేసిన GitHub సమాధానాలను మరచిపో",
+  "loader.menu.page": "పేజీని మళ్లీ లోడ్ చేయి",
+  "loader.overview.title": "లోడ్ అవుతోంది",
+  "loader.overview.running": {
+    "one": "{n} నడుస్తోంది",
+    "other": "{n} నడుస్తున్నాయి"
+  },
+  "loader.overview.none": "ఇంకా ఏదీ లోడ్ కాలేదు.",
+  "loader.task.boot": "పాత్రలను మరియు వాటి మెటాను చదువుతోంది",
+  "loader.task.view": "{view} గీస్తోంది",
+  "loader.task.changes": "ఏమి మారిందో GitHub ని అడుగుతోంది",
+  "loader.task.everything": "అన్ని రన్‌ల కోసం GitHub ని అడుగుతోంది",
   "loader.task.artifacts": "రన్ #{number} ఆర్టిఫాక్ట్‌లు: {total} లో {done}",
+  "loader.task.artifact": "ఆర్టిఫాక్ట్ {name}",
+  "loader.task.github": "GitHub {path}",
+  "loader.task.failed": "విఫలం: {message}",
+  "feed.actions.pick": "ఈ రన్ యొక్క పరీక్షలను చూపు",
+  "feed.actions.ended": "ముగిసింది",
+  "feed.actions.duration": "వ్యవధి",
+  "feed.actions.running": "నడుస్తోంది",
+  "feed.actions.longest": "చూపిన వాటిలో అత్యంత పొడవైన రన్‌కు {duration} ({run}) పట్టింది.",
+  "feed.filter.search": "రన్‌లలో వెతకండి",
+  "feed.filter.all": "అన్నీ",
+  "feed.filter.event": "ఈవెంట్",
+  "feed.filter.branch": "బ్రాంచ్",
+  "feed.filter.clear": "ఫిల్టర్‌లను క్లియర్ చేయండి",
+  "feed.filter.shown": {
+    "one": "ఫిల్టర్‌ల తర్వాత {n} మిగిలి ఉంది.",
+    "other": "ఫిల్టర్‌ల తర్వాత {n} మిగిలి ఉన్నాయి."
+  },
   "security.source.advisories": "భద్రతా సలహాలు",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "కోడ్ స్కానింగ్",
