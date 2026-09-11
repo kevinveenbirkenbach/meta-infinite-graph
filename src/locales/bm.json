@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub ye jaabi {status} di.",
   "feed.anError": "ni fili ye",
+  "loader.task.artifacts": "Boli #{number} ka artefakitiw: {done}/{total}",
   "security.source.advisories": "Laadiliw",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Kodi sɛgɛsɛgɛli",
@@ -328,6 +329,24 @@
   "tests.axis.role": "jɔyɔrɔ",
   "tests.axis.variant": "suguya",
   "tests.axis.rank": "nimɔrɔ",
+  "tests.axis.run": "boli",
+  "tests.run.label": "Kɛwalew boli",
+  "tests.run.none": "boli si tɛ",
+  "tests.run.failed": "Boliw ma se ka kalan: {message}",
+  "tests.run.ran": {
+    "other": "Cilan {n} la, {ran} ye boli #{number} kɛ; tɔw dibilen don."
+  },
+  "tests.run.absent": "a tɛ nin boli in na",
+  "tests.card.run": "Boli #{number}",
+  "tests.card.loadingArtifact": "Artefakiti bɛ jigin…",
+  "tests.card.notInArtifact": "a tɛ artefakiti la",
+  "tests.card.artifactFailed": "artefakiti ma se ka kalan: {message}",
+  "tests.card.video": "Widewo",
+  "tests.card.report": "Rapɔri",
+  "tests.result.passed": "a tɛmɛna",
+  "tests.result.failed": "a ma tɛmɛ",
+  "tests.result.skipped": "a bilalen don",
+  "tests.viewer.open": "A dayɛlɛ jiraliyɔrɔ kura la",
   "filter.all": "bɛɛ",
   "graph.flowStatus": {
     "other": "run_after sira: jɔyɔrɔ {n}, ɲɔgɔn kɔ dancɛ {edges}"

@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub ตอบกลับ {status}",
   "feed.anError": "พร้อมข้อผิดพลาด",
+  "loader.task.artifacts": "อาร์ติแฟกต์ของการรัน #{number}: {done} จาก {total}",
   "security.source.advisories": "คำแนะนำด้านความปลอดภัย",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "การสแกนโค้ด",
@@ -328,6 +329,24 @@
   "tests.axis.role": "บทบาท",
   "tests.axis.variant": "รูปแบบ",
   "tests.axis.rank": "อันดับ",
+  "tests.axis.run": "การรัน",
+  "tests.run.label": "การรันแอ็กชัน",
+  "tests.run.none": "ไม่มีการรัน",
+  "tests.run.failed": "อ่านการรันไม่ได้: {message}",
+  "tests.run.ran": {
+    "other": "{ran} จาก {n} แถวทำงานในการรัน #{number} แถวอื่นถูกทำให้จางลง"
+  },
+  "tests.run.absent": "ไม่อยู่ในการรันนี้",
+  "tests.card.run": "การรัน #{number}",
+  "tests.card.loadingArtifact": "กำลังดาวน์โหลดอาร์ติแฟกต์ …",
+  "tests.card.notInArtifact": "ไม่อยู่ในอาร์ติแฟกต์",
+  "tests.card.artifactFailed": "อ่านอาร์ติแฟกต์ไม่ได้: {message}",
+  "tests.card.video": "วิดีโอ",
+  "tests.card.report": "รายงาน",
+  "tests.result.passed": "ผ่าน",
+  "tests.result.failed": "ไม่ผ่าน",
+  "tests.result.skipped": "ข้าม",
+  "tests.viewer.open": "เปิดในแท็บใหม่",
   "filter.all": "ทั้งหมด",
   "graph.flowStatus": {
     "other": "ลำดับ run_after: {n} บทบาท {edges} เส้นเชื่อมลำดับ"

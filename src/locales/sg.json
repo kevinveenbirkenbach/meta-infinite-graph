@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub akîri {status}.",
   "feed.anError": "na kpälë",
+  "loader.task.artifacts": "Âartéfact tî tambelängö #{number}: {done} na yâ tî {total}",
   "security.source.advisories": "Âwango",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Dîkongö kôdo",
@@ -328,6 +329,24 @@
   "tests.axis.role": "kua",
   "tests.axis.variant": "marä",
   "tests.axis.rank": "ndo",
+  "tests.axis.run": "tambelängö",
+  "tests.run.label": "Tambelängö tî Âsärängö",
+  "tests.run.none": "tambelängö oko pëpe",
+  "tests.run.failed": "A lingbi tî dîko âtambelängö pëpe: {message}",
+  "tests.run.ran": {
+    "other": "{ran} na yâ tî ârangë {n} atambela na yâ tî tambelängö #{number}; tanga ni ayeke vukö-vukö."
+  },
+  "tests.run.absent": "na yâ tî tambelängö sô pëpe",
+  "tests.card.run": "Tambelängö #{number}",
+  "tests.card.loadingArtifact": "A yeke zî artéfact …",
+  "tests.card.notInArtifact": "na yâ tî artéfact pëpe",
+  "tests.card.artifactFailed": "a lingbi tî dîko artéfact pëpe: {message}",
+  "tests.card.video": "Vidéo",
+  "tests.card.report": "Rapôro",
+  "tests.result.passed": "a hon",
+  "tests.result.failed": "a tï",
+  "tests.result.skipped": "a zîa ni na gbe",
+  "tests.viewer.open": "Zî ni na yâ ti mbênî fini onglet",
   "filter.all": "kûê",
   "graph.flowStatus": {
     "other": "lêgë tî run_after: âkua {n}, âkâmba tî lêgë {edges}"

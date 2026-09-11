@@ -93,6 +93,44 @@ instead: the `cli.timeout` from `meta/tests.yml`, the `*_ENABLED` keys of
 `templates/test.env.j2`, and the shared harnesses under
 `roles/test-e2e-cli/files/shared` the script sources.
 
+#### Actions run
+
+The **Actions run** menu above the Playwright table lists the recent runs of
+the root repository that deploy (📤 Push, 🔀 Pull Request, 🕹️ Manual). The URL
+carries the picked run as `?run=<id>`, or `?run=<owner/name>@<id>` for a
+fork's run. The table then marks each line whose role
+and variant uploaded a `playwright-<mode>-<role>-<variant>-…` artifact in that
+run with ▶ and dims the rest.
+
+Once a run is picked, the page fetches its artifacts through the server, three
+at a time. Each cell of a line turns while that line's artifact is on its way,
+then shows how the test did in the run: ✓ passed, ✗ failed, – skipped, · not in
+the report, ! the artifact could not be read. Hovering a test shows, per deploy
+mode and phase, the result, the failure message, and links to the video and
+the HTML report. Both open in a popup on the page, the report in a sandboxed
+frame; Escape or a click beside it closes it, and a click with a modifier key
+opens a new tab instead.
+
+An artifact never changes once uploaded, so the server keeps every one it
+unpacked until 2 GiB are used and then drops the ones read longest ago. A
+second look, a reload or another visitor costs no second download.
+
+- The download needs `MIG_GITHUB_TOKEN`: GitHub hands an artifact only to a
+  token, even for a public repository. Without one the card says so.
+- `GET /git/artifact?id=&repo=` fetches the zip, unpacks it under
+  `/artifacts/<id>/` and answers with the JUnit results of every report inside.
+  It only takes `playwright-` artifacts up to 256 MB, of the root repository or
+  a fork the mirror carries.
+- Everything under `/artifacts/` is served with `Content-Security-Policy:
+  sandbox allow-scripts`, so a report's script runs apart from the page and
+  cannot read the token a visitor stored in the browser. A sandboxed page may
+  not touch `localStorage`, which the Playwright report reads at start, so the
+  server puts an in-memory stand-in at the top of each report's `index.html`
+  when it unpacks it, or when it reads an artifact cached before.
+- CI records videos only for failed tests, so a passing test shows none.
+- A line is marked by its artifact's name. When one deploy tests several roles,
+  the others' reports sit in that artifact too, but their lines stay unmarked.
+
 #### Gate filter
 
 Also under **Order** in the filter panel, `?gate=` in the URL. It narrows the

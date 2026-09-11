@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub trả lời {status}.",
   "feed.anError": "kèm lỗi",
+  "loader.task.artifacts": "Tạo phẩm của lượt chạy #{number}: {done} trên {total}",
   "security.source.advisories": "Khuyến cáo bảo mật",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Quét mã",
@@ -328,6 +329,24 @@
   "tests.axis.role": "vai trò",
   "tests.axis.variant": "biến thể",
   "tests.axis.rank": "hạng",
+  "tests.axis.run": "lượt chạy",
+  "tests.run.label": "Lượt chạy tác vụ",
+  "tests.run.none": "không có lượt chạy",
+  "tests.run.failed": "Không đọc được các lượt chạy: {message}",
+  "tests.run.ran": {
+    "other": "{ran} trên {n} hàng đã chạy trong lượt chạy #{number}; các hàng khác bị làm mờ."
+  },
+  "tests.run.absent": "không có trong lượt chạy này",
+  "tests.card.run": "Lượt chạy #{number}",
+  "tests.card.loadingArtifact": "Đang tải xuống tạo phẩm …",
+  "tests.card.notInArtifact": "không có trong tạo phẩm",
+  "tests.card.artifactFailed": "không đọc được tạo phẩm: {message}",
+  "tests.card.video": "Video",
+  "tests.card.report": "Báo cáo",
+  "tests.result.passed": "đạt",
+  "tests.result.failed": "không đạt",
+  "tests.result.skipped": "bỏ qua",
+  "tests.viewer.open": "Mở trong thẻ mới",
   "filter.all": "tất cả",
   "graph.flowStatus": {
     "other": "luồng run_after: {n} vai trò, {edges} cạnh thứ tự"

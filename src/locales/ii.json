@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub ꉷꃚ {status}。",
   "feed.anError": "ꊻꃶꐥ",
+  "loader.task.artifacts": "ꒃꑟ #{number} ꍣꃶ：{done}/{total}",
   "security.source.advisories": "ꌋꅇꉙꇬ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ꁱꂷꌙꂳ",
@@ -328,6 +329,24 @@
   "tests.axis.role": "ꏮꌝ",
   "tests.axis.variant": "ꀜꄜ",
   "tests.axis.rank": "ꁁꂰ",
+  "tests.axis.run": "ꒃꑟ",
+  "tests.run.label": "ꊽꊙꒃꑟ",
+  "tests.run.none": "ꀋꐥꒃꑟ",
+  "tests.run.failed": "ꒃꑟꄖꐎꀋꈈ：{message}",
+  "tests.run.ran": {
+    "other": "ꒃꑟ #{number} ꆹ，{n} ꉳꍏ {ran} ꉳꒃꑟ；ꏾꄣꉳꀜꉿ。"
+  },
+  "tests.run.absent": "ꍓꇰꒃꑟꆹꀋꐥ",
+  "tests.card.run": "ꒃꑟ #{number}",
+  "tests.card.loadingArtifact": "ꑣꊖꍣꃶ …",
+  "tests.card.notInArtifact": "ꍣꃶꆹꀋꐥ",
+  "tests.card.artifactFailed": "ꍣꃶꄖꐎꀋꈈ：{message}",
+  "tests.card.video": "ꏂꀺ",
+  "tests.card.report": "ꀧꇬ",
+  "tests.result.passed": "ꄲꇨ",
+  "tests.result.failed": "ꉷꏂꀠ",
+  "tests.result.skipped": "ꄟꇨ",
+  "tests.viewer.open": "ꎴꏂꄲꇬꉐ",
   "filter.all": "ꐂꀮ",
   "graph.flowStatus": {
     "other": "run_after ꇐ：{n} ꇰꏮꌝ，{edges} ꇰꎼꑭꀜ"

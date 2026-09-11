@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub ຕອບ {status}.",
   "feed.anError": "ດ້ວຍຂໍ້ຜິດພາດ",
+  "loader.task.artifacts": "ອາຕິແຟັກຂອງການແລ່ນ #{number}: {done} ຈາກ {total}",
   "security.source.advisories": "ຄຳແນະນຳ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ການສະແກນໂຄດ",
@@ -328,6 +329,24 @@
   "tests.axis.role": "ບົດບາດ",
   "tests.axis.variant": "ຕົວແປ",
   "tests.axis.rank": "ອັນດັບ",
+  "tests.axis.run": "ການແລ່ນ",
+  "tests.run.label": "ການແລ່ນຂອງການດຳເນີນການ",
+  "tests.run.none": "ບໍ່ມີການແລ່ນ",
+  "tests.run.failed": "ບໍ່ສາມາດອ່ານການແລ່ນໄດ້: {message}",
+  "tests.run.ran": {
+    "other": "{ran} ຈາກ {n} ແຖວໄດ້ແລ່ນໃນການແລ່ນ #{number}; ແຖວອື່ນຖືກເຮັດໃຫ້ຈາງລົງ."
+  },
+  "tests.run.absent": "ບໍ່ຢູ່ໃນການແລ່ນນີ້",
+  "tests.card.run": "ການແລ່ນ #{number}",
+  "tests.card.loadingArtifact": "ກຳລັງດາວໂຫຼດອາຕິແຟັກ …",
+  "tests.card.notInArtifact": "ບໍ່ຢູ່ໃນອາຕິແຟັກ",
+  "tests.card.artifactFailed": "ບໍ່ສາມາດອ່ານອາຕິແຟັກໄດ້: {message}",
+  "tests.card.video": "ວິດີໂອ",
+  "tests.card.report": "ລາຍງານ",
+  "tests.result.passed": "ຜ່ານ",
+  "tests.result.failed": "ລົ້ມເຫຼວ",
+  "tests.result.skipped": "ຖືກຂ້າມ",
+  "tests.viewer.open": "ເປີດໃນແທັບໃໝ່",
   "filter.all": "ທັງໝົດ",
   "graph.flowStatus": {
     "other": "ກະແສ run_after: {n} ບົດບາດ, {edges} ຂອບລຳດັບ"

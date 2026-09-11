@@ -14,6 +14,7 @@ import { PlaywrightMatrix } from './playwrightMatrix.js';
 import { RoleCardHost } from './role/cardHost.js';
 import { RoleInfo } from './role/info.js';
 import { TableView } from './table/view.js';
+import { TestRuns } from './tests/runs.js';
 import { TestsView } from './tests/view.js';
 import { UIManager } from './uiManager.js';
 import { UrlState } from './urlState.js';
@@ -96,7 +97,8 @@ gitRange.load()
       security: new GitHubSecurity(forkTree.api, gitRange, tables),
     };
     const testsView = new TestsView(
-      tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables')
+      tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables'),
+      new TestRuns(forkTree.api, () => (gitRange.catalog ? gitRange.catalog.root : forkTree.root))
     );
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(

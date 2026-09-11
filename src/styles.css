@@ -69,6 +69,60 @@ html, body {
   max-width: 30vw;
 }
 
+.artifact-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.artifact-viewer-frame {
+  display: flex;
+  flex-direction: column;
+  width: 92vw;
+  height: 88vh;
+  background: var(--bs-body-bg);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.artifact-viewer-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--bs-border-color);
+  font-size: 0.85rem;
+}
+
+.artifact-viewer-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.artifact-viewer-body {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background: #000;
+}
+
+iframe.artifact-viewer-body {
+  background: #fff;
+}
+
+@keyframes view-loader-spin {
+  to { transform: rotate(360deg); }
+}
+
 .bottom-nav-links {
   display: flex;
   gap: 14px;
@@ -288,6 +342,72 @@ svg.fork-plot .fork-commit.merge {
 
 .fork-error {
   color: var(--bs-danger);
+}
+
+.tests-run {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.tests-run select {
+  width: auto;
+  max-width: 60ch;
+}
+
+table.tests-matrix tr.tests-absent {
+  opacity: 0.35;
+}
+
+table.tests-matrix td.run-cell {
+  text-align: center;
+  font-weight: 700;
+}
+
+table.tests-matrix td.run-passed { color: var(--bs-success); background: rgba(var(--bs-success-rgb), 0.12); }
+table.tests-matrix td.run-failed { color: var(--bs-danger); background: rgba(var(--bs-danger-rgb), 0.15); }
+table.tests-matrix td.run-skipped,
+table.tests-matrix td.run-missing { opacity: 0.55; }
+table.tests-matrix td.run-error { color: var(--bs-warning); }
+
+.cell-spin {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  border: 2px solid var(--bs-border-color);
+  border-top-color: var(--bs-primary);
+  border-radius: 50%;
+  animation: view-loader-spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+.role-card-facts.test-run {
+  margin-top: 6px;
+}
+
+.role-card-facts.test-run dd {
+  grid-column: 2;
+}
+
+.test-outcome {
+  margin-bottom: 4px;
+}
+
+.test-result {
+  font-weight: 600;
+}
+
+.test-result-passed { color: var(--bs-success); }
+.test-result-failed { color: var(--bs-danger); }
+.test-result-skipped { opacity: 0.65; }
+
+.test-message {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  opacity: 0.8;
 }
 
 table.tests-matrix {

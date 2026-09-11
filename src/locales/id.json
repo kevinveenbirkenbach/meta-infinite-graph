@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub menjawab {status}.",
   "feed.anError": "dengan galat",
+  "loader.task.artifacts": "Artefak run #{number}: {done} dari {total}",
   "security.source.advisories": "Imbauan keamanan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pemindaian kode",
@@ -328,6 +329,24 @@
   "tests.axis.role": "peran",
   "tests.axis.variant": "varian",
   "tests.axis.rank": "peringkat",
+  "tests.axis.run": "eksekusi",
+  "tests.run.label": "Eksekusi Aksi",
+  "tests.run.none": "tidak ada eksekusi",
+  "tests.run.failed": "Tidak dapat membaca eksekusi: {message}",
+  "tests.run.ran": {
+    "other": "{ran} dari {n} baris berjalan di eksekusi #{number}; sisanya diredupkan."
+  },
+  "tests.run.absent": "tidak ada di eksekusi ini",
+  "tests.card.run": "Eksekusi #{number}",
+  "tests.card.loadingArtifact": "Mengunduh artefak …",
+  "tests.card.notInArtifact": "tidak ada di artefak",
+  "tests.card.artifactFailed": "artefak tidak dapat dibaca: {message}",
+  "tests.card.video": "Video",
+  "tests.card.report": "Laporan",
+  "tests.result.passed": "lulus",
+  "tests.result.failed": "gagal",
+  "tests.result.skipped": "dilewati",
+  "tests.viewer.open": "Buka di tab baru",
   "filter.all": "semua",
   "graph.flowStatus": {
     "other": "alur run_after: {n} peran, {edges} sisi urutan"

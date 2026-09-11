@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub zara {status}.",
   "feed.anError": "na njehie",
+  "loader.task.artifacts": "Ihe arụpụtara nke ọsọ #{number}: {done} n'ime {total}",
   "security.source.advisories": "Ndụmọdụ nchekwa",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Nyocha koodu",
@@ -328,6 +329,24 @@
   "tests.axis.role": "ọrụ",
   "tests.axis.variant": "ụdị",
   "tests.axis.rank": "ọkwa",
+  "tests.axis.run": "ọsọ",
+  "tests.run.label": "Ọsọ Omume",
+  "tests.run.none": "enweghị ọsọ",
+  "tests.run.failed": "Enweghị ike ịgụ ọsọ ndị ahụ: {message}",
+  "tests.run.ran": {
+    "other": "Ahịrị {ran} n'ime {n} gbara n'ọsọ #{number}; ndị ọzọ dị ìhè nta."
+  },
+  "tests.run.absent": "anọghị n'ọsọ a",
+  "tests.card.run": "Ọsọ #{number}",
+  "tests.card.loadingArtifact": "Na-ebudata ihe arụpụtara …",
+  "tests.card.notInArtifact": "anọghị n'ihe arụpụtara",
+  "tests.card.artifactFailed": "enweghị ike ịgụ ihe arụpụtara: {message}",
+  "tests.card.video": "Vidiyo",
+  "tests.card.report": "Akụkọ",
+  "tests.result.passed": "gafere",
+  "tests.result.failed": "dara",
+  "tests.result.skipped": "a mafere",
+  "tests.viewer.open": "Mepee na taabụ ọhụrụ",
   "filter.all": "niile",
   "graph.flowStatus": {
     "other": "ọsọ run_after: ọrụ {n}, eriri usoro {edges}"

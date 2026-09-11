@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub 응답: {status}.",
   "feed.anError": "오류와 함께",
+  "loader.task.artifacts": "실행 #{number}의 아티팩트: {done}/{total}",
   "security.source.advisories": "보안 권고",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "코드 스캔",
@@ -328,6 +329,24 @@
   "tests.axis.role": "역할",
   "tests.axis.variant": "변형",
   "tests.axis.rank": "순위",
+  "tests.axis.run": "실행",
+  "tests.run.label": "액션 실행",
+  "tests.run.none": "실행 없음",
+  "tests.run.failed": "실행을 읽을 수 없음: {message}",
+  "tests.run.ran": {
+    "other": "실행 #{number}에서 {n}개 행 중 {ran}개가 실행됨. 나머지는 흐리게 표시됨."
+  },
+  "tests.run.absent": "이 실행에 없음",
+  "tests.card.run": "실행 #{number}",
+  "tests.card.loadingArtifact": "아티팩트 다운로드 중 …",
+  "tests.card.notInArtifact": "아티팩트에 없음",
+  "tests.card.artifactFailed": "아티팩트를 읽을 수 없음: {message}",
+  "tests.card.video": "동영상",
+  "tests.card.report": "보고서",
+  "tests.result.passed": "통과",
+  "tests.result.failed": "실패",
+  "tests.result.skipped": "건너뜀",
+  "tests.viewer.open": "새 탭에서 열기",
   "filter.all": "전체",
   "graph.flowStatus": {
     "other": "run_after 흐름: 역할 {n}개, 순서 간선 {edges}개"

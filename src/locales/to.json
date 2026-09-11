@@ -131,6 +131,7 @@
   },
   "feed.failed": "Na'e tali 'e GitHub 'a e {status}.",
   "feed.anError": "mo ha hala",
+  "loader.task.artifacts": "Ngaahi 'ātifeki 'o e lele #{number}: {done} 'i he {total}",
   "security.source.advisories": "Ngaahi Fale'i",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Sivi kouti",
@@ -328,6 +329,24 @@
   "tests.axis.role": "fatongia",
   "tests.axis.variant": "fa'ahinga",
   "tests.axis.rank": "tu'unga",
+  "tests.axis.run": "lele",
+  "tests.run.label": "Lele 'o e Ngaahi Ngāue",
+  "tests.run.none": "'ikai ha lele",
+  "tests.run.failed": "Na'e 'ikai lava ke lau 'a e ngaahi lele: {message}",
+  "tests.run.ran": {
+    "other": "Na'e lele 'a e laine 'e {ran} mei he {n} 'i he lele #{number}; kuo fakapo'uli'i 'a e toenga."
+  },
+  "tests.run.absent": "'ikai 'i he lele ko 'eni",
+  "tests.card.run": "Lele #{number}",
+  "tests.card.loadingArtifact": "'Oku 'ai hifo 'a e 'ātifeki …",
+  "tests.card.notInArtifact": "'ikai 'i he 'ātifeki",
+  "tests.card.artifactFailed": "na'e 'ikai lava ke lau 'a e 'ātifeki: {message}",
+  "tests.card.video": "Vitiō",
+  "tests.card.report": "Lipooti",
+  "tests.result.passed": "lava",
+  "tests.result.failed": "tō",
+  "tests.result.skipped": "hopo'i",
+  "tests.viewer.open": "Fakaava 'i ha tapi fo'ou",
   "filter.all": "kotoa",
   "graph.flowStatus": {
     "other": "tafe run_after: fatongia 'e {n}, kaunga hokohoko 'e {edges}"

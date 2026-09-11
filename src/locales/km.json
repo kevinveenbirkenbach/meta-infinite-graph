@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub បានឆ្លើយ {status}។",
   "feed.anError": "មានកំហុស",
+  "loader.task.artifacts": "កញ្ចប់លទ្ធផលនៃដំណើរការ #{number}៖ {done} ក្នុងចំណោម {total}",
   "security.source.advisories": "សេចក្ដីជូនដំណឹងសុវត្ថិភាព",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ការស្កេនកូដ",
@@ -328,6 +329,24 @@
   "tests.axis.role": "តួនាទី",
   "tests.axis.variant": "វ៉ារ្យ៉ង់",
   "tests.axis.rank": "ចំណាត់ថ្នាក់",
+  "tests.axis.run": "ដំណើរការ",
+  "tests.run.label": "ដំណើរការសកម្មភាព",
+  "tests.run.none": "គ្មានដំណើរការ",
+  "tests.run.failed": "មិនអាចអានដំណើរការបានទេ៖ {message}",
+  "tests.run.ran": {
+    "other": "{ran} ក្នុងចំណោម {n} ជួរបានដំណើរការក្នុងដំណើរការ #{number}។ ជួរផ្សេងទៀតត្រូវបានធ្វើឱ្យស្រអាប់។"
+  },
+  "tests.run.absent": "មិនមាននៅក្នុងដំណើរការនេះទេ",
+  "tests.card.run": "ដំណើរការ #{number}",
+  "tests.card.loadingArtifact": "កំពុងទាញយកកញ្ចប់លទ្ធផល …",
+  "tests.card.notInArtifact": "មិនមាននៅក្នុងកញ្ចប់លទ្ធផលទេ",
+  "tests.card.artifactFailed": "មិនអាចអានកញ្ចប់លទ្ធផលបានទេ៖ {message}",
+  "tests.card.video": "វីដេអូ",
+  "tests.card.report": "របាយការណ៍",
+  "tests.result.passed": "ជោគជ័យ",
+  "tests.result.failed": "បរាជ័យ",
+  "tests.result.skipped": "បានរំលង",
+  "tests.viewer.open": "បើកក្នុងផ្ទាំងថ្មី",
   "filter.all": "ទាំងអស់",
   "graph.flowStatus": {
     "other": "លំហូរ run_after៖ តួនាទី {n} ខ្សែលំដាប់ {edges}"

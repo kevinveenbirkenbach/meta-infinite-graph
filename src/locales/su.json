@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub ngajawab {status}.",
   "feed.anError": "kalayan kasalahan",
+  "loader.task.artifacts": "Artefak pajalanan #{number}: {done} tina {total}",
   "security.source.advisories": "Piwuruk kaamanan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pamindaian kode",
@@ -328,6 +329,24 @@
   "tests.axis.role": "peran",
   "tests.axis.variant": "varian",
   "tests.axis.rank": "rangking",
+  "tests.axis.run": "pajalanan",
+  "tests.run.label": "Pajalanan Aksi",
+  "tests.run.none": "euweuh pajalanan",
+  "tests.run.failed": "Teu bisa maca pajalanan: {message}",
+  "tests.run.ran": {
+    "other": "{ran} tina {n} baris jalan dina pajalanan #{number}; nu séjénna diremengkeun."
+  },
+  "tests.run.absent": "lain dina pajalanan ieu",
+  "tests.card.run": "Pajalanan #{number}",
+  "tests.card.loadingArtifact": "Ngundeur artefak …",
+  "tests.card.notInArtifact": "teu aya dina artefak",
+  "tests.card.artifactFailed": "artefak teu bisa dibaca: {message}",
+  "tests.card.video": "Pidéo",
+  "tests.card.report": "Laporan",
+  "tests.result.passed": "lulus",
+  "tests.result.failed": "gagal",
+  "tests.result.skipped": "diliwat",
+  "tests.viewer.open": "Buka dina tab anyar",
   "filter.all": "sadayana",
   "graph.flowStatus": {
     "other": "aliran run_after: {n} peran, {edges} sisi urutan"

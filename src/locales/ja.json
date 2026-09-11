@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub の応答: {status}。",
   "feed.anError": "エラーあり",
+  "loader.task.artifacts": "実行 #{number} のアーティファクト: {done} / {total}",
   "security.source.advisories": "アドバイザリ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "コードスキャン",
@@ -328,6 +329,24 @@
   "tests.axis.role": "ロール",
   "tests.axis.variant": "バリアント",
   "tests.axis.rank": "順位",
+  "tests.axis.run": "実行",
+  "tests.run.label": "アクションの実行",
+  "tests.run.none": "実行なし",
+  "tests.run.failed": "実行を読み込めませんでした: {message}",
+  "tests.run.ran": {
+    "other": "実行 #{number} では {n} 行中 {ran} 行が実行されました。残りは淡色表示です。"
+  },
+  "tests.run.absent": "この実行には含まれていません",
+  "tests.card.run": "実行 #{number}",
+  "tests.card.loadingArtifact": "アーティファクトをダウンロード中 …",
+  "tests.card.notInArtifact": "アーティファクトに含まれていません",
+  "tests.card.artifactFailed": "アーティファクトを読み込めませんでした: {message}",
+  "tests.card.video": "動画",
+  "tests.card.report": "レポート",
+  "tests.result.passed": "成功",
+  "tests.result.failed": "失敗",
+  "tests.result.skipped": "スキップ",
+  "tests.viewer.open": "新しいタブで開く",
   "filter.all": "すべて",
   "graph.flowStatus": {
     "other": "run_after フロー: {n} 個のロール、{edges} 本の順序エッジ"

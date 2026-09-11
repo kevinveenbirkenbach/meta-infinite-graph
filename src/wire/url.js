@@ -66,6 +66,9 @@ export function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, ma
       byId('design-tags', HTMLInputElement).checked = forkTree.tags;
     }, 'false')
     .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
+    .register('run', () => testsView.runs.key(), value => {
+      if (/^([\w.-]+\/[\w.-]+@)?\d+$/.test(value)) testsView.pickRun(value);
+    }, '')
     .register('repo', () => forkTree.root, value => {
       forkTree.setRoot(value);
       byId('fork-root', HTMLInputElement).value = forkTree.root;

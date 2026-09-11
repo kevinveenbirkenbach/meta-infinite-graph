@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub tontu na {status}.",
   "feed.anError": "ak njuumte",
+  "loader.task.artifacts": "Ndefar yu dox #{number}: {done} ci {total}",
   "security.source.advisories": "Digle yi",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Saytu kood",
@@ -328,6 +329,24 @@
   "tests.axis.role": "sas",
   "tests.axis.variant": "xeet",
   "tests.axis.rank": "barab",
+  "tests.axis.run": "dox",
+  "tests.run.label": "Doxinu Jëf yi",
+  "tests.run.none": "amul dox",
+  "tests.run.failed": "Mënuñu jàng dox yi: {message}",
+  "tests.run.ran": {
+    "other": "{ran} ci {n} rëdd dox nañu ci dox #{number}; yeneen yi lëndëm nañu."
+  },
+  "tests.run.absent": "du ci dox bii",
+  "tests.card.run": "Dox #{number}",
+  "tests.card.loadingArtifact": "Mi ngi yebbi ndefar gi …",
+  "tests.card.notInArtifact": "nekku ci ndefar gi",
+  "tests.card.artifactFailed": "mënuñu jàng ndefar gi: {message}",
+  "tests.card.video": "Wideyo",
+  "tests.card.report": "Nettali",
+  "tests.result.passed": "jàll na",
+  "tests.result.failed": "sànku na",
+  "tests.result.skipped": "dañu ko bàyyi",
+  "tests.viewer.open": "Ubbi ci tab bu bees",
   "filter.all": "lépp",
   "graph.flowStatus": {
     "other": "tëralinu run_after: {n} sas, {edges} buumu tëralin"

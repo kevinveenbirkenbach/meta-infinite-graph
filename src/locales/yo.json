@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub dáhùn {status}.",
   "feed.anError": "pẹ̀lú àṣìṣe",
+  "loader.task.artifacts": "Àwọn àtọwọ́dá ìṣiṣẹ́ #{number}: {done} nínú {total}",
   "security.source.advisories": "Àwọn ìmọ̀ràn ààbò",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Ṣíṣàyẹ̀wò kóòdù",
@@ -328,6 +329,24 @@
   "tests.axis.role": "ipa",
   "tests.axis.variant": "ẹ̀yà",
   "tests.axis.rank": "ipò",
+  "tests.axis.run": "ìṣiṣẹ́",
+  "tests.run.label": "Ìṣiṣẹ́ àwọn ìṣe",
+  "tests.run.none": "kò sí ìṣiṣẹ́",
+  "tests.run.failed": "A kò lè ka àwọn ìṣiṣẹ́: {message}",
+  "tests.run.ran": {
+    "other": "{ran} nínú ìlà {n} ló ṣiṣẹ́ nínú ìṣiṣẹ́ #{number}; àwọn yòókù ti di bàìbàì."
+  },
+  "tests.run.absent": "kò sí nínú ìṣiṣẹ́ yìí",
+  "tests.card.run": "Ìṣiṣẹ́ #{number}",
+  "tests.card.loadingArtifact": "Ń gba àtọwọ́dá sílẹ̀ …",
+  "tests.card.notInArtifact": "kò sí nínú àtọwọ́dá",
+  "tests.card.artifactFailed": "a kò lè ka àtọwọ́dá: {message}",
+  "tests.card.video": "Fídíò",
+  "tests.card.report": "Ìròyìn",
+  "tests.result.passed": "yege",
+  "tests.result.failed": "kùnà",
+  "tests.result.skipped": "fò kọjá",
+  "tests.viewer.open": "Ṣí i nínú táàbù tuntun",
   "filter.all": "gbogbo",
   "graph.flowStatus": {
     "other": "ìṣàn run_after: ipa {n}, ìsopọ̀ ètò {edges}"

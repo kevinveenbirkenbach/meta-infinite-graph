@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub 返回 {status}。",
   "feed.anError": "出现错误",
+  "loader.task.artifacts": "运行 #{number} 的工件：{done} / {total}",
   "security.source.advisories": "安全公告",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "代码扫描",
@@ -328,6 +329,24 @@
   "tests.axis.role": "角色",
   "tests.axis.variant": "变体",
   "tests.axis.rank": "排名",
+  "tests.axis.run": "运行",
+  "tests.run.label": "Actions 运行",
+  "tests.run.none": "无运行",
+  "tests.run.failed": "无法读取运行：{message}",
+  "tests.run.ran": {
+    "other": "运行 #{number} 中 {n} 行里有 {ran} 行已运行；其余行已变暗。"
+  },
+  "tests.run.absent": "不在此运行中",
+  "tests.card.run": "运行 #{number}",
+  "tests.card.loadingArtifact": "正在下载工件…",
+  "tests.card.notInArtifact": "不在工件中",
+  "tests.card.artifactFailed": "无法读取工件：{message}",
+  "tests.card.video": "视频",
+  "tests.card.report": "报告",
+  "tests.result.passed": "通过",
+  "tests.result.failed": "失败",
+  "tests.result.skipped": "已跳过",
+  "tests.viewer.open": "在新标签页中打开",
   "filter.all": "全部",
   "graph.flowStatus": {
     "other": "run_after 流程：{n} 个角色，{edges} 条排序边"

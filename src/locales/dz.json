@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub གིས་ {status} ལན་སློག་ཡི།",
   "feed.anError": "འཛོལ་བ་དང་གཅིག་ཁར་",
+  "loader.task.artifacts": "གཡོག་བཀོལ་ #{number} གི་ གྲུབ་དངོས་: {total} ལས་ {done}",
   "security.source.advisories": "བསླབ་བྱ་ཚུ་",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ཀོཌ་ཞིབ་དཔྱད་",
@@ -328,6 +329,24 @@
   "tests.axis.role": "ལཱ་འགན་",
   "tests.axis.variant": "རྣམ་པ་",
   "tests.axis.rank": "གྲལ་རིམ་",
+  "tests.axis.run": "གཡོག་བཀོལ་",
+  "tests.run.label": "བྱ་བ་ཚུ་གི་གཡོག་བཀོལ་",
+  "tests.run.none": "གཡོག་བཀོལ་མེད་",
+  "tests.run.failed": "གཡོག་བཀོལ་ཚུ་ ལྷག་མ་ཚུགས་: {message}",
+  "tests.run.ran": {
+    "other": "གྲལ་ཐིག་ {n} ལས་ {ran} གཡོག་བཀོལ་ #{number} ནང་ གཡོག་བཀོལ་ཡི། གཞན་ཚུ་ མདངས་ཆུང་བཟོ་ཡོདཔ་ཨིན།"
+  },
+  "tests.run.absent": "གཡོག་བཀོལ་འདི་ནང་མེན་",
+  "tests.card.run": "གཡོག་བཀོལ་ #{number}",
+  "tests.card.loadingArtifact": "གྲུབ་དངོས་ ཕབ་ལེན་འབད་དོ་…",
+  "tests.card.notInArtifact": "གྲུབ་དངོས་ནང་མེན་",
+  "tests.card.artifactFailed": "གྲུབ་དངོས་ ལྷག་མ་ཚུགས་: {message}",
+  "tests.card.video": "བརྙན་འཕྲིན་",
+  "tests.card.report": "སྙན་ཞུ་",
+  "tests.result.passed": "མཐར་འཁྱོལ་",
+  "tests.result.failed": "འཐུས་ཤོར་",
+  "tests.result.skipped": "བཤོལ་ཡོད་",
+  "tests.viewer.open": "ཤོག་བྱང་གསརཔ་ནང་ ཁ་ཕྱེ།",
   "filter.all": "ཆ་མཉམ་",
   "graph.flowStatus": {
     "other": "run_after རྒྱུན་: ལཱ་འགན་ {n}། གོ་རིམ་མཐའ་ཐིག་ {edges}"

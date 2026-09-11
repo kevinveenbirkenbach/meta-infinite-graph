@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub menjawab {status}.",
   "feed.anError": "dengan ralat",
+  "loader.task.artifacts": "Artifak larian #{number}: {done} daripada {total}",
   "security.source.advisories": "Nasihat",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Imbasan kod",
@@ -328,6 +329,24 @@
   "tests.axis.role": "peranan",
   "tests.axis.variant": "varian",
   "tests.axis.rank": "kedudukan",
+  "tests.axis.run": "larian",
+  "tests.run.label": "Larian Tindakan",
+  "tests.run.none": "tiada larian",
+  "tests.run.failed": "Tidak dapat membaca larian: {message}",
+  "tests.run.ran": {
+    "other": "{ran} daripada {n} baris dijalankan dalam larian #{number}; yang lain dimalapkan."
+  },
+  "tests.run.absent": "tiada dalam larian ini",
+  "tests.card.run": "Larian #{number}",
+  "tests.card.loadingArtifact": "Memuat turun artifak …",
+  "tests.card.notInArtifact": "tiada dalam artifak",
+  "tests.card.artifactFailed": "artifak tidak dapat dibaca: {message}",
+  "tests.card.video": "Video",
+  "tests.card.report": "Laporan",
+  "tests.result.passed": "lulus",
+  "tests.result.failed": "gagal",
+  "tests.result.skipped": "dilangkau",
+  "tests.viewer.open": "Buka dalam tab baharu",
   "filter.all": "semua",
   "graph.flowStatus": {
     "other": "aliran run_after: {n} peranan, {edges} tepi susunan"

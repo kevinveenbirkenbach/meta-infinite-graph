@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub mangsuli {status}.",
   "feed.anError": "kanthi kasalahan",
+  "loader.task.artifacts": "Artefak lakon #{number}: {done} saka {total}",
   "security.source.advisories": "Pitutur keamanan",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "Pindai kode",
@@ -328,6 +329,24 @@
   "tests.axis.role": "peran",
   "tests.axis.variant": "varian",
   "tests.axis.rank": "peringkat",
+  "tests.axis.run": "lakon",
+  "tests.run.label": "Lakon Tumindak",
+  "tests.run.none": "ora ana lakon",
+  "tests.run.failed": "Ora bisa maca lakon: {message}",
+  "tests.run.ran": {
+    "other": "{ran} saka {n} larik mlaku ing lakon #{number}; liyane disuramake."
+  },
+  "tests.run.absent": "ora ana ing lakon iki",
+  "tests.card.run": "Lakon #{number}",
+  "tests.card.loadingArtifact": "Ngundhuh artefak …",
+  "tests.card.notInArtifact": "ora ana ing artefak",
+  "tests.card.artifactFailed": "artefak ora bisa diwaca: {message}",
+  "tests.card.video": "Video",
+  "tests.card.report": "Laporan",
+  "tests.result.passed": "lulus",
+  "tests.result.failed": "gagal",
+  "tests.result.skipped": "dilompati",
+  "tests.viewer.open": "Bukak ing tab anyar",
   "filter.all": "kabeh",
   "graph.flowStatus": {
     "other": "aliran run_after: {n} peran, {edges} sisih urutan"

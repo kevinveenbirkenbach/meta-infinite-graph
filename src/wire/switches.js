@@ -49,6 +49,7 @@ export function wireDataSwitches(tableView, testsView, roleInfo, uiManager, data
 }
 
 export function wireControls({ testsView, matrixView, roleInfo, forkTree }) {
+  testsView.onRun = () => urlState.capture();
   const choose = (id, apply) => {
     const select = byId(id, HTMLSelectElement);
     select.addEventListener('change', () => {

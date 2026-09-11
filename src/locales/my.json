@@ -131,6 +131,7 @@
   },
   "feed.failed": "GitHub က {status} ဖြင့် ပြန်ဖြေသည်။",
   "feed.anError": "အမှားတစ်ခုဖြင့်",
+  "loader.task.artifacts": "လည်ပတ်မှု #{number} ၏ အာတီဖက်များ: {total} ခုအနက် {done} ခု",
   "security.source.advisories": "အကြံပြုချက်များ",
   "security.source.dependabot": "Dependabot",
   "security.source.codeScanning": "ကုဒ် စကင်ဖတ်ခြင်း",
@@ -328,6 +329,24 @@
   "tests.axis.role": "အခန်းကဏ္ဍ",
   "tests.axis.variant": "မူကွဲ",
   "tests.axis.rank": "အဆင့်",
+  "tests.axis.run": "လည်ပတ်မှု",
+  "tests.run.label": "လုပ်ဆောင်ချက်များ လည်ပတ်မှု",
+  "tests.run.none": "လည်ပတ်မှု မရှိပါ",
+  "tests.run.failed": "လည်ပတ်မှုများကို မဖတ်နိုင်ပါ: {message}",
+  "tests.run.ran": {
+    "other": "လည်ပတ်မှု #{number} တွင် အတန်း {n} ခုအနက် {ran} ခု လည်ပတ်ခဲ့သည်၊ ကျန်အတန်းများကို မှိန်ထားသည်။"
+  },
+  "tests.run.absent": "ဤလည်ပတ်မှုတွင် မပါ",
+  "tests.card.run": "လည်ပတ်မှု #{number}",
+  "tests.card.loadingArtifact": "အာတီဖက်ကို ဒေါင်းလုဒ်လုပ်နေသည် …",
+  "tests.card.notInArtifact": "အာတီဖက်တွင် မပါ",
+  "tests.card.artifactFailed": "အာတီဖက်ကို မဖတ်နိုင်ပါ: {message}",
+  "tests.card.video": "ဗီဒီယို",
+  "tests.card.report": "အစီရင်ခံစာ",
+  "tests.result.passed": "အောင်မြင်",
+  "tests.result.failed": "မအောင်မြင်",
+  "tests.result.skipped": "ကျော်ခဲ့",
+  "tests.viewer.open": "တဘ်အသစ်တွင် ဖွင့်ရန်",
   "filter.all": "အားလုံး",
   "graph.flowStatus": {
     "other": "run_after စီးဆင်းမှု: အခန်းကဏ္ဍ {n} ခု၊ အစီအစဉ် အစွန်း {edges} ခု"
