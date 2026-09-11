@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} be dina idia abia hidi ai ia noho lasi. Inai hahedinaraia ese unai amo ia duahia, unai dainai gaukara kopi ia hahedinaraia, unai noho dalana lasi.",
   "view.rolesWith": "Gaukara · {view}",
+  "view.testsWith": "Hetoho · {view}",
   "range.all": "ibounai",
   "range.missing": {
     "one": "⚠ fail {n} ia boio",

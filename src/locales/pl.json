@@ -400,6 +400,7 @@
   },
   "views.missing": "{files} nie istnieje w wybranej dacie. Ten widok z niego czyta, więc pokazałby kopię roboczą zamiast tamtego stanu.",
   "view.rolesWith": "Role · {view}",
+  "view.testsWith": "Testy · {view}",
   "range.all": "wszystko",
   "range.missing": {
     "one": "⚠ brak {n} pliku",

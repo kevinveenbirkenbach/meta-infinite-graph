@@ -378,6 +378,7 @@
   },
   "views.missing": "{files} ii gávdno válljejuvvon beaivvi. Dát čájáhus lohká das, nu ahte dat čájehivččii bargokopiija iige dan dili.",
   "view.rolesWith": "Rollat · {view}",
+  "view.testsWith": "Testat · {view}",
   "range.all": "buot",
   "range.missing": {
     "one": "⚠ {n} fiila váilu",

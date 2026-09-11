@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} no dabinon ün dät pevälöl. Logot at reidon se on, kludo ojonon kopiedi vobik plao stadi at.",
   "view.rolesWith": "Rols · {view}",
+  "view.testsWith": "Blufs · {view}",
   "range.all": "valik",
   "range.missing": {
     "one": "⚠ Ragiv {n} defon",

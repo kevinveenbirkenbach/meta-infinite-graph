@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ayikho ngelanga elikhethiweko. Umbono lo ufunda kiyo, ngalokho bewuzokutjengisa ikopi yokusebenza esikhundleni sesimo leso.",
   "view.rolesWith": "Iindima · {view}",
+  "view.testsWith": "Amalingo · {view}",
   "range.all": "koke",
   "range.missing": {
     "one": "⚠ ifayili {n} ayikho",

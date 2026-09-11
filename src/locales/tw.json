@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} nni hɔ wɔ da a wopaw no. Nhwɛso yi kenkan fi mu, enti ɛbɛkyerɛ adwuma nsɛsoɔ no mmom sen saa tebea no.",
   "view.rolesWith": "Dwumadi · {view}",
+  "view.testsWith": "Nsɔhwɛ · {view}",
   "range.all": "ne nyinaa",
   "range.missing": {
     "one": "⚠ Fael {n} ayera",

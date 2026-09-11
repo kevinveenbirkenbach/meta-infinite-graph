@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('the gate filter partitions the cells across its five marks', async ({ page }) => {
-  await page.goto('/?view=tests');
+  await page.goto('/?view=playwright');
   const rows = page.locator('table.tests-matrix td[data-cell]');
   await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(300);
 
@@ -47,7 +47,7 @@ test('the gate filter partitions the cells across its five marks', async ({ page
 });
 
 test('never and always maybe are role facts, not variant facts', async ({ page }) => {
-  await page.goto('/?view=tests');
+  await page.goto('/?view=playwright');
   await expect.poll(
     () => page.locator('table.tests-matrix td[data-cell]').count(), { timeout: 180000 }
   ).toBeGreaterThan(500);
@@ -105,7 +105,7 @@ test('never and always maybe are role facts, not variant facts', async ({ page }
 });
 
 test('the variants switch splits each role line into its variants', async ({ page }) => {
-  await page.goto('/?view=tests');
+  await page.goto('/?view=playwright');
   const lines = page.locator('table.tests-matrix tbody tr');
   const cells = page.locator('table.tests-matrix td[data-cell]');
   await expect.poll(() => lines.count(), { timeout: 180000 }).toBeGreaterThan(50);

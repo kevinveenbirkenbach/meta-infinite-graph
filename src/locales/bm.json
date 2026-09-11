@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} tɛ yen don sugandilen na. Nin jiracogo in b'a kalan, o de kosɔn a tun bɛna baara kopi jira o cogoya nɔ na.",
   "view.rolesWith": "Jɔyɔrɔw · {view}",
+  "view.testsWith": "Kɔrɔbɔliw · {view}",
   "range.all": "bɛɛ",
   "range.missing": {
     "other": "⚠ dosiye {n} tɛ yen"

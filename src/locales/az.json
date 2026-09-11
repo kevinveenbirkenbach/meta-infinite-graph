@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} seçilmiş tarixdə mövcud deyil. Bu görünüş ondan oxuyur, ona görə həmin vəziyyət əvəzinə işçi nüsxəni göstərərdi.",
   "view.rolesWith": "Rollar · {view}",
+  "view.testsWith": "Testlər · {view}",
   "range.all": "hamısı",
   "range.missing": {
     "one": "⚠ {n} fayl çatışmır",

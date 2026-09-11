@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} n'exista betg a la data tschernida. Questa vista legia da là, perquai mussass ella la copia da lavur empè da quel stadi.",
   "view.rolesWith": "Rollas · {view}",
+  "view.testsWith": "Tests · {view}",
   "range.all": "tut",
   "range.missing": {
     "one": "⚠ {n} datoteca manca",

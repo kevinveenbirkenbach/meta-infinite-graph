@@ -356,6 +356,7 @@
   },
   "views.missing": "चुनल तारीख पर {files} नइखे। ई व्यू ओही से पढ़ेला, एह से ऊ ओह स्थिति के बदले वर्किंग कॉपी देखाई।",
   "view.rolesWith": "रोल · {view}",
+  "view.testsWith": "परीक्षण · {view}",
   "range.all": "सब",
   "range.missing": {
     "one": "⚠ {n} फाइल गायब बा",

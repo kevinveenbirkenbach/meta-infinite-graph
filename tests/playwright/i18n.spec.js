@@ -143,7 +143,7 @@ for (const language of ['de', 'ar', 'ja']) {
       .toBeGreaterThan(0);
     const catalogue = await page.evaluate(code => fetch(`locales/${code}.json`).then(response => response.json()), language);
     await expect(page.locator('.matrix-section h2')).toHaveText(catalogue['view.matrix']);
-    for (const view of ['bond', 'tests', 'commits']) {
+    for (const view of ['bond', 'playwright', 'commits']) {
       await page.evaluate(name => {
         const input = document.getElementById(`view-${name}`);
         input.checked = true;

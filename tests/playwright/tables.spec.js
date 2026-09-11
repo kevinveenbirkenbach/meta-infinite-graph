@@ -44,7 +44,7 @@ test('roles gathers cosmos, bond and the matrix; ressources and complexity have 
       .toBe(0);
     expect(await page.locator('#view-complexity').count(), 'complexity is a matrix filter')
       .toBe(0);
-    await expect(page.locator('.roles-menu label')).toHaveText(['Cosmos', 'Bond', 'Matrix']);
+    await expect(page.locator('#btn-roles + .view-menu label')).toHaveText(['Cosmos', 'Bond', 'Matrix']);
     await expect(page.locator('#btn-roles')).toHaveText('Roles · Bond');
   });
 

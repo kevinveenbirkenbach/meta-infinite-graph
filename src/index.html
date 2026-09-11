@@ -28,7 +28,7 @@
           <div class="btn-group btn-group-sm" role="group">
             <button id="btn-roles" type="button" class="btn btn-outline-light dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false" data-i18n="view.roles"></button>
-            <div class="dropdown-menu roles-menu">
+            <div class="dropdown-menu view-menu">
               <input type="radio" class="btn-check" name="view" id="view-graph" value="graph" checked>
               <label class="dropdown-item" for="view-graph" data-i18n="view.graph"></label>
               <input type="radio" class="btn-check" name="view" id="view-bond" value="bond">
@@ -39,8 +39,16 @@
           </div>
           <input type="radio" class="btn-check" name="view" id="view-forks" value="forks">
           <label class="btn btn-outline-light" for="view-forks" data-i18n="view.forks"></label>
-          <input type="radio" class="btn-check" name="view" id="view-tests" value="tests">
-          <label class="btn btn-outline-light" for="view-tests" data-i18n="view.tests"></label>
+          <div class="btn-group btn-group-sm" role="group">
+            <button id="btn-tests" type="button" class="btn btn-outline-light dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-i18n="view.tests"></button>
+            <div class="dropdown-menu view-menu">
+              <input type="radio" class="btn-check" name="view" id="view-playwright" value="playwright">
+              <label class="dropdown-item" for="view-playwright" data-i18n="tests.kind.playwright"></label>
+              <input type="radio" class="btn-check" name="view" id="view-cli" value="cli">
+              <label class="dropdown-item" for="view-cli" data-i18n="tests.kind.cli"></label>
+            </div>
+          </div>
           <input type="radio" class="btn-check" name="view" id="view-commits" value="commits">
           <label class="btn btn-outline-light" for="view-commits" data-i18n="view.commits"></label>
           <input type="radio" class="btn-check" name="view" id="view-pulls" value="pulls">

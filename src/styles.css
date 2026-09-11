@@ -290,10 +290,6 @@ svg.fork-plot .fork-commit.merge {
   color: var(--bs-danger);
 }
 
-.tests-kind {
-  margin-bottom: 8px;
-}
-
 table.tests-matrix {
   border-collapse: separate;
   border-spacing: 0;
@@ -935,7 +931,7 @@ img.role-icon {
   display: none;
 }
 
-.roles-menu .btn-check:checked + .dropdown-item {
+.view-menu .btn-check:checked + .dropdown-item {
   background: var(--bs-primary);
   color: #fff;
 }

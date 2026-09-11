@@ -68,7 +68,7 @@ test('a variant that pins a gate off marks the test skipped, a jinja flag stays 
 
 test('the CI sort ranks the rows here, from the declared discovery sort',
   async ({ page }) => {
-    await page.goto('/?view=tests');
+    await page.goto('/?view=playwright');
     const lines = page.locator('table.tests-matrix tbody tr');
     await expect.poll(() => lines.count(), { timeout: 180000 }).toBeGreaterThan(50);
 
@@ -123,7 +123,7 @@ test('the CI sort ranks the rows here, from the declared discovery sort',
   });
 
 test('the chosen sort survives a reload through the URL', async ({ page }) => {
-  await page.goto('/?view=tests&sort=ci');
+  await page.goto('/?view=playwright&sort=ci');
   await expect.poll(
     () => page.locator('table.tests-matrix tbody tr').count(), { timeout: 180000 }
   ).toBeGreaterThan(50);

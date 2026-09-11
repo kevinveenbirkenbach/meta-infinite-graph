@@ -444,6 +444,7 @@
   },
   "views.missing": "Nyns eus {files} dhe'n dydhyas dewisys. An gwel ma a red anodho, ytho ev a dhiskwedhsa an dasskrif ober yn le an studh na.",
   "view.rolesWith": "Rolyow · {view}",
+  "view.testsWith": "Provow · {view}",
   "range.all": "oll",
   "range.missing": {
     "zero": "⚠ {n} restren kellys",

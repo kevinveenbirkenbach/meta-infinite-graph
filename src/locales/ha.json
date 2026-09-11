@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} babu shi a ranar da aka zaɓa. Wannan kallo yana karantawa daga gare shi, don haka zai nuna kwafin aiki maimakon wannan yanayi.",
   "view.rolesWith": "Matsayoyi · {view}",
+  "view.testsWith": "Gwaje-gwaje · {view}",
   "range.all": "duka",
   "range.missing": {
     "one": "⚠ Fayil {n} ya ɓace",

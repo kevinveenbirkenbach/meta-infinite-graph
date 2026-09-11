@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ayikho ngomhla okhethiweyo. Le mbono ifunda kuyo, ngoko ibiya kubonisa ikopi yokusebenza endaweni yaloo meko.",
   "view.rolesWith": "Iindima · {view}",
+  "view.testsWith": "Iimvavanyo · {view}",
   "range.all": "zonke",
   "range.missing": {
     "one": "⚠ ifayile {n} ilahlekile",

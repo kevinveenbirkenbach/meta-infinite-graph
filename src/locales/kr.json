@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} tarikh zabenabelan ba. Gani adǝ adǝga karatuna, kuru hali adǝbe wurilan aikibe kwafi nunana.",
   "view.rolesWith": "Rolwa · {view}",
+  "view.testsWith": "Imtihanwa · {view}",
   "range.all": "samma",
   "range.missing": {
     "one": "⚠ fayil {n} bacena",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ndĩrĩ kuo mũthenya ũrĩa ũthuurĩtwo. Kĩonereria gĩkĩ gĩthomaga kuuma harĩ yo, nĩ ũndũ ũcio kĩngĩonania kobia ya wĩra handũ ha ũrĩa maũndũ matariĩ hĩndĩ ĩyo.",
   "view.rolesWith": "Mawĩra · {view}",
+  "view.testsWith": "Magerio · {view}",
   "range.all": "ciothe",
   "range.missing": {
     "one": "⚠ faelo {n} ĩtirĩ kuo",

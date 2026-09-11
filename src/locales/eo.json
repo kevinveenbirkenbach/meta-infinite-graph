@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ne ekzistas je la elektita dato. Ĉi tiu vido legas el ĝi, do ĝi montrus la laborkopion anstataŭ tiun staton.",
   "view.rolesWith": "Roloj · {view}",
+  "view.testsWith": "Testoj · {view}",
   "range.all": "ĉiuj",
   "range.missing": {
     "one": "⚠ {n} dosiero mankas",

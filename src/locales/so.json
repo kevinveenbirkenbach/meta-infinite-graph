@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kama jiro taariikhda la doortay. Muuqaalkani isaga ayuu ka akhriyaa, sidaa darteed wuxuu muujin lahaa nuqulka shaqada halkii xaaladdaas.",
   "view.rolesWith": "Doorar · {view}",
+  "view.testsWith": "Tijaabooyin · {view}",
   "range.all": "dhammaan",
   "range.missing": {
     "one": "⚠ {n} fayl ayaa maqan",

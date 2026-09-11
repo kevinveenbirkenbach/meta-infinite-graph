@@ -356,6 +356,7 @@
   },
   "views.missing": "Hindi umiiral ang {files} sa napiling petsa. Dito nagbabasa ang tanaw na ito, kaya ang working copy ang maipapakita nito sa halip na ang estadong iyon.",
   "view.rolesWith": "Mga Tungkulin · {view}",
+  "view.testsWith": "Mga Pagsubok · {view}",
   "range.all": "lahat",
   "range.missing": {
     "one": "⚠ {n} file ang nawawala",

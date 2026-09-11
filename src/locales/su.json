@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} teu aya dina tanggal nu dipilih. Tampilan ieu maca ti dinya, jadi bakal némbongkeun salinan gawé lain kaayaan éta.",
   "view.rolesWith": "Peran · {view}",
+  "view.testsWith": "Tés · {view}",
   "range.all": "sadayana",
   "range.missing": {
     "other": "⚠ {n} file leungit"

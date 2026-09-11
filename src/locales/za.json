@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} youq ngoenzgeiz genj haenx mbouj miz. Aen doz neix daj de doeg, ndigah de yaek yienh fwnz guhhong, mbouj dwg cangdai haenx.",
   "view.rolesWith": "Gij hong · {view}",
+  "view.testsWith": "Gij sawq · {view}",
   "range.all": "daengx",
   "range.missing": {
     "one": "⚠ Noix {n} aen vwnzgienh",

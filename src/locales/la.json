@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} die electo non exstat. Hic aspectus ex eo legit, ergo exemplar operis potius quam illum statum ostenderet.",
   "view.rolesWith": "Munera · {view}",
+  "view.testsWith": "Probationes · {view}",
   "range.all": "omnia",
   "range.missing": {
     "one": "⚠ {n} fasciculus deest",

@@ -378,6 +378,7 @@
   },
   "views.missing": "{files} no existe en la fecha elegida. Esta vista lee de él, así que mostraría la copia de trabajo en lugar de ese estado.",
   "view.rolesWith": "Roles · {view}",
+  "view.testsWith": "Pruebas · {view}",
   "range.all": "todo",
   "range.missing": {
     "one": "⚠ falta {n} archivo",

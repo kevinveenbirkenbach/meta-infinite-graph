@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} په ټاکلې نېټه کې شتون نه لري. دا ننداره له هغه څخه لولي، نو د هغه حالت پر ځای به کاري کاپي ښيي.",
   "view.rolesWith": "رولونه · {view}",
+  "view.testsWith": "ازموینې · {view}",
   "range.all": "ټول",
   "range.missing": {
     "one": "⚠ {n} فایل نشته",

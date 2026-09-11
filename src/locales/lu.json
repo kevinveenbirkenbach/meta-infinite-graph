@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kaidipo pa difuku ditongwe. Kino kimweneko kitanga'mo, penepo kyadi kya kumwesha kopi ya mwingilo pa kifulo kya uno muswelo.",
   "view.rolesWith": "Mingilo · {view}",
+  "view.testsWith": "Matompo · {view}",
   "range.all": "byonso",
   "range.missing": {
     "one": "⚠ fisye {n} kaidipo",

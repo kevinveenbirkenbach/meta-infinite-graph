@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ntiriho ku itariki yatowe. Iyi shusho isoma muri ryo, rero yokwerekana kopi y'akazi aho kwerekana iyo mimerere.",
   "view.rolesWith": "Imirimo · {view}",
+  "view.testsWith": "Ibigeragezo · {view}",
   "range.all": "vyose",
   "range.missing": {
     "one": "⚠ dosiye {n} irabuze",

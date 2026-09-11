@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} findes ikke på den valgte dato. Denne visning læser derfra, så den ville vise arbejdskopien i stedet for den tilstand.",
   "view.rolesWith": "Roller · {view}",
+  "view.testsWith": "Tests · {view}",
   "range.all": "alle",
   "range.missing": {
     "one": "⚠ {n} fil mangler",

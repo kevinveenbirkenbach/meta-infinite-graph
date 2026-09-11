@@ -356,6 +356,7 @@
   },
   "views.missing": "Tsy misy ny {files} amin'ny daty voafidy. Mamaky azy ity fijery ity, ka ny dika fiasana no hasehony fa tsy izany toe-javatra izany.",
   "view.rolesWith": "Andraikitra · {view}",
+  "view.testsWith": "Fitsapana · {view}",
   "range.all": "rehetra",
   "range.missing": {
     "one": "⚠ Rakitra {n} tsy hita",

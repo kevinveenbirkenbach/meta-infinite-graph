@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} guyyaa filatame irratti hin jiru. Mul'annoon kun isa irraa dubbisa, kanaaf haala sana bakka koppii hojii agarsiisa ture.",
   "view.rolesWith": "Gaheewwan · {view}",
+  "view.testsWith": "Qormaatota · {view}",
   "range.all": "hunda",
   "range.missing": {
     "one": "⚠ faayiliin {n} hin jiru",

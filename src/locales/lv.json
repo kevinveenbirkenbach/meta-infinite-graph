@@ -378,6 +378,7 @@
   },
   "views.missing": "{files} izvēlētajā datumā neeksistē. Šis skats lasa no tā, tāpēc tas rādītu darba kopiju, nevis to stāvokli.",
   "view.rolesWith": "Lomas · {view}",
+  "view.testsWith": "Testi · {view}",
   "range.all": "viss",
   "range.missing": {
     "zero": "⚠ trūkst {n} failu",

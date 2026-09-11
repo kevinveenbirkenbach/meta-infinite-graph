@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} ayeke na lâ sô mo soro pëpe. Bängö sô adîko na yâ ni, ngbanga tî sô a yeke fa kopi tî kua na ndo tî lê tî yê sô.",
   "view.rolesWith": "Âkua · {view}",
+  "view.testsWith": "Âtara · {view}",
   "range.all": "kûê",
   "range.missing": {
     "other": "⚠ Âfisiê {n} ayeke dä pëpe"

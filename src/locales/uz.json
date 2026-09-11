@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} tanlangan sanada mavjud emas. Bu ko‘rinish undan o‘qiydi, shuning uchun o‘sha holat o‘rniga ishchi nusxani ko‘rsatgan bo‘lardi.",
   "view.rolesWith": "Rollar · {view}",
+  "view.testsWith": "Testlar · {view}",
   "range.all": "hammasi",
   "range.missing": {
     "one": "⚠ {n} ta fayl yo‘q",

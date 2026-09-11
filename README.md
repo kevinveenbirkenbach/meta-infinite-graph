@@ -57,8 +57,10 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 
 ### Tests
 
-One row per role, variant and test. The view switches between the two suites a
-role can ship.
+One row per role, variant and test. The **Tests** menu holds the two suites a
+role can ship, **Playwright** and **CLI**, the way **Roles** holds its views;
+`?view=playwright` and `?view=cli` open them, and an older `?view=tests` link
+opens Playwright.
 
 **Playwright** answers which of a role's tests actually runs in which
 `meta/variants.yml` variant, and which service flag decides it.

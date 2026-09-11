@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} er ekki til á valinni dagsetningu. Þetta yfirlit les úr því, svo það myndi sýna vinnueintakið í stað þeirrar stöðu.",
   "view.rolesWith": "Hlutverk · {view}",
+  "view.testsWith": "Prófanir · {view}",
   "range.all": "allt",
   "range.missing": {
     "one": "⚠ {n} skrá vantar",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} teriiwo ku lunaku olulondeddwa. Endaba eno esoma okuva mu kyo, kale yandirazze kkoppi ekolerwako mu kifo ky'embeera eyo.",
   "view.rolesWith": "Emirimu · {view}",
+  "view.testsWith": "Okugezesa · {view}",
   "range.all": "byonna",
   "range.missing": {
     "one": "⚠ fayiro {n} ebulawo",

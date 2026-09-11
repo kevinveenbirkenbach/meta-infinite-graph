@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ndaipóri ára poravopyrépe. Ko jehechauka omoñeʼẽ upégui, upévare ohechaukáta tembiapo kópia upe teko rangue.",
   "view.rolesWith": "Rolkuéra · {view}",
+  "view.testsWith": "Ñehaʼãkuéra · {view}",
   "range.all": "opavave",
   "range.missing": {
     "one": "⚠ {n} marandurenda ndaipóri",

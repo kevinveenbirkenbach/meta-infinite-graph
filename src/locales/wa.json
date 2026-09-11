@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} n' egzistêye nén al date tchoezeye. Cisse vuwe ci lét dvins, dabôrd ele mostereut l' copeye d' ovraedje el plaece di cist estat la.",
   "view.rolesWith": "Roles · {view}",
+  "view.testsWith": "Sayes · {view}",
   "range.all": "tos",
   "range.missing": {
     "one": "⚠ {n} fitchî manke",

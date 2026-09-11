@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} haipo katika tarehe iliyochaguliwa. Mwonekano huu husoma kutoka humo, kwa hivyo ungeonyesha nakala ya kazi badala ya hali hiyo.",
   "view.rolesWith": "Majukumu · {view}",
+  "view.testsWith": "Majaribio · {view}",
   "range.all": "zote",
   "range.missing": {
     "one": "⚠ faili {n} haipo",

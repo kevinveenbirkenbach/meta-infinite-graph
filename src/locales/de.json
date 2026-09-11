@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} existiert zum gewählten Datum nicht. Diese Ansicht liest daraus, sie würde also die Arbeitskopie statt dieses Stands zeigen.",
   "view.rolesWith": "Rollen · {view}",
+  "view.testsWith": "Tests · {view}",
   "range.all": "alle",
   "range.missing": {
     "one": "⚠ {n} Datei fehlt",

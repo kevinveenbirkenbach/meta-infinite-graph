@@ -334,6 +334,7 @@
   },
   "views.missing": "選択した日付には {files} が存在しません。このビューはそこから読み込むため、その時点の状態ではなく作業コピーを表示してしまいます。",
   "view.rolesWith": "ロール · {view}",
+  "view.testsWith": "テスト · {view}",
   "range.all": "すべて",
   "range.missing": {
     "other": "⚠ {n} 個のファイルが欠落"

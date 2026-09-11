@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} non existe na data escollida. Esta vista le del, así que mostraría a copia de traballo en vez dese estado.",
   "view.rolesWith": "Roles · {view}",
+  "view.testsWith": "Probas · {view}",
   "range.all": "todo",
   "range.missing": {
     "one": "⚠ falta {n} ficheiro",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} er ikki til á valda degnum. Henda sýningin lesur úr tí, so hon hevði víst arbeiðsavritið í staðin fyri ta støðuna.",
   "view.rolesWith": "Leiklutir · {view}",
+  "view.testsWith": "Royndir · {view}",
   "range.all": "øll",
   "range.missing": {
     "one": "⚠ {n} fíla vantar",

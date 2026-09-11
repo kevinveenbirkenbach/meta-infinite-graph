@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} adịghị n'ụbọchị a họrọ. Ngosi a na-agụ ya, ya mere ọ ga-egosi mbipụta ọrụ kama ọnọdụ ahụ.",
   "view.rolesWith": "Ọrụ · {view}",
+  "view.testsWith": "Ule · {view}",
   "range.all": "niile",
   "range.missing": {
     "other": "⚠ Faịlụ {n} na-efu"

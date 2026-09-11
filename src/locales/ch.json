@@ -356,6 +356,7 @@
   },
   "views.missing": "Taya' i {files} gi i fecha ni ma'ayek. Este na lii' ha taitai guiya ayu, pues para u na'annok i kopian cho'cho' ya ti ayu na estao.",
   "view.rolesWith": "Papet siha · {view}",
+  "view.testsWith": "Prueba siha · {view}",
   "range.all": "todu",
   "range.missing": {
     "one": "⚠ {n} file malingu",

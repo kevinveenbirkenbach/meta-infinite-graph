@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ezali te na mokolo oyo eponami. Etalelo oyo etángaka kati na yango, yango wana ekolakisa kopi ya mosala na esika ya ezalela wana.",
   "view.rolesWith": "Mikumba · {view}",
+  "view.testsWith": "Mimekano · {view}",
   "range.all": "nyonso",
   "range.missing": {
     "one": "⚠ Fisyé {n} ezangi",

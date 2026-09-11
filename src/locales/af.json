@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} bestaan nie op die gekose datum nie. Hierdie aansig lees daaruit, so dit sou die werkkopie wys eerder as daardie toestand.",
   "view.rolesWith": "Rolle · {view}",
+  "view.testsWith": "Toetse · {view}",
   "range.all": "alle",
   "range.missing": {
     "one": "⚠ {n} lêer ontbreek",

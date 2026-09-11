@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ajllit urux janiw utjkiti. Aka uñtawix ukat liyi, ukatwa uka kankañ lanti irnaqaw copia uñacht'ayaspa.",
   "view.rolesWith": "Lurawinaka · {view}",
+  "view.testsWith": "Yant'awinaka · {view}",
   "range.all": "taqpacha",
   "range.missing": {
     "one": "⚠ {n} qillqata faltawa",

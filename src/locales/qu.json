@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} akllasqa p'unchawpi mana kanchu. Kay qhawayqa chaymanta ñawinchan, chayrayku chay kayninpa rantinpi llamk'ay copiata rikuchinman.",
   "view.rolesWith": "Ruwanakuna · {view}",
+  "view.testsWith": "Llanchiykuna · {view}",
   "range.all": "llapan",
   "range.missing": {
     "one": "⚠ {n} qillqa pisin",

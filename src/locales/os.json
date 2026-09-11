@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} æвзæрст датæйыл нæй. Ацы æвдыст дзы кæсы, æмæ уыцы уавæры бæсты куысты къопи равдисид.",
   "view.rolesWith": "Рольтæ · {view}",
+  "view.testsWith": "Тесттæ · {view}",
   "range.all": "æппæт",
   "range.missing": {
     "one": "⚠ {n} файл нæй",

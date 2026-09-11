@@ -378,6 +378,7 @@
   },
   "views.missing": "{files} ne postoji na odabrani datum. Ovaj prikaz čita iz toga, pa bi prikazao radnu kopiju umjesto tog stanja.",
   "view.rolesWith": "Uloge · {view}",
+  "view.testsWith": "Testovi · {view}",
   "range.all": "sve",
   "range.missing": {
     "one": "⚠ nedostaje {n} datoteka",

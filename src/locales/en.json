@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} does not exist at the chosen date. This view reads from it, so it would show the working copy rather than that state.",
   "view.rolesWith": "Roles · {view}",
+  "view.testsWith": "Tests · {view}",
   "range.all": "all",
   "range.missing": {
     "one": "⚠ {n} file missing",

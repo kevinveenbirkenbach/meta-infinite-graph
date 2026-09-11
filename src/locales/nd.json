@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kayikho ngosuku olukhethiweyo. Lo mbono ufunda kuyo, ngakho ubuzatshengisa ikhophi yokusebenza esikhundleni salesi simo.",
   "view.rolesWith": "Izindima · {view}",
+  "view.testsWith": "Izivivinyo · {view}",
   "range.all": "konke",
   "range.missing": {
     "one": "⚠ ifayela elingu-{n} kalikho",

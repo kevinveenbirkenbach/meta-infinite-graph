@@ -400,6 +400,7 @@
   },
   "views.missing": "{files} na izbrani datum ne obstaja. Ta pogled bere iz tega, zato bi prikazal delovno kopijo namesto tistega stanja.",
   "view.rolesWith": "Vloge · {view}",
+  "view.testsWith": "Testi · {view}",
   "range.all": "vse",
   "range.missing": {
     "one": "⚠ manjka {n} datoteka",

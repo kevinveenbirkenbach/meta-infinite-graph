@@ -4,11 +4,6 @@ import { MetaTables } from '../meta/tables.js';
 import { PlaywrightMatrix } from '../playwrightMatrix.js';
 
 export class TestsCatalog {
-  static KINDS = {
-    playwright: t('tests.kind.playwright'),
-    cli: t('tests.kind.cli'),
-  };
-
   static GATES = Object.fromEntries(
     ['all', 'runs', 'never', 'skipped', 'always', 'unknown'].map(gate => [gate, t(`tests.gates.${gate}`)])
   );

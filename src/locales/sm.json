@@ -356,6 +356,7 @@
   },
   "views.missing": "E le o iai {files} i le aso ua filifilia. E faitau mai ai lenei vaaiga, o lea o le a faaali ai le kopi galue nai lo lena tulaga.",
   "view.rolesWith": "Matafaioi · {view}",
+  "view.testsWith": "Suʻega · {view}",
   "range.all": "uma",
   "range.missing": {
     "one": "⚠ {n} faila ua leiloa",

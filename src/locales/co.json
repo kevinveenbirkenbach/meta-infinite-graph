@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ùn esiste micca à a data scelta. Sta vista ne leghje, dunque mustraria a copia di travagliu invece di quellu statu.",
   "view.rolesWith": "Roli · {view}",
+  "view.testsWith": "Prove · {view}",
   "range.all": "tutti",
   "range.missing": {
     "one": "⚠ {n} schedariu mancante",

@@ -334,6 +334,7 @@
   },
   "views.missing": "'Oku 'ikai 'i ai 'a e {files} 'i he 'aho kuo fili. 'Oku lau 'e he vakai ko 'eni mei ai, ko ia te ne fakahā 'a e tatau ngāue 'o 'ikai ko e tu'unga ko ia.",
   "view.rolesWith": "Ngaahi Fatongia · {view}",
+  "view.testsWith": "Ngaahi Sivi · {view}",
   "range.all": "kotoa",
   "range.missing": {
     "other": "⚠ 'oku mole 'a e faile 'e {n}"

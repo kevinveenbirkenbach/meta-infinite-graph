@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kele ve na kilumbu ya me solama. Kumonisa yayi ke tanga na yo, yo yina yo zolaka kusonga kopi ya kisalu na kisika ya mutindu yina.",
   "view.rolesWith": "Bisalu · {view}",
+  "view.testsWith": "Bimeka · {view}",
   "range.all": "yonso",
   "range.missing": {
     "one": "⚠ fisye {n} kele ve",

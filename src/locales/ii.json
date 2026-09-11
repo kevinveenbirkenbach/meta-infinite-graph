@@ -334,6 +334,7 @@
   },
   "views.missing": "ꑦꊠꏜꏾ {files} ꀋꐥ。ꍓꇰꏂꄲꆹꄖꐎ，ꍋꄣꀋꉬ，ꇬꊙꃚꀪꑣꏂ。",
   "view.rolesWith": "ꏮꌝ · {view}",
+  "view.testsWith": "ꋃꏂ · {view}",
   "range.all": "ꐂꀮ",
   "range.missing": {
     "other": "⚠ {n} ꇰꃲꏦꀋꐥ"

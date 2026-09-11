@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} akukho ngelusuku lolukhetsiwe. Lombukiso ufundza kuko, ngako bewutawukhombisa ikhophi yekusebenta esikhundleni saleso simo.",
   "view.rolesWith": "Tindzima · {view}",
+  "view.testsWith": "Emavivinyo · {view}",
   "range.all": "konkhe",
   "range.missing": {
     "one": "⚠ lifayela le-{n} alikho",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} nem létezik a választott dátumon. Ez a nézet belőle olvas, így a munkapéldányt mutatná, nem azt az állapotot.",
   "view.rolesWith": "Szerepkörök · {view}",
+  "view.testsWith": "Tesztek · {view}",
   "range.all": "mind",
   "range.missing": {
     "one": "⚠ {n} fájl hiányzik",

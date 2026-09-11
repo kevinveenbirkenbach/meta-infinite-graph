@@ -378,6 +378,7 @@
   },
   "views.missing": "{files} nu există la data aleasă. Această vizualizare citește din el, așa că ar afișa copia de lucru în locul acelei stări.",
   "view.rolesWith": "Roluri · {view}",
+  "view.testsWith": "Teste · {view}",
   "range.all": "toate",
   "range.missing": {
     "one": "⚠ {n} fișier lipsă",

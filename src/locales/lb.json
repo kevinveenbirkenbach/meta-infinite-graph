@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} gëtt et um gewielten Datum net. Dës Usiicht liest dovun, dofir géif se d'Aarbechtskopie amplaz vun deem Zoustand weisen.",
   "view.rolesWith": "Rollen · {view}",
+  "view.testsWith": "Tester · {view}",
   "range.all": "all",
   "range.missing": {
     "one": "⚠ {n} Datei feelt",

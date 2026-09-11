@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} kò sí ní ọjọ́ tí a yàn. Ìwòye yìí ń kà láti inú rẹ̀, nítorí náà yóò fi ẹ̀dà iṣẹ́ hàn dípò ipò yẹn.",
   "view.rolesWith": "Àwọn ipa · {view}",
+  "view.testsWith": "Àwọn ìdánwò · {view}",
   "range.all": "gbogbo",
   "range.missing": {
     "other": "⚠ Fáìlì {n} kò sí"

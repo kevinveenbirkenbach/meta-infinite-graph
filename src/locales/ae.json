@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} nōit asti ahmi vərətē asni. Aēm vaēna haca aētahmāt frasrāuuaiieiti, aδa kārō.nipištəm daršaiiāt̰ nōit aētąm stāitīm.",
   "view.rolesWith": "Kārā̊ · {view}",
+  "view.testsWith": "Pərəsā̊ · {view}",
   "range.all": "vīspa",
   "range.missing": {
     "one": "⚠ {n} nipišta nōit asti",

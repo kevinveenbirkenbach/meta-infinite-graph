@@ -334,6 +334,7 @@
   },
   "views.missing": "在所选日期 {files} 不存在。此视图从中读取数据，因此它将显示工作副本而非当时的状态。",
   "view.rolesWith": "角色 · {view}",
+  "view.testsWith": "测试 · {view}",
   "range.all": "全部",
   "range.missing": {
     "other": "⚠ 缺少 {n} 个文件"

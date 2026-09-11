@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} piŋŋitchuq uvlumi tiguaŋani. Una qiñiġusiq taavrumiŋŋa taiguaqtuq, taatnaqłuni savaktuat kopiŋat tautuktitchisuŋniaqtuq taavrum qanuġitilaaŋata iñiŋani.",
   "view.rolesWith": "Savaat · {view}",
+  "view.testsWith": "Uuktuutit · {view}",
   "range.all": "iḷuqaan",
   "range.missing": {
     "one": "⚠ {n} makpiġaaq piŋŋitchuq",

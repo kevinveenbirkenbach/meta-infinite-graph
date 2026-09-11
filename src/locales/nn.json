@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} finst ikkje på den valde datoen. Denne visinga les frå han, så ho ville vise arbeidskopien i staden for den tilstanden.",
   "view.rolesWith": "Roller · {view}",
+  "view.testsWith": "Testar · {view}",
   "range.all": "alle",
   "range.missing": {
     "one": "⚠ {n} fil manglar",

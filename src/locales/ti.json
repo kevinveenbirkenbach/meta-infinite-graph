@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ብዝተመርጸ ዕለት የለን። እዚ ርእይቶ ካብኡ የንብብ፣ ስለዚ ኣብ ክንዲ እቲ ኩነታት እቲ ናይ ስራሕ ቅዳሕ ምረኣየ።",
   "view.rolesWith": "ግደታት · {view}",
+  "view.testsWith": "ፈተናታት · {view}",
   "range.all": "ኩሉ",
   "range.missing": {
     "one": "⚠ {n} ፋይል የለን",

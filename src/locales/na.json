@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} eko ijeiji det tirek. Jo ñaga rid, ma jo kobi wok, eko tetet ñaga.",
   "view.rolesWith": "Rol · {view}",
+  "view.testsWith": "Teset · {view}",
   "range.all": "dogin",
   "range.missing": {
     "one": "⚠ {n} pail eko",

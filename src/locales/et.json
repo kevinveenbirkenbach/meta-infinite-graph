@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} pole valitud kuupäeval olemas. See vaade loeb sellest, seega näitaks see töökoopiat, mitte seda olekut.",
   "view.rolesWith": "Rollid · {view}",
+  "view.testsWith": "Testid · {view}",
   "range.all": "kõik",
   "range.missing": {
     "one": "⚠ {n} fail puudub",

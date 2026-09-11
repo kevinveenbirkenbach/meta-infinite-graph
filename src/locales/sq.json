@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} nuk ekziston në datën e zgjedhur. Kjo pamje lexon prej tij, ndaj do të tregonte kopjen e punës në vend të asaj gjendjeje.",
   "view.rolesWith": "Rolet · {view}",
+  "view.testsWith": "Testet · {view}",
   "range.all": "të gjitha",
   "range.missing": {
     "one": "⚠ mungon {n} skedar",

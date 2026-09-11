@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} doorimte taarikhal mali. Ah ubul tohuk akriya, tokkel woo xaalat hinnay taamah koopi uybulleyyo.",
   "view.rolesWith": "Roolitte · {view}",
+  "view.testsWith": "Tajribooli · {view}",
   "range.all": "ummaan",
   "range.missing": {
     "one": "⚠ {n} fayl mali",

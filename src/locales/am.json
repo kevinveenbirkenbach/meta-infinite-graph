@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} በተመረጠው ቀን የለም። ይህ እይታ ከእሱ ያነባል፣ ስለዚህ ከዚያ ሁኔታ ይልቅ የሥራ ቅጂውን ያሳያል።",
   "view.rolesWith": "ሚናዎች · {view}",
+  "view.testsWith": "ሙከራዎች · {view}",
   "range.all": "ሁሉም",
   "range.missing": {
     "one": "⚠ {n} ፋይል ጎድሏል",

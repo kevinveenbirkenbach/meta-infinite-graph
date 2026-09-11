@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} non esistit in sa data seberada. Custa vista leghet dae cue, duncas diat ammustrare sa còpia de traballu imbetzes de cuss'istadu.",
   "view.rolesWith": "Rolos · {view}",
+  "view.testsWith": "Proas · {view}",
   "range.all": "totu",
   "range.missing": {
     "one": "⚠ {n} archìviu mancat",

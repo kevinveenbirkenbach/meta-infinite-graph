@@ -356,6 +356,7 @@
   },
   "views.missing": "নির্বাচিত তারিখে {files} নেই। এই ভিউ সেখান থেকে পড়ে, তাই এটি সেই অবস্থার বদলে কাজের কপি দেখাত।",
   "view.rolesWith": "রোল · {view}",
+  "view.testsWith": "পরীক্ষা · {view}",
   "range.all": "সব",
   "range.missing": {
     "one": "⚠ {n}টি ফাইল নেই",

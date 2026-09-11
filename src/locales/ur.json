@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} منتخب تاریخ پر موجود نہیں۔ یہ منظر اسی سے پڑھتا ہے، اس لیے یہ اس حالت کے بجائے ورکنگ کاپی دکھاتا۔",
   "view.rolesWith": "کردار · {view}",
+  "view.testsWith": "ٹیسٹ · {view}",
   "range.all": "سب",
   "range.missing": {
     "one": "⚠ {n} فائل غائب",

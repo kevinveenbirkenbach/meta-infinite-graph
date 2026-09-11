@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} a yi kona hi siku leri hlawuriweke. Xivono lexi xi hlaya eka yona, kutani xi ta kombisa kopi ya ntirho ematshan'wini ya xiyimo xexo.",
   "view.rolesWith": "Mintirho · {view}",
+  "view.testsWith": "Swikambelo · {view}",
   "range.all": "hinkwaswo",
   "range.missing": {
     "one": "⚠ fayili ya {n} yi pfumaleka",

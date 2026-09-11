@@ -15,7 +15,6 @@ export class TestsView extends TestsCatalog {
     this.loaded = null;
     this.lines = null;
     this.width = 0;
-    this.onChange = null;
   }
 
   setFilters(filters) {
@@ -37,11 +36,6 @@ export class TestsView extends TestsCatalog {
     this.refresh();
   }
 
-  setKind(kind) {
-    this.kind = TestsView.KINDS[kind] ? kind : 'playwright';
-    this.refresh();
-  }
-
   refresh() {
     if (this.suites) this._render();
     else if (this.section) this._paint();
@@ -52,21 +46,21 @@ export class TestsView extends TestsCatalog {
     this.loaded = null;
   }
 
-  show() {
+  // Args:
+  //   kind: 'playwright' or 'cli', the menu entry that opened the view.
+  show(kind) {
     this.container.replaceChildren(this.root);
+    const switched = kind !== this.kind;
+    this.kind = kind;
     if (!this.section) {
       this.section = true;
       this.note = t('tests.reading');
       this.lines = null;
       this._paint();
       this.loaded = this._load();
+    } else if (switched) {
+      this.refresh();
     }
-  }
-
-  _pick(value) {
-    this.kind = value;
-    this._render();
-    if (this.onChange) this.onChange();
   }
 
   _paint() {
@@ -189,14 +183,7 @@ function TestsGrid({ view }) {
     `;
   };
   return html`
-    <h2>${t('view.tests')}</h2>
-    <div class="btn-group btn-group-sm tests-kind">
-      ${Object.entries(TestsView.KINDS).map(([value, label]) => html`
-        <input type="radio" class="btn-check" name="tests-kind" id=${`tests-kind-${value}`} value=${value}
-               checked=${value === view.kind} onChange=${() => view._pick(value)} />
-        <label class="btn btn-outline-primary" for=${`tests-kind-${value}`}>${label}</label>
-      `)}
-    </div>
+    <h2>${t('view.testsWith', { view: t(`tests.kind.${view.kind}`) })}</h2>
     <p class="table-note">${view.note}</p>
     <div class="table-scroll">
       ${lines && html`

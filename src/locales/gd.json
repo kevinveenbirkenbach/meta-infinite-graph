@@ -400,6 +400,7 @@
   },
   "views.missing": "Chan eil {files} ann aig a’ cheann-latha a thagh thu. Leughaidh an sealladh seo às, mar sin shealladh e an lethbhreac-obrach seach an staid sin.",
   "view.rolesWith": "Dreuchdan · {view}",
+  "view.testsWith": "Deuchainnean · {view}",
   "range.all": "na h-uile",
   "range.missing": {
     "one": "⚠ {n} fhaidhle a dhìth",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} no existe en a data triada. Ista vista leye d'ell, asinas que amostraría a copia de treballo en cuenta d'ixe estau.",
   "view.rolesWith": "Rols · {view}",
+  "view.testsWith": "Prebas · {view}",
   "range.all": "tot",
   "range.missing": {
     "one": "⚠ Falta {n} fichero",

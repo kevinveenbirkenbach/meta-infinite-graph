@@ -1,7 +1,8 @@
 const { test, expect } = require('@playwright/test');
+const { pickView } = require('../support/tables');
 
 test('the grid puts role and variant on one axis and the tests on the other', async ({ page }) => {
-  await page.goto('/?view=tests');
+  await page.goto('/?view=playwright');
   const cells = page.locator('table.tests-matrix td[data-cell]');
   await expect.poll(() => cells.count(), { timeout: 180000 }).toBeGreaterThan(300);
 
@@ -32,7 +33,7 @@ test('the grid puts role and variant on one axis and the tests on the other', as
 });
 
 test('hovering a cell opens a card with that run’s detail', async ({ page }) => {
-  await page.goto('/?view=tests');
+  await page.goto('/?view=playwright');
   const cells = page.locator('table.tests-matrix td[data-cell]');
   await expect.poll(() => cells.count(), { timeout: 180000 }).toBeGreaterThan(300);
 
@@ -63,13 +64,18 @@ test('hovering a cell opens a card with that run’s detail', async ({ page }) =
   await expect(page.locator('.role-card-host')).toHaveCount(0);
 });
 
-test('the kind switch moves between the playwright and the cli suites', async ({ page }) => {
+test('the tests menu moves between the playwright and the cli suites', async ({ page }) => {
   await page.goto('/?view=tests');
   const rows = page.locator('table.tests-matrix td[data-cell]');
   await expect.poll(() => rows.count(), { timeout: 180000 }).toBeGreaterThan(300);
   const playwrightRows = await rows.count();
+  await expect(page.locator('#btn-tests'), 'an old ?view=tests link opens the playwright suite')
+    .toHaveText('Tests · Playwright');
+  await expect(page.locator('#btn-tests + .view-menu label')).toHaveText(['Playwright', 'CLI']);
 
-  await page.locator('label[for="tests-kind-cli"]').click();
+  await pickView(page, 'cli');
+  await expect(page.locator('#btn-tests')).toHaveText('Tests · CLI');
+  await expect(page.locator('#tables h2')).toHaveText('Tests · CLI');
   await expect(page.locator('.table-note')).toContainText('CLI runs across');
   await expect(page.locator('.table-note')).toContainText(
     'CLI tests declare no <NAME>_SERVICE_ENABLED flags'
@@ -83,14 +89,14 @@ test('the kind switch moves between the playwright and the cli suites', async ({
     ['role', 'variant', 'rank', '1']
   );
 
-  await expect.poll(() => page.evaluate(() => window.location.search)).toContain('kind=cli');
+  await expect.poll(() => page.evaluate(() => window.location.search)).toContain('view=cli');
 
-  await page.locator('label[for="tests-kind-playwright"]').click();
+  await pickView(page, 'playwright');
   await expect.poll(() => rows.count()).toBe(playwrightRows);
 });
 
 test('the note counts every run, whatever the grid shows', async ({ page }) => {
-  await page.goto('/?view=tests');
+  await page.goto('/?view=playwright');
   const cells = page.locator('table.tests-matrix td[data-cell]');
   await expect.poll(() => cells.count(), { timeout: 180000 }).toBeGreaterThan(300);
 

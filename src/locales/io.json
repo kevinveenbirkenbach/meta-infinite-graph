@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ne existas ye la selektita dato. Ca vido lektas de ol, do ol montrus la laboro-kopiuro vice ta stando.",
   "view.rolesWith": "Roli · {view}",
+  "view.testsWith": "Testi · {view}",
   "range.all": "omni",
   "range.missing": {
     "one": "⚠ {n} dosiero mankas",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} saýlanan senede ýok. Bu görnüş ondan okaýar, şonuň üçin ol şol ýagdaýy däl-de, iş göçürmesini görkezerdi.",
   "view.rolesWith": "Rollar · {view}",
+  "view.testsWith": "Synaglar · {view}",
   "range.all": "hemmesi",
   "range.missing": {
     "one": "⚠ {n} faýl ýok",

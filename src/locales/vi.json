@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} không tồn tại vào ngày đã chọn. Chế độ xem này đọc từ đó, nên nó sẽ hiển thị bản làm việc thay vì trạng thái lúc ấy.",
   "view.rolesWith": "Vai trò · {view}",
+  "view.testsWith": "Kiểm thử · {view}",
   "range.all": "tất cả",
   "range.missing": {
     "other": "⚠ thiếu {n} tệp"

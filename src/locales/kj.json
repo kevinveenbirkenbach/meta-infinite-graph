@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kai po pefiku la hoololwa. Etaleko eli ohali lesha mo, onghee ola li tali ulike okopi yoilonga ponhele yonghalo oyo.",
   "view.rolesWith": "Oinakuwanifwa · {view}",
+  "view.testsWith": "Omakondeko · {view}",
   "range.all": "aishe",
   "range.missing": {
     "one": "⚠ ofaila {n} ya kana",

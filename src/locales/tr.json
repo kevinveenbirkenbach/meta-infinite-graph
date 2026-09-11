@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} seçilen tarihte mevcut değil. Bu görünüm ondan okur, bu yüzden o durum yerine çalışma kopyasını gösterirdi.",
   "view.rolesWith": "Roller · {view}",
+  "view.testsWith": "Testler · {view}",
   "range.all": "tümü",
   "range.missing": {
     "one": "⚠ {n} dosya eksik",

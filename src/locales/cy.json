@@ -444,6 +444,7 @@
   },
   "views.missing": "Nid yw {files} yn bodoli ar y dyddiad a ddewiswyd. Mae'r olwg hon yn darllen ohono, felly byddai'n dangos y copi gwaith yn hytrach na'r cyflwr hwnnw.",
   "view.rolesWith": "Rolau · {view}",
+  "view.testsWith": "Profion · {view}",
   "range.all": "y cyfan",
   "range.missing": {
     "zero": "⚠ {n} o ffeiliau ar goll",

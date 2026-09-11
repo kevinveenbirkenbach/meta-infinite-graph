@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} bestaat niet op de gekozen datum. Deze weergave leest eruit, dus zou ze de werkkopie tonen in plaats van die stand.",
   "view.rolesWith": "Rollen · {view}",
+  "view.testsWith": "Tests · {view}",
   "range.all": "alle",
   "range.missing": {
     "one": "⚠ {n} bestand ontbreekt",

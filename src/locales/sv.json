@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} finns inte på det valda datumet. Den här vyn läser från den, så den skulle visa arbetskopian i stället för det tillståndet.",
   "view.rolesWith": "Roller · {view}",
+  "view.testsWith": "Tester · {view}",
   "range.all": "alla",
   "range.missing": {
     "one": "⚠ {n} fil saknas",

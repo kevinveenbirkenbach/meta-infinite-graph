@@ -422,6 +422,7 @@
   },
   "views.missing": "Cha nel {files} ayn er y laa reiht. Ta'n reayrt shoh lhaih veih, myr shen yinnagh ee soilshaghey yn choip obbree ayns ynnyd y stayd shen.",
   "view.rolesWith": "Ayrnyn · {view}",
+  "view.testsWith": "Prowallyn · {view}",
   "range.all": "ooilley",
   "range.missing": {
     "one": "⚠ {n} coadan ersooyl",

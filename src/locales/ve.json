@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} a i ho nga ḓuvha ḽo khethwaho. Iyi mbonalo i vhala khayo, nga zwenezwo i nga sumbedza khophi ya mushumo nṱhani ha tshenetsho tshiimo.",
   "view.rolesWith": "Mishumo · {view}",
+  "view.testsWith": "Ndingo · {view}",
   "range.all": "zwoṱhe",
   "range.missing": {
     "one": "⚠ faela {n} a i ho",

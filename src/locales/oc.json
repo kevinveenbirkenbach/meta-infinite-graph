@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} existís pas a la data causida. Aquesta vista legís a partir d'aquò, doncas mostrariá la còpia de trabalh puslèu qu'aquel estat.",
   "view.rolesWith": "Ròtles · {view}",
+  "view.testsWith": "Tèsts · {view}",
   "range.all": "totes",
   "range.missing": {
     "one": "⚠ {n} fichièr mancant",

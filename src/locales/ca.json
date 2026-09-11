@@ -378,6 +378,7 @@
   },
   "views.missing": "{files} no existeix a la data triada. Aquesta vista en llegeix, així que mostraria la còpia de treball en lloc d'aquell estat.",
   "view.rolesWith": "Rols · {view}",
+  "view.testsWith": "Proves · {view}",
   "range.all": "tot",
   "range.missing": {
     "one": "⚠ falta {n} fitxer",

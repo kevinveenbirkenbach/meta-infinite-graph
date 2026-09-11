@@ -5,9 +5,17 @@ export function currentView() {
   return bySelector('input[name="view"]:checked', HTMLInputElement).value;
 }
 
+export const TEST_VIEWS = ['playwright', 'cli'];
+
 // Filling these from the working copy would put today's numbers under a past
 // timestamp, so at a date that predates the schema they are greyed instead.
-const META_VIEWS = ['graph', 'bond', 'matrix', 'tests'];
+const META_VIEWS = ['graph', 'bond', 'matrix', ...TEST_VIEWS];
+
+// button id -> [the key naming its menu, the key naming it with the pick].
+const MENUS = {
+  'btn-roles': ['view.roles', 'view.rolesWith'],
+  'btn-tests': ['view.tests', 'view.testsWith'],
+};
 
 export function disableMetaViews(missing) {
   const why = t('views.missing', { files: missing.join(', ') });
@@ -18,9 +26,11 @@ export function disableMetaViews(missing) {
     label.classList.add('view-unavailable');
     label.title = why;
   }
-  const roles = byId('btn-roles', HTMLButtonElement);
-  roles.classList.add('view-unavailable');
-  roles.title = why;
+  for (const id of Object.keys(MENUS)) {
+    const button = byId(id, HTMLButtonElement);
+    button.classList.add('view-unavailable');
+    button.title = why;
+  }
   if (META_VIEWS.includes(currentView())) {
     byId('view-commits', HTMLInputElement).checked = true;
   }
@@ -43,14 +53,16 @@ export function wireViewMode(tableView, forkTree, testsView, feeds) {
       element.toggleAttribute('hidden', view !== 'forks');
     }
     for (const element of document.querySelectorAll('.tests-only')) {
-      element.toggleAttribute('hidden', view !== 'tests');
+      element.toggleAttribute('hidden', !TEST_VIEWS.includes(view));
     }
-    const roles = byId('btn-roles', HTMLButtonElement);
-    const sub = document.querySelector(`label[for="view-${view}"].dropdown-item`);
-    roles.classList.toggle('active', Boolean(sub));
-    roles.textContent = sub ? t('view.rolesWith', { view: sub.textContent }) : t('view.roles');
+    for (const [id, [plain, picked]] of Object.entries(MENUS)) {
+      const button = byId(id, HTMLButtonElement);
+      const sub = button.parentElement.querySelector(`label[for="view-${view}"].dropdown-item`);
+      button.classList.toggle('active', Boolean(sub));
+      button.textContent = sub ? t(picked, { view: sub.textContent }) : t(plain);
+    }
     if (view === 'forks') forkTree.show();
-    else if (view === 'tests') testsView.show();
+    else if (TEST_VIEWS.includes(view)) testsView.show(view);
     else if (feeds[view]) feeds[view].show();
     else if (tables) tableView.show(view);
   };
@@ -64,7 +76,7 @@ export function wireViewMode(tableView, forkTree, testsView, feeds) {
 // rather than always refreshing the tables over whatever is on screen.
 export function redraw(tableView, testsView) {
   const view = currentView();
-  if (view === 'tests') testsView.refresh();
+  if (TEST_VIEWS.includes(view)) testsView.refresh();
   else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security'].includes(view)) tableView.refresh();
 }
 

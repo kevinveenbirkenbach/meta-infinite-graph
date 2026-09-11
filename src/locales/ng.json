@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kayi po pesiku lya hogololwa. Eulikilo ndika otali lesha mo, onkee otali ulike ekopi lyiilonga pehala lyonkalo ndjoka.",
   "view.rolesWith": "Oonkandangala · {view}",
+  "view.testsWith": "Omakeshelo · {view}",
   "range.all": "ayihe",
   "range.missing": {
     "one": "⚠ ofaela {n} kayi po",

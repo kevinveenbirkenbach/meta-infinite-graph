@@ -422,6 +422,7 @@
   },
   "views.missing": "Níl {files} ann ag an dáta roghnaithe. Léann an t-amharc seo uaidh, mar sin thaispeánfadh sé an chóip oibre in ionad na staide sin.",
   "view.rolesWith": "Róil · {view}",
+  "view.testsWith": "Tástálacha · {view}",
   "range.all": "gach ceann",
   "range.missing": {
     "one": "⚠ {n} chomhad ar iarraidh",

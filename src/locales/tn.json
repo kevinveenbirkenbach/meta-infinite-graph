@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ga e yo ka letlha le le tlhophilweng. Ponelo e e bala go tswa mo go yone, ka jalo e ne e tla bontsha kopi ya tiro go na le seemo seo.",
   "view.rolesWith": "Dikarolo · {view}",
+  "view.testsWith": "Diteko · {view}",
   "range.all": "tsotlhe",
   "range.missing": {
     "one": "⚠ faele e le {n} ga e yo",

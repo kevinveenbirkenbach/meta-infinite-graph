@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} palibe pa tsiku losankhidwa. Chiwonetserochi chimawerenga kuchokera pamenepo, choncho chikanaonetsa kope logwirira ntchito osati mkhalidwe umenewo.",
   "view.rolesWith": "Maudindo · {view}",
+  "view.testsWith": "Mayeso · {view}",
   "range.all": "zonse",
   "range.missing": {
     "one": "⚠ Fayilo {n} ikusowa",

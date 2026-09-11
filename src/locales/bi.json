@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} i no stap long deit we yu jusum. Luk ia i ridim long hem, ale bae i soem kopi blong wok naoia, i no stat ia.",
   "view.rolesWith": "Ol rol · {view}",
+  "view.testsWith": "Ol tes · {view}",
   "range.all": "evriwan",
   "range.missing": {
     "one": "⚠ {n} fael i no stap",

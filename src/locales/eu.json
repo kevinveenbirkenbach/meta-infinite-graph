@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ez dago aukeratutako datan. Ikuspegi honek hortik irakurtzen du, beraz, laneko kopia erakutsiko luke, ez egoera hori.",
   "view.rolesWith": "Rolak · {view}",
+  "view.testsWith": "Probak · {view}",
   "range.all": "denak",
   "range.missing": {
     "one": "⚠ {n} fitxategi falta da",

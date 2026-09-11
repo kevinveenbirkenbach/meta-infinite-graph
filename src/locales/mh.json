@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ejjeļọk ilo raan eo kwaar kāālōt. Kilen lale in ej riiti jāne, kōn men in enaaj kwaļọk kape eo kwōj jerbal ie im jab wāween eo.",
   "view.rolesWith": "Jerbal ko · {view}",
+  "view.testsWith": "Teej ko · {view}",
   "range.all": "aolep",
   "range.missing": {
     "one": "⚠ {n} faiļ ejjeļọk",

@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} meli le ŋkeke si nètia dzi o. Kpɔɖeŋu sia xlẽa nu tso eme, eya ta aɖe dɔwɔkɔpi la afia ɖe nɔnɔme ma teƒe.",
   "view.rolesWith": "Dɔdeasiwo · {view}",
+  "view.testsWith": "Dodokpɔwo · {view}",
   "range.all": "katã",
   "range.missing": {
     "one": "⚠ Agbalẽ {n} mele eme o",

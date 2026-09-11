@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} tidak wujud pada tarikh yang dipilih. Paparan ini membaca daripadanya, jadi ia akan memaparkan salinan kerja dan bukan keadaan itu.",
   "view.rolesWith": "Peranan · {view}",
+  "view.testsWith": "Ujian · {view}",
   "range.all": "semua",
   "range.missing": {
     "other": "⚠ {n} fail hilang"

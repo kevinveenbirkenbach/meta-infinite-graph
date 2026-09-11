@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} besjteit neet op de gekoze datum. Dees weergaaf lees daovaan, dus ze zouw de wèrkkopie tuine in plaots vaan die sjtaot.",
   "view.rolesWith": "Rolle · {view}",
+  "view.testsWith": "Teste · {view}",
   "range.all": "alles",
   "range.missing": {
     "one": "⚠ {n} bestand óntbrik",

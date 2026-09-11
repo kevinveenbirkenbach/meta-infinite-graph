@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ntibaho ku itariki yatoranyijwe. Ubu bugaragaza busoma muri yo, bityo bwagaragaza kopi y'akazi aho kugaragaza iyo mimerere.",
   "view.rolesWith": "Inshingano · {view}",
+  "view.testsWith": "Ibizamini · {view}",
   "range.all": "byose",
   "range.missing": {
     "one": "⚠ Dosiye {n} irabura",

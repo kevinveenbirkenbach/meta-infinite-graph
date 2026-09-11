@@ -356,6 +356,7 @@
   },
   "views.missing": "E sega ni tiko na {files} ena tiki ni siga sa digitaki. E wili mai kina na irairai oqo, ia ena vakaraitaka na kopi ni cakacaka ka sega na ituvaki oya.",
   "view.rolesWith": "Itavi · {view}",
+  "view.testsWith": "Vakatovotovo · {view}",
   "range.all": "kece",
   "range.missing": {
     "one": "⚠ {n} na faile e yali",

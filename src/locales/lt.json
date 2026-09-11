@@ -400,6 +400,7 @@
   },
   "views.missing": "{files} pasirinktą datą neegzistuoja. Šis rodinys skaito iš jo, todėl rodytų darbinę kopiją, o ne tą būseną.",
   "view.rolesWith": "Rolės · {view}",
+  "view.testsWith": "Testai · {view}",
   "range.all": "visi",
   "range.missing": {
     "one": "⚠ trūksta {n} failo",

@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} ไม่มีอยู่ ณ วันที่เลือก มุมมองนี้อ่านจากไฟล์นั้น จึงจะแสดงสำเนาทำงานแทนสถานะนั้น",
   "view.rolesWith": "บทบาท · {view}",
+  "view.testsWith": "การทดสอบ · {view}",
   "range.all": "ทั้งหมด",
   "range.missing": {
     "other": "⚠ ไฟล์หายไป {n} ไฟล์"

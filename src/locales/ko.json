@@ -334,6 +334,7 @@
   },
   "views.missing": "선택한 날짜에는 {files}이(가) 없습니다. 이 뷰는 그 파일을 읽으므로 해당 상태 대신 작업 사본을 보여 주게 됩니다.",
   "view.rolesWith": "역할 · {view}",
+  "view.testsWith": "테스트 · {view}",
   "range.all": "전체",
   "range.missing": {
     "other": "⚠ 파일 {n}개 없음"

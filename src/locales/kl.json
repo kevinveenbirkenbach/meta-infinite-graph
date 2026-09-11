@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ulloq toqqakkami peqanngilaq. Takussutissiaq una tassannga atuaavoq, taamaattumik killiffik taanna pinnagu suliffimmi assilineq takutissagaluarpaa.",
   "view.rolesWith": "Atorfiit · {view}",
+  "view.testsWith": "Misiliutit · {view}",
   "range.all": "tamarmik",
   "range.missing": {
     "one": "⚠ Fili {n} amigaatigineqarpoq",

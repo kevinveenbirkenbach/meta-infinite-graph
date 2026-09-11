@@ -422,6 +422,7 @@
   },
   "views.missing": "{files} ma jeżistix fid-data magħżula. Din il-veduta taqra minnu, għalhekk kienet turi l-kopja tax-xogħol minflok dak l-istat.",
   "view.rolesWith": "Rwoli · {view}",
+  "view.testsWith": "Testijiet · {view}",
   "range.all": "kollha",
   "range.missing": {
     "one": "⚠ {n} fajl nieqes",

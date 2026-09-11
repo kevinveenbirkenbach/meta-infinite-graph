@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} kai ri po peyuva ra hororwa. Omutarero mbwi u resa mu yo, nu maa raisa otjikopa tjoviungura pomuhingo wongaro ndji.",
   "view.rolesWith": "Oviungura · {view}",
+  "view.testsWith": "Omakondoroiso · {view}",
   "range.all": "aayehe",
   "range.missing": {
     "one": "⚠ ofaira {n} kai ri po",

@@ -400,6 +400,7 @@
   },
   "views.missing": "{files} ve zvoleném datu neexistuje. Tento pohled z něj čte, takže by ukázal pracovní kopii místo onoho stavu.",
   "view.rolesWith": "Role · {view}",
+  "view.testsWith": "Testy · {view}",
   "range.all": "vše",
   "range.missing": {
     "one": "⚠ chybí {n} soubor",

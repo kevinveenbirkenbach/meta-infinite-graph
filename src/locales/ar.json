@@ -444,6 +444,7 @@
   },
   "views.missing": "{files} غير موجود في التاريخ المختار. يقرأ هذا العرض منه، لذا كان سيعرض نسخة العمل بدلًا من تلك الحالة.",
   "view.rolesWith": "الأدوار · {view}",
+  "view.testsWith": "الاختبارات · {view}",
   "range.all": "الكل",
   "range.missing": {
     "zero": "⚠ {n} ملف مفقود",

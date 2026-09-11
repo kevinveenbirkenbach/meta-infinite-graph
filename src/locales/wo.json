@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} amul ci bés bi nga tànn. Wone bii ci moom lay jànge, kon dafay wone kopi liggéey bi te du anam boobu.",
   "view.rolesWith": "Sas yi · {view}",
+  "view.testsWith": "Natt yi · {view}",
   "range.all": "lépp",
   "range.missing": {
     "other": "⚠ {n} fisye amul"

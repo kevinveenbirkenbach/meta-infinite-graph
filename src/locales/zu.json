@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ayikho osukwini olukhethiwe. Lokhu kubuka kufunda kukho, ngakho bekuzobonisa ikhophi yokusebenza esikhundleni saleso simo.",
   "view.rolesWith": "Izindima · {view}",
+  "view.testsWith": "Izivivinyo · {view}",
   "range.all": "konke",
   "range.missing": {
     "one": "⚠ kushoda ifayela elingu-{n}",

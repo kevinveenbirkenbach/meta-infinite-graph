@@ -356,6 +356,7 @@
   },
   "views.missing": "Kāore a {files} i te tīari i te rā kua tīpakohia. Ka pānui tēnei tirohanga i reira, nō reira ka whakaatu i te tāruatanga mahi, kaua i taua āhua.",
   "view.rolesWith": "Ngā Tūranga · {view}",
+  "view.testsWith": "Whakamātautau · {view}",
   "range.all": "katoa",
   "range.missing": {
     "one": "⚠ {n} kōnae kei te ngaro",

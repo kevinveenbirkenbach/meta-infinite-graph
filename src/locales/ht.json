@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} pa egziste nan dat ou chwazi a. Vi sa a li ladan li, kidonk li ta montre kopi travay la olye eta sa a.",
   "view.rolesWith": "Wòl yo · {view}",
+  "view.testsWith": "Tès yo · {view}",
   "range.all": "tout",
   "range.missing": {
     "one": "⚠ {n} fichye manke",

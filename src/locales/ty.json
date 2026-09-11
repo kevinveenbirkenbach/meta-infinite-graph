@@ -356,6 +356,7 @@
   },
   "views.missing": "ʻAita {files} e vai ra i te mahana i māʻitihia. E taiʻo teie hiʻoraʻa mai reira mai, nō reira e faʻaʻite te reira i te hōhoʻa ʻohipa eiaha taua tiʻaraʻa ra.",
   "view.rolesWith": "Tōroʻa · {view}",
+  "view.testsWith": "Tāmataraʻa · {view}",
   "range.all": "pauroa",
   "range.missing": {
     "one": "⚠ {n} pue i ʻere",

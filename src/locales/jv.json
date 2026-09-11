@@ -334,6 +334,7 @@
   },
   "views.missing": "{files} ora ana ing tanggal sing dipilih. Tampilan iki maca saka kono, dadi bakal nampilake salinan kerja tinimbang kahanan iku.",
   "view.rolesWith": "Peran · {view}",
+  "view.testsWith": "Pangujian · {view}",
   "range.all": "kabeh",
   "range.missing": {
     "other": "⚠ {n} berkas ilang"

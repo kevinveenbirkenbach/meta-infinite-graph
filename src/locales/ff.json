@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} woodaani e ñalawma suɓaaɗo. Ndee jiyannde ina jannga e mayre, ndeen ina hollira natto golle wonaa ngonka oo.",
   "view.rolesWith": "Daaɗe · {view}",
+  "view.testsWith": "Ƴeewndooji · {view}",
   "range.all": "fof",
   "range.missing": {
     "one": "⚠ fiilde {n} ina ŋakki",

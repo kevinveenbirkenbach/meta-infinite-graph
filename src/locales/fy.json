@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} bestiet net op de keazen datum. Dizze werjefte lêst dêrút, dus hy soe de wurkkopy sjen litte ynstee fan dy steat.",
   "view.rolesWith": "Rollen · {view}",
+  "view.testsWith": "Tests · {view}",
   "range.all": "alle",
   "range.missing": {
     "one": "⚠ {n} bestân ûntbrekt",

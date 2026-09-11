@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ha e yo ka letsatsi le kgethilweng. Ponahalo ena e bala ho yona, kahoo e ne e tla bontsha kopi ya mosebetsi ho ena le boemo boo.",
   "view.rolesWith": "Dikarolo · {view}",
+  "view.testsWith": "Diteko · {view}",
   "range.all": "tsohle",
   "range.missing": {
     "one": "⚠ faele e {n} e siyo",

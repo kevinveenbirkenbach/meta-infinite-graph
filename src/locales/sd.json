@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} چونڊيل تاريخ تي موجود ناهي. هي منظر ان مان پڙهي ٿو، تنهنڪري اهو ان حالت بدران ڪم واري ڪاپي ڏيکاريندو.",
   "view.rolesWith": "ڪردار · {view}",
+  "view.testsWith": "ٽيسٽ · {view}",
   "range.all": "سڀ",
   "range.missing": {
     "one": "⚠ {n} فائل غائب",

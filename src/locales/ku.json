@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} di dîroka hilbijartî de tune ye. Ev dîmen ji wê dixwîne, ji ber vê yekê dê kopiya xebatê nîşan bide ne wê rewşê.",
   "view.rolesWith": "Rol · {view}",
+  "view.testsWith": "Ceribandin · {view}",
   "range.all": "hemû",
   "range.missing": {
     "one": "⚠ {n} pel kêm e",

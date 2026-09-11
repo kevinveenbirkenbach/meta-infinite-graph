@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ei ole olemassa valittuna päivänä. Tämä näkymä lukee siitä, joten se näyttäisi työkopion eikä sitä tilaa.",
   "view.rolesWith": "Roolit · {view}",
+  "view.testsWith": "Testit · {view}",
   "range.all": "kaikki",
   "range.missing": {
     "one": "⚠ {n} tiedosto puuttuu",

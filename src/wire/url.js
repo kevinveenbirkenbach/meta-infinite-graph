@@ -44,7 +44,7 @@ export function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, ma
   const edgeDefault = checkedEdges();
   urlState
     .register('view', currentView, value => {
-      const input = document.getElementById(`view-${value}`);
+      const input = document.getElementById(`view-${value === 'tests' ? 'playwright' : value}`);
       if (input instanceof HTMLInputElement) input.checked = true;
     }, 'graph')
     .register('role', () => sel.value, value => {
@@ -65,7 +65,6 @@ export function restoreFromUrl({ sel, ranked, metaGraph, testsView, forkTree, ma
       forkTree.tags = value === 'true';
       byId('design-tags', HTMLInputElement).checked = forkTree.tags;
     }, 'false')
-    .register('kind', () => testsView.kind, value => testsView.setKind(value), 'playwright')
     .register('gate', () => testsView.gate, value => testsView.setGate(value), 'all')
     .register('repo', () => forkTree.root, value => {
       forkTree.setRoot(value);

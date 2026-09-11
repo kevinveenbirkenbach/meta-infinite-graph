@@ -1,13 +1,12 @@
 const { expect } = require('@playwright/test');
 
 // Bootstrap hides a .btn-check radio and puts its label on top, so the label
-// is the only clickable half of the control. Cosmos, Bond and Matrix sit in
-// the Roles menu, whose labels are not visible until it opens.
+// is the only clickable half of the control. The Roles and Tests menus keep
+// their labels hidden until their button opens them.
 async function pickView(page, view) {
   const label = page.locator(`label[for="view-${view}"]`);
-  if (!(await label.isVisible()) && await label.evaluate(el => Boolean(el.closest('.roles-menu')))) {
-    await page.locator('#btn-roles').click();
-  }
+  const menu = await label.evaluate(el => el.closest('.view-menu')?.previousElementSibling?.id || '');
+  if (menu && !(await label.isVisible())) await page.locator(`#${menu}`).click();
   await label.click();
 }
 

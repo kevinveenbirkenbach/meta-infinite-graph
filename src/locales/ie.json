@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} ne existe al selectet date. Ti-ci vise lee de it, dunc it vell monstrar li copie de labor in loc de ti statu.",
   "view.rolesWith": "Roles · {view}",
+  "view.testsWith": "Testes · {view}",
   "range.all": "omnis",
   "range.missing": {
     "one": "⚠ {n} file manca",

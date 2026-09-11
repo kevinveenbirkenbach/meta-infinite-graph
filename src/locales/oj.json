@@ -356,6 +356,7 @@
   },
   "views.missing": "{files} gaawiin ayaasinoon imaa giizhigad gaa-onaabanjigaadeg. O'ow waabanjigan imaa onji-agindamaagemagad, mii iw da-waabanda'iwe anokiiwin-naasaabibii'igan, gaawiin i'iw ezhiwebak.",
   "view.rolesWith": "Anokiiwinan · {view}",
+  "view.testsWith": "Gagwejitoowinan · {view}",
   "range.all": "gakina",
   "range.missing": {
     "one": "⚠ {n} mazina'igan wanishin",

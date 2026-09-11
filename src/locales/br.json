@@ -422,6 +422,7 @@
   },
   "views.missing": "N'eus ket eus {files} d'an deiziad dibabet. Ar gwel-mañ a lenn diwarnañ, neuze e tiskouezfe an eilad labour kentoc'h eget ar stad-se.",
   "view.rolesWith": "Rolloù · {view}",
+  "view.testsWith": "Amprouennoù · {view}",
   "range.all": "an holl",
   "range.missing": {
     "one": "⚠ {n} restr a vank",
