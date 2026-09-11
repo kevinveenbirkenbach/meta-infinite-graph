@@ -816,9 +816,9 @@ img.role-icon {
   font-weight: 600;
 }
 
-.feed-merged, .feed-success { color: var(--bs-success); }
-.feed-open, .feed-in_progress, .feed-queued { color: #fd7e14; }
-.feed-closed, .feed-failure, .feed-cancelled { color: var(--bs-danger); }
+.table td.feed-merged, .table td.feed-success { color: var(--bs-success); }
+.table td.feed-open, .table td.feed-in_progress, .table td.feed-queued { color: #fd7e14; }
+.table td.feed-closed, .table td.feed-failure, .table td.feed-cancelled { color: var(--bs-danger); }
 
 .range-label {
   font-size: 0.78rem;

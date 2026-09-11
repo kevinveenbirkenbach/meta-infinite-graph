@@ -164,6 +164,13 @@ test('the actions tab reads the runs and marks the conclusion', async ({ page })
   await expect.poll(() => rows.count(), { timeout: 30000 }).toBe(1);
   await expect(rows.first().locator('td.feed-mark')).toHaveText('success');
   await expect(rows.first().locator('td.feed-mark')).toHaveClass(/feed-success/);
+  expect(await rows.first().locator('td.feed-mark').evaluate(cell => {
+    const probe = document.body.appendChild(document.createElement('span'));
+    probe.style.color = 'var(--bs-success)';
+    const success = getComputedStyle(probe).color;
+    probe.remove();
+    return getComputedStyle(cell).color === success;
+  }), 'the table style must not paint over the conclusion').toBe(true);
   expect(calls.filter(one => one.endsWith('/actions/runs')))
     .toEqual(['/repos/infinito-nexus/core/actions/runs']);
 });
