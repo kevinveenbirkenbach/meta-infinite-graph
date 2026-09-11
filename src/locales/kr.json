@@ -174,20 +174,13 @@
     "other": "Sandilan {n} ngǝwu fork sǝdǝna; fal bǝdǝ, zurfilan lezǝro."
   },
   "forks.leaves": "sandilan fal dǝ ngǝwu fork sǝdǝnaba, kuru adǝ nizam samma.",
-  "forks.lazy": "Rashewa, tagwa-a commitbe hanyawa-a ma'ajiya bǝdǝnaga isǝna.",
+  "forks.lazy": "Ma'ajiya fal dannadǝ, rashewa adǝbe ngǝlan adǝ layi waktibe fallan nudǝro.",
   "forks.quota": "Saa'a adǝlan tambaya {limit}lan {remaining} ragena, {scope}.",
   "forks.scope.server": "serverbe tokena",
   "forks.scope.token": "tokennyia",
   "forks.scope.none": "tabbatarba",
   "forks.exhausted": "GitHub saa'a adǝlan tambayawa karena. Tacebe panellan token karadǝ iyaka 60-ga 5000-ro kuradǝro, au saa'a waltanaga wǝltǝ.",
   "forks.answered": "GitHub {status} amsǝna: {message}",
-  "forks.loading": "Kawudǝ …",
-  "forks.branches": "Rashewa",
-  "forks.versions": "Siganwa",
-  "forks.showForks": {
-    "one": "{repo}be fork {n} nunadǝ",
-    "other": "{repo}be forkwa {n} nunadǝ"
-  },
   "matrix.preset.overview": "Gani samma",
   "matrix.preset.galaxy": "Tauraruwa",
   "matrix.preset.ressources": "Kayawa",

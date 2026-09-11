@@ -174,20 +174,13 @@
     "other": "{n} ex eis rursus furcantur; aperi unam ut altius progrediaris."
   },
   "forks.leaves": "nulla ex eis rursus furcatur, ergo hoc est rete totum.",
-  "forks.lazy": "Rami, pittacia et semitae commissorum onerantur cum repositorium aperitur.",
+  "forks.lazy": "Preme repositorium, ut rami eius sub eo in eodem axe temporis ostendantur.",
   "forks.quota": "{remaining} ex {limit} petitionibus hac hora supersunt, {scope}.",
   "forks.scope.server": "per tesseram servitri",
   "forks.scope.token": "cum tua tessera",
   "forks.scope.none": "sine authenticatione",
   "forks.exhausted": "GitHub hac hora petitionibus caret. Tesseram in tabula columi adde ut limes a 60 ad 5000 tollatur, aut redi hora versa.",
   "forks.answered": "GitHub respondit {status}: {message}",
-  "forks.loading": "Oneratur …",
-  "forks.branches": "Rami",
-  "forks.versions": "Versiones",
-  "forks.showForks": {
-    "one": "{n} furcam ex {repo} ostendere",
-    "other": "{n} furcas ex {repo} ostendere"
-  },
   "matrix.preset.overview": "Conspectus",
   "matrix.preset.galaxy": "Galaxias",
   "matrix.preset.ressources": "Opes",

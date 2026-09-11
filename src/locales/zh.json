@@ -167,19 +167,13 @@
     "other": "其中 {n} 个又被分叉；打开一个即可深入浏览。"
   },
   "forks.leaves": "它们都没有再被分叉，这就是完整的网络。",
-  "forks.lazy": "分支、标签和提交通道会在打开仓库时加载。",
+  "forks.lazy": "点击某个仓库，即可在同一时间轴上于其下方显示它的分支。",
   "forks.quota": "本小时剩余 {remaining}/{limit} 次请求，{scope}。",
   "forks.scope.server": "使用服务器的令牌",
   "forks.scope.token": "使用你的令牌",
   "forks.scope.none": "未认证",
   "forks.exhausted": "GitHub 本小时的请求额度已用完。请在筛选面板中添加令牌，将上限从 60 提高到 5000，或等到下一个小时再来。",
   "forks.answered": "GitHub 返回 {status}：{message}",
-  "forks.loading": "正在加载 …",
-  "forks.branches": "分支",
-  "forks.versions": "版本",
-  "forks.showForks": {
-    "other": "显示 {repo} 的 {n} 个分叉"
-  },
   "matrix.preset.overview": "概览",
   "matrix.preset.galaxy": "星系",
   "matrix.preset.ressources": "资源",

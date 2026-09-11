@@ -174,20 +174,13 @@
     "other": "{n} daga cikinsu an sake fork ɗinsu; buɗe ɗaya don zurfafawa."
   },
   "forks.leaves": "babu ɗaya daga cikinsu da aka sake fork, don haka wannan ita ce dukan hanyar sadarwa.",
-  "forks.lazy": "Rassa, tambura da hanyoyin ƙaddamarwa suna lodawa idan an buɗe ma'ajiya.",
+  "forks.lazy": "Danna wata ma'ajiya don nuna rassanta a ƙarƙashinta a kan layin lokaci ɗaya.",
   "forks.quota": "Buƙatu {remaining} cikin {limit} sun rage a wannan sa'a, {scope}.",
   "forks.scope.server": "ta alamar shigar sabar",
   "forks.scope.token": "da alamar shigarka",
   "forks.scope.none": "ba tare da tabbatarwa ba",
   "forks.exhausted": "Buƙatun GitHub sun ƙare na wannan sa'a. Ƙara alamar shiga a allon tacewa don ɗaga iyaka daga 60 zuwa 5000, ko ka dawo bayan sa'a ta juya.",
   "forks.answered": "GitHub ya amsa da {status}: {message}",
-  "forks.loading": "Ana lodawa …",
-  "forks.branches": "Rassa",
-  "forks.versions": "Sigogi",
-  "forks.showForks": {
-    "one": "Nuna fork {n} na {repo}",
-    "other": "Nuna fork {n} na {repo}"
-  },
   "matrix.preset.overview": "Taƙaitaccen bayani",
   "matrix.preset.galaxy": "Taurari",
   "matrix.preset.ressources": "Albarkatu",

@@ -188,22 +188,13 @@
     "other": "{n} iš jų turi savo atšakų; atidarykite vieną, kad eitumėte giliau."
   },
   "forks.leaves": "nė viena iš jų neturi savo atšakų, todėl tai visas tinklas.",
-  "forks.lazy": "Šakos, žymės ir komitų takai įkeliami atidarius saugyklą.",
+  "forks.lazy": "Spustelėkite saugyklą, kad po ja toje pačioje laiko ašyje būtų parodytos jos šakos.",
   "forks.quota": "Šią valandą liko {remaining} iš {limit} užklausų, {scope}.",
   "forks.scope.server": "per serverio žetoną",
   "forks.scope.token": "su jūsų žetonu",
   "forks.scope.none": "be autentifikacijos",
   "forks.exhausted": "GitHub šią valandą nebeturi užklausų. Pridėkite žetoną filtrų skydelyje, kad limitas padidėtų nuo 60 iki 5000, arba grįžkite prasidėjus naujai valandai.",
   "forks.answered": "GitHub atsakė {status}: {message}",
-  "forks.loading": "Įkeliama …",
-  "forks.branches": "Šakos",
-  "forks.versions": "Versijos",
-  "forks.showForks": {
-    "one": "Rodyti {n} {repo} atšaką",
-    "few": "Rodyti {n} {repo} atšakas",
-    "many": "Rodyti {n} {repo} atšakos",
-    "other": "Rodyti {n} {repo} atšakų"
-  },
   "matrix.preset.overview": "Apžvalga",
   "matrix.preset.galaxy": "Galaktika",
   "matrix.preset.ressources": "Ištekliai",

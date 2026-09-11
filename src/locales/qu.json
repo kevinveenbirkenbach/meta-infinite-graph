@@ -174,20 +174,13 @@
     "other": "Paykunamanta {n} musuqmanta rakisqa; aswan ukhuman rinaykipaq hukta kichay."
   },
   "forks.leaves": "mana mayqinpas musuqmanta rakisqachu, chayrayku kaymi llapan llika.",
-  "forks.lazy": "K'allmakuna, sutichakuna, tikray ñankunapas waqaychana kichakuptin chaqnakunku.",
+  "forks.lazy": "Huk waqaychanapi ñit'iy, k'allmankunata uranpi kaq pacha chawpi siqillapi rikuchinaykipaq.",
   "forks.quota": "Kay horapi {limit} mañakuymanta {remaining} puchun, {scope}.",
   "forks.scope.server": "sirwidurpa tukinninwan",
   "forks.scope.token": "tukiniykiwan",
   "forks.scope.none": "mana riqsichikuspa",
   "forks.exhausted": "GitHub-qa kay horapaq mañakuykunata tukurqunña. Suysuna panelpi tukinta yapay patata 60-manta 5000-man huqarinaykipaq, utaq hora tikrakuptin kutimuy.",
   "forks.answered": "GitHub {status} nispa kutichirqan: {message}",
-  "forks.loading": "Chaqnachkan …",
-  "forks.branches": "K'allmakuna",
-  "forks.versions": "Wersyunkuna",
-  "forks.showForks": {
-    "one": "{repo}-pa {n} rakisqanta rikuchiy",
-    "other": "{repo}-pa {n} rakisqankunata rikuchiy"
-  },
   "matrix.preset.overview": "Hawa qhaway",
   "matrix.preset.galaxy": "Mayu",
   "matrix.preset.ressources": "Kapuykuna",

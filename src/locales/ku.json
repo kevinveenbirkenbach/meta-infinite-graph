@@ -174,20 +174,13 @@
     "other": "{n} ji wan dîsa hatine forkkirin; yekê veke da ku kûrtir biçî."
   },
   "forks.leaves": "ti yek ji wan dîsa nehatiye forkkirin, ji ber vê yekê ev tora temam e.",
-  "forks.lazy": "Şax, etîket û rêyên komîtan dema depoyek tê vekirin têne barkirin.",
+  "forks.lazy": "Li ser depoyekê bitikîne da ku şaxên wê li binê wê li ser heman teweriya demê werin nîşandan.",
   "forks.quota": "{remaining} ji {limit} daxwazan vê saetê mane, {scope}.",
   "forks.scope.server": "bi tokena serverê",
   "forks.scope.token": "bi tokena te",
   "forks.scope.none": "bê nasandin",
   "forks.exhausted": "Daxwazên GitHub ji bo vê saetê qediyane. Di panela parzûnê de tokenekê zêde bike da ku sînor ji 60 bibe 5000, an jî piştî ku saet diguhere vegere.",
   "forks.answered": "GitHub {status} bersiv da: {message}",
-  "forks.loading": "Tê barkirin …",
-  "forks.branches": "Şax",
-  "forks.versions": "Guherto",
-  "forks.showForks": {
-    "one": "{n} forka {repo} nîşan bide",
-    "other": "{n} forkên {repo} nîşan bide"
-  },
   "matrix.preset.overview": "Nêrîna giştî",
   "matrix.preset.galaxy": "Galaksî",
   "matrix.preset.ressources": "Çavkanî",

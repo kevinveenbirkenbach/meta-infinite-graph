@@ -174,20 +174,13 @@
     "other": "{n} d'ells tienen tamién forks; ubre-ne un pa ir más a fondo."
   },
   "forks.leaves": "garra d'ells no tiene forks, asinas que iste ye tot o ret.",
-  "forks.lazy": "As ramas, as etiquetas y os carrils de commits se cargan quan s'ubre un repositorio.",
+  "forks.lazy": "Fe clic en un repositorio pa amostrar as suyas ramas debaixo d'el en o mesmo exe de tiempo.",
   "forks.quota": "Quedan {remaining} de {limit} peticions ista hora, {scope}.",
   "forks.scope.server": "a traviés d'o token d'o servidor",
   "forks.scope.token": "con o tuyo token",
   "forks.scope.none": "sin autenticación",
   "forks.exhausted": "GitHub no tiene más peticions ta ista hora. Adhibe un token en o panel de filtro pa puyar o limite de 60 a 5000, u torna quan cambee a hora.",
   "forks.answered": "GitHub ha respondiu {status}: {message}",
-  "forks.loading": "Cargando …",
-  "forks.branches": "Ramas",
-  "forks.versions": "Versions",
-  "forks.showForks": {
-    "one": "Amostrar o {n} fork de {repo}",
-    "other": "Amostrar os {n} forks de {repo}"
-  },
   "matrix.preset.overview": "Vista cheneral",
   "matrix.preset.galaxy": "Galaxia",
   "matrix.preset.ressources": "Recursos",

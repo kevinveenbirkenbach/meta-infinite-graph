@@ -174,20 +174,13 @@
     "other": "Ndawde {n} aen caiq deng fork; hai aen ndeu bae ndaw laeg."
   },
   "forks.leaves": "ndawde mbouj miz aen lawz caiq deng fork, ndigah neix dwg daengx aen vangjloz.",
-  "forks.lazy": "Nga, biucim caeuq loh tijgyau youq seiz hai cangzgu cij gazcaiq.",
+  "forks.lazy": "Naenx aen cangzgu ndeu, couh ndaej youq laj de yienh nga de, youq diuz sienq seizgan doxdoengz.",
   "forks.quota": "{limit} baez cingjgouz aen cungdaeuz neix lw {remaining} baez, {scope}.",
   "forks.scope.server": "ginggvaq lingbaiz fuzvuzgi",
   "forks.scope.token": "yungh lingbaiz mwngz",
   "forks.scope.none": "mbouj yinzcwng",
   "forks.exhausted": "Cingjgouz GitHub aen cungdaeuz neix yungh liux. Youq aen banj genj gya lingbaiz, hanhdoh couh daj 60 swng daengz 5000, roxnaeuz caj aen cungdaeuz gvaq le caiq daeuj.",
   "forks.answered": "GitHub dap {status}: {message}",
-  "forks.loading": "Cingq gazcaiq …",
-  "forks.branches": "Nga",
-  "forks.versions": "Banjbonj",
-  "forks.showForks": {
-    "one": "Yienh {repo} {n} aen fork",
-    "other": "Yienh {repo} {n} aen fork"
-  },
   "matrix.preset.overview": "Cungjlanj",
   "matrix.preset.galaxy": "Ngaenzhoz",
   "matrix.preset.ressources": "Swhyenz",

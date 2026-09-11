@@ -167,19 +167,13 @@
     "other": "Ko e {n} 'o kinautolu kuo toe fōki; fakaava ha taha ke 'alu ki loto ange."
   },
   "forks.leaves": "'oku 'ikai ha taha 'o kinautolu kuo toe fōki, ko ia ko e kupenga kakato 'eni.",
-  "forks.lazy": "'Oku 'uta 'a e ngaahi va'a, fakailonga mo e ngaahi hala komiti 'i he taimi 'oku fakaava ai ha tauhi'anga.",
+  "forks.lazy": "Lomi'i ha tauhi'anga ke fakahā hono ngaahi va'a 'i lalo ai 'i he laine taimi tatau pē.",
   "forks.quota": "Toe 'a e kole 'e {remaining} 'o e {limit} 'i he houa ko 'eni, {scope}.",
   "forks.scope.server": "'o fou 'i he tōkeni 'a e sevā",
   "forks.scope.token": "mo ho'o tōkeni",
   "forks.scope.none": "ta'efakamo'oni'i",
   "forks.exhausted": "Kuo 'osi 'a e ngaahi kole 'a GitHub ki he houa ko 'eni. Tānaki ha tōkeni 'i he paneli fakasivi ke hiki 'a e ngata'anga mei he 60 ki he 5000, pe foki mai 'i he hili 'a e houa.",
   "forks.answered": "Na'e tali 'e GitHub 'a e {status}: {message}",
-  "forks.loading": "'Oku 'uta …",
-  "forks.branches": "Ngaahi Va'a",
-  "forks.versions": "Ngaahi Tatau",
-  "forks.showForks": {
-    "other": "Fakahā 'a e fōki 'e {n} 'o e {repo}"
-  },
   "matrix.preset.overview": "Vakai Fakalūkufua",
   "matrix.preset.galaxy": "Kaniva",
   "matrix.preset.ressources": "Ngaahi Koloa",

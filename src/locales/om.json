@@ -174,20 +174,13 @@
     "other": "Isaan keessaa {n} irra deebi'anii foorkii ta'aniiru; gad fagaachuuf tokko bani."
   },
   "forks.leaves": "isaan keessaa tokkollee irra deebi'ee foorkii hin taane, kanaaf kun networkii guutuu dha.",
-  "forks.lazy": "Dameewwan, taagiiwwanii fi karaaleen komiitii yeroo kuusaan banamu fe'amu.",
+  "forks.lazy": "Dameewwan isaa isa jalatti aksisii yeroo tokkicha irratti agarsiisuuf kuusaa tokko cuqaasi.",
   "forks.quota": "Sa'aatii kana gaaffiiwwan {limit} keessaa {remaining} hafaniiru, {scope}.",
   "forks.scope.server": "tookenii sarvarii keessaan",
   "forks.scope.token": "tookenii kee waliin",
   "forks.scope.none": "osoo hin mirkanaa'in",
   "forks.exhausted": "GitHub sa'aatii kanaaf gaaffiiwwan irraa dhumeera. Daangaa 60 irraa gara 5000 tti ol kaasuuf paanaalii calaltuu keessatti tookenii dabali, yookaan erga sa'aatiin jijjiiramee booda deebi'i.",
   "forks.answered": "GitHub {status} deebise: {message}",
-  "forks.loading": "Fe'amaa jira …",
-  "forks.branches": "Dameewwan",
-  "forks.versions": "Vershiniiwwan",
-  "forks.showForks": {
-    "one": "Foorkii {n} kan {repo} agarsiisi",
-    "other": "Foorkiiwwan {n} kan {repo} agarsiisi"
-  },
   "matrix.preset.overview": "Waliigala",
   "matrix.preset.galaxy": "Gaalaaksii",
   "matrix.preset.ressources": "Qabeenya",

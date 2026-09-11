@@ -188,22 +188,13 @@
     "other": "Chaidh {n} dhiubh fhorcadh a-rithist; fosgail fear gus a dhol nas doimhne."
   },
   "forks.leaves": "cha deach gin dhiubh fhorcadh a-rithist, mar sin seo an lìonra slàn.",
-  "forks.lazy": "Thèid meuran, tagaichean is slighean commit a luchdadh nuair a dh’fhosglar ionad-tasgaidh.",
+  "forks.lazy": "Briog air ionad-tasgaidh gus a mheuran a shealltainn fodha air an aon ais-ùine.",
   "forks.quota": "{remaining} à {limit} iarrtas air fhàgail san uair seo, {scope}.",
   "forks.scope.server": "tro thòcan an fhrithealaiche",
   "forks.scope.token": "leis an tòcan agad",
   "forks.scope.none": "gun dearbhadh",
   "forks.exhausted": "Tha GitHub às aonais iarrtasan airson na h-uarach seo. Cuir tòcan ris ann am panail na criathraige gus a’ chrìoch àrdachadh o 60 gu 5000, no till nuair a thionndaidheas an uair.",
   "forks.answered": "Fhreagair GitHub {status}: {message}",
-  "forks.loading": "A’ luchdadh …",
-  "forks.branches": "Meuran",
-  "forks.versions": "Tionndaidhean",
-  "forks.showForks": {
-    "one": "Seall an {n} forc de {repo}",
-    "two": "Seall an {n} fhorc de {repo}",
-    "few": "Seall na {n} forcaichean de {repo}",
-    "other": "Seall na {n} forc de {repo}"
-  },
   "matrix.preset.overview": "Foir-shealladh",
   "matrix.preset.galaxy": "Reul-chrios",
   "matrix.preset.ressources": "Goireasan",

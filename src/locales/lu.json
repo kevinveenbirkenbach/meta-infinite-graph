@@ -174,20 +174,13 @@
     "other": "{n} mu ayo afokwa monka; shitula umo pa kwenda mu bundu."
   },
   "forks.leaves": "kekudipo nansha umo mu ayo wafokwa monka, penepo buno bo buluñani bonso.",
-  "forks.lazy": "Misampi, matagi ne miseba ya makomiti ileta pa kushitula kilamino.",
+  "forks.lazy": "Kanda kilamino pa kumwesha misampi yakyo munshi mwakyo pa mulongo umo onka wa kitatyi.",
   "forks.quota": "Bipangulwa {remaining} pa {limit} bishele mu ino ola, {scope}.",
   "forks.scope.server": "na tokeni ya severe",
   "forks.scope.token": "na tokeni yobe",
   "forks.scope.none": "kwampikwa kwiyukanya",
   "forks.exhausted": "GitHub ibapwa bipangulwa mu ino ola. Bweja tokeni mu paneli ya kisenselo pa kutamija mwanda kufuma ku 60 kufika ku 5000, nansha alukila kupwa kwa ino ola.",
   "forks.answered": "GitHub yalondolola {status}: {message}",
-  "forks.loading": "Kuleta …",
-  "forks.branches": "Misampi",
-  "forks.versions": "Mavelesio",
-  "forks.showForks": {
-    "one": "Mwesha foko {n} ya {repo}",
-    "other": "Mwesha mafoko {n} a {repo}"
-  },
   "matrix.preset.overview": "Kimweneko kya byonso",
   "matrix.preset.galaxy": "Kibumbo kya tunyenyenye",
   "matrix.preset.ressources": "Bupeta",

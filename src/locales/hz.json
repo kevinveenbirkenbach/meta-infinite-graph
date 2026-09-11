@@ -174,20 +174,13 @@
     "other": "{n} mu zo za fokwa rukwao; patura imwe kutja u ye pehi."
   },
   "forks.leaves": "kape nimwe mu zo ya fokwa rukwao, nu ihi otjimbumba atjihe.",
-  "forks.lazy": "Ovitavi, ozotege nozondjira zozokomita vi yetwa tji mo patura ondjuwo yovitjangwa.",
+  "forks.lazy": "Kambura ondjuwo yovitjangwa kutja u muine ovitavi vyayo kehi yayo kondjira imwe yoruveze.",
   "forks.quota": "Omaningiriro {remaining} mu {limit} ye sewa mohora ndji, {scope}.",
   "forks.scope.server": "okupitira motokena yoserva",
   "forks.scope.token": "notokena yoye",
   "forks.scope.none": "nokuhina okutjiwikwa",
   "forks.exhausted": "GitHub ya manuka omaningiriro mohora ndji. Weza otokena motjirongo tjotjitoororo kutja u kurise omukuma okuza ku 60 nga ku 5000, poo ukaruka tji ya pita ohora.",
   "forks.answered": "GitHub ya zira {status}: {message}",
-  "forks.loading": "Tu yeta …",
-  "forks.branches": "Ovitavi",
-  "forks.versions": "Ozoverisa",
-  "forks.showForks": {
-    "one": "Raisa ofoka {n} ya {repo}",
-    "other": "Raisa ozofoka {n} za {repo}"
-  },
   "matrix.preset.overview": "Omutarero auhe",
   "matrix.preset.galaxy": "Ogalaksi",
   "matrix.preset.ressources": "Oviungurisiwa",

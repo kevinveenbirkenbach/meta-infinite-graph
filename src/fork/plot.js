@@ -23,7 +23,8 @@ export class ForkPlot {
   //   graph: a ForkGraph over the fetched repositories.
   //   width: the pixel width to lay the time axis out in.
   //   onPick: called with a commit when its dot is hovered.
-  static draw(graph, width, onPick) {
+  //   onToggle: called with a repository's full_name when its label is clicked.
+  static draw(graph, width, onPick, onToggle) {
     const span = graph.span();
     const rows = graph.rows();
     if (!span || !rows.length) return null;
@@ -62,16 +63,37 @@ export class ForkPlot {
 
     rows.forEach((row, index) => {
       svg.appendChild(ForkPlot._row(row, index, top, x, onPick));
-      const label = ForkPlot._el('text', {
-        class: `fork-label${row.parent ? '' : ' root'}`, x: 4, y: trunkY(index) + 3,
-      });
-      label.textContent = ForkPlot._short(row.id);
-      const title = ForkPlot._el('title');
-      title.textContent = row.id;
-      label.appendChild(title);
-      svg.appendChild(label);
+      svg.appendChild(ForkPlot._label(row, trunkY(index) + 3, onToggle));
     });
     return { svg, rows, height };
+  }
+
+  static _label(row, y, onToggle) {
+    const kind = row.branch ? ' branch' : row.parent ? '' : ' root';
+    const label = ForkPlot._el('text', { class: `fork-label${kind}`, x: row.branch ? 18 : 4, y });
+    label.textContent = row.branch
+      ? `↳ ${ForkPlot._clip(row.branch, 24)}`
+      : `${row.open ? '▾' : '▸'} ${ForkPlot._short(row.id)}`;
+    const title = ForkPlot._el('title');
+    title.textContent = row.id;
+    label.appendChild(title);
+    if (!row.branch) {
+      label.setAttribute('data-repo', row.id);
+      label.setAttribute('role', 'button');
+      label.setAttribute('tabindex', '0');
+      label.setAttribute('aria-expanded', String(Boolean(row.open)));
+      label.addEventListener('click', () => onToggle(row.id));
+      label.addEventListener('keydown', /** @param {KeyboardEvent} event */ event => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        onToggle(row.id);
+      });
+    }
+    return label;
+  }
+
+  static _clip(text, length) {
+    return text.length <= length ? text : `${text.slice(0, length - 1)}…`;
   }
 
   static _short(fullName) {

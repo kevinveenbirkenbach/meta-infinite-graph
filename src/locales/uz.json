@@ -174,20 +174,13 @@
     "other": "Ulardan {n} tasi yana fork qilingan; chuqurroq borish uchun birini oching."
   },
   "forks.leaves": "ularning hech biri yana fork qilinmagan, demak bu butun tarmoq.",
-  "forks.lazy": "Tarmoqlar, teglar va kommit yo‘laklari repozitoriy ochilganda yuklanadi.",
+  "forks.lazy": "Repozitoriyni bosing, uning tarmoqlari xuddi shu vaqt o‘qida uning ostida ko‘rsatiladi.",
   "forks.quota": "Bu soatda {limit} ta so‘rovdan {remaining} tasi qoldi, {scope}.",
   "forks.scope.server": "server tokeni orqali",
   "forks.scope.token": "sizning tokeningiz bilan",
   "forks.scope.none": "autentifikatsiyasiz",
   "forks.exhausted": "GitHub’da bu soat uchun so‘rovlar tugadi. Limitni 60 dan 5000 gacha oshirish uchun filtr panelida token qo‘shing yoki soat almashgach qayting.",
   "forks.answered": "GitHub {status} deb javob berdi: {message}",
-  "forks.loading": "Yuklanmoqda …",
-  "forks.branches": "Tarmoqlar",
-  "forks.versions": "Versiyalar",
-  "forks.showForks": {
-    "one": "{repo} ning {n} ta forkini ko‘rsatish",
-    "other": "{repo} ning {n} ta forkini ko‘rsatish"
-  },
   "matrix.preset.overview": "Umumiy ko‘rinish",
   "matrix.preset.galaxy": "Galaktika",
   "matrix.preset.ressources": "Resurslar",

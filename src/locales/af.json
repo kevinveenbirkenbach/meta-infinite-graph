@@ -174,20 +174,13 @@
     "other": "{n} daarvan is weer gevurk; open een om dieper te gaan."
   },
   "forks.leaves": "geeneen daarvan is weer gevurk nie, so dit is die hele netwerk.",
-  "forks.lazy": "Takke, etikette en die commitbane laai wanneer 'n bewaarplek oopgemaak word.",
+  "forks.lazy": "Klik op 'n bewaarplek om sy takke daaronder op dieselfde tydas te wys.",
   "forks.quota": "{remaining} van {limit} versoeke oor vir hierdie uur, {scope}.",
   "forks.scope.server": "deur die bediener se token",
   "forks.scope.token": "met jou token",
   "forks.scope.none": "ongeverifieer",
   "forks.exhausted": "GitHub se versoeke vir hierdie uur is op. Voeg 'n token in die filterpaneel by om die limiet van 60 na 5000 te verhoog, of kom terug wanneer die uur om is.",
   "forks.answered": "GitHub het {status} geantwoord: {message}",
-  "forks.loading": "Laai …",
-  "forks.branches": "Takke",
-  "forks.versions": "Weergawes",
-  "forks.showForks": {
-    "one": "Wys die {n} vurk van {repo}",
-    "other": "Wys die {n} vurke van {repo}"
-  },
   "matrix.preset.overview": "Oorsig",
   "matrix.preset.galaxy": "Sterrestelsel",
   "matrix.preset.ressources": "Hulpbronne",

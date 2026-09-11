@@ -174,20 +174,13 @@
     "other": "{n} daarvan zijn opnieuw geforkt; open er een om dieper te gaan."
   },
   "forks.leaves": "geen daarvan is opnieuw geforkt, dus dit is het hele netwerk.",
-  "forks.lazy": "Branches, tags en de commitbanen laden wanneer een repository wordt geopend.",
+  "forks.lazy": "Klik op een repository om de branches ervan eronder op dezelfde tijdas te tonen.",
   "forks.quota": "{remaining} van {limit} verzoeken over dit uur, {scope}.",
   "forks.scope.server": "via het token van de server",
   "forks.scope.token": "met je token",
   "forks.scope.none": "niet geauthenticeerd",
   "forks.exhausted": "GitHub heeft voor dit uur geen verzoeken meer. Voeg een token toe in het filterpaneel om de limiet van 60 naar 5000 te verhogen, of kom terug na het hele uur.",
   "forks.answered": "GitHub antwoordde {status}: {message}",
-  "forks.loading": "Laden …",
-  "forks.branches": "Branches",
-  "forks.versions": "Versies",
-  "forks.showForks": {
-    "one": "De {n} fork van {repo} tonen",
-    "other": "De {n} forks van {repo} tonen"
-  },
   "matrix.preset.overview": "Overzicht",
   "matrix.preset.galaxy": "Sterrenstelsel",
   "matrix.preset.ressources": "Middelen",

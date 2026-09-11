@@ -174,20 +174,13 @@
     "other": "{n} prej tyre kanë fork-e të veta; hap njërin për të shkuar më thellë."
   },
   "forks.leaves": "asnjëri prej tyre nuk ka fork-e të veta, ndaj ky është i gjithë rrjeti.",
-  "forks.lazy": "Degët, etiketat dhe korsitë e commit-eve ngarkohen kur hapet një depo.",
+  "forks.lazy": "Kliko një depo për të shfaqur degët e saj poshtë saj në të njëjtin bosht kohor.",
   "forks.quota": "Kanë mbetur {remaining} nga {limit} kërkesa këtë orë, {scope}.",
   "forks.scope.server": "përmes token-it të serverit",
   "forks.scope.token": "me token-in tuaj",
   "forks.scope.none": "pa identifikim",
   "forks.exhausted": "GitHub-it i kanë mbaruar kërkesat për këtë orë. Shto një token në panelin e filtrit për ta ngritur kufirin nga 60 në 5000, ose kthehu pasi të kalojë ora.",
   "forks.answered": "GitHub u përgjigj {status}: {message}",
-  "forks.loading": "Po ngarkohet …",
-  "forks.branches": "Degët",
-  "forks.versions": "Versionet",
-  "forks.showForks": {
-    "one": "Shfaq {n} fork të {repo}",
-    "other": "Shfaq {n} fork-et e {repo}"
-  },
   "matrix.preset.overview": "Pasqyrë e përgjithshme",
   "matrix.preset.galaxy": "Galaktika",
   "matrix.preset.ressources": "Resurset",

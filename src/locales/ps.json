@@ -174,20 +174,13 @@
     "other": "له دوی څخه {n} بیا فورک شوي؛ د ژورو تګ لپاره یو پرانیزئ."
   },
   "forks.leaves": "له دوی څخه هېڅ یو بیا نه دی فورک شوی، نو دا ټوله شبکه ده.",
-  "forks.lazy": "څانګې، ټګونه او د کمېټونو لیکې هغه وخت پورته کېږي چې زېرمتون پرانیستل شي.",
+  "forks.lazy": "پر یو زېرمتون کلیک وکړئ ترڅو یې څانګې د هغه لاندې پر همغه د وخت محور ښکاره شي.",
   "forks.quota": "په دې ساعت کې له {limit} غوښتنو څخه {remaining} پاتې، {scope}.",
   "forks.scope.server": "د سرور د ټوکن له لارې",
   "forks.scope.token": "ستاسو د ټوکن سره",
   "forks.scope.none": "بې تصدیقه",
   "forks.exhausted": "د دې ساعت لپاره د GitHub غوښتنې پای ته رسېدلې. د چاڼګر په تخته کې ټوکن ورزیات کړئ ترڅو حد له 60 څخه 5000 ته لوړ شي، یا د نوي ساعت له پیل وروسته بېرته راشئ.",
   "forks.answered": "GitHub ځواب ورکړ {status}: {message}",
-  "forks.loading": "پورته کېږي …",
-  "forks.branches": "څانګې",
-  "forks.versions": "نسخې",
-  "forks.showForks": {
-    "one": "د {repo} {n} فورک وښیئ",
-    "other": "د {repo} {n} فورکونه وښیئ"
-  },
   "matrix.preset.overview": "لنډه کتنه",
   "matrix.preset.galaxy": "کهکشان",
   "matrix.preset.ressources": "سرچینې",

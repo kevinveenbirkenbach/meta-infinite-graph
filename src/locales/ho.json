@@ -174,20 +174,13 @@
     "other": "Idia huanai {n} be lou idia fok; ta kehoa lalona lao totona."
   },
   "forks.leaves": "idia ta be lou idia fok lasi, unai dainai inai be netiwek ibounai.",
-  "forks.lazy": "Rigina, tag bona komiti dala be stoa oi kehoa neganai idia mai.",
+  "forks.lazy": "Stoa ta kilik, ena rigina be ena henunai nega laina tamona dekenai hahedinaraia totona.",
   "forks.quota": "Noinoi {remaining} {limit} amo inai hora ai idia orea lasi, {scope}.",
   "forks.scope.server": "server ena tokeni amo",
   "forks.scope.token": "oiemu tokeni amo",
   "forks.scope.none": "ladana hamomokania lasi",
   "forks.exhausted": "GitHub ena noinoi be inai hora ai idia ore. Filta kahana ai tokeni atoa hetoa habadaia totona 60 amo 5000 ela bona, o hora ia hanaia murinai lou oi mai.",
   "forks.answered": "GitHub ia haere {status}: {message}",
-  "forks.loading": "Abia noho …",
-  "forks.branches": "Rigina",
-  "forks.versions": "Vesen",
-  "forks.showForks": {
-    "one": "{repo} ena fok {n} hahedinaraia",
-    "other": "{repo} ena fok {n} hahedinaraia"
-  },
   "matrix.preset.overview": "Ibounai itaia",
   "matrix.preset.galaxy": "Hisiu hutuma",
   "matrix.preset.ressources": "Kohu",

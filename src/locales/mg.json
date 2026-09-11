@@ -174,20 +174,13 @@
     "other": "{n} amin'izy ireo no nofork-ina indray; sokafy ny iray mba handeha lalina kokoa."
   },
   "forks.leaves": "tsy nisy nofork-ina indray izy ireo, ka ity no tambajotra manontolo.",
-  "forks.lazy": "Ny sampana, ny tag ary ny lalan'ny commit dia alaina rehefa misokatra ny tahiry.",
+  "forks.lazy": "Tsindrio ny tahiry iray mba haseho eo ambaniny ny sampany, amin'ny axe ara-potoana iray ihany.",
   "forks.quota": "Fangatahana {remaining} amin'ny {limit} sisa amin'ity ora ity, {scope}.",
   "forks.scope.server": "amin'ny alalan'ny tokenan'ny mpizara",
   "forks.scope.token": "miaraka amin'ny tokenanao",
   "forks.scope.none": "tsy voamarina",
   "forks.exhausted": "Lany ny fangatahana an'i GitHub amin'ity ora ity. Ampio tokena ao amin'ny tontonana sivana mba hampiakarana ny fetra avy amin'ny 60 ho 5000, na miverena rehefa miova ny ora.",
   "forks.answered": "Namaly {status} i GitHub: {message}",
-  "forks.loading": "Maka …",
-  "forks.branches": "Sampana",
-  "forks.versions": "Dikan-teny",
-  "forks.showForks": {
-    "one": "Asehoy ny fork {n} an'ny {repo}",
-    "other": "Asehoy ny fork {n} an'ny {repo}"
-  },
   "matrix.preset.overview": "Topimaso",
   "matrix.preset.galaxy": "Vahindanitra",
   "matrix.preset.ressources": "Loharano",

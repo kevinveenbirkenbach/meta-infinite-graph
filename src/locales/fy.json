@@ -174,20 +174,13 @@
     "other": "{n} dêrfan binne wer forke; iepenje der ien om djipper te gean."
   },
   "forks.leaves": "gjinien dêrfan is wer forke, dus dit is it hiele netwurk.",
-  "forks.lazy": "Tûken, tags en de commitbanen wurde laden as in repository iepene wurdt.",
+  "forks.lazy": "Klik op in repository om de tûken dêrfan derûnder op deselde tiidas te sjen.",
   "forks.quota": "{remaining} fan {limit} fersiken oer dizze oere, {scope}.",
   "forks.scope.server": "fia de token fan de tsjinner",
   "forks.scope.token": "mei jo token",
   "forks.scope.none": "net oanmeld",
   "forks.exhausted": "GitHub hat foar dizze oere gjin fersiken mear. Foegje in token ta yn it filterpaniel om de limyt fan 60 nei 5000 te ferheegjen, of kom werom as de oere om is.",
   "forks.answered": "GitHub antwurde {status}: {message}",
-  "forks.loading": "Lade …",
-  "forks.branches": "Tûken",
-  "forks.versions": "Ferzjes",
-  "forks.showForks": {
-    "one": "De {n} fork fan {repo} sjen litte",
-    "other": "De {n} forks fan {repo} sjen litte"
-  },
   "matrix.preset.overview": "Oersjoch",
   "matrix.preset.galaxy": "Stjerrestelsel",
   "matrix.preset.ressources": "Helpboarnen",

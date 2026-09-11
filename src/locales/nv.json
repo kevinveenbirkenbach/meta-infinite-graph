@@ -174,20 +174,13 @@
     "other": "{n} éí ałdó bifórk dahólǫ́; tʼááłáʼí yiyiiłtą́ǫ́ʼgo ałdó yaago díníyá."
   },
   "forks.leaves": "tʼááłáʼí ałdó bifórk ádin, áko díí éí fórk bitsin tʼáá ałtsoh.",
-  "forks.lazy": "Tsin bigaan, bee ééhózinígíí dóó kámit bitiin éí rébo yiyiiłtą́ągo nahaltʼį́.",
+  "forks.lazy": "Rébo bikʼi níʼaah, índa bitsin bigaan bitłʼááhdi tʼááłáʼí atiin bikááʼgi ííshjání ádoolnííł.",
   "forks.quota": "Díí ahéeʼílkid biiʼ {limit} bitahdę́ę́ʼ {remaining} nídaʼídíłkid chʼééhóyá, {scope}.",
   "forks.scope.server": "sérver bitókin bee",
   "forks.scope.token": "nitókin bee",
   "forks.scope.none": "doo bééhózin da",
   "forks.exhausted": "Díí ahéeʼílkid biiʼ GitHub bá nídaʼídíłkid ádin silįįʼ. 60 dę́ę́ʼ 5000 góó deigo ádoolnííł biniiyé hadaʼdiitʼį́ biiʼ tókin bił ahííníłʼą́, doodago ahéeʼílkid nááhoolzhiizhgo nínáádíídááł.",
   "forks.answered": "GitHub {status} néidiitʼą́: {message}",
-  "forks.loading": "Nahaltʼį́ …",
-  "forks.branches": "Tsin bigaan",
-  "forks.versions": "Ániidí ádaalyaaígíí",
-  "forks.showForks": {
-    "one": "{repo} bifórk {n} ííshjání ádíílííł",
-    "other": "{repo} bifórk {n} tʼáá ałtsoh ííshjání ádíílííł"
-  },
   "matrix.preset.overview": "Tʼáá ałtsoh bikʼi déésʼį́į́ʼ",
   "matrix.preset.galaxy": "Yikáísdáhí",
   "matrix.preset.ressources": "Bee hólǫ́",

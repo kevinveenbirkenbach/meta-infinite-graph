@@ -174,20 +174,13 @@
     "other": "ইয়াৰে {n}টা পুনৰ ফৰ্ক কৰা হৈছে; গভীৰলৈ যাবলৈ এটা খোলক।"
   },
   "forks.leaves": "ইয়াৰে কোনোটোৱেই পুনৰ ফৰ্ক কৰা হোৱা নাই, গতিকে এয়াই সম্পূৰ্ণ নেটৱৰ্ক।",
-  "forks.lazy": "ৰিপজিটৰি খোলাৰ সময়ত শাখা, টেগ আৰু কমিট লেন লোড হয়।",
+  "forks.lazy": "কোনো ৰিপজিটৰিৰ শাখাসমূহ তাৰ তলত একেটা সময় অক্ষত দেখুৱাবলৈ সেইটোত ক্লিক কৰক।",
   "forks.quota": "এই ঘণ্টাত {limit}টা অনুৰোধৰ ভিতৰত {remaining}টা বাকী, {scope}।",
   "forks.scope.server": "ছাৰ্ভাৰৰ টোকেনৰ জৰিয়তে",
   "forks.scope.token": "আপোনাৰ টোকেনৰ সৈতে",
   "forks.scope.none": "প্ৰমাণীকৰণ অবিহনে",
   "forks.exhausted": "এই ঘণ্টাৰ বাবে GitHub ৰ অনুৰোধ শেষ। সীমা 60 ৰ পৰা 5000 লৈ বঢ়াবলৈ ফিল্টাৰ পেনেলত এটা টোকেন যোগ কৰক, বা নতুন ঘণ্টা আৰম্ভ হোৱাৰ পিছত উভতি আহক।",
   "forks.answered": "GitHub এ {status} উত্তৰ দিলে: {message}",
-  "forks.loading": "লোড হৈ আছে …",
-  "forks.branches": "শাখা",
-  "forks.versions": "সংস্কৰণ",
-  "forks.showForks": {
-    "one": "{repo} ৰ {n}টা ফৰ্ক দেখুৱাওক",
-    "other": "{repo} ৰ {n}টা ফৰ্ক দেখুৱাওক"
-  },
   "matrix.preset.overview": "অৱলোকন",
   "matrix.preset.galaxy": "ছায়াপথ",
   "matrix.preset.ressources": "সম্পদ",

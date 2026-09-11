@@ -181,21 +181,13 @@
     "other": "{n} מהם מפוצלים שוב; פתחו אחד כדי להעמיק."
   },
   "forks.leaves": "אף אחד מהם אינו מפוצל שוב, כך שזו כל הרשת.",
-  "forks.lazy": "ענפים, תגיות ונתיבי הקומיטים נטענים כשפותחים מאגר.",
+  "forks.lazy": "לחצו על מאגר כדי להציג את הענפים שלו מתחתיו על אותו ציר זמן.",
   "forks.quota": "נותרו {remaining} מתוך {limit} בקשות לשעה הזו, {scope}.",
   "forks.scope.server": "דרך האסימון של השרת",
   "forks.scope.token": "עם האסימון שלכם",
   "forks.scope.none": "ללא אימות",
   "forks.exhausted": "ל־GitHub נגמרו הבקשות לשעה הזו. הוסיפו אסימון בחלונית הסינון כדי להעלות את המגבלה מ־60 ל־5000, או חזרו אחרי שהשעה מתחלפת.",
   "forks.answered": "GitHub השיב {status}: {message}",
-  "forks.loading": "טוען …",
-  "forks.branches": "ענפים",
-  "forks.versions": "גרסאות",
-  "forks.showForks": {
-    "one": "הצגת הפיצול האחד של {repo}",
-    "two": "הצגת {n} הפיצולים של {repo}",
-    "other": "הצגת {n} הפיצולים של {repo}"
-  },
   "matrix.preset.overview": "סקירה",
   "matrix.preset.galaxy": "גלקסיה",
   "matrix.preset.ressources": "משאבים",

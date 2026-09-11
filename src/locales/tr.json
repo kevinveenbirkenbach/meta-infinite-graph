@@ -174,20 +174,13 @@
     "other": "Bunlardan {n} tanesi yeniden fork'lanmış; daha derine inmek için birini açın."
   },
   "forks.leaves": "hiçbiri yeniden fork'lanmamış, yani tüm ağ bu.",
-  "forks.lazy": "Dallar, etiketler ve commit şeritleri bir depo açıldığında yüklenir.",
+  "forks.lazy": "Dallarını aynı zaman ekseninde altında göstermek için bir depoya tıklayın.",
   "forks.quota": "Bu saat için {limit} istekten {remaining} tanesi kaldı, {scope}.",
   "forks.scope.server": "sunucunun token'ı üzerinden",
   "forks.scope.token": "sizin token'ınızla",
   "forks.scope.none": "kimlik doğrulamasız",
   "forks.exhausted": "GitHub'ın bu saatlik istekleri tükendi. Sınırı 60'tan 5000'e çıkarmak için filtre panelinde bir token ekleyin ya da saat dönünce tekrar gelin.",
   "forks.answered": "GitHub {status} yanıtını verdi: {message}",
-  "forks.loading": "Yükleniyor …",
-  "forks.branches": "Dallar",
-  "forks.versions": "Sürümler",
-  "forks.showForks": {
-    "one": "{repo} deposunun {n} fork'unu göster",
-    "other": "{repo} deposunun {n} fork'unu göster"
-  },
   "matrix.preset.overview": "Genel bakış",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Kaynaklar",

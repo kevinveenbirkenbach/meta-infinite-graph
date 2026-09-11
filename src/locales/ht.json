@@ -174,20 +174,13 @@
     "other": "{n} ladan yo fòke ankò; louvri youn pou desann pi fon."
   },
   "forks.leaves": "okenn nan yo pa fòke ankò, kidonk sa a se tout rezo a.",
-  "forks.lazy": "Branch, etikèt ak liy komit yo chaje lè yo louvri yon depo.",
+  "forks.lazy": "Klike sou yon depo pou w wè branch li yo anba l sou menm aks tan an.",
   "forks.quota": "{remaining} sou {limit} demann ki rete pou èdtan sa a, {scope}.",
   "forks.scope.server": "atravè jeton sèvè a",
   "forks.scope.token": "ak jeton ou",
   "forks.scope.none": "san otantifikasyon",
   "forks.exhausted": "GitHub pa gen demann ankò pou èdtan sa a. Ajoute yon jeton nan panèl filtè a pou monte limit la soti 60 rive 5000, oswa tounen lè èdtan an chanje.",
   "forks.answered": "GitHub reponn {status}: {message}",
-  "forks.loading": "Ap chaje …",
-  "forks.branches": "Branch yo",
-  "forks.versions": "Vèsyon yo",
-  "forks.showForks": {
-    "one": "Montre {n} fòk {repo} a",
-    "other": "Montre {n} fòk {repo} yo"
-  },
   "matrix.preset.overview": "Apèsi",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Resous",

@@ -174,20 +174,13 @@
     "other": "{n} mu yawu me kabuka diaka; kangula mosi sambu na kukwenda na ntama."
   },
   "forks.leaves": "ata mosi ve mu yawu me kabuka diaka, yo yina yayi kele dikanda ya mvimba.",
-  "forks.lazy": "Matavi, bitiketi ti nzila ya bakomiti ke nata ntangu nzo ya bima ke kangulama.",
+  "forks.lazy": "Bula nzo ya bima sambu na kumonisa matavi na yo na nsi na yo na nsinga mosi ya ntangu.",
   "forks.quota": "Bandombolo {remaining} na {limit} me bikala na ngunga yayi, {scope}.",
   "forks.scope.server": "na nzila ya tokeni ya sevele",
   "forks.scope.token": "ti tokeni na nge",
   "forks.scope.none": "kukonda kuzabana",
   "forks.exhausted": "GitHub me manisa bandombolo ya ngunga yayi. Yika tokeni mu kitini kya nsungula sambu na kunangula ndilu katuka 60 tii 5000, to vutuka ntangu ngunga ya mpa ke yantika.",
   "forks.answered": "GitHub me vutula {status}: {message}",
-  "forks.loading": "Ke nata …",
-  "forks.branches": "Matavi",
-  "forks.versions": "Bavelesio",
-  "forks.showForks": {
-    "one": "Songa nkabu {n} ya {repo}",
-    "other": "Songa minkabu {n} ya {repo}"
-  },
   "matrix.preset.overview": "Kumona yonso",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Bima bya kusadila",

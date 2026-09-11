@@ -174,20 +174,13 @@
     "other": "{n} muri zo zongeye gukorwa fork; ugurure imwe kugira ugende kure."
   },
   "forks.leaves": "nta na imwe muri zo yongeye gukorwa fork, rero uru ni urusobe rwose.",
-  "forks.lazy": "Amashami, ibirango n'inzira z'amahinduka birapakirwa igihe ububiko bwuguruwe.",
+  "forks.lazy": "Kanda ku bubiko kugira werekane amashami yabwo munsi yabwo ku murongo umwe w'igihe.",
   "forks.quota": "Ubusabe {remaining} kuri {limit} busigaye muri iyi saha, {scope}.",
   "forks.scope.server": "biciye kuri tokeni ya seriveri",
   "forks.scope.token": "na tokeni yawe",
   "forks.scope.none": "hatemejwe",
   "forks.exhausted": "GitHub yaheze ubusabe bw'iyi saha. Ongeramwo tokeni mu gice c'akayunguruzo kugira uduze urubibe kuva kuri 60 gushika 5000, canke ugaruke isaha imaze guhinduka.",
   "forks.answered": "GitHub yishuye {status}: {message}",
-  "forks.loading": "Biriko birapakirwa …",
-  "forks.branches": "Amashami",
-  "forks.versions": "Verisiyo",
-  "forks.showForks": {
-    "one": "Erekana fork {n} ya {repo}",
-    "other": "Erekana fork {n} za {repo}"
-  },
   "matrix.preset.overview": "Incamake",
   "matrix.preset.galaxy": "Galagisi",
   "matrix.preset.ressources": "Amikoro",

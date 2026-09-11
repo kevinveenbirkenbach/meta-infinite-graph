@@ -174,20 +174,13 @@
     "other": "{n} bok ian bok; obwen ãdo bwe iyo dib."
   },
   "forks.leaves": "bok dogin eko ian bok, ma netwok ñaga dogin.",
-  "forks.lazy": "Brenj, tak ma rain komit rod ijeiji obwen ribo.",
+  "forks.lazy": "Kirik ribo bwe jo brenj ijeiji tan, ijeiji aktit in taim ãdo.",
   "forks.quota": "{remaining} ijeiji {limit} rikwet ijeiji aua ñaga, {scope}.",
   "forks.scope.server": "ma token tewa",
   "forks.scope.token": "ma token am",
   "forks.scope.none": "eko otentik",
   "forks.exhausted": "GitHub eko rikwet ijeiji aua ñaga. Beit token ijeiji panor pirta bwe rimit 60 iyo 5000, me ri ijeiji aua omo.",
   "forks.answered": "GitHub ãnter {status}: {message}",
-  "forks.loading": "Rod …",
-  "forks.branches": "Brenj",
-  "forks.versions": "Bãjen",
-  "forks.showForks": {
-    "one": "Jo {n} bok ijeiji {repo}",
-    "other": "Jo {n} bok ijeiji {repo}"
-  },
   "matrix.preset.overview": "Obabiu",
   "matrix.preset.galaxy": "Garaki",
   "matrix.preset.ressources": "Ritot",

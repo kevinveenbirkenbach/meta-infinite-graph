@@ -174,20 +174,13 @@
     "other": "{n} de oli esas itere forkita; apertez un por irar plu profunde."
   },
   "forks.leaves": "nula de oli esas itere forkita, do co esas la tota reto.",
-  "forks.lazy": "Branchi, etiketi e komiso-voyi kargesas kande depozeyo apertesas.",
+  "forks.lazy": "Kliktez depozeyo por montrar lua branchi sub ol sur la sama tempo-axo.",
   "forks.quota": "{remaining} de {limit} demandi restas en ca horo, {scope}.",
   "forks.scope.server": "tra la tokeno di la servilo",
   "forks.scope.token": "kun vua tokeno",
   "forks.scope.none": "sen autentikigo",
   "forks.exhausted": "GitHub ne plus havas demandi por ca horo. Adjuntez tokeno en la filtrilo-panelo por altigar la limito de 60 til 5000, o retrovenez pos ke la horo chanjas.",
   "forks.answered": "GitHub respondis {status}: {message}",
-  "forks.loading": "Kargante …",
-  "forks.branches": "Branchi",
-  "forks.versions": "Versioni",
-  "forks.showForks": {
-    "one": "Montrar la {n} forko di {repo}",
-    "other": "Montrar la {n} forki di {repo}"
-  },
   "matrix.preset.overview": "Superrigardo",
   "matrix.preset.galaxy": "Galaxio",
   "matrix.preset.ressources": "Resursi",

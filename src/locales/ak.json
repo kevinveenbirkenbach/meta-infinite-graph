@@ -174,20 +174,13 @@
     "other": "Wɔn mu {n} wɔasan afork wɔn; bue baako na kɔ mu dɔɔ."
   },
   "forks.leaves": "wɔn mu biara wɔnsan nfork no, enti yei ne ntontan no nyinaa.",
-  "forks.lazy": "Nnubaa, tag ne commit akwan ba bere a wobue akorae bi.",
+  "forks.lazy": "Mia akorae bi so na ɛda ne nnubaa adi wɔ n'ase wɔ bere nsensanee koro no ara so.",
   "forks.quota": "Abisadeɛ {remaining} wɔ {limit} mu aka wɔ dɔnhwerew yi mu, {scope}.",
   "forks.scope.server": "ɛnam server no token so",
   "forks.scope.token": "ɛnam wo token so",
   "forks.scope.none": "a wɔnnye nto mu",
   "forks.exhausted": "GitHub abisadeɛ asa wɔ dɔnhwerew yi mu. Fa token ka yiyi panel no ho na anohyeto no firi 60 kɔ 5000, anaa san bra bere a dɔnhwerew no asesa.",
   "forks.answered": "GitHub buaa {status}: {message}",
-  "forks.loading": "Ɛde reba …",
-  "forks.branches": "Nnubaa",
-  "forks.versions": "Nsɛsoɔ",
-  "forks.showForks": {
-    "one": "Kyerɛ {repo} fork {n} no",
-    "other": "Kyerɛ {repo} fork {n} no"
-  },
   "matrix.preset.overview": "Nhwɛmu",
   "matrix.preset.galaxy": "Nsoromma kuo",
   "matrix.preset.ressources": "Ahonyade",

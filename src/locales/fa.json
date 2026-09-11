@@ -174,20 +174,13 @@
     "other": "{n} مورد از آن‌ها دوباره فورک شده‌اند؛ یکی را باز کنید تا عمیق‌تر بروید."
   },
   "forks.leaves": "هیچ‌کدام دوباره فورک نشده‌اند، پس این کل شبکه است.",
-  "forks.lazy": "شاخه‌ها، برچسب‌ها و مسیرهای کامیت هنگام باز کردن مخزن بارگذاری می‌شوند.",
+  "forks.lazy": "روی یک مخزن کلیک کنید تا شاخه‌هایش زیر آن روی همان محور زمانی نمایش داده شوند.",
   "forks.quota": "{remaining} از {limit} درخواست در این ساعت باقی مانده، {scope}.",
   "forks.scope.server": "با توکن سرور",
   "forks.scope.token": "با توکن شما",
   "forks.scope.none": "بدون احراز هویت",
   "forks.exhausted": "درخواست‌های GitHub برای این ساعت تمام شده است. در پنل فیلتر توکن بیفزایید تا سقف از ۶۰ به ۵۰۰۰ برسد، یا پس از گذشت ساعت برگردید.",
   "forks.answered": "GitHub پاسخ داد {status}: {message}",
-  "forks.loading": "در حال بارگذاری …",
-  "forks.branches": "شاخه‌ها",
-  "forks.versions": "نسخه‌ها",
-  "forks.showForks": {
-    "one": "نمایش {n} فورک {repo}",
-    "other": "نمایش {n} فورک {repo}"
-  },
   "matrix.preset.overview": "نمای کلی",
   "matrix.preset.galaxy": "کهکشان",
   "matrix.preset.ressources": "منابع",

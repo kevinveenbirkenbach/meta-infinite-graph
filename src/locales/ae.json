@@ -174,20 +174,13 @@
     "other": "{n} aēšąm pasca vīsaxā̊; vīvara aēuuəm, jafrō aoi jasāi."
   },
   "forks.leaves": "naēciš aēšąm pasca vīsaxō, aδa aēm vīspa tāna.",
-  "forks.lazy": "Frasparəγā̊, paiti.daxštā, paθō niδātanąmca barəṇte yat̰ haṇjamana vīvarəta.",
+  "forks.lazy": "Haṇjamanəm janaiia, yaθa aŋhe frasparəγā̊ aδairi paiti hama zruuanō aksa daršaiiā̊.",
   "forks.quota": "{remaining} haca {limit} yānā̊ aparō ahmi ratuuō, {scope}.",
   "forks.scope.server": "tarō aiβiiāŋhanəm rāitārō",
   "forks.scope.token": "mat θβōi aiβiiāŋhanā",
   "forks.scope.none": "anaiβiiāŋhana",
   "forks.exhausted": "GitHub ahmi ratuuō yānā̊ frazinta. Upa.bara aiβiiāŋhanəm taxtē vīcirahe, yaθa karana haca 60 aoi 5000 uzbarāite, vā pasca ratūm aiβi.jasa.",
   "forks.answered": "GitHub paiti.aoxta {status}: {message}",
-  "forks.loading": "Barəṇte …",
-  "forks.branches": "Frasparəγā̊",
-  "forks.versions": "Zrvō.kəhrpō",
-  "forks.showForks": {
-    "one": "Daršaiia {n} vīsaxəm {repo} haca",
-    "other": "Daršaiia {n} vīsaxā̊ {repo} haca"
-  },
   "matrix.preset.overview": "Vīspō.vaēna",
   "matrix.preset.galaxy": "Stārō.tāna",
   "matrix.preset.ressources": "Īštaiiō",

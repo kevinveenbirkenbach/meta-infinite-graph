@@ -174,20 +174,13 @@
     "other": "{n} kati yao zimeforkiwa tena; fungua moja ili kwenda ndani zaidi."
   },
   "forks.leaves": "hakuna hata moja kati yao iliyoforkiwa tena, kwa hivyo huu ndio mtandao mzima.",
-  "forks.lazy": "Matawi, lebo na njia za commit hupakiwa hazina inapofunguliwa.",
+  "forks.lazy": "Bofya hazina ili kuonyesha matawi yake chini yake kwenye mhimili ule ule wa muda.",
   "forks.quota": "Maombi {remaining} kati ya {limit} yamebaki saa hii, {scope}.",
   "forks.scope.server": "kupitia tokeni ya seva",
   "forks.scope.token": "kwa tokeni yako",
   "forks.scope.none": "bila uthibitisho",
   "forks.exhausted": "GitHub imeishiwa maombi kwa saa hii. Ongeza tokeni kwenye paneli ya kichujio ili kuinua kikomo kutoka 60 hadi 5000, au rudi baada ya saa kubadilika.",
   "forks.answered": "GitHub ilijibu {status}: {message}",
-  "forks.loading": "Inapakia …",
-  "forks.branches": "Matawi",
-  "forks.versions": "Matoleo",
-  "forks.showForks": {
-    "one": "Onyesha fork {n} ya {repo}",
-    "other": "Onyesha fork {n} za {repo}"
-  },
   "matrix.preset.overview": "Muhtasari",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Rasilimali",

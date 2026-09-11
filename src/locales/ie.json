@@ -174,20 +174,13 @@
     "other": "{n} de ili es denov furcat; aperte un por ear plu profund."
   },
   "forks.leaves": "necun de ili es denov furcat, dunc to es li rete complet.",
-  "forks.lazy": "Branches, etiquettes e vias de commissiones es cargat quande on aperte un depositoria.",
+  "forks.lazy": "Clicca un depositoria por monstrar su branches sub it sur li sam axe de tempore.",
   "forks.quota": "{remaining} de {limit} demandas resta in ti-ci hora, {scope}.",
   "forks.scope.server": "tra li token del servitor",
   "forks.scope.token": "con tui token",
   "forks.scope.none": "ínautenticat",
   "forks.exhausted": "GitHub ne have plu demandas por ti-ci hora. Adjunte un token in li panel de filtre por elevar li limite de 60 a 5000, o reveni pos que li hora ha changeat.",
   "forks.answered": "GitHub ha respondet {status}: {message}",
-  "forks.loading": "Cargante …",
-  "forks.branches": "Branches",
-  "forks.versions": "Versiones",
-  "forks.showForks": {
-    "one": "Monstrar li {n} furca de {repo}",
-    "other": "Monstrar li {n} furcas de {repo}"
-  },
   "matrix.preset.overview": "Vista general",
   "matrix.preset.galaxy": "Galaxie",
   "matrix.preset.ressources": "Ressurses",

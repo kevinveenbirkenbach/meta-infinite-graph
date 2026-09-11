@@ -174,20 +174,13 @@
     "other": "{n} d' zels sont forkés cor on côp; drovoz-ent onk po dischinde pus lon."
   },
   "forks.leaves": "nouk d' zels n' est forké cor on côp, dabôrd c' est l' rantoele etire.",
-  "forks.lazy": "Les brantches, les etiketes et les vôyes des candjmints si tchedjèt cwand on drove on depo.",
+  "forks.lazy": "Clitchîz so on depo po mostrer ses brantches dizo lu, so l' minme ligne do tins.",
   "forks.quota": "{remaining} dimandes so {limit} ki dmorèt po ciste eure ci, {scope}.",
   "forks.scope.server": "pa l' djeton do sierveu",
   "forks.scope.token": "avou vosse djeton",
   "forks.scope.none": "sins otintifiaedje",
   "forks.exhausted": "GitHub n' a pus d' dimandes po ciste eure ci. Radjoutez on djeton el panea del passete po fé monter l' limite di 60 a 5000, oudonbén revinoz cwand l' eure a candjî.",
   "forks.answered": "GitHub a respondou {status}: {message}",
-  "forks.loading": "Dji tchedje …",
-  "forks.branches": "Brantches",
-  "forks.versions": "Modêyes",
-  "forks.showForks": {
-    "one": "Mostrer l' {n} fork di {repo}",
-    "other": "Mostrer les {n} forks di {repo}"
-  },
   "matrix.preset.overview": "Vuwe d' ensemble",
   "matrix.preset.galaxy": "Galacseye",
   "matrix.preset.ressources": "Rissoûces",

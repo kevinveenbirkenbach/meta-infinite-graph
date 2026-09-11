@@ -174,20 +174,13 @@
     "other": "{n} de issos sunt torra bifurcados; aberi·nde unu pro andare prus a fundu."
   },
   "forks.leaves": "perunu de issos est torra bifurcadu, duncas custa est sa rete intera.",
-  "forks.lazy": "Sos ramos, sas etichetas e sas corsias de sas cunsignas si càrrigant cando s'aberit unu depòsitu.",
+  "forks.lazy": "Clica unu depòsitu pro ammustrare sos ramos suos a suta de issu in su matessi assu de su tempus.",
   "forks.quota": "Abarrant {remaining} de {limit} rechestas custa ora, {scope}.",
   "forks.scope.server": "cun su getone de su serbidore",
   "forks.scope.token": "cun su getone tuo",
   "forks.scope.none": "chene autenticatzione",
   "forks.exhausted": "GitHub no at prus rechestas pro custa ora. Aciungi unu getone in su pannellu de su filtru pro artziare su lìmite dae 60 a 5000, o torra cando s'ora cambiat.",
   "forks.answered": "GitHub at respostu {status}: {message}",
-  "forks.loading": "Carrighende …",
-  "forks.branches": "Ramos",
-  "forks.versions": "Versiones",
-  "forks.showForks": {
-    "one": "Ammustra su {n} fork de {repo}",
-    "other": "Ammustra sos {n} fork de {repo}"
-  },
   "matrix.preset.overview": "Panoràmica",
   "matrix.preset.galaxy": "Galàssia",
   "matrix.preset.ressources": "Resursas",

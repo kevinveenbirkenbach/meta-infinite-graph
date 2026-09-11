@@ -174,20 +174,13 @@
     "other": "ان میں سے {n} کے دوبارہ فورک ہوئے ہیں؛ مزید گہرائی میں جانے کے لیے کوئی ایک کھولیں۔"
   },
   "forks.leaves": "ان میں سے کسی کا دوبارہ فورک نہیں ہوا، اس لیے یہی پورا نیٹ ورک ہے۔",
-  "forks.lazy": "برانچیں، ٹیگز اور کمٹ لینز ریپوزٹری کھولنے پر لوڈ ہوتی ہیں۔",
+  "forks.lazy": "کسی ریپوزٹری پر کلک کریں تاکہ اس کی برانچیں اسی وقت کے محور پر اس کے نیچے دکھائی جائیں۔",
   "forks.quota": "اس گھنٹے {limit} میں سے {remaining} درخواستیں باقی، {scope}۔",
   "forks.scope.server": "سرور کے ٹوکن کے ذریعے",
   "forks.scope.token": "آپ کے ٹوکن کے ساتھ",
   "forks.scope.none": "بغیر تصدیق",
   "forks.exhausted": "اس گھنٹے GitHub کی درخواستیں ختم ہو چکی ہیں۔ حد کو 60 سے 5000 تک بڑھانے کے لیے فلٹر پینل میں ٹوکن شامل کریں، یا گھنٹہ بدلنے کے بعد واپس آئیں۔",
   "forks.answered": "GitHub نے {status} جواب دیا: {message}",
-  "forks.loading": "لوڈ ہو رہا ہے …",
-  "forks.branches": "برانچیں",
-  "forks.versions": "ورژن",
-  "forks.showForks": {
-    "one": "{repo} کا {n} فورک دکھائیں",
-    "other": "{repo} کے {n} فورکس دکھائیں"
-  },
   "matrix.preset.overview": "جائزہ",
   "matrix.preset.galaxy": "کہکشاں",
   "matrix.preset.ressources": "وسائل",

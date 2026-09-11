@@ -174,20 +174,13 @@
     "other": "तेसु {n} पुन फोर्किता; गम्भीरतरं गन्तुं एकं विवराहि।"
   },
   "forks.leaves": "तेसु कोचिपि पुन न फोर्कितो, तस्मा इदं सकलं जालं।",
-  "forks.lazy": "साखा, सञ्ञाणानि निक्खेपमग्गा च भण्डागारे विवटे आरोपीयन्ति।",
+  "forks.lazy": "तस्स साखा तस्मिंयेव कालक्खे तस्स हेट्ठा दस्सेतुं एकं भण्डागारं फुसाहि।",
   "forks.quota": "इमाय होराय {limit} याचनासु {remaining} अवसिट्ठा, {scope}।",
   "forks.scope.server": "सेवकयन्तस्स मुद्दाय",
   "forks.scope.token": "तव मुद्दाय",
   "forks.scope.none": "असत्यापितं",
   "forks.exhausted": "इमाय होराय GitHub याचना खीणा। सीमं 60 तो 5000 याव उक्खिपितुं परिस्सावनफलके मुद्दं योजेहि, अथ वा होराय परिवत्ताय पुन आगच्छाहि।",
   "forks.answered": "GitHub {status} इति पटिवदि: {message}",
-  "forks.loading": "आरोपीयति …",
-  "forks.branches": "साखा",
-  "forks.versions": "संस्करणानि",
-  "forks.showForks": {
-    "one": "{repo} स्स {n} फोर्कं दस्सेहि",
-    "other": "{repo} स्स {n} फोर्के दस्सेहि"
-  },
   "matrix.preset.overview": "समोलोकनं",
   "matrix.preset.galaxy": "तारागणो",
   "matrix.preset.ressources": "सम्भारा",

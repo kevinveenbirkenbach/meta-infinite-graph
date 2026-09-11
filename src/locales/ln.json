@@ -174,20 +174,13 @@
     "other": "{n} kati na yango ezali fork lisusu; fungolá moko mpo na kokɔta mozindo."
   },
   "forks.leaves": "moko te kati na yango ezali fork lisusu, yango wana oyo ezali monyɔlɔ mobimba.",
-  "forks.lazy": "Bitámbe, baetiketi mpe banzela ya bakomiti ezwamaka ntango ebombelo efungwami.",
+  "forks.lazy": "Finá ebombelo mpo na kolakisa bitámbe na yango na nse na yango, na mokɔ́lɔ moko ya ntango.",
   "forks.quota": "Masɛngi {remaining} na kati ya {limit} etikali na ngonga oyo, {scope}.",
   "forks.scope.server": "na nzela ya elembo ya bokɔti ya sɛrvɛrɛ",
   "forks.scope.token": "na elembo ya bokɔti na yo",
   "forks.scope.none": "kozanga koyebana",
   "forks.exhausted": "Masɛngi ya GitHub esili mpo na ngonga oyo. Bakisá elembo ya bokɔti na etando ya kopona mpo na komátisa ndelo uta 60 tii 5000, to zonga sima ngonga ebaluki.",
   "forks.answered": "GitHub ezongisi {status}: {message}",
-  "forks.loading": "Ezali kozwa …",
-  "forks.branches": "Bitámbe",
-  "forks.versions": "Mbóngwana",
-  "forks.showForks": {
-    "one": "Kolakisa fork {n} ya {repo}",
-    "other": "Kolakisa bafork {n} ya {repo}"
-  },
   "matrix.preset.overview": "Botali ya mobimba",
   "matrix.preset.galaxy": "Minzoto",
   "matrix.preset.ressources": "Bomengo",

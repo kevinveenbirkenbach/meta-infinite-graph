@@ -167,19 +167,13 @@
     "other": "{n} ci ñoom am nañu xaaj yu bees; ubbil benn ngir gën a xóot."
   },
   "forks.leaves": "kenn ci ñoom amul xaaj bu bees, kon lii mooy caax bi yépp.",
-  "forks.lazy": "Car yi, etiket yi ak yooni komit yi dañuy yebu bu ñu ubbee dencukaay.",
+  "forks.lazy": "Bësal ci benn dencukaay ngir wone car yi ci suufam ci benn rëddu jamono.",
   "forks.quota": "{remaining} ci {limit} laaj ñoo des ci waxtu wii, {scope}.",
   "forks.scope.server": "jaare ko ci tokeenu serwëer bi",
   "forks.scope.token": "ak sa tokeen",
   "forks.scope.none": "te duggul",
   "forks.exhausted": "Laaj yu GitHub jeex nañu ci waxtu wii. Yokkal tokeen ci panelu segg ngir yékkati dayo bi ci 60 ba 5000, walla dellusi bu waxtu wu bees tàmbalee.",
   "forks.answered": "GitHub tontu na {status}: {message}",
-  "forks.loading": "Mi ngi yeb …",
-  "forks.branches": "Car yi",
-  "forks.versions": "Wersioŋ yi",
-  "forks.showForks": {
-    "other": "Wone {n} xaaj yu {repo}"
-  },
   "matrix.preset.overview": "Xool bu yaatu",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Jumtukaay yi",

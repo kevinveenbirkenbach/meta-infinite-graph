@@ -174,20 +174,13 @@
     "other": "{n} miinawaa gii-baketaawan; baakinan bezhig ji-izhaayan nawaj biinjayi'ii."
   },
   "forks.leaves": "gaawiin bezhig miinawaa gii-baketaasinoon, mii iw o'ow gakina asab.",
-  "forks.lazy": "Wadikwanan, gikinawaajichiganan miinawaa atoowin-miikanan biidoonjigaadewan apii asanjigowin baakinigaadeg.",
+  "forks.lazy": "Daanganan asanjigowin ji-waabanda'iweyan owadikwanan anaamayi'ii, imaa naasaab naawaatig.",
   "forks.quota": "{remaining} {limit} onji andotamaagewinan ishkoseg o'ow diba'igan, {scope}.",
   "forks.scope.server": "miinigewi-mazinaabikiwebinigan obiindigewin onji",
   "forks.scope.token": "gibiindigewin onji",
   "forks.scope.none": "gaawiin nisidawinaagwasinoon",
   "forks.exhausted": "GitHub gaawiin andotamaagewinan odayaanziin o'ow diba'igan. Atoon biindigewin imaa zhaabobiiginigan-apishimonkaaning ji-ombiwebinaman gibichii'igewin 60 onji biinish 5000, gemaa bi-azhegiiwen apii aanji-diba'iganeg.",
   "forks.answered": "GitHub gii-nakwetam {status}: {message}",
-  "forks.loading": "Biidoonjigaade …",
-  "forks.branches": "Wadikwanan",
-  "forks.versions": "Aanji-ozhitoowinan",
-  "forks.showForks": {
-    "one": "Waabanda'iwen {n} baketawin {repo} onji",
-    "other": "Waabanda'iwen {n} baketawinan {repo} onji"
-  },
   "matrix.preset.overview": "Gakina waabanjigan",
   "matrix.preset.galaxy": "Jiibay-miikana",
   "matrix.preset.ressources": "Aabajichiganan",

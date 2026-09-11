@@ -167,19 +167,13 @@
     "other": "{n} di antarana di-fork deui; buka salah sahijina pikeun leuwih jero."
   },
   "forks.leaves": "euweuh nu di-fork deui, jadi ieu téh sakabéh jaringan.",
-  "forks.lazy": "Cabang, tag jeung jalur komit dimuat nalika répositori dibuka.",
+  "forks.lazy": "Klik répositori pikeun némbongkeun cabangna di handapeunana dina sumbu waktu anu sarua.",
   "forks.quota": "{remaining} tina {limit} paménta sésa jam ieu, {scope}.",
   "forks.scope.server": "ngaliwatan token server",
   "forks.scope.token": "ku token anjeun",
   "forks.scope.none": "tanpa auténtikasi",
   "forks.exhausted": "Paménta GitHub geus béak pikeun jam ieu. Tambahkeun token dina panél saringan pikeun naékkeun wates tina 60 jadi 5000, atawa balik deui sanggeus jamna ganti.",
   "forks.answered": "GitHub ngajawab {status}: {message}",
-  "forks.loading": "Ngamuat …",
-  "forks.branches": "Cabang",
-  "forks.versions": "Vérsi",
-  "forks.showForks": {
-    "other": "Témbongkeun {n} fork tina {repo}"
-  },
   "matrix.preset.overview": "Tinjauan",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Sumber daya",

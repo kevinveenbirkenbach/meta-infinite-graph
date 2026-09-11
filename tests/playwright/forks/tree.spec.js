@@ -1,15 +1,15 @@
 const { test, expect } = require('@playwright/test');
-const { HOSTILE, enterForks, openForks, stub } = require('../support/forks');
+const { HOSTILE, NESTED, enterForks, labels, openForks, stub } = require('../support/forks');
 
-test('the fork tree shows the root and its forks', async ({ page }) => {
+const NETWORK = ['infinito-nexus/core', 'someone/core', 'other/core-fork'];
+
+test('the timeline labels the root and its forks and is the whole view', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
 
-  const nodes = page.locator('.fork-tree .fork-name');
-  await expect.poll(() => nodes.count()).toBe(3);
-  await expect(nodes.nth(0)).toHaveText('infinito-nexus/core');
-  await expect(nodes.nth(0)).toHaveClass(/root/);
-  await expect(nodes.nth(1)).toHaveText('someone/core');
+  await expect.poll(() => labels(page)).toEqual(NETWORK);
+  await expect(page.locator('svg.fork-plot .fork-label').first()).toHaveClass(/root/);
+  expect(await page.locator('.fork-plot-host ~ *').count(), 'nothing is listed below the timeline').toBe(0);
   await expect(page.locator('.table-note')).toContainText('2 direct forks');
   await expect(page.locator('.table-note')).toContainText('requests left this hour');
 
@@ -21,28 +21,51 @@ test('the fork tree shows the root and its forks', async ({ page }) => {
     .toBe(3);
 });
 
-test('branches and tags load only when a node is opened', async ({ page }) => {
+test('clicking a repository opens its branches as rows beneath it', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+  await expect.poll(() => labels(page)).toEqual(NETWORK);
   // Two listings plus one history per repository, because the branch lines are
-  // on by default; the refs themselves still wait for a node to be opened.
+  // on by default; the branches themselves wait for a repository to be opened.
+  await expect.poll(() => calls.length).toBe(5);
+  const root = page.locator('svg.fork-plot .fork-label.root');
+  await expect(root).toHaveAttribute('aria-expanded', 'false');
+
+  await root.click();
+  await expect.poll(() => labels(page))
+    .toEqual([NETWORK[0], `${NETWORK[0]}@${HOSTILE}`, NETWORK[1], NETWORK[2]]);
+  expect(calls.slice(5), 'the listing, then one history per branch but the default').toEqual([
+    '/repos/infinito-nexus/core/branches',
+    '/repos/infinito-nexus/core/commits',
+  ]);
+  await expect(page.locator('svg.fork-plot .fork-label.root')).toHaveAttribute('aria-expanded', 'true');
+  expect(await page.locator('svg.fork-plot .fork-row').nth(1).locator('.fork-commit').count(),
+    'the branch row carries only the commit its trunk lacks').toBe(1);
+  expect(await page.locator('svg.fork-plot .fork-edge').count(),
+    'two forks and the branch leaving its trunk').toBe(3);
+
+  await page.locator('svg.fork-plot .fork-label.root').click();
+  await expect.poll(() => labels(page)).toEqual(NETWORK);
+  await page.locator('svg.fork-plot .fork-label.root').press('Enter');
+  await expect.poll(() => labels(page)).toHaveLength(4);
+  expect(calls.length, 'reopening answers from memory').toBe(7);
+});
+
+test('opening a fork that is forked again walks one level deeper', async ({ page }) => {
+  const calls = [];
+  await openForks(page, calls);
   await expect.poll(() => calls.length).toBe(5);
 
-  await page.locator('.fork-toggle').first().click();
-  await expect.poll(() => calls.length).toBe(7);
-  expect(calls.slice(5).sort(), 'only the refs are new; the history is cached').toEqual([
-    '/repos/infinito-nexus/core/branches',
-    '/repos/infinito-nexus/core/tags',
+  await page.locator('svg.fork-plot .fork-label[data-repo="other/core-fork"]').click();
+  await expect.poll(() => labels(page)).toEqual([
+    ...NETWORK,
+    'other/core-fork@main',
+    `other/core-fork@${HOSTILE}`,
+    NESTED.full_name,
   ]);
-  expect(calls, 'releases are empty on this network and cost a request').not.toContain(
-    '/repos/infinito-nexus/core/releases'
-  );
-
-  const body = page.locator('.fork-body').first();
-  await expect(body).toContainText('Branches (2)');
-  await expect(body).toContainText('Versions (2)');
-  await expect(body).toContainText('v13.0.0');
+  expect(calls).toContain('/repos/other/core-fork/forks');
+  await expect.poll(() => calls.filter(path => path === `/repos/${NESTED.full_name}/commits`).length,
+    'the new fork gets its history like every other').toBe(1);
 });
 
 test('the plot draws a life line per repository and an edge per fork', async ({ page }) => {
@@ -161,11 +184,12 @@ test('hovering a commit opens a card naming it', async ({ page }) => {
 test('a hostile branch name is rendered as text, not as markup', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
-  await page.locator('.fork-toggle').first().click();
-  await expect.poll(() => calls.length).toBe(7);
+  await expect.poll(() => calls.length).toBe(5);
+  await page.locator('svg.fork-plot .fork-label.root').click();
 
-  const body = page.locator('.fork-body').first();
-  await expect(body).toContainText(HOSTILE);
-  expect(await body.locator('img').count()).toBe(0);
+  const branch = page.locator('svg.fork-plot .fork-label.branch');
+  await expect(branch.locator('title')).toHaveText(`infinito-nexus/core@${HOSTILE}`);
+  await expect(branch).toContainText('<img');
+  expect(await page.locator('.fork-plot-host img').count()).toBe(0);
   expect(await page.evaluate(() => window.__pwned)).toBeUndefined();
 });

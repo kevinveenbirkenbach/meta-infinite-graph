@@ -174,20 +174,13 @@
     "other": "Di le {n} tsa tsone di ferekilwe gape; bula nngwe go tsena ka kwa teng."
   },
   "forks.leaves": "ga go na epe ya tsone e e ferekilweng gape, ka jalo e ke neteweke yotlhe.",
-  "forks.lazy": "Dikala, ditshupo le ditsela tsa dithomelo di laelwa fa polokelo e bulwa.",
+  "forks.lazy": "Tobetsa polokelo go bontsha dikala tsa yone ka fa tlase ga yone mo moleng o le mongwe wa nako.",
   "forks.quota": "Dikopo di le {remaining} mo go {limit} di setse mo ureng e, {scope}.",
   "forks.scope.server": "ka tokene ya sebereki",
   "forks.scope.token": "ka tokene ya gago",
   "forks.scope.none": "go sa netefadiwa",
   "forks.exhausted": "GitHub e feletswe ke dikopo mo ureng e. Tsenya tokene mo phaneleng ya sesefi go tsholetsa tekanyo go tswa go 60 go ya go 5000, kgotsa o boe fa ura e fetoga.",
   "forks.answered": "GitHub e arabile {status}: {message}",
-  "forks.loading": "Go a laelwa …",
-  "forks.branches": "Dikala",
-  "forks.versions": "Diphetolelo",
-  "forks.showForks": {
-    "one": "Bontsha fereko e le {n} ya {repo}",
-    "other": "Bontsha difereko di le {n} tsa {repo}"
-  },
   "matrix.preset.overview": "Kakaretso",
   "matrix.preset.galaxy": "Mogala wa dinaledi",
   "matrix.preset.ressources": "Metswedi",

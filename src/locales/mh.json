@@ -174,20 +174,13 @@
     "other": "{n} iaan er rej bar fork; kōpeļọk juon bwe kwōn etal ilowaan."
   },
   "forks.leaves": "ejjeļọk iaan er ej bar fork, kōn men in men in ej netwōk eo aolep.",
-  "forks.lazy": "Ra ko, taaj ko im iaļ in kōmit ko rej itok ñe juon jikin kōjparok ej kōpeļọk.",
+  "forks.lazy": "Kiliki juon jikin kōjparok bwe en kwaļọk ra ko an ilal in, ilo ejja laajrak in iien eo wōt.",
   "forks.quota": "{remaining} jān {limit} kajjitōk ej bwe ilo awa in, {scope}.",
   "forks.scope.server": "kōn tōken eo an server eo",
   "forks.scope.token": "kōn am tōken",
   "forks.scope.none": "ejjeļọk kōmālim",
   "forks.exhausted": "GitHub ejjeļọk an kajjitōk ilo awa in. Kobaik juon tōken ilo peinel in kāālōt bwe en kōļapļọk jem̧ļo̧k eo jān 60 ñan 5000, ak bar itok ālkin awa eo.",
   "forks.answered": "GitHub ear uwaak {status}: {message}",
-  "forks.loading": "Ej bōk …",
-  "forks.branches": "Ra ko",
-  "forks.versions": "Vōrjin ko",
-  "forks.showForks": {
-    "one": "Kwaļọk {n} fork an {repo}",
-    "other": "Kwaļọk {n} fork ko an {repo}"
-  },
   "matrix.preset.overview": "Aolepān",
   "matrix.preset.galaxy": "Iju ko",
   "matrix.preset.ressources": "Kein jerbal",

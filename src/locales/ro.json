@@ -181,21 +181,13 @@
     "other": "{n} dintre ele au la rândul lor fork-uri; deschide unul pentru a merge mai adânc."
   },
   "forks.leaves": "niciunul dintre ele nu are la rândul său fork-uri, deci aceasta este întreaga rețea.",
-  "forks.lazy": "Ramurile, etichetele și culoarele de commituri se încarcă atunci când este deschis un depozit.",
+  "forks.lazy": "Clic pe un depozit pentru a-i afișa ramurile dedesubt, pe aceeași axă a timpului.",
   "forks.quota": "{remaining} din {limit} cereri rămase în această oră, {scope}.",
   "forks.scope.server": "prin tokenul serverului",
   "forks.scope.token": "cu tokenul tău",
   "forks.scope.none": "neautentificat",
   "forks.exhausted": "GitHub a epuizat cererile pentru această oră. Adaugă un token în panoul de filtre pentru a ridica limita de la 60 la 5000 sau revino după ce începe ora următoare.",
   "forks.answered": "GitHub a răspuns {status}: {message}",
-  "forks.loading": "Se încarcă …",
-  "forks.branches": "Ramuri",
-  "forks.versions": "Versiuni",
-  "forks.showForks": {
-    "one": "Afișează fork-ul lui {repo}",
-    "few": "Afișează cele {n} fork-uri ale lui {repo}",
-    "other": "Afișează cele {n} de fork-uri ale lui {repo}"
-  },
   "matrix.preset.overview": "Prezentare generală",
   "matrix.preset.galaxy": "Galaxie",
   "matrix.preset.ressources": "Resurse",

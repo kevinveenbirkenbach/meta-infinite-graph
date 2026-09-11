@@ -174,20 +174,13 @@
     "other": "{n} daovaan zeen weer geforkt; äöpen eine um deiper te gaon."
   },
   "forks.leaves": "gein eine daovaan is weer geforkt, dus dit is 't gans nètwerk.",
-  "forks.lazy": "Tekke, labels en commitbaane weure gelaje es 'n opslaag geäöpend weurt.",
+  "forks.lazy": "Klik op 'n opslaag um zien tekke dao-ónger op dezelfde tiedas te toene.",
   "forks.quota": "{remaining} vaan {limit} verzeuke euver dit oer, {scope}.",
   "forks.scope.server": "via de token vaan de server",
   "forks.scope.token": "mèt diene token",
   "forks.scope.none": "neet aangemeld",
   "forks.exhausted": "GitHub haet gein verzeuke mie veur dit oer. Doog 'ne token in 't filterpaneel um de limiet vaan 60 nao 5000 te tille, of kom trök es 't nuuj oer begint.",
   "forks.answered": "GitHub antwoordde {status}: {message}",
-  "forks.loading": "Laje …",
-  "forks.branches": "Tekke",
-  "forks.versions": "Versies",
-  "forks.showForks": {
-    "one": "Tuin de {n} fork vaan {repo}",
-    "other": "Tuin de {n} forks vaan {repo}"
-  },
   "matrix.preset.overview": "Euverzich",
   "matrix.preset.galaxy": "Sjterrestelsel",
   "matrix.preset.ressources": "Middele",

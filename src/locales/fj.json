@@ -174,20 +174,13 @@
     "other": "{n} vei ira e fork tale; dolava e dua me lako titobu cake."
   },
   "forks.leaves": "e sega ni dua vei ira e fork tale, ia oqo na lawa taucoko.",
-  "forks.lazy": "Na tabana, tag kei na sala ni commit e vakacurumi ni dolavi e dua na vale ni maroroi.",
+  "forks.lazy": "Kiliki e dua na vale ni maroroi me vakaraitaki na kena tabana e rukuna ena laini ni gauna vata ga ya.",
   "forks.quota": "{remaining} vei na {limit} na kerekere e vo ena aua oqo, {scope}.",
   "forks.scope.server": "ena token ni server",
   "forks.scope.token": "ena nomu token",
   "forks.scope.none": "sega ni vakadeitaki",
   "forks.exhausted": "Sa oti na kerekere ni GitHub ena aua oqo. Vakuria e dua na token ena tiki ni sivi me vakacerei na iyalayala mai na 60 ki na 5000, se lesu mai ni sa veisau na aua.",
   "forks.answered": "E sauma na GitHub {status}: {message}",
-  "forks.loading": "Vakacurumi …",
-  "forks.branches": "Tabana",
-  "forks.versions": "Ivakarau",
-  "forks.showForks": {
-    "one": "Vakaraitaka na {n} na fork ni {repo}",
-    "other": "Vakaraitaka na {n} na fork ni {repo}"
-  },
   "matrix.preset.overview": "Raica taucoko",
   "matrix.preset.galaxy": "Kalokalo",
   "matrix.preset.ressources": "Iyaubula",

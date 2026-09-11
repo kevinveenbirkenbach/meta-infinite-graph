@@ -174,20 +174,13 @@
     "other": "Olaryň {n} sanysy ýene forklandy; has çuňňur geçmek üçin birini açyň."
   },
   "forks.leaves": "olaryň hiç biri ýene forklanmady, diýmek bu tutuş ulgam.",
-  "forks.lazy": "Şahalar, tegler we kommit zolaklary repozitoriý açylanda ýüklenýär.",
+  "forks.lazy": "Şahalaryny onuň aşagynda şol bir wagt okunda görkezmek üçin repozitoriýa basyň.",
   "forks.quota": "Bu sagatda {limit} soragdan {remaining} galdy, {scope}.",
   "forks.scope.server": "serweriň tokeni arkaly",
   "forks.scope.token": "siziň tokeniňiz bilen",
   "forks.scope.none": "tassyklamasyz",
   "forks.exhausted": "GitHub-yň bu sagatdaky soraglary gutardy. Çägi 60-dan 5000-e ýokarlandyrmak üçin süzgüç panelinde token goşuň ýa-da täze sagat başlanda gaýdyp geliň.",
   "forks.answered": "GitHub {status} jogabyny berdi: {message}",
-  "forks.loading": "Ýüklenýär …",
-  "forks.branches": "Şahalar",
-  "forks.versions": "Wersiýalar",
-  "forks.showForks": {
-    "one": "{repo} repozitoriýsiniň {n} forkuny görkez",
-    "other": "{repo} repozitoriýsiniň {n} forkuny görkez"
-  },
   "matrix.preset.overview": "Umumy syn",
   "matrix.preset.galaxy": "Galaktika",
   "matrix.preset.ressources": "Resurslar",

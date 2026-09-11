@@ -188,22 +188,13 @@
     "other": "{n} od njih je znova razcepljenih; odprite enega za globlji pregled."
   },
   "forks.leaves": "nobeden od njih ni znova razcepljen, zato je to celotno omrežje.",
-  "forks.lazy": "Veje, oznake in steze potrditev se naložijo, ko odprete repozitorij.",
+  "forks.lazy": "Kliknite repozitorij, da se njegove veje prikažejo pod njim na isti časovni osi.",
   "forks.quota": "To uro ostaja še {remaining} od {limit} zahtev, {scope}.",
   "forks.scope.server": "prek strežnikovega žetona",
   "forks.scope.token": "z vašim žetonom",
   "forks.scope.none": "brez overitve",
   "forks.exhausted": "GitHubu je za to uro zmanjkalo zahtev. Dodajte žeton v podoknu filtrov, da dvignete omejitev s 60 na 5000, ali se vrnite, ko se ura izteče.",
   "forks.answered": "GitHub je odgovoril s {status}: {message}",
-  "forks.loading": "Nalaganje …",
-  "forks.branches": "Veje",
-  "forks.versions": "Verzije",
-  "forks.showForks": {
-    "one": "Prikaži {n} razcep repozitorija {repo}",
-    "two": "Prikaži {n} razcepa repozitorija {repo}",
-    "few": "Prikaži {n} razcepe repozitorija {repo}",
-    "other": "Prikaži {n} razcepov repozitorija {repo}"
-  },
   "matrix.preset.overview": "Pregled",
   "matrix.preset.galaxy": "Galaksija",
   "matrix.preset.ressources": "Viri",

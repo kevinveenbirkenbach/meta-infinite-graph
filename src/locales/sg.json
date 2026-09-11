@@ -167,19 +167,13 @@
     "other": "Na popo tî ala, {n} ayeke fork ngbene; zî ôko tî gue na yâ ahon."
   },
   "forks.leaves": "oko na popo tî ala ayeke fork ngbene pëpe, ngbanga tî sô gbanda kûê ayeke sô.",
-  "forks.lazy": "Âmbâgë, âtikëtë na âlêgë tî âkomïti ayeke gä töngana a zî ndo tî bätängö.",
+  "forks.lazy": "Pîka mbênî ndo tî bätängö tî fa âmbâgë tî lo na gbe tî lo na ndö tî ôko lëgë tî ngoi.",
   "forks.quota": "{remaining} na yâ tî âhûndängö {limit} angbâ na ngbonga sô, {scope}.",
   "forks.scope.server": "na lêgë tî tôkene tî servêre",
   "forks.scope.token": "na tôkene tî mo",
   "forks.scope.none": "sân tî hïngängö zo",
   "forks.exhausted": "Âhûndängö tî GitHub ahunzi awe na ngbonga sô. Zîa tôkene na yâ tî ndo tî soro tî yâ ndâ ni na 60 asï na 5000, wala kîri na peko tî ngbonga sô.",
   "forks.answered": "GitHub akîri {status}: {message}",
-  "forks.loading": "A yeke mû …",
-  "forks.branches": "Âmbâgë",
-  "forks.versions": "Âversiön",
-  "forks.showForks": {
-    "other": "Fa âfork {n} tî {repo}"
-  },
   "matrix.preset.overview": "Bängö kûê",
   "matrix.preset.galaxy": "Âtongoro",
   "matrix.preset.ressources": "Âyê tî kua",

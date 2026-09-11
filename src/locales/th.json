@@ -167,19 +167,13 @@
     "other": "{n} รายการในนั้นถูกฟอร์กต่อ เปิดรายการหนึ่งเพื่อลงลึกขึ้น"
   },
   "forks.leaves": "ไม่มีรายการใดถูกฟอร์กต่อ นี่จึงเป็นเครือข่ายทั้งหมด",
-  "forks.lazy": "สาขา แท็ก และเลนคอมมิตจะโหลดเมื่อเปิดรีโพสิทอรี",
+  "forks.lazy": "คลิกรีโพสิทอรีเพื่อแสดงสาขาของรีโพสิทอรีนั้นไว้ด้านล่างบนแกนเวลาเดียวกัน",
   "forks.quota": "เหลือ {remaining} จาก {limit} คำขอในชั่วโมงนี้ {scope}",
   "forks.scope.server": "ผ่านโทเค็นของเซิร์ฟเวอร์",
   "forks.scope.token": "ด้วยโทเค็นของคุณ",
   "forks.scope.none": "ไม่ได้ยืนยันตัวตน",
   "forks.exhausted": "GitHub หมดคำขอสำหรับชั่วโมงนี้ เพิ่มโทเค็นในแผงตัวกรองเพื่อยกขีดจำกัดจาก 60 เป็น 5000 หรือกลับมาใหม่เมื่อขึ้นชั่วโมงใหม่",
   "forks.answered": "GitHub ตอบกลับ {status}: {message}",
-  "forks.loading": "กำลังโหลด …",
-  "forks.branches": "สาขา",
-  "forks.versions": "เวอร์ชัน",
-  "forks.showForks": {
-    "other": "แสดง {n} ฟอร์กของ {repo}"
-  },
   "matrix.preset.overview": "ภาพรวม",
   "matrix.preset.galaxy": "กาแล็กซี",
   "matrix.preset.ressources": "ทรัพยากร",

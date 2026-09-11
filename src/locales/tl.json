@@ -174,20 +174,13 @@
     "other": "{n} sa kanila ay na-fork muli; buksan ang isa para lumalim pa."
   },
   "forks.leaves": "wala sa kanila ang na-fork muli, kaya ito na ang buong network.",
-  "forks.lazy": "Nilo-load ang mga sangay, tag at lane ng commit kapag binuksan ang isang repositoryo.",
+  "forks.lazy": "I-click ang isang repositoryo upang ipakita ang mga sangay nito sa ilalim nito sa parehong axis ng oras.",
   "forks.quota": "{remaining} sa {limit} kahilingan ang natitira ngayong oras, {scope}.",
   "forks.scope.server": "sa pamamagitan ng token ng server",
   "forks.scope.token": "gamit ang iyong token",
   "forks.scope.none": "hindi naka-authenticate",
   "forks.exhausted": "Ubos na ang mga kahilingan ng GitHub para sa oras na ito. Magdagdag ng token sa panel ng pagsala para itaas ang limitasyon mula 60 hanggang 5000, o bumalik pagkalipas ng oras.",
   "forks.answered": "Sumagot ang GitHub ng {status}: {message}",
-  "forks.loading": "Nilo-load …",
-  "forks.branches": "Mga sangay",
-  "forks.versions": "Mga bersyon",
-  "forks.showForks": {
-    "one": "Ipakita ang {n} fork ng {repo}",
-    "other": "Ipakita ang {n} na fork ng {repo}"
-  },
   "matrix.preset.overview": "Pangkalahatang-tanaw",
   "matrix.preset.galaxy": "Galaksiya",
   "matrix.preset.ressources": "Mga mapagkukunan",

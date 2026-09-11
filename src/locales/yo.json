@@ -167,19 +167,13 @@
     "other": "{n} nínú wọn ni a tún fork; ṣí ọ̀kan láti lọ jinlẹ̀ sí i."
   },
   "forks.leaves": "kò sí ọ̀kan nínú wọn tí a tún fork, nítorí náà èyí ni gbogbo nẹ́tíwọ̀ọ̀kì.",
-  "forks.lazy": "Àwọn ẹ̀ka, àmì àti ọ̀nà commit ń wọlé nígbà tí a bá ṣí ibi ìpamọ́ kan.",
+  "forks.lazy": "Tẹ ibi ìpamọ́ kan láti fi àwọn ẹ̀ka rẹ̀ hàn nísàlẹ̀ rẹ̀ lórí ìlà àkókò kan náà.",
   "forks.quota": "Ìbéèrè {remaining} nínú {limit} ló kù ní wákàtí yìí, {scope}.",
   "forks.scope.server": "nípasẹ̀ tókìnì olùpín",
   "forks.scope.token": "pẹ̀lú tókìnì rẹ",
   "forks.scope.none": "láìfìdí múlẹ̀",
   "forks.exhausted": "Ìbéèrè GitHub ti tán fún wákàtí yìí. Fi tókìnì kún un nínú pánẹ́lì àlẹ̀mọ́ láti gbé ààlà láti 60 sí 5000, tàbí padà wá nígbà tí wákàtí bá yí.",
   "forks.answered": "GitHub dáhùn {status}: {message}",
-  "forks.loading": "Ń gbé wọlé …",
-  "forks.branches": "Àwọn ẹ̀ka",
-  "forks.versions": "Àwọn ẹ̀dà",
-  "forks.showForks": {
-    "other": "Fi àwọn fork {n} ti {repo} hàn"
-  },
   "matrix.preset.overview": "Àkópọ̀",
   "matrix.preset.galaxy": "Ìràwọ̀ ńlá",
   "matrix.preset.ressources": "Àwọn ohun àmúlò",

@@ -174,20 +174,13 @@
     "other": "Közülük {n} tovább van forkolva; nyiss meg egyet a mélyebb bejáráshoz."
   },
   "forks.leaves": "egyiküket sem forkolták tovább, így ez a teljes hálózat.",
-  "forks.lazy": "Az ágak, a címkék és a commitsávok egy tároló megnyitásakor töltődnek be.",
+  "forks.lazy": "Kattints egy tárolóra, hogy az ágai alatta, ugyanazon az időtengelyen jelenjenek meg.",
   "forks.quota": "{limit} kérésből {remaining} maradt ebben az órában, {scope}.",
   "forks.scope.server": "a szerver tokenjével",
   "forks.scope.token": "a saját tokeneddel",
   "forks.scope.none": "hitelesítés nélkül",
   "forks.exhausted": "A GitHub erre az órára kifogyott a kérésekből. Adj meg egy tokent a szűrőpanelen, hogy a korlát 60-ról 5000-re nőjön, vagy nézz vissza az óra fordulta után.",
   "forks.answered": "A GitHub válasza {status}: {message}",
-  "forks.loading": "Betöltés …",
-  "forks.branches": "Ágak",
-  "forks.versions": "Verziók",
-  "forks.showForks": {
-    "one": "{repo} {n} forkjának megjelenítése",
-    "other": "{repo} {n} forkjának megjelenítése"
-  },
   "matrix.preset.overview": "Áttekintés",
   "matrix.preset.galaxy": "Galaxis",
   "matrix.preset.ressources": "Erőforrások",

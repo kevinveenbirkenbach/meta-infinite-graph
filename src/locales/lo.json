@@ -167,19 +167,13 @@
     "other": "{n} ໃນນັ້ນຖືກຟອກອີກ; ເປີດອັນໜຶ່ງເພື່ອເຂົ້າໄປເລິກກວ່າ."
   },
   "forks.leaves": "ບໍ່ມີອັນໃດຖືກຟອກອີກ ດັ່ງນັ້ນນີ້ແມ່ນເຄືອຂ່າຍທັງໝົດ.",
-  "forks.lazy": "ສາຂາ, ແທັກ ແລະ ເລນຄອມມິດຈະໂຫຼດເມື່ອເປີດຣີໂພສິທໍຣີ.",
+  "forks.lazy": "ຄລິກຣີໂພສິທໍຣີເພື່ອສະແດງສາຂາຂອງມັນຢູ່ດ້ານລຸ່ມ ເທິງແກນເວລາດຽວກັນ.",
   "forks.quota": "ເຫຼືອ {remaining} ຈາກ {limit} ຄຳຂໍໃນຊົ່ວໂມງນີ້, {scope}.",
   "forks.scope.server": "ຜ່ານໂທເຄັນຂອງເຊີບເວີ",
   "forks.scope.token": "ດ້ວຍໂທເຄັນຂອງທ່ານ",
   "forks.scope.none": "ບໍ່ໄດ້ຢືນຢັນຕົວຕົນ",
   "forks.exhausted": "GitHub ໝົດຄຳຂໍສຳລັບຊົ່ວໂມງນີ້. ເພີ່ມໂທເຄັນໃນແຜງຕົວກັ່ນຕອງເພື່ອຍົກຂີດຈຳກັດຈາກ 60 ເປັນ 5000 ຫຼື ກັບມາຫຼັງຈາກຊົ່ວໂມງປ່ຽນ.",
   "forks.answered": "GitHub ຕອບ {status}: {message}",
-  "forks.loading": "ກຳລັງໂຫຼດ …",
-  "forks.branches": "ສາຂາ",
-  "forks.versions": "ເວີຊັນ",
-  "forks.showForks": {
-    "other": "ສະແດງ {n} ຟອກຂອງ {repo}"
-  },
   "matrix.preset.overview": "ພາບລວມ",
   "matrix.preset.galaxy": "ກາແລັກຊີ",
   "matrix.preset.ressources": "ຊັບພະຍາກອນ",

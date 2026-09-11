@@ -174,20 +174,13 @@
     "other": "{n} o ērā kua pāokatia anō; huakina tētahi kia hōhonu ake te hīkoi."
   },
   "forks.leaves": "kāore tētahi o ērā i pāokatia anō, nō reira koinei te kōtuitui katoa.",
-  "forks.lazy": "Ka utaina ngā peka, ngā tūtohu me ngā huarahi tukunga ina huakina tētahi pātaka.",
+  "forks.lazy": "Pāwhiria tētahi pātaka hei whakaatu i ōna peka ki raro iho i a ia, i runga i te tuaka wā kotahi.",
   "forks.quota": "{remaining} o ngā tono e {limit} e toe ana i tēnei hāora, {scope}.",
   "forks.scope.server": "mā te tohu uru a te tūmau",
   "forks.scope.token": "me tōu tohu uru",
   "forks.scope.none": "kāore i motuhēhēngia",
   "forks.exhausted": "Kua pau ngā tono a GitHub mō tēnei hāora. Tāpirihia he tohu uru ki te paewhiri tātari hei hiki i te tepe mai i te 60 ki te 5000, hoki mai rānei ā muri i te hurihanga o te hāora.",
   "forks.answered": "I whakahoki a GitHub i te {status}: {message}",
-  "forks.loading": "E uta ana …",
-  "forks.branches": "Ngā Peka",
-  "forks.versions": "Ngā Putanga",
-  "forks.showForks": {
-    "one": "Whakaaturia te {n} pāoka o {repo}",
-    "other": "Whakaaturia ngā pāoka e {n} o {repo}"
-  },
   "matrix.preset.overview": "Tirohanga whānui",
   "matrix.preset.galaxy": "Ikarangi",
   "matrix.preset.ressources": "Rauemi",

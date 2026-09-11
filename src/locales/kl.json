@@ -174,20 +174,13 @@
     "other": "Taakkunannga {n} aamma forkerneqarput; itinerusumut ingerlaniarlutit ataaseq ammaruk."
   },
   "forks.leaves": "taakkunannga arlaannaalluunniit forkerneqaqqinngilaq, taamaattumik una attaveqaatit tamakkiisut.",
-  "forks.lazy": "Branchit, nalunaaqqutit commitillu aqqutaat toqqorsivik ammarneqarpat aaneqartarput.",
+  "forks.lazy": "Toqqorsivik tooruk branchiisa ataani piffissap titarnerani assigiimmi takutinniarlugit.",
   "forks.quota": "Qinnutit {limit}-nit {remaining} nalunaaquttap akunnerani matumani sinneruttut, {scope}.",
   "forks.scope.server": "serverip tokeniatigut",
   "forks.scope.token": "tokenit atorlugu",
   "forks.scope.none": "uppernarsaateqanngitsoq",
   "forks.exhausted": "GitHub nalunaaquttap akunnerani matumani qinnutinik naammassereerpoq. Immikkoortiterinermi tokeni ilanngutiguk killiliussaq 60-imit 5000-imut qaffanniarlugu, imaluunniit nalunaaquttap akunnera nutaaq aallartippat uterit.",
   "forks.answered": "GitHub {status}-mik akivoq: {message}",
-  "forks.loading": "Aaneqarpoq …",
-  "forks.branches": "Branchit",
-  "forks.versions": "Versionit",
-  "forks.showForks": {
-    "one": "{repo}-ip forkia {n} takutiguk",
-    "other": "{repo}-ip forkiai {n} takutikkit"
-  },
   "matrix.preset.overview": "Tamakkiisoq",
   "matrix.preset.galaxy": "Ulloriat",
   "matrix.preset.ressources": "Isumalluutit",

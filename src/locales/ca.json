@@ -181,21 +181,13 @@
     "other": "{n} d'ells tenen altres forks; obre'n un per aprofundir."
   },
   "forks.leaves": "cap d'ells no té més forks, així que aquesta és tota la xarxa.",
-  "forks.lazy": "Les branques, les etiquetes i els carrils de commits es carreguen en obrir un repositori.",
+  "forks.lazy": "Fes clic en un repositori per mostrar-ne les branques a sota, sobre el mateix eix temporal.",
   "forks.quota": "Queden {remaining} de {limit} sol·licituds aquesta hora, {scope}.",
   "forks.scope.server": "a través del testimoni del servidor",
   "forks.scope.token": "amb el teu testimoni",
   "forks.scope.none": "sense autenticar",
   "forks.exhausted": "GitHub s'ha quedat sense sol·licituds per a aquesta hora. Afegeix un testimoni al tauler de filtre per elevar el límit de 60 a 5000, o torna quan canviï l'hora.",
   "forks.answered": "GitHub ha respost {status}: {message}",
-  "forks.loading": "S'està carregant …",
-  "forks.branches": "Branques",
-  "forks.versions": "Versions",
-  "forks.showForks": {
-    "one": "Mostra el {n} fork de {repo}",
-    "many": "Mostra els {n} de forks de {repo}",
-    "other": "Mostra els {n} forks de {repo}"
-  },
   "matrix.preset.overview": "Visió general",
   "matrix.preset.galaxy": "Galàxia",
   "matrix.preset.ressources": "Recursos",

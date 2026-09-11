@@ -181,21 +181,13 @@
     "other": "{n} no tiem ir atkal atzaroti; atveriet kādu, lai ietu dziļāk."
   },
   "forks.leaves": "neviens no tiem nav atkal atzarots, tāpēc šis ir viss tīkls.",
-  "forks.lazy": "Zari, birkas un komitu joslas ielādējas, kad repozitorijs tiek atvērts.",
+  "forks.lazy": "Noklikšķiniet uz repozitorija, lai zem tā tajā pašā laika asī parādītu tā zarus.",
   "forks.quota": "Šajā stundā atlikuši {remaining} no {limit} pieprasījumiem, {scope}.",
   "forks.scope.server": "ar servera marķieri",
   "forks.scope.token": "ar jūsu marķieri",
   "forks.scope.none": "bez autentifikācijas",
   "forks.exhausted": "GitHub šajā stundā pieprasījumi ir beigušies. Pievienojiet marķieri filtra panelī, lai paceltu limitu no 60 līdz 5000, vai atgriezieties nākamajā stundā.",
   "forks.answered": "GitHub atbildēja {status}: {message}",
-  "forks.loading": "Ielādē …",
-  "forks.branches": "Zari",
-  "forks.versions": "Versijas",
-  "forks.showForks": {
-    "zero": "Rādīt {n} atzarojumus no {repo}",
-    "one": "Rādīt {n} atzarojumu no {repo}",
-    "other": "Rādīt {n} atzarojumus no {repo}"
-  },
   "matrix.preset.overview": "Pārskats",
   "matrix.preset.galaxy": "Galaktika",
   "matrix.preset.ressources": "Resursi",

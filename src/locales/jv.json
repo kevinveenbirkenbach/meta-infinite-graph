@@ -167,19 +167,13 @@
     "other": "{n} ing antarane di-fork maneh; bukak siji kanggo mlebu luwih jero."
   },
   "forks.leaves": "ora ana siji-sijia sing di-fork maneh, dadi iki jaringan sakabehe.",
-  "forks.lazy": "Cabang, tetenger lan jalur komit dimuat nalika repositori dibukak.",
+  "forks.lazy": "Klik repositori kanggo nampilake cabange ing ngisore ing sumbu wektu sing padha.",
   "forks.quota": "{remaining} saka {limit} panjaluk isih ana ing jam iki, {scope}.",
   "forks.scope.server": "liwat token server",
   "forks.scope.token": "nganggo tokenmu",
   "forks.scope.none": "tanpa otentikasi",
   "forks.exhausted": "GitHub wis entek panjaluk kanggo jam iki. Tambahake token ing panel saringan kanggo ngunggahake watesan saka 60 dadi 5000, utawa bali maneh sawise jam ganti.",
   "forks.answered": "GitHub mangsuli {status}: {message}",
-  "forks.loading": "Ngemot …",
-  "forks.branches": "Cabang",
-  "forks.versions": "Versi",
-  "forks.showForks": {
-    "other": "Tampilake {n} fork saka {repo}"
-  },
   "matrix.preset.overview": "Ringkesan",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Sumber daya",

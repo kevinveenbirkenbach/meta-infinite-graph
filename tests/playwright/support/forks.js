@@ -46,6 +46,21 @@ const COMMITS = [
     commit: { message: 'root commit', committer: { date: '2026-08-30T00:00:00Z' } } },
 ];
 
+const BRANCH_COMMITS = [
+  { sha: 'ddd1', parents: [{ sha: 'aaa2' }],
+    commit: { message: 'on a branch', committer: { date: '2026-09-02T00:00:00Z' } } },
+  ...COMMITS.slice(2),
+];
+
+const NESTED = {
+  full_name: 'deep/core-fork-fork',
+  html_url: 'https://github.com/deep/core-fork-fork',
+  default_branch: 'main',
+  forks_count: 0,
+  stargazers_count: 0,
+  pushed_at: '2026-08-15T00:00:00Z',
+};
+
 // v13 sits on a commit the fetched page carries; v11 points at one older than
 // it, which is the only case a date lookup exists for.
 const TAGS = [
@@ -55,17 +70,21 @@ const TAGS = [
 
 function stub(page, counter) {
   return page.route('https://api.github.com/**', route => {
-    const path = new URL(route.request().url()).pathname;
+    const url = new URL(route.request().url());
+    const path = url.pathname;
     counter.push(path);
     const body = (() => {
       if (path === '/repos/infinito-nexus/core') return ROOT;
       if (path === '/repos/infinito-nexus/core/forks') return FORKS;
+      if (path === '/repos/other/core-fork/forks') return [NESTED];
       if (path.endsWith('/branches')) return [{ name: 'main' }, { name: HOSTILE }];
       if (path.endsWith('/tags')) return TAGS;
       if (/\/commits\/[0-9a-z]+$/.test(path)) {
         return { sha: path.split('/').pop(), commit: { committer: { date: '2026-08-20T00:00:00Z' } } };
       }
-      if (path.endsWith('/commits')) return COMMITS;
+      if (path.endsWith('/commits')) {
+        return ['main', 'master'].includes(url.searchParams.get('sha')) ? COMMITS : BRANCH_COMMITS;
+      }
       return [];
     })();
     route.fulfill({
@@ -97,4 +116,10 @@ async function openForks(page, counter) {
   await enterForks(page);
 }
 
-module.exports = { ROOT, FORKS, HOSTILE, COMMITS, stub, enterForks, openForks };
+function labels(page) {
+  return page.evaluate(
+    () => [...document.querySelectorAll('svg.fork-plot .fork-label title')].map(title => title.textContent)
+  );
+}
+
+module.exports = { ROOT, FORKS, NESTED, HOSTILE, COMMITS, stub, enterForks, openForks, labels };

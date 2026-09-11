@@ -174,20 +174,13 @@
     "other": "{n} da quels èn puspè forkads; avra in per ir pli profund."
   },
   "forks.leaves": "nagin da quels n'è puspè forkà, uschia è quai l'entira rait.",
-  "forks.lazy": "Roms, tags e las vias da commits vegnan chargiads cura ch'in repository vegn avert.",
+  "forks.lazy": "Clicca sin in repository per mussar ses roms sut el sin la medema axa dal temp.",
   "forks.quota": "{remaining} da {limit} dumondas restantas quest'ura, {scope}.",
   "forks.scope.server": "tras il token dal server",
   "forks.scope.token": "cun tes token",
   "forks.scope.none": "senza autentificaziun",
   "forks.exhausted": "GitHub n'ha nagina dumonda pli per quest'ura. Agiunscha in token en il panel da filter per auzar il limit da 60 a 5000, u turna suenter che l'ura è midada.",
   "forks.answered": "GitHub ha respundì {status}: {message}",
-  "forks.loading": "Chargiar …",
-  "forks.branches": "Roms",
-  "forks.versions": "Versiuns",
-  "forks.showForks": {
-    "one": "Mussar {n} fork da {repo}",
-    "other": "Mussar ils {n} forks da {repo}"
-  },
   "matrix.preset.overview": "Survista",
   "matrix.preset.galaxy": "Galaxia",
   "matrix.preset.ressources": "Resursas",

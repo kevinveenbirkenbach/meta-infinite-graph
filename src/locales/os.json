@@ -174,20 +174,13 @@
     "other": "Сæ {n} ногæй форкгонд сты; сæ иу бакæн арфдæр ацæуынæн."
   },
   "forks.leaves": "сæ иу дæр ногæй форкгонд нæу, æмæ ай у æнæхъæн хызы.",
-  "forks.lazy": "Къабæзтæ, тегтæ æмæ коммитты фæндæгтæ бавгæнд цæуынц, репозиторий куы бакæнай, уæд.",
+  "forks.lazy": "Репозиторийыл ныххæц, цæмæй йæ къабæзтæ йæ бын уыцы иу рæстæджы осыл равдиса.",
   "forks.quota": "Ацы сахат {limit} курдиатæй баззад {remaining}, {scope}.",
   "forks.scope.server": "серверы токенæй",
   "forks.scope.token": "дæ токенæй",
   "forks.scope.none": "æнæ бæлвырдгæнынæй",
   "forks.exhausted": "GitHub-æн ацы сахат курдиæттæ фæци. Фильтры панелы токен бафтау, цæмæй арæн 60-æй 5000-мæ ссæуа, кæнæ сахат куы аивы, уæд æрбаздæх.",
   "forks.answered": "GitHub дзуапп радта {status}: {message}",
-  "forks.loading": "Бавгæнын …",
-  "forks.branches": "Къабæзтæ",
-  "forks.versions": "Верситæ",
-  "forks.showForks": {
-    "one": "{repo}-йы {n} форк равдисын",
-    "other": "{repo}-йы {n} форкы равдисын"
-  },
   "matrix.preset.overview": "Æппæтæвдыст",
   "matrix.preset.galaxy": "Галактикæ",
   "matrix.preset.ressources": "Ресурстæ",

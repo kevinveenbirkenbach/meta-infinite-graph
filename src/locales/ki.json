@@ -174,20 +174,13 @@
     "other": "{n} harĩ o nĩ mafokeirwo rĩngĩ; hingũra ĩmwe nĩguo ũthiĩ na thĩ makĩria."
   },
   "forks.leaves": "gũtirĩ o na ĩmwe yao ĩfokeirwo rĩngĩ, nĩ ũndũ ũcio ũyũ nĩguo mũtanda wothe.",
-  "forks.lazy": "Honge, tagi na njĩra cia makomiti irehagwo rĩrĩa ikũmbĩ rĩahingũrwo.",
+  "forks.lazy": "Hũtia ikũmbĩ nĩguo wonie honge ciarĩo rungu rwarĩo mũhari-inĩ o ũmwe wa ihinda.",
   "forks.quota": "Mahoya {remaining} kuuma {limit} nĩ matigaire ithaa rĩĩrĩ, {scope}.",
   "forks.scope.server": "na tokeni ya sava",
   "forks.scope.token": "na tokeni yaku",
   "forks.scope.none": "hatarĩ gwĩtĩkĩrĩka",
   "forks.exhausted": "GitHub nĩ ĩthirĩirwo nĩ mahoya ithaa rĩĩrĩ. Ongerera tokeni paneli-inĩ ya gĩtũtũri nĩguo wambararie mũhaka kuuma 60 nginya 5000, kana ũcooke thuutha wa ithaa gũcenjia.",
   "forks.answered": "GitHub ĩcokirie {status}: {message}",
-  "forks.loading": "Nĩ kũrehe …",
-  "forks.branches": "Honge",
-  "forks.versions": "Vasoni",
-  "forks.showForks": {
-    "one": "Onania foko {n} ya {repo}",
-    "other": "Onania mafoko {n} ma {repo}"
-  },
   "matrix.preset.overview": "Kĩonereria gĩa hamwe",
   "matrix.preset.galaxy": "Kĩrĩndĩ kĩa njata",
   "matrix.preset.ressources": "Indo cia wĩra",

@@ -188,22 +188,13 @@
     "other": "{n} z nich má vlastní forky; otevřete jeden a jděte hlouběji."
   },
   "forks.leaves": "žádný z nich nemá vlastní forky, takže toto je celá síť.",
-  "forks.lazy": "Větve, tagy a dráhy commitů se načtou po otevření repozitáře.",
+  "forks.lazy": "Klikněte na repozitář a jeho větve se zobrazí pod ním na stejné časové ose.",
   "forks.quota": "Zbývá {remaining} z {limit} požadavků v této hodině, {scope}.",
   "forks.scope.server": "přes token serveru",
   "forks.scope.token": "s vaším tokenem",
   "forks.scope.none": "bez ověření",
   "forks.exhausted": "GitHubu došly požadavky na tuto hodinu. Přidejte token v panelu filtrů a zvyšte limit z 60 na 5000, nebo se vraťte po uplynutí hodiny.",
   "forks.answered": "GitHub odpověděl {status}: {message}",
-  "forks.loading": "Načítání …",
-  "forks.branches": "Větve",
-  "forks.versions": "Verze",
-  "forks.showForks": {
-    "one": "Zobrazit {n} fork {repo}",
-    "few": "Zobrazit {n} forky {repo}",
-    "many": "Zobrazit {n} forku {repo}",
-    "other": "Zobrazit {n} forků {repo}"
-  },
   "matrix.preset.overview": "Přehled",
   "matrix.preset.galaxy": "Galaxie",
   "matrix.preset.ressources": "Prostředky",

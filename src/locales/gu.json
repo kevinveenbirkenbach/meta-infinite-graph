@@ -174,20 +174,13 @@
     "other": "તેમાંથી {n} ફરી ફોર્ક થયા છે; વધુ ઊંડે જવા એક ખોલો."
   },
   "forks.leaves": "તેમાંથી કોઈ ફરી ફોર્ક થયું નથી, તેથી આ આખું નેટવર્ક છે.",
-  "forks.lazy": "રિપોઝિટરી ખોલવામાં આવે ત્યારે શાખાઓ, ટૅગ અને કમિટ લેન લોડ થાય છે.",
+  "forks.lazy": "કોઈ રિપોઝિટરી પર ક્લિક કરો, જેથી તેની શાખાઓ તેની નીચે એ જ સમય અક્ષ પર દેખાય.",
   "forks.quota": "આ કલાકે {limit} માંથી {remaining} વિનંતીઓ બાકી, {scope}.",
   "forks.scope.server": "સર્વરના ટોકન દ્વારા",
   "forks.scope.token": "તમારા ટોકન સાથે",
   "forks.scope.none": "અપ્રમાણિત",
   "forks.exhausted": "આ કલાક માટે GitHub ની વિનંતીઓ ખૂટી ગઈ છે. મર્યાદા 60 થી 5000 કરવા ફિલ્ટર પૅનલમાં ટોકન ઉમેરો, અથવા કલાક બદલાય પછી પાછા આવો.",
   "forks.answered": "GitHub એ {status} જવાબ આપ્યો: {message}",
-  "forks.loading": "લોડ થઈ રહ્યું છે …",
-  "forks.branches": "શાખાઓ",
-  "forks.versions": "આવૃત્તિઓ",
-  "forks.showForks": {
-    "one": "{repo} નો {n} ફોર્ક બતાવો",
-    "other": "{repo} ના {n} ફોર્ક બતાવો"
-  },
   "matrix.preset.overview": "ઝાંખી",
   "matrix.preset.galaxy": "આકાશગંગા",
   "matrix.preset.ressources": "સંસાધનો",

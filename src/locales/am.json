@@ -174,20 +174,13 @@
     "other": "ከእነሱ {n} እንደገና ፎርክ ተደርገዋል፤ በጥልቀት ለመሄድ አንዱን ይክፈቱ።"
   },
   "forks.leaves": "ከእነሱ አንዳቸውም እንደገና ፎርክ አልተደረጉም፣ ስለዚህ ይህ ሙሉው አውታረ መረብ ነው።",
-  "forks.lazy": "ቅርንጫፎች፣ መለያዎችና የኮሚት መስመሮች ማከማቻ ሲከፈት ይጫናሉ።",
+  "forks.lazy": "ቅርንጫፎቹን ከሥሩ በተመሳሳይ የጊዜ ዘንግ ላይ ለማሳየት ማከማቻን ጠቅ ያድርጉ።",
   "forks.quota": "በዚህ ሰዓት ከ{limit} ጥያቄዎች {remaining} ቀርተዋል፣ {scope}።",
   "forks.scope.server": "በአገልጋዩ ቶከን በኩል",
   "forks.scope.token": "በእርስዎ ቶከን",
   "forks.scope.none": "ያልተረጋገጠ",
   "forks.exhausted": "GitHub ለዚህ ሰዓት ጥያቄዎቹ አልቀዋል። ገደቡን ከ60 ወደ 5000 ለማሳደግ በማጣሪያ ፓነሉ ውስጥ ቶከን ያክሉ፣ ወይም ሰዓቱ ከተቀየረ በኋላ ይመለሱ።",
   "forks.answered": "GitHub {status} መለሰ፦ {message}",
-  "forks.loading": "በመጫን ላይ …",
-  "forks.branches": "ቅርንጫፎች",
-  "forks.versions": "ስሪቶች",
-  "forks.showForks": {
-    "one": "የ{repo} {n} ፎርክ አሳይ",
-    "other": "የ{repo} {n} ፎርኮች አሳይ"
-  },
   "matrix.preset.overview": "አጠቃላይ እይታ",
   "matrix.preset.galaxy": "ጋላክሲ",
   "matrix.preset.ressources": "ሀብቶች",

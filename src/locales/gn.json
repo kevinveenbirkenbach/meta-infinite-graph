@@ -174,20 +174,13 @@
     "other": "{n} ijapytepegua oñemofork jey; eipeʼa peteĩ reike hag̃ua pypukuve."
   },
   "forks.leaves": "ni peteĩ ndojefork jeýi, upévare kóva haʼe ñanduti paite.",
-  "forks.lazy": "Rakã, tag ha commit rape oñemyenyhẽ peteĩ ñongatuha ojeipeʼávo.",
+  "forks.lazy": "Ejopy peteĩ ñongatuha rehechauka hag̃ua hakãkuéra iguýpe, pe aravo rysýi peteĩchaháme.",
   "forks.quota": "{remaining} {limit} jerure apytégui opyta ko aravópe, {scope}.",
   "forks.scope.server": "servidor token rupive",
   "forks.scope.token": "nde token ndive",
   "forks.scope.none": "ojekuaaukaʼỹre",
   "forks.exhausted": "GitHub ndoguerekovéima jerure ko aravópe g̃uarã. Emoĩ peteĩ token yrupẽ panel-pe rehupi hag̃ua tope 60 guive 5000 peve, térã eju jey aravo ojere rire.",
   "forks.answered": "GitHub ombohovái {status}: {message}",
-  "forks.loading": "Oñemyenyhẽhína …",
-  "forks.branches": "Rakãkuéra",
-  "forks.versions": "Versión-kuéra",
-  "forks.showForks": {
-    "one": "Ehechauka {n} fork {repo}-gui",
-    "other": "Ehechauka umi {n} fork {repo}-gui"
-  },
   "matrix.preset.overview": "Jehecha paite",
   "matrix.preset.galaxy": "Mbyjaty",
   "matrix.preset.ressources": "Tembiporu",

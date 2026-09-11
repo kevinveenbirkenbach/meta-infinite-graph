@@ -23,6 +23,8 @@ export class ForkTree extends ForkHistory {
   invalidate() {
     this.loaded = null;
     this.section = null;
+    this.opened = new Set();
+    this.branchesBy = {};
   }
 
   static isRepo(value) {
@@ -46,19 +48,12 @@ export class ForkTree extends ForkHistory {
     section.appendChild(this.note);
     this.plot = el('div', { className: 'fork-plot-host' });
     section.appendChild(this.plot);
-    this.list = el('ul', { className: 'fork-tree' });
-    section.appendChild(this.list);
     return section;
   }
 
   _load() {
     return Promise.all([this.api.repo(this.root), this.api.forks(this.root)])
       .then(([repo, forks]) => {
-        this.list.innerHTML = '';
-        this.list.appendChild(this._node(repo, true));
-        const children = document.createElement('ul');
-        for (const fork of forks) children.appendChild(this._node(fork, false));
-        if (forks.length) this.list.lastChild.appendChild(children);
         this.network = [
           { ...repo, parent: null },
           ...forks.map(fork => ({ ...fork, parent: repo.full_name })),
@@ -75,15 +70,20 @@ export class ForkTree extends ForkHistory {
   // Fork points come free with the fork list, so this draws before any history.
   _plot() {
     if (!this.network) return;
-    const graph = new ForkGraph(this.network, this.histories, this.tagsBy);
+    const shown = Object.fromEntries([...this.opened].map(name => [name, this.branchesBy[name] || []]));
+    const graph = new ForkGraph(this.network, this.histories, this.tagsBy, shown);
     const drawn = ForkPlot.draw(graph, this.plot.clientWidth || 900, (commit, repo, event) => {
       if (!commit) return this.cards.release(ForkCards.COMMIT);
       this._point = { x: event.clientX, y: event.clientY };
       this.cards.show(ForkCards.COMMIT, this._point, () => ForkCards.commitCard(commit, repo));
-    });
+    }, name => this.toggle(name));
+    const focused = this.plot.contains(document.activeElement) ? document.activeElement.getAttribute('data-repo') : null;
     this.plot.innerHTML = '';
     if (!drawn) return;
     this.plot.appendChild(drawn.svg);
+    if (focused) {
+      /** @type {SVGElement | null} */ (drawn.svg.querySelector(`[data-repo="${CSS.escape(focused)}"]`))?.focus();
+    }
     const rows = graph.rows();
     const placed = rows.reduce((sum, row) => sum + (row.tags || []).length, 0);
     const orphaned = rows.reduce((sum, row) => sum + (row.orphanedTags || 0), 0);
@@ -94,6 +94,31 @@ export class ForkTree extends ForkHistory {
       this.plot.appendChild(textElement('p', ForkCards.refusal(this.refused), 'fork-error'));
     }
     this.plot.appendChild(textElement('p', ForkCards.axisNote(graph.span()), 'fork-axis-note'));
+  }
+
+  // Args:
+  //   fullName: the repository whose branch rows to show or hide.
+  // Returns: a promise for the redraw once its branches have loaded.
+  toggle(fullName) {
+    if (this.opened.has(fullName)) this.opened.delete(fullName);
+    else this.opened.add(fullName);
+    this._plot();
+    const repo = this.network.find(one => one.full_name === fullName);
+    if (!repo || !this.opened.has(fullName)) return Promise.resolve();
+    return this._branchesOf(repo).then(() => this._deeper(repo)).then(() => {
+      this._plot();
+      if (this.summary) this.note.textContent = `${this.summary} ${this._quota()}`;
+    });
+  }
+
+  _deeper(repo) {
+    if (!repo.forks_count || this.network.some(one => one.parent === repo.full_name)) return Promise.resolve();
+    return this.api.forks(repo.full_name)
+      .then(forks => {
+        this.network.push(...forks.map(fork => ({ ...fork, parent: repo.full_name })));
+        return this._allHistories().then(() => this._allTags());
+      })
+      .catch(error => { this.refused = error; });
   }
 
   _describe(repo, forks) {
@@ -117,93 +142,8 @@ export class ForkTree extends ForkHistory {
   }
 
   _fail(error) {
-    this.list.innerHTML = '';
     this.note.textContent = error.exhausted
       ? t('forks.exhausted')
       : t('forks.answered', { status: error.status || t('feed.anError'), message: error.message });
-  }
-
-  _node(repo, isRoot) {
-    const item = el('li', { className: 'fork-node' });
-    const head = el('div', { className: 'fork-head' });
-    const toggle = el('button', { type: 'button', className: 'fork-toggle', textContent: '▸' });
-    head.appendChild(toggle);
-    head.appendChild(el('a', {
-      href: repo.html_url, target: '_blank', rel: 'noreferrer', textContent: repo.full_name,
-      className: isRoot ? 'fork-name root' : 'fork-name',
-    }));
-    head.appendChild(textElement('span', repo.default_branch || '', 'chip'));
-    if (repo.forks_count) {
-      head.appendChild(textElement('span', `⑂ ${repo.forks_count}`, 'chip'));
-    }
-    if (repo.stargazers_count) {
-      head.appendChild(textElement('span', `★ ${repo.stargazers_count}`, 'chip'));
-    }
-    head.appendChild(textElement('span', ForkCards.date(repo.pushed_at), 'fork-date'));
-    item.appendChild(head);
-
-    const body = el('div', { className: 'fork-body', hidden: true });
-    item.appendChild(body);
-
-    let opened = false;
-    toggle.addEventListener('click', () => {
-      body.hidden = !body.hidden;
-      toggle.textContent = body.hidden ? '▸' : '▾';
-      if (body.hidden || opened) return;
-      opened = true;
-      this._fill(body, repo);
-    });
-    return item;
-  }
-
-  _fill(body, repo) {
-    body.textContent = t('forks.loading');
-    // Versions come from tags, not releases: this network carries 68 tags and
-    // zero releases, so a /releases call per node would spend quota on nothing.
-    const wanted = [
-      [t('forks.branches'), this.api.branches(repo.full_name), b => b.name],
-      [t('forks.versions'), this.api.tags(repo.full_name), tag => tag.name],
-    ];
-    this._history(repo);
-    Promise.all(wanted.map(([, promise]) => promise.catch(error => error)))
-      .then(results => {
-        body.textContent = '';
-        results.forEach((result, index) => {
-          const [title, , label] = wanted[index];
-          if (result instanceof Error) {
-            body.appendChild(textElement('div', `${title}: ${result.message}`, 'fork-error'));
-            return;
-          }
-          const row = el('div', { className: 'fork-refs' });
-          row.appendChild(textElement('span', `${title} (${result.length})`, 'fork-refs-title'));
-          for (const entry of result) {
-            row.appendChild(textElement('span', label(entry), 'chip'));
-          }
-          body.appendChild(row);
-        });
-        if (this.summary) this.note.textContent = `${this.summary} ${this._quota()}`;
-        if (repo.forks_count) this._deeper(body, repo);
-      });
-  }
-
-  _deeper(body, repo) {
-    const button = el('button', {
-      type: 'button', className: 'btn btn-sm btn-outline-primary mt-2',
-      textContent: t('forks.showForks', { n: repo.forks_count, repo: repo.full_name }),
-    });
-    button.addEventListener('click', () => {
-      button.disabled = true;
-      this.api.forks(repo.full_name)
-        .then(forks => {
-          const children = document.createElement('ul');
-          for (const fork of forks) children.appendChild(this._node(fork, false));
-          button.replaceWith(children);
-        })
-        .catch(error => {
-          button.disabled = false;
-          body.appendChild(textElement('div', error.message, 'fork-error'));
-        });
-    });
-    body.appendChild(button);
   }
 }

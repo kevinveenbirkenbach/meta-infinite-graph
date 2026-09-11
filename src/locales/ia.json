@@ -174,20 +174,13 @@
     "other": "{n} de illos es furcate de novo; aperi un pro vader plus profunde."
   },
   "forks.leaves": "nulle de illos es furcate de novo, dunque isto es le rete integre.",
-  "forks.lazy": "Brancas, etiquettas e le vias de commits se carga quando un repositorio es aperite.",
+  "forks.lazy": "Clicca sur un repositorio pro monstrar su brancas sub illo super le mesme axe temporal.",
   "forks.quota": "{remaining} de {limit} requestas resta in iste hora, {scope}.",
   "forks.scope.server": "per le token del servitor",
   "forks.scope.token": "con tu token",
   "forks.scope.none": "sin authentication",
   "forks.exhausted": "GitHub non ha plus requestas pro iste hora. Adde un token in le pannello de filtro pro elevar le limite de 60 a 5000, o retorna post que le hora passa.",
   "forks.answered": "GitHub respondeva {status}: {message}",
-  "forks.loading": "Cargante …",
-  "forks.branches": "Brancas",
-  "forks.versions": "Versiones",
-  "forks.showForks": {
-    "one": "Monstrar le {n} furca de {repo}",
-    "other": "Monstrar le {n} furcas de {repo}"
-  },
   "matrix.preset.overview": "Vista general",
   "matrix.preset.galaxy": "Galaxia",
   "matrix.preset.ressources": "Recursos",

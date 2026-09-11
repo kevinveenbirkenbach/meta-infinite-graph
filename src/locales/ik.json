@@ -174,20 +174,13 @@
     "other": "{n} iḷaŋi avguqqiŋaruat; aŋmaġuŋ atausiq itiŋŋaġniaġuvich."
   },
   "forks.leaves": "atausiġmik avguqqiŋŋitchut, taatnaqłuni una kuvraq iḷuqaan.",
-  "forks.lazy": "Avguutit, atiqsiutit, iḷiḷġaat aqqutaŋillu tiguaŋaruat iḷiġvik aŋmaqpan.",
+  "forks.lazy": "Naqiġuŋ iḷiġvik avguutiŋi ataani takuniaġukkuvgich, uvlut aqqutaŋatni atautchimi.",
   "forks.quota": "{remaining} {limit} apiqsruutiniñ iḷiŋaruat sassami uvani, {scope}.",
   "forks.scope.server": "savaqtuum tuukaŋagun",
   "forks.scope.token": "iliptiŋ tuukaŋagun",
   "forks.scope.none": "nalunaiqsiŋŋitchuq",
   "forks.exhausted": "GitHub apiqsruutiŋi nuŋuŋaruat sassami uvani. Iḷaliuġuŋ tuukan aviktuun iḷiġviaŋani killiq 60-miñ 5000-mun qutchiksiġukkuvgu, naagga utiġuŋ sassaq nutaaq aullaqpan.",
   "forks.answered": "GitHub kiggutiruq {status}: {message}",
-  "forks.loading": "Tigusiruq …",
-  "forks.branches": "Avguutit",
-  "forks.versions": "Nutaġutit",
-  "forks.showForks": {
-    "one": "Tautuktitchiñ {n} avguġaaq {repo}-miñ",
-    "other": "Tautuktitchiñ {n} avguġaat {repo}-miñ"
-  },
   "matrix.preset.overview": "Iḷuqaan qiñiġniq",
   "matrix.preset.galaxy": "Uvluġiat",
   "matrix.preset.ressources": "Atuġaksrat",

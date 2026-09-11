@@ -167,19 +167,13 @@
     "other": "そのうち {n} 個はさらにフォークされています。開くとさらに深くたどれます。"
   },
   "forks.leaves": "どれもさらにフォークされていないため、これがネットワーク全体です。",
-  "forks.lazy": "ブランチ、タグ、コミットレーンはリポジトリを開いたときに読み込まれます。",
+  "forks.lazy": "リポジトリをクリックすると、そのブランチが同じ時間軸上ですぐ下に表示されます。",
   "forks.quota": "この1時間の残りリクエスト {remaining} / {limit}、{scope}。",
   "forks.scope.server": "サーバーのトークン経由",
   "forks.scope.token": "あなたのトークンを使用",
   "forks.scope.none": "未認証",
   "forks.exhausted": "GitHub のこの1時間のリクエスト枠が尽きました。フィルターパネルでトークンを追加して上限を60から5000に上げるか、次の1時間になってから再度お試しください。",
   "forks.answered": "GitHub の応答 {status}: {message}",
-  "forks.loading": "読み込み中 …",
-  "forks.branches": "ブランチ",
-  "forks.versions": "バージョン",
-  "forks.showForks": {
-    "other": "{repo} の {n} 個のフォークを表示"
-  },
   "matrix.preset.overview": "概要",
   "matrix.preset.galaxy": "ギャラクシー",
   "matrix.preset.ressources": "リソース",

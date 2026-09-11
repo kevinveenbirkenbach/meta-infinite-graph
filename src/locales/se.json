@@ -181,21 +181,13 @@
     "other": "{n} dain leat fas forkejuvvon; raba ovtta mannat čiekŋalebbui."
   },
   "forks.leaves": "ii oktage dain leat fas forkejuvvon, nu ahte dát lea olles fierpmádat.",
-  "forks.lazy": "Oavssit, merkkat ja commitgeainnut viežžojuvvojit go vuorká rahpasa.",
+  "forks.lazy": "Coahkkal vuorkká čájehan dihtii dan oavssiid dan vuolde seamma áigeaksa alde.",
   "forks.quota": "{remaining} {limit} jearaldagas báhcán dán diimmu, {scope}.",
   "forks.scope.server": "bálvvá čoavdaga bokte",
   "forks.scope.token": "du čoavddain",
   "forks.scope.none": "duođaškeahttá",
   "forks.exhausted": "GitHubis leat nohkan jearaldagat dán diimmu. Lasit čoavdaga sillenpanelis loktet ráji 60 rájes 5000 rádjai, dahje boađe ruovttoluotta go diibmu molsašuvvá.",
   "forks.answered": "GitHub vástidii {status}: {message}",
-  "forks.loading": "Viežžá …",
-  "forks.branches": "Oavssit",
-  "forks.versions": "Veršuvnnat",
-  "forks.showForks": {
-    "one": "Čájet {repo} {n} forka",
-    "two": "Čájet {repo} {n} forka",
-    "other": "Čájet {repo} {n} forka"
-  },
   "matrix.preset.overview": "Bajilgovva",
   "matrix.preset.galaxy": "Galáksa",
   "matrix.preset.ressources": "Resurssat",

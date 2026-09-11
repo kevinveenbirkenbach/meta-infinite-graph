@@ -174,20 +174,13 @@
     "other": "{n} o i latou ua toe fork; tatala se tasi e alu loloto atu."
   },
   "forks.leaves": "e leai se tasi o i latou ua toe fork, o lea o le fesootaiga atoa lenei.",
-  "forks.lazy": "E uta lala, faailoilo ma ala commit pe a tatala se faleteu.",
+  "forks.lazy": "Kiliki se faleteu e faaali ai ona lala i lalo ifo o ia i le laina taimi e tasi.",
   "forks.quota": "{remaining} mai le {limit} talosaga o totoe i lenei itula, {scope}.",
   "forks.scope.server": "e ala i le token a le server",
   "forks.scope.token": "ma lau token",
   "forks.scope.none": "e le faamaonia",
   "forks.exhausted": "Ua uma talosaga a GitHub mo lenei itula. Faaopoopo se token i le vaega faamama e siitia ai le tapulaa mai le 60 i le 5000, pe toe foi mai pe a sui le itula.",
   "forks.answered": "Na tali mai GitHub {status}: {message}",
-  "forks.loading": "Uta …",
-  "forks.branches": "Lala",
-  "forks.versions": "Lomiga",
-  "forks.showForks": {
-    "one": "Faaali le {n} fork o {repo}",
-    "other": "Faaali fork e {n} o {repo}"
-  },
   "matrix.preset.overview": "Aotelega",
   "matrix.preset.galaxy": "Aniva",
   "matrix.preset.ressources": "Punaoa",

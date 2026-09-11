@@ -174,20 +174,13 @@
     "other": "{n} d'elli sò torna forcati; apritene unu per andà più in fondu."
   },
   "forks.leaves": "nisunu d'elli hè torna forcatu, dunque quessa hè a reta sana.",
-  "forks.lazy": "Rami, etichette è corsie di commit si caricanu quandu un dipositu hè apertu.",
+  "forks.lazy": "Cliccate nant'à un dipositu per affissà i so rami sottu à ellu nant'à u listessu assu di u tempu.",
   "forks.quota": "{remaining} dumande nant'à {limit} restanu st'ora, {scope}.",
   "forks.scope.server": "per mezu di u token di u servitore",
   "forks.scope.token": "cù u vostru token",
   "forks.scope.none": "senza autenticazione",
   "forks.exhausted": "GitHub ùn hà più dumande per st'ora. Aghjunghjite un token in u pannellu di filtru per alzà u limitu da 60 à 5000, o riturnate quandu l'ora cambia.",
   "forks.answered": "GitHub hà rispostu {status}: {message}",
-  "forks.loading": "Caricamentu …",
-  "forks.branches": "Rami",
-  "forks.versions": "Versioni",
-  "forks.showForks": {
-    "one": "Mustrà u {n} fork di {repo}",
-    "other": "Mustrà i {n} fork di {repo}"
-  },
   "matrix.preset.overview": "Panurama",
   "matrix.preset.galaxy": "Galassia",
   "matrix.preset.ressources": "Risorse",

@@ -174,20 +174,13 @@
     "other": "{n} of them are forked again; open one to walk deeper."
   },
   "forks.leaves": "none of them are forked again, so this is the whole network.",
-  "forks.lazy": "Branches, tags and the commit lanes load when a repository is opened.",
+  "forks.lazy": "Click a repository to show its branches beneath it on the same time axis.",
   "forks.quota": "{remaining} of {limit} requests left this hour, {scope}.",
   "forks.scope.server": "through the server's token",
   "forks.scope.token": "with your token",
   "forks.scope.none": "unauthenticated",
   "forks.exhausted": "GitHub is out of requests for this hour. Add a token in the filter panel to raise the limit from 60 to 5000, or come back after the hour turns.",
   "forks.answered": "GitHub answered {status}: {message}",
-  "forks.loading": "Loading …",
-  "forks.branches": "Branches",
-  "forks.versions": "Versions",
-  "forks.showForks": {
-    "one": "Show the {n} fork of {repo}",
-    "other": "Show the {n} forks of {repo}"
-  },
   "matrix.preset.overview": "Overview",
   "matrix.preset.galaxy": "Galaxy",
   "matrix.preset.ressources": "Ressources",

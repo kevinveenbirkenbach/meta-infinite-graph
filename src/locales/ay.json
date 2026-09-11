@@ -174,20 +174,13 @@
     "other": "Jupanakat {n} wasitat t'aqatawa; juk'amp manqhar sarañatakix maya jist'aram."
   },
   "forks.leaves": "janiw maynis wasitat t'aqatäkiti, ukatwa akax taqpach llikawa.",
-  "forks.lazy": "Ramanaka, uñt'ayirinaka, mayjt'aw thakhinakas imaña jist'arasinx apsusi.",
+  "forks.lazy": "Mä imaña ch'iqt'am, ramanakapa manqhapan pachpa pacha taypi siqin uñacht'ayañataki.",
   "forks.quota": "Aka horan {limit} mayiwit {remaining} qhiparaski, {scope}.",
   "forks.scope.server": "sirwidurn tukinapampi",
   "forks.scope.token": "juman tukinamampi",
   "forks.scope.none": "jan uñt'ayasisa",
   "forks.exhausted": "GitHub ukax aka horatakix mayiwinak tukuyxiwa. Susuña panelan tukin yapxatam thiya 60 ukat 5000 ukar jach'achañataki, jan ukax hora mayjt'ipan kutt'anim.",
   "forks.answered": "GitHub ukax {status} sasaw kutt'ayäna: {message}",
-  "forks.loading": "Apsuski …",
-  "forks.branches": "Ramanaka",
-  "forks.versions": "Wersionanaka",
-  "forks.showForks": {
-    "one": "{repo} ukan {n} t'aqap uñacht'ayaña",
-    "other": "{repo} ukan {n} t'aqanakap uñacht'ayaña"
-  },
   "matrix.preset.overview": "Taqpach uñtawi",
   "matrix.preset.galaxy": "Warawaranaka",
   "matrix.preset.ressources": "Yänaka",

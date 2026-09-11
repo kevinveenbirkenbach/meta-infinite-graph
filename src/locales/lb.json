@@ -174,20 +174,13 @@
     "other": "{n} dovu sinn nach eng Kéier geforkt; maach een op, fir méi déif ze goen."
   },
   "forks.leaves": "keen dovun ass nach eng Kéier geforkt, dat hei ass also dat ganzt Netzwierk.",
-  "forks.lazy": "Branchen, Tags an d'Commit-Bunne ginn gelueden, wann e Repository opgemaach gëtt.",
+  "forks.lazy": "Klick op e Repository, fir seng Branchen drënner op der selwechter Zäitachs ze weisen.",
   "forks.quota": "{remaining} vun {limit} Ufroen iwwreg dës Stonn, {scope}.",
   "forks.scope.server": "iwwer den Token vum Server",
   "forks.scope.token": "mat dengem Token",
   "forks.scope.none": "ouni Authentifikatioun",
   "forks.exhausted": "GitHub huet fir dës Stonn keng Ufroe méi. Setz en Token am Filterpanel derbäi, fir d'Limit vu 60 op 5000 ze hiewen, oder komm erëm, wann déi nächst Stonn ugefaangen huet.",
   "forks.answered": "GitHub huet {status} geäntwert: {message}",
-  "forks.loading": "Gëtt gelueden …",
-  "forks.branches": "Branchen",
-  "forks.versions": "Versiounen",
-  "forks.showForks": {
-    "one": "{n} Fork vun {repo} weisen",
-    "other": "Déi {n} Forks vun {repo} weisen"
-  },
   "matrix.preset.overview": "Iwwersiicht",
   "matrix.preset.galaxy": "Galaxis",
   "matrix.preset.ressources": "Ressourcen",

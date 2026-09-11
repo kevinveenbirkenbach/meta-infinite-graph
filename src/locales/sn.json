@@ -174,20 +174,13 @@
     "other": "{n} awo akaforkwa zvakare; vhura imwe kuti upinde zvakadzama."
   },
   "forks.leaves": "hapana kana rimwe rawo rakaforkwa zvakare, saka aya ndiwo mambure ese.",
-  "forks.lazy": "Mapazi, mategi nenzira dzezvinyorwa zvinorodhwa kana dura ravhurwa.",
+  "forks.lazy": "Dzvanya dura kuti uratidze mapazi aro pasi paro pamutsara mumwe chete wenguva.",
   "forks.quota": "Zvikumbiro {remaining} pa{limit} zvasara awa ino, {scope}.",
   "forks.scope.server": "kuburikidza netokeni yemusevha",
   "forks.scope.token": "netokeni yako",
   "forks.scope.none": "pasina kusimbiswa",
   "forks.exhausted": "GitHub yapera zvikumbiro paawa iyi. Wedzera tokeni muphaneru yesefa kuti ukwidze muganho kubva pa60 kusvika pa5000, kana dzoka kana awa yachinja.",
   "forks.answered": "GitHub yakapindura {status}: {message}",
-  "forks.loading": "Kurodha …",
-  "forks.branches": "Mapazi",
-  "forks.versions": "Shanduro",
-  "forks.showForks": {
-    "one": "Ratidza fork {n} ye{repo}",
-    "other": "Ratidza mafork {n} e{repo}"
-  },
   "matrix.preset.overview": "Pfupiso",
   "matrix.preset.galaxy": "Nyeredzi",
   "matrix.preset.ressources": "Zviwanikwa",

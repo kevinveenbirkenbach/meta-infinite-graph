@@ -181,21 +181,13 @@
     "other": "{n} od njih je ponovo forkano; otvorite jedan da idete dublje."
   },
   "forks.leaves": "nijedan od njih nije ponovo forkan, pa je ovo cijela mreža.",
-  "forks.lazy": "Grane, oznake i trake komita učitavaju se kad se otvori repozitorij.",
+  "forks.lazy": "Kliknite na repozitorij da prikažete njegove grane ispod njega na istoj vremenskoj osi.",
   "forks.quota": "Preostalo {remaining} od {limit} zahtjeva ovog sata, {scope}.",
   "forks.scope.server": "preko serverskog tokena",
   "forks.scope.token": "s vašim tokenom",
   "forks.scope.none": "bez autentifikacije",
   "forks.exhausted": "GitHub je za ovaj sat potrošio zahtjeve. Dodajte token u panelu filtera da podignete granicu sa 60 na 5000 ili se vratite kad počne novi sat.",
   "forks.answered": "GitHub je odgovorio {status}: {message}",
-  "forks.loading": "Učitavanje …",
-  "forks.branches": "Grane",
-  "forks.versions": "Verzije",
-  "forks.showForks": {
-    "one": "Prikaži {n} fork repozitorija {repo}",
-    "few": "Prikaži {n} forka repozitorija {repo}",
-    "other": "Prikaži {n} forkova repozitorija {repo}"
-  },
   "matrix.preset.overview": "Pregled",
   "matrix.preset.galaxy": "Galaksija",
   "matrix.preset.ressources": "Resursi",

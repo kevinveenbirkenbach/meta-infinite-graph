@@ -181,21 +181,13 @@
     "other": "{n} de ellos tienen a su vez forks; abre uno para profundizar."
   },
   "forks.leaves": "ninguno de ellos tiene forks, así que esta es toda la red.",
-  "forks.lazy": "Las ramas, las etiquetas y los carriles de commits se cargan al abrir un repositorio.",
+  "forks.lazy": "Haz clic en un repositorio para mostrar sus ramas debajo de él en el mismo eje temporal.",
   "forks.quota": "Quedan {remaining} de {limit} solicitudes esta hora, {scope}.",
   "forks.scope.server": "mediante el token del servidor",
   "forks.scope.token": "con tu token",
   "forks.scope.none": "sin autenticar",
   "forks.exhausted": "GitHub se ha quedado sin solicitudes esta hora. Añade un token en el panel de filtro para subir el límite de 60 a 5000, o vuelve cuando cambie la hora.",
   "forks.answered": "GitHub respondió {status}: {message}",
-  "forks.loading": "Cargando …",
-  "forks.branches": "Ramas",
-  "forks.versions": "Versiones",
-  "forks.showForks": {
-    "one": "Mostrar el {n} fork de {repo}",
-    "many": "Mostrar los {n} de forks de {repo}",
-    "other": "Mostrar los {n} forks de {repo}"
-  },
   "matrix.preset.overview": "Resumen",
   "matrix.preset.galaxy": "Galaxia",
   "matrix.preset.ressources": "Recursos",

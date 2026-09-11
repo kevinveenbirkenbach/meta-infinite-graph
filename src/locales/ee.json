@@ -174,20 +174,13 @@
     "other": "Wo dometɔ {n} gawɔ fork; ʋu ɖeka be nàyi goglome."
   },
   "forks.leaves": "wo dometɔ aɖeke megawɔ fork o, eya ta esia nye kadodo bliboa.",
-  "forks.lazy": "Alɔwo, dzesiwo kple tɔtrɔ ƒe mɔwo vana ne woʋu nudzraɖoƒe aɖe.",
+  "forks.lazy": "Zi nudzraɖoƒe aɖe dzi be nàkpɔ eƒe alɔwo le ete le ɣeyiɣi ƒe fli ma ke dzi.",
   "forks.quota": "Biabia {remaining} susɔ le {limit} me le gaƒoƒo sia me, {scope}.",
   "forks.scope.server": "to sɛva ƒe tɔken dzi",
   "forks.scope.token": "kple wò tɔken",
   "forks.scope.none": "womeɖo kpe edzi o",
   "forks.exhausted": "Biabiawo vɔ le GitHub si le gaƒoƒo sia me. Tsɔ tɔken kpe ɖe eŋu le tiatia ƒe akpa me be seɖoƒe la natso 60 ayi 5000, alo gbugbɔ va ne gaƒoƒo la trɔ.",
   "forks.answered": "GitHub ɖo eŋu be {status}: {message}",
-  "forks.loading": "Ele vavam …",
-  "forks.branches": "Alɔwo",
-  "forks.versions": "Tɔtrɔnɔnɔmewo",
-  "forks.showForks": {
-    "one": "Ɖe {repo} ƒe fork {n} fia",
-    "other": "Ɖe {repo} ƒe fork {n} fia"
-  },
   "matrix.preset.overview": "Kpɔkpɔ bliboa",
   "matrix.preset.galaxy": "Ɣletiviƒuƒoƒo",
   "matrix.preset.ressources": "Nunɔamesiwo",

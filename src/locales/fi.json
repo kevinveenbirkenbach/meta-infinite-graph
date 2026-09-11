@@ -174,20 +174,13 @@
     "other": "{n} niistä on forkattu uudelleen; avaa yksi mennäksesi syvemmälle."
   },
   "forks.leaves": "yhtäkään niistä ei ole forkattu uudelleen, joten tämä on koko verkosto.",
-  "forks.lazy": "Haarat, tagit ja commit-kaistat latautuvat, kun repositorio avataan.",
+  "forks.lazy": "Napsauta repositoriota näyttääksesi sen haarat sen alla samalla aika-akselilla.",
   "forks.quota": "{remaining}/{limit} pyyntöä jäljellä tällä tunnilla, {scope}.",
   "forks.scope.server": "palvelimen tokenilla",
   "forks.scope.token": "omalla tokenillasi",
   "forks.scope.none": "tunnistautumatta",
   "forks.exhausted": "GitHubin pyynnöt ovat loppuneet tältä tunnilta. Lisää token suodatinpaneelissa nostaaksesi rajan 60:stä 5000:een, tai palaa, kun tunti vaihtuu.",
   "forks.answered": "GitHub vastasi koodilla {status}: {message}",
-  "forks.loading": "Ladataan …",
-  "forks.branches": "Haarat",
-  "forks.versions": "Versiot",
-  "forks.showForks": {
-    "one": "Näytä repositorion {repo} {n} forkki",
-    "other": "Näytä repositorion {repo} {n} forkkia"
-  },
   "matrix.preset.overview": "Yleiskuva",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Resurssit",

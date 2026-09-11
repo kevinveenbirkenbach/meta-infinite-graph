@@ -174,20 +174,13 @@
     "other": "Horietako {n}(e)k berriro fork bat dute; ireki bat sakonago joateko."
   },
   "forks.leaves": "horietako batek ere ez du fork berririk, beraz, hau da sare osoa.",
-  "forks.lazy": "Adarrak, etiketak eta commit bideak biltegi bat irekitzean kargatzen dira.",
+  "forks.lazy": "Egin klik biltegi batean haren adarrak azpian denbora-ardatz berean erakusteko.",
   "forks.quota": "{limit} eskaeratik {remaining} geratzen dira ordu honetan, {scope}.",
   "forks.scope.server": "zerbitzariaren tokenaren bidez",
   "forks.scope.token": "zure tokenarekin",
   "forks.scope.none": "autentifikatu gabe",
   "forks.exhausted": "GitHub-ek ordu honetako eskaerak agortu ditu. Gehitu token bat iragazki-panelean muga 60tik 5000ra igotzeko, edo itzuli ordua aldatu ondoren.",
   "forks.answered": "GitHub-ek {status} erantzun du: {message}",
-  "forks.loading": "Kargatzen …",
-  "forks.branches": "Adarrak",
-  "forks.versions": "Bertsioak",
-  "forks.showForks": {
-    "one": "Erakutsi {repo}(r)en fork {n}",
-    "other": "Erakutsi {repo}(r)en {n} forkak"
-  },
   "matrix.preset.overview": "Ikuspegi orokorra",
   "matrix.preset.galaxy": "Galaxia",
   "matrix.preset.ressources": "Baliabideak",

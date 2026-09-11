@@ -174,20 +174,13 @@
     "other": "ਇਨ੍ਹਾਂ ਵਿੱਚੋਂ {n} ਮੁੜ ਫੋਰਕ ਕੀਤੇ ਗਏ ਹਨ; ਡੂੰਘਾਈ ਵਿੱਚ ਜਾਣ ਲਈ ਇੱਕ ਖੋਲ੍ਹੋ।"
   },
   "forks.leaves": "ਇਨ੍ਹਾਂ ਵਿੱਚੋਂ ਕੋਈ ਵੀ ਮੁੜ ਫੋਰਕ ਨਹੀਂ ਕੀਤਾ ਗਿਆ, ਇਸ ਲਈ ਇਹੀ ਪੂਰਾ ਨੈੱਟਵਰਕ ਹੈ।",
-  "forks.lazy": "ਰਿਪੋਜ਼ਟਰੀ ਖੋਲ੍ਹਣ ਉੱਤੇ ਬ੍ਰਾਂਚਾਂ, ਟੈਗ ਅਤੇ ਕਮਿਟ ਲੇਨਾਂ ਲੋਡ ਹੁੰਦੀਆਂ ਹਨ।",
+  "forks.lazy": "ਕਿਸੇ ਰਿਪੋਜ਼ਟਰੀ ਦੀਆਂ ਬ੍ਰਾਂਚਾਂ ਨੂੰ ਉਸੇ ਸਮਾਂ-ਧੁਰੇ ਉੱਤੇ ਉਸਦੇ ਹੇਠਾਂ ਦਿਖਾਉਣ ਲਈ ਉਸ ਉੱਤੇ ਕਲਿੱਕ ਕਰੋ।",
   "forks.quota": "ਇਸ ਘੰਟੇ {limit} ਵਿੱਚੋਂ {remaining} ਬੇਨਤੀਆਂ ਬਾਕੀ, {scope}।",
   "forks.scope.server": "ਸਰਵਰ ਦੇ ਟੋਕਨ ਰਾਹੀਂ",
   "forks.scope.token": "ਤੁਹਾਡੇ ਟੋਕਨ ਨਾਲ",
   "forks.scope.none": "ਬਿਨਾਂ ਪ੍ਰਮਾਣੀਕਰਨ",
   "forks.exhausted": "ਇਸ ਘੰਟੇ ਲਈ GitHub ਦੀਆਂ ਬੇਨਤੀਆਂ ਮੁੱਕ ਗਈਆਂ ਹਨ। ਸੀਮਾ 60 ਤੋਂ 5000 ਕਰਨ ਲਈ ਫਿਲਟਰ ਪੈਨਲ ਵਿੱਚ ਟੋਕਨ ਜੋੜੋ, ਜਾਂ ਘੰਟਾ ਬਦਲਣ ਤੋਂ ਬਾਅਦ ਵਾਪਸ ਆਓ।",
   "forks.answered": "GitHub ਨੇ {status} ਜਵਾਬ ਦਿੱਤਾ: {message}",
-  "forks.loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ …",
-  "forks.branches": "ਬ੍ਰਾਂਚਾਂ",
-  "forks.versions": "ਸੰਸਕਰਣ",
-  "forks.showForks": {
-    "one": "{repo} ਦਾ {n} ਫੋਰਕ ਦਿਖਾਓ",
-    "other": "{repo} ਦੇ {n} ਫੋਰਕ ਦਿਖਾਓ"
-  },
   "matrix.preset.overview": "ਝਲਕ",
   "matrix.preset.galaxy": "ਆਕਾਸ਼ਗੰਗਾ",
   "matrix.preset.ressources": "ਸਾਧਨ",

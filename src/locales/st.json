@@ -174,20 +174,13 @@
     "other": "{n} ho tsona di forkilwe hape; bula e nngwe ho kena ka ho teba."
   },
   "forks.leaves": "ha ho le e nngwe ya tsona e forkilweng hape, kahoo ana ke marang-rang ohle.",
-  "forks.lazy": "Makala, maibole le ditsela tsa diphetoho di kena ha polokelo e bulwa.",
+  "forks.lazy": "Tobetsa polokelo ho bontsha makala a yona ka tlasa yona moleng o le mong wa nako.",
   "forks.quota": "Dikopo tse {remaining} ho tse {limit} di setse horeng ena, {scope}.",
   "forks.scope.server": "ka tokene ya seva",
   "forks.scope.token": "ka tokene ya hao",
   "forks.scope.none": "ntle le netefatso",
   "forks.exhausted": "GitHub e felletswe ke dikopo horeng ena. Eketsa tokene phanele ya sefe ho phahamisa moedi ho tloha ho 60 ho ya ho 5000, kapa o kgutle ha hora e fetoha.",
   "forks.answered": "GitHub e arabile {status}: {message}",
-  "forks.loading": "Ho a kenngwa …",
-  "forks.branches": "Makala",
-  "forks.versions": "Diphetolelo",
-  "forks.showForks": {
-    "one": "Bontsha fork e {n} ya {repo}",
-    "other": "Bontsha difork tse {n} tsa {repo}"
-  },
   "matrix.preset.overview": "Kakaretso",
   "matrix.preset.galaxy": "Galaxy",
   "matrix.preset.ressources": "Mehlodi",

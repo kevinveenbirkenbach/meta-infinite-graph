@@ -167,19 +167,13 @@
     "other": "그중 {n}개가 다시 포크되었습니다. 하나를 열어 더 깊이 탐색하세요."
   },
   "forks.leaves": "다시 포크된 것이 없으므로 이것이 전체 네트워크입니다.",
-  "forks.lazy": "브랜치, 태그, 커밋 레인은 저장소를 열 때 로드됩니다.",
+  "forks.lazy": "저장소를 클릭하면 그 브랜치가 같은 시간 축 위에서 바로 아래에 표시됩니다.",
   "forks.quota": "이번 시간 {limit}건 중 {remaining}건 남음, {scope}.",
   "forks.scope.server": "서버 토큰 사용",
   "forks.scope.token": "내 토큰 사용",
   "forks.scope.none": "인증 없음",
   "forks.exhausted": "이번 시간의 GitHub 요청 한도가 소진되었습니다. 필터 패널에서 토큰을 추가해 한도를 60에서 5000으로 올리거나, 다음 시간에 다시 오세요.",
   "forks.answered": "GitHub 응답 {status}: {message}",
-  "forks.loading": "로드 중 …",
-  "forks.branches": "브랜치",
-  "forks.versions": "버전",
-  "forks.showForks": {
-    "other": "{repo}의 포크 {n}개 표시"
-  },
   "matrix.preset.overview": "개요",
   "matrix.preset.galaxy": "은하",
   "matrix.preset.ressources": "리소스",

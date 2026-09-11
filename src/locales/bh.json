@@ -174,20 +174,13 @@
     "other": "ओहमें से {n} गो के फेर फोर्क भइल बा; गहराई में जाए खातिर कवनो एगो खोलीं।"
   },
   "forks.leaves": "ओहमें से केहू के फेर फोर्क नइखे भइल, एह से इहे पूरा नेटवर्क बा।",
-  "forks.lazy": "रिपॉजिटरी खोले पर ब्रांच, टैग आ कमिट लेन लोड होला।",
+  "forks.lazy": "कवनो रिपॉजिटरी पर क्लिक करीं, ओकर ब्रांच ओकरा नीचे ओही समय अक्ष पर देखावे खातिर।",
   "forks.quota": "एह घंटा में {limit} में से {remaining} अनुरोध बचल बा, {scope}।",
   "forks.scope.server": "सर्वर के टोकन से",
   "forks.scope.token": "रउआ टोकन से",
   "forks.scope.none": "बिना प्रमाणीकरण के",
   "forks.exhausted": "एह घंटा खातिर GitHub के अनुरोध खतम हो गइल। सीमा 60 से 5000 करे खातिर फिल्टर पैनल में टोकन जोड़ीं, या घंटा बदलला के बाद फेर आईं।",
   "forks.answered": "GitHub {status} जवाब देलस: {message}",
-  "forks.loading": "लोड हो रहल बा …",
-  "forks.branches": "ब्रांच",
-  "forks.versions": "संस्करण",
-  "forks.showForks": {
-    "one": "{repo} के {n} फोर्क देखाईं",
-    "other": "{repo} के {n} गो फोर्क देखाईं"
-  },
   "matrix.preset.overview": "झलक",
   "matrix.preset.galaxy": "आकाशगंगा",
   "matrix.preset.ressources": "संसाधन",

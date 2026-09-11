@@ -174,20 +174,13 @@
     "other": "{n} guiya siha mafork ta'lo; baba unu para un falak mas tadong."
   },
   "forks.leaves": "ni unu guiya siha mafork ta'lo, pues este i enteru na uriya.",
-  "forks.lazy": "I rama, tag yan chalan commit siha mana'hålom an mababa un repositorio.",
+  "forks.lazy": "Klik un repositorio para u na'annok i rama siha gi papa'-ña gi parehu na eha tiempo.",
   "forks.quota": "{remaining} ginen {limit} ginagao sobra gi este na ora, {scope}.",
   "forks.scope.server": "ginen i token server",
   "forks.scope.token": "yan i token-mu",
   "forks.scope.none": "sin atmisuhon",
   "forks.exhausted": "Monhåyan i ginagao GitHub gi este na ora. Na'hålom un token gi i panet filtro para u kahulo' i limite ginen 60 asta 5000, pat tålo ta'lo an matulaika i ora.",
   "forks.answered": "Manoppe i GitHub {status}: {message}",
-  "forks.loading": "Ma kakatga …",
-  "forks.branches": "Rama siha",
-  "forks.versions": "Betsion siha",
-  "forks.showForks": {
-    "one": "Na'annok i {n} fork gi {repo}",
-    "other": "Na'annok i {n} fork siha gi {repo}"
-  },
   "matrix.preset.overview": "Todu i lii'",
   "matrix.preset.galaxy": "Galåksia",
   "matrix.preset.ressources": "Rekutso siha",

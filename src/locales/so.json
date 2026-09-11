@@ -174,20 +174,13 @@
     "other": "{n} ka mid ah ayaa mar kale la fork-gareeyay; fur mid si aad hoos ugu socoto."
   },
   "forks.leaves": "midkoodna mar kale lama fork-gareyn, sidaa darteed tani waa shabakadda oo dhan.",
-  "forks.lazy": "Laamaha, summadaha iyo waddooyinka gudbinnada waxay soo baxaan marka kayd la furo.",
+  "forks.lazy": "Guji kayd si aad laamihiisa ugu muujiso hoostiisa isla dhidibka waqtiga.",
   "forks.quota": "{remaining} ka mid ah {limit} codsi ayaa saacaddan hadhay, {scope}.",
   "forks.scope.server": "iyadoo loo marayo token-ka server-ka",
   "forks.scope.token": "adoo isticmaalaya token-kaaga",
   "forks.scope.none": "aan la xaqiijin",
   "forks.exhausted": "GitHub codsiyadii saacaddan way ka dhammaadeen. Token ku dar guddiga sifaynta si xadka looga kordhiyo 60 ilaa 5000, ama soo noqo marka saacaddu is beddesho.",
   "forks.answered": "GitHub wuxuu ku jawaabay {status}: {message}",
-  "forks.loading": "Waa la soo rarayaa …",
-  "forks.branches": "Laamo",
-  "forks.versions": "Noocyo sii deyn",
-  "forks.showForks": {
-    "one": "Muuji {n} fork ee {repo}",
-    "other": "Muuji {n}-da fork ee {repo}"
-  },
   "matrix.preset.overview": "Guudmar",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Kheyraad",

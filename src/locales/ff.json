@@ -174,20 +174,13 @@
     "other": "{n} e majji forkaama kadi; uddit gootel ngam yahde les."
   },
   "forks.leaves": "hay gootel e majji forkaaka kadi, ndeen ɗuum ko laylaytol ngol fof.",
-  "forks.lazy": "Cabbi, maandeeji e laabi komiteeji ina loowee so mooftirde udditaama.",
+  "forks.lazy": "Dobo e mooftirde ngam hollude cabbi mayre les mayre e leeñol waktu gootol ngol.",
   "forks.quota": "Ɗaɓɓitanɗe {remaining} e {limit} ina keddii e oo waktu, {scope}.",
   "forks.scope.server": "rewrude e tokeŋ sarworde",
   "forks.scope.token": "e tokeŋ maa",
   "forks.scope.none": "tawa teeŋtinaaka",
   "forks.exhausted": "GitHub dañaani ɗaɓɓitanɗe e oo waktu. Ɓeydu tokeŋ e alluwal cuɓol ngam ɓeydude keerol gila 60 haa 5000, walla artu so waktu oo waylii.",
   "forks.answered": "GitHub jaabii {status}: {message}",
-  "forks.loading": "Nana loowa …",
-  "forks.branches": "Cabbi",
-  "forks.versions": "Yamreeji",
-  "forks.showForks": {
-    "one": "Hollu forke {n} e {repo}",
-    "other": "Hollu forkeeji {n} e {repo}"
-  },
   "matrix.preset.overview": "Njiylaw",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Kuutorɗe",

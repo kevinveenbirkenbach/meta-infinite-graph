@@ -174,20 +174,13 @@
     "other": "{n} long olgeta oli gat fok bakegen; openem wan blong go daon moa."
   },
   "forks.leaves": "i no gat wan long olgeta we i gat fok bakegen, ale hemia nao ful netwok.",
-  "forks.lazy": "Ol brens, ol tag mo ol rod blong komit oli lod taem yu openem wan ripo.",
+  "forks.lazy": "Kilik long wan ripo blong soem ol brens blong hem andanit long hem long sem taem aksis.",
   "forks.quota": "{remaining} long {limit} rikwes i stap yet long aoa ia, {scope}.",
   "forks.scope.server": "tru long token blong seva",
   "forks.scope.token": "wetem token blong yu",
   "forks.scope.none": "i no saen-in",
   "forks.exhausted": "GitHub i no moa gat rikwes long aoa ia. Putum wan token long panel blong filta blong leftemap limit long 60 i go 5000, o kambak taem niu aoa i stat.",
   "forks.answered": "GitHub i ansa {status}: {message}",
-  "forks.loading": "I stap lod …",
-  "forks.branches": "Ol brens",
-  "forks.versions": "Ol vesen",
-  "forks.showForks": {
-    "one": "Soem {n} fok blong {repo}",
-    "other": "Soem ol {n} fok blong {repo}"
-  },
   "matrix.preset.overview": "Ful luk",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Ol risos",

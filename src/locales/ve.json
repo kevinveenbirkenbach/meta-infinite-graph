@@ -174,20 +174,13 @@
     "other": "{n} kha dzenedzo dzo forkiwa hafhu; vulani nthihi u dzhena nga ngomu."
   },
   "forks.leaves": "a hu na na nthihi yadzo yo forkiwaho hafhu, nga zwenezwo iyi ndi netiweke yoṱhe.",
-  "forks.lazy": "Matavhi, thegi na nḓila dza tshanduko zwi hwaliwa musi vhulungelo ho vulwa.",
+  "forks.lazy": "Kilikani kha vhulungelo u sumbedza matavhi aho nga fhasi hawo kha mutevhe wa tshifhinga u fanaho.",
   "forks.quota": "Khumbelo dza {remaining} kha {limit} dzo sala kha ino awara, {scope}.",
   "forks.scope.server": "nga thokheni ya seva",
   "forks.scope.token": "nga thokheni yaṋu",
   "forks.scope.none": "hu si na khwaṱhisedzo",
   "forks.exhausted": "GitHub yo fhelelwa nga khumbelo dza ino awara. Engedzani thokheni kha phanele ya tshisefo u gonyisa mukano u bva kha 60 u swika kha 5000, kana ni vhuye musi awara yo shanduka.",
   "forks.answered": "GitHub yo fhindula {status}: {message}",
-  "forks.loading": "Zwi khou hwaliwa …",
-  "forks.branches": "Matavhi",
-  "forks.versions": "Vesheni",
-  "forks.showForks": {
-    "one": "Sumbedza fork {n} ya {repo}",
-    "other": "Sumbedza fork {n} dza {repo}"
-  },
   "matrix.preset.overview": "Manweledzo",
   "matrix.preset.galaxy": "Tshigwada tsha naledzi",
   "matrix.preset.ressources": "Zwiko",

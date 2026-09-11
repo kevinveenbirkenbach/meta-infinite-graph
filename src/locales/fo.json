@@ -174,20 +174,13 @@
     "other": "{n} av teimum eru avgreindar aftur; lat eina upp fyri at fara djúpari."
   },
   "forks.leaves": "eingin av teimum er avgreind aftur, so hetta er alt netið.",
-  "forks.lazy": "Greinar, merki og innleggingarbreytir verða innlisin, tá ein goymsla verður latin upp.",
+  "forks.lazy": "Trýst á eina goymslu fyri at vísa greinar hennara undir henni á somu tíðarás.",
   "forks.quota": "{remaining} av {limit} umbønum eftir hendan tíman, {scope}.",
   "forks.scope.server": "gjøgnum lykil ambætarans",
   "forks.scope.token": "við tínum lykli",
   "forks.scope.none": "óváttað",
   "forks.exhausted": "GitHub hevur ongar umbønir eftir hendan tíman. Legg ein lykil afturat í síuteiginum fyri at hækka markið úr 60 upp í 5000, ella kom aftur, tá ið tíðin skiftir.",
   "forks.answered": "GitHub svaraði {status}: {message}",
-  "forks.loading": "Innlesur …",
-  "forks.branches": "Greinar",
-  "forks.versions": "Útgávur",
-  "forks.showForks": {
-    "one": "Vís ta {n} avgreiningina av {repo}",
-    "other": "Vís tær {n} avgreiningarnar av {repo}"
-  },
   "matrix.preset.overview": "Yvirlit",
   "matrix.preset.galaxy": "Vetrarbreyt",
   "matrix.preset.ressources": "Tilfeingi",

@@ -174,20 +174,13 @@
     "other": "{n} ku zo zikoleddwa fork nate; ggulawo emu ogende wansi."
   },
   "forks.leaves": "tewali ku zo ekoleddwa fork nate, kale guno gwe mukutu gwonna.",
-  "forks.lazy": "Amatabi, ttagi n'emikutu gy'enkyukakyuka bitikka nga tterekero liguddwawo.",
+  "forks.lazy": "Nyiga ku tterekero okulaga amatabi gaalyo wansi waalyo ku lunyiriri lw'ebiseera lwe lumu.",
   "forks.quota": "Okusaba {remaining} ku {limit} kusigaddewo essaawa eno, {scope}.",
   "forks.scope.server": "okuyita mu tokeni ya seeva",
   "forks.scope.token": "ne tokeni yo",
   "forks.scope.none": "awatali kukakasibwa",
   "forks.exhausted": "GitHub eweddeko okusaba kw'essaawa eno. Yongerako tokeni mu kitundu ky'ekisengejja okusitula ekkomo okuva ku 60 okutuuka ku 5000, oba komawo ng'essaawa ekyuse.",
   "forks.answered": "GitHub yaddamu {status}: {message}",
-  "forks.loading": "Ntikka …",
-  "forks.branches": "Amatabi",
-  "forks.versions": "Enkyusa",
-  "forks.showForks": {
-    "one": "Laga fork {n} eya {repo}",
-    "other": "Laga fork {n} eza {repo}"
-  },
   "matrix.preset.overview": "Okulaba okw'awamu",
   "matrix.preset.galaxy": "Ekibinja ky'emmunyeenye",
   "matrix.preset.ressources": "Ebikozesebwa",

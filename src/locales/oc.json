@@ -174,20 +174,13 @@
     "other": "{n} d'entre eles son tornarmai forcats; dobrissètz-ne un per anar mai prigond."
   },
   "forks.leaves": "cap d'entre eles es pas tornarmai forcat, doncas aquò es lo malhum complet.",
-  "forks.lazy": "Las brancas, las etiquetas e las vias de commits se cargan quand un depaus es dobèrt.",
+  "forks.lazy": "Clicatz un depaus per afichar sas brancas dejós el sus lo meteis axe temporal.",
   "forks.quota": "Demòran {remaining} requèstas sus {limit} aquesta ora, {scope}.",
   "forks.scope.server": "via lo geton del servidor",
   "forks.scope.token": "amb vòstre geton",
   "forks.scope.none": "sens autentificacion",
   "forks.exhausted": "GitHub a pas pus de requèstas per aquesta ora. Apondètz un geton dins lo panèl de filtre per apujar lo limit de 60 a 5000, o tornatz après lo cambiament d'ora.",
   "forks.answered": "GitHub a respondut {status}: {message}",
-  "forks.loading": "Cargament …",
-  "forks.branches": "Brancas",
-  "forks.versions": "Versions",
-  "forks.showForks": {
-    "one": "Afichar lo {n} fork de {repo}",
-    "other": "Afichar los {n} forks de {repo}"
-  },
   "matrix.preset.overview": "Vista d'ensemble",
   "matrix.preset.galaxy": "Galaxia",
   "matrix.preset.ressources": "Ressorsas",

@@ -167,19 +167,13 @@
     "other": "U cɛma {n} fɔrikira tugun; kelen da wuli walasa ka jigin ka taa jukɔrɔ."
   },
   "forks.leaves": "u si ma fɔriki tugun, o de kosɔn nin ye jɛɲɔgɔnya bɛɛ ye.",
-  "forks.lazy": "Bolofaraw, tagiw ani komiti siraw bɛ ta ni maralan dayɛlɛla.",
+  "forks.lazy": "A digi maralan dɔ kan walasa k'a bolofaraw jira a jukɔrɔ waati sira kelen kan.",
   "forks.quota": "Ɲininkali {remaining} {limit} la tolen bɛ nin lɛrɛ in kɔnɔ, {scope}.",
   "forks.scope.server": "ni sɛrɛwɛri ka tokɛni ye",
   "forks.scope.token": "ni i ka tokɛni ye",
   "forks.scope.none": "dantigɛli tɛ",
   "forks.exhausted": "GitHub ka ɲininkaliw banna nin lɛrɛ in kɔnɔ. Tokɛni fara sɛgɛsɛgɛli panɔ kan walasa ka dan yɛlɛn ka bɔ 60 la ka se 5000 ma, walima i ka segin lɛrɛ yɛlɛmali kɔ.",
   "forks.answered": "GitHub ye jaabi {status} di: {message}",
-  "forks.loading": "A bɛ ta …",
-  "forks.branches": "Bolofaraw",
-  "forks.versions": "Wɛrisɔnw",
-  "forks.showForks": {
-    "other": "{repo} ka fɔriki {n} jira"
-  },
   "matrix.preset.overview": "Lajɛli bɛɛ",
   "matrix.preset.galaxy": "Dolo kulu",
   "matrix.preset.ressources": "Nafolow",

@@ -218,6 +218,22 @@ svg.fork-plot .fork-label.root {
   opacity: 1;
 }
 
+svg.fork-plot .fork-label[role="button"] {
+  cursor: pointer;
+}
+
+svg.fork-plot .fork-label[role="button"]:hover,
+svg.fork-plot .fork-label[role="button"]:focus-visible {
+  fill: var(--bs-primary);
+  opacity: 1;
+  outline: none;
+}
+
+svg.fork-plot .fork-label.branch {
+  font-size: 9px;
+  opacity: 0.6;
+}
+
 svg.fork-plot .fork-life {
   stroke: var(--bs-primary);
   stroke-width: 2;
@@ -268,67 +284,6 @@ svg.fork-plot .fork-commit {
 svg.fork-plot .fork-commit.merge {
   fill: var(--bs-primary);
   opacity: 1;
-}
-
-ul.fork-tree,
-ul.fork-tree ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-ul.fork-tree ul {
-  padding-left: 22px;
-  border-left: 1px solid var(--bs-border-color);
-  margin-left: 8px;
-}
-
-.fork-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 3px 0;
-}
-
-.fork-toggle {
-  border: 0;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  width: 1.2em;
-  padding: 0;
-  opacity: 0.6;
-}
-
-.fork-toggle:hover {
-  opacity: 1;
-}
-
-.fork-name.root {
-  font-weight: 600;
-}
-
-.fork-date {
-  margin-left: auto;
-  opacity: 0.6;
-  font-variant-numeric: tabular-nums;
-}
-
-.fork-body {
-  padding: 4px 0 8px 30px;
-}
-
-.fork-refs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px;
-  margin-bottom: 4px;
-}
-
-.fork-refs-title {
-  min-width: 9em;
-  opacity: 0.6;
 }
 
 .fork-error {

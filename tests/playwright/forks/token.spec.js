@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { ROOT, FORKS, COMMITS, stub, openForks } = require('../support/forks');
+const { ROOT, FORKS, COMMITS, labels, stub, openForks } = require('../support/forks');
 
 test('the root repository travels in the URL, the token never does', async ({ page }) => {
   const calls = [];
@@ -24,7 +24,7 @@ test('the root repository travels in the URL, the token never does', async ({ pa
 test('without a server token the visitor may supply one', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+  await expect.poll(() => labels(page)).toHaveLength(3);
 
   await page.locator('#btn-filter').click();
   await expect(page.locator('.token-field')).toBeVisible();
@@ -80,7 +80,7 @@ test('a server token hides the field and routes through the proxy', async ({ pag
     .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
     .toBe(true);
   await page.locator('label[for="view-forks"]').click();
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+  await expect.poll(() => labels(page)).toHaveLength(3);
 
   await page.locator('#btn-filter').click();
   await expect(page.locator('.token-field')).toBeHidden();
@@ -116,6 +116,7 @@ test('pagination follows rel=next and stops without it', async ({ page }) => {
     if (path === '/repos/infinito-nexus/core') return json(ROOT);
     if (path === '/repos/infinito-nexus/core/forks') return json([]);
     if (path.endsWith('/tags')) return json([{ name: 'v1' }]);
+    if (path.endsWith('/commits')) return json(COMMITS);
     if (path.endsWith('/branches')) {
       const page2 = url.searchParams.get('page') === '2';
       return route.fulfill({
@@ -145,12 +146,12 @@ test('pagination follows rel=next and stops without it', async ({ page }) => {
     .toBe(true);
   await page.evaluate(() => window.__mig.forkTree.api.forget());
   await page.locator('label[for="view-forks"]').click();
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(1);
+  await expect.poll(() => labels(page)).toHaveLength(1);
 
-  await page.locator('.fork-toggle').first().click();
-  const body = page.locator('.fork-body').first();
-  await expect(body).toContainText('Branches (3)');
-  await expect(body).toContainText('three');
+  await page.locator('svg.fork-plot .fork-label.root').click();
+  await expect.poll(() => labels(page)).toEqual([
+    'infinito-nexus/core', 'infinito-nexus/core@one', 'infinito-nexus/core@two', 'infinito-nexus/core@three',
+  ]);
 
   const branchCalls = seen.filter(s => s.includes('/branches'));
   expect(branchCalls.length, 'exactly two pages, then stop').toBe(2);

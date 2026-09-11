@@ -188,22 +188,13 @@
     "other": "{n} из них снова форкнуты; откройте один, чтобы идти глубже."
   },
   "forks.leaves": "ни один из них больше не форкнут, так что это вся сеть.",
-  "forks.lazy": "Ветки, теги и дорожки коммитов загружаются при открытии репозитория.",
+  "forks.lazy": "Щёлкните репозиторий, чтобы показать его ветки под ним на той же оси времени.",
   "forks.quota": "Осталось {remaining} из {limit} запросов в этом часе, {scope}.",
   "forks.scope.server": "через токен сервера",
   "forks.scope.token": "с вашим токеном",
   "forks.scope.none": "без аутентификации",
   "forks.exhausted": "У GitHub закончились запросы на этот час. Добавьте токен на панели фильтра, чтобы поднять лимит с 60 до 5000, или вернитесь после смены часа.",
   "forks.answered": "GitHub ответил {status}: {message}",
-  "forks.loading": "Загрузка …",
-  "forks.branches": "Ветки",
-  "forks.versions": "Версии",
-  "forks.showForks": {
-    "one": "Показать {n} форк {repo}",
-    "few": "Показать {n} форка {repo}",
-    "many": "Показать {n} форков {repo}",
-    "other": "Показать {n} форка {repo}"
-  },
   "matrix.preset.overview": "Обзор",
   "matrix.preset.galaxy": "Галактика",
   "matrix.preset.ressources": "Ресурсы",

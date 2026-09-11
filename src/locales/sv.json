@@ -174,20 +174,13 @@
     "other": "{n} av dem är forkade igen; öppna en för att gå djupare."
   },
   "forks.leaves": "ingen av dem är forkad igen, så detta är hela nätverket.",
-  "forks.lazy": "Grenar, taggar och commitbanor laddas när ett repository öppnas.",
+  "forks.lazy": "Klicka på ett repository för att visa dess grenar under det på samma tidsaxel.",
   "forks.quota": "{remaining} av {limit} förfrågningar kvar den här timmen, {scope}.",
   "forks.scope.server": "via serverns token",
   "forks.scope.token": "med din token",
   "forks.scope.none": "oautentiserad",
   "forks.exhausted": "GitHub har slut på förfrågningar för den här timmen. Lägg till en token i filterpanelen för att höja gränsen från 60 till 5000, eller kom tillbaka när timmen slår om.",
   "forks.answered": "GitHub svarade {status}: {message}",
-  "forks.loading": "Laddar …",
-  "forks.branches": "Grenar",
-  "forks.versions": "Versioner",
-  "forks.showForks": {
-    "one": "Visa den {n} forken av {repo}",
-    "other": "Visa de {n} forkarna av {repo}"
-  },
   "matrix.preset.overview": "Översikt",
   "matrix.preset.galaxy": "Galax",
   "matrix.preset.ressources": "Resurser",

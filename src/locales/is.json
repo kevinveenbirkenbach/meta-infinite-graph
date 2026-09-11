@@ -174,20 +174,13 @@
     "other": "{n} þeirra eru forkuð áfram; opnaðu eitt til að fara dýpra."
   },
   "forks.leaves": "ekkert þeirra er forkað áfram, svo þetta er allt netið.",
-  "forks.lazy": "Greinar, merki og commit-brautir hlaðast þegar geymsla er opnuð.",
+  "forks.lazy": "Smelltu á geymslu til að sýna greinar hennar fyrir neðan hana á sama tímaási.",
   "forks.quota": "{remaining} af {limit} beiðnum eftir þessa klukkustund, {scope}.",
   "forks.scope.server": "í gegnum tóka þjónsins",
   "forks.scope.token": "með þínum tóka",
   "forks.scope.none": "óauðkennt",
   "forks.exhausted": "GitHub á engar beiðnir eftir þessa klukkustund. Bættu við tóka í síuspjaldinu til að hækka hámarkið úr 60 í 5000, eða komdu aftur þegar ný klukkustund hefst.",
   "forks.answered": "GitHub svaraði {status}: {message}",
-  "forks.loading": "Hleð …",
-  "forks.branches": "Greinar",
-  "forks.versions": "Útgáfur",
-  "forks.showForks": {
-    "one": "Sýna {n} fork af {repo}",
-    "other": "Sýna {n} fork af {repo}"
-  },
   "matrix.preset.overview": "Yfirlit",
   "matrix.preset.galaxy": "Vetrarbraut",
   "matrix.preset.ressources": "Tilföng",

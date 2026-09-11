@@ -174,20 +174,13 @@
     "other": "{n} av dem er forket videre; åpne én for å gå dypere."
   },
   "forks.leaves": "ingen av dem er forket videre, så dette er hele nettverket.",
-  "forks.lazy": "Grener, tagger og commit-baner lastes når et repository åpnes.",
+  "forks.lazy": "Klikk på et repository for å vise grenene under det på samme tidsakse.",
   "forks.quota": "{remaining} av {limit} forespørsler igjen denne timen, {scope}.",
   "forks.scope.server": "via serverens token",
   "forks.scope.token": "med ditt token",
   "forks.scope.none": "uautentisert",
   "forks.exhausted": "GitHub er tom for forespørsler denne timen. Legg til et token i filterpanelet for å heve grensen fra 60 til 5000, eller kom tilbake når timen er omme.",
   "forks.answered": "GitHub svarte {status}: {message}",
-  "forks.loading": "Laster …",
-  "forks.branches": "Grener",
-  "forks.versions": "Versjoner",
-  "forks.showForks": {
-    "one": "Vis {n} fork av {repo}",
-    "other": "Vis de {n} forkene av {repo}"
-  },
   "matrix.preset.overview": "Oversikt",
   "matrix.preset.galaxy": "Galakse",
   "matrix.preset.ressources": "Ressurser",

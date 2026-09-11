@@ -174,20 +174,13 @@
     "other": "{n} onas pafork dönu; maifükolös bali ad golön dibikumo."
   },
   "forks.leaves": "nonik onas pafork dönu, kludo at binon nät lölöfik.",
-  "forks.lazy": "Tuigs, labs e vegs komitas palodons ven konletöp pamaifükon.",
+  "forks.lazy": "Klikolös konletöpi ad jonön tuigis onik dis on su timalien ot.",
   "forks.quota": "Begs {remaining} se {limit} retons in düp at, {scope}.",
   "forks.scope.server": "da nüdamal dünanünöma",
   "forks.scope.token": "me nüdamal ola",
   "forks.scope.none": "nen fümedam",
   "forks.exhausted": "GitHub labon begis nonik plu pro düp at. Läükolös nüdamali in penät sifa ad löpükön miedi de 60 ad 5000, u geikolös pos düp nulik.",
   "forks.answered": "GitHub egespikon {status}: {message}",
-  "forks.loading": "Lodam …",
-  "forks.branches": "Tuigs",
-  "forks.versions": "Fomams",
-  "forks.showForks": {
-    "one": "Jonön forki {n} ela {repo}",
-    "other": "Jonön forkis {n} ela {repo}"
-  },
   "matrix.preset.overview": "Lovelogam",
   "matrix.preset.galaxy": "Galaxat",
   "matrix.preset.ressources": "Fonäds",

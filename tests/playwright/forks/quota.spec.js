@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { ROOT, FORKS, COMMITS, openForks } = require('../support/forks');
+const { ROOT, FORKS, COMMITS, labels, openForks } = require('../support/forks');
 
 test('a deep link into the fork view still waits for the proxy', async ({ page }) => {
   const paths = [];
@@ -167,20 +167,20 @@ test('a refused history says so instead of drawing an empty plot', async ({ page
 test('the cache spares the quota on a second visit', async ({ page }) => {
   const calls = [];
   await openForks(page, calls);
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+  await expect.poll(() => labels(page)).toHaveLength(3);
   await expect.poll(() => calls.length).toBe(5);
 
   await page.locator('#btn-roles').click();
   await page.locator('label[for="view-graph"]').click();
   await page.locator('label[for="view-forks"]').click();
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+  await expect.poll(() => labels(page)).toHaveLength(3);
 
   await page.reload();
   await expect
     .poll(() => page.evaluate(() => Boolean(window.__mig?.forkTree)), { timeout: 60000 })
     .toBe(true);
   await page.locator('label[for="view-forks"]').click();
-  await expect.poll(() => page.locator('.fork-tree .fork-name').count()).toBe(3);
+  await expect.poll(() => labels(page)).toHaveLength(3);
   expect(calls.length, 'a reload must not spend a single request').toBe(5);
 });
 

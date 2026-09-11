@@ -174,20 +174,13 @@
     "other": "ካብኣቶም {n} ከም ብሓድሽ ተፎርኪዖም ኣለዉ፤ ንዝያዳ ምዕማቕ ሓደ ክፈት።"
   },
   "forks.leaves": "ሓደ ካብኣቶም እውን ከም ብሓድሽ ኣይተፎርከዐን፣ ስለዚ እዚ ምሉእ መርበብ እዩ።",
-  "forks.lazy": "ጨናፍር፣ ታጋትን መሕለፊ ኮሚታትን መኽዘን ምስ ተኸፍተ ይጽዓኑ።",
+  "forks.lazy": "ጨናፍሩ ኣብ ትሕቲኡ ኣብ ተመሳሳሊ መስመር ግዜ ንምርኣይ ኣብ መኽዘን ጠውቕ።",
   "forks.quota": "ነዛ ሰዓት ካብ {limit} {remaining} ሕቶታት ተሪፎም፣ {scope}።",
   "forks.scope.server": "ብቶከን ሰርቨር",
   "forks.scope.token": "ብቶከንካ",
   "forks.scope.none": "ብዘይ መረጋገጺ",
   "forks.exhausted": "GitHub ነዛ ሰዓት ሕቶታት ተወዲእዎ። ደረት ካብ 60 ናብ 5000 ንምልዓል ኣብ ሰሌዳ መጻረዪ ቶከን ወስኽ፣ ወይ ሰዓት ምስ ተቐየረት ተመለስ።",
   "forks.answered": "GitHub {status} መሊሱ: {message}",
-  "forks.loading": "ይጽዓን ኣሎ …",
-  "forks.branches": "ጨናፍር",
-  "forks.versions": "ስሪታት",
-  "forks.showForks": {
-    "one": "ነቲ {n} ፎርክ ናይ {repo} ኣርኢ",
-    "other": "ነቶም {n} ፎርካት ናይ {repo} ኣርኢ"
-  },
   "matrix.preset.overview": "ሓፈሻዊ ትዕዝብቲ",
   "matrix.preset.galaxy": "ጋላክሲ",
   "matrix.preset.ressources": "ጸጋታት",

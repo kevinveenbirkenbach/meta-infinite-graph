@@ -174,20 +174,13 @@
     "other": "{n} neist on uuesti forgitud; ava üks, et minna sügavamale."
   },
   "forks.leaves": "ühtegi neist pole uuesti forgitud, seega on see kogu võrgustik.",
-  "forks.lazy": "Harud, sildid ja kommitirajad laaditakse hoidla avamisel.",
+  "forks.lazy": "Klõpsa hoidlal, et näidata selle harusid selle all samal ajateljel.",
   "forks.quota": "Selles tunnis on jäänud {remaining} päringut {limit}-st, {scope}.",
   "forks.scope.server": "serveri pääsuloa kaudu",
   "forks.scope.token": "sinu pääsuloaga",
   "forks.scope.none": "autentimata",
   "forks.exhausted": "GitHubil on selle tunni päringud otsas. Lisa filtripaneelis pääsuluba, et tõsta piirang 60-lt 5000-le, või tule tagasi, kui uus tund algab.",
   "forks.answered": "GitHub vastas koodiga {status}: {message}",
-  "forks.loading": "Laadimine …",
-  "forks.branches": "Harud",
-  "forks.versions": "Versioonid",
-  "forks.showForks": {
-    "one": "Näita hoidla {repo} {n} forki",
-    "other": "Näita hoidla {repo} {n} forki"
-  },
   "matrix.preset.overview": "Ülevaade",
   "matrix.preset.galaxy": "Galaktika",
   "matrix.preset.ressources": "Ressursid",

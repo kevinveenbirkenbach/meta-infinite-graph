@@ -174,20 +174,13 @@
     "other": "Kaa addak {n} qagitak forkimen; baxxa fan gexxoh inki fak."
   },
   "forks.leaves": "kaa addak inki qagitak ma forkimin, tokkel ah network inkih kinni.",
-  "forks.lazy": "Farqooli, astooti kee kommitih gitooli makzan fakimek culta.",
+  "forks.lazy": "Makzan kilik ab, tet farqooli tet gubal inki waktih axisil yuybulluuy.",
   "forks.quota": "{limit} esserooli addak {remaining} ah saaqatal raqte, {scope}.",
   "forks.scope.server": "sarvarih tookanik",
   "forks.scope.token": "koo tookan luk",
   "forks.scope.none": "amaanat mali",
   "forks.exhausted": "GitHub ah saaqatal esserooli wayte. Dooba 60k 5000 fan fayyaasittoh siritih paneelal tookan ossis, hinnay saaqat gaddaltek lakal gac.",
   "forks.answered": "GitHub {status} yeceeh: {message}",
-  "forks.loading": "Culsa …",
-  "forks.branches": "Farqooli",
-  "forks.versions": "Versiyoonooli",
-  "forks.showForks": {
-    "one": "{repo} {n} fork uybulus",
-    "other": "{repo} {n} forkooli uybulus"
-  },
   "matrix.preset.overview": "Ummaan ubul",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Maddooli",

@@ -174,20 +174,13 @@
     "other": "ඒවායින් {n}ක් නැවත ෆෝක් කර ඇත; ගැඹුරට යාමට එකක් විවෘත කරන්න."
   },
   "forks.leaves": "ඒවායින් කිසිවක් නැවත ෆෝක් කර නැත, එබැවින් මෙය සම්පූර්ණ ජාලයයි.",
-  "forks.lazy": "ගබඩාවක් විවෘත කළ විට ශාඛා, ටැග සහ කමිට් මංතීරු පූරණය වේ.",
+  "forks.lazy": "ගබඩාවක ශාඛා එම කාල අක්ෂයේම එයට පහළින් පෙන්වීමට එය ක්ලික් කරන්න.",
   "forks.quota": "මෙම පැයේ ඉල්ලීම් {limit}න් {remaining}ක් ඉතිරියි, {scope}.",
   "forks.scope.server": "සේවාදායකයේ ටෝකනය හරහා",
   "forks.scope.token": "ඔබේ ටෝකනය සමඟ",
   "forks.scope.none": "සත්‍යාපනය නොකළ",
   "forks.exhausted": "මෙම පැය සඳහා GitHub ඉල්ලීම් අවසන්. සීමාව 60 සිට 5000 දක්වා ඉහළ නැංවීමට පෙරහන් පුවරුවේ ටෝකනයක් එක් කරන්න, නැතහොත් පැය මාරු වූ පසු නැවත එන්න.",
   "forks.answered": "GitHub {status} ලෙස පිළිතුරු දුන්නේය: {message}",
-  "forks.loading": "පූරණය කරමින් …",
-  "forks.branches": "ශාඛා",
-  "forks.versions": "අනුවාද",
-  "forks.showForks": {
-    "one": "{repo} හි ෆෝක් {n} පෙන්වන්න",
-    "other": "{repo} හි ෆෝක් {n} පෙන්වන්න"
-  },
   "matrix.preset.overview": "දළ විශ්ලේෂණය",
   "matrix.preset.galaxy": "මන්දාකිනිය",
   "matrix.preset.ressources": "සම්පත්",

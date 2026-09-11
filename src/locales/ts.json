@@ -174,20 +174,13 @@
     "other": "{n} eka tona ti fork-iwile nakambe; pfula yin'we ku ya ekulenyana."
   },
   "forks.leaves": "a ku na na yin'we eka tona leyi fork-iweke nakambe, kutani leyi i netiweke hinkwayo.",
-  "forks.lazy": "Marhavi, ti-tag na tindlela ta ti-commit swi layichiwa loko vuhlayiselo byi pfuriwa.",
+  "forks.lazy": "Tsindzikela vuhlayiselo ku kombisa marhavi ya byona ehansi ka byona eka layini yin'we ya nkarhi.",
   "forks.quota": "Swikombelo swa {remaining} eka {limit} swi sele eka awara leyi, {scope}.",
   "forks.scope.server": "hi thokheni ya seva",
   "forks.scope.token": "hi thokheni ya wena",
   "forks.scope.none": "handle ka ku tiyisisa",
   "forks.exhausted": "GitHub yi heleriwe hi swikombelo eka awara leyi. Engetela thokheni eka phanele ya ku sefa ku tlakusa ndzelekano ku suka eka 60 ku ya eka 5000, kumbe u vuya loko awara yi cince.",
   "forks.answered": "GitHub yi hlamurile {status}: {message}",
-  "forks.loading": "Ku layicha …",
-  "forks.branches": "Marhavi",
-  "forks.versions": "Tiveshini",
-  "forks.showForks": {
-    "one": "Kombisa fork ya {n} ya {repo}",
-    "other": "Kombisa ti-fork ta {n} ta {repo}"
-  },
   "matrix.preset.overview": "Nkatsakanyo",
   "matrix.preset.galaxy": "Xirhendzevutani xa tinyeleti",
   "matrix.preset.ressources": "Switirhisiwa",

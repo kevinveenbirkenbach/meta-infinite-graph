@@ -167,19 +167,13 @@
     "other": "{n} n'ime ha ka e fork-ụrụ ọzọ; mepee otu ka ị gaa n'ime n'ime."
   },
   "forks.leaves": "ọ dịghị nke ọ bụla n'ime ha e fork-ụrụ ọzọ, ya mere nke a bụ netwọk niile.",
-  "forks.lazy": "Alaka, mkpado na ụzọ ntinye na-ebu mgbe e mepere ọba.",
+  "forks.lazy": "Pịa otu ọba ka i gosi alaka ya n'okpuru ya n'otu ahịrị oge ahụ.",
   "forks.quota": "Arịrịọ {remaining} n'ime {limit} fọdụrụ n'elekere a, {scope}.",
   "forks.scope.server": "site na tokịn sava",
   "forks.scope.token": "jiri tokịn gị",
   "forks.scope.none": "na-enweghị nkwenye",
   "forks.exhausted": "Arịrịọ GitHub agwụla maka elekere a. Tinye tokịn na panel nzacha ka i buli oke site na 60 ruo 5000, ma ọ bụ laghachi mgbe elekere gbanwere.",
   "forks.answered": "GitHub zara {status}: {message}",
-  "forks.loading": "Na-ebu …",
-  "forks.branches": "Alaka",
-  "forks.versions": "Nsụgharị",
-  "forks.showForks": {
-    "other": "Gosi fork {n} nke {repo}"
-  },
   "matrix.preset.overview": "Nchịkọta",
   "matrix.preset.galaxy": "Kpakpando",
   "matrix.preset.ressources": "Akụrụngwa",

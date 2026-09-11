@@ -174,20 +174,13 @@
     "other": "{n} kuwo aphinde afokhwa; vula elilodwa ukuze ujule kakhulu."
   },
   "forks.leaves": "kakukho lalinye kuwo eliphinde lafokhwa, ngakho le yinethiwekhi yonke.",
-  "forks.lazy": "Amagatsha, amathegi lemizila yama-commit kulayishwa nxa iqoqo livulwa.",
+  "forks.lazy": "Chofoza iqoqo ukuze utshengise amagatsha alo ngaphansi kwalo ku-eksisi yesikhathi efanayo.",
   "forks.quota": "Izicelo ezingu-{remaining} kwezingu-{limit} ezisele kuleli hora, {scope}.",
   "forks.scope.server": "ngethokheni yeseva",
   "forks.scope.token": "ngethokheni yakho",
   "forks.scope.none": "ngaphandle kokuqinisekisa",
   "forks.exhausted": "I-GitHub iphelelwe yizicelo zaleli hora. Engeza ithokheni kuphaneli yesihluzi ukuze ukhuphule umkhawulo usuke ku-60 uye ku-5000, kumbe ubuye ngemva kokuthi ihora lishintshile.",
   "forks.answered": "I-GitHub iphendule ngo-{status}: {message}",
-  "forks.loading": "Kuyalayishwa …",
-  "forks.branches": "Amagatsha",
-  "forks.versions": "Izinguqulo",
-  "forks.showForks": {
-    "one": "Tshengisa i-fork engu-{n} ka-{repo}",
-    "other": "Tshengisa ama-fork angu-{n} ka-{repo}"
-  },
   "matrix.preset.overview": "Ukubuka konke",
   "matrix.preset.galaxy": "Umthala",
   "matrix.preset.ressources": "Izinsiza",

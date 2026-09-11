@@ -174,20 +174,13 @@
     "other": "{n} el ili estas denove forkitaj; malfermu unu por iri pli profunden."
   },
   "forks.leaves": "neniu el ili estas denove forkita, do ĉi tio estas la tuta reto.",
-  "forks.lazy": "Branĉoj, etikedoj kaj la enmetaj vojetoj ŝargiĝas kiam deponejo estas malfermita.",
+  "forks.lazy": "Klaku deponejon por montri ĝiajn branĉojn sub ĝi sur la sama tempoakso.",
   "forks.quota": "{remaining} el {limit} petoj restas ĉi-hore, {scope}.",
   "forks.scope.server": "per la ĵetono de la servilo",
   "forks.scope.token": "per via ĵetono",
   "forks.scope.none": "neaŭtentikigite",
   "forks.exhausted": "GitHub ne plu havas petojn por ĉi tiu horo. Aldonu ĵetonon en la filtrila panelo por levi la limon de 60 al 5000, aŭ revenu post la horŝanĝo.",
   "forks.answered": "GitHub respondis {status}: {message}",
-  "forks.loading": "Ŝargante …",
-  "forks.branches": "Branĉoj",
-  "forks.versions": "Versioj",
-  "forks.showForks": {
-    "one": "Montri la {n} forkon de {repo}",
-    "other": "Montri la {n} forkojn de {repo}"
-  },
   "matrix.preset.overview": "Superrigardo",
   "matrix.preset.galaxy": "Galaksio",
   "matrix.preset.ressources": "Rimedoj",

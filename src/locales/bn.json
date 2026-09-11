@@ -174,20 +174,13 @@
     "other": "এদের মধ্যে {n}টি আবার ফর্ক করা হয়েছে; আরও গভীরে যেতে একটি খুলুন।"
   },
   "forks.leaves": "এদের কোনোটিই আবার ফর্ক করা হয়নি, তাই এটিই পুরো নেটওয়ার্ক।",
-  "forks.lazy": "কোনো রিপোজিটরি খুললে ব্রাঞ্চ, ট্যাগ ও কমিট লেন লোড হয়।",
+  "forks.lazy": "কোনো রিপোজিটরির ব্রাঞ্চ তার নিচে একই সময় অক্ষে দেখাতে সেটিতে ক্লিক করুন।",
   "forks.quota": "এই ঘণ্টায় {limit}টির মধ্যে {remaining}টি অনুরোধ বাকি, {scope}।",
   "forks.scope.server": "সার্ভারের টোকেনের মাধ্যমে",
   "forks.scope.token": "আপনার টোকেন দিয়ে",
   "forks.scope.none": "প্রমাণীকরণ ছাড়া",
   "forks.exhausted": "এই ঘণ্টায় GitHub-এর অনুরোধ ফুরিয়ে গেছে। সীমা 60 থেকে 5000-এ তুলতে ফিল্টার প্যানেলে একটি টোকেন যোগ করুন, অথবা ঘণ্টা পেরোলে আবার আসুন।",
   "forks.answered": "GitHub উত্তর দিয়েছে {status}: {message}",
-  "forks.loading": "লোড হচ্ছে …",
-  "forks.branches": "ব্রাঞ্চ",
-  "forks.versions": "সংস্করণ",
-  "forks.showForks": {
-    "one": "{repo}-এর {n}টি ফর্ক দেখান",
-    "other": "{repo}-এর {n}টি ফর্ক দেখান"
-  },
   "matrix.preset.overview": "সারসংক্ষেপ",
   "matrix.preset.galaxy": "ছায়াপথ",
   "matrix.preset.ressources": "রিসোর্স",

@@ -12,6 +12,17 @@ export class ForkHistory {
     this.histories = null;
     this.tagsBy = null;
     this.refused = null;
+    this.opened = new Set();
+    this.branchesBy = {};
+  }
+
+  static _commit(entry) {
+    return {
+      sha: entry.sha,
+      parents: (entry.parents || []).map(parent => parent.sha),
+      date: entry.commit.committer.date,
+      message: entry.commit.message.split('\n')[0],
+    };
   }
 
   _plot() {
@@ -119,18 +130,35 @@ export class ForkHistory {
     if (mirrored) return this._mirrorHistory(repo, mirrored);
     return this.api.commits(repo.full_name, repo.default_branch)
       .then(commits => {
-        this.histories[repo.full_name] = commits.map(entry => ({
-          sha: entry.sha,
-          parents: (entry.parents || []).map(parent => parent.sha),
-          date: entry.commit.committer.date,
-          message: entry.commit.message.split('\n')[0],
-        }));
+        this.histories[repo.full_name] = commits.map(ForkHistory._commit);
         this._plot();
       })
       .catch(error => {
         delete this.histories[repo.full_name];
         this.refused = error;
       });
+  }
+
+  async _branchesOf(repo) {
+    if (repo.full_name in this.branchesBy) return;
+    const branches = [];
+    this.branchesBy[repo.full_name] = branches;
+    const mirrored = this._mirrored(repo.full_name);
+    try {
+      const found = mirrored
+        ? mirrored.refs.map(ref => ({ name: ref.name, ref: ref.ref }))
+        : (await this.api.branches(repo.full_name)).map(branch => ({ name: branch.name, ref: branch.name }));
+      for (const branch of found.filter(one => one.name !== repo.default_branch)) {
+        const history = mirrored
+          ? await this.range.log(branch.ref)
+          : (await this.api.commits(repo.full_name, branch.ref)).map(ForkHistory._commit);
+        branches.push({ name: branch.name, history });
+        this._plot();
+      }
+    } catch (error) {
+      if (!branches.length) delete this.branchesBy[repo.full_name];
+      this.refused = error;
+    }
   }
 
   _mirrorHistory(repo, mirrored) {

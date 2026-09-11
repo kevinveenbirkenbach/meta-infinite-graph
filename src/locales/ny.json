@@ -174,20 +174,13 @@
     "other": "{n} mwa izo zakopedwa kachiwiri; tsegulani imodzi kuti mupite mozama."
   },
   "forks.leaves": "palibe mwa izo yomwe yakopedwa kachiwiri, choncho iyi ndi netiweki yonse.",
-  "forks.lazy": "Nthambi, ma-tagi ndi njira za ma-commit zimakwezedwa nkhokwe ikatsegulidwa.",
+  "forks.lazy": "Dinani nkhokwe kuti muwonetse nthambi zake pansi pake pa mzere wa nthawi womwewo.",
   "forks.quota": "Mapempho {remaining} mwa {limit} atsala ola ili, {scope}.",
   "forks.scope.server": "kudzera mu tokeni ya seva",
   "forks.scope.token": "ndi tokeni yanu",
   "forks.scope.none": "osatsimikizika",
   "forks.exhausted": "GitHub yatha mapempho a ola ili. Onjezani tokeni pa gulu la sefa kuti mukweze malire kuchoka pa 60 kufika 5000, kapena bwererani ola likasintha.",
   "forks.answered": "GitHub yayankha {status}: {message}",
-  "forks.loading": "Tikukweza …",
-  "forks.branches": "Nthambi",
-  "forks.versions": "Mitundu ya matembenuzidwe",
-  "forks.showForks": {
-    "one": "Onetsani fork {n} ya {repo}",
-    "other": "Onetsani ma-fork {n} a {repo}"
-  },
   "matrix.preset.overview": "Chidule",
   "matrix.preset.galaxy": "Mlalang'amba",
   "matrix.preset.ressources": "Zothandizira",

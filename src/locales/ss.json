@@ -174,20 +174,13 @@
     "other": "La-{n} kuwo aphindze enta ema-fork; vula linye kute uye ekujuleni."
   },
   "forks.leaves": "kute nalinye kuwo leliphindze lenta ema-fork, ngako lolu lunetha lonkhe.",
-  "forks.lazy": "Emagatja, emathegi nemizila yema-commit kulayishwa nangabe sigcinelo sivuliwe.",
+  "forks.lazy": "Chofoza sigcinelo kute ubukise emagatja aso ngentasi kwaso emugceni wesikhatsi lofanako.",
   "forks.quota": "Kusele ticelo leti-{remaining} kuleti-{limit} kulelihora, {scope}.",
   "forks.scope.server": "ngetoken yeseva",
   "forks.scope.token": "ngetoken yakho",
   "forks.scope.none": "ngaphandle kwekucinisekisa",
   "forks.exhausted": "GitHub iphelelwe ticelo kulelihora. Engeta i-token kuphaneli yesihlungi kute ukhuphule umkhawulo kusuka ku-60 kuya ku-5000, noma ubuye nangabe lihora selishintjile.",
   "forks.answered": "GitHub iphendvule nge-{status}: {message}",
-  "forks.loading": "Kulayisha …",
-  "forks.branches": "Emagatja",
-  "forks.versions": "Tinguculo",
-  "forks.showForks": {
-    "one": "Khombisa i-fork le-{n} ya-{repo}",
-    "other": "Khombisa ema-fork la-{n} a-{repo}"
-  },
   "matrix.preset.overview": "Kubuka lokujwayelekile",
   "matrix.preset.galaxy": "Umtsala wetinkhanyeti",
   "matrix.preset.ressources": "Tinsita",

@@ -7,10 +7,13 @@ export class ForkGraph {
   //   tags: full_name -> [{ name, sha, date }] with date resolved separately
   //     where the commit is outside the fetched window. A tag left without one
   //     is counted, not guessed at.
-  constructor(repos, commits = {}, tags = {}) {
+  //   branches: full_name -> [{ name, history }] for the repos opened in the
+  //     plot, an empty list while their branches are still loading.
+  constructor(repos, commits = {}, tags = {}, branches = {}) {
     this.repos = repos;
     this.commits = commits;
     this.tags = tags;
+    this.branches = branches;
   }
 
   static place(tags, history) {
@@ -35,7 +38,10 @@ export class ForkGraph {
   // on the same pixel. Lines outside the window are clamped, not dropped.
   span() {
     const stamps = [];
-    const histories = Object.values(this.commits).filter(history => history && history.length);
+    const histories = [
+      ...Object.values(this.commits),
+      ...Object.values(this.branches).flat().map(branch => branch.history),
+    ].filter(history => history && history.length);
     if (histories.length) {
       for (const history of histories) {
         for (const commit of history) stamps.push(ForkGraph._time(commit.date));
@@ -59,7 +65,8 @@ export class ForkGraph {
 
   // Returns: one row per repo in fork order, each carrying the commit columns
   //   of assign() when that repo's history was fetched. A repo's own row comes
-  //   first, so a fork edge always has a row to leave from.
+  //   first, so a fork edge always has a row to leave from; an opened repo's
+  //   branch rows follow it directly.
   rows() {
     const rows = [];
     const children = new Map();
@@ -79,11 +86,46 @@ export class ForkGraph {
         merges: graph.edges,
         tags: tags.placed,
         orphanedTags: tags.orphaned,
+        open: repo.full_name in this.branches,
       });
+      for (const branch of this.branches[repo.full_name] || []) {
+        const row = ForkGraph.branchRow(repo.full_name, branch, this.commits[repo.full_name]);
+        if (row) rows.push(row);
+      }
       for (const child of children.get(repo.full_name) || []) walk(child);
     };
     for (const root of children.get(null) || []) walk(root);
     return rows;
+  }
+
+  // Args:
+  //   repo: the full_name the branch belongs to.
+  //   branch: { name, history } with history newest first.
+  //   trunk: the repo's default-branch history, or undefined when not fetched.
+  // Returns: a row from where the branch leaves the trunk to its tip, carrying
+  //   only the commits the trunk lacks, or its tip when it lacks none; null
+  //   for a branch without a dated commit.
+  static branchRow(repo, branch, trunk) {
+    const known = new Set((trunk || []).map(commit => commit.sha));
+    const own = branch.history.filter(commit => !known.has(commit.sha));
+    const shown = own.length ? own : branch.history.slice(0, 1);
+    const stamps = shown.map(commit => ForkGraph._time(commit.date)).filter(value => value !== null);
+    if (!stamps.length) return null;
+    const first = Math.min(...stamps);
+    const last = Math.max(...stamps);
+    const base = branch.history.find(commit => known.has(commit.sha));
+    const left = base ? ForkGraph._time(base.date) : null;
+    return {
+      id: `${repo}@${branch.name}`,
+      parent: repo,
+      branch: branch.name,
+      from: left === null ? first : Math.min(first, left),
+      to: last,
+      columns: [{ column: 0, commits: shown, from: first, to: last }],
+      merges: [],
+      tags: [],
+      orphanedTags: 0,
+    };
   }
 
   // Args:

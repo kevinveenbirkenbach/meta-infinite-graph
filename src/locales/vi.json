@@ -167,19 +167,13 @@
     "other": "{n} trong số đó lại được fork tiếp; mở một cái để đi sâu hơn."
   },
   "forks.leaves": "không cái nào được fork tiếp, nên đây là toàn bộ mạng lưới.",
-  "forks.lazy": "Nhánh, tag và các làn commit được tải khi mở một kho mã.",
+  "forks.lazy": "Nhấp vào một kho mã để hiển thị các nhánh của nó ngay bên dưới trên cùng một trục thời gian.",
   "forks.quota": "Còn {remaining} trên {limit} yêu cầu trong giờ này, {scope}.",
   "forks.scope.server": "qua token của máy chủ",
   "forks.scope.token": "bằng token của bạn",
   "forks.scope.none": "chưa xác thực",
   "forks.exhausted": "GitHub đã hết lượt yêu cầu trong giờ này. Hãy thêm token trong bảng bộ lọc để nâng giới hạn từ 60 lên 5000, hoặc quay lại sau khi sang giờ mới.",
   "forks.answered": "GitHub trả lời {status}: {message}",
-  "forks.loading": "Đang tải …",
-  "forks.branches": "Nhánh",
-  "forks.versions": "Phiên bản",
-  "forks.showForks": {
-    "other": "Hiển thị {n} fork của {repo}"
-  },
   "matrix.preset.overview": "Tổng quan",
   "matrix.preset.galaxy": "Thiên hà",
   "matrix.preset.ressources": "Tài nguyên",

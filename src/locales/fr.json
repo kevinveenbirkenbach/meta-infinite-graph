@@ -181,21 +181,13 @@
     "other": "{n} d’entre eux ont eux-mêmes été forkés ; ouvrez-en un pour aller plus loin."
   },
   "forks.leaves": "aucun d’eux n’a été forké à son tour, c’est donc tout le réseau.",
-  "forks.lazy": "Les branches, les tags et les voies de commits se chargent à l’ouverture d’un dépôt.",
+  "forks.lazy": "Cliquez sur un dépôt pour afficher ses branches juste en dessous, sur le même axe temporel.",
   "forks.quota": "{remaining} requêtes sur {limit} restantes cette heure, {scope}.",
   "forks.scope.server": "via le jeton du serveur",
   "forks.scope.token": "avec votre jeton",
   "forks.scope.none": "sans authentification",
   "forks.exhausted": "GitHub n’a plus de requêtes pour cette heure. Ajoutez un jeton dans le panneau de filtre pour passer la limite de 60 à 5000, ou revenez à l’heure suivante.",
   "forks.answered": "GitHub a répondu {status} : {message}",
-  "forks.loading": "Chargement …",
-  "forks.branches": "Branches",
-  "forks.versions": "Versions",
-  "forks.showForks": {
-    "one": "Afficher le {n} fork de {repo}",
-    "many": "Afficher les {n} de forks de {repo}",
-    "other": "Afficher les {n} forks de {repo}"
-  },
   "matrix.preset.overview": "Vue d’ensemble",
   "matrix.preset.galaxy": "Galaxie",
   "matrix.preset.ressources": "Ressources",

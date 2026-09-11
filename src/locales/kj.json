@@ -174,20 +174,13 @@
     "other": "{n} mudo da fokwa vali; patulula imwe opo u ye moule."
   },
   "forks.leaves": "kape na nande imwe muyo ya fokwa vali, onghee eyi oyo ongudu aishe.",
-  "forks.lazy": "Omatai, oudidiliko neendjila deekomiti ohai etwa ngeenge orepositori ya patululwa.",
+  "forks.lazy": "Kanda korepositori opo u ulike omatai ayo koshi yayo komulinga umwe wefimbo.",
   "forks.quota": "Omaindilo {remaining} mu {limit} a shaala eola eli, {scope}.",
   "forks.scope.server": "okupitila motokeni yoseva",
   "forks.scope.token": "notokeni yoye",
   "forks.scope.none": "ino shiivikwa",
   "forks.exhausted": "GitHub ya pwilwa omaindilo eola eli. Wedela otokeni moshitukulwa shoshisefa opo u yelule ongaba okudja 60 fiyo 5000, ile aluka ngeenge eola la pita.",
   "forks.answered": "GitHub ya nyamukula {status}: {message}",
-  "forks.loading": "Otashi etwa …",
-  "forks.branches": "Omatai",
-  "forks.versions": "Eeversioni",
-  "forks.showForks": {
-    "one": "Ulika ofoka {n} ya {repo}",
-    "other": "Ulika eefoka {n} da {repo}"
-  },
   "matrix.preset.overview": "Etaleko alishe",
   "matrix.preset.galaxy": "Ongudu yeenyofi",
   "matrix.preset.ressources": "Oiniwe",

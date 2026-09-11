@@ -174,20 +174,13 @@
     "other": "Ua fork-faʻahou-hia nā {n}; iriti i te hōʻē nō te haere i raro roa aʻe."
   },
   "forks.leaves": "ʻaita hōʻē aʻe i fork-faʻahou-hia, nō reira teie te ʻupeʻa taʻatoʻa.",
-  "forks.lazy": "E faʻaʻīhia te mau ʻāmaʻa, te mau tāpiri e te mau ʻeʻa commit ia iritihia te hōʻē vairaʻa.",
+  "forks.lazy": "Pata i te hōʻē vairaʻa nō te faʻaʻite i tōna mau ʻāmaʻa i raro aʻe iāna i niʻa i te rēni taime hōʻē ā.",
   "forks.quota": "{remaining} i roto i te {limit} aniraʻa e toe ra i teie hora, {scope}.",
   "forks.scope.server": "nā roto i te tīkete a te tāvini",
   "forks.scope.token": "ma tō ʻoe tīkete",
   "forks.scope.none": "ʻaita i ʻitehia",
   "forks.exhausted": "Ua pau te mau aniraʻa a GitHub nō teie hora. Tāpiri i te tīkete i roto i te ʻāfata māʻiti nō te faʻarahi i te ʻōti mai te 60 e tae atu i te 5000, aore ra hoʻi mai i muri aʻe i te hora.",
   "forks.answered": "Ua pāhono GitHub {status}: {message}",
-  "forks.loading": "Te faʻaʻī nei …",
-  "forks.branches": "Mau ʻāmaʻa",
-  "forks.versions": "Mau neneʻiraʻa",
-  "forks.showForks": {
-    "one": "Faʻaʻite i te {n} fork o {repo}",
-    "other": "Faʻaʻite i nā {n} fork o {repo}"
-  },
   "matrix.preset.overview": "Hiʻoraʻa rahi",
   "matrix.preset.galaxy": "Pupu fetiʻa",
   "matrix.preset.ressources": "Tauihaʻa",

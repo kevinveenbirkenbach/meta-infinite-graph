@@ -181,21 +181,13 @@
     "other": "{n} di essi hanno a loro volta dei fork; aprine uno per scendere più a fondo."
   },
   "forks.leaves": "nessuno di essi ha a sua volta dei fork, quindi questa è l'intera rete.",
-  "forks.lazy": "Branch, tag e corsie dei commit si caricano all'apertura di un repository.",
+  "forks.lazy": "Fai clic su un repository per mostrarne i branch subito sotto, sullo stesso asse temporale.",
   "forks.quota": "{remaining} di {limit} richieste rimaste in quest'ora, {scope}.",
   "forks.scope.server": "tramite il token del server",
   "forks.scope.token": "con il tuo token",
   "forks.scope.none": "senza autenticazione",
   "forks.exhausted": "GitHub ha esaurito le richieste per quest'ora. Aggiungi un token nel pannello filtro per alzare il limite da 60 a 5000, oppure torna allo scoccare dell'ora.",
   "forks.answered": "GitHub ha risposto {status}: {message}",
-  "forks.loading": "Caricamento …",
-  "forks.branches": "Branch",
-  "forks.versions": "Versioni",
-  "forks.showForks": {
-    "one": "Mostra {n} fork di {repo}",
-    "many": "Mostra i {n} fork di {repo}",
-    "other": "Mostra i {n} fork di {repo}"
-  },
   "matrix.preset.overview": "Panoramica",
   "matrix.preset.galaxy": "Galassia",
   "matrix.preset.ressources": "Risorse",

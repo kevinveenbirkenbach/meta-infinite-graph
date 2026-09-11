@@ -167,19 +167,13 @@
     "other": "ꍏ {n} ꇰꑷꃠꍣꐥ；ꋍꇰꄉꈁꇰꎸ。"
   },
   "forks.leaves": "ꃠꍣꐥꀋ，ꍓꆹꃰꇉꐂꀮꉬ。",
-  "forks.lazy": "ꊸꈐꄉꈁꏂ，ꃠꍝ，ꀜꐂ，ꄝꏮꄫꄏꏦꊖ。",
+  "forks.lazy": "ꊸꈐꋍꇰꄅꏢ，ꃠꍝꆹꀋꃅꇬꏂꍏꋍꇰꐊꉷꉾ。",
   "forks.quota": "ꍓꇰꑩꏂ {limit} ꇰꏾꐊ，{remaining} ꇰꎸꒉ，{scope}。",
   "forks.scope.server": "ꃚꃶꏾꆹꁁꄫꇨ",
   "forks.scope.token": "ꑋꆹꁁꑿ",
   "forks.scope.none": "ꀋꏒꊠ",
   "forks.exhausted": "GitHub ꍓꇰꑩꏂꏾꐊꑿꏢ。ꎭꑦꂳꀠꆹꆹꁁꄟꏦ，ꑣꍝ 60 ꊿ 5000 ꄜꇬ；ꑩꏂꇨꉻꉷꇁ。",
   "forks.answered": "GitHub ꉷꃚ {status}：{message}",
-  "forks.loading": "ꏦꊖ …",
-  "forks.branches": "ꃠꍝ",
-  "forks.versions": "ꀠꀪ",
-  "forks.showForks": {
-    "other": "{repo} ꃠꍣ {n} ꇰꑣꏂ"
-  },
   "matrix.preset.overview": "ꇤꇁ",
   "matrix.preset.galaxy": "ꑟꑟ",
   "matrix.preset.ressources": "ꊪꑻ",

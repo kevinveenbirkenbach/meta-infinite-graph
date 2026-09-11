@@ -188,22 +188,13 @@
     "other": "{n} z nich ma własne forki; otwórz jeden, aby zejść głębiej."
   },
   "forks.leaves": "żaden z nich nie ma własnych forków, więc to cała sieć.",
-  "forks.lazy": "Gałęzie, tagi i tory commitów wczytują się po otwarciu repozytorium.",
+  "forks.lazy": "Kliknij repozytorium, aby pokazać jego gałęzie pod nim na tej samej osi czasu.",
   "forks.quota": "Pozostało {remaining} z {limit} żądań w tej godzinie, {scope}.",
   "forks.scope.server": "przez token serwera",
   "forks.scope.token": "z Twoim tokenem",
   "forks.scope.none": "bez uwierzytelnienia",
   "forks.exhausted": "GitHub wyczerpał limit żądań na tę godzinę. Dodaj token w panelu filtrów, aby podnieść limit z 60 do 5000, albo wróć po upływie godziny.",
   "forks.answered": "GitHub odpowiedział {status}: {message}",
-  "forks.loading": "Wczytywanie …",
-  "forks.branches": "Gałęzie",
-  "forks.versions": "Wersje",
-  "forks.showForks": {
-    "one": "Pokaż {n} fork {repo}",
-    "few": "Pokaż {n} forki {repo}",
-    "many": "Pokaż {n} forków {repo}",
-    "other": "Pokaż {n} forka {repo}"
-  },
   "matrix.preset.overview": "Przegląd",
   "matrix.preset.galaxy": "Galaktyka",
   "matrix.preset.ressources": "Zasoby",

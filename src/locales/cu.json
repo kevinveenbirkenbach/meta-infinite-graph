@@ -174,20 +174,13 @@
     "other": "{n} ѿ нихъ паки раздѣлишасѧ; ѿверзи єдинꙋ, да внидеши глꙋбже."
   },
   "forks.leaves": "ни єдина ѿ нихъ паки не раздѣлисѧ, тѣмже сїѧ єсть всѧ сѣть.",
-  "forks.lazy": "Вѣтви, знаки и стези вкладѡвъ загрꙋжаютсѧ, єгда хранилище ѿверзаетсѧ.",
+  "forks.lazy": "Коснисѧ хранилища, да ꙗвиши вѣтви єгѡ подъ нимъ на тойже ѡси времене.",
   "forks.quota": "{remaining} ѿ {limit} прошенїй ѡсталосѧ въ сей часъ, {scope}.",
   "forks.scope.server": "чрезъ печать слꙋжителѧ",
   "forks.scope.token": "твоею печатїю",
   "forks.scope.none": "безъ оувѣренїѧ",
   "forks.exhausted": "GitHub ѡскꙋдѣ прошенїй на сей часъ. Приложи печать въ дщицѣ отбора, да возвысиши предѣлъ ѿ 60 до 5000, или возвратисѧ по премѣнѣ часа.",
   "forks.answered": "GitHub ѿвѣща {status}: {message}",
-  "forks.loading": "Загрꙋжаетсѧ …",
-  "forks.branches": "Вѣтви",
-  "forks.versions": "Изданїѧ",
-  "forks.showForks": {
-    "one": "Показати {n} ѿрасль {repo}",
-    "other": "Показати {n} ѿраслей {repo}"
-  },
   "matrix.preset.overview": "Ѡбозрѣнїе",
   "matrix.preset.galaxy": "Млечный пꙋть",
   "matrix.preset.ressources": "Средства",

@@ -167,19 +167,13 @@
     "other": "{n} di antaranya di-fork lagi; buka salah satunya untuk menelusuri lebih dalam."
   },
   "forks.leaves": "tidak ada yang di-fork lagi, jadi ini seluruh jaringannya.",
-  "forks.lazy": "Cabang, tag, dan jalur commit dimuat saat repositori dibuka.",
+  "forks.lazy": "Klik sebuah repositori untuk menampilkan cabangnya di bawahnya pada sumbu waktu yang sama.",
   "forks.quota": "Tersisa {remaining} dari {limit} permintaan jam ini, {scope}.",
   "forks.scope.server": "lewat token server",
   "forks.scope.token": "dengan token Anda",
   "forks.scope.none": "tanpa autentikasi",
   "forks.exhausted": "Kuota permintaan GitHub untuk jam ini habis. Tambahkan token di panel filter untuk menaikkan batas dari 60 ke 5000, atau kembali setelah jam berganti.",
   "forks.answered": "GitHub menjawab {status}: {message}",
-  "forks.loading": "Memuat …",
-  "forks.branches": "Cabang",
-  "forks.versions": "Versi",
-  "forks.showForks": {
-    "other": "Tampilkan {n} fork dari {repo}"
-  },
   "matrix.preset.overview": "Ringkasan",
   "matrix.preset.galaxy": "Galaksi",
   "matrix.preset.ressources": "Sumber daya",

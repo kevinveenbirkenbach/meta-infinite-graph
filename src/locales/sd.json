@@ -174,20 +174,13 @@
     "other": "انهن مان {n} جا وري فورڪ ٿيل آهن؛ اونهو وڃڻ لاءِ هڪ کوليو."
   },
   "forks.leaves": "انهن مان ڪنهن جو به وري فورڪ ناهي، تنهنڪري هي سڄو نيٽ ورڪ آهي.",
-  "forks.lazy": "شاخون، ٽيگ ۽ ڪمٽ لينون ريپوزٽري کولڻ تي لوڊ ٿين ٿيون.",
+  "forks.lazy": "ڪنهن ريپوزٽري جون شاخون ساڳئي وقت جي محور تي ان جي هيٺان ڏيکارڻ لاءِ ان تي ڪلڪ ڪريو.",
   "forks.quota": "هن ڪلاڪ {limit} مان {remaining} درخواستون باقي، {scope}.",
   "forks.scope.server": "سرور جي ٽوڪن ذريعي",
   "forks.scope.token": "توهان جي ٽوڪن سان",
   "forks.scope.none": "بنا تصديق",
   "forks.exhausted": "هن ڪلاڪ لاءِ GitHub وٽ درخواستون ختم ٿي ويون آهن. حد 60 کان 5000 تائين وڌائڻ لاءِ فلٽر پينل ۾ ٽوڪن شامل ڪريو، يا ڪلاڪ پورو ٿيڻ کانپوءِ واپس اچو.",
   "forks.answered": "GitHub {status} جواب ڏنو: {message}",
-  "forks.loading": "لوڊ ٿي رهيو آهي …",
-  "forks.branches": "شاخون",
-  "forks.versions": "ورزن",
-  "forks.showForks": {
-    "one": "{repo} جو {n} فورڪ ڏيکاريو",
-    "other": "{repo} جا {n} فورڪ ڏيکاريو"
-  },
   "matrix.preset.overview": "جائزو",
   "matrix.preset.galaxy": "ڪهڪشان",
   "matrix.preset.ressources": "وسيلا",
