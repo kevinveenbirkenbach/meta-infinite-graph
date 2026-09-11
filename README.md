@@ -151,18 +151,25 @@ order behind the planned ones; they still have tests.
 ### Timeline
 
 The only view that leaves the mounted `roles/` tree: it reads the GitHub API
-directly from the browser and draws the repository, its forks, and per
-repository the branches and the versions.
+directly from the browser and draws the repository and its forks as lines on
+one time axis. Clicking a repository's name opens its branches as rows directly
+beneath it, each carrying the commits its trunk lacks; a fork that is forked
+again brings its own forks along. The design panel switches the commit lanes,
+on by default, and the version tags.
 
 Versions come from `/tags`, not `/releases`. `infinito-nexus/core` carries 68
 tags and zero releases, and `/releases/latest` answers 404 there, so a releases
-call per node would spend quota on an empty list.
+call per repository would spend quota on an empty list.
 
 The rate limit shapes the whole design. Unauthenticated GitHub allows **60
-requests per hour per IP**, and a full tree costs roughly 32, so:
+requests per hour per IP**, so:
 
 - opening the view costs 2 requests, the repository and its fork list
-- branches and versions load when a node is opened, 2 more per node
+- the commit lanes cost 1 request per repository, walked one at a time and
+  stopped at the first refusal
+- opening a repository costs 1 request for its branch list and 1 per branch
+  besides the default one, plus 1 for its fork list when it is forked again; a
+  repository served by the git mirror costs nothing for its branches
 - answers are cached in the browser for an hour, and a reload spends nothing.
   A conditional `If-None-Match` request would not help: it answers 304 and
   still costs one unauthenticated unit, so the cache skips the request instead
