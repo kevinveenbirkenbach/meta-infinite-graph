@@ -20,6 +20,18 @@ export class GitRange {
     this.refs = [];
     this.from = null;
     this.until = null;
+    // _defaults() reads these straight from the URL, before any view exists.
+    // They are registered all the same, or every other capture() rebuilds the
+    // query without them and drops the ticked sources.
+    const none = () => {};
+    urlState
+      .register('refs', () => (this.catalog && this.refs.join(',') !== this.rootRef() ? this.refs.join(',') : ''), none, '')
+      .register('from', () => (this.catalog && this.from !== this._back() ? new Date(this.from).toISOString() : ''), none, '')
+      .register('until', () => (this.catalog && !this.latest() ? this.head() : ''), none, '');
+  }
+
+  _back() {
+    return Math.max(this.span.from, this.span.to - GitRange.YEAR);
   }
 
   // Returns: the catalog, or null when the mirror is not served. Every caller
@@ -44,8 +56,7 @@ export class GitRange {
 
   _defaults() {
     const params = new URLSearchParams(window.location.search);
-    const back = this.span.to - GitRange.YEAR;
-    this.from = params.get('from') ? Date.parse(params.get('from')) : Math.max(this.span.from, back);
+    this.from = params.get('from') ? Date.parse(params.get('from')) : this._back();
     this.until = params.get('until') ? Date.parse(params.get('until')) : this.span.to;
     const asked = (params.get('refs') || '').split(',').filter(Boolean);
     this.refs = asked.length ? asked : [this.rootRef()];

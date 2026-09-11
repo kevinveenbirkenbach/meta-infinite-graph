@@ -52,8 +52,10 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
   themselves again. Every tab can forget the cached GitHub answers or reload
   the page.
 - **Every switch is in the URL.** View, start role, facets, edge kinds, the
-  variant and symbol switches, theme, font size, font family and the
-  transparency all round-trip through the query string, so a reload or a shared
+  variant and symbol switches, theme, font size, font family, the
+  transparency, and the branches and repositories ticked in the sources menu
+  with the time window (`?refs=`, `?from=`, `?until=`) all round-trip through
+  the query string, so a reload or a shared
   link reproduces the page exactly. Values left at their default are left out,
   so the plain URL stays clean.
 - **Day/night** on Bootstrap 5.3's native `data-bs-theme`, set in the design

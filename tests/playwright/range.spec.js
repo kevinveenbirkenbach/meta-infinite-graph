@@ -183,3 +183,17 @@ test('a moved handle travels in the URL', async ({ page }) => {
   expect(await page.evaluate(() => new Date(window.gitRange.until).toISOString().slice(0, 10)))
     .toBe('2024-06-01');
 });
+
+test('the ticked sources and the window stay in the URL whatever else changes', async ({ page }) => {
+  await mirror(page, []);
+  await page.goto('/?refs=main,f1/master&from=2025-01-01T00:00:00.000Z&view=commits');
+  await expect
+    .poll(() => page.evaluate(() => Boolean(window.__mig)), { timeout: 120000 })
+    .toBe(true);
+  const query = () => page.evaluate(() => Object.fromEntries(new URLSearchParams(window.location.search)));
+
+  await page.locator('label[for="view-pulls"]').click();
+  await expect.poll(query, 'a view change rebuilds the query around the range, not without it')
+    .toMatchObject({ view: 'pulls', refs: 'main,f1/master', from: '2025-01-01T00:00:00.000Z' });
+  expect(await query(), 'the right handle at the far right is the default and stays out').not.toHaveProperty('until');
+});
