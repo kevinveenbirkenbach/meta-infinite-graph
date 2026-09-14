@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "କାର୍ଯ୍ୟ",
   "view.security": "ସୁରକ୍ଷା",
+  "view.warnings": "ଚେତାବନୀ",
   "panel.filter": "ଫିଲ୍ଟର",
   "panel.design": "ଡିଜାଇନ୍",
   "design.theme": "ଥିମ୍",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub କୁ କ'ଣ ବଦଳିଛି ପଚରାଯାଉଛି",
   "loader.task.everything": "GitHub ରୁ ପ୍ରତ୍ୟେକ ଚାଳନା ମଗାଯାଉଛି",
   "loader.task.artifacts": "ଚାଳନା #{number} ର ଆର୍ଟିଫାକ୍ଟ: {total} ମଧ୍ୟରୁ {done}",
+  "loader.task.warnings": "ଚେତାବନୀ: {total}ଟି କାର୍ଯ୍ୟରୁ {done}",
   "loader.task.artifact": "ଆର୍ଟିଫାକ୍ଟ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ବିଫଳ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ଅବଧି",
   "feed.actions.running": "ଚାଲୁଛି",
   "feed.actions.longest": "ଦେଖାଯାଇଥିବା ସବୁଠାରୁ ଲମ୍ବା ଚାଳନା {duration} ନେଇଥିଲା ({run})।",
+  "feed.actions.open": "ଖୋଲନ୍ତୁ",
+  "feed.actions.jump.playwright": "ଏହି ଚାଳନାର Playwright ସୁଟ୍",
+  "feed.actions.jump.unit": "ଏହି ଚାଳନାରେ ରିପୋଜିଟୋରିର ନିଜସ୍ୱ ସୁଟ୍",
+  "feed.actions.jump.warnings": "ଏହି ଚାଳନାର ଚେତାବନୀ",
   "feed.filter.search": "ଚାଳନା ଖୋଜନ୍ତୁ",
   "feed.filter.all": "ସବୁ",
   "feed.filter.event": "ଘଟଣା",
@@ -198,6 +204,25 @@
   "security.column.source": "ଉତ୍ସ",
   "security.column.alert": "ସତର୍କତା",
   "security.column.summary": "ସାରାଂଶ",
+  "warnings.column.level": "ସ୍ତର",
+  "warnings.column.repository": "ରିପୋଜିଟୋରି",
+  "warnings.column.run": "ଚାଳନା",
+  "warnings.column.job": "କାର୍ଯ୍ୟ",
+  "warnings.column.where": "କେଉଁଠି",
+  "warnings.column.title": "ଶୀର୍ଷକ",
+  "warnings.column.message": "ସନ୍ଦେଶ",
+  "warnings.level.failure": "ତ୍ରୁଟି",
+  "warnings.level.warning": "ଚେତାବନୀ",
+  "warnings.level.notice": "ସୂଚନା",
+  "warnings.note": {
+    "one": "{n}ଟି ଚାଳନାରେ: {failure} ତ୍ରୁଟି, {warning} ଚେତାବନୀ, {notice} ସୂଚନା।",
+    "other": "{n}ଟି ଚାଳନାରେ: {failure} ତ୍ରୁଟି, {warning} ଚେତାବନୀ, {notice} ସୂଚନା।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n}ଟି କାର୍ଯ୍ୟରୁ {done}ଟି ପଢ଼ାଗଲା।",
+    "other": "{repo} {run}: {n}ଟି କାର୍ଯ୍ୟରୁ {done}ଟି ପଢ଼ାଗଲା।"
+  },
+  "warnings.noRun": "ଚିହ୍ନିତ ଶାଖାଗୁଡ଼ିକ ମଧ୍ୟରୁ କାହାରି ୱାର୍କଫ୍ଲୋ ଚାଳନା ନାହିଁ।",
   "security.column.since": "ଠାରୁ",
   "security.severity.critical": "ଗୁରୁତର",
   "security.severity.high": "ଉଚ୍ଚ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ଫାଇଲ",
   "tests.code.language": "ଭାଷା",
   "tests.code.cases": "କେସ୍",
+  "tests.code.run": "ଚାଳନା",
   "tests.code.reading": "ସୁଟ୍ ପଢ଼ାଯାଉଛି…",
   "tests.code.note": {
     "one": "{cases}ଟି କେସ୍ ସହିତ {n}ଟି ଫାଇଲ।",
     "other": "{cases}ଟି କେସ୍ ସହିତ {n}ଟି ଫାଇଲ।"
+  },
+  "tests.code.held": {
+    "one": "ଚାଳନା {run} ସେଥିମଧ୍ୟରୁ {n}ଟି ବିଷୟରେ ରିପୋର୍ଟ କଲା।",
+    "other": "ଚାଳନା {run} ସେଥିମଧ୍ୟରୁ {n}ଟି ବିଷୟରେ ରିପୋର୍ଟ କଲା।"
   },
   "tests.code.noCases": "ଏହି ଫାଇଲରେ କୌଣସି କେସ୍ ମିଳିଲା ନାହିଁ।",
   "tests.code.noTree": "ପରୀକ୍ଷା ଟ୍ରି {path} ରେ ପରିବେଷଣ ହେଉନାହିଁ।",

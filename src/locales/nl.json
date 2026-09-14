@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Acties",
   "view.security": "Beveiliging",
+  "view.warnings": "Waarschuwingen",
   "panel.filter": "Filter",
   "panel.design": "Ontwerp",
   "design.theme": "Thema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub vragen wat er veranderd is",
   "loader.task.everything": "GitHub om alle runs vragen",
   "loader.task.artifacts": "Artefacten van run #{number}: {done} van {total}",
+  "loader.task.warnings": "Waarschuwingen: {done} van {total} jobs",
   "loader.task.artifact": "Artefact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislukt: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duur",
   "feed.actions.running": "loopt",
   "feed.actions.longest": "De langste getoonde run duurde {duration} ({run}).",
+  "feed.actions.open": "Openen",
+  "feed.actions.jump.playwright": "Playwright-suite van deze run",
+  "feed.actions.jump.unit": "De eigen suites van de repository bij deze run",
+  "feed.actions.jump.warnings": "Waarschuwingen van deze run",
   "feed.filter.search": "Runs doorzoeken",
   "feed.filter.all": "alle",
   "feed.filter.event": "Gebeurtenis",
@@ -198,6 +204,25 @@
   "security.column.source": "Bron",
   "security.column.alert": "Melding",
   "security.column.summary": "Samenvatting",
+  "warnings.column.level": "Niveau",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Run",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Waar",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Bericht",
+  "warnings.level.failure": "fout",
+  "warnings.level.warning": "waarschuwing",
+  "warnings.level.notice": "opmerking",
+  "warnings.note": {
+    "one": "Over {n} run: {failure} fouten, {warning} waarschuwingen, {notice} opmerkingen.",
+    "other": "Over {n} runs: {failure} fouten, {warning} waarschuwingen, {notice} opmerkingen."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} van {n} job gelezen.",
+    "other": "{repo} {run}: {done} van {n} jobs gelezen."
+  },
+  "warnings.noRun": "Geen van de aangevinkte branches heeft een workflowrun.",
   "security.column.since": "Sinds",
   "security.severity.critical": "kritiek",
   "security.severity.high": "hoog",
@@ -378,10 +403,15 @@
   "tests.code.file": "bestand",
   "tests.code.language": "taal",
   "tests.code.cases": "gevallen",
+  "tests.code.run": "run",
   "tests.code.reading": "De suite lezen…",
   "tests.code.note": {
     "one": "{n} bestand met {cases} gevallen.",
     "other": "{n} bestanden met {cases} gevallen."
+  },
+  "tests.code.held": {
+    "one": "Run {run} rapporteerde over {n} daarvan.",
+    "other": "Run {run} rapporteerde over {n} daarvan."
   },
   "tests.code.noCases": "Er is geen geval gevonden in dit bestand.",
   "tests.code.noTree": "De testboom wordt niet aangeboden op {path}.",

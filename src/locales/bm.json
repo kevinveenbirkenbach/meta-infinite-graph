@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Kɛwalew",
   "view.security": "Lakana",
+  "view.warnings": "Lasɔmiliw",
   "panel.filter": "Sɛgɛsɛgɛli",
   "panel.design": "Cogoya",
   "design.theme": "Kɛcogo",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Ka GitHub ɲininka min yɛlɛmana",
   "loader.task.everything": "Ka GitHub ɲininka boli bɛɛ la",
   "loader.task.artifacts": "Boli #{number} ka artefakitiw: {done}/{total}",
+  "loader.task.warnings": "Lasɔmiliw: baara {total} la, {done} banna",
   "loader.task.artifact": "Artefakiti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "a ma ɲɛ: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Waati hakɛ",
   "feed.actions.running": "a bɛ boli la",
   "feed.actions.longest": "Boli jan kosɛbɛ min jiralen don, o ye {duration} ta ({run}).",
+  "feed.actions.open": "A dayɛlɛ",
+  "feed.actions.jump.playwright": "Nin boli in ka Playwright kɔrɔbɔliw",
+  "feed.actions.jump.unit": "Maralan yɛrɛ ka kɔrɔbɔliw nin boli in na",
+  "feed.actions.jump.warnings": "Nin boli in ka lasɔmiliw",
   "feed.filter.search": "Boliw ɲini",
   "feed.filter.all": "bɛɛ",
   "feed.filter.event": "Ko kɛlen",
@@ -188,6 +194,23 @@
   "security.column.source": "Sɔrɔyɔrɔ",
   "security.column.alert": "Lasɔmini",
   "security.column.summary": "Kuma surun",
+  "warnings.column.level": "Hakɛ",
+  "warnings.column.repository": "Maralan",
+  "warnings.column.run": "Boli",
+  "warnings.column.job": "Baara",
+  "warnings.column.where": "Yɔrɔ",
+  "warnings.column.title": "Kunkan tɔgɔ",
+  "warnings.column.message": "Cikan",
+  "warnings.level.failure": "fili",
+  "warnings.level.warning": "lasɔmili",
+  "warnings.level.notice": "kunnafoni",
+  "warnings.note": {
+    "other": "Boli {n} kɔnɔ: fili {failure}, lasɔmili {warning}, kunnafoni {notice}."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: baara {n} la, {done} kalanna."
+  },
+  "warnings.noRun": "Bolofara sugandilenw si tɛ ni baara sira boli ye.",
   "security.column.since": "Kabini",
   "security.severity.critical": "jugu kosɛbɛ",
   "security.severity.high": "sanfɛ",
@@ -355,9 +378,13 @@
   "tests.code.file": "dosiye",
   "tests.code.language": "kan",
   "tests.code.cases": "kow",
+  "tests.code.run": "boli",
   "tests.code.reading": "Kɔrɔbɔliw bɛ kalan…",
   "tests.code.note": {
     "other": "Dosiye {n}, ni ko {cases} ye."
+  },
+  "tests.code.held": {
+    "other": "Boli {run} ye kunnafoni di u la {n} kan."
   },
   "tests.code.noCases": "Ko si ma sɔrɔ nin dosiye in kɔnɔ.",
   "tests.code.noTree": "Kɔrɔbɔliw ka jiri tɛ di {path} la.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "কাৰ্য",
   "view.security": "সুৰক্ষা",
+  "view.warnings": "সকীয়নি",
   "panel.filter": "ফিল্টাৰ",
   "panel.design": "ডিজাইন",
   "design.theme": "থীম",
@@ -172,6 +173,7 @@
   "loader.task.changes": "কি সলনি হৈছে GitHubক সোধা হৈছে",
   "loader.task.everything": "প্ৰতিটো চলনৰ বাবে GitHubক সোধা হৈছে",
   "loader.task.artifacts": "চলন #{number}ৰ আৰ্টিফেক্ট: {total}টাৰ {done}টা",
+  "loader.task.warnings": "সকীয়নি: {total}টা কামৰ {done}টা",
   "loader.task.artifact": "আৰ্টিফেক্ট {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "বিফল: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "সময়কাল",
   "feed.actions.running": "চলি আছে",
   "feed.actions.longest": "দেখুওৱা আটাইতকৈ দীঘলীয়া চলনটোত {duration} লাগিছিল ({run})।",
+  "feed.actions.open": "খোলক",
+  "feed.actions.jump.playwright": "এই চলনৰ Playwright ছুইট",
+  "feed.actions.jump.unit": "এই চলনত ৰিপজিটৰিৰ নিজৰ ছুইটসমূহ",
+  "feed.actions.jump.warnings": "এই চলনৰ সকীয়নি",
   "feed.filter.search": "চলনসমূহত সন্ধান কৰক",
   "feed.filter.all": "সকলো",
   "feed.filter.event": "ঘটনা",
@@ -198,6 +204,25 @@
   "security.column.source": "উৎস",
   "security.column.alert": "সতৰ্কবাণী",
   "security.column.summary": "সাৰাংশ",
+  "warnings.column.level": "স্তৰ",
+  "warnings.column.repository": "ৰিপজিটৰি",
+  "warnings.column.run": "চলন",
+  "warnings.column.job": "কাম",
+  "warnings.column.where": "ক'ত",
+  "warnings.column.title": "শিৰোনাম",
+  "warnings.column.message": "বাৰ্তা",
+  "warnings.level.failure": "ত্ৰুটি",
+  "warnings.level.warning": "সকীয়নি",
+  "warnings.level.notice": "টোকা",
+  "warnings.note": {
+    "one": "{n}টা চলনত: {failure}টা ত্ৰুটি, {warning}টা সকীয়নি, {notice}টা টোকা।",
+    "other": "{n}টা চলনত: {failure}টা ত্ৰুটি, {warning}টা সকীয়নি, {notice}টা টোকা।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n}টা কামৰ {done}টা পঢ়া হ'ল।",
+    "other": "{repo} {run}: {n}টা কামৰ {done}টা পঢ়া হ'ল।"
+  },
+  "warnings.noRun": "চিহ্নিত কৰা কোনো শাখাৰে ৱৰ্কফ্ল' চলন নাই।",
   "security.column.since": "কেতিয়াৰ পৰা",
   "security.severity.critical": "সংকটপূৰ্ণ",
   "security.severity.high": "উচ্চ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ফাইল",
   "tests.code.language": "ভাষা",
   "tests.code.cases": "কেছ",
+  "tests.code.run": "চলন",
   "tests.code.reading": "ছুইট পঢ়ি থকা হৈছে…",
   "tests.code.note": {
     "one": "{n}টা ফাইল, {cases}টা কেছ।",
     "other": "{n}টা ফাইল, {cases}টা কেছ।"
+  },
+  "tests.code.held": {
+    "one": "চলন {run}এ সিহঁতৰ {n}টাৰ বিষয়ে জনালে।",
+    "other": "চলন {run}এ সিহঁতৰ {n}টাৰ বিষয়ে জনালে।"
   },
   "tests.code.noCases": "এই ফাইলত কোনো কেছ পোৱা নগ'ল।",
   "tests.code.noTree": "পৰীক্ষাৰ ট্ৰি {path}ত পৰিবেশন কৰা হোৱা নাই।",

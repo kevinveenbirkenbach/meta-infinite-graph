@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actions",
   "view.security": "安全",
+  "view.warnings": "警告",
   "panel.filter": "筛选",
   "panel.design": "外观",
   "design.theme": "主题",
@@ -163,6 +164,7 @@
   "loader.task.changes": "正在向 GitHub 查询变更内容",
   "loader.task.everything": "正在向 GitHub 获取全部运行",
   "loader.task.artifacts": "运行 #{number} 的工件：{done} / {total}",
+  "loader.task.warnings": "警告：{total} 个作业中的 {done} 个",
   "loader.task.artifact": "工件 {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "失败：{message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "时长",
   "feed.actions.running": "运行中",
   "feed.actions.longest": "所示最长的运行耗时 {duration}（{run}）。",
+  "feed.actions.open": "打开",
+  "feed.actions.jump.playwright": "此运行的 Playwright 套件",
+  "feed.actions.jump.unit": "此运行中仓库自有的测试套件",
+  "feed.actions.jump.warnings": "此运行的警告",
   "feed.filter.search": "搜索运行",
   "feed.filter.all": "全部",
   "feed.filter.event": "事件",
@@ -188,6 +194,23 @@
   "security.column.source": "来源",
   "security.column.alert": "警报",
   "security.column.summary": "摘要",
+  "warnings.column.level": "级别",
+  "warnings.column.repository": "仓库",
+  "warnings.column.run": "运行",
+  "warnings.column.job": "作业",
+  "warnings.column.where": "位置",
+  "warnings.column.title": "标题",
+  "warnings.column.message": "消息",
+  "warnings.level.failure": "错误",
+  "warnings.level.warning": "警告",
+  "warnings.level.notice": "提示",
+  "warnings.note": {
+    "other": "{n} 次运行中共有 {failure} 个错误、{warning} 个警告、{notice} 个提示。"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}：已读取 {n} 个作业中的 {done} 个。"
+  },
+  "warnings.noRun": "勾选的分支都没有工作流运行。",
   "security.column.since": "起始",
   "security.severity.critical": "严重",
   "security.severity.high": "高",
@@ -355,9 +378,13 @@
   "tests.code.file": "文件",
   "tests.code.language": "语言",
   "tests.code.cases": "用例",
+  "tests.code.run": "运行",
   "tests.code.reading": "正在读取套件…",
   "tests.code.note": {
     "other": "{n} 个文件，共 {cases} 个用例。"
+  },
+  "tests.code.held": {
+    "other": "运行 {run} 报告了其中的 {n} 个。"
   },
   "tests.code.noCases": "在此文件中未找到任何用例。",
   "tests.code.noTree": "测试目录树未在 {path} 提供。",

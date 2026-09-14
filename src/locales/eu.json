@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ekintzak",
   "view.security": "Segurtasuna",
+  "view.warnings": "Abisuak",
   "panel.filter": "Iragazkia",
   "panel.design": "Diseinua",
   "design.theme": "Gaia",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-i zer aldatu den galdetzen",
   "loader.task.everything": "GitHub-i exekuzio guztiak eskatzen",
   "loader.task.artifacts": "#{number} exekuzioaren artefaktuak: {done}/{total}",
+  "loader.task.warnings": "Abisuak: {total} lanetik {done}",
   "loader.task.artifact": "Artefaktua: {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "huts egin du: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Iraupena",
   "feed.actions.running": "exekutatzen",
   "feed.actions.longest": "Erakutsitako exekuziorik luzeenak {duration} iraun zuen ({run}).",
+  "feed.actions.open": "Ireki",
+  "feed.actions.jump.playwright": "Exekuzio honen Playwright multzoa",
+  "feed.actions.jump.unit": "Biltegiaren beraren multzoak exekuzio honetan",
+  "feed.actions.jump.warnings": "Exekuzio honen abisuak",
   "feed.filter.search": "Bilatu exekuzioetan",
   "feed.filter.all": "denak",
   "feed.filter.event": "Gertaera",
@@ -198,6 +204,25 @@
   "security.column.source": "Iturria",
   "security.column.alert": "Alerta",
   "security.column.summary": "Laburpena",
+  "warnings.column.level": "Maila",
+  "warnings.column.repository": "Biltegia",
+  "warnings.column.run": "Exekuzioa",
+  "warnings.column.job": "Lana",
+  "warnings.column.where": "Non",
+  "warnings.column.title": "Izenburua",
+  "warnings.column.message": "Mezua",
+  "warnings.level.failure": "errorea",
+  "warnings.level.warning": "abisua",
+  "warnings.level.notice": "oharra",
+  "warnings.note": {
+    "one": "{n} exekuziotan: {failure} errore, {warning} abisu, {notice} ohar.",
+    "other": "{n} exekuziotan: {failure} errore, {warning} abisu, {notice} ohar."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} lanetik {done} irakurrita.",
+    "other": "{repo} {run}: {n} lanetik {done} irakurrita."
+  },
+  "warnings.noRun": "Markatutako adarretako batek ere ez du lan-fluxuaren exekuziorik.",
   "security.column.since": "Noiztik",
   "security.severity.critical": "kritikoa",
   "security.severity.high": "altua",
@@ -378,10 +403,15 @@
   "tests.code.file": "fitxategia",
   "tests.code.language": "hizkuntza",
   "tests.code.cases": "kasuak",
+  "tests.code.run": "exekuzioa",
   "tests.code.reading": "Multzoa irakurtzen…",
   "tests.code.note": {
     "one": "Fitxategi {n}, {cases} kasu.",
     "other": "{n} fitxategi, {cases} kasu."
+  },
+  "tests.code.held": {
+    "one": "{run} exekuzioak haietako {n} jakinarazi du.",
+    "other": "{run} exekuzioak haietako {n} jakinarazi ditu."
   },
   "tests.code.noCases": "Ez da kasurik aurkitu fitxategi honetan.",
   "tests.code.noTree": "Probaren zuhaitza ez da {path} helbidean zerbitzatzen.",

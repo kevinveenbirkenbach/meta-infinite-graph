@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "कार्यहरू",
   "view.security": "सुरक्षा",
+  "view.warnings": "चेतावनीहरू",
   "panel.filter": "फिल्टर",
   "panel.design": "डिजाइन",
   "design.theme": "थिम",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub लाई के परिवर्तन भयो सोध्दै",
   "loader.task.everything": "GitHub सँग हरेक रन माग्दै",
   "loader.task.artifacts": "रन #{number} का आर्टिफ्याक्टहरू: {total} मध्ये {done}",
+  "loader.task.warnings": "चेतावनीहरू: {total} जबमध्ये {done}",
   "loader.task.artifact": "आर्टिफ्याक्ट {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "असफल: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "अवधि",
   "feed.actions.running": "चलिरहेको",
   "feed.actions.longest": "देखाइएका मध्ये सबैभन्दा लामो रनले {duration} लियो ({run}).",
+  "feed.actions.open": "खोल्नुहोस्",
+  "feed.actions.jump.playwright": "यो रनको Playwright सुइट",
+  "feed.actions.jump.unit": "यो रनमा रिपोजिटरीका आफ्नै सुइटहरू",
+  "feed.actions.jump.warnings": "यो रनका चेतावनीहरू",
   "feed.filter.search": "रनहरू खोज्नुहोस्",
   "feed.filter.all": "सबै",
   "feed.filter.event": "घटना",
@@ -198,6 +204,25 @@
   "security.column.source": "स्रोत",
   "security.column.alert": "अलर्ट",
   "security.column.summary": "सारांश",
+  "warnings.column.level": "तह",
+  "warnings.column.repository": "रिपोजिटरी",
+  "warnings.column.run": "रन",
+  "warnings.column.job": "जब",
+  "warnings.column.where": "कहाँ",
+  "warnings.column.title": "शीर्षक",
+  "warnings.column.message": "सन्देश",
+  "warnings.level.failure": "त्रुटि",
+  "warnings.level.warning": "चेतावनी",
+  "warnings.level.notice": "टिप्पणी",
+  "warnings.note": {
+    "one": "{n} रनमा: {failure} त्रुटि, {warning} चेतावनी, {notice} टिप्पणी।",
+    "other": "{n} रनहरूमा: {failure} त्रुटि, {warning} चेतावनी, {notice} टिप्पणी।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} जबमध्ये {done} पढियो।",
+    "other": "{repo} {run}: {n} जबमध्ये {done} पढिए।"
+  },
+  "warnings.noRun": "चिन्ह लगाइएका कुनै पनि शाखामा वर्कफ्लो रन छैन।",
   "security.column.since": "देखि",
   "security.severity.critical": "गम्भीर",
   "security.severity.high": "उच्च",
@@ -378,10 +403,15 @@
   "tests.code.file": "फाइल",
   "tests.code.language": "भाषा",
   "tests.code.cases": "केस",
+  "tests.code.run": "रन",
   "tests.code.reading": "सुइट पढ्दै…",
   "tests.code.note": {
     "one": "{n} फाइल, {cases} केस।",
     "other": "{n} फाइलहरू, {cases} केस।"
+  },
+  "tests.code.held": {
+    "one": "रन {run} ले तीमध्ये {n} को प्रतिवेदन दियो।",
+    "other": "रन {run} ले तीमध्ये {n} को प्रतिवेदन दियो।"
   },
   "tests.code.noCases": "यो फाइलमा कुनै केस भेटिएन।",
   "tests.code.noTree": "परीक्षण ट्री {path} मा उपलब्ध गराइएको छैन।",

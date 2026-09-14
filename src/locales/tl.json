@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Mga Aksyon",
   "view.security": "Seguridad",
+  "view.warnings": "Mga Babala",
   "panel.filter": "Salain",
   "panel.design": "Disenyo",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Tinatanong ang GitHub kung ano ang nagbago",
   "loader.task.everything": "Hinihingi sa GitHub ang lahat ng pagtakbo",
   "loader.task.artifacts": "Mga artipakto ng pagtakbo #{number}: {done} sa {total}",
+  "loader.task.warnings": "Mga babala: {done} sa {total} trabaho",
   "loader.task.artifact": "Artipakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "bumagsak: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Tagal",
   "feed.actions.running": "tumatakbo",
   "feed.actions.longest": "Ang pinakamahabang pagtakbong ipinakita ay tumagal nang {duration} ({run}).",
+  "feed.actions.open": "Buksan",
+  "feed.actions.jump.playwright": "Playwright suite ng pagtakbong ito",
+  "feed.actions.jump.unit": "Sariling mga suite ng repositoryo sa pagtakbong ito",
+  "feed.actions.jump.warnings": "Mga babala ng pagtakbong ito",
   "feed.filter.search": "Maghanap sa mga pagtakbo",
   "feed.filter.all": "lahat",
   "feed.filter.event": "Kaganapan",
@@ -198,6 +204,25 @@
   "security.column.source": "Pinagmulan",
   "security.column.alert": "Alerto",
   "security.column.summary": "Buod",
+  "warnings.column.level": "Antas",
+  "warnings.column.repository": "Repositoryo",
+  "warnings.column.run": "Pagtakbo",
+  "warnings.column.job": "Trabaho",
+  "warnings.column.where": "Saan",
+  "warnings.column.title": "Pamagat",
+  "warnings.column.message": "Mensahe",
+  "warnings.level.failure": "error",
+  "warnings.level.warning": "babala",
+  "warnings.level.notice": "tala",
+  "warnings.note": {
+    "one": "Sa {n} pagtakbo: {failure} error, {warning} babala, {notice} tala.",
+    "other": "Sa {n} na pagtakbo: {failure} error, {warning} babala, {notice} tala."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} sa {n} trabaho ang nabasa.",
+    "other": "{repo} {run}: {done} sa {n} na trabaho ang nabasa."
+  },
+  "warnings.noRun": "Wala sa mga nilagyan ng tsek na sangay ang may pagtakbo ng daloy ng gawain.",
   "security.column.since": "Mula noong",
   "security.severity.critical": "kritikal",
   "security.severity.high": "mataas",
@@ -378,10 +403,15 @@
   "tests.code.file": "file",
   "tests.code.language": "wika",
   "tests.code.cases": "kaso",
+  "tests.code.run": "pagtakbo",
   "tests.code.reading": "Binabasa ang suite…",
   "tests.code.note": {
     "one": "{n} file na may {cases} kaso.",
     "other": "{n} na file na may {cases} kaso."
+  },
+  "tests.code.held": {
+    "one": "Nag-ulat ang pagtakbo {run} tungkol sa {n} sa kanila.",
+    "other": "Nag-ulat ang pagtakbo {run} tungkol sa {n} sa kanila."
   },
   "tests.code.noCases": "Walang kasong natagpuan sa file na ito.",
   "tests.code.noTree": "Hindi inihahain ang puno ng mga pagsubok sa {path}.",

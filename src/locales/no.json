@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Handlinger",
   "view.security": "Sikkerhet",
+  "view.warnings": "Advarsler",
   "panel.filter": "Filter",
   "panel.design": "Utseende",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Spør GitHub hva som er endret",
   "loader.task.everything": "Ber GitHub om alle kjøringer",
   "loader.task.artifacts": "Artefakter fra kjøring #{number}: {done} av {total}",
+  "loader.task.warnings": "Advarsler: {done} av {total} jobber",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislyktes: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Varighet",
   "feed.actions.running": "kjører",
   "feed.actions.longest": "Den lengste viste kjøringen tok {duration} ({run}).",
+  "feed.actions.open": "Åpne",
+  "feed.actions.jump.playwright": "Playwright-suiten til denne kjøringen",
+  "feed.actions.jump.unit": "Depotets egne suiter ved denne kjøringen",
+  "feed.actions.jump.warnings": "Advarsler for denne kjøringen",
   "feed.filter.search": "Søk i kjøringene",
   "feed.filter.all": "alle",
   "feed.filter.event": "Hendelse",
@@ -198,6 +204,25 @@
   "security.column.source": "Kilde",
   "security.column.alert": "Varsel",
   "security.column.summary": "Sammendrag",
+  "warnings.column.level": "Nivå",
+  "warnings.column.repository": "Depot",
+  "warnings.column.run": "Kjøring",
+  "warnings.column.job": "Jobb",
+  "warnings.column.where": "Hvor",
+  "warnings.column.title": "Tittel",
+  "warnings.column.message": "Melding",
+  "warnings.level.failure": "feil",
+  "warnings.level.warning": "advarsel",
+  "warnings.level.notice": "merknad",
+  "warnings.note": {
+    "one": "Over {n} kjøring: {failure} feil, {warning} advarsler, {notice} merknader.",
+    "other": "Over {n} kjøringer: {failure} feil, {warning} advarsler, {notice} merknader."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} av {n} jobb lest.",
+    "other": "{repo} {run}: {done} av {n} jobber lest."
+  },
+  "warnings.noRun": "Ingen av de avkryssede grenene har en arbeidsflytkjøring.",
   "security.column.since": "Siden",
   "security.severity.critical": "kritisk",
   "security.severity.high": "høy",
@@ -378,10 +403,15 @@
   "tests.code.file": "fil",
   "tests.code.language": "språk",
   "tests.code.cases": "tilfeller",
+  "tests.code.run": "kjøring",
   "tests.code.reading": "Leser suiten…",
   "tests.code.note": {
     "one": "{n} fil med {cases} tilfeller.",
     "other": "{n} filer med {cases} tilfeller."
+  },
+  "tests.code.held": {
+    "one": "Kjøring {run} rapporterte om {n} av dem.",
+    "other": "Kjøring {run} rapporterte om {n} av dem."
   },
   "tests.code.noCases": "Det ble ikke funnet noe tilfelle i denne filen.",
   "tests.code.noTree": "Testtreet serveres ikke på {path}.",

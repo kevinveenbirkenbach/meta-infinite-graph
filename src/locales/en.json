@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actions",
   "view.security": "Security",
+  "view.warnings": "Warnings",
   "panel.filter": "Filter",
   "panel.design": "Design",
   "design.theme": "Theme",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Asking GitHub what changed",
   "loader.task.everything": "Asking GitHub for every run",
   "loader.task.artifacts": "Artifacts of run #{number}: {done} of {total}",
+  "loader.task.warnings": "Warnings: {done} of {total} jobs",
   "loader.task.artifact": "Artifact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "failed: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duration",
   "feed.actions.running": "running",
   "feed.actions.longest": "The longest run shown took {duration} ({run}).",
+  "feed.actions.open": "Open",
+  "feed.actions.jump.playwright": "Playwright suite of this run",
+  "feed.actions.jump.unit": "The repository’s own suites at this run",
+  "feed.actions.jump.warnings": "Warnings of this run",
   "feed.filter.search": "Search the runs",
   "feed.filter.all": "all",
   "feed.filter.event": "Event",
@@ -198,6 +204,25 @@
   "security.column.source": "Source",
   "security.column.alert": "Alert",
   "security.column.summary": "Summary",
+  "warnings.column.level": "Level",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Run",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Where",
+  "warnings.column.title": "Title",
+  "warnings.column.message": "Message",
+  "warnings.level.failure": "error",
+  "warnings.level.warning": "warning",
+  "warnings.level.notice": "notice",
+  "warnings.note": {
+    "one": "Across {n} run: {failure} errors, {warning} warnings, {notice} notices.",
+    "other": "Across {n} runs: {failure} errors, {warning} warnings, {notice} notices."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} of {n} job read.",
+    "other": "{repo} {run}: {done} of {n} jobs read."
+  },
+  "warnings.noRun": "None of the ticked branches has a workflow run.",
   "security.column.since": "Since",
   "security.severity.critical": "critical",
   "security.severity.high": "high",
@@ -378,10 +403,15 @@
   "tests.code.file": "file",
   "tests.code.language": "language",
   "tests.code.cases": "cases",
+  "tests.code.run": "run",
   "tests.code.reading": "Reading the suite…",
   "tests.code.note": {
     "one": "{n} file with {cases} cases.",
     "other": "{n} files with {cases} cases."
+  },
+  "tests.code.held": {
+    "one": "Run {run} reported on {n} of them.",
+    "other": "Run {run} reported on {n} of them."
   },
   "tests.code.noCases": "No case was found in this file.",
   "tests.code.noTree": "The tests tree is not served at {path}.",

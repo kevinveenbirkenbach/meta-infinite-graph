@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Diketso",
   "view.security": "Tshireletso",
+  "view.warnings": "Ditemoso",
   "panel.filter": "Sefe",
   "panel.design": "Moralo",
   "design.theme": "Sehlooho sa ponahalo",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ho botswa GitHub se fetohileng",
   "loader.task.everything": "Ho kopuwa ditsamaiso tsohle ho GitHub",
   "loader.task.artifacts": "Dihlahiswa tsa tsamaiso #{number}: {done} ho tse {total}",
+  "loader.task.warnings": "Ditemoso: {done} ho tse {total} mesebetsi",
   "loader.task.artifact": "Sehlahiswa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "e hlolehile: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Botelele ba nako",
   "feed.actions.running": "e ntse e tsamaya",
   "feed.actions.longest": "Tsamaiso e telele ka ho fetisisa e bontshitsweng e nkile {duration} ({run}).",
+  "feed.actions.open": "Bula",
+  "feed.actions.jump.playwright": "Sehlopha sa Playwright sa tsamaiso ena",
+  "feed.actions.jump.unit": "Dihlopha tsa diteko tsa polokelo ka boyona tsamaisong ena",
+  "feed.actions.jump.warnings": "Ditemoso tsa tsamaiso ena",
   "feed.filter.search": "Batla ditsamaisong",
   "feed.filter.all": "tsohle",
   "feed.filter.event": "Ketsahalo",
@@ -198,6 +204,25 @@
   "security.column.source": "Mohlodi",
   "security.column.alert": "Temoso",
   "security.column.summary": "Kakaretso",
+  "warnings.column.level": "Boemo",
+  "warnings.column.repository": "Polokelo",
+  "warnings.column.run": "Tsamaiso",
+  "warnings.column.job": "Mosebetsi",
+  "warnings.column.where": "Hokae",
+  "warnings.column.title": "Sehlooho",
+  "warnings.column.message": "Molaetsa",
+  "warnings.level.failure": "phoso",
+  "warnings.level.warning": "temoso",
+  "warnings.level.notice": "ntlha",
+  "warnings.note": {
+    "one": "Tsamaisong e {n}: diphoso {failure}, ditemoso {warning}, dintlha {notice}.",
+    "other": "Ditsamaisong tse {n}: diphoso {failure}, ditemoso {warning}, dintlha {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: ho balwe {done} ho mosebetsi o {n}.",
+    "other": "{repo} {run}: ho balwe {done} ho mesebetsi e {n}."
+  },
+  "warnings.noRun": "Ha ho lekala le tshwailweng le nang le tsamaiso ya workflow.",
   "security.column.since": "Ho tloha",
   "security.severity.critical": "e mpe haholo",
   "security.severity.high": "e phahameng",
@@ -378,10 +403,15 @@
   "tests.code.file": "faele",
   "tests.code.language": "puo",
   "tests.code.cases": "mabaka",
+  "tests.code.run": "tsamaiso",
   "tests.code.reading": "Ho balwa sehlopha sa diteko…",
   "tests.code.note": {
     "one": "Faele e {n} e nang le mabaka a {cases}.",
     "other": "Difaele tse {n} tse nang le mabaka a {cases}."
+  },
+  "tests.code.held": {
+    "one": "Tsamaiso {run} e tlalehile ka {n} ho tsona.",
+    "other": "Tsamaiso {run} e tlalehile ka {n} ho tsona."
   },
   "tests.code.noCases": "Ha ho lebaka le fumanweng faeleng ena.",
   "tests.code.noTree": "Sefate sa diteko ha se fanwe ho {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "किरिया",
   "view.security": "सुरक्खा",
+  "view.warnings": "सतिकरणानि",
   "panel.filter": "परिस्सावनं",
   "panel.design": "रूपविधानं",
   "design.theme": "वण्णविधि",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub पुच्छीयति किं परिवत्तितं",
   "loader.task.everything": "GitHub सब्बानि पवत्तनानि याचीयति",
   "loader.task.artifacts": "पवत्तनस्स #{number} कतभण्डानि: {total} तो {done}",
+  "loader.task.warnings": "सतिकरणानि: {total} कम्मेसु {done}",
   "loader.task.artifact": "कतभण्डं {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "विफलं: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "कालपरिमाणं",
   "feed.actions.running": "पवत्तति",
   "feed.actions.longest": "दस्सितेसु दीघतमं पवत्तनं {duration} कालं पवत्ति ({run}).",
+  "feed.actions.open": "विवराहि",
+  "feed.actions.jump.playwright": "इमस्स पवत्तनस्स Playwright परिक्खासमूहो",
+  "feed.actions.jump.unit": "इमस्मिं पवत्तने भण्डागारस्स सकपरिक्खा",
+  "feed.actions.jump.warnings": "इमस्स पवत्तनस्स सतिकरणानि",
   "feed.filter.search": "पवत्तनानि परियेसाहि",
   "feed.filter.all": "सब्बानि",
   "feed.filter.event": "घटना",
@@ -198,6 +204,25 @@
   "security.column.source": "मूलं",
   "security.column.alert": "आरोचनं",
   "security.column.summary": "सङ्खेपो",
+  "warnings.column.level": "भूमि",
+  "warnings.column.repository": "भण्डागारं",
+  "warnings.column.run": "पवत्तनं",
+  "warnings.column.job": "कम्मं",
+  "warnings.column.where": "कत्थ",
+  "warnings.column.title": "सीसकं",
+  "warnings.column.message": "सासनं",
+  "warnings.level.failure": "दोसो",
+  "warnings.level.warning": "सतिकरणं",
+  "warnings.level.notice": "सञ्ञाणं",
+  "warnings.note": {
+    "one": "{n} पवत्तने: दोसा {failure}, सतिकरणानि {warning}, सञ्ञाणानि {notice}।",
+    "other": "{n} पवत्तनेसु: दोसा {failure}, सतिकरणानि {warning}, सञ्ञाणानि {notice}।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} कम्मतो {done} पठितं।",
+    "other": "{repo} {run}: {n} कम्मेसु {done} पठितानि।"
+  },
+  "warnings.noRun": "सल्लक्खितासु साखासु एकाय पि कम्मपवाहपवत्तनं नत्थि।",
   "security.column.since": "पट्ठाय",
   "security.severity.critical": "अतिगरुको",
   "security.severity.high": "उच्चो",
@@ -378,10 +403,15 @@
   "tests.code.file": "पण्णं",
   "tests.code.language": "भासा",
   "tests.code.cases": "उदाहरणानि",
+  "tests.code.run": "पवत्तनं",
   "tests.code.reading": "परिक्खासमूहो पठीयति…",
   "tests.code.note": {
     "one": "{cases} उदाहरणेहि सह {n} पण्णं।",
     "other": "{cases} उदाहरणेहि सह {n} पण्णानि।"
+  },
+  "tests.code.held": {
+    "one": "पवत्तनं {run} तेसु {n} आरोचेसि।",
+    "other": "पवत्तनं {run} तेसु {n} आरोचेसि।"
   },
   "tests.code.noCases": "इमस्मिं पण्णे एकं पि उदाहरणं न लद्धं।",
   "tests.code.noTree": "परिक्खारुक्खो {path} मि न दीयति।",

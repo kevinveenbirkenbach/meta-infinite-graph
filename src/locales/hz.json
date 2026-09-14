@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ovitjitwa",
   "view.security": "Ohungamiro",
+  "view.warnings": "Omaraerisiro",
   "panel.filter": "Otjitoororo",
   "panel.design": "Omutarero",
   "design.theme": "Ovara",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Mai purwa GitHub imbi mbya tanauka",
   "loader.task.everything": "Mai ningirwa ku GitHub omaungurisiro aeherwe",
   "loader.task.artifacts": "Oviungurwa vyeungurisiro #{number}: {done} mu {total}",
+  "loader.task.warnings": "Omaraerisiro: {done} mu {total} vyoviungura",
   "loader.task.artifact": "Otjiungurwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ya pandjara: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Oure",
   "feed.actions.running": "tji ri nokuungura",
   "feed.actions.longest": "Eungurisiro enda eure tjinene ndi raisiwa ra kambura {duration} ({run}).",
+  "feed.actions.open": "Patura",
+  "feed.actions.jump.playwright": "Omakondoroiso wa Playwright weungurisiro ndi",
+  "feed.actions.jump.unit": "Omakondoroiso wondjuwo yovitjangwa oveni meungurisiro ndi",
+  "feed.actions.jump.warnings": "Omaraerisiro weungurisiro ndi",
   "feed.filter.search": "Paha momaungurisiro",
   "feed.filter.all": "aayehe",
   "feed.filter.event": "Otjiningwa",
@@ -198,6 +204,25 @@
   "security.column.source": "Eziro",
   "security.column.alert": "Omaraerisiro",
   "security.column.summary": "Ombuzaro",
+  "warnings.column.level": "Otjikoro",
+  "warnings.column.repository": "Ondjuwo yovitjangwa",
+  "warnings.column.run": "Eungurisiro",
+  "warnings.column.job": "Otjiungura",
+  "warnings.column.where": "Pi",
+  "warnings.column.title": "Otjiuru",
+  "warnings.column.message": "Omambo",
+  "warnings.level.failure": "otjipuke",
+  "warnings.level.warning": "okuraera",
+  "warnings.level.notice": "ombuze",
+  "warnings.note": {
+    "one": "Meungurisiro {n}: ovipuke {failure}, omaraerisiro {warning}, ozombuze {notice}.",
+    "other": "Momaungurisiro {n}: ovipuke {failure}, omaraerisiro {warning}, ozombuze {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} mu otjiungura {n} tji resewa.",
+    "other": "{repo} {run}: {done} mu oviungura {n} vya resewa."
+  },
+  "warnings.noRun": "Kape na otjitavi tji tja hororwa tji tji na eungurisiro rondjira yoviungura.",
   "security.column.since": "Okuza",
   "security.severity.critical": "onene tjinene",
   "security.severity.high": "ya kora",
@@ -378,10 +403,15 @@
   "tests.code.file": "otjitjangwa",
   "tests.code.language": "eraka",
   "tests.code.cases": "omakondoroiso",
+  "tests.code.run": "eungurisiro",
   "tests.code.reading": "Tu resa omakondoroiso…",
   "tests.code.note": {
     "one": "Otjitjangwa {n} notjikondoroiso {cases}.",
     "other": "Ovitjangwa {n} nomakondoroiso {cases}."
+  },
+  "tests.code.held": {
+    "one": "Eungurisiro {run} ra hepurura {n} wavyo.",
+    "other": "Eungurisiro {run} ra hepurura {n} wavyo."
   },
   "tests.code.noCases": "Kape na okakondoroiso ka munika motjitjangwa hi.",
   "tests.code.noTree": "Omuti womakondoroiso kau yandjerwa pu {path}.",

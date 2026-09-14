@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ХӀаракатал",
   "view.security": "ЦӀуни",
+  "view.warnings": "ХӀадурлъиял",
   "panel.filter": "Фильтр",
   "panel.design": "Сурат",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-алда щиб хисараб гьикъулеб буго",
   "loader.task.everything": "GitHub-алда киналго байбихьизаби гьикъулеб буго",
   "loader.task.artifacts": "Байбихьизаби #{number}-алъул артефактал: {done}/{total}",
+  "loader.task.warnings": "ХӀадурлъиял: {total}-ялдаса {done} хӀалтӀи",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "тӀубачӀо: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Заман",
   "feed.actions.running": "унеб буго",
   "feed.actions.longest": "Бихьизабураб байбихьизабиязда гьоркьоб цIикIкIун халатаб {duration} бана ({run}).",
+  "feed.actions.open": "Рагьизе",
+  "feed.actions.jump.playwright": "Гьаб байбихьизабиялъул Playwright тестал",
+  "feed.actions.jump.unit": "Гьаб байбихьизабиялда репозиториялъул жиндирго тестал",
+  "feed.actions.jump.warnings": "Гьаб байбихьизабиялъул хӀадурлъиял",
   "feed.filter.search": "Байбихьизабиял балагье",
   "feed.filter.all": "киналго",
   "feed.filter.event": "Лъугьа-бахъин",
@@ -198,6 +204,25 @@
   "security.column.source": "ГӀин",
   "security.column.alert": "Лъазабай",
   "security.column.summary": "Къокъаб баян",
+  "warnings.column.level": "Даража",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Байбихьизаби",
+  "warnings.column.job": "ХӀалтӀи",
+  "warnings.column.where": "Кив",
+  "warnings.column.title": "ЦӀар",
+  "warnings.column.message": "Хабар",
+  "warnings.level.failure": "гъалатӀ",
+  "warnings.level.warning": "хӀадурлъи",
+  "warnings.level.notice": "бицин",
+  "warnings.note": {
+    "one": "{n} байбихьизабиялда: {failure} гъалатӀ, {warning} хӀадурлъи, {notice} бицин.",
+    "other": "{n} байбихьизабиязда: {failure} гъалатӀ, {warning} хӀадурлъи, {notice} бицин."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} хӀалтӀуялдаса {done} цӀалана.",
+    "other": "{repo} {run}: {n} хӀалтӀабазда гьоркьоса {done} цӀалана."
+  },
+  "warnings.noRun": "ТӀаса рищарал гаркӀаздаса киназдаго гьечӀо workflow байбихьизаби.",
   "security.column.since": "Байбихьи",
   "security.severity.critical": "критикияб",
   "security.severity.high": "борхатаб",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "мацӀ",
   "tests.code.cases": "хӀужаби",
+  "tests.code.run": "байбихьизаби",
   "tests.code.reading": "Тестазул гӀуцӀи цӀалулеб буго…",
   "tests.code.note": {
     "one": "{n} файл, {cases} хӀужагун.",
     "other": "{n} файл, {cases} хӀужабигун."
+  },
+  "tests.code.held": {
+    "one": "{run} байбихьизабиялъ гьезда гьоркьоса {n} бихьизабуна.",
+    "other": "{run} байбихьизабиялъ гьезда гьоркьоса {n} бихьизабуна."
   },
   "tests.code.noCases": "Гьаб файлалда хӀужа батичӀо.",
   "tests.code.noTree": "Тестазул гъветӀ {path} гьаниб кьолеб гьечӀо.",

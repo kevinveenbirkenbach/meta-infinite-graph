@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Аусқәа",
   "view.security": "Ашәарҭадара",
+  "view.warnings": "Агәҽанҵарақәа",
   "panel.filter": "Афильтр",
   "panel.design": "Адизаин",
   "design.theme": "Атема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub иԥсахыз азҵаара",
   "loader.task.everything": "GitHub аларшәарақәа зегьы азҵаара",
   "loader.task.artifacts": "Аларшәара #{number} аартефактқәа: {done}/{total}",
+  "loader.task.warnings": "Агәҽанҵарақәа: {total} аусурантә {done}",
   "loader.task.artifact": "Аартефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "иқәымҿиит: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Аамҭа",
   "feed.actions.running": "имҩаԥысуеит",
   "feed.actions.longest": "Иаарԥшыз аларшәарақәа зегь реиҳа иаауроу {duration} иаанагеит ({run}).",
+  "feed.actions.open": "Аартра",
+  "feed.actions.jump.playwright": "Ари аларшәара Playwright атестқәа",
+  "feed.actions.jump.unit": "Арепозиториа хаҭалатәи атестқәа ари аларшәара аҟны",
+  "feed.actions.jump.warnings": "Ари аларшәара агәҽанҵарақәа",
   "feed.filter.search": "Аларшәарақәа рыԥшаара",
   "feed.filter.all": "зегьы",
   "feed.filter.event": "Ахҭыс",
@@ -198,6 +204,25 @@
   "security.column.source": "Ахыҵхырҭа",
   "security.column.alert": "Агәаҽанҵара",
   "security.column.summary": "Ахҳәаа",
+  "warnings.column.level": "Аҩаӡара",
+  "warnings.column.repository": "Арепозиториа",
+  "warnings.column.run": "Аларшәара",
+  "warnings.column.job": "Аусура",
+  "warnings.column.where": "Аҭыԥ",
+  "warnings.column.title": "Ахы",
+  "warnings.column.message": "Ацҳамҭа",
+  "warnings.level.failure": "агха",
+  "warnings.level.warning": "агәҽанҵара",
+  "warnings.level.notice": "азгәаҭа",
+  "warnings.note": {
+    "one": "{n} аларшәара аҟны: {failure} гха, {warning} гәҽанҵара, {notice} згәаҭа.",
+    "other": "{n} аларшәара рҟны: {failure} гха, {warning} гәҽанҵара, {notice} згәаҭа."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} аусурантә {done} ԥхьоуп.",
+    "other": "{repo} {run}: {n} аусурақәа рҟынтә {done} ԥхьоуп."
+  },
+  "warnings.noRun": "Иалху амахәқәа ирыдҳәаланы аусмҩа аларшәара ыҟаӡам.",
   "security.column.since": "Ианалага",
   "security.severity.critical": "критикатә",
   "security.severity.high": "ихараку",
@@ -378,10 +403,15 @@
   "tests.code.file": "афаил",
   "tests.code.language": "абызшәа",
   "tests.code.cases": "акейсқәа",
+  "tests.code.run": "аларшәара",
   "tests.code.reading": "Асуита аԥхьара…",
   "tests.code.note": {
     "one": "{n} афаил {cases} акейсқәа рыла.",
     "other": "{n} афаилқәа {cases} акейсқәа рыла."
+  },
+  "tests.code.held": {
+    "one": "{run} аларшәара урҭ рҟынтә {n} иааирԥшит.",
+    "other": "{run} аларшәара урҭ рҟынтә {n} иааирԥшит."
   },
   "tests.code.noCases": "Ари афаил аҟны акейс ԥшаӡам.",
   "tests.code.noTree": "{path} аҟны атестқәа рҵыхәтәа иҭыжьӡам.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Nneyɛe",
   "view.security": "Ahobammɔ",
+  "view.warnings": "Kɔkɔbɔ",
   "panel.filter": "Nyiyimu",
   "panel.design": "Nhyehyɛe",
   "design.theme": "Kɔla nhyehyɛe",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ɛrebisa GitHub nea asesa",
   "loader.task.everything": "Ɛrebisa GitHub mmirika nyinaa",
   "loader.task.artifacts": "Mmirika #{number} adeyɛde: {done} wɔ {total} mu",
+  "loader.task.warnings": "Kɔkɔbɔ: {total} adwuma mu {done}",
   "loader.task.artifact": "Adeyɛde {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ankɔ yie: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Bere tenten",
   "feed.actions.running": "ɛretu mmirika",
   "feed.actions.longest": "Mmirika a ɛware sen biara a wɔada no adi no dii bere {duration} ({run}).",
+  "feed.actions.open": "Bue",
+  "feed.actions.jump.playwright": "Saa mmirika yi Playwright nsɔhwɛ",
+  "feed.actions.jump.unit": "Akorae no ankasa nsɔhwɛ wɔ saa mmirika yi mu",
+  "feed.actions.jump.warnings": "Saa mmirika yi kɔkɔbɔ",
   "feed.filter.search": "Hwehwɛ mmirika no mu",
   "feed.filter.all": "ne nyinaa",
   "feed.filter.event": "Asɛm a esii",
@@ -198,6 +204,25 @@
   "security.column.source": "Fibea",
   "security.column.alert": "Kɔkɔbɔ",
   "security.column.summary": "Nsɛm tiawa",
+  "warnings.column.level": "Gyinabea",
+  "warnings.column.repository": "Akorae",
+  "warnings.column.run": "Mmirika",
+  "warnings.column.job": "Adwuma",
+  "warnings.column.where": "Ɛhe",
+  "warnings.column.title": "Din",
+  "warnings.column.message": "Nkrasɛm",
+  "warnings.level.failure": "mfomso",
+  "warnings.level.warning": "kɔkɔbɔ",
+  "warnings.level.notice": "nsɛm",
+  "warnings.note": {
+    "one": "Mmirika {n} mu: mfomso {failure}, kɔkɔbɔ {warning}, nsɛm {notice}.",
+    "other": "Mmirika {n} mu: mfomso {failure}, kɔkɔbɔ {warning}, nsɛm {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: wɔakenkan {done} wɔ adwuma {n} mu.",
+    "other": "{repo} {run}: wɔakenkan {done} wɔ adwuma {n} mu."
+  },
+  "warnings.noRun": "Dubaa a wɔahyɛ agyiraehyɛde no mu biara nni adwuma nsene mmirika.",
   "security.column.since": "Efi",
   "security.severity.critical": "emu yɛ den paa",
   "security.severity.high": "ɛkorɔn",
@@ -378,10 +403,15 @@
   "tests.code.file": "krataa",
   "tests.code.language": "kasa",
   "tests.code.cases": "nsɔhwɛde",
+  "tests.code.run": "mmirika",
   "tests.code.reading": "Ɛrekenkan nsɔhwɛ no…",
   "tests.code.note": {
     "one": "Krataa {n} a nsɔhwɛde {cases} wɔ mu.",
     "other": "Nkrataa {n} a nsɔhwɛde {cases} wɔ mu."
+  },
+  "tests.code.held": {
+    "one": "Mmirika {run} bɔɔ {n} ho amanneɛ.",
+    "other": "Mmirika {run} bɔɔ {n} ho amanneɛ."
   },
   "tests.code.noCases": "Wɔanhu nsɔhwɛde biara wɔ krataa yi mu.",
   "tests.code.noTree": "Wɔmmfa nsɔhwɛ dua no mma wɔ {path}.",

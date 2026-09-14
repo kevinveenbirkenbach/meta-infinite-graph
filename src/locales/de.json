@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actions",
   "view.security": "Sicherheit",
+  "view.warnings": "Warnungen",
   "panel.filter": "Filter",
   "panel.design": "Gestaltung",
   "design.theme": "Farbschema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Frage GitHub, was sich geändert hat",
   "loader.task.everything": "Frage GitHub nach jedem Lauf",
   "loader.task.artifacts": "Artefakte von Lauf #{number}: {done} von {total}",
+  "loader.task.warnings": "Warnungen: {done} von {total} Jobs",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fehlgeschlagen: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Dauer",
   "feed.actions.running": "läuft",
   "feed.actions.longest": "Der längste angezeigte Lauf dauerte {duration} ({run}).",
+  "feed.actions.open": "Öffnen",
+  "feed.actions.jump.playwright": "Playwright-Suite dieses Laufs",
+  "feed.actions.jump.unit": "Die eigenen Suiten des Repositorys bei diesem Lauf",
+  "feed.actions.jump.warnings": "Warnungen dieses Laufs",
   "feed.filter.search": "Läufe durchsuchen",
   "feed.filter.all": "alle",
   "feed.filter.event": "Ereignis",
@@ -198,6 +204,25 @@
   "security.column.source": "Quelle",
   "security.column.alert": "Meldung",
   "security.column.summary": "Zusammenfassung",
+  "warnings.column.level": "Stufe",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Lauf",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Wo",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Meldung",
+  "warnings.level.failure": "Fehler",
+  "warnings.level.warning": "Warnung",
+  "warnings.level.notice": "Hinweis",
+  "warnings.note": {
+    "one": "Über {n} Lauf: {failure} Fehler, {warning} Warnungen, {notice} Hinweise.",
+    "other": "Über {n} Läufe: {failure} Fehler, {warning} Warnungen, {notice} Hinweise."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} von {n} Job gelesen.",
+    "other": "{repo} {run}: {done} von {n} Jobs gelesen."
+  },
+  "warnings.noRun": "Keiner der angehakten Branches hat einen Workflow-Lauf.",
   "security.column.since": "Seit",
   "security.severity.critical": "kritisch",
   "security.severity.high": "hoch",
@@ -378,10 +403,15 @@
   "tests.code.file": "datei",
   "tests.code.language": "sprache",
   "tests.code.cases": "fälle",
+  "tests.code.run": "lauf",
   "tests.code.reading": "Lese die Suite…",
   "tests.code.note": {
     "one": "{n} Datei mit {cases} Fällen.",
     "other": "{n} Dateien mit {cases} Fällen."
+  },
+  "tests.code.held": {
+    "one": "Lauf {run} hat über {n} davon berichtet.",
+    "other": "Lauf {run} hat über {n} davon berichtet."
   },
   "tests.code.noCases": "In dieser Datei wurde kein Fall gefunden.",
   "tests.code.noTree": "Der Testbaum wird unter {path} nicht ausgeliefert.",

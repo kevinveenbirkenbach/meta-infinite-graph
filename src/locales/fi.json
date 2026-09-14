@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Toiminnot",
   "view.security": "Tietoturva",
+  "view.warnings": "Varoitukset",
   "panel.filter": "Suodatin",
   "panel.design": "Ulkoasu",
   "design.theme": "Teema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kysytään GitHubilta, mikä muuttui",
   "loader.task.everything": "Pyydetään GitHubilta jokainen ajo",
   "loader.task.artifacts": "Ajon #{number} artefaktit: {done}/{total}",
+  "loader.task.warnings": "Varoitukset: {done}/{total} työtä",
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "epäonnistui: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Kesto",
   "feed.actions.running": "käynnissä",
   "feed.actions.longest": "Pisin näytetty ajo kesti {duration} ({run}).",
+  "feed.actions.open": "Avaa",
+  "feed.actions.jump.playwright": "Tämän ajon Playwright-sarja",
+  "feed.actions.jump.unit": "Repositorion omat sarjat tässä ajossa",
+  "feed.actions.jump.warnings": "Tämän ajon varoitukset",
   "feed.filter.search": "Hae ajoista",
   "feed.filter.all": "kaikki",
   "feed.filter.event": "Tapahtuma",
@@ -198,6 +204,25 @@
   "security.column.source": "Lähde",
   "security.column.alert": "Hälytys",
   "security.column.summary": "Yhteenveto",
+  "warnings.column.level": "Taso",
+  "warnings.column.repository": "Repositorio",
+  "warnings.column.run": "Ajo",
+  "warnings.column.job": "Työ",
+  "warnings.column.where": "Missä",
+  "warnings.column.title": "Otsikko",
+  "warnings.column.message": "Viesti",
+  "warnings.level.failure": "virhe",
+  "warnings.level.warning": "varoitus",
+  "warnings.level.notice": "huomautus",
+  "warnings.note": {
+    "one": "{n} ajossa: {failure} virhettä, {warning} varoitusta, {notice} huomautusta.",
+    "other": "{n} ajossa: {failure} virhettä, {warning} varoitusta, {notice} huomautusta."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: luettu {done}/{n} työ.",
+    "other": "{repo} {run}: luettu {done}/{n} työtä."
+  },
+  "warnings.noRun": "Yhdelläkään valitulla haaralla ei ole työnkulun ajoa.",
   "security.column.since": "Alkaen",
   "security.severity.critical": "kriittinen",
   "security.severity.high": "korkea",
@@ -378,10 +403,15 @@
   "tests.code.file": "tiedosto",
   "tests.code.language": "kieli",
   "tests.code.cases": "tapaukset",
+  "tests.code.run": "ajo",
   "tests.code.reading": "Luetaan sarjaa…",
   "tests.code.note": {
     "one": "{n} tiedosto, {cases} tapausta.",
     "other": "{n} tiedostoa, {cases} tapausta."
+  },
+  "tests.code.held": {
+    "one": "Ajo {run} raportoi niistä {n}.",
+    "other": "Ajo {run} raportoi niistä {n}."
   },
   "tests.code.noCases": "Tästä tiedostosta ei löytynyt yhtään tapausta.",
   "tests.code.noTree": "Testipuuta ei tarjoilla osoitteessa {path}.",

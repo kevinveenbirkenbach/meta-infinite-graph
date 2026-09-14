@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Çalakî",
   "view.security": "Ewlehî",
+  "view.warnings": "Hişyarî",
   "panel.filter": "Parzûn",
   "panel.design": "Sêwiran",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ji GitHub tê pirsîn ka çi guherî",
   "loader.task.everything": "Ji GitHub hemû xebitandin tên xwestin",
   "loader.task.artifacts": "Artefaktên xebitandina #{number}: {done} ji {total}",
+  "loader.task.warnings": "Hişyarî: {done} ji {total} karan",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "bi ser neket: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Dirêjahî",
   "feed.actions.running": "didome",
   "feed.actions.longest": "Xebitandina herî dirêj a hatî nîşandan {duration} dom kir ({run}).",
+  "feed.actions.open": "Veke",
+  "feed.actions.jump.playwright": "Koma Playwright ya vê xebitandinê",
+  "feed.actions.jump.unit": "Komên ceribandinê yên depoyê bi xwe di vê xebitandinê de",
+  "feed.actions.jump.warnings": "Hişyariyên vê xebitandinê",
   "feed.filter.search": "Di xebitandinan de bigere",
   "feed.filter.all": "hemû",
   "feed.filter.event": "Bûyer",
@@ -198,6 +204,25 @@
   "security.column.source": "Jêder",
   "security.column.alert": "Hişyarî",
   "security.column.summary": "Kurte",
+  "warnings.column.level": "Ast",
+  "warnings.column.repository": "Depo",
+  "warnings.column.run": "Xebitandin",
+  "warnings.column.job": "Kar",
+  "warnings.column.where": "Li ku",
+  "warnings.column.title": "Sernav",
+  "warnings.column.message": "Peyam",
+  "warnings.level.failure": "çewtî",
+  "warnings.level.warning": "hişyarkirin",
+  "warnings.level.notice": "not",
+  "warnings.note": {
+    "one": "Di {n} xebitandinê de: {failure} çewtî, {warning} hişyarî, {notice} not.",
+    "other": "Di {n} xebitandinan de: {failure} çewtî, {warning} hişyarî, {notice} not."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} ji {n} karî hate xwendin.",
+    "other": "{repo} {run}: {done} ji {n} karan hatin xwendin."
+  },
+  "warnings.noRun": "Tu ji şaxên nîşankirî xebitandineke herikîna kar tune ye.",
   "security.column.since": "Ji kengê",
   "security.severity.critical": "krîtîk",
   "security.severity.high": "bilind",
@@ -378,10 +403,15 @@
   "tests.code.file": "pel",
   "tests.code.language": "ziman",
   "tests.code.cases": "nimûne",
+  "tests.code.run": "xebitandin",
   "tests.code.reading": "Koma ceribandinê tê xwendin…",
   "tests.code.note": {
     "one": "{n} pel bi {cases} nimûneyan.",
     "other": "{n} pel bi {cases} nimûneyan."
+  },
+  "tests.code.held": {
+    "one": "Xebitandina {run} {n} ji wan ragihand.",
+    "other": "Xebitandina {run} {n} ji wan ragihand."
   },
   "tests.code.noCases": "Di vî pelî de tu nimûne nehat dîtin.",
   "tests.code.noTree": "Dara ceribandinan li {path} nayê pêşkêşkirin.",

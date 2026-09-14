@@ -49,18 +49,26 @@ export function disableMetaViews(missing) {
 //   loader: the bottom bar's Loader, told which view is on screen and what it waits for.
 //   refresher: the FeedRefresher of the actions feed.
 //   codeView: the CodeTestsView drawing the repository's own suites.
+// Returns: the function that draws the view on screen again.
 export function wireViewMode({ tableView, forkTree, testsView, codeView, feeds, loader, refresher }) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
-  feeds.actions.onPick = run => {
-    testsView.pickRun(testsView.runs.keyOf(run), run);
-    const input = byId('view-playwright', HTMLInputElement);
+  const open = view => {
+    const input = byId(`view-${view}`, HTMLInputElement);
     input.checked = true;
     input.dispatchEvent(new Event('change'));
+  };
+  feeds.actions.onPick = (run, view = 'playwright') => {
+    testsView.pickRun(testsView.runs.keyOf(run), run);
+    open(view);
   };
   const apply = () => {
     const view = currentView();
     loader.show(view);
+    // Whatever picked the run - a click, the URL, the menu - every view that
+    // draws one holds the same one.
+    codeView.pick(testsView.runs.repo, testsView.runs.run);
+    feeds.warnings.pin(testsView.runs.repo, testsView.runs.run);
     const tables = view !== 'graph';
     pane.classList.toggle('pane-front', tables);
     pane.classList.toggle('pane-back', !tables);
@@ -93,6 +101,7 @@ export function wireViewMode({ tableView, forkTree, testsView, codeView, feeds, 
     input.addEventListener('change', apply);
   }
   apply();
+  return apply;
 }
 
 // Both switches feed both views, so the redraw has to follow the visible one
@@ -100,7 +109,7 @@ export function wireViewMode({ tableView, forkTree, testsView, codeView, feeds, 
 export function redraw(tableView, testsView) {
   const view = currentView();
   if (TEST_VIEWS.includes(view)) testsView.refresh();
-  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security', ...CODE_VIEWS].includes(view)) {
+  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security', 'warnings', ...CODE_VIEWS].includes(view)) {
     tableView.refresh();
   }
 }

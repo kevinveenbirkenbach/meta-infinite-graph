@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Accions",
   "view.security": "Såvrité",
+  "view.warnings": "Adviertixhmints",
   "panel.filter": "Passete",
   "panel.design": "Aparence",
   "design.theme": "Tinme",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Dji dmande a GitHub çou k' a candjî",
   "loader.task.everything": "Dji dmande a GitHub tos les enondaedjes",
   "loader.task.artifacts": "Årtefactes di l' enondaedje #{number}: {done} so {total}",
+  "loader.task.warnings": "Adviertixhmints: {done} so {total} bouyes",
   "loader.task.artifact": "Årtefacte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "raté: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durêye",
   "feed.actions.running": "tot corant",
   "feed.actions.longest": "Li pus long enondaedje mostré a duré {duration} ({run}).",
+  "feed.actions.open": "Drovi",
+  "feed.actions.jump.playwright": "Li shuite Playwright di ç' enondaedje ci",
+  "feed.actions.jump.unit": "Les shuites do depo lu-minme a ç' enondaedje ci",
+  "feed.actions.jump.warnings": "Les adviertixhmints di ç' enondaedje ci",
   "feed.filter.search": "Cweri dins les enondaedjes",
   "feed.filter.all": "tos",
   "feed.filter.event": "Evenmint",
@@ -198,6 +204,25 @@
   "security.column.source": "Sourdant",
   "security.column.alert": "Alete",
   "security.column.summary": "Rascourti",
+  "warnings.column.level": "Livea",
+  "warnings.column.repository": "Depo",
+  "warnings.column.run": "Enondaedje",
+  "warnings.column.job": "Bouye",
+  "warnings.column.where": "Wice",
+  "warnings.column.title": "Tite",
+  "warnings.column.message": "Messaedje",
+  "warnings.level.failure": "aroke",
+  "warnings.level.warning": "adviertixhmint",
+  "warnings.level.notice": "note",
+  "warnings.note": {
+    "one": "So {n} enondaedje: {failure} arokes, {warning} adviertixhmints, {notice} notes.",
+    "other": "So {n} enondaedjes: {failure} arokes, {warning} adviertixhmints, {notice} notes."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} so {n} bouye léjhowe.",
+    "other": "{repo} {run}: {done} so {n} bouyes léjhowes."
+  },
+  "warnings.noRun": "Nole des coxhes tchoezeyes n' a èn enondaedje di workflow.",
   "security.column.since": "Dispoy",
   "security.severity.critical": "critike",
   "security.severity.high": "hôte",
@@ -378,10 +403,15 @@
   "tests.code.file": "fitchî",
   "tests.code.language": "lingaedje",
   "tests.code.cases": "cas",
+  "tests.code.run": "enondaedje",
   "tests.code.reading": "Dji lét l' shuite…",
   "tests.code.note": {
     "one": "{n} fitchî avou {cases} cas.",
     "other": "{n} fitchîs avou {cases} cas."
+  },
+  "tests.code.held": {
+    "one": "L' enondaedje {run} a rapoirté {n} di zels.",
+    "other": "L' enondaedje {run} a rapoirté {n} di zels."
   },
   "tests.code.noCases": "Nou cas n' a stî trové dins ç' fitchî ci.",
   "tests.code.noTree": "L' åbe des sayes n' est nén siervi a {path}.",

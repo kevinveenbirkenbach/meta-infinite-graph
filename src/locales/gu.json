@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ક્રિયાઓ",
   "view.security": "સુરક્ષા",
+  "view.warnings": "ચેતવણીઓ",
   "panel.filter": "ફિલ્ટર",
   "panel.design": "ડિઝાઇન",
   "design.theme": "થીમ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub ને પૂછી રહ્યા છીએ કે શું બદલાયું",
   "loader.task.everything": "GitHub પાસેથી બધા રન માંગી રહ્યા છીએ",
   "loader.task.artifacts": "રન #{number} ના આર્ટિફેક્ટ: {total} માંથી {done}",
+  "loader.task.warnings": "ચેતવણીઓ: {total} જોબમાંથી {done}",
   "loader.task.artifact": "આર્ટિફેક્ટ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "નિષ્ફળ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "અવધિ",
   "feed.actions.running": "ચાલુ છે",
   "feed.actions.longest": "દર્શાવેલ સૌથી લાંબા રનને {duration} લાગ્યા ({run}).",
+  "feed.actions.open": "ખોલો",
+  "feed.actions.jump.playwright": "આ રનનો Playwright સ્યૂટ",
+  "feed.actions.jump.unit": "આ રનમાં રિપોઝિટરીના પોતાના સ્યૂટ",
+  "feed.actions.jump.warnings": "આ રનની ચેતવણીઓ",
   "feed.filter.search": "રનમાં શોધો",
   "feed.filter.all": "બધા",
   "feed.filter.event": "ઇવેન્ટ",
@@ -198,6 +204,25 @@
   "security.column.source": "સ્રોત",
   "security.column.alert": "અલર્ટ",
   "security.column.summary": "સારાંશ",
+  "warnings.column.level": "સ્તર",
+  "warnings.column.repository": "રિપોઝિટરી",
+  "warnings.column.run": "રન",
+  "warnings.column.job": "જોબ",
+  "warnings.column.where": "ક્યાં",
+  "warnings.column.title": "શીર્ષક",
+  "warnings.column.message": "સંદેશ",
+  "warnings.level.failure": "ભૂલ",
+  "warnings.level.warning": "ચેતવણી",
+  "warnings.level.notice": "નોંધ",
+  "warnings.note": {
+    "one": "{n} રનમાં: {failure} ભૂલ, {warning} ચેતવણી, {notice} નોંધ.",
+    "other": "{n} રનમાં: {failure} ભૂલ, {warning} ચેતવણી, {notice} નોંધ."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} જોબમાંથી {done} વંચાયો.",
+    "other": "{repo} {run}: {n} જોબમાંથી {done} વંચાયા."
+  },
+  "warnings.noRun": "ટિક કરેલી કોઈ પણ શાખામાં વર્કફ્લો રન નથી.",
   "security.column.since": "ક્યારથી",
   "security.severity.critical": "અતિ ગંભીર",
   "security.severity.high": "ઉચ્ચ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ફાઇલ",
   "tests.code.language": "ભાષા",
   "tests.code.cases": "કેસ",
+  "tests.code.run": "રન",
   "tests.code.reading": "સ્યૂટ વાંચી રહ્યા છીએ…",
   "tests.code.note": {
     "one": "{n} ફાઇલ, {cases} કેસ.",
     "other": "{n} ફાઇલો, {cases} કેસ."
+  },
+  "tests.code.held": {
+    "one": "રન {run} એ તેમાંથી {n} વિશે જણાવ્યું.",
+    "other": "રન {run} એ તેમાંથી {n} વિશે જણાવ્યું."
   },
   "tests.code.noCases": "આ ફાઇલમાં કોઈ કેસ મળ્યો નથી.",
   "tests.code.noTree": "{path} પર ટેસ્ટ ટ્રી પીરસવામાં આવતું નથી.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Atziones",
   "view.security": "Seguresa",
+  "view.warnings": "Avisos",
   "panel.filter": "Filtru",
   "panel.design": "Disignu",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Pregontende a GitHub su chi est cambiadu",
   "loader.task.everything": "Pedende a GitHub totu sas esecutziones",
   "loader.task.artifacts": "Artefatos de s'esecutzione #{number}: {done} de {total}",
+  "loader.task.warnings": "Avisos: {done} de {total} traballos",
   "loader.task.artifact": "Artefatu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallidu: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durada",
   "feed.actions.running": "in esecutzione",
   "feed.actions.longest": "S'esecutzione prus longa ammustrada at duradu {duration} ({run}).",
+  "feed.actions.open": "Aberi",
+  "feed.actions.jump.playwright": "Sa sèrie Playwright de custa esecutzione",
+  "feed.actions.jump.unit": "Sas sèries pròpias de su depòsitu in custa esecutzione",
+  "feed.actions.jump.warnings": "Avisos de custa esecutzione",
   "feed.filter.search": "Chirca in sas esecutziones",
   "feed.filter.all": "totu",
   "feed.filter.event": "Eventu",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonte",
   "security.column.alert": "Alerta",
   "security.column.summary": "Resumu",
+  "warnings.column.level": "Livellu",
+  "warnings.column.repository": "Depòsitu",
+  "warnings.column.run": "Esecutzione",
+  "warnings.column.job": "Traballu",
+  "warnings.column.where": "Ue",
+  "warnings.column.title": "Tìtulu",
+  "warnings.column.message": "Messàgiu",
+  "warnings.level.failure": "errore",
+  "warnings.level.warning": "avisu",
+  "warnings.level.notice": "nota",
+  "warnings.note": {
+    "one": "In {n} esecutzione: {failure} errores, {warning} avisos, {notice} notas.",
+    "other": "In {n} esecutziones: {failure} errores, {warning} avisos, {notice} notas."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} de {n} traballu lèghidu.",
+    "other": "{repo} {run}: {done} de {n} traballos lèghidos."
+  },
+  "warnings.noRun": "Peruna de sas ramas marcadas no tenet un'esecutzione de flussu de traballu.",
   "security.column.since": "Dae",
   "security.severity.critical": "crìticu",
   "security.severity.high": "artu",
@@ -378,10 +403,15 @@
   "tests.code.file": "archìviu",
   "tests.code.language": "limbàgiu",
   "tests.code.cases": "casos",
+  "tests.code.run": "esecutzione",
   "tests.code.reading": "Leghende sa sèrie…",
   "tests.code.note": {
     "one": "{n} archìviu cun {cases} casos.",
     "other": "{n} archìvios cun {cases} casos."
+  },
+  "tests.code.held": {
+    "one": "S'esecutzione {run} nd'at informadu {n}.",
+    "other": "S'esecutzione {run} nd'at informadu {n}."
   },
   "tests.code.noCases": "Perunu casu no est istadu agatadu in custu archìviu.",
   "tests.code.noTree": "S'àrbore de sas proas non s'est serbidu in {path}.",

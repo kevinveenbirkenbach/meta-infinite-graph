@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "လုပ်ဆောင်ချက်များ",
   "view.security": "လုံခြုံရေး",
+  "view.warnings": "သတိပေးချက်များ",
   "panel.filter": "စစ်ထုတ်ရန်",
   "panel.design": "ဒီဇိုင်း",
   "design.theme": "အပြင်အဆင်",
@@ -163,6 +164,7 @@
   "loader.task.changes": "ပြောင်းလဲသည်များကို GitHub ထံ မေးနေသည်",
   "loader.task.everything": "လည်ပတ်မှုအားလုံးကို GitHub ထံ တောင်းနေသည်",
   "loader.task.artifacts": "လည်ပတ်မှု #{number} ၏ အာတီဖက်များ: {total} ခုအနက် {done} ခု",
+  "loader.task.warnings": "သတိပေးချက်များ: အလုပ် {total} ခုအနက် {done} ခု",
   "loader.task.artifact": "အာတီဖက် {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "မအောင်မြင်ပါ: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "ကြာချိန်",
   "feed.actions.running": "လည်ပတ်နေဆဲ",
   "feed.actions.longest": "ပြသထားသော အရှည်ဆုံး လည်ပတ်မှုသည် {duration} ကြာခဲ့သည် ({run})။",
+  "feed.actions.open": "ဖွင့်ရန်",
+  "feed.actions.jump.playwright": "ဤလည်ပတ်မှု၏ Playwright စမ်းသပ်မှုစုံ",
+  "feed.actions.jump.unit": "ဤလည်ပတ်မှုတွင် သိုလှောင်ရာ၏ ကိုယ်ပိုင် စမ်းသပ်မှုစုံများ",
+  "feed.actions.jump.warnings": "ဤလည်ပတ်မှု၏ သတိပေးချက်များ",
   "feed.filter.search": "လည်ပတ်မှုများ ရှာရန်",
   "feed.filter.all": "အားလုံး",
   "feed.filter.event": "ဖြစ်ရပ်",
@@ -188,6 +194,23 @@
   "security.column.source": "ရင်းမြစ်",
   "security.column.alert": "အချက်ပေးချက်",
   "security.column.summary": "အကျဉ်းချုပ်",
+  "warnings.column.level": "အဆင့်",
+  "warnings.column.repository": "သိုလှောင်ရာ",
+  "warnings.column.run": "လည်ပတ်မှု",
+  "warnings.column.job": "အလုပ်",
+  "warnings.column.where": "နေရာ",
+  "warnings.column.title": "ခေါင်းစဉ်",
+  "warnings.column.message": "မက်ဆေ့ဂျ်",
+  "warnings.level.failure": "အမှား",
+  "warnings.level.warning": "သတိပေးချက်",
+  "warnings.level.notice": "မှတ်ချက်",
+  "warnings.note": {
+    "other": "လည်ပတ်မှု {n} ခုတွင်: အမှား {failure} ခု၊ သတိပေးချက် {warning} ခု၊ မှတ်ချက် {notice} ခု။"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: အလုပ် {n} ခုအနက် {done} ခုကို ဖတ်ပြီးပါပြီ။"
+  },
+  "warnings.noRun": "အမှန်ခြစ်ထားသော ဘရန့်ချ်များတွင် လုပ်ငန်းစဉ် လည်ပတ်မှု မရှိပါ။",
   "security.column.since": "မှစ၍",
   "security.severity.critical": "အလွန်အရေးကြီး",
   "security.severity.high": "မြင့်",
@@ -355,9 +378,13 @@
   "tests.code.file": "ဖိုင်",
   "tests.code.language": "ဘာသာစကား",
   "tests.code.cases": "ကိစ္စများ",
+  "tests.code.run": "လည်ပတ်မှု",
   "tests.code.reading": "စမ်းသပ်မှုစုံကို ဖတ်နေသည်…",
   "tests.code.note": {
     "other": "ဖိုင် {n} ခု၊ ကိစ္စ {cases} ခု။"
+  },
+  "tests.code.held": {
+    "other": "လည်ပတ်မှု {run} သည် ၎င်းတို့အနက် {n} ခုကို အစီရင်ခံခဲ့သည်။"
   },
   "tests.code.noCases": "ဤဖိုင်တွင် ကိစ္စ မတွေ့ပါ။",
   "tests.code.noTree": "စမ်းသပ်မှု ဖွဲ့စည်းပုံကို {path} တွင် မပေးပါ။",

@@ -48,8 +48,14 @@ export function wireDataSwitches(tableView, testsView, roleInfo, uiManager, data
   return { setVariants, setSymbols };
 }
 
-export function wireControls({ testsView, matrixView, roleInfo, forkTree }) {
-  testsView.onRun = () => urlState.capture();
+// Args:
+//   onRun: called after a run was picked, for the views that draw it beside
+//     the Playwright suite.
+export function wireControls({ testsView, matrixView, roleInfo, forkTree, onRun }) {
+  testsView.onRun = () => {
+    urlState.capture();
+    if (onRun) onRun();
+  };
   const choose = (id, apply) => {
     const select = byId(id, HTMLSelectElement);
     select.addEventListener('change', () => {

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Acties",
   "view.security": "Beveiliging",
+  "view.warnings": "Waarschuwinge",
   "panel.filter": "Filter",
   "panel.design": "Vörmgeving",
   "design.theme": "Thema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub weurt gevraog wat veranderd is",
   "loader.task.everything": "GitHub weurt gevraog nao alle loupe",
   "loader.task.artifacts": "Artefakte vaan loup #{number}: {done} vaan {total}",
+  "loader.task.warnings": "Waarschuwinge: {done} vaan {total} taoke",
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislök: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duur",
   "feed.actions.running": "loupt",
   "feed.actions.longest": "De langste getuinde loup doerde {duration} ({run}).",
+  "feed.actions.open": "Ope",
+  "feed.actions.jump.playwright": "Playwright-suite vaan deze loup",
+  "feed.actions.jump.unit": "De eige suites vaan de opslaag bij deze loup",
+  "feed.actions.jump.warnings": "Waarschuwinge vaan deze loup",
   "feed.filter.search": "Loupe zeuke",
   "feed.filter.all": "alles",
   "feed.filter.event": "Gebäörtenis",
@@ -198,6 +204,25 @@
   "security.column.source": "Bron",
   "security.column.alert": "Melding",
   "security.column.summary": "Samevatting",
+  "warnings.column.level": "Niveau",
+  "warnings.column.repository": "Opslaag",
+  "warnings.column.run": "Loup",
+  "warnings.column.job": "Taok",
+  "warnings.column.where": "Woe",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Berich",
+  "warnings.level.failure": "fout",
+  "warnings.level.warning": "waarschuwing",
+  "warnings.level.notice": "opmerking",
+  "warnings.note": {
+    "one": "Euver {n} loup: {failure} foute, {warning} waarschuwinge, {notice} opmerkinge.",
+    "other": "Euver {n} loupe: {failure} foute, {warning} waarschuwinge, {notice} opmerkinge."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} vaan {n} taok gelaze.",
+    "other": "{repo} {run}: {done} vaan {n} taoke gelaze."
+  },
+  "warnings.noRun": "Gein vaan de aangevinkde takke haet 'ne wèrkstroumloup.",
   "security.column.since": "Sins",
   "security.severity.critical": "kritiek",
   "security.severity.high": "hoeg",
@@ -378,10 +403,15 @@
   "tests.code.file": "besjtandj",
   "tests.code.language": "taol",
   "tests.code.cases": "gevalle",
+  "tests.code.run": "loup",
   "tests.code.reading": "De suite weurt gelaze…",
   "tests.code.note": {
     "one": "{n} besjtandj mèt {cases} gevalle.",
     "other": "{n} besjtenj mèt {cases} gevalle."
+  },
+  "tests.code.held": {
+    "one": "Loup {run} haet euver {n} daorvaan gerapporteerd.",
+    "other": "Loup {run} haet euver {n} daorvaan gerapporteerd."
   },
   "tests.code.noCases": "In dit besjtandj is gein geval gevónje.",
   "tests.code.noTree": "De testbóm weurt neet aangebooje op {path}.",

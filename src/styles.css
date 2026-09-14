@@ -278,6 +278,40 @@ tr.feed-pickable:hover td {
   background: var(--bs-secondary-bg);
 }
 
+.feed-jumps {
+  display: flex;
+  gap: 4px;
+}
+
+.feed-jumps .btn {
+  --bs-btn-padding-x: 6px;
+  --bs-btn-padding-y: 0;
+  line-height: 1.4;
+}
+
+.warn-failure { color: var(--bs-danger); }
+.warn-warning { color: var(--bs-warning); }
+.warn-notice { opacity: 0.75; }
+
+.warn-runs {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.warn-run-failed {
+  color: var(--bs-danger);
+}
+
+.warn-table td.warn-message {
+  white-space: pre-wrap;
+  max-width: 46ch;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+
 .code-table td {
   white-space: nowrap;
 }

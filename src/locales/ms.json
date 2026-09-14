@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Tindakan",
   "view.security": "Keselamatan",
+  "view.warnings": "Amaran",
   "panel.filter": "Penapis",
   "panel.design": "Reka bentuk",
   "design.theme": "Tema",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Bertanya kepada GitHub apa yang berubah",
   "loader.task.everything": "Meminta setiap larian daripada GitHub",
   "loader.task.artifacts": "Artifak larian #{number}: {done} daripada {total}",
+  "loader.task.warnings": "Amaran: {done} daripada {total} kerja",
   "loader.task.artifact": "Artifak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Tempoh",
   "feed.actions.running": "sedang berjalan",
   "feed.actions.longest": "Larian terpanjang yang dipaparkan mengambil masa {duration} ({run}).",
+  "feed.actions.open": "Buka",
+  "feed.actions.jump.playwright": "Suite Playwright larian ini",
+  "feed.actions.jump.unit": "Suite ujian milik repositori pada larian ini",
+  "feed.actions.jump.warnings": "Amaran larian ini",
   "feed.filter.search": "Cari larian",
   "feed.filter.all": "semua",
   "feed.filter.event": "Peristiwa",
@@ -188,6 +194,23 @@
   "security.column.source": "Sumber",
   "security.column.alert": "Makluman",
   "security.column.summary": "Ringkasan",
+  "warnings.column.level": "Tahap",
+  "warnings.column.repository": "Repositori",
+  "warnings.column.run": "Larian",
+  "warnings.column.job": "Kerja",
+  "warnings.column.where": "Di mana",
+  "warnings.column.title": "Tajuk",
+  "warnings.column.message": "Mesej",
+  "warnings.level.failure": "ralat",
+  "warnings.level.warning": "amaran",
+  "warnings.level.notice": "catatan",
+  "warnings.note": {
+    "other": "Merentasi {n} larian: {failure} ralat, {warning} amaran, {notice} catatan."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: {done} daripada {n} kerja telah dibaca."
+  },
+  "warnings.noRun": "Tiada satu pun cabang yang ditandakan mempunyai larian aliran kerja.",
   "security.column.since": "Sejak",
   "security.severity.critical": "kritikal",
   "security.severity.high": "tinggi",
@@ -355,9 +378,13 @@
   "tests.code.file": "fail",
   "tests.code.language": "bahasa",
   "tests.code.cases": "kes",
+  "tests.code.run": "larian",
   "tests.code.reading": "Membaca suite ujian…",
   "tests.code.note": {
     "other": "{n} fail dengan {cases} kes."
+  },
+  "tests.code.held": {
+    "other": "Larian {run} melaporkan {n} daripadanya."
   },
   "tests.code.noCases": "Tiada kes ditemui dalam fail ini.",
   "tests.code.noTree": "Pokok ujian tidak disajikan di {path}.",

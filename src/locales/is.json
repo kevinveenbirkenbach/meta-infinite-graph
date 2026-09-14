@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aðgerðir",
   "view.security": "Öryggi",
+  "view.warnings": "Aðvaranir",
   "panel.filter": "Sía",
   "panel.design": "Útlit",
   "design.theme": "Þema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Spyr GitHub hvað breyttist",
   "loader.task.everything": "Bið GitHub um allar keyrslur",
   "loader.task.artifacts": "Afurðir keyrslu #{number}: {done} af {total}",
+  "loader.task.warnings": "Aðvaranir: {done} af {total} verkum",
   "loader.task.artifact": "Afurð {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mistókst: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Tímalengd",
   "feed.actions.running": "í gangi",
   "feed.actions.longest": "Lengsta keyrslan sem sýnd er tók {duration} ({run}).",
+  "feed.actions.open": "Opna",
+  "feed.actions.jump.playwright": "Playwright-svíta þessarar keyrslu",
+  "feed.actions.jump.unit": "Eigin prófunarsvítur geymslunnar í þessari keyrslu",
+  "feed.actions.jump.warnings": "Aðvaranir þessarar keyrslu",
   "feed.filter.search": "Leita í keyrslum",
   "feed.filter.all": "öll",
   "feed.filter.event": "Atburður",
@@ -198,6 +204,25 @@
   "security.column.source": "Uppspretta",
   "security.column.alert": "Viðvörun",
   "security.column.summary": "Samantekt",
+  "warnings.column.level": "Stig",
+  "warnings.column.repository": "Geymsla",
+  "warnings.column.run": "Keyrsla",
+  "warnings.column.job": "Verk",
+  "warnings.column.where": "Hvar",
+  "warnings.column.title": "Titill",
+  "warnings.column.message": "Skilaboð",
+  "warnings.level.failure": "villa",
+  "warnings.level.warning": "aðvörun",
+  "warnings.level.notice": "athugasemd",
+  "warnings.note": {
+    "one": "Í {n} keyrslu: {failure} villur, {warning} aðvaranir, {notice} athugasemdir.",
+    "other": "Í {n} keyrslum: {failure} villur, {warning} aðvaranir, {notice} athugasemdir."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} af {n} verki lesið.",
+    "other": "{repo} {run}: {done} af {n} verkum lesin."
+  },
+  "warnings.noRun": "Engin merkt grein er með keyrslu verkferlis.",
   "security.column.since": "Síðan",
   "security.severity.critical": "afar alvarlegt",
   "security.severity.high": "hátt",
@@ -378,10 +403,15 @@
   "tests.code.file": "skrá",
   "tests.code.language": "tungumál",
   "tests.code.cases": "tilvik",
+  "tests.code.run": "keyrsla",
   "tests.code.reading": "Les svítuna…",
   "tests.code.note": {
     "one": "{n} skrá með {cases} tilvikum.",
     "other": "{n} skrár með {cases} tilvikum."
+  },
+  "tests.code.held": {
+    "one": "Keyrsla {run} greindi frá {n} þeirra.",
+    "other": "Keyrsla {run} greindi frá {n} þeirra."
   },
   "tests.code.noCases": "Ekkert tilvik fannst í þessari skrá.",
   "tests.code.noTree": "Prófunartréð er ekki borið fram á {path}.",

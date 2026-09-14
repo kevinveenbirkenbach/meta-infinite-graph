@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "แอ็กชัน",
   "view.security": "ความปลอดภัย",
+  "view.warnings": "คำเตือน",
   "panel.filter": "ตัวกรอง",
   "panel.design": "การออกแบบ",
   "design.theme": "ธีม",
@@ -163,6 +164,7 @@
   "loader.task.changes": "กำลังถาม GitHub ว่ามีอะไรเปลี่ยน",
   "loader.task.everything": "กำลังขอการรันทั้งหมดจาก GitHub",
   "loader.task.artifacts": "อาร์ติแฟกต์ของการรัน #{number}: {done} จาก {total}",
+  "loader.task.warnings": "คำเตือน: {done} จาก {total} งาน",
   "loader.task.artifact": "อาร์ติแฟกต์ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ล้มเหลว: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "ระยะเวลา",
   "feed.actions.running": "กำลังรัน",
   "feed.actions.longest": "การรันที่นานที่สุดที่แสดงใช้เวลา {duration} ({run})",
+  "feed.actions.open": "เปิด",
+  "feed.actions.jump.playwright": "ชุด Playwright ของการรันนี้",
+  "feed.actions.jump.unit": "ชุดทดสอบของรีโพสิทอรีเองในการรันนี้",
+  "feed.actions.jump.warnings": "คำเตือนของการรันนี้",
   "feed.filter.search": "ค้นหาการรัน",
   "feed.filter.all": "ทั้งหมด",
   "feed.filter.event": "เหตุการณ์",
@@ -188,6 +194,23 @@
   "security.column.source": "แหล่งที่มา",
   "security.column.alert": "การแจ้งเตือน",
   "security.column.summary": "สรุป",
+  "warnings.column.level": "ระดับ",
+  "warnings.column.repository": "รีโพสิทอรี",
+  "warnings.column.run": "การรัน",
+  "warnings.column.job": "งาน",
+  "warnings.column.where": "ที่ใด",
+  "warnings.column.title": "ชื่อเรื่อง",
+  "warnings.column.message": "ข้อความ",
+  "warnings.level.failure": "ข้อผิดพลาด",
+  "warnings.level.warning": "คำเตือน",
+  "warnings.level.notice": "ข้อสังเกต",
+  "warnings.note": {
+    "other": "จาก {n} การรัน: ข้อผิดพลาด {failure} รายการ คำเตือน {warning} รายการ ข้อสังเกต {notice} รายการ"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: อ่านแล้ว {done} จาก {n} งาน"
+  },
+  "warnings.noRun": "ไม่มีสาขาที่เลือกไว้สาขาใดมีการรันเวิร์กโฟลว์",
   "security.column.since": "ตั้งแต่",
   "security.severity.critical": "วิกฤต",
   "security.severity.high": "สูง",
@@ -355,9 +378,13 @@
   "tests.code.file": "ไฟล์",
   "tests.code.language": "ภาษา",
   "tests.code.cases": "เคส",
+  "tests.code.run": "การรัน",
   "tests.code.reading": "กำลังอ่านชุดทดสอบ…",
   "tests.code.note": {
     "other": "{n} ไฟล์ มี {cases} เคส"
+  },
+  "tests.code.held": {
+    "other": "การรัน {run} รายงานไป {n} รายการจากทั้งหมดนี้"
   },
   "tests.code.noCases": "ไม่พบเคสใดในไฟล์นี้",
   "tests.code.noTree": "ไม่มีการให้บริการต้นไม้ของการทดสอบที่ {path}",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Eylemler",
   "view.security": "Güvenlik",
+  "view.warnings": "Uyarılar",
   "panel.filter": "Filtre",
   "panel.design": "Tasarım",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub'a nelerin değiştiği soruluyor",
   "loader.task.everything": "GitHub'dan tüm çalıştırmalar isteniyor",
   "loader.task.artifacts": "#{number} numaralı çalıştırmanın yapıtları: {total} içinden {done}",
+  "loader.task.warnings": "Uyarılar: {total} işten {done}",
   "loader.task.artifact": "Yapıt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "başarısız: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Süre",
   "feed.actions.running": "çalışıyor",
   "feed.actions.longest": "Gösterilen en uzun çalıştırma {duration} sürdü ({run}).",
+  "feed.actions.open": "Aç",
+  "feed.actions.jump.playwright": "Bu çalıştırmanın Playwright takımı",
+  "feed.actions.jump.unit": "Bu çalıştırmada deponun kendi takımları",
+  "feed.actions.jump.warnings": "Bu çalıştırmanın uyarıları",
   "feed.filter.search": "Çalıştırmalarda ara",
   "feed.filter.all": "tümü",
   "feed.filter.event": "Olay",
@@ -198,6 +204,25 @@
   "security.column.source": "Kaynak",
   "security.column.alert": "Uyarı",
   "security.column.summary": "Özet",
+  "warnings.column.level": "Düzey",
+  "warnings.column.repository": "Depo",
+  "warnings.column.run": "Çalıştırma",
+  "warnings.column.job": "İş",
+  "warnings.column.where": "Nerede",
+  "warnings.column.title": "Başlık",
+  "warnings.column.message": "Mesaj",
+  "warnings.level.failure": "hata",
+  "warnings.level.warning": "uyarı",
+  "warnings.level.notice": "bildirim",
+  "warnings.note": {
+    "one": "{n} çalıştırma boyunca: {failure} hata, {warning} uyarı, {notice} bildirim.",
+    "other": "{n} çalıştırma boyunca: {failure} hata, {warning} uyarı, {notice} bildirim."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} işten {done} tanesi okundu.",
+    "other": "{repo} {run}: {n} işten {done} tanesi okundu."
+  },
+  "warnings.noRun": "İşaretlenen dalların hiçbirinde iş akışı çalıştırması yok.",
   "security.column.since": "Açılış",
   "security.severity.critical": "kritik",
   "security.severity.high": "yüksek",
@@ -378,10 +403,15 @@
   "tests.code.file": "dosya",
   "tests.code.language": "dil",
   "tests.code.cases": "durumlar",
+  "tests.code.run": "çalıştırma",
   "tests.code.reading": "Takım okunuyor…",
   "tests.code.note": {
     "one": "{cases} durumlu {n} dosya.",
     "other": "{cases} durumlu {n} dosya."
+  },
+  "tests.code.held": {
+    "one": "{run} çalıştırması bunların {n} tanesini bildirdi.",
+    "other": "{run} çalıştırması bunların {n} tanesini bildirdi."
   },
   "tests.code.noCases": "Bu dosyada hiçbir durum bulunamadı.",
   "tests.code.noTree": "Testler ağacı {path} adresinde sunulmuyor.",

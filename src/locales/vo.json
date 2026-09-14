@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Duns",
   "view.security": "Sefod",
+  "view.warnings": "Warnods",
   "panel.filter": "Sif",
   "panel.design": "Fomot",
   "design.theme": "Tem",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Säkam GitHub-i, kis pevotükon",
   "loader.task.everything": "Begam jäfidamis valik de GitHub",
   "loader.task.artifacts": "Dunots jäfidama #{number}: {done} se {total}",
+  "loader.task.warnings": "Warnods: {done} se vobs {total}",
   "loader.task.artifact": "Dunot {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "no eplöpon: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Dul",
   "feed.actions.running": "pajäfidöl",
   "feed.actions.longest": "Jäfidam lunikün pejonöl edulon {duration} ({run}).",
+  "feed.actions.open": "Maifükön",
+  "feed.actions.jump.playwright": "Blufem Playwright jäfidama at",
+  "feed.actions.jump.unit": "Blufems konletöpa itik in jäfidam at",
+  "feed.actions.jump.warnings": "Warnods jäfidama at",
   "feed.filter.search": "Sukön in jäfidams",
   "feed.filter.all": "valik",
   "feed.filter.event": "Jenot",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonät",
   "security.column.alert": "Lenün",
   "security.column.summary": "Brefod",
+  "warnings.column.level": "Stuf",
+  "warnings.column.repository": "Konletöp",
+  "warnings.column.run": "Jäfidam",
+  "warnings.column.job": "Vob",
+  "warnings.column.where": "Kiöp",
+  "warnings.column.title": "Tiäd",
+  "warnings.column.message": "Nun",
+  "warnings.level.failure": "pöl",
+  "warnings.level.warning": "warnod",
+  "warnings.level.notice": "noet",
+  "warnings.note": {
+    "one": "In jäfidam {n}: pöls {failure}, warnods {warning}, noets {notice}.",
+    "other": "In jäfidams {n}: pöls {failure}, warnods {warning}, noets {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} se vob {n} pareidöl.",
+    "other": "{repo} {run}: {done} se vobs {n} pareidöl."
+  },
+  "warnings.noRun": "Nonik tuigas pemarkölas labon jäfidami vobafluma.",
   "security.column.since": "Sis",
   "security.severity.critical": "fikulik",
   "security.severity.high": "geilik",
@@ -378,10 +403,15 @@
   "tests.code.file": "ragiv",
   "tests.code.language": "pük",
   "tests.code.cases": "kases",
+  "tests.code.run": "jäfidam",
   "tests.code.reading": "Reidam blufema…",
   "tests.code.note": {
     "one": "Ragiv {n} ko kases {cases}.",
     "other": "Ragivs {n} ko kases {cases}."
+  },
+  "tests.code.held": {
+    "one": "Jäfidam {run} enunom {n} onas.",
+    "other": "Jäfidam {run} enunom {n} onas."
   },
   "tests.code.noCases": "Nonik kas pefunon in ragiv at.",
   "tests.code.noTree": "Bim blufemas no pegivon ye {path}.",

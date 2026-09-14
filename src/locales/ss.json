@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Tento",
   "view.security": "Kuphepha",
+  "view.warnings": "Ticwayiso",
   "panel.filter": "Sihlungi",
   "panel.design": "Kubukeka",
   "design.theme": "Indzikimba",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kubutwa GitHub loko lokushintjile",
   "loader.task.everything": "Kubutwa GitHub kusebenta konkhe",
   "loader.task.artifacts": "Imikhicito yekusebenta #{number}: {done} kulena {total}",
+  "loader.task.warnings": "Ticwayiso: {done} kulemisebenti lengu-{total}",
   "loader.task.artifact": "Umkhicito {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "yehlulekile: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Budze besikhatsi",
   "feed.actions.running": "kusasebenta",
   "feed.actions.longest": "Kusebenta lokudze kakhulu lokukhonjisiwe kutsetse {duration} ({run}).",
+  "feed.actions.open": "Vula",
+  "feed.actions.jump.playwright": "Licembu le-Playwright lalokusebenta lokhu",
+  "feed.actions.jump.unit": "Emacembu esigcinelo ngekwaso kulokusebenta lokhu",
+  "feed.actions.jump.warnings": "Ticwayiso talokusebenta lokhu",
   "feed.filter.search": "Sesha kulokusebenta",
   "feed.filter.all": "konkhe",
   "feed.filter.event": "Sehlakalo",
@@ -198,6 +204,25 @@
   "security.column.source": "Umtfombo",
   "security.column.alert": "Sicwayiso",
   "security.column.summary": "Sifinyeto",
+  "warnings.column.level": "Lizinga",
+  "warnings.column.repository": "Sigcinelo",
+  "warnings.column.run": "Kusebenta",
+  "warnings.column.job": "Umsebenti",
+  "warnings.column.where": "Kuphi",
+  "warnings.column.title": "Sihloko",
+  "warnings.column.message": "Umlayeto",
+  "warnings.level.failure": "liphutsa",
+  "warnings.level.warning": "sicwayiso",
+  "warnings.level.notice": "satiso",
+  "warnings.note": {
+    "one": "Kukusebenta lokungu-{n}: emaphutsa langu-{failure}, ticwayiso letingu-{warning}, tatiso letingu-{notice}.",
+    "other": "Kukusebenta lokungu-{n}: emaphutsa langu-{failure}, ticwayiso letingu-{warning}, tatiso letingu-{notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: kufundvwe {done} kumsebenti longu-{n}.",
+    "other": "{repo} {run}: kufundvwe {done} kulemisebenti lengu-{n}."
+  },
+  "warnings.noRun": "Kute ligatja lelikhetsiwe lelinekusebenta kwe-workflow.",
   "security.column.since": "Kusukela",
   "security.severity.critical": "lokubucayi kakhulu",
   "security.severity.high": "lokuphezulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "lifayela",
   "tests.code.language": "lulwimi",
   "tests.code.cases": "emacala",
+  "tests.code.run": "kusebenta",
   "tests.code.reading": "Kufundvwa licembu…",
   "tests.code.note": {
     "one": "Lifayela lelingu-{n} lelinemacala langu-{cases}.",
     "other": "Emafayela langu-{n} lanemacala langu-{cases}."
+  },
+  "tests.code.held": {
+    "one": "Kusebenta {run} kubike nga-{n} kuwo.",
+    "other": "Kusebenta {run} kubike nga-{n} kuwo."
   },
   "tests.code.noCases": "Kute licala lelitfoliwe kulelifayela.",
   "tests.code.noTree": "Sihlahla semavivinyo asinikwa ku-{path}.",

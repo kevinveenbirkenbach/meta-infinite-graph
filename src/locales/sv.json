@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actions",
   "view.security": "Säkerhet",
+  "view.warnings": "Varningar",
   "panel.filter": "Filter",
   "panel.design": "Utseende",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Frågar GitHub vad som ändrats",
   "loader.task.everything": "Hämtar alla körningar från GitHub",
   "loader.task.artifacts": "Artefakter för körning #{number}: {done} av {total}",
+  "loader.task.warnings": "Varningar: {done} av {total} jobb",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "misslyckades: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Varaktighet",
   "feed.actions.running": "pågår",
   "feed.actions.longest": "Den längsta visade körningen tog {duration} ({run}).",
+  "feed.actions.open": "Öppna",
+  "feed.actions.jump.playwright": "Playwright-sviten för den här körningen",
+  "feed.actions.jump.unit": "Repositoryts egna sviter vid den här körningen",
+  "feed.actions.jump.warnings": "Varningar för den här körningen",
   "feed.filter.search": "Sök bland körningarna",
   "feed.filter.all": "alla",
   "feed.filter.event": "Händelse",
@@ -198,6 +204,25 @@
   "security.column.source": "Källa",
   "security.column.alert": "Larm",
   "security.column.summary": "Sammanfattning",
+  "warnings.column.level": "Nivå",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Körning",
+  "warnings.column.job": "Jobb",
+  "warnings.column.where": "Var",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Meddelande",
+  "warnings.level.failure": "fel",
+  "warnings.level.warning": "varning",
+  "warnings.level.notice": "notering",
+  "warnings.note": {
+    "one": "Över {n} körning: {failure} fel, {warning} varningar, {notice} noteringar.",
+    "other": "Över {n} körningar: {failure} fel, {warning} varningar, {notice} noteringar."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} av {n} jobb läst.",
+    "other": "{repo} {run}: {done} av {n} jobb lästa."
+  },
+  "warnings.noRun": "Ingen av de ikryssade grenarna har någon workflow-körning.",
   "security.column.since": "Sedan",
   "security.severity.critical": "kritisk",
   "security.severity.high": "hög",
@@ -378,10 +403,15 @@
   "tests.code.file": "fil",
   "tests.code.language": "språk",
   "tests.code.cases": "fall",
+  "tests.code.run": "körning",
   "tests.code.reading": "Läser sviten…",
   "tests.code.note": {
     "one": "{n} fil med {cases} fall.",
     "other": "{n} filer med {cases} fall."
+  },
+  "tests.code.held": {
+    "one": "Körning {run} rapporterade om {n} av dem.",
+    "other": "Körning {run} rapporterade om {n} av dem."
   },
   "tests.code.noCases": "Inget fall hittades i den här filen.",
   "tests.code.noTree": "Testträdet serveras inte på {path}.",

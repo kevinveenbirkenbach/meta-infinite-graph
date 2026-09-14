@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Pilġusrit",
   "view.security": "Qaunagiksrun",
+  "view.warnings": "Itqanaiyaġutit",
   "panel.filter": "Aviktuun",
   "panel.design": "Sanaaġusiq",
   "design.theme": "Qiñiġusiq",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub apiqsruqtuq sumik allaŋŋuqtuanik",
   "loader.task.everything": "GitHub apiqsruqtuq savaktitchiniit iluqaisa",
   "loader.task.artifacts": "Savaktitchiniq #{number} sanaaŋi: {done} {total}-mit",
+  "loader.task.warnings": "Itqanaiyaġutit: {total} savaanniñ {done}",
   "loader.task.artifact": "Sanaaq {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "piyuŋŋitchuq: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Sivisutigiŋa",
   "feed.actions.running": "savaktuq",
   "feed.actions.longest": "Savaktitchiniq sivisunŋaaqtuaq tautuktitaq sivisutigiŋa {duration} ({run}).",
+  "feed.actions.open": "Aŋmaġuŋ",
+  "feed.actions.jump.playwright": "Playwright uuktuutit savaktitchiniġmi uvani",
+  "feed.actions.jump.unit": "Iḷiġvium uuktuutiŋi savaktitchiniġmi uvani",
+  "feed.actions.jump.warnings": "Itqanaiyaġutit savaktitchiniġmi uvani",
   "feed.filter.search": "Ivaqliñ savaktitchiŋich",
   "feed.filter.all": "iḷuqaan",
   "feed.filter.event": "Pisuaq",
@@ -198,6 +204,25 @@
   "security.column.source": "Kaŋiq",
   "security.column.alert": "Qaunaksraun",
   "security.column.summary": "Naipiqtaaq",
+  "warnings.column.level": "Naunaiyaun",
+  "warnings.column.repository": "Iḷiġvik",
+  "warnings.column.run": "Savaktitchiniq",
+  "warnings.column.job": "Savaaq",
+  "warnings.column.where": "Naani",
+  "warnings.column.title": "Atiq",
+  "warnings.column.message": "Uqautchaq",
+  "warnings.level.failure": "tammaŋniq",
+  "warnings.level.warning": "itqanaiyaġun",
+  "warnings.level.notice": "titiġaq",
+  "warnings.note": {
+    "one": "{n} savaktitchiniġmi: {failure} tammaŋniq, {warning} itqanaiyaġun, {notice} titiġaq.",
+    "other": "{n} savaktitchiniġni: {failure} tammaŋniq, {warning} itqanaiyaġun, {notice} titiġaq."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} savaanniñ {done} taiguaqtuaq.",
+    "other": "{repo} {run}: {n} savaanniñ {done} taiguaqtut."
+  },
+  "warnings.noRun": "Avguutit naunaiyaqtuat savaktitchiniqaŋitchut savaaġusiġmi.",
   "security.column.since": "Qakugumiñ",
   "security.severity.critical": "piḷuktuaq",
   "security.severity.high": "quliaqtuaq",
@@ -378,10 +403,15 @@
   "tests.code.file": "makpiġaaq",
   "tests.code.language": "uqausiq",
   "tests.code.cases": "kaasit",
+  "tests.code.run": "savaktitchiniq",
   "tests.code.reading": "Uuktuutit taiguaġiruq…",
   "tests.code.note": {
     "one": "{n} makpiġaaq {cases} kaasitlu.",
     "other": "{n} makpiġaat {cases} kaasitlu."
+  },
+  "tests.code.held": {
+    "one": "Savaktitchiniq {run} uqaqtuq {n}-nik taamaniñ.",
+    "other": "Savaktitchiniq {run} uqaqtuq {n}-nik taamaniñ."
   },
   "tests.code.noCases": "Kaasiq nanitchaŋitchuq makpiġaami uvani.",
   "tests.code.noTree": "Uuktuutit napaaqtuat {path}-mi piitchut.",

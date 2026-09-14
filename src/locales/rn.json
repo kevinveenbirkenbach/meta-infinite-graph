@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ibikorwa",
   "view.security": "Umutekano",
+  "view.warnings": "Imburi",
   "panel.filter": "Akayunguruzo",
   "panel.design": "Isura",
   "design.theme": "Amabara",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Harabazwa GitHub ivyahindutse",
   "loader.task.everything": "Harasabwa GitHub ikorwa ryose",
   "loader.task.artifacts": "Artefakti z'ikorwa #{number}: {done} kuri {total}",
+  "loader.task.warnings": "Imburi: {done} kuri {total} mirimo",
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "vyananiranye: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Igihe vyamaze",
   "feed.actions.running": "biriko birakorwa",
   "feed.actions.longest": "Ikorwa rirerire kuruta ayandi ryerekanwe ryamaze {duration} ({run}).",
+  "feed.actions.open": "Ugurura",
+  "feed.actions.jump.playwright": "Ibigeragezo vya Playwright vy'iri korwa",
+  "feed.actions.jump.unit": "Ibigeragezo vy'ububiko ubwabwo kuri iri korwa",
+  "feed.actions.jump.warnings": "Imburi z'iri korwa",
   "feed.filter.search": "Rondera amakorwa",
   "feed.filter.all": "vyose",
   "feed.filter.event": "Ikiba",
@@ -198,6 +204,25 @@
   "security.column.source": "Isoko",
   "security.column.alert": "Imenyesha",
   "security.column.summary": "Incamake",
+  "warnings.column.level": "Urwego",
+  "warnings.column.repository": "Ububiko",
+  "warnings.column.run": "Ikorwa",
+  "warnings.column.job": "Umurimo",
+  "warnings.column.where": "Aho",
+  "warnings.column.title": "Umutwe",
+  "warnings.column.message": "Ubutumwa",
+  "warnings.level.failure": "ikosa",
+  "warnings.level.warning": "imburi",
+  "warnings.level.notice": "icitonderwa",
+  "warnings.note": {
+    "one": "Mu ikorwa {n}: amakosa {failure}, imburi {warning}, ibitonderwa {notice}.",
+    "other": "Mu makorwa {n}: amakosa {failure}, imburi {warning}, ibitonderwa {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} kuri {n} murimo yasomwe.",
+    "other": "{repo} {run}: {done} kuri {n} mirimo yasomwe."
+  },
+  "warnings.noRun": "Nta shami ryatoranijwe rifise ikorwa ry'urukurikirane rw'ibikorwa.",
   "security.column.since": "Kuva",
   "security.severity.critical": "bikomeye cane",
   "security.severity.high": "hejuru",
@@ -378,10 +403,15 @@
   "tests.code.file": "idosiye",
   "tests.code.language": "ururimi",
   "tests.code.cases": "ingero",
+  "tests.code.run": "ikorwa",
   "tests.code.reading": "Gusoma ibigeragezo…",
   "tests.code.note": {
     "one": "Idosiye {n} rifise ingero {cases}.",
     "other": "Amadosiye {n} afise ingero {cases}."
+  },
+  "tests.code.held": {
+    "one": "Ikorwa {run} ryatanze raporo kuri {n} muri yo.",
+    "other": "Ikorwa {run} ryatanze raporo kuri {n} muri yo."
   },
   "tests.code.noCases": "Nta ngero yabonetse muri iri dosiye.",
   "tests.code.noTree": "Igiti c'ibigeragezo ntikiboneka kuri {path}.",

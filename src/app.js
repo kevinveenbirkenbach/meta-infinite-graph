@@ -4,9 +4,11 @@ import { codeTests, dataLoader, graphRenderer, selectionManager, setStatus, urlS
 import { ForkTree } from './fork/tree.js';
 import { GitRange } from './gitRange.js';
 import { GitHubApi } from './github/api.js';
+import { RunAnnotations } from './github/annotations.js';
 import { GitHubFeed } from './github/feed.js';
 import { FeedRefresher } from './github/refresh.js';
 import { GitHubSecurity } from './github/security.js';
+import { GitHubWarnings } from './github/warnings.js';
 import { t } from './i18n.js';
 import { Loader } from './loader/indicator.js';
 import { wireLoaderOverview } from './loader/overview.js';
@@ -99,18 +101,22 @@ loader.track('*', gitRange.load()
       tableView, dataLoader, tables, () => urlState.capture(), cardHost
     );
     tableView.matrix = matrixView;
+    const annotations = new RunAnnotations(forkTree.api);
     const feeds = {
       commits: new CommitsView(gitRange, tables),
       pulls: new GitHubFeed('pulls', forkTree.api, gitRange, tables),
       actions: new GitHubFeed('actions', forkTree.api, gitRange, tables),
       security: new GitHubSecurity(forkTree.api, gitRange, tables),
+      warnings: new GitHubWarnings(forkTree.api, gitRange, tables, annotations),
     };
-    const codeView = new CodeTestsView(codeTests, tables);
+    const codeView = new CodeTestsView(codeTests, annotations, tables);
     const testsView = new TestsView(
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables'),
       new TestRuns(forkTree.api, () => (gitRange.catalog ? gitRange.catalog.root : forkTree.root))
     );
     testsView.track = (promise, label) => loader.track('playwright', promise, label);
+    codeView.track = (promise, label) => loader.track(currentView(), promise, label);
+    feeds.warnings.track = (promise, label) => loader.track('warnings', promise, label);
     testsView.runs.onLoad = (name, promise) => loader.track(null, promise, t('loader.task.artifact', { name }));
     forkTree.api.onFetch = (path, promise) => loader.track(null, promise, t('loader.task.github', { path }));
     const autoResolver = new AutoResolver();
@@ -142,14 +148,16 @@ loader.track('*', gitRange.load()
       sel, ranked, metaGraph, testsView, forkTree, matrixView, roleInfo, tableView, switches, refresher, feeds,
     });
     feeds.actions.onFilter = () => urlState.capture();
+    feeds.warnings.onFilter = () => urlState.capture();
     tableView.setFilters(uiManager.filters());
-    wireControls({ testsView, matrixView, roleInfo, forkTree });
+    let drawView = () => {};
+    wireControls({ testsView, matrixView, roleInfo, forkTree, onRun: () => drawView() });
     wireForks(forkTree, cardHost);
     // The hook lands last: wireViewMode redraws the active view, so a test that
     // takes __mig as ready any earlier can grab a row the redraw then replaces
     // under its pointer.
     return Promise.all(pending).then(() => {
-      wireViewMode({ tableView, forkTree, testsView, codeView, feeds, loader, refresher });
+      drawView = wireViewMode({ tableView, forkTree, testsView, codeView, feeds, loader, refresher });
       wireReload({
         anchor: document.getElementById('view-loader'),
         loader,
@@ -172,6 +180,7 @@ loader.track('*', gitRange.load()
           commits: () => feeds.commits.show(),
           pulls: () => feeds.pulls.show(true),
           security: () => feeds.security.show(true),
+          warnings: () => feeds.warnings.show(true),
           ...Object.fromEntries(CodeTests.KINDS.map(kind => [kind, () => {
             codeView.invalidate();
             return codeView.show(kind);
@@ -182,7 +191,7 @@ loader.track('*', gitRange.load()
       urlState.capture();
       window.__mig = {
         metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
-        testsView, codeView, codeTests, dataLoader, gitRange, feeds, matrixView,
+        testsView, codeView, codeTests, annotations, dataLoader, gitRange, feeds, matrixView,
         graph: graphRenderer.graph,
       };
     });

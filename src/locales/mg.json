@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Hetsika",
   "view.security": "Fiarovana",
+  "view.warnings": "Fampitandremana",
   "panel.filter": "Sivana",
   "panel.design": "Endrika",
   "design.theme": "Lohahevitra loko",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Manontany an'i GitHub izay niova",
   "loader.task.everything": "Mangataka amin'i GitHub ny fandehanana rehetra",
   "loader.task.artifacts": "Artefakta an'ny fandehanana #{number}: {done} amin'ny {total}",
+  "loader.task.warnings": "Fampitandremana: {done} amin'ny asa {total}",
   "loader.task.artifact": "Artefakta {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "tsy nahomby: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Faharetana",
   "feed.actions.running": "mandeha",
   "feed.actions.longest": "Ny fandehanana lava indrindra naseho dia naharitra {duration} ({run}).",
+  "feed.actions.open": "Sokafy",
+  "feed.actions.jump.playwright": "Andiana Playwright an'ity fandehanana ity",
+  "feed.actions.jump.unit": "Ny andian'ny tahiry ihany amin'ity fandehanana ity",
+  "feed.actions.jump.warnings": "Fampitandreman'ity fandehanana ity",
   "feed.filter.search": "Tadiavo ny fandehanana",
   "feed.filter.all": "rehetra",
   "feed.filter.event": "Hetsika",
@@ -198,6 +204,25 @@
   "security.column.source": "Loharano",
   "security.column.alert": "Fampitandremana",
   "security.column.summary": "Famintinana",
+  "warnings.column.level": "Ambaratonga",
+  "warnings.column.repository": "Tahiry",
+  "warnings.column.run": "Fandehanana",
+  "warnings.column.job": "Asa",
+  "warnings.column.where": "Aiza",
+  "warnings.column.title": "Lohateny",
+  "warnings.column.message": "Hafatra",
+  "warnings.level.failure": "hadisoana",
+  "warnings.level.warning": "fampitandremana",
+  "warnings.level.notice": "fanamarihana",
+  "warnings.note": {
+    "one": "Amin'ny fandehanana {n}: hadisoana {failure}, fampitandremana {warning}, fanamarihana {notice}.",
+    "other": "Amin'ny fandehanana {n}: hadisoana {failure}, fampitandremana {warning}, fanamarihana {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: novakiana ny asa {done} amin'ny {n}.",
+    "other": "{repo} {run}: novakiana ny asa {done} amin'ny {n}."
+  },
+  "warnings.noRun": "Tsy misy fandehanan'ny workflow ny sampana voamarika.",
   "security.column.since": "Hatramin'ny",
   "security.severity.critical": "tena mafy",
   "security.severity.high": "ambony",
@@ -378,10 +403,15 @@
   "tests.code.file": "rakitra",
   "tests.code.language": "fiteny",
   "tests.code.cases": "tranga",
+  "tests.code.run": "fandehanana",
   "tests.code.reading": "Mamaky ny andiana…",
   "tests.code.note": {
     "one": "Rakitra {n} misy tranga {cases}.",
     "other": "Rakitra {n} misy tranga {cases}."
+  },
+  "tests.code.held": {
+    "one": "Ny fandehanana {run} dia nitatitra {n} amin'izy ireo.",
+    "other": "Ny fandehanana {run} dia nitatitra {n} amin'izy ireo."
   },
   "tests.code.noCases": "Tsy nisy tranga hita tao amin'ity rakitra ity.",
   "tests.code.noTree": "Tsy tolorana ao amin'ny {path} ny hazon'ny fitsapana.",

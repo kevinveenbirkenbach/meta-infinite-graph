@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Гамәлләр",
   "view.security": "Куркынычсызлык",
+  "view.warnings": "Кисәтүләр",
   "panel.filter": "Фильтр",
   "panel.design": "Бизәлеш",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub'тан нәрсә үзгәргәне сорала",
   "loader.task.everything": "GitHub'тан барлык җибәрелешләр сорала",
   "loader.task.artifacts": "#{number} җибәрелеш артефактлары: {total} арасыннан {done}",
+  "loader.task.warnings": "Кисәтүләр: {total} эшнең {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "уңышсыз: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Дәвамлылык",
   "feed.actions.running": "бара",
   "feed.actions.longest": "Күрсәтелгән иң озын җибәрелеш {duration} ({run}) дәвам итте.",
+  "feed.actions.open": "Ачу",
+  "feed.actions.jump.playwright": "Бу җибәрелешнең Playwright җыелмасы",
+  "feed.actions.jump.unit": "Бу җибәрелештә репозиторийның үз җыелмалары",
+  "feed.actions.jump.warnings": "Бу җибәрелешнең кисәтүләре",
   "feed.filter.search": "Җибәрелешләрдән эзләү",
   "feed.filter.all": "барысы",
   "feed.filter.event": "Вакыйга",
@@ -198,6 +204,25 @@
   "security.column.source": "Чыганак",
   "security.column.alert": "Кисәтү",
   "security.column.summary": "Кыскача",
+  "warnings.column.level": "Дәрәҗә",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Җибәрелеш",
+  "warnings.column.job": "Эш",
+  "warnings.column.where": "Кайда",
+  "warnings.column.title": "Исем",
+  "warnings.column.message": "Хәбәр",
+  "warnings.level.failure": "хата",
+  "warnings.level.warning": "кисәтү",
+  "warnings.level.notice": "искәрмә",
+  "warnings.note": {
+    "one": "{n} җибәрелештә: {failure} хата, {warning} кисәтү, {notice} искәрмә.",
+    "other": "{n} җибәрелештә: {failure} хата, {warning} кисәтү, {notice} искәрмә."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} эшнең {done} укылды.",
+    "other": "{repo} {run}: {n} эшнең {done} укылды."
+  },
+  "warnings.noRun": "Билгеләнгән тармакларның берсендә дә эш агымы җибәрелеше юк.",
   "security.column.since": "Кайчаннан",
   "security.severity.critical": "критик",
   "security.severity.high": "югары",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "тел",
   "tests.code.cases": "очраклар",
+  "tests.code.run": "җибәрелеш",
   "tests.code.reading": "Җыелма укыла…",
   "tests.code.note": {
     "one": "{n} файл, {cases} очрак белән.",
     "other": "{n} файл, {cases} очрак белән."
+  },
+  "tests.code.held": {
+    "one": "{run} җибәрелеше алардан {n} турында хәбәр итте.",
+    "other": "{run} җибәрелеше алардан {n} турында хәбәр итте."
   },
   "tests.code.noCases": "Бу файлда бер очрак та табылмады.",
   "tests.code.noTree": "Тестлар агачы {path} буенча бирелми.",

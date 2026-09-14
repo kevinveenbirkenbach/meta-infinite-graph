@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actiones",
   "view.security": "Securitate",
+  "view.warnings": "Avertimentos",
   "panel.filter": "Filtro",
   "panel.design": "Designo",
   "design.theme": "Thema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Demandante a GitHub lo que ha cambiate",
   "loader.task.everything": "Demandante a GitHub tote le executiones",
   "loader.task.artifacts": "Artefactos del execution #{number}: {done} de {total}",
+  "loader.task.warnings": "Avertimentos: {done} de {total} travalios",
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallite: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duration",
   "feed.actions.running": "in curso",
   "feed.actions.longest": "Le execution le plus longe monstrate durava {duration} ({run}).",
+  "feed.actions.open": "Aperir",
+  "feed.actions.jump.playwright": "Le suite Playwright de iste execution",
+  "feed.actions.jump.unit": "Le proprie suites del repositorio in iste execution",
+  "feed.actions.jump.warnings": "Le avertimentos de iste execution",
   "feed.filter.search": "Cercar in le executiones",
   "feed.filter.all": "totes",
   "feed.filter.event": "Evento",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonte",
   "security.column.alert": "Alerta",
   "security.column.summary": "Summario",
+  "warnings.column.level": "Nivello",
+  "warnings.column.repository": "Repositorio",
+  "warnings.column.run": "Execution",
+  "warnings.column.job": "Travalio",
+  "warnings.column.where": "Ubi",
+  "warnings.column.title": "Titulo",
+  "warnings.column.message": "Message",
+  "warnings.level.failure": "error",
+  "warnings.level.warning": "avertimento",
+  "warnings.level.notice": "nota",
+  "warnings.note": {
+    "one": "Trans {n} execution: {failure} errores, {warning} avertimentos, {notice} notas.",
+    "other": "Trans {n} executiones: {failure} errores, {warning} avertimentos, {notice} notas."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} de {n} travalio legite.",
+    "other": "{repo} {run}: {done} de {n} travalios legite."
+  },
+  "warnings.noRun": "Nulle del brancas marcate ha un execution de fluxo de labor.",
   "security.column.since": "Desde",
   "security.severity.critical": "critic",
   "security.severity.high": "alte",
@@ -378,10 +403,15 @@
   "tests.code.file": "file",
   "tests.code.language": "lingua",
   "tests.code.cases": "casos",
+  "tests.code.run": "execution",
   "tests.code.reading": "Lectura del suite…",
   "tests.code.note": {
     "one": "{n} file con {cases} casos.",
     "other": "{n} files con {cases} casos."
+  },
+  "tests.code.held": {
+    "one": "Le execution {run} ne reportava {n}.",
+    "other": "Le execution {run} ne reportava {n}."
   },
   "tests.code.noCases": "Nulle caso ha essite trovate in iste file.",
   "tests.code.noTree": "Le arbore de tests non es servite a {path}.",

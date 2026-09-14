@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Oilonga",
   "view.security": "Egameno",
+  "view.warnings": "Omakumaido",
   "panel.filter": "Oshisefa",
   "panel.design": "Omuholo",
   "design.theme": "Omaluvalu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Otai pulwa GitHub osho sha lunduluka",
   "loader.task.everything": "Otai pulwa GitHub eendo adishe",
   "loader.task.artifacts": "Oiningwa yeendo #{number}: {done} mu {total}",
+  "loader.task.warnings": "Omakumaido: {done} mu {total} oilonga",
   "loader.task.artifact": "Oshiningwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "inai wanifwa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Oule wefimbo",
   "feed.actions.running": "otai ende",
   "feed.actions.longest": "Eendo lile unene la ulikwa la kwata {duration} ({run}).",
+  "feed.actions.open": "Patulula",
+  "feed.actions.jump.playwright": "Omakondeko a Playwright eendo eli",
+  "feed.actions.jump.unit": "Omakondeko orepositori aye mwene meendo eli",
+  "feed.actions.jump.warnings": "Omakumaido eendo eli",
   "feed.filter.search": "Konga momaendo",
   "feed.filter.all": "aishe",
   "feed.filter.event": "Oshiningwanima",
@@ -198,6 +204,25 @@
   "security.column.source": "Ekolo",
   "security.column.alert": "Elondwelo",
   "security.column.summary": "Efupipiko",
+  "warnings.column.level": "Ondondo",
+  "warnings.column.repository": "Orepositori",
+  "warnings.column.run": "Eendo",
+  "warnings.column.job": "Oshilonga",
+  "warnings.column.where": "Openi",
+  "warnings.column.title": "Oshipalanyole",
+  "warnings.column.message": "Etumwalaka",
+  "warnings.level.failure": "epuko",
+  "warnings.level.warning": "ekumaido",
+  "warnings.level.notice": "eshangelo",
+  "warnings.note": {
+    "one": "Meendo {n}: omapuko {failure}, omakumaido {warning}, omashangelo {notice}.",
+    "other": "Momaendo {n}: omapuko {failure}, omakumaido {warning}, omashangelo {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} mu {n} yoshilonga ya leshwa.",
+    "other": "{repo} {run}: {done} mu {n} yoilonga ya leshwa."
+  },
+  "warnings.noRun": "Kape na etai la hoololwa li na eendo londjila yoilonga.",
   "security.column.since": "Okudja",
   "security.severity.critical": "ya kwata unene",
   "security.severity.high": "yopombada",
@@ -378,10 +403,15 @@
   "tests.code.file": "ofaila",
   "tests.code.language": "elaka",
   "tests.code.cases": "omakondeko",
+  "tests.code.run": "eendo",
   "tests.code.reading": "Omakondeko otaa leshwa…",
   "tests.code.note": {
     "one": "Ofaila {n} i na omakondeko {cases}.",
     "other": "Oifaila {n} i na omakondeko {cases}."
+  },
+  "tests.code.held": {
+    "one": "Eendo {run} ola shiivifa {n} muo.",
+    "other": "Eendo {run} ola shiivifa {n} muo."
   },
   "tests.code.noCases": "Kape na ekondeko la monika mofaila ei.",
   "tests.code.noTree": "Omuti womakondeko inau yandjwa mu {path}.",

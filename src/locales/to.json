@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ngaahi Ngāue",
   "view.security": "Malu'i",
+  "view.warnings": "Ngaahi Fakatokanga",
   "panel.filter": "Fakasivi",
   "panel.design": "Fōtunga",
   "design.theme": "Kaveinga",
@@ -163,6 +164,7 @@
   "loader.task.changes": "'Oku 'eke ki he GitHub pe ko e hā na'e liliu",
   "loader.task.everything": "'Oku kole ki he GitHub 'a e ngaahi lele kotoa",
   "loader.task.artifacts": "Ngaahi 'ātifeki 'o e lele #{number}: {done} 'i he {total}",
+  "loader.task.warnings": "Fakatokanga: {done} 'i he ngāue 'e {total}",
   "loader.task.artifact": "'Ātifeki {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "tō: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Lōloa 'o e taimi",
   "feed.actions.running": "'oku lele",
   "feed.actions.longest": "Ko e lele lōloa taha 'oku fakahā na'e to'o {duration} ({run}).",
+  "feed.actions.open": "Fakaava",
+  "feed.actions.jump.playwright": "Ko e ngaahi sivi Playwright 'o e lele ko 'eni",
+  "feed.actions.jump.unit": "Ko e ngaahi sivi 'a e tauhi'anga tonu 'i he lele ko 'eni",
+  "feed.actions.jump.warnings": "Ko e ngaahi fakatokanga 'o e lele ko 'eni",
   "feed.filter.search": "Kumi 'i he ngaahi lele",
   "feed.filter.all": "kotoa",
   "feed.filter.event": "Me'a na'e hoko",
@@ -188,6 +194,23 @@
   "security.column.source": "Tupu'anga",
   "security.column.alert": "Fakatokanga",
   "security.column.summary": "Fakanounou",
+  "warnings.column.level": "Tu'unga",
+  "warnings.column.repository": "Tauhi'anga",
+  "warnings.column.run": "Lele",
+  "warnings.column.job": "Ngāue",
+  "warnings.column.where": "Fē",
+  "warnings.column.title": "Hingoa",
+  "warnings.column.message": "Pōpoaki",
+  "warnings.level.failure": "hala",
+  "warnings.level.warning": "fakatokanga",
+  "warnings.level.notice": "fakamatala",
+  "warnings.note": {
+    "other": "'I he lele 'e {n}: hala 'e {failure}, fakatokanga 'e {warning}, fakamatala 'e {notice}."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: kuo lau 'a e {done} 'i he ngāue 'e {n}."
+  },
+  "warnings.noRun": "'Oku 'ikai ha va'a kuo fakamaaka'i 'oku 'i ai ha'ane lele tafenga ngāue.",
   "security.column.since": "Talu mei",
   "security.severity.critical": "fu'u mamafa",
   "security.severity.high": "mā'olunga",
@@ -355,9 +378,13 @@
   "tests.code.file": "faile",
   "tests.code.language": "lea",
   "tests.code.cases": "sivi",
+  "tests.code.run": "lele",
   "tests.code.reading": "'Oku lau 'a e ngaahi sivi…",
   "tests.code.note": {
     "other": "Faile 'e {n} mo e sivi 'e {cases}."
+  },
+  "tests.code.held": {
+    "other": "Na'e līpooti 'e he lele {run} 'a e {n} 'iate kinautolu."
   },
   "tests.code.noCases": "Na'e 'ikai ke 'ilo ha sivi 'i he faile ko 'eni.",
   "tests.code.noTree": "'Oku 'ikai tuku mai 'a e va'a sivi 'i he {path}.",

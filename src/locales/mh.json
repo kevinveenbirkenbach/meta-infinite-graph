@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Kōm̧m̧an ko",
   "view.security": "Kōjparok",
+  "view.warnings": "Kakkōl ko",
   "panel.filter": "Kāālōt",
   "panel.design": "Wāween",
   "design.theme": "Wāween kala",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ej kajjitōk ippān GitHub ta eo ear oktak",
   "loader.task.everything": "Ej kajjitōk ippān GitHub kōn aolep kōjerbal",
   "loader.task.artifacts": "Aatipak ko an kōjerbal #{number}: {done} jān {total}",
+  "loader.task.warnings": "Kakkōl ko: {done} jān {total} jerbal",
   "loader.task.artifact": "Aatipak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ear jab tōprak: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Aitokan",
   "feed.actions.running": "ej kōjerbal",
   "feed.actions.longest": "Kōjerbal eo eaitok tata ilo ko kwaļọk ear bōk {duration} ({run}).",
+  "feed.actions.open": "Kōpeļọk",
+  "feed.actions.jump.playwright": "Teej ko Playwright an kōjerbal in",
+  "feed.actions.jump.unit": "Teej ko an jikin kōjparok eo make ilo kōjerbal in",
+  "feed.actions.jump.warnings": "Kakkōl ko an kōjerbal in",
   "feed.filter.search": "Pukot kōjerbal ko",
   "feed.filter.all": "aolep",
   "feed.filter.event": "Waḷọk",
@@ -198,6 +204,25 @@
   "security.column.source": "Jikin jino",
   "security.column.alert": "Kōjjeļaḷ",
   "security.column.summary": "Kadu in naan",
+  "warnings.column.level": "Joñan",
+  "warnings.column.repository": "Jikin kōjparok",
+  "warnings.column.run": "Kōjerbal",
+  "warnings.column.job": "Jerbal",
+  "warnings.column.where": "Ia",
+  "warnings.column.title": "Taitōl",
+  "warnings.column.message": "Ennaan",
+  "warnings.level.failure": "bōd",
+  "warnings.level.warning": "kakkōl",
+  "warnings.level.notice": "jeje",
+  "warnings.note": {
+    "one": "Ilo {n} kōjerbal: {failure} bōd, {warning} kakkōl, {notice} jeje.",
+    "other": "Ilo {n} kōjerbal ko: {failure} bōd, {warning} kakkōl, {notice} jeje."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} jān {n} jerbal ear riiti.",
+    "other": "{repo} {run}: {done} jān {n} jerbal ko rar riiti."
+  },
+  "warnings.noRun": "Ejjeļọk iaan ra ko rej kakōļļe ewōr an kōjerbal in wāween jerbal.",
   "security.column.since": "Jān",
   "security.severity.critical": "kauwōtata ļap",
   "security.severity.high": "ļap",
@@ -378,10 +403,15 @@
   "tests.code.file": "faiļ",
   "tests.code.language": "kajin",
   "tests.code.cases": "keej",
+  "tests.code.run": "kōjerbal",
   "tests.code.reading": "Ej riiti teej ko…",
   "tests.code.note": {
     "one": "{n} faiļ kōn {cases} keej.",
     "other": "{n} faiļ ko kōn {cases} keej."
+  },
+  "tests.code.held": {
+    "one": "Kōjerbal {run} ear kwaļọk kōn {n} iaer.",
+    "other": "Kōjerbal {run} ear kwaļọk kōn {n} iaer."
   },
   "tests.code.noCases": "Ejjeļọk keej ear lo ilo faiļ in.",
   "tests.code.noTree": "Wōjke in teej ko ejjab litok ilo {path}.",

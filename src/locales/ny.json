@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Zochita",
   "view.security": "Chitetezo",
+  "view.warnings": "Machenjezo",
   "panel.filter": "Sefa",
   "panel.design": "Kapangidwe",
   "design.theme": "Mawonekedwe",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Tikufunsa GitHub zomwe zasintha",
   "loader.task.everything": "Tikupempha GitHub kuyendetsa konse",
   "loader.task.artifacts": "Zopangidwa za kuyendetsa #{number}: {done} mwa {total}",
+  "loader.task.warnings": "Machenjezo: {done} mwa ntchito {total}",
   "loader.task.artifact": "Chopangidwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zalephera: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Nthawi",
   "feed.actions.running": "kukuyenda",
   "feed.actions.longest": "Kuyendetsa kotalika kwambiri komwe kwasonyezedwa kunatenga {duration} ({run}).",
+  "feed.actions.open": "Tsegulani",
+  "feed.actions.jump.playwright": "Gulu la Playwright la kuyendetsa kumeneku",
+  "feed.actions.jump.unit": "Magulu a nkhokwe yomweyo pa kuyendetsa kumeneku",
+  "feed.actions.jump.warnings": "Machenjezo a kuyendetsa kumeneku",
   "feed.filter.search": "Sakani kuyendetsa",
   "feed.filter.all": "zonse",
   "feed.filter.event": "Chochitika",
@@ -198,6 +204,25 @@
   "security.column.source": "Gwero",
   "security.column.alert": "Chidziwitso",
   "security.column.summary": "Chidule",
+  "warnings.column.level": "Mlingo",
+  "warnings.column.repository": "Nkhokwe",
+  "warnings.column.run": "Kuyendetsa",
+  "warnings.column.job": "Ntchito",
+  "warnings.column.where": "Kuti",
+  "warnings.column.title": "Mutu",
+  "warnings.column.message": "Uthenga",
+  "warnings.level.failure": "cholakwika",
+  "warnings.level.warning": "chenjezo",
+  "warnings.level.notice": "chidziwitso",
+  "warnings.note": {
+    "one": "Pa kuyendetsa {n}: zolakwika {failure}, machenjezo {warning}, zidziwitso {notice}.",
+    "other": "Pa kuyendetsa {n}: zolakwika {failure}, machenjezo {warning}, zidziwitso {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: zawerengedwa {done} mwa ntchito {n}.",
+    "other": "{repo} {run}: zawerengedwa {done} mwa ntchito {n}."
+  },
+  "warnings.noRun": "Palibe nthambi yosankhidwa yomwe ili ndi kuyendetsa kwa workflow.",
   "security.column.since": "Kuyambira",
   "security.severity.critical": "loopsa kwambiri",
   "security.severity.high": "lalikulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayilo",
   "tests.code.language": "chilankhulo",
   "tests.code.cases": "zochitika",
+  "tests.code.run": "kuyendetsa",
   "tests.code.reading": "Kuwerenga gulu…",
   "tests.code.note": {
     "one": "Fayilo {n} ndi zochitika {cases}.",
     "other": "Mafayilo {n} ndi zochitika {cases}."
+  },
+  "tests.code.held": {
+    "one": "Kuyendetsa {run} kunanena za {n} mwa izo.",
+    "other": "Kuyendetsa {run} kunanena za {n} mwa izo."
   },
   "tests.code.noCases": "Palibe chochitika chomwe chapezeka mu fayilo iyi.",
   "tests.code.noTree": "Mtengo wa mayeso sukuperekedwa pa {path}.",

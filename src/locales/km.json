@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "សកម្មភាព",
   "view.security": "សុវត្ថិភាព",
+  "view.warnings": "ការព្រមាន",
   "panel.filter": "តម្រង",
   "panel.design": "រចនា",
   "design.theme": "រូបរាង",
@@ -163,6 +164,7 @@
   "loader.task.changes": "កំពុងសួរ GitHub ថាមានអ្វីផ្លាស់ប្ដូរ",
   "loader.task.everything": "កំពុងស្នើសុំដំណើរការទាំងអស់ពី GitHub",
   "loader.task.artifacts": "កញ្ចប់លទ្ធផលនៃដំណើរការ #{number}៖ {done} ក្នុងចំណោម {total}",
+  "loader.task.warnings": "ការព្រមាន៖ {done} ក្នុងចំណោមការងារ {total}",
   "loader.task.artifact": "កញ្ចប់លទ្ធផល {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "បរាជ័យ៖ {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "រយៈពេល",
   "feed.actions.running": "កំពុងដំណើរការ",
   "feed.actions.longest": "ដំណើរការវែងជាងគេដែលបានបង្ហាញ ចំណាយពេល {duration} ({run})។",
+  "feed.actions.open": "បើក",
+  "feed.actions.jump.playwright": "ឈុត Playwright នៃដំណើរការនេះ",
+  "feed.actions.jump.unit": "ឈុតផ្ទាល់របស់ឃ្លាំង នៅដំណើរការនេះ",
+  "feed.actions.jump.warnings": "ការព្រមាននៃដំណើរការនេះ",
   "feed.filter.search": "ស្វែងរកការដំណើរការ",
   "feed.filter.all": "ទាំងអស់",
   "feed.filter.event": "ព្រឹត្តិការណ៍",
@@ -188,6 +194,23 @@
   "security.column.source": "ប្រភព",
   "security.column.alert": "ការជូនដំណឹង",
   "security.column.summary": "សេចក្ដីសង្ខេប",
+  "warnings.column.level": "កម្រិត",
+  "warnings.column.repository": "ឃ្លាំង",
+  "warnings.column.run": "ដំណើរការ",
+  "warnings.column.job": "ការងារ",
+  "warnings.column.where": "កន្លែង",
+  "warnings.column.title": "ចំណងជើង",
+  "warnings.column.message": "សារ",
+  "warnings.level.failure": "កំហុស",
+  "warnings.level.warning": "ការព្រមាន",
+  "warnings.level.notice": "ការជូនដំណឹង",
+  "warnings.note": {
+    "other": "នៅទូទាំងដំណើរការ {n}៖ កំហុស {failure}, ការព្រមាន {warning}, ការជូនដំណឹង {notice}។"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}៖ បានអាន {done} ក្នុងចំណោមការងារ {n}។"
+  },
+  "warnings.noRun": "គ្មានសាខាណាមួយដែលបានធីក មានដំណើរការលំហូរការងារទេ។",
   "security.column.since": "តាំងពី",
   "security.severity.critical": "ធ្ងន់ធ្ងរបំផុត",
   "security.severity.high": "ខ្ពស់",
@@ -355,9 +378,13 @@
   "tests.code.file": "ឯកសារ",
   "tests.code.language": "ភាសា",
   "tests.code.cases": "ករណី",
+  "tests.code.run": "ដំណើរការ",
   "tests.code.reading": "កំពុងអានឈុត…",
   "tests.code.note": {
     "other": "ឯកសារ {n} ដែលមានករណី {cases}។"
+  },
+  "tests.code.held": {
+    "other": "ដំណើរការ {run} បានរាយការណ៍អំពី {n} ក្នុងចំណោមនោះ។"
   },
   "tests.code.noCases": "រកមិនឃើញករណីណាមួយក្នុងឯកសារនេះទេ។",
   "tests.code.noTree": "មែកធាងតេស្តមិនត្រូវបានផ្ដល់នៅ {path} ទេ។",

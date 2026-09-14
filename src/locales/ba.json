@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ғәмәлдәр",
   "view.security": "Хәүефһеҙлек",
+  "view.warnings": "Киҫәтеүҙәр",
   "panel.filter": "Фильтр",
   "panel.design": "Дизайн",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-тан нимә үҙгәргәне һорала",
   "loader.task.everything": "GitHub-тан һәр башҡарыу һорала",
   "loader.task.artifacts": "#{number} башҡарыуының артефакттары: {done}/{total}",
+  "loader.task.warnings": "Киҫәтеүҙәр: {total} эштең {done}-ы",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "уңышһыҙ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Оҙайлылыҡ",
   "feed.actions.running": "башҡарыла",
   "feed.actions.longest": "Күрһәтелгән иң оҙон башҡарыу {duration} дауам итте ({run}).",
+  "feed.actions.open": "Асырға",
+  "feed.actions.jump.playwright": "Был башҡарыуҙың Playwright йыйылмаһы",
+  "feed.actions.jump.unit": "Был башҡарыуҙа репозиторийҙың үҙ йыйылмалары",
+  "feed.actions.jump.warnings": "Был башҡарыуҙың киҫәтеүҙәре",
   "feed.filter.search": "Башҡарыуҙарҙан эҙләү",
   "feed.filter.all": "барыһы",
   "feed.filter.event": "Ваҡиға",
@@ -198,6 +204,25 @@
   "security.column.source": "Сығанаҡ",
   "security.column.alert": "Иҫкәртеү",
   "security.column.summary": "Йомғаҡ",
+  "warnings.column.level": "Кимәл",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Башҡарыу",
+  "warnings.column.job": "Эш",
+  "warnings.column.where": "Ҡайҙа",
+  "warnings.column.title": "Исем",
+  "warnings.column.message": "Хәбәр",
+  "warnings.level.failure": "хата",
+  "warnings.level.warning": "киҫәтеү",
+  "warnings.level.notice": "иҫкәрмә",
+  "warnings.note": {
+    "one": "{n} башҡарыуҙа: {failure} хата, {warning} киҫәтеү, {notice} иҫкәрмә.",
+    "other": "{n} башҡарыуҙа: {failure} хата, {warning} киҫәтеү, {notice} иҫкәрмә."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} эштең {done}-ы уҡылды.",
+    "other": "{repo} {run}: {n} эштең {done}-ы уҡылды."
+  },
+  "warnings.noRun": "Билдәләнгән тармаҡтарҙың береһенең дә workflow башҡарыуы юҡ.",
   "security.column.since": "Ҡасандан",
   "security.severity.critical": "критик",
   "security.severity.high": "юғары",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "тел",
   "tests.code.cases": "осраҡтар",
+  "tests.code.run": "башҡарыу",
   "tests.code.reading": "Тест йыйылмаһы уҡыла…",
   "tests.code.note": {
     "one": "{n} файл, {cases} осраҡ.",
     "other": "{n} файл, {cases} осраҡ."
+  },
+  "tests.code.held": {
+    "one": "{run} башҡарыуы улар араһынан {n}-ы тураһында хәбәр итте.",
+    "other": "{run} башҡарыуы улар араһынан {n}-ы тураһында хәбәр итте."
   },
   "tests.code.noCases": "Был файлда бер осраҡ та табылманы.",
   "tests.code.noTree": "Тест ағасы {path} буйынса бирелмәй.",

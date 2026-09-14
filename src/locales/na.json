@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Akjen",
   "view.security": "Sekiuriti",
+  "view.warnings": "Waning",
   "panel.filter": "Pirta",
   "panel.design": "Dijãin",
   "design.theme": "Tim",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Anga GitHub ñaga oiyeiy",
   "loader.task.everything": "Anga GitHub ran ot",
   "loader.task.artifacts": "Artifak ran #{number}: {done} ijeiji {total}",
+  "loader.task.warnings": "Waning: {done} ijeiji {total} job",
   "loader.task.artifact": "Artifak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "eko: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Tãim",
   "feed.actions.running": "ũge ran",
   "feed.actions.longest": "Ran ebaga ijeiji eõ {duration} ({run}).",
+  "feed.actions.open": "Wabo",
+  "feed.actions.jump.playwright": "Playwright teset ijeiji ran ñaga",
+  "feed.actions.jump.unit": "Teset ribo eoean ijeiji ran ñaga",
+  "feed.actions.jump.warnings": "Waning ijeiji ran ñaga",
   "feed.filter.search": "Tjet ran",
   "feed.filter.all": "dogin",
   "feed.filter.event": "Ivent",
@@ -198,6 +204,25 @@
   "security.column.source": "Tot",
   "security.column.alert": "Arat",
   "security.column.summary": "Samari",
+  "warnings.column.level": "Lewel",
+  "warnings.column.repository": "Ribo",
+  "warnings.column.run": "Ran",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Iowa",
+  "warnings.column.title": "Taitor",
+  "warnings.column.message": "Mesej",
+  "warnings.level.failure": "ero",
+  "warnings.level.warning": "waning",
+  "warnings.level.notice": "notis",
+  "warnings.note": {
+    "one": "Ijeiji {n} ran: {failure} ero, {warning} waning, {notice} notis.",
+    "other": "Ijeiji {n} ran: {failure} ero, {warning} waning, {notice} notis."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} ijeiji {n} job rid.",
+    "other": "{repo} {run}: {done} ijeiji {n} job rid."
+  },
+  "warnings.noRun": "Brenj eko ñaga iyo rue ran workflow.",
   "security.column.since": "Tãt",
   "security.severity.critical": "kritikar",
   "security.severity.high": "hai",
@@ -378,10 +403,15 @@
   "tests.code.file": "fail",
   "tests.code.language": "dorer",
   "tests.code.cases": "kes",
+  "tests.code.run": "ran",
   "tests.code.reading": "Rid teset…",
   "tests.code.note": {
     "one": "{n} fail ma {cases} kes.",
     "other": "{n} fail ma {cases} kes."
+  },
+  "tests.code.held": {
+    "one": "Ran {run} ripot {n} ijeiji ier.",
+    "other": "Ran {run} ripot {n} ijeiji ier."
   },
   "tests.code.noCases": "Eko kes iyo rue fail ñaga.",
   "tests.code.noTree": "Teset tri eko rue i {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Үйлдлүүд",
   "view.security": "Аюулгүй байдал",
+  "view.warnings": "Анхааруулгууд",
   "panel.filter": "Шүүлтүүр",
   "panel.design": "Загвар",
   "design.theme": "Өнгөний сэдэв",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-аас юу өөрчлөгдсөнийг асууж байна",
   "loader.task.everything": "GitHub-аас бүх ажиллалтыг асууж байна",
   "loader.task.artifacts": "Ажиллалт #{number}-ийн артефактууд: {total}-аас {done}",
+  "loader.task.warnings": "Анхааруулгууд: {total} ажлын {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "амжилтгүй: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Үргэлжлэх хугацаа",
   "feed.actions.running": "ажиллаж байна",
   "feed.actions.longest": "Харуулсан хамгийн урт ажиллалт {duration} үргэлжилсэн ({run}).",
+  "feed.actions.open": "Нээх",
+  "feed.actions.jump.playwright": "Энэ ажиллалтын Playwright багц",
+  "feed.actions.jump.unit": "Энэ ажиллалт дахь репозиторийн өөрийн багцууд",
+  "feed.actions.jump.warnings": "Энэ ажиллалтын анхааруулгууд",
   "feed.filter.search": "Ажиллалт хайх",
   "feed.filter.all": "бүгд",
   "feed.filter.event": "Үйл явдал",
@@ -198,6 +204,25 @@
   "security.column.source": "Эх сурвалж",
   "security.column.alert": "Сэрэмжлүүлэг",
   "security.column.summary": "Хураангуй",
+  "warnings.column.level": "Түвшин",
+  "warnings.column.repository": "Репозитори",
+  "warnings.column.run": "Ажиллалт",
+  "warnings.column.job": "Ажил",
+  "warnings.column.where": "Хаана",
+  "warnings.column.title": "Гарчиг",
+  "warnings.column.message": "Мэдэгдэл",
+  "warnings.level.failure": "алдаа",
+  "warnings.level.warning": "анхааруулга",
+  "warnings.level.notice": "тэмдэглэл",
+  "warnings.note": {
+    "one": "{n} ажиллалтад: {failure} алдаа, {warning} анхааруулга, {notice} тэмдэглэл.",
+    "other": "{n} ажиллалтад: {failure} алдаа, {warning} анхааруулга, {notice} тэмдэглэл."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ажлын {done}-ыг уншлаа.",
+    "other": "{repo} {run}: {n} ажлын {done}-ыг уншлаа."
+  },
+  "warnings.noRun": "Тэмдэглэсэн салбаруудын аль нь ч workflow ажиллалтгүй.",
   "security.column.since": "Хэзээнээс",
   "security.severity.critical": "эгзэгтэй",
   "security.severity.high": "өндөр",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "хэл",
   "tests.code.cases": "тохиолдол",
+  "tests.code.run": "ажиллалт",
   "tests.code.reading": "Багцыг уншиж байна…",
   "tests.code.note": {
     "one": "{n} файл, {cases} тохиолдол.",
     "other": "{n} файл, {cases} тохиолдол."
+  },
+  "tests.code.held": {
+    "one": "{run} ажиллалт тэдгээрийн {n}-ыг мэдээлсэн.",
+    "other": "{run} ажиллалт тэдгээрийн {n}-ыг мэдээлсэн."
   },
   "tests.code.noCases": "Энэ файлаас тохиолдол олдсонгүй.",
   "tests.code.noTree": "Тестийн мод {path} дээр өгөгддөггүй.",

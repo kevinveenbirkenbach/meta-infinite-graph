@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Kara",
   "view.security": "Gimaia",
+  "view.warnings": "Hadibaia herevadia",
   "panel.filter": "Filta",
   "panel.design": "Toana",
   "design.theme": "Kalana",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub henanadai noho dahaka idia haidaua",
   "loader.task.everything": "GitHub dekenai heau ibounai noia noho",
   "loader.task.artifacts": "Heau #{number} ena gaukara kohu: {done} {total} amo",
+  "loader.task.warnings": "Hadibaia herevadia: gaukara {total} amo {done}",
   "loader.task.artifact": "Gaukara kohu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ia dika: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Nega",
   "feed.actions.running": "ia heau",
   "feed.actions.longest": "Heau ia lata herea ia hahedinaraia ese nega {duration} ia abia ({run}).",
+  "feed.actions.open": "Kehoa",
+  "feed.actions.jump.playwright": "Inai heau ena Playwright hetoho",
+  "feed.actions.jump.unit": "Inai heau ai stoa sibona ena hetoho",
+  "feed.actions.jump.warnings": "Inai heau ena hadibaia herevadia",
   "feed.filter.search": "Heau idia tahua",
   "feed.filter.all": "ibounai",
   "feed.filter.event": "Gau ia vara",
@@ -198,6 +204,25 @@
   "security.column.source": "Vara gabuna",
   "security.column.alert": "Hamaoro",
   "security.column.summary": "Hereva kwadogi",
+  "warnings.column.level": "Ahuna",
+  "warnings.column.repository": "Stoa",
+  "warnings.column.run": "Heau",
+  "warnings.column.job": "Gaukara",
+  "warnings.column.where": "Edeseni",
+  "warnings.column.title": "Ladana",
+  "warnings.column.message": "Hereva",
+  "warnings.level.failure": "kerere",
+  "warnings.level.warning": "hadibaia hereva",
+  "warnings.level.notice": "hadibaia",
+  "warnings.note": {
+    "one": "Heau {n} lalonai: kerere {failure}, hadibaia herevadia {warning}, hadibaia {notice}.",
+    "other": "Heau {n} lalodiai: kerere {failure}, hadibaia herevadia {warning}, hadibaia {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: gaukara {n} amo {done} idia duahia.",
+    "other": "{repo} {run}: gaukara {n} amo {done} idia duahia."
+  },
+  "warnings.noRun": "Abia hidi rigina ta be gaukara dalana heau ia lasi.",
   "security.column.since": "Amo",
   "security.severity.critical": "metau herea",
   "security.severity.high": "ataiai",
@@ -378,10 +403,15 @@
   "tests.code.file": "faila",
   "tests.code.language": "gado",
   "tests.code.cases": "kara",
+  "tests.code.run": "heau",
   "tests.code.reading": "Hetoho idia duahia noho…",
   "tests.code.note": {
     "one": "Faila {n}, kara {cases} ida.",
     "other": "Faila {n}, kara {cases} ida."
+  },
+  "tests.code.held": {
+    "one": "Heau {run} ese edia {n} ia gwauraia hedinarai.",
+    "other": "Heau {run} ese edia {n} ia gwauraia hedinarai."
   },
   "tests.code.noCases": "Inai faila lalonai kara ta ia davaria lasi.",
   "tests.code.noTree": "Hetoho auna be {path} ai ia henia lasi.",

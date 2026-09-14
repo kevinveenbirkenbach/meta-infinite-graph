@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Accións",
   "view.security": "Seguridade",
+  "view.warnings": "Advertencias",
   "panel.filter": "Filtro",
   "panel.design": "Deseño",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Preguntando a GitHub que cambiou",
   "loader.task.everything": "Pedindo a GitHub todas as execucións",
   "loader.task.artifacts": "Artefactos da execución #{number}: {done} de {total}",
+  "loader.task.warnings": "Advertencias: {done} de {total} traballos",
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallou: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duración",
   "feed.actions.running": "en curso",
   "feed.actions.longest": "A execución máis longa amosada durou {duration} ({run}).",
+  "feed.actions.open": "Abrir",
+  "feed.actions.jump.playwright": "Batería de Playwright desta execución",
+  "feed.actions.jump.unit": "As baterías propias do repositorio nesta execución",
+  "feed.actions.jump.warnings": "Advertencias desta execución",
   "feed.filter.search": "Buscar nas execucións",
   "feed.filter.all": "todos",
   "feed.filter.event": "Evento",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonte",
   "security.column.alert": "Alerta",
   "security.column.summary": "Resumo",
+  "warnings.column.level": "Nivel",
+  "warnings.column.repository": "Repositorio",
+  "warnings.column.run": "Execución",
+  "warnings.column.job": "Traballo",
+  "warnings.column.where": "Onde",
+  "warnings.column.title": "Título",
+  "warnings.column.message": "Mensaxe",
+  "warnings.level.failure": "erro",
+  "warnings.level.warning": "advertencia",
+  "warnings.level.notice": "nota",
+  "warnings.note": {
+    "one": "En {n} execución: {failure} erros, {warning} advertencias, {notice} notas.",
+    "other": "En {n} execucións: {failure} erros, {warning} advertencias, {notice} notas."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} de {n} traballo lido.",
+    "other": "{repo} {run}: {done} de {n} traballos lidos."
+  },
+  "warnings.noRun": "Ningunha das ramas marcadas ten execución de fluxo de traballo.",
   "security.column.since": "Desde",
   "security.severity.critical": "crítica",
   "security.severity.high": "alta",
@@ -378,10 +403,15 @@
   "tests.code.file": "ficheiro",
   "tests.code.language": "linguaxe",
   "tests.code.cases": "casos",
+  "tests.code.run": "execución",
   "tests.code.reading": "Lendo a batería…",
   "tests.code.note": {
     "one": "{n} ficheiro con {cases} casos.",
     "other": "{n} ficheiros con {cases} casos."
+  },
+  "tests.code.held": {
+    "one": "A execución {run} informou de {n} deles.",
+    "other": "A execución {run} informou de {n} deles."
   },
   "tests.code.noCases": "Non se atopou ningún caso neste ficheiro.",
   "tests.code.noTree": "A árbore de probas non se serve en {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actiones",
   "view.security": "Securitas",
+  "view.warnings": "Monitiones",
   "panel.filter": "Colum",
   "panel.design": "Species",
   "design.theme": "Thema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub rogatur quid mutatum sit",
   "loader.task.everything": "A GitHub omnes cursus petuntur",
   "loader.task.artifacts": "Artefacta cursus #{number}: {done} ex {total}",
+  "loader.task.warnings": "Monitiones: {done} ex {total} operibus",
   "loader.task.artifact": "Artefactum {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "defecit: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duratio",
   "feed.actions.running": "in cursu",
   "feed.actions.longest": "Cursus longissimus ostensus {duration} duravit ({run}).",
+  "feed.actions.open": "Aperire",
+  "feed.actions.jump.playwright": "Series Playwright huius cursus",
+  "feed.actions.jump.unit": "Series propriae repositorii in hoc cursu",
+  "feed.actions.jump.warnings": "Monitiones huius cursus",
   "feed.filter.search": "In cursibus quaerere",
   "feed.filter.all": "omnia",
   "feed.filter.event": "Eventus",
@@ -198,6 +204,25 @@
   "security.column.source": "Fons",
   "security.column.alert": "Admonitio",
   "security.column.summary": "Summarium",
+  "warnings.column.level": "Gradus",
+  "warnings.column.repository": "Repositorium",
+  "warnings.column.run": "Cursus",
+  "warnings.column.job": "Opus",
+  "warnings.column.where": "Ubi",
+  "warnings.column.title": "Titulus",
+  "warnings.column.message": "Nuntius",
+  "warnings.level.failure": "erratum",
+  "warnings.level.warning": "monitio",
+  "warnings.level.notice": "nota",
+  "warnings.note": {
+    "one": "Per {n} cursum: {failure} errata, {warning} monitiones, {notice} notae.",
+    "other": "Per {n} cursus: {failure} errata, {warning} monitiones, {notice} notae."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} ex {n} opere lectum.",
+    "other": "{repo} {run}: {done} ex {n} operibus lecta."
+  },
+  "warnings.noRun": "Nullus ramorum notatorum cursum operis habet.",
   "security.column.since": "Ex quo",
   "security.severity.critical": "critica",
   "security.severity.high": "alta",
@@ -378,10 +403,15 @@
   "tests.code.file": "plica",
   "tests.code.language": "lingua",
   "tests.code.cases": "casus",
+  "tests.code.run": "cursus",
   "tests.code.reading": "Series probationum legitur…",
   "tests.code.note": {
     "one": "{n} plica cum {cases} casibus.",
     "other": "{n} plicae cum {cases} casibus."
+  },
+  "tests.code.held": {
+    "one": "Cursus {run} de {n} ex eis rettulit.",
+    "other": "Cursus {run} de {n} ex eis rettulit."
   },
   "tests.code.noCases": "Nullus casus in hac plica inventus est.",
   "tests.code.noTree": "Arbor probationum ad {path} non praebetur.",

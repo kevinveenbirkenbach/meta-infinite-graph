@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Misala",
   "view.security": "Libateli",
+  "view.warnings": "Makebisi",
   "panel.filter": "Kopona",
   "panel.design": "Bolɛngɛli",
   "design.theme": "Motindo",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ezali kotuna GitHub oyo ebongwani",
   "loader.task.everything": "Ezali kotuna GitHub botamboli nyonso",
   "loader.task.artifacts": "Artefakti ya botamboli #{number}: {done} kati na {total}",
+  "loader.task.warnings": "Makebisi: {done} na {total} misala",
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ekweyi: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ntango",
   "feed.actions.running": "ezali kotambola",
   "feed.actions.longest": "Botamboli ya molai koleka oyo emonisami ezwaki {duration} ({run}).",
+  "feed.actions.open": "Kofungola",
+  "feed.actions.jump.playwright": "Mimekano ya Playwright ya botamboli oyo",
+  "feed.actions.jump.unit": "Mimekano ya ebombelo yango moko na botamboli oyo",
+  "feed.actions.jump.warnings": "Makebisi ya botamboli oyo",
   "feed.filter.search": "Koluka botamboli",
   "feed.filter.all": "nyonso",
   "feed.filter.event": "Likambo",
@@ -198,6 +204,25 @@
   "security.column.source": "Liziba",
   "security.column.alert": "Liyebisi",
   "security.column.summary": "Mokuse",
+  "warnings.column.level": "Nivo",
+  "warnings.column.repository": "Ebombelo",
+  "warnings.column.run": "Botamboli",
+  "warnings.column.job": "Mosala",
+  "warnings.column.where": "Wapi",
+  "warnings.column.title": "Motó ya likambo",
+  "warnings.column.message": "Nsango",
+  "warnings.level.failure": "libunga",
+  "warnings.level.warning": "likebisi",
+  "warnings.level.notice": "maloba",
+  "warnings.note": {
+    "one": "Na botamboli {n}: mabunga {failure}, makebisi {warning}, maloba {notice}.",
+    "other": "Na botamboli {n}: mabunga {failure}, makebisi {warning}, maloba {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} na mosala {n} etángami.",
+    "other": "{repo} {run}: {done} na misala {n} etángami."
+  },
+  "warnings.noRun": "Etámbe moko te oyo eponami ezali na botamboli ya mosala.",
   "security.column.since": "Banda",
   "security.severity.critical": "makasi mingi",
   "security.severity.high": "likoló",
@@ -378,10 +403,15 @@
   "tests.code.file": "fisyé",
   "tests.code.language": "monɔkɔ",
   "tests.code.cases": "mimekano",
+  "tests.code.run": "botamboli",
   "tests.code.reading": "Ezali kotánga mimekano…",
   "tests.code.note": {
     "one": "Fisyé {n} na mimekano {cases}.",
     "other": "Bafisyé {n} na mimekano {cases}."
+  },
+  "tests.code.held": {
+    "one": "Botamboli {run} elobelaki {n} kati na yango.",
+    "other": "Botamboli {run} elobelaki {n} kati na yango."
   },
   "tests.code.noCases": "Momekano moko te emonanaki na fisyé oyo.",
   "tests.code.noTree": "Nzete ya mimekano epesami te na {path}.",

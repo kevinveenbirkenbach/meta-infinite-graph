@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ayyuka",
   "view.security": "Tsaro",
+  "view.warnings": "Gargaɗi",
   "panel.filter": "Tacewa",
   "panel.design": "Zane",
   "design.theme": "Jigo",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ana tambayar GitHub abin da ya canza",
   "loader.task.everything": "Ana neman duk gudanarwa daga GitHub",
   "loader.task.artifacts": "Kayan fitarwa na gudanarwa #{number}: {done} daga cikin {total}",
+  "loader.task.warnings": "Gargaɗi: {done} daga cikin ayyuka {total}",
   "loader.task.artifact": "Kayan fitarwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ya gaza: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Tsawon lokaci",
   "feed.actions.running": "yana gudana",
   "feed.actions.longest": "Gudanarwa mafi tsawo da aka nuna ta ɗauki {duration} ({run}).",
+  "feed.actions.open": "Buɗe",
+  "feed.actions.jump.playwright": "Gwaje-gwajen Playwright na wannan gudanarwa",
+  "feed.actions.jump.unit": "Gwaje-gwajen ma'ajiyar kanta a wannan gudanarwa",
+  "feed.actions.jump.warnings": "Gargaɗin wannan gudanarwa",
   "feed.filter.search": "Nemi a cikin gudanarwa",
   "feed.filter.all": "duka",
   "feed.filter.event": "Lamari",
@@ -198,6 +204,25 @@
   "security.column.source": "Tushe",
   "security.column.alert": "Faɗakarwa",
   "security.column.summary": "Taƙaitawa",
+  "warnings.column.level": "Matakin",
+  "warnings.column.repository": "Ma'ajiya",
+  "warnings.column.run": "Gudanarwa",
+  "warnings.column.job": "Aiki",
+  "warnings.column.where": "Inda",
+  "warnings.column.title": "Take",
+  "warnings.column.message": "Saƙo",
+  "warnings.level.failure": "kuskure",
+  "warnings.level.warning": "gargaɗi",
+  "warnings.level.notice": "bayani",
+  "warnings.note": {
+    "one": "A cikin gudanarwa {n}: kurakurai {failure}, gargaɗi {warning}, bayanai {notice}.",
+    "other": "A cikin gudanarwa {n}: kurakurai {failure}, gargaɗi {warning}, bayanai {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: an karanta {done} daga cikin aiki {n}.",
+    "other": "{repo} {run}: an karanta {done} daga cikin ayyuka {n}."
+  },
+  "warnings.noRun": "Babu ɗaya daga cikin rassan da aka zaɓa da ke da gudanarwar aiki.",
   "security.column.since": "Tun",
   "security.severity.critical": "mai tsanani ƙwarai",
   "security.severity.high": "babba",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayil",
   "tests.code.language": "harshe",
   "tests.code.cases": "gwaje-gwaje",
+  "tests.code.run": "gudanarwa",
   "tests.code.reading": "Ana karanta tarin gwaje-gwajen…",
   "tests.code.note": {
     "one": "Fayil {n} mai gwaje-gwaje {cases}.",
     "other": "Fayiloli {n} masu gwaje-gwaje {cases}."
+  },
+  "tests.code.held": {
+    "one": "Gudanarwa {run} ta ba da rahoton {n} daga cikinsu.",
+    "other": "Gudanarwa {run} ta ba da rahoton {n} daga cikinsu."
   },
   "tests.code.noCases": "Ba a sami wani gwaji a cikin wannan fayil ba.",
   "tests.code.noTree": "Ba a bayar da bishiyar gwaje-gwaje a {path} ba.",

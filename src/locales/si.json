@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ක්‍රියා",
   "view.security": "ආරක්ෂාව",
+  "view.warnings": "අනතුරු ඇඟවීම්",
   "panel.filter": "පෙරහන",
   "panel.design": "පෙනුම",
   "design.theme": "තේමාව",
@@ -172,6 +173,7 @@
   "loader.task.changes": "වෙනස් වූ දේ GitHub වෙතින් විමසමින්",
   "loader.task.everything": "සියලු ධාවන GitHub වෙතින් විමසමින්",
   "loader.task.artifacts": "ධාවනය #{number} හි ආටිෆැක්ට්: {total} න් {done}",
+  "loader.task.warnings": "අනතුරු ඇඟවීම්: රැකියා {total}න් {done}",
   "loader.task.artifact": "ආටිෆැක්ට් {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "අසමත් විය: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "කාලසීමාව",
   "feed.actions.running": "ධාවනය වෙමින්",
   "feed.actions.longest": "පෙන්වා ඇති දිගම ධාවනයට {duration} ({run}) ගත විය.",
+  "feed.actions.open": "විවෘත කරන්න",
+  "feed.actions.jump.playwright": "මෙම ධාවනයේ Playwright කට්ටලය",
+  "feed.actions.jump.unit": "මෙම ධාවනයේදී ගබඩාවේම කට්ටල",
+  "feed.actions.jump.warnings": "මෙම ධාවනයේ අනතුරු ඇඟවීම්",
   "feed.filter.search": "ධාවන සොයන්න",
   "feed.filter.all": "සියල්ල",
   "feed.filter.event": "සිදුවීම",
@@ -198,6 +204,25 @@
   "security.column.source": "මූලාශ්‍රය",
   "security.column.alert": "අනතුරු ඇඟවීම",
   "security.column.summary": "සාරාංශය",
+  "warnings.column.level": "මට්ටම",
+  "warnings.column.repository": "ගබඩාව",
+  "warnings.column.run": "ධාවනය",
+  "warnings.column.job": "රැකියාව",
+  "warnings.column.where": "කොහේද",
+  "warnings.column.title": "සිරස්තලය",
+  "warnings.column.message": "පණිවිඩය",
+  "warnings.level.failure": "දෝෂය",
+  "warnings.level.warning": "අනතුරු ඇඟවීම",
+  "warnings.level.notice": "දැනුම්දීම",
+  "warnings.note": {
+    "one": "ධාවන {n}ක් හරහා: දෝෂ {failure}ක්, අනතුරු ඇඟවීම් {warning}ක්, දැනුම්දීම් {notice}ක්.",
+    "other": "ධාවන {n}ක් හරහා: දෝෂ {failure}ක්, අනතුරු ඇඟවීම් {warning}ක්, දැනුම්දීම් {notice}ක්."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: රැකියා {n}න් {done}ක් කියවා ඇත.",
+    "other": "{repo} {run}: රැකියා {n}න් {done}ක් කියවා ඇත."
+  },
+  "warnings.noRun": "සලකුණු කළ ශාඛාවලින් කිසිවකට කාර්ය ප්‍රවාහ ධාවනයක් නැත.",
   "security.column.since": "සිට",
   "security.severity.critical": "තීරණාත්මක",
   "security.severity.high": "ඉහළ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ගොනුව",
   "tests.code.language": "භාෂාව",
   "tests.code.cases": "අවස්ථා",
+  "tests.code.run": "ධාවනය",
   "tests.code.reading": "කට්ටලය කියවමින්…",
   "tests.code.note": {
     "one": "අවස්ථා {cases}ක් සහිත ගොනු {n}ක්.",
     "other": "අවස්ථා {cases}ක් සහිත ගොනු {n}ක්."
+  },
+  "tests.code.held": {
+    "one": "ධාවනය {run} ඒවායින් {n}ක් වාර්තා කළේය.",
+    "other": "ධාවනය {run} ඒවායින් {n}ක් වාර්තා කළේය."
   },
   "tests.code.noCases": "මෙම ගොනුවේ කිසිදු අවස්ථාවක් හමු නොවීය.",
   "tests.code.noTree": "පරීක්ෂණ ගස {path} හිදී සපයනු නොලැබේ.",

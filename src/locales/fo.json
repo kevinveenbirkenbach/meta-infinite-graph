@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Gerðir",
   "view.security": "Trygd",
+  "view.warnings": "Ávaringar",
   "panel.filter": "Sía",
   "panel.design": "Útsjónd",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Spyr GitHub, hvat er broytt",
   "loader.task.everything": "Spyr GitHub eftir hvørjari koyring",
   "loader.task.artifacts": "Artefaktir úr koyring #{number}: {done} av {total}",
+  "loader.task.warnings": "Ávaringar: {done} av {total} arbeiðum",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "miseydnaðist: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Longd",
   "feed.actions.running": "koyrir",
   "feed.actions.longest": "Longsta vísta koyringin tók {duration} ({run}).",
+  "feed.actions.open": "Lat upp",
+  "feed.actions.jump.playwright": "Playwright-royndarsavn hjá hesi koyringini",
+  "feed.actions.jump.unit": "Egnu royndarsøvnini hjá goymsluni í hesi koyringini",
+  "feed.actions.jump.warnings": "Ávaringar hjá hesi koyringini",
   "feed.filter.search": "Leita í koyringunum",
   "feed.filter.all": "øll",
   "feed.filter.event": "Hending",
@@ -198,6 +204,25 @@
   "security.column.source": "Kelda",
   "security.column.alert": "Ávaring",
   "security.column.summary": "Samandráttur",
+  "warnings.column.level": "Stig",
+  "warnings.column.repository": "Goymsla",
+  "warnings.column.run": "Koyring",
+  "warnings.column.job": "Arbeiði",
+  "warnings.column.where": "Hvar",
+  "warnings.column.title": "Heiti",
+  "warnings.column.message": "Boð",
+  "warnings.level.failure": "villa",
+  "warnings.level.warning": "ávaring",
+  "warnings.level.notice": "viðmerking",
+  "warnings.note": {
+    "one": "Yvir {n} koyring: {failure} villur, {warning} ávaringar, {notice} viðmerkingar.",
+    "other": "Yvir {n} koyringar: {failure} villur, {warning} ávaringar, {notice} viðmerkingar."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} av {n} arbeiði lisið.",
+    "other": "{repo} {run}: {done} av {n} arbeiðum lisin."
+  },
+  "warnings.noRun": "Ongin av teimum valdu greinunum hevur eina arbeiðsgongd-koyring.",
   "security.column.since": "Síðan",
   "security.severity.critical": "avgerandi",
   "security.severity.high": "høg",
@@ -378,10 +403,15 @@
   "tests.code.file": "fíla",
   "tests.code.language": "mál",
   "tests.code.cases": "føri",
+  "tests.code.run": "koyring",
   "tests.code.reading": "Lesur royndarsavnið…",
   "tests.code.note": {
     "one": "{n} fíla við {cases} førum.",
     "other": "{n} fílur við {cases} førum."
+  },
+  "tests.code.held": {
+    "one": "Koyring {run} greindi frá {n} av teimum.",
+    "other": "Koyring {run} greindi frá {n} av teimum."
   },
   "tests.code.noCases": "Einki før varð funnið í hesi fíluni.",
   "tests.code.noTree": "Royndartræið verður ikki borið fram á {path}.",

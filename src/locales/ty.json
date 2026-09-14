@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Mau ʻohipa",
   "view.security": "Pārururaʻa",
+  "view.warnings": "Te mau faʻaararaʻa",
   "panel.filter": "Māʻiti",
   "panel.design": "Hōhoʻa",
   "design.theme": "Ū",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Te ui nei iā GitHub eaha tei taui",
   "loader.task.everything": "Te ani nei iā GitHub i te mau horoʻaraʻa atoʻa",
   "loader.task.artifacts": "Te mau ʻaretefata o te horoʻaraʻa #{number}: {done} i nià i te {total}",
+  "loader.task.warnings": "Faʻaararaʻa: {done} i nià i te {total} ʻohipa",
   "loader.task.artifact": "ʻAretefata {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ʻaita i manuïa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Roaraʻa",
   "feed.actions.running": "te horo nei",
   "feed.actions.longest": "Ua rave te horoʻaraʻa roa roa aʻe i faʻaitehia {duration} ({run}).",
+  "feed.actions.open": "Iriti",
+  "feed.actions.jump.playwright": "Te pupu Playwright o teie horoʻaraʻa",
+  "feed.actions.jump.unit": "Te mau pupu iho o te vairaʻa i teie horoʻaraʻa",
+  "feed.actions.jump.warnings": "Te mau faʻaararaʻa o teie horoʻaraʻa",
   "feed.filter.search": "ʻImi i roto i te mau horoʻaraʻa",
   "feed.filter.all": "pauroa",
   "feed.filter.event": "Tupuraʻa",
@@ -198,6 +204,25 @@
   "security.column.source": "Tumu",
   "security.column.alert": "Faʻaararaʻa",
   "security.column.summary": "Haʻapotoraʻa",
+  "warnings.column.level": "Faito",
+  "warnings.column.repository": "Vairaʻa",
+  "warnings.column.run": "Horoʻaraʻa",
+  "warnings.column.job": "ʻOhipa",
+  "warnings.column.where": "I hea",
+  "warnings.column.title": "Upoʻo parau",
+  "warnings.column.message": "Poroʻi",
+  "warnings.level.failure": "hape",
+  "warnings.level.warning": "faʻaararaʻa",
+  "warnings.level.notice": "haʻamanaʻoraʻa",
+  "warnings.note": {
+    "one": "I roto i te {n} horoʻaraʻa: {failure} hape, {warning} faʻaararaʻa, {notice} haʻamanaʻoraʻa.",
+    "other": "I roto i nā {n} horoʻaraʻa: {failure} hape, {warning} faʻaararaʻa, {notice} haʻamanaʻoraʻa."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: ua taiʻohia {done} i nià i te {n} ʻohipa.",
+    "other": "{repo} {run}: ua taiʻohia {done} i nià i nā {n} ʻohipa."
+  },
+  "warnings.noRun": "ʻAita hōʻē noa aʻe ʻāmaʻa i tāpaʻohia e horoʻaraʻa ʻohipa.",
   "security.column.since": "Mai",
   "security.severity.critical": "rahi roa",
   "security.severity.high": "teitei",
@@ -378,10 +403,15 @@
   "tests.code.file": "pue",
   "tests.code.language": "reo",
   "tests.code.cases": "huru",
+  "tests.code.run": "horoʻaraʻa",
   "tests.code.reading": "Te taiʻo nei i te pupu…",
   "tests.code.note": {
     "one": "{n} pue e {cases} huru.",
     "other": "{n} pue e {cases} huru."
+  },
+  "tests.code.held": {
+    "one": "Ua faʻaʻite te horoʻaraʻa {run} i te {n} o rātou.",
+    "other": "Ua faʻaʻite te horoʻaraʻa {run} i te {n} o rātou."
   },
   "tests.code.noCases": "ʻAita e huru i itehia i roto i teie pue.",
   "tests.code.noTree": "ʻAita te tumu tāmataraʻa e horoʻahia ra i {path}.",

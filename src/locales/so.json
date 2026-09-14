@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ficillo",
   "view.security": "Amniga",
+  "view.warnings": "Digniino",
   "panel.filter": "Sifee",
   "panel.design": "Naqshad",
   "design.theme": "Muuqaal",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub waxaa la weydiinayaa waxa isbeddelay",
   "loader.task.everything": "GitHub waxaa la weydiinayaa dhammaan socodsiinta",
   "loader.task.artifacts": "Wax-soo-saarka socodsiinta #{number}: {done} ka mid ah {total}",
+  "loader.task.warnings": "Digniino: {done} ka mid ah {total} shaqo",
   "loader.task.artifact": "Wax-soo-saar {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fashilmay: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Muddada",
   "feed.actions.running": "socda",
   "feed.actions.longest": "Socodsiinta ugu dheer ee la muujiyey waxay qaadatay {duration} ({run}).",
+  "feed.actions.open": "Fur",
+  "feed.actions.jump.playwright": "Tijaabooyinka Playwright ee socodsiintan",
+  "feed.actions.jump.unit": "Tijaabooyinka kaydka laftiisa ee socodsiintan",
+  "feed.actions.jump.warnings": "Digniinaha socodsiintan",
   "feed.filter.search": "Ka raadi socodsiinta",
   "feed.filter.all": "dhammaan",
   "feed.filter.event": "Dhacdo",
@@ -198,6 +204,25 @@
   "security.column.source": "Isha",
   "security.column.alert": "Digniin",
   "security.column.summary": "Soo koobid",
+  "warnings.column.level": "Heer",
+  "warnings.column.repository": "Kayd",
+  "warnings.column.run": "Socodsiin",
+  "warnings.column.job": "Shaqo",
+  "warnings.column.where": "Halka",
+  "warnings.column.title": "Cinwaan",
+  "warnings.column.message": "Fariin",
+  "warnings.level.failure": "khalad",
+  "warnings.level.warning": "digniin",
+  "warnings.level.notice": "xusuusin",
+  "warnings.note": {
+    "one": "Socodsiin {n} guud ahaan: {failure} khalad, {warning} digniin, {notice} xusuusin.",
+    "other": "Socodsiimo {n} guud ahaan: {failure} khalad, {warning} digniin, {notice} xusuusin."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} ka mid ah {n} shaqo ayaa la akhriyay.",
+    "other": "{repo} {run}: {done} ka mid ah {n} shaqo ayaa la akhriyay."
+  },
+  "warnings.noRun": "Laamaha la calaamadeeyay midna ma laha socodsiin hawleed.",
   "security.column.since": "Tan iyo",
   "security.severity.critical": "halis ah",
   "security.severity.high": "sare",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayl",
   "tests.code.language": "luqad",
   "tests.code.cases": "tusaalooyin",
+  "tests.code.run": "socodsiin",
   "tests.code.reading": "Waxaa la akhrinayaa tijaabooyinka…",
   "tests.code.note": {
     "one": "{n} fayl oo leh {cases} tusaale.",
     "other": "{n} fayl oo leh {cases} tusaale."
+  },
+  "tests.code.held": {
+    "one": "Socodsiinta {run} waxay ka warbixisay {n} ka mid ah.",
+    "other": "Socodsiinta {run} waxay ka warbixisay {n} ka mid ah."
   },
   "tests.code.noCases": "Faylkan wax tusaale ah lagama helin.",
   "tests.code.noTree": "Geedka tijaabooyinka laguma bixiyo {path}.",

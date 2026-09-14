@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ايڪشن",
   "view.security": "سيڪيورٽي",
+  "view.warnings": "خبردارايون",
   "panel.filter": "فلٽر",
   "panel.design": "ڊيزائن",
   "design.theme": "ٿيم",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub کان پڇيو پيو وڃي ته ڇا بدليو",
   "loader.task.everything": "GitHub کان هر رن گهري پئي وڃي",
   "loader.task.artifacts": "رن #{number} جا آرٽيفيڪٽ: {total} مان {done}",
+  "loader.task.warnings": "خبردارايون: {total} جابن مان {done}",
   "loader.task.artifact": "آرٽيفيڪٽ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناڪام: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "مدو",
   "feed.actions.running": "هلي رهيو آهي",
   "feed.actions.longest": "ڏيکاريل سڀ کان ڊگهي رن {duration} ورتو ({run}).",
+  "feed.actions.open": "کوليو",
+  "feed.actions.jump.playwright": "هن رن جو Playwright سوٽ",
+  "feed.actions.jump.unit": "هن رن ۾ ريپوزٽري جا پنهنجا سوٽ",
+  "feed.actions.jump.warnings": "هن رن جون خبردارايون",
   "feed.filter.search": "رن ڳوليو",
   "feed.filter.all": "سڀ",
   "feed.filter.event": "واقعو",
@@ -198,6 +204,25 @@
   "security.column.source": "ذريعو",
   "security.column.alert": "الرٽ",
   "security.column.summary": "خلاصو",
+  "warnings.column.level": "سطح",
+  "warnings.column.repository": "ريپوزٽري",
+  "warnings.column.run": "رن",
+  "warnings.column.job": "جاب",
+  "warnings.column.where": "ڪٿي",
+  "warnings.column.title": "عنوان",
+  "warnings.column.message": "پيغام",
+  "warnings.level.failure": "غلطي",
+  "warnings.level.warning": "خبرداري",
+  "warnings.level.notice": "نوٽ",
+  "warnings.note": {
+    "one": "{n} رن ۾: {failure} غلطيون، {warning} خبردارايون، {notice} نوٽ.",
+    "other": "{n} رنن ۾: {failure} غلطيون، {warning} خبردارايون، {notice} نوٽ."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} جاب مان {done} پڙهيو ويو.",
+    "other": "{repo} {run}: {n} جابن مان {done} پڙهيا ويا."
+  },
+  "warnings.noRun": "چونڊيل شاخن مان ڪنهن به ۾ ورڪ فلو رن ناهي.",
   "security.column.since": "کان وٺي",
   "security.severity.critical": "نازڪ",
   "security.severity.high": "اعليٰ",
@@ -378,10 +403,15 @@
   "tests.code.file": "فائل",
   "tests.code.language": "ٻولي",
   "tests.code.cases": "ڪيس",
+  "tests.code.run": "رن",
   "tests.code.reading": "سوٽ پڙهيو پيو وڃي…",
   "tests.code.note": {
     "one": "{cases} ڪيسن سان {n} فائل.",
     "other": "{cases} ڪيسن سان {n} فائلون."
+  },
+  "tests.code.held": {
+    "one": "رن {run} انهن مان {n} بابت ٻڌايو.",
+    "other": "رن {run} انهن مان {n} بابت ٻڌايو."
   },
   "tests.code.noCases": "هن فائل ۾ ڪو به ڪيس نه مليو.",
   "tests.code.noTree": "ٽيسٽ جو وڻ {path} تي نه ڏنو ويو آهي.",

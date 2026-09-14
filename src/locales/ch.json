@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aksion siha",
   "view.security": "Siguridåt",
+  "view.warnings": "Adbiette siha",
   "panel.filter": "Filtro",
   "panel.design": "Disenu",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ma faisen GitHub hafa tinilaika",
   "loader.task.everything": "Ma faisen GitHub todu i kinalamten",
   "loader.task.artifacts": "Artefakto siha gi kinalamten #{number}: {done} gi {total}",
+  "loader.task.warnings": "Adbiette siha: {done} gi {total} na chócho",
   "loader.task.artifact": "Artefakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ti malofan: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Inanakko'",
   "feed.actions.running": "ha kakalamten",
   "feed.actions.longest": "I mas anakko' na kinalamten ni mafa'nu'i, mañule' {duration} ({run}).",
+  "feed.actions.open": "Baba",
+  "feed.actions.jump.playwright": "I Playwright na prueba siha gi este na kinalamten",
+  "feed.actions.jump.unit": "I prueba siha gi mismo repositorio gi este na kinalamten",
+  "feed.actions.jump.warnings": "Adbiette siha gi este na kinalamten",
   "feed.filter.search": "Aliligao i kinalamten siha",
   "feed.filter.all": "todu",
   "feed.filter.event": "Susedi",
@@ -198,6 +204,25 @@
   "security.column.source": "Fuente",
   "security.column.alert": "Abisu",
   "security.column.summary": "Resumen",
+  "warnings.column.level": "Nibet",
+  "warnings.column.repository": "Repositorio",
+  "warnings.column.run": "Kinalamten",
+  "warnings.column.job": "Chócho",
+  "warnings.column.where": "Manu",
+  "warnings.column.title": "Titulo",
+  "warnings.column.message": "Mensåhi",
+  "warnings.level.failure": "linachi",
+  "warnings.level.warning": "adbiette",
+  "warnings.level.notice": "nota",
+  "warnings.note": {
+    "one": "Gi {n} na kinalamten: {failure} linachi, {warning} adbiette, {notice} nota.",
+    "other": "Gi {n} na kinalamten siha: {failure} linachi, {warning} adbiette, {notice} nota."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: mataitai {done} gi {n} na chócho.",
+    "other": "{repo} {run}: mataitai {done} gi {n} na chócho siha."
+  },
+  "warnings.noRun": "Taya' gi rama siha ni un ayek guaha kinalamten workflow.",
   "security.column.since": "Desde",
   "security.severity.critical": "kritiku",
   "security.severity.high": "lokka'",
@@ -378,10 +403,15 @@
   "tests.code.file": "faila",
   "tests.code.language": "lengguahi",
   "tests.code.cases": "kaso siha",
+  "tests.code.run": "kinalamten",
   "tests.code.reading": "Ma taitai i prueba siha…",
   "tests.code.note": {
     "one": "{n} na faila yan {cases} na kaso.",
     "other": "{n} na faila siha yan {cases} na kaso siha."
+  },
+  "tests.code.held": {
+    "one": "I kinalamten {run} ha ripotta {n} guiya siha.",
+    "other": "I kinalamten {run} ha ripotta {n} guiya siha."
   },
   "tests.code.noCases": "Taya' kaso masodda' gi este na faila.",
   "tests.code.noTree": "Ti manmanå'i i trongkon prueba gi {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "చర్యలు",
   "view.security": "భద్రత",
+  "view.warnings": "హెచ్చరికలు",
   "panel.filter": "ఫిల్టర్",
   "panel.design": "రూపకల్పన",
   "design.theme": "థీమ్",
@@ -172,6 +173,7 @@
   "loader.task.changes": "ఏమి మారిందో GitHub ని అడుగుతోంది",
   "loader.task.everything": "అన్ని రన్‌ల కోసం GitHub ని అడుగుతోంది",
   "loader.task.artifacts": "రన్ #{number} ఆర్టిఫాక్ట్‌లు: {total} లో {done}",
+  "loader.task.warnings": "హెచ్చరికలు: {total} జాబ్‌లలో {done}",
   "loader.task.artifact": "ఆర్టిఫాక్ట్ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "విఫలం: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "వ్యవధి",
   "feed.actions.running": "నడుస్తోంది",
   "feed.actions.longest": "చూపిన వాటిలో అత్యంత పొడవైన రన్‌కు {duration} ({run}) పట్టింది.",
+  "feed.actions.open": "తెరవండి",
+  "feed.actions.jump.playwright": "ఈ రన్ యొక్క Playwright సూట్",
+  "feed.actions.jump.unit": "ఈ రన్‌లో రిపోజిటరీ సొంత సూట్‌లు",
+  "feed.actions.jump.warnings": "ఈ రన్ యొక్క హెచ్చరికలు",
   "feed.filter.search": "రన్‌లలో వెతకండి",
   "feed.filter.all": "అన్నీ",
   "feed.filter.event": "ఈవెంట్",
@@ -198,6 +204,25 @@
   "security.column.source": "మూలం",
   "security.column.alert": "హెచ్చరిక",
   "security.column.summary": "సారాంశం",
+  "warnings.column.level": "స్థాయి",
+  "warnings.column.repository": "రిపోజిటరీ",
+  "warnings.column.run": "రన్",
+  "warnings.column.job": "జాబ్",
+  "warnings.column.where": "ఎక్కడ",
+  "warnings.column.title": "శీర్షిక",
+  "warnings.column.message": "సందేశం",
+  "warnings.level.failure": "లోపం",
+  "warnings.level.warning": "హెచ్చరిక",
+  "warnings.level.notice": "గమనిక",
+  "warnings.note": {
+    "one": "{n} రన్‌లో: {failure} లోపాలు, {warning} హెచ్చరికలు, {notice} గమనికలు.",
+    "other": "{n} రన్‌లలో: {failure} లోపాలు, {warning} హెచ్చరికలు, {notice} గమనికలు."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} జాబ్‌లో {done} చదవబడింది.",
+    "other": "{repo} {run}: {n} జాబ్‌లలో {done} చదవబడ్డాయి."
+  },
+  "warnings.noRun": "టిక్ చేసిన బ్రాంచ్‌లలో దేనికీ వర్క్‌ఫ్లో రన్ లేదు.",
   "security.column.since": "నుండి",
   "security.severity.critical": "క్లిష్టమైన",
   "security.severity.high": "అధిక",
@@ -378,10 +403,15 @@
   "tests.code.file": "ఫైల్",
   "tests.code.language": "భాష",
   "tests.code.cases": "కేసులు",
+  "tests.code.run": "రన్",
   "tests.code.reading": "సూట్ చదువుతోంది…",
   "tests.code.note": {
     "one": "{cases} కేసులతో {n} ఫైల్.",
     "other": "{cases} కేసులతో {n} ఫైళ్లు."
+  },
+  "tests.code.held": {
+    "one": "రన్ {run} వాటిలో {n} గురించి నివేదించింది.",
+    "other": "రన్ {run} వాటిలో {n} గురించి నివేదించింది."
   },
   "tests.code.noCases": "ఈ ఫైల్‌లో ఏ కేసూ కనుగొనబడలేదు.",
   "tests.code.noTree": "{path} వద్ద పరీక్షల ట్రీ అందించబడలేదు.",

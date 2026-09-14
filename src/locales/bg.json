@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Действия",
   "view.security": "Сигурност",
+  "view.warnings": "Предупреждения",
   "panel.filter": "Филтър",
   "panel.design": "Оформление",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Питане на GitHub какво се е променило",
   "loader.task.everything": "Заявка към GitHub за всяко изпълнение",
   "loader.task.artifacts": "Артефакти от изпълнение #{number}: {done} от {total}",
+  "loader.task.warnings": "Предупреждения: {done} от {total} задачи",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "неуспех: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Продължителност",
   "feed.actions.running": "изпълнява се",
   "feed.actions.longest": "Най-дългото показано изпълнение отне {duration} ({run}).",
+  "feed.actions.open": "Отваряне",
+  "feed.actions.jump.playwright": "Playwright пакетът на това изпълнение",
+  "feed.actions.jump.unit": "Собствените пакети на хранилището при това изпълнение",
+  "feed.actions.jump.warnings": "Предупреждения на това изпълнение",
   "feed.filter.search": "Търсене в изпълненията",
   "feed.filter.all": "всички",
   "feed.filter.event": "Събитие",
@@ -198,6 +204,25 @@
   "security.column.source": "Източник",
   "security.column.alert": "Сигнал",
   "security.column.summary": "Резюме",
+  "warnings.column.level": "Ниво",
+  "warnings.column.repository": "Хранилище",
+  "warnings.column.run": "Изпълнение",
+  "warnings.column.job": "Задача",
+  "warnings.column.where": "Къде",
+  "warnings.column.title": "Заглавие",
+  "warnings.column.message": "Съобщение",
+  "warnings.level.failure": "грешка",
+  "warnings.level.warning": "предупреждение",
+  "warnings.level.notice": "бележка",
+  "warnings.note": {
+    "one": "В {n} изпълнение: {failure} грешки, {warning} предупреждения, {notice} бележки.",
+    "other": "В {n} изпълнения: {failure} грешки, {warning} предупреждения, {notice} бележки."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: прочетена е {done} от {n} задача.",
+    "other": "{repo} {run}: прочетени са {done} от {n} задачи."
+  },
+  "warnings.noRun": "Нито един от отметнатите клонове няма изпълнение на работен поток.",
   "security.column.since": "От",
   "security.severity.critical": "критична",
   "security.severity.high": "висока",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "език",
   "tests.code.cases": "случаи",
+  "tests.code.run": "изпълнение",
   "tests.code.reading": "Четене на пакета…",
   "tests.code.note": {
     "one": "{n} файл с {cases} случая.",
     "other": "{n} файла с {cases} случая."
+  },
+  "tests.code.held": {
+    "one": "Изпълнение {run} отчете {n} от тях.",
+    "other": "Изпълнение {run} отчете {n} от тях."
   },
   "tests.code.noCases": "В този файл не е намерен нито един случай.",
   "tests.code.noTree": "Дървото на тестовете не се обслужва на {path}.",

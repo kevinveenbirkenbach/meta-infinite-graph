@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actions",
   "view.security": "امنیت",
+  "view.warnings": "هشدارها",
   "panel.filter": "فیلتر",
   "panel.design": "ظاهر",
   "design.theme": "پوسته",
@@ -172,6 +173,7 @@
   "loader.task.changes": "در حال پرسیدن از GitHub که چه چیزی تغییر کرده",
   "loader.task.everything": "در حال درخواست همهٔ اجراها از GitHub",
   "loader.task.artifacts": "آرتیفکت‌های اجرای #{number}: {done} از {total}",
+  "loader.task.warnings": "هشدارها: {done} از {total} کار",
   "loader.task.artifact": "آرتیفکت {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناموفق: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "مدت",
   "feed.actions.running": "در حال اجرا",
   "feed.actions.longest": "طولانی‌ترین اجرای نمایش‌داده‌شده {duration} طول کشید ({run}).",
+  "feed.actions.open": "بازکردن",
+  "feed.actions.jump.playwright": "مجموعهٔ Playwright این اجرا",
+  "feed.actions.jump.unit": "مجموعه‌های خودِ مخزن در این اجرا",
+  "feed.actions.jump.warnings": "هشدارهای این اجرا",
   "feed.filter.search": "جستجو در اجراها",
   "feed.filter.all": "همه",
   "feed.filter.event": "رویداد",
@@ -198,6 +204,25 @@
   "security.column.source": "منبع",
   "security.column.alert": "هشدار",
   "security.column.summary": "خلاصه",
+  "warnings.column.level": "سطح",
+  "warnings.column.repository": "مخزن",
+  "warnings.column.run": "اجرا",
+  "warnings.column.job": "کار",
+  "warnings.column.where": "کجا",
+  "warnings.column.title": "عنوان",
+  "warnings.column.message": "پیام",
+  "warnings.level.failure": "خطا",
+  "warnings.level.warning": "هشدار",
+  "warnings.level.notice": "یادداشت",
+  "warnings.note": {
+    "one": "در {n} اجرا: {failure} خطا، {warning} هشدار، {notice} یادداشت.",
+    "other": "در {n} اجرا: {failure} خطا، {warning} هشدار، {notice} یادداشت."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} از {n} کار خوانده شد.",
+    "other": "{repo} {run}: {done} از {n} کار خوانده شد."
+  },
+  "warnings.noRun": "هیچ‌یک از شاخه‌های تیک‌خورده اجرای گردش کار ندارد.",
   "security.column.since": "از",
   "security.severity.critical": "بحرانی",
   "security.severity.high": "بالا",
@@ -378,10 +403,15 @@
   "tests.code.file": "پرونده",
   "tests.code.language": "زبان",
   "tests.code.cases": "موردها",
+  "tests.code.run": "اجرا",
   "tests.code.reading": "در حال خواندن مجموعه…",
   "tests.code.note": {
     "one": "{n} پرونده با {cases} مورد.",
     "other": "{n} پرونده با {cases} مورد."
+  },
+  "tests.code.held": {
+    "one": "اجرای {run} دربارهٔ {n} از آن‌ها گزارش داد.",
+    "other": "اجرای {run} دربارهٔ {n} از آن‌ها گزارش داد."
   },
   "tests.code.noCases": "در این پرونده هیچ موردی یافت نشد.",
   "tests.code.noTree": "درخت آزمون‌ها در {path} سرو نمی‌شود.",

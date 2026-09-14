@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "অ্যাকশন",
   "view.security": "নিরাপত্তা",
+  "view.warnings": "সতর্কবার্তা",
   "panel.filter": "ফিল্টার",
   "panel.design": "নকশা",
   "design.theme": "থিম",
@@ -172,6 +173,7 @@
   "loader.task.changes": "কী বদলেছে GitHub-কে জিজ্ঞাসা করা হচ্ছে",
   "loader.task.everything": "প্রতিটি রানের জন্য GitHub-কে জিজ্ঞাসা করা হচ্ছে",
   "loader.task.artifacts": "রান #{number}-এর আর্টিফ্যাক্ট: {total}টির মধ্যে {done}টি",
+  "loader.task.warnings": "সতর্কবার্তা: {total}টি জবের মধ্যে {done}টি",
   "loader.task.artifact": "আর্টিফ্যাক্ট {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ব্যর্থ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "সময়কাল",
   "feed.actions.running": "চলছে",
   "feed.actions.longest": "দেখানো সবচেয়ে দীর্ঘ রানটি {duration} সময় নিয়েছে ({run})।",
+  "feed.actions.open": "খুলুন",
+  "feed.actions.jump.playwright": "এই রানের Playwright সুইট",
+  "feed.actions.jump.unit": "এই রানে রিপোজিটরির নিজস্ব সুইট",
+  "feed.actions.jump.warnings": "এই রানের সতর্কবার্তা",
   "feed.filter.search": "রানগুলো খুঁজুন",
   "feed.filter.all": "সব",
   "feed.filter.event": "ঘটনা",
@@ -198,6 +204,25 @@
   "security.column.source": "উৎস",
   "security.column.alert": "সতর্কতা",
   "security.column.summary": "সারসংক্ষেপ",
+  "warnings.column.level": "স্তর",
+  "warnings.column.repository": "রিপোজিটরি",
+  "warnings.column.run": "রান",
+  "warnings.column.job": "জব",
+  "warnings.column.where": "কোথায়",
+  "warnings.column.title": "শিরোনাম",
+  "warnings.column.message": "বার্তা",
+  "warnings.level.failure": "ত্রুটি",
+  "warnings.level.warning": "সতর্কবার্তা",
+  "warnings.level.notice": "নোট",
+  "warnings.note": {
+    "one": "{n}টি রান জুড়ে: {failure}টি ত্রুটি, {warning}টি সতর্কবার্তা, {notice}টি নোট।",
+    "other": "{n}টি রান জুড়ে: {failure}টি ত্রুটি, {warning}টি সতর্কবার্তা, {notice}টি নোট।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n}টি জবের মধ্যে {done}টি পড়া হয়েছে।",
+    "other": "{repo} {run}: {n}টি জবের মধ্যে {done}টি পড়া হয়েছে।"
+  },
+  "warnings.noRun": "টিক দেওয়া কোনো ব্রাঞ্চেরই কোনো ওয়ার্কফ্লো রান নেই।",
   "security.column.since": "কবে থেকে",
   "security.severity.critical": "সংকটপূর্ণ",
   "security.severity.high": "উচ্চ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ফাইল",
   "tests.code.language": "ভাষা",
   "tests.code.cases": "কেস",
+  "tests.code.run": "রান",
   "tests.code.reading": "সুইট পড়া হচ্ছে…",
   "tests.code.note": {
     "one": "{cases}টি কেস সহ {n}টি ফাইল।",
     "other": "{cases}টি কেস সহ {n}টি ফাইল।"
+  },
+  "tests.code.held": {
+    "one": "রান {run} এর মধ্যে {n}টি নিয়ে রিপোর্ট করেছে।",
+    "other": "রান {run} এর মধ্যে {n}টি নিয়ে রিপোর্ট করেছে।"
   },
   "tests.code.noCases": "এই ফাইলে কোনো কেস পাওয়া যায়নি।",
   "tests.code.noTree": "টেস্ট ট্রি {path}-এ পরিবেশন করা হয় না।",

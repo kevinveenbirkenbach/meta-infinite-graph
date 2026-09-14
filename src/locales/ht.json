@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aksyon yo",
   "view.security": "Sekirite",
+  "view.warnings": "Avètisman",
   "panel.filter": "Filtè",
   "panel.design": "Aparans",
   "design.theme": "Tèm",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ap mande GitHub sa ki chanje",
   "loader.task.everything": "Ap mande GitHub tout egzekisyon yo",
   "loader.task.artifacts": "Artefak egzekisyon #{number}: {done} sou {total}",
+  "loader.task.warnings": "Avètisman: {done} sou {total} travay",
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "echwe: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Dire",
   "feed.actions.running": "an kou",
   "feed.actions.longest": "Egzekisyon ki pi long yo montre a te dire {duration} ({run}).",
+  "feed.actions.open": "Ouvri",
+  "feed.actions.jump.playwright": "Seri Playwright egzekisyon sa a",
+  "feed.actions.jump.unit": "Pwòp seri depo a nan egzekisyon sa a",
+  "feed.actions.jump.warnings": "Avètisman egzekisyon sa a",
   "feed.filter.search": "Chèche nan egzekisyon yo",
   "feed.filter.all": "tout",
   "feed.filter.event": "Evènman",
@@ -198,6 +204,25 @@
   "security.column.source": "Sous",
   "security.column.alert": "Alèt",
   "security.column.summary": "Rezime",
+  "warnings.column.level": "Nivo",
+  "warnings.column.repository": "Depo",
+  "warnings.column.run": "Egzekisyon",
+  "warnings.column.job": "Travay",
+  "warnings.column.where": "Kote",
+  "warnings.column.title": "Tit",
+  "warnings.column.message": "Mesaj",
+  "warnings.level.failure": "erè",
+  "warnings.level.warning": "avètisman",
+  "warnings.level.notice": "nòt",
+  "warnings.note": {
+    "one": "Sou {n} egzekisyon: {failure} erè, {warning} avètisman, {notice} nòt.",
+    "other": "Sou {n} egzekisyon: {failure} erè, {warning} avètisman, {notice} nòt."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} sou {n} travay li.",
+    "other": "{repo} {run}: {done} sou {n} travay li."
+  },
+  "warnings.noRun": "Okenn nan branch ki make yo pa gen yon egzekisyon workflow.",
   "security.column.since": "Depi",
   "security.severity.critical": "kritik",
   "security.severity.high": "wo",
@@ -378,10 +403,15 @@
   "tests.code.file": "fichye",
   "tests.code.language": "lang",
   "tests.code.cases": "ka",
+  "tests.code.run": "egzekisyon",
   "tests.code.reading": "Y ap li seri a…",
   "tests.code.note": {
     "one": "{n} fichye ak {cases} ka.",
     "other": "{n} fichye ak {cases} ka."
+  },
+  "tests.code.held": {
+    "one": "Egzekisyon {run} rapòte {n} ladan yo.",
+    "other": "Egzekisyon {run} rapòte {n} ladan yo."
   },
   "tests.code.noCases": "Yo pa jwenn okenn ka nan fichye sa a.",
   "tests.code.noTree": "Yo pa sèvi pyebwa tès la nan {path}.",

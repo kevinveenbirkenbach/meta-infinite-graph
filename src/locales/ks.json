@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "عمل",
   "view.security": "حِفاظت",
+  "view.warnings": "خَبَردٲرؠ",
   "panel.filter": "فِلٹَر",
   "panel.design": "ڈِزایِن",
   "design.theme": "تھیم",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub پرٛژھنہٕ یِوان زِ کیاہ بدلیوو",
   "loader.task.everything": "GitHub نِشہِ سۄری چلُن مَنگنہٕ یِوان",
   "loader.task.artifacts": "چلُن #{number} ہٕنز آرٹیفیکٹ: {total} مَنٛز {done}",
+  "loader.task.warnings": "خَبَردٲرؠ: {total} کٲمَن منٛزٕ {done}",
   "loader.task.artifact": "آرٹیفیکٹ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناکام: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "مُدَت",
   "feed.actions.running": "چلان",
   "feed.actions.longest": "ہاونہٕ آمُت سارِوٕے کھوتہٕ زیٚوٚٹھ چلُن نیوٗن {duration} ({run})۔",
+  "feed.actions.open": "کھولِو",
+  "feed.actions.jump.playwright": "یَتھ چلُن ہٕنٛز Playwright سوٗٹ",
+  "feed.actions.jump.unit": "یَتھ چلنس منٛز ذخیرُک پٲنَس ہُنٛد سوٗٹ",
+  "feed.actions.jump.warnings": "یَتھ چلُن ہٕنٛز خَبَردٲرؠ",
   "feed.filter.search": "چلُن ژھٲنڈِو",
   "feed.filter.all": "سٲری",
   "feed.filter.event": "واقعہ",
@@ -198,6 +204,25 @@
   "security.column.source": "ماخَذ",
   "security.column.alert": "انتباہ",
   "security.column.summary": "خُلاصہٕ",
+  "warnings.column.level": "دَرَجہٕ",
+  "warnings.column.repository": "ذخیرٕ",
+  "warnings.column.run": "چلُن",
+  "warnings.column.job": "کٲم",
+  "warnings.column.where": "کۄت",
+  "warnings.column.title": "عُنوان",
+  "warnings.column.message": "پؠغام",
+  "warnings.level.failure": "غلطی",
+  "warnings.level.warning": "خَبَردٲری",
+  "warnings.level.notice": "اِطلاع",
+  "warnings.note": {
+    "one": "{n} چلنس منٛز: {failure} غلطی، {warning} خَبَردٲری، {notice} اِطلاع۔",
+    "other": "{n} چلنَن منٛز: {failure} غلطی، {warning} خَبَردٲری، {notice} اِطلاع۔"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} کامہٕ منٛزٕ {done} پۆر۔",
+    "other": "{repo} {run}: {n} کٲمَن منٛزٕ {done} پۆر۔"
+  },
+  "warnings.noRun": "نِشان کرنہٕ آمٕتؠن شاخَن منٛزٕ چھُنہٕ کانٛہہ ورک فلو چلُن ہاوان۔",
   "security.column.since": "کر پٮ۪ٹھٕ",
   "security.severity.critical": "نازُک",
   "security.severity.high": "زیٛاد",
@@ -378,10 +403,15 @@
   "tests.code.file": "فایِل",
   "tests.code.language": "زَبان",
   "tests.code.cases": "کیس",
+  "tests.code.run": "چلُن",
   "tests.code.reading": "سوٗٹ پَرنہٕ یِوان…",
   "tests.code.note": {
     "one": "{n} فایِل، {cases} کیسَن سٟتؠ۔",
     "other": "{n} فایِل، {cases} کیسَن سٟتؠ۔"
+  },
+  "tests.code.held": {
+    "one": "چلنَن {run} کۆر تِمَن منٛزٕ {n} ہٕنٛز رپورٹ۔",
+    "other": "چلنَن {run} کۆر تِمَن منٛزٕ {n} ہٕنٛز رپورٹ۔"
   },
   "tests.code.noCases": "یَتھ فایِلَس منٛز آو نہٕ کانٛہہ کیس لبنہٕ۔",
   "tests.code.noTree": "ٹیسٹ ٹرِی چھُنہٕ {path} پؠٹھ دِنہٕ یِوان۔",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Bilongwa",
   "view.security": "Bulami",
+  "view.warnings": "Bidyumu",
   "panel.filter": "Kisenselo",
   "panel.design": "Mpangilo",
   "design.theme": "Bilangi",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kwipangula GitHub byashinta",
   "loader.task.everything": "Kwipangula GitHub kwendeja konso",
   "loader.task.artifacts": "Artefakte ya kwendeja #{number}: {done} pa {total}",
+  "loader.task.warnings": "Bidyumu: {done} pa mingilo {total}",
   "loader.task.artifact": "Artefakte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kwakankalwa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Bule bwa kitatyi",
   "feed.actions.running": "ukidi kwendeja",
   "feed.actions.longest": "Kwendeja kwa bule bukatampe kumwesibwe kwasendele {duration} ({run}).",
+  "feed.actions.open": "Shitula",
+  "feed.actions.jump.playwright": "Matompo a Playwright a kuno kwendeja",
+  "feed.actions.jump.unit": "Matompo a kilamino kyabo mu kuno kwendeja",
+  "feed.actions.jump.warnings": "Bidyumu bya kuno kwendeja",
   "feed.filter.search": "Kimba kwendeja",
   "feed.filter.all": "byonso",
   "feed.filter.event": "Mwanda",
@@ -198,6 +204,25 @@
   "security.column.source": "Nshiji",
   "security.column.alert": "Kukanya",
   "security.column.summary": "Mukuse",
+  "warnings.column.level": "Bujimu",
+  "warnings.column.repository": "Kilamino",
+  "warnings.column.run": "Kwendeja",
+  "warnings.column.job": "Mwingilo",
+  "warnings.column.where": "Kwepi",
+  "warnings.column.title": "Mutwe",
+  "warnings.column.message": "Musapu",
+  "warnings.level.failure": "kilubo",
+  "warnings.level.warning": "kidyumu",
+  "warnings.level.notice": "kiyukija",
+  "warnings.note": {
+    "one": "Mu kwendeja {n}: bilubo {failure}, bidyumu {warning}, biyukija {notice}.",
+    "other": "Mu kwendeja {n}: bilubo {failure}, bidyumu {warning}, biyukija {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} pa mwingilo {n} watangwa.",
+    "other": "{repo} {run}: {done} pa mingilo {n} yatangwa."
+  },
+  "warnings.noRun": "Kutupu musampi wa yisungwile udi na kwendeja kwa mwendelo wa mwingilo.",
   "security.column.since": "Kutamba",
   "security.severity.critical": "bikomo bininge",
   "security.severity.high": "bikatampe",
@@ -378,10 +403,15 @@
   "tests.code.file": "kilembwa",
   "tests.code.language": "ludimi",
   "tests.code.cases": "myanda",
+  "tests.code.run": "kwendeja",
   "tests.code.reading": "Kutanga matompo…",
   "tests.code.note": {
     "one": "Kilembwa {n} na myanda {cases}.",
     "other": "Bilembwa {n} na myanda {cases}."
+  },
+  "tests.code.held": {
+    "one": "Kwendeja {run} kwasapwile pa {n} pa yabo.",
+    "other": "Kwendeja {run} kwasapwile pa {n} pa yabo."
   },
   "tests.code.noCases": "Kekwatanwepo mwanda mu kino kilembwa.",
   "tests.code.noTree": "Mutyi wa matompo keupebwapo ku {path}.",

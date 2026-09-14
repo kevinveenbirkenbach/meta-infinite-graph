@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ebikolwa",
   "view.security": "Obukuumi",
+  "view.warnings": "Okulabula",
   "panel.filter": "Ekisengejja",
   "panel.design": "Endabika",
   "design.theme": "Langi",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Mbuuza GitHub ebyakyuse",
   "loader.task.everything": "Nsaba GitHub emirundi gyonna",
   "loader.task.artifacts": "Ebyakolebwa mu mulundi #{number}: {done} ku {total}",
+  "loader.task.warnings": "Okulabula: {done} ku mirimu {total}",
   "loader.task.artifact": "Ekyakolebwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kulemye: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Obuwanvu bw'ekiseera",
   "feed.actions.running": "kikyagenda",
   "feed.actions.longest": "Omulundi ogusinga obuwanvu ogulagiddwa gwatwala {duration} ({run}).",
+  "feed.actions.open": "Ggulawo",
+  "feed.actions.jump.playwright": "Okugezesa kwa Playwright okw'omulundi guno",
+  "feed.actions.jump.unit": "Okugezesa kwa tterekero lyennyini ku mulundi guno",
+  "feed.actions.jump.warnings": "Okulabula kw'omulundi guno",
   "feed.filter.search": "Noonya mu mirundi",
   "feed.filter.all": "byonna",
   "feed.filter.event": "Ekibaddewo",
@@ -198,6 +204,25 @@
   "security.column.source": "Ensibuko",
   "security.column.alert": "Ekimanyiso",
   "security.column.summary": "Mu bufunze",
+  "warnings.column.level": "Omutendera",
+  "warnings.column.repository": "Tterekero",
+  "warnings.column.run": "Omulundi",
+  "warnings.column.job": "Omulimu",
+  "warnings.column.where": "Wa",
+  "warnings.column.title": "Omutwe",
+  "warnings.column.message": "Obubaka",
+  "warnings.level.failure": "ensobi",
+  "warnings.level.warning": "okulabula",
+  "warnings.level.notice": "ekiwandiiko",
+  "warnings.note": {
+    "one": "Ku mulundi {n}: ensobi {failure}, okulabula {warning}, ebiwandiiko {notice}.",
+    "other": "Ku milundi {n}: ensobi {failure}, okulabula {warning}, ebiwandiiko {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} ku mulimu {n} gusomeddwa.",
+    "other": "{repo} {run}: {done} ku mirimu {n} gisomeddwa."
+  },
+  "warnings.noRun": "Tewali ttabi eriteekeddwako akabonero eririna omulundi gw'enkola y'emirimu.",
   "security.column.since": "Okuva",
   "security.severity.critical": "kya maanyi nnyo",
   "security.severity.high": "waggulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayiro",
   "tests.code.language": "olulimi",
   "tests.code.cases": "kesi",
+  "tests.code.run": "omulundi",
   "tests.code.reading": "Nsoma okugezesa…",
   "tests.code.note": {
     "one": "Fayiro {n} erina kesi {cases}.",
     "other": "Fayiro {n} zirina kesi {cases}."
+  },
+  "tests.code.held": {
+    "one": "Omulundi {run} gwategeeza ku {n} ku zo.",
+    "other": "Omulundi {run} gwategeeza ku {n} ku zo."
   },
   "tests.code.noCases": "Tewali kesi esangiddwa mu fayiro eno.",
   "tests.code.noTree": "Omuti gw'okugezesa teguweebwa ku {path}.",

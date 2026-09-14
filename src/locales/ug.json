@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ھەرىكەتلەر",
   "view.security": "بىخەتەرلىك",
+  "view.warnings": "ئاگاھلاندۇرۇشلار",
   "panel.filter": "سۈزگۈچ",
   "panel.design": "لايىھە",
   "design.theme": "تېما",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub دىن نېمىلەرنىڭ ئۆزگەرگەنلىكى سورىلىۋاتىدۇ",
   "loader.task.everything": "GitHub دىن بارلىق ئىجرالار سورىلىۋاتىدۇ",
   "loader.task.artifacts": "#{number} ئىجرانىڭ ئارتىفاكتلىرى: {total} دىن {done}",
+  "loader.task.warnings": "ئاگاھلاندۇرۇشلار: {total} ۋەزىپىدىن {done}",
   "loader.task.artifact": "ئارتىفاكت {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "مەغلۇپ بولدى: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "داۋاملىشىش ۋاقتى",
   "feed.actions.running": "ئىجرا بولۇۋاتىدۇ",
   "feed.actions.longest": "كۆرسىتىلگەن ئەڭ ئۇزۇن ئىجرا {duration} ({run}) ۋاقىت ئالدى.",
+  "feed.actions.open": "ئېچىش",
+  "feed.actions.jump.playwright": "بۇ ئىجرانىڭ Playwright سىناق توپلىمى",
+  "feed.actions.jump.unit": "بۇ ئىجرادىكى ئامبارنىڭ ئۆز سىناق توپلاملىرى",
+  "feed.actions.jump.warnings": "بۇ ئىجرانىڭ ئاگاھلاندۇرۇشلىرى",
   "feed.filter.search": "ئىجرالاردىن ئىزدەش",
   "feed.filter.all": "ھەممىسى",
   "feed.filter.event": "ھادىسە",
@@ -198,6 +204,25 @@
   "security.column.source": "مەنبە",
   "security.column.alert": "ئاگاھلاندۇرۇش",
   "security.column.summary": "خۇلاسە",
+  "warnings.column.level": "دەرىجە",
+  "warnings.column.repository": "ئامبار",
+  "warnings.column.run": "ئىجرا",
+  "warnings.column.job": "ۋەزىپە",
+  "warnings.column.where": "نەدە",
+  "warnings.column.title": "ماۋزۇ",
+  "warnings.column.message": "ئۇچۇر",
+  "warnings.level.failure": "خاتالىق",
+  "warnings.level.warning": "ئاگاھلاندۇرۇش",
+  "warnings.level.notice": "ئىزاھ",
+  "warnings.note": {
+    "one": "{n} ئىجرادا: {failure} خاتالىق، {warning} ئاگاھلاندۇرۇش، {notice} ئىزاھ.",
+    "other": "{n} ئىجرادا: {failure} خاتالىق، {warning} ئاگاھلاندۇرۇش، {notice} ئىزاھ."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ۋەزىپىدىن {done} ئوقۇلدى.",
+    "other": "{repo} {run}: {n} ۋەزىپىدىن {done} ئوقۇلدى."
+  },
+  "warnings.noRun": "بەلگە قويۇلغان تارماقلارنىڭ ھېچقايسىسىدا خىزمەت ئېقىمى ئىجراسى يوق.",
   "security.column.since": "باشلانغان ۋاقىت",
   "security.severity.critical": "ھالقىلىق",
   "security.severity.high": "يۇقىرى",
@@ -378,10 +403,15 @@
   "tests.code.file": "ھۆججەت",
   "tests.code.language": "تىل",
   "tests.code.cases": "ئەھۋاللار",
+  "tests.code.run": "ئىجرا",
   "tests.code.reading": "سىناق توپلىمى ئوقۇلۇۋاتىدۇ…",
   "tests.code.note": {
     "one": "{n} ھۆججەت، {cases} ئەھۋال.",
     "other": "{n} ھۆججەت، {cases} ئەھۋال."
+  },
+  "tests.code.held": {
+    "one": "ئىجرا {run} ئۇلارنىڭ {n} ىنى مەلۇم قىلدى.",
+    "other": "ئىجرا {run} ئۇلارنىڭ {n} ىنى مەلۇم قىلدى."
   },
   "tests.code.noCases": "بۇ ھۆججەتتە ھېچقانداق ئەھۋال تېپىلمىدى.",
   "tests.code.noTree": "سىناق دەرىخى {path} دا تەمىنلەنمەيدۇ.",

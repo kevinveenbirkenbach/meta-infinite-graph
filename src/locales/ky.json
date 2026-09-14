@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Аракеттер",
   "view.security": "Коопсуздук",
+  "view.warnings": "Эскертүүлөр",
   "panel.filter": "Чыпка",
   "panel.design": "Көрүнүш",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub'тан эмне өзгөргөнүн суроо",
   "loader.task.everything": "GitHub'тан бардык иштетүүлөрдү суроо",
   "loader.task.artifacts": "#{number} иштетүүнүн артефакттары: {done} / {total}",
+  "loader.task.warnings": "Эскертүүлөр: {total} тапшырманын {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ишке ашкан жок: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Узактыгы",
   "feed.actions.running": "иштеп жатат",
   "feed.actions.longest": "Көрсөтүлгөн эң узак иштетүү {duration} созулду ({run}).",
+  "feed.actions.open": "Ачуу",
+  "feed.actions.jump.playwright": "Бул иштетүүнүн Playwright топтому",
+  "feed.actions.jump.unit": "Бул иштетүүдөгү репозиторийдин өз топтомдору",
+  "feed.actions.jump.warnings": "Бул иштетүүнүн эскертүүлөрү",
   "feed.filter.search": "Иштетүүлөрдөн издөө",
   "feed.filter.all": "баары",
   "feed.filter.event": "Окуя",
@@ -198,6 +204,25 @@
   "security.column.source": "Булак",
   "security.column.alert": "Сигнал",
   "security.column.summary": "Кыскача",
+  "warnings.column.level": "Деңгээл",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Иштетүү",
+  "warnings.column.job": "Тапшырма",
+  "warnings.column.where": "Кайда",
+  "warnings.column.title": "Аталышы",
+  "warnings.column.message": "Билдирүү",
+  "warnings.level.failure": "ката",
+  "warnings.level.warning": "эскертүү",
+  "warnings.level.notice": "маалымат",
+  "warnings.note": {
+    "one": "{n} иштетүү боюнча: {failure} ката, {warning} эскертүү, {notice} маалымат.",
+    "other": "{n} иштетүү боюнча: {failure} ката, {warning} эскертүү, {notice} маалымат."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} тапшырманын {done} окулду.",
+    "other": "{repo} {run}: {n} тапшырманын {done} окулду."
+  },
+  "warnings.noRun": "Белгиленген бутактардын эч биринде workflow иштетүүсү жок.",
   "security.column.since": "Качантан",
   "security.severity.critical": "критикалык",
   "security.severity.high": "жогору",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "тил",
   "tests.code.cases": "учурлар",
+  "tests.code.run": "иштетүү",
   "tests.code.reading": "Топтом окулууда…",
   "tests.code.note": {
     "one": "{n} файл, {cases} учур менен.",
     "other": "{n} файл, {cases} учур менен."
+  },
+  "tests.code.held": {
+    "one": "{run} иштетүүсү алардын {n} жөнүндө билдирди.",
+    "other": "{run} иштетүүсү алардын {n} жөнүндө билдирди."
   },
   "tests.code.noCases": "Бул файлдан бир дагы учур табылган жок.",
   "tests.code.noTree": "Тесттердин дарагы {path} дарегинде берилбейт.",

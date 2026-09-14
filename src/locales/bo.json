@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "བྱ་སྤྱོད།",
   "view.security": "བདེ་འཇགས།",
+  "view.warnings": "དྲན་སྐུལ།",
   "panel.filter": "འཚག་མ།",
   "panel.design": "བཀོད་པ།",
   "design.theme": "བརྗོད་གཞི།",
@@ -163,6 +164,7 @@
   "loader.task.changes": "GitHub ལ་འགྱུར་བ་ཅི་བྱུང་དྲི་བཞིན་",
   "loader.task.everything": "GitHub ལ་འཁོར་སྐྱོད་ཚང་མ་དྲི་བཞིན་",
   "loader.task.artifacts": "འཁོར་སྐྱོད་ #{number} གི་གྲུབ་དངོས། {total} ལས་ {done}",
+  "loader.task.warnings": "དྲན་སྐུལ། ལས་ཀ་ {total} ལས་ {done}",
   "loader.task.artifact": "གྲུབ་དངོས་ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ཕམ། {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "དུས་ཡུན།",
   "feed.actions.running": "འཁོར་སྐྱོད་བྱེད་བཞིན།",
   "feed.actions.longest": "བསྟན་པའི་འཁོར་སྐྱོད་ནང་ནས་རིང་ཤོས་དེར་དུས་ཚོད་ {duration} འགོར་ ({run})།",
+  "feed.actions.open": "ཕྱེ།",
+  "feed.actions.jump.playwright": "འཁོར་སྐྱོད་འདིའི་ Playwright ཚན་པ།",
+  "feed.actions.jump.unit": "འཁོར་སྐྱོད་འདིར་མཛོད་ཁང་རང་གི་ཚན་པ།",
+  "feed.actions.jump.warnings": "འཁོར་སྐྱོད་འདིའི་དྲན་སྐུལ།",
   "feed.filter.search": "འཁོར་སྐྱོད་འཚོལ།",
   "feed.filter.all": "ཚང་མ།",
   "feed.filter.event": "བྱུང་བ།",
@@ -188,6 +194,23 @@
   "security.column.source": "འབྱུང་ཁུངས།",
   "security.column.alert": "ཉེན་བརྡ།",
   "security.column.summary": "སྙིང་བསྡུས།",
+  "warnings.column.level": "རིམ་པ།",
+  "warnings.column.repository": "མཛོད་ཁང་།",
+  "warnings.column.run": "འཁོར་སྐྱོད།",
+  "warnings.column.job": "ལས་ཀ",
+  "warnings.column.where": "གང་དུ།",
+  "warnings.column.title": "མགོ་མིང་།",
+  "warnings.column.message": "འཕྲིན་ཡིག",
+  "warnings.level.failure": "ནོར་འཁྲུལ།",
+  "warnings.level.warning": "དྲན་སྐུལ།",
+  "warnings.level.notice": "གསལ་བརྡ།",
+  "warnings.note": {
+    "other": "འཁོར་སྐྱོད་ {n} ནང་། ནོར་འཁྲུལ་ {failure}, དྲན་སྐུལ་ {warning}, གསལ་བརྡ་ {notice}"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: ལས་ཀ་ {n} ལས་ {done} བཀླགས་སོང་།"
+  },
+  "warnings.noRun": "རྟགས་བརྒྱབ་པའི་ཡལ་ག་གང་ལའང་ལས་རིམ་འཁོར་སྐྱོད་མེད།",
   "security.column.since": "ནས་བཟུང་།",
   "security.severity.critical": "ཉེན་ཁ་ཆེ།",
   "security.severity.high": "མཐོ།",
@@ -355,9 +378,13 @@
   "tests.code.file": "ཡིག་ཆ།",
   "tests.code.language": "སྐད་རིགས།",
   "tests.code.cases": "དཔེ་གནས།",
+  "tests.code.run": "འཁོར་སྐྱོད།",
   "tests.code.reading": "ཚན་པ་ཀློག་བཞིན་པ།…",
   "tests.code.note": {
     "other": "ཡིག་ཆ་ {n}, དཔེ་གནས་ {cases}"
+  },
+  "tests.code.held": {
+    "other": "འཁོར་སྐྱོད་ {run} གིས་དེ་དག་ལས་ {n} སྙན་ཞུ་བྱས།"
   },
   "tests.code.noCases": "ཡིག་ཆ་འདིའི་ནང་དཔེ་གནས་གང་ཡང་མ་རྙེད།",
   "tests.code.noTree": "བརྟག་དཔྱད་སྡོང་པོ་ {path} ཐོག་མ་བསྟར།",

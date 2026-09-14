@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ꊽꊙ",
   "view.security": "ꌋꅇ",
+  "view.warnings": "ꉷꃚ",
   "panel.filter": "ꎭꑦ",
   "panel.design": "ꌝꏡ",
   "design.theme": "ꍗꄜ",
@@ -163,6 +164,7 @@
   "loader.task.changes": "GitHub ꇬꉛ ꇰꑟꌠ",
   "loader.task.everything": "GitHub ꇬ ꒃꑟꐂꀮ ꉛ",
   "loader.task.artifacts": "ꒃꑟ #{number} ꍣꃶ：{done}/{total}",
+  "loader.task.warnings": "ꉷꃚ：ꃅꄷ {total} ꆹ {done}",
   "loader.task.artifact": "ꍣꃶ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ꉷꏂꀠ：{message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "ꄮꈚ",
   "feed.actions.running": "ꒃꑟꇬ",
   "feed.actions.longest": "ꒃꑟ ꑳꅍ ꀋꐛ {duration} ({run})",
+  "feed.actions.open": "ꄉꈁ",
+  "feed.actions.jump.playwright": "ꍓꇰꒃꑟꆹ Playwright ꄫꏦ",
+  "feed.actions.jump.unit": "ꍓꇰꒃꑟꆹꊸꈐꂿꄫꏦ",
+  "feed.actions.jump.warnings": "ꍓꇰꒃꑟꆹꉷꃚ",
   "feed.filter.search": "ꒃꑟꈌꏦ",
   "feed.filter.all": "ꐂꀮ",
   "feed.filter.event": "ꃅꅉ",
@@ -188,6 +194,23 @@
   "security.column.source": "ꇁꑻ",
   "security.column.alert": "ꌋꅇꉷꃚ",
   "security.column.summary": "ꇤꇁ",
+  "warnings.column.level": "ꍏꄜ",
+  "warnings.column.repository": "ꊸꈐ",
+  "warnings.column.run": "ꒃꑟ",
+  "warnings.column.job": "ꃅꄷ",
+  "warnings.column.where": "ꄉꇬ",
+  "warnings.column.title": "ꀜꄜ",
+  "warnings.column.message": "ꃚꂷ",
+  "warnings.level.failure": "ꊻꃶ",
+  "warnings.level.warning": "ꉷꃚ",
+  "warnings.level.notice": "ꃅꃚ",
+  "warnings.note": {
+    "other": "ꒃꑟ {n} ꆹ：ꊻꃶ {failure}，ꉷꃚ {warning}，ꃅꃚ {notice}。"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}：ꃅꄷ {n} ꆹ {done} ꄖꐎꀠ。"
+  },
+  "warnings.noRun": "ꑦꀝꃠꍝꐂꀮꆹꃅꑟꒃꑟꀋꐥ。",
   "security.column.since": "ꈁꏂꏜꏾ",
   "security.severity.critical": "ꐂꍏꊤ",
   "security.severity.high": "ꊤ",
@@ -355,9 +378,13 @@
   "tests.code.file": "ꃲꏦ",
   "tests.code.language": "ꉙ",
   "tests.code.cases": "ꇬꁨ",
+  "tests.code.run": "ꒃꑟ",
   "tests.code.reading": "ꄫꏦꄖꐎ …",
   "tests.code.note": {
     "other": "ꃲꏦ {n}，ꇬꁨ {cases}。"
+  },
+  "tests.code.held": {
+    "other": "ꒃꑟ {run} ꆹ {n} ꃅꃚꀠ。"
   },
   "tests.code.noCases": "ꍓꇰꃲꏦꆹꇬꁨꀋꐥ。",
   "tests.code.noTree": "ꋃꏂꎼ {path} ꆹꀋꐥ。",

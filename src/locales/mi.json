@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ngā Mahi",
   "view.security": "Haumarutanga",
+  "view.warnings": "Whakatūpato",
   "panel.filter": "Tātari",
   "panel.design": "Hoahoa",
   "design.theme": "Āhua",
@@ -172,6 +173,7 @@
   "loader.task.changes": "E pātai ana ki a GitHub he aha i huri",
   "loader.task.everything": "E tono ana ki a GitHub mō ngā rerenga katoa",
   "loader.task.artifacts": "Ngā taonga hanga o te rerenga #{number}: {done} o {total}",
+  "loader.task.warnings": "Whakatūpato: {done} o ngā mahi {total}",
   "loader.task.artifact": "Taonga hanga {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "i rahua: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Roanga",
   "feed.actions.running": "e rere ana",
   "feed.actions.longest": "Ko te rerenga roa rawa e whakaaturia ana, {duration} tōna roa ({run}).",
+  "feed.actions.open": "Whakatuwhera",
+  "feed.actions.jump.playwright": "Te huinga Playwright o tēnei rerenga",
+  "feed.actions.jump.unit": "Ngā huinga ake a te pātaka i tēnei rerenga",
+  "feed.actions.jump.warnings": "Ngā whakatūpato o tēnei rerenga",
   "feed.filter.search": "Rapua ngā rerenga",
   "feed.filter.all": "katoa",
   "feed.filter.event": "Takahanga",
@@ -198,6 +204,25 @@
   "security.column.source": "Mātāpuna",
   "security.column.alert": "Matohi",
   "security.column.summary": "Whakarāpopototanga",
+  "warnings.column.level": "Taumata",
+  "warnings.column.repository": "Pātaka",
+  "warnings.column.run": "Rerenga",
+  "warnings.column.job": "Mahi",
+  "warnings.column.where": "Kei hea",
+  "warnings.column.title": "Taitara",
+  "warnings.column.message": "Karere",
+  "warnings.level.failure": "hapa",
+  "warnings.level.warning": "whakatūpato",
+  "warnings.level.notice": "pānui",
+  "warnings.note": {
+    "one": "Puta noa i te rerenga {n}: {failure} hapa, {warning} whakatūpato, {notice} pānui.",
+    "other": "Puta noa i ngā rerenga {n}: {failure} hapa, {warning} whakatūpato, {notice} pānui."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} o te mahi {n} kua pānuitia.",
+    "other": "{repo} {run}: {done} o ngā mahi {n} kua pānuitia."
+  },
+  "warnings.noRun": "Kāore he rerenga rere mahi i tētahi o ngā peka kua tohua.",
   "security.column.since": "Mai i",
   "security.severity.critical": "mōrearea nui",
   "security.severity.high": "teitei",
@@ -378,10 +403,15 @@
   "tests.code.file": "kōnae",
   "tests.code.language": "reo",
   "tests.code.cases": "kēhi",
+  "tests.code.run": "rerenga",
   "tests.code.reading": "E pānui ana i te huinga…",
   "tests.code.note": {
     "one": "{n} kōnae me ngā kēhi {cases}.",
     "other": "{n} ngā kōnae me ngā kēhi {cases}."
+  },
+  "tests.code.held": {
+    "one": "I pūrongo te rerenga {run} mō te {n} o rātou.",
+    "other": "I pūrongo te rerenga {run} mō ngā {n} o rātou."
   },
   "tests.code.noCases": "Kāore i kitea he kēhi i tēnei kōnae.",
   "tests.code.noTree": "Kāore te rākau whakamātautau e tukuna ana i {path}.",

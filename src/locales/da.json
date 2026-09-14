@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Handlinger",
   "view.security": "Sikkerhed",
+  "view.warnings": "Advarsler",
   "panel.filter": "Filter",
   "panel.design": "Udseende",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Spørger GitHub, hvad der er ændret",
   "loader.task.everything": "Spørger GitHub om hver kørsel",
   "loader.task.artifacts": "Artefakter fra kørsel #{number}: {done} af {total}",
+  "loader.task.warnings": "Advarsler: {done} af {total} job",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislykkedes: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Varighed",
   "feed.actions.running": "kører",
   "feed.actions.longest": "Den længste viste kørsel tog {duration} ({run}).",
+  "feed.actions.open": "Åbn",
+  "feed.actions.jump.playwright": "Playwright-suiten for denne kørsel",
+  "feed.actions.jump.unit": "Repositoriets egne suiter ved denne kørsel",
+  "feed.actions.jump.warnings": "Advarsler for denne kørsel",
   "feed.filter.search": "Søg i kørslerne",
   "feed.filter.all": "alle",
   "feed.filter.event": "Hændelse",
@@ -198,6 +204,25 @@
   "security.column.source": "Kilde",
   "security.column.alert": "Advarsel",
   "security.column.summary": "Resumé",
+  "warnings.column.level": "Niveau",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Kørsel",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Hvor",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Besked",
+  "warnings.level.failure": "fejl",
+  "warnings.level.warning": "advarsel",
+  "warnings.level.notice": "bemærkning",
+  "warnings.note": {
+    "one": "På tværs af {n} kørsel: {failure} fejl, {warning} advarsler, {notice} bemærkninger.",
+    "other": "På tværs af {n} kørsler: {failure} fejl, {warning} advarsler, {notice} bemærkninger."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} af {n} job læst.",
+    "other": "{repo} {run}: {done} af {n} job læst."
+  },
+  "warnings.noRun": "Ingen af de markerede grene har en workflow-kørsel.",
   "security.column.since": "Siden",
   "security.severity.critical": "kritisk",
   "security.severity.high": "høj",
@@ -378,10 +403,15 @@
   "tests.code.file": "fil",
   "tests.code.language": "sprog",
   "tests.code.cases": "tilfælde",
+  "tests.code.run": "kørsel",
   "tests.code.reading": "Læser suiten…",
   "tests.code.note": {
     "one": "{n} fil med {cases} tilfælde.",
     "other": "{n} filer med {cases} tilfælde."
+  },
+  "tests.code.held": {
+    "one": "Kørsel {run} rapporterede om {n} af dem.",
+    "other": "Kørsel {run} rapporterede om {n} af dem."
   },
   "tests.code.noCases": "Der blev ikke fundet noget tilfælde i denne fil.",
   "tests.code.noTree": "Testtræet serveres ikke på {path}.",

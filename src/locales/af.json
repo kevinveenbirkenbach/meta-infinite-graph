@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aksies",
   "view.security": "Sekuriteit",
+  "view.warnings": "Waarskuwings",
   "panel.filter": "Filter",
   "panel.design": "Ontwerp",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Vra GitHub wat verander het",
   "loader.task.everything": "Vra GitHub vir elke lopie",
   "loader.task.artifacts": "Artefakte van lopie #{number}: {done} van {total}",
+  "loader.task.warnings": "Waarskuwings: {done} van {total} take",
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "misluk: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Duur",
   "feed.actions.running": "loop",
   "feed.actions.longest": "Die langste lopie wat gewys word, het {duration} geduur ({run}).",
+  "feed.actions.open": "Open",
+  "feed.actions.jump.playwright": "Playwright-reeks van hierdie lopie",
+  "feed.actions.jump.unit": "Die bewaarplek se eie reekse by hierdie lopie",
+  "feed.actions.jump.warnings": "Waarskuwings van hierdie lopie",
   "feed.filter.search": "Deursoek die lopies",
   "feed.filter.all": "alle",
   "feed.filter.event": "Gebeurtenis",
@@ -198,6 +204,25 @@
   "security.column.source": "Bron",
   "security.column.alert": "Waarskuwing",
   "security.column.summary": "Opsomming",
+  "warnings.column.level": "Vlak",
+  "warnings.column.repository": "Bewaarplek",
+  "warnings.column.run": "Lopie",
+  "warnings.column.job": "Taak",
+  "warnings.column.where": "Waar",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Boodskap",
+  "warnings.level.failure": "fout",
+  "warnings.level.warning": "waarskuwing",
+  "warnings.level.notice": "kennisgewing",
+  "warnings.note": {
+    "one": "Oor {n} lopie heen: {failure} foute, {warning} waarskuwings, {notice} kennisgewings.",
+    "other": "Oor {n} lopies heen: {failure} foute, {warning} waarskuwings, {notice} kennisgewings."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} van {n} taak gelees.",
+    "other": "{repo} {run}: {done} van {n} take gelees."
+  },
+  "warnings.noRun": "Geen van die gemerkte takke het 'n werkvloeilopie nie.",
   "security.column.since": "Sedert",
   "security.severity.critical": "kritiek",
   "security.severity.high": "hoog",
@@ -378,10 +403,15 @@
   "tests.code.file": "lêer",
   "tests.code.language": "taal",
   "tests.code.cases": "gevalle",
+  "tests.code.run": "lopie",
   "tests.code.reading": "Die reeks word gelees…",
   "tests.code.note": {
     "one": "{n} lêer met {cases} gevalle.",
     "other": "{n} lêers met {cases} gevalle."
+  },
+  "tests.code.held": {
+    "one": "Lopie {run} het oor {n} daarvan gerapporteer.",
+    "other": "Lopie {run} het oor {n} daarvan gerapporteer."
   },
   "tests.code.noCases": "Geen geval is in hierdie lêer gevind nie.",
   "tests.code.noTree": "Die toetsboom word nie by {path} bedien nie.",

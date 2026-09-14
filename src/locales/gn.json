@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Tembiapokuéra",
   "view.security": "Tekorosã",
+  "view.warnings": "Ñeñatendeuka",
   "panel.filter": "Yrupẽ",
   "panel.design": "Jehechauka",
   "design.theme": "Téma",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Oñeporandu GitHub-pe mbaʼépa oñemoambue",
   "loader.task.everything": "Ojerure GitHub-pe opaite ñemboguata",
   "loader.task.artifacts": "Artefacto ñemboguata #{number} pegua: {done} {total} apytégui",
+  "loader.task.warnings": "Ñeñatendeuka: {done} {total} tembiapógui",
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ndoikói: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Aravo pukukue",
   "feed.actions.running": "oñemboguata hína",
   "feed.actions.longest": "Ñemboguata ipukuvéva ojehechaukáva ogueraha {duration} ({run}).",
+  "feed.actions.open": "Embojuruja",
+  "feed.actions.jump.playwright": "Ko ñemboguata Playwright aty",
+  "feed.actions.jump.unit": "Ñongatuha voi aty ko ñemboguatápe",
+  "feed.actions.jump.warnings": "Ko ñemboguata ñeñatendeuka",
   "feed.filter.search": "Eheka ñemboguata ryepýpe",
   "feed.filter.all": "opavave",
   "feed.filter.event": "Mbaʼe ojehúva",
@@ -198,6 +204,25 @@
   "security.column.source": "Ypy",
   "security.column.alert": "Ñemomarandu",
   "security.column.summary": "Ñemombyky",
+  "warnings.column.level": "Nivel",
+  "warnings.column.repository": "Ñongatuha",
+  "warnings.column.run": "Ñemboguata",
+  "warnings.column.job": "Tembiapo",
+  "warnings.column.where": "Moõpa",
+  "warnings.column.title": "Téra",
+  "warnings.column.message": "Ñeʼẽmondo",
+  "warnings.level.failure": "jejavy",
+  "warnings.level.warning": "ñeñatendeuka",
+  "warnings.level.notice": "marandu",
+  "warnings.note": {
+    "one": "{n} ñemboguatápe: {failure} jejavy, {warning} ñeñatendeuka, {notice} marandu.",
+    "other": "{n} ñemboguatápe: {failure} jejavy, {warning} ñeñatendeuka, {notice} marandu."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} tembiapógui {done} oñemoñeʼẽ.",
+    "other": "{repo} {run}: {n} tembiapógui {done} oñemoñeʼẽ."
+  },
+  "warnings.noRun": "Umi rakã oñemarkáva apytépe ndaipóri tembiapo rape ñemboguata.",
   "security.column.since": "Guive",
   "security.severity.critical": "ipohyieterei",
   "security.severity.high": "yvate",
@@ -378,10 +403,15 @@
   "tests.code.file": "marandurenda",
   "tests.code.language": "ñeʼẽ",
   "tests.code.cases": "caso",
+  "tests.code.run": "ñemboguata",
   "tests.code.reading": "Oñemoñeʼẽ hína pe aty…",
   "tests.code.note": {
     "one": "{n} marandurenda {cases} caso reheve.",
     "other": "{n} marandurenda {cases} caso reheve."
+  },
+  "tests.code.held": {
+    "one": "Ñemboguata {run} omombeʼu {n} umívagui.",
+    "other": "Ñemboguata {run} omombeʼu {n} umívagui."
   },
   "tests.code.noCases": "Ndojejuhúi mbaʼeveichagua caso ko marandurendápe.",
   "tests.code.noTree": "Ñehaʼã yvyra ndojeguerekói {path}-pe.",

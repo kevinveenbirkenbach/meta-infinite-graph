@@ -177,6 +177,11 @@ for Python, `test(…)`/`it(…)` for JavaScript, `function test…` for PHPUnit
 already on screen, so each count turns until its file is in. Clicking a row
 lists the case names.
 
+With an [Actions run](#actions-run) picked, a **run** column marks every file
+that run reported on, worst level first, and the hover text carries the
+messages. The marks are the same annotations the [Warnings](#warnings) tab
+gathers, so picking a run once serves both.
+
 #### Gate filter
 
 Also under **Order** in the filter panel, `?gate=` in the URL. It narrows the
@@ -287,7 +292,9 @@ dropped. Every visitor shares the one 5000 per hour budget.
 
 The proxy only forwards what the page actually calls: `/repos/owner/name` and
 its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls`, `/actions/runs`,
-`/actions/runs/<id>/artifacts` and `/security-advisories`, plus the alert paths of the [Security](#security) tab
+`/actions/runs/<id>/artifacts`, `/actions/runs/<id>/jobs`,
+`/check-runs/<id>/annotations` and `/security-advisories`, plus the alert paths
+of the [Security](#security) tab
 when `MIG_GITHUB_ALERTS=true`. Anything else answers 404, so the token cannot
 be borrowed for the rest of the API.
 
@@ -320,7 +327,33 @@ as `?search=`, `?result=`, `?event=`, `?workflow=`, `?branch=` and
 
 A list the browser cache answers is shown at once and then caught up with what
 changed since. Clicking a run opens its [Actions run](#actions-run) in the
-Playwright table.
+Playwright table, and the **open** column of each row jumps into the views that
+draw a run: 🎭 the Playwright table, 🧪 the repository's
+[own suites](#the-repositorys-own-suites) and ⚠️ the [Warnings](#warnings) of
+that run. Whichever is opened, the run is picked first, so the others hold it
+too.
+
+### Warnings
+
+The **Warnings** tab gathers what every job of a run reported with
+`::error::`, `::warning::` and `::notice::`, across all of its jobs, worst
+first. It reads the newest run of every ticked branch on its own, and the
+picked run (`?run=`) beside them; one line per run says how many of its jobs
+are in.
+
+GitHub keeps these annotations on the check run behind each job, one request
+per job, and a deploy run has over a hundred jobs. So the jobs that are not
+green are asked for first and the green ones follow on their own, three at a
+time, while the table fills. Once 20 requests are left in the hour the rest
+stay unread, so the other views keep a budget; the run's line then says how
+few of its jobs are in. Each row names the level, the repository, the run,
+the job, the file and line, the title and the message; the job links to its log
+and the file to that line of the run's own commit on GitHub.
+
+The filter bar narrows by level, job and repository, plus a search over title,
+message, file and job. Its keys carry a `warn` prefix in the URL (`?warn=`,
+`?warnlevel=`, `?warnjob=`, `?warnrepo=`), so they never collide with the
+[Actions](#actions) filters.
 
 ### Security
 

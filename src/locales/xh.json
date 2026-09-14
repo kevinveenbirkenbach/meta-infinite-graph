@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Izenzo",
   "view.security": "Ukhuseleko",
+  "view.warnings": "Izilumkiso",
   "panel.filter": "Isihluzi",
   "panel.design": "Uyilo",
   "design.theme": "Umxholo",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kubuzwa kwi-GitHub oko kutshintshileyo",
   "loader.task.everything": "Kucelwa kwi-GitHub konke ukuqhuba",
   "loader.task.artifacts": "Iimveliso zokuqhuba #{number}: {done} kwezi-{total}",
+  "loader.task.warnings": "Izilumkiso: {done} kwimisebenzi engama-{total}",
   "loader.task.artifact": "Imveliso {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ayiphumelelanga: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ubude bexesha",
   "feed.actions.running": "kusaqhuba",
   "feed.actions.longest": "Ukuqhuba okude kunazo zonke okubonisiweyo kuthathe {duration} ({run}).",
+  "feed.actions.open": "Vula",
+  "feed.actions.jump.playwright": "Uluhlu lwe-Playwright lokuqhuba oku",
+  "feed.actions.jump.unit": "Uluhlu lovimba ngokwakhe kokuqhuba oku",
+  "feed.actions.jump.warnings": "Izilumkiso zokuqhuba oku",
   "feed.filter.search": "Khangela ukuqhuba",
   "feed.filter.all": "zonke",
   "feed.filter.event": "Isiganeko",
@@ -198,6 +204,25 @@
   "security.column.source": "Umthombo",
   "security.column.alert": "Isilumkiso",
   "security.column.summary": "Isishwankathelo",
+  "warnings.column.level": "Inqanaba",
+  "warnings.column.repository": "Uvimba",
+  "warnings.column.run": "Ukuqhuba",
+  "warnings.column.job": "Umsebenzi",
+  "warnings.column.where": "Phi",
+  "warnings.column.title": "Isihloko",
+  "warnings.column.message": "Umyalezo",
+  "warnings.level.failure": "impazamo",
+  "warnings.level.warning": "isilumkiso",
+  "warnings.level.notice": "isaziso",
+  "warnings.note": {
+    "one": "Kukuqhuba okungama-{n}: iimpazamo ezingama-{failure}, izilumkiso ezingama-{warning}, izaziso ezingama-{notice}.",
+    "other": "Kukuqhuba okungama-{n}: iimpazamo ezingama-{failure}, izilumkiso ezingama-{warning}, izaziso ezingama-{notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: kufundwe {done} kumsebenzi ongu-{n}.",
+    "other": "{repo} {run}: kufundwe {done} kwimisebenzi engama-{n}."
+  },
+  "warnings.noRun": "Alikho isebe elikhethiweyo elinokuqhuba kokuhamba komsebenzi.",
   "security.column.since": "Ukususela",
   "security.severity.critical": "enzulu kakhulu",
   "security.severity.high": "ephezulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "ifayile",
   "tests.code.language": "ulwimi",
   "tests.code.cases": "amatyala",
+  "tests.code.run": "ukuqhuba",
   "tests.code.reading": "Kufundwa uluhlu lweemvavanyo…",
   "tests.code.note": {
     "one": "Ifayile enye engu-{n} enamatyala angama-{cases}.",
     "other": "Iifayile ezingama-{n} ezinamatyala angama-{cases}."
+  },
+  "tests.code.held": {
+    "one": "Ukuqhuba {run} kuxele nge-{n} kuzo.",
+    "other": "Ukuqhuba {run} kuxele nge-{n} kuzo."
   },
   "tests.code.noCases": "Akukho tyala lifunyenweyo kule fayile.",
   "tests.code.noTree": "Umthi weemvavanyo awunikezelwa ku-{path}.",

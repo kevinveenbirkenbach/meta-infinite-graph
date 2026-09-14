@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ενέργειες",
   "view.security": "Ασφάλεια",
+  "view.warnings": "Προειδοποιήσεις",
   "panel.filter": "Φίλτρο",
   "panel.design": "Εμφάνιση",
   "design.theme": "Θέμα",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ερώτηση στο GitHub για το τι άλλαξε",
   "loader.task.everything": "Αίτημα στο GitHub για κάθε εκτέλεση",
   "loader.task.artifacts": "Τεχνουργήματα της εκτέλεσης #{number}: {done} από {total}",
+  "loader.task.warnings": "Προειδοποιήσεις: {done} από {total} εργασίες",
   "loader.task.artifact": "Τεχνούργημα {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "απέτυχε: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Διάρκεια",
   "feed.actions.running": "εκτελείται",
   "feed.actions.longest": "Η μεγαλύτερη εκτέλεση που εμφανίζεται διήρκεσε {duration} ({run}).",
+  "feed.actions.open": "Άνοιγμα",
+  "feed.actions.jump.playwright": "Σουίτα Playwright αυτής της εκτέλεσης",
+  "feed.actions.jump.unit": "Οι δικές του σουίτες του αποθετηρίου σε αυτή την εκτέλεση",
+  "feed.actions.jump.warnings": "Προειδοποιήσεις αυτής της εκτέλεσης",
   "feed.filter.search": "Αναζήτηση στις εκτελέσεις",
   "feed.filter.all": "όλα",
   "feed.filter.event": "Συμβάν",
@@ -198,6 +204,25 @@
   "security.column.source": "Πηγή",
   "security.column.alert": "Ειδοποίηση",
   "security.column.summary": "Σύνοψη",
+  "warnings.column.level": "Επίπεδο",
+  "warnings.column.repository": "Αποθετήριο",
+  "warnings.column.run": "Εκτέλεση",
+  "warnings.column.job": "Εργασία",
+  "warnings.column.where": "Πού",
+  "warnings.column.title": "Τίτλος",
+  "warnings.column.message": "Μήνυμα",
+  "warnings.level.failure": "σφάλμα",
+  "warnings.level.warning": "προειδοποίηση",
+  "warnings.level.notice": "σημείωση",
+  "warnings.note": {
+    "one": "Σε {n} εκτέλεση: {failure} σφάλματα, {warning} προειδοποιήσεις, {notice} σημειώσεις.",
+    "other": "Σε {n} εκτελέσεις: {failure} σφάλματα, {warning} προειδοποιήσεις, {notice} σημειώσεις."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: διαβάστηκε {done} από {n} εργασία.",
+    "other": "{repo} {run}: διαβάστηκαν {done} από {n} εργασίες."
+  },
+  "warnings.noRun": "Κανένας από τους επιλεγμένους κλάδους δεν έχει εκτέλεση ροής εργασίας.",
   "security.column.since": "Από",
   "security.severity.critical": "κρίσιμη",
   "security.severity.high": "υψηλή",
@@ -378,10 +403,15 @@
   "tests.code.file": "αρχείο",
   "tests.code.language": "γλώσσα",
   "tests.code.cases": "περιπτώσεις",
+  "tests.code.run": "εκτέλεση",
   "tests.code.reading": "Ανάγνωση της σουίτας…",
   "tests.code.note": {
     "one": "{n} αρχείο με {cases} περιπτώσεις.",
     "other": "{n} αρχεία με {cases} περιπτώσεις."
+  },
+  "tests.code.held": {
+    "one": "Η εκτέλεση {run} ανέφερε {n} από αυτές.",
+    "other": "Η εκτέλεση {run} ανέφερε {n} από αυτές."
   },
   "tests.code.noCases": "Δεν βρέθηκε καμία περίπτωση σε αυτό το αρχείο.",
   "tests.code.noTree": "Το δέντρο δοκιμών δεν σερβίρεται στο {path}.",

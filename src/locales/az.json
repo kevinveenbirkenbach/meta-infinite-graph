@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Əməliyyatlar",
   "view.security": "Təhlükəsizlik",
+  "view.warnings": "Xəbərdarlıqlar",
   "panel.filter": "Filtr",
   "panel.design": "Dizayn",
   "design.theme": "Mövzu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-dan nəyin dəyişdiyi soruşulur",
   "loader.task.everything": "GitHub-dan hər icra soruşulur",
   "loader.task.artifacts": "#{number} icrasının artefaktları: {done}/{total}",
+  "loader.task.warnings": "Xəbərdarlıqlar: {total} işdən {done}",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "uğursuz oldu: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Müddət",
   "feed.actions.running": "icra olunur",
   "feed.actions.longest": "Göstərilən ən uzun icra {duration} çəkdi ({run}).",
+  "feed.actions.open": "Aç",
+  "feed.actions.jump.playwright": "Bu icranın Playwright dəsti",
+  "feed.actions.jump.unit": "Bu icradakı repozitoriyanın öz dəstləri",
+  "feed.actions.jump.warnings": "Bu icranın xəbərdarlıqları",
   "feed.filter.search": "İcralarda axtar",
   "feed.filter.all": "hamısı",
   "feed.filter.event": "Hadisə",
@@ -198,6 +204,25 @@
   "security.column.source": "Mənbə",
   "security.column.alert": "Xəbərdarlıq",
   "security.column.summary": "Xülasə",
+  "warnings.column.level": "Səviyyə",
+  "warnings.column.repository": "Repozitoriya",
+  "warnings.column.run": "İcra",
+  "warnings.column.job": "İş",
+  "warnings.column.where": "Harada",
+  "warnings.column.title": "Başlıq",
+  "warnings.column.message": "Mesaj",
+  "warnings.level.failure": "xəta",
+  "warnings.level.warning": "xəbərdarlıq",
+  "warnings.level.notice": "bildiriş",
+  "warnings.note": {
+    "one": "{n} icra üzrə: {failure} xəta, {warning} xəbərdarlıq, {notice} bildiriş.",
+    "other": "{n} icra üzrə: {failure} xəta, {warning} xəbərdarlıq, {notice} bildiriş."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} işdən {done} oxundu.",
+    "other": "{repo} {run}: {n} işdən {done} oxundu."
+  },
+  "warnings.noRun": "İşarələnmiş budaqların heç birində iş axını icrası yoxdur.",
   "security.column.since": "Nə vaxtdan",
   "security.severity.critical": "kritik",
   "security.severity.high": "yüksək",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayl",
   "tests.code.language": "dil",
   "tests.code.cases": "hallar",
+  "tests.code.run": "icra",
   "tests.code.reading": "Dəst oxunur…",
   "tests.code.note": {
     "one": "{n} fayl, {cases} hal.",
     "other": "{n} fayl, {cases} hal."
+  },
+  "tests.code.held": {
+    "one": "{run} icrası onlardan {n} barədə məlumat verdi.",
+    "other": "{run} icrası onlardan {n} barədə məlumat verdi."
   },
   "tests.code.noCases": "Bu faylda heç bir hal tapılmadı.",
   "tests.code.noTree": "Testlər ağacı {path} ünvanında verilmir.",

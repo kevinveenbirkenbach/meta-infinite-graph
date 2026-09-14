@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Šyaoθnā",
   "view.security": "Θrāθra",
+  "view.warnings": "Zbārəθā̊",
   "panel.filter": "Vīcira",
   "panel.design": "Kəhrp",
   "design.theme": "Gaona",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub pərəsāmahi yat vīcitəm",
   "loader.task.everything": "GitHub pərəsāmahi vīspā̊ tačinā̊",
   "loader.task.artifacts": "Tačinahe #{number} artifakta: {done}/{total}",
+  "loader.task.warnings": "Zbārəθā̊: {total} vārəzanąm {done}",
   "loader.task.artifact": "Artifaktəm {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "nōit vanat: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Zruuan",
   "feed.actions.running": "tačaiti",
   "feed.actions.longest": "Darəγōtəmō daršitō tačina {duration} tačat ({run}).",
+  "feed.actions.open": "Vīvara",
+  "feed.actions.jump.playwright": "Ahe tačinahe Playwright pərəsā̊",
+  "feed.actions.jump.unit": "Haṇjamanahe huuā̊ pərəsā̊ ahmi tačine",
+  "feed.actions.jump.warnings": "Ahe tačinahe zbārəθā̊",
   "feed.filter.search": "Vaēδaiia tačināni",
   "feed.filter.all": "vīspa",
   "feed.filter.event": "Hąm.jasti",
@@ -198,6 +204,25 @@
   "security.column.source": "Xå",
   "security.column.alert": "Aiβiiāxšti",
   "security.column.summary": "Kasu.vaxəδra",
+  "warnings.column.level": "Pāδa",
+  "warnings.column.repository": "Haṇjamana",
+  "warnings.column.run": "Tačina",
+  "warnings.column.job": "Vārəza",
+  "warnings.column.where": "Kuθra",
+  "warnings.column.title": "Nāma",
+  "warnings.column.message": "Vacah",
+  "warnings.level.failure": "draogā",
+  "warnings.level.warning": "zbārəθa",
+  "warnings.level.notice": "cisti",
+  "warnings.note": {
+    "one": "{n} tačine: {failure} draogā, {warning} zbārəθa, {notice} cisti.",
+    "other": "{n} tačinaēšu: {failure} draogā, {warning} zbārəθa, {notice} cisti."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} vārəzāt̰ {done} frasrūta.",
+    "other": "{repo} {run}: {n} vārəzaēibiiō {done} frasrūta."
+  },
+  "warnings.noRun": "Naēciš vərətanąm frasparəγanąm tačinəm kārō.tačarahe astī.",
   "security.column.since": "Haca",
   "security.severity.critical": "mazištō",
   "security.severity.high": "bərəzō",
@@ -378,10 +403,15 @@
   "tests.code.file": "naska",
   "tests.code.language": "vāxš",
   "tests.code.cases": "pərəsa",
+  "tests.code.run": "tačina",
   "tests.code.reading": "Pərəsā̊ frasrāuuaiieiṇte…",
   "tests.code.note": {
     "one": "{cases} pərəsāiš {n} nasku.",
     "other": "{cases} pərəsāiš {n} naskā̊."
+  },
+  "tests.code.held": {
+    "one": "Tačina {run} {n} aēšąm paiti vaocat̰.",
+    "other": "Tačina {run} {n} aēšąm paiti vaocat̰."
   },
   "tests.code.noCases": "Nōit pərəsa ahmi naska aŋhat̰.",
   "tests.code.noTree": "Pərəsanąm vanā nōit {path} paiti dāitē.",

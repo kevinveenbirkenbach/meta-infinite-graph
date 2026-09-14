@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "کړنې",
   "view.security": "امنیت",
+  "view.warnings": "اخطارونه",
   "panel.filter": "چاڼګر",
   "panel.design": "ډيزاين",
   "design.theme": "بڼه",
@@ -172,6 +173,7 @@
   "loader.task.changes": "له GitHub نه پوښتل کېږي چې څه بدل شوي",
   "loader.task.everything": "له GitHub نه هره چلېدنه غوښتل کېږي",
   "loader.task.artifacts": "د چلېدنې #{number} آرټيفکټونه: له {total} څخه {done}",
+  "loader.task.warnings": "اخطارونه: له {total} دندو څخه {done}",
   "loader.task.artifact": "آرټيفکټ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناکام شو: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "موده",
   "feed.actions.running": "روان دی",
   "feed.actions.longest": "تر ټولو اوږده ښودل شوې چلېدنه {duration} ونیوه ({run}).",
+  "feed.actions.open": "پرانیستل",
+  "feed.actions.jump.playwright": "د دې چلېدنې د Playwright ازموینې",
+  "feed.actions.jump.unit": "په دې چلېدنه کې د زېرمتون خپلې ازموینې",
+  "feed.actions.jump.warnings": "د دې چلېدنې اخطارونه",
   "feed.filter.search": "چلېدنې ولټوئ",
   "feed.filter.all": "ټول",
   "feed.filter.event": "پېښه",
@@ -198,6 +204,25 @@
   "security.column.source": "سرچینه",
   "security.column.alert": "خبرتیا",
   "security.column.summary": "لنډیز",
+  "warnings.column.level": "کچه",
+  "warnings.column.repository": "زېرمتون",
+  "warnings.column.run": "چلېدنه",
+  "warnings.column.job": "دنده",
+  "warnings.column.where": "چېرته",
+  "warnings.column.title": "سرلیک",
+  "warnings.column.message": "پیغام",
+  "warnings.level.failure": "تېروتنه",
+  "warnings.level.warning": "اخطار",
+  "warnings.level.notice": "یادښت",
+  "warnings.note": {
+    "one": "په {n} چلېدنه کې: {failure} تېروتنې، {warning} اخطارونه، {notice} یادښتونه.",
+    "other": "په {n} چلېدنو کې: {failure} تېروتنې، {warning} اخطارونه، {notice} یادښتونه."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: له {n} دندې څخه {done} ولوستل شوه.",
+    "other": "{repo} {run}: له {n} دندو څخه {done} ولوستل شوې."
+  },
+  "warnings.noRun": "د نښه شویو څانګو له جملې څخه هېڅ یوه د کاري بهیر چلېدنه نلري.",
   "security.column.since": "له",
   "security.severity.critical": "بحراني",
   "security.severity.high": "لوړ",
@@ -378,10 +403,15 @@
   "tests.code.file": "دوتنه",
   "tests.code.language": "ژبه",
   "tests.code.cases": "قضیې",
+  "tests.code.run": "چلېدنه",
   "tests.code.reading": "ازموینې لوستل کېږي…",
   "tests.code.note": {
     "one": "{n} دوتنه له {cases} قضیو سره.",
     "other": "{n} دوتنې له {cases} قضیو سره."
+  },
+  "tests.code.held": {
+    "one": "چلېدنې {run} له هغو څخه د {n} راپور ورکړ.",
+    "other": "چلېدنې {run} له هغو څخه د {n} راپور ورکړ."
   },
   "tests.code.noCases": "په دې دوتنه کې هېڅ قضیه ونه موندل شوه.",
   "tests.code.noTree": "د ازموینو ونه په {path} کې نه وړاندې کېږي.",

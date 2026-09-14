@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ਕਾਰਵਾਈਆਂ",
   "view.security": "ਸੁਰੱਖਿਆ",
+  "view.warnings": "ਚੇਤਾਵਨੀਆਂ",
   "panel.filter": "ਫਿਲਟਰ",
   "panel.design": "ਡਿਜ਼ਾਈਨ",
   "design.theme": "ਥੀਮ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub ਤੋਂ ਪੁੱਛਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਕੀ ਬਦਲਿਆ",
   "loader.task.everything": "GitHub ਤੋਂ ਹਰ ਦੌੜ ਮੰਗੀ ਜਾ ਰਹੀ ਹੈ",
   "loader.task.artifacts": "ਦੌੜ #{number} ਦੇ ਆਰਟੀਫੈਕਟ: {total} ਵਿੱਚੋਂ {done}",
+  "loader.task.warnings": "ਚੇਤਾਵਨੀਆਂ: {total} ਕੰਮਾਂ ਵਿੱਚੋਂ {done}",
   "loader.task.artifact": "ਆਰਟੀਫੈਕਟ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ਅਸਫਲ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ਮਿਆਦ",
   "feed.actions.running": "ਚੱਲ ਰਹੀ ਹੈ",
   "feed.actions.longest": "ਦਿਖਾਈ ਗਈ ਸਭ ਤੋਂ ਲੰਬੀ ਦੌੜ ਨੂੰ {duration} ਲੱਗੇ ({run})।",
+  "feed.actions.open": "ਖੋਲ੍ਹੋ",
+  "feed.actions.jump.playwright": "ਇਸ ਦੌੜ ਦਾ Playwright ਸੂਟ",
+  "feed.actions.jump.unit": "ਇਸ ਦੌੜ ਉੱਤੇ ਰਿਪੋਜ਼ਟਰੀ ਦੇ ਆਪਣੇ ਸੂਟ",
+  "feed.actions.jump.warnings": "ਇਸ ਦੌੜ ਦੀਆਂ ਚੇਤਾਵਨੀਆਂ",
   "feed.filter.search": "ਦੌੜਾਂ ਖੋਜੋ",
   "feed.filter.all": "ਸਾਰੇ",
   "feed.filter.event": "ਘਟਨਾ",
@@ -198,6 +204,25 @@
   "security.column.source": "ਸਰੋਤ",
   "security.column.alert": "ਅਲਰਟ",
   "security.column.summary": "ਸਾਰ",
+  "warnings.column.level": "ਪੱਧਰ",
+  "warnings.column.repository": "ਰਿਪੋਜ਼ਟਰੀ",
+  "warnings.column.run": "ਦੌੜ",
+  "warnings.column.job": "ਕੰਮ",
+  "warnings.column.where": "ਕਿੱਥੇ",
+  "warnings.column.title": "ਸਿਰਲੇਖ",
+  "warnings.column.message": "ਸੁਨੇਹਾ",
+  "warnings.level.failure": "ਗਲਤੀ",
+  "warnings.level.warning": "ਚੇਤਾਵਨੀ",
+  "warnings.level.notice": "ਸੂਚਨਾ",
+  "warnings.note": {
+    "one": "{n} ਦੌੜ ਵਿੱਚ: {failure} ਗਲਤੀਆਂ, {warning} ਚੇਤਾਵਨੀਆਂ, {notice} ਸੂਚਨਾਵਾਂ।",
+    "other": "{n} ਦੌੜਾਂ ਵਿੱਚ: {failure} ਗਲਤੀਆਂ, {warning} ਚੇਤਾਵਨੀਆਂ, {notice} ਸੂਚਨਾਵਾਂ।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ਕੰਮ ਵਿੱਚੋਂ {done} ਪੜ੍ਹਿਆ ਗਿਆ।",
+    "other": "{repo} {run}: {n} ਕੰਮਾਂ ਵਿੱਚੋਂ {done} ਪੜ੍ਹੇ ਗਏ।"
+  },
+  "warnings.noRun": "ਨਿਸ਼ਾਨ ਲਾਈਆਂ ਬ੍ਰਾਂਚਾਂ ਵਿੱਚੋਂ ਕਿਸੇ ਦੀ ਵੀ ਵਰਕਫਲੋ ਦੌੜ ਨਹੀਂ ਹੈ।",
   "security.column.since": "ਤੋਂ",
   "security.severity.critical": "ਨਾਜ਼ੁਕ",
   "security.severity.high": "ਉੱਚ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ਫਾਈਲ",
   "tests.code.language": "ਭਾਸ਼ਾ",
   "tests.code.cases": "ਕੇਸ",
+  "tests.code.run": "ਦੌੜ",
   "tests.code.reading": "ਸੂਟ ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…",
   "tests.code.note": {
     "one": "{cases} ਕੇਸਾਂ ਵਾਲੀ {n} ਫਾਈਲ।",
     "other": "{cases} ਕੇਸਾਂ ਵਾਲੀਆਂ {n} ਫਾਈਲਾਂ।"
+  },
+  "tests.code.held": {
+    "one": "ਦੌੜ {run} ਨੇ ਉਨ੍ਹਾਂ ਵਿੱਚੋਂ {n} ਬਾਰੇ ਦੱਸਿਆ।",
+    "other": "ਦੌੜ {run} ਨੇ ਉਨ੍ਹਾਂ ਵਿੱਚੋਂ {n} ਬਾਰੇ ਦੱਸਿਆ।"
   },
   "tests.code.noCases": "ਇਸ ਫਾਈਲ ਵਿੱਚ ਕੋਈ ਕੇਸ ਨਹੀਂ ਮਿਲਿਆ।",
   "tests.code.noTree": "ਟੈਸਟਾਂ ਦਾ ਰੁੱਖ {path} ਉੱਤੇ ਨਹੀਂ ਦਿੱਤਾ ਜਾਂਦਾ।",

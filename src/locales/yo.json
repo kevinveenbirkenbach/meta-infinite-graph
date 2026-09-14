@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Àwọn ìṣe",
   "view.security": "Ààbò",
+  "view.warnings": "Àwọn ìkìlọ̀",
   "panel.filter": "Àlẹ̀mọ́",
   "panel.design": "Ìrísí",
   "design.theme": "Àkòrí",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Ń béèrè lọ́wọ́ GitHub ohun tó yí padà",
   "loader.task.everything": "Ń béèrè gbogbo ìṣiṣẹ́ lọ́wọ́ GitHub",
   "loader.task.artifacts": "Àwọn àtọwọ́dá ìṣiṣẹ́ #{number}: {done} nínú {total}",
+  "loader.task.warnings": "Àwọn ìkìlọ̀: {done} nínú iṣẹ́ {total}",
   "loader.task.artifact": "Àtọwọ́dá {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kùnà: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Àkókò tí ó gbà",
   "feed.actions.running": "ń ṣiṣẹ́",
   "feed.actions.longest": "Ìṣiṣẹ́ tó gùn jùlọ tí a fihàn gba {duration} ({run}).",
+  "feed.actions.open": "Ṣí",
+  "feed.actions.jump.playwright": "Àkójọ Playwright ìṣiṣẹ́ yìí",
+  "feed.actions.jump.unit": "Àwọn àkójọ ti ibi ìpamọ́ fúnra rẹ̀ nínú ìṣiṣẹ́ yìí",
+  "feed.actions.jump.warnings": "Àwọn ìkìlọ̀ ìṣiṣẹ́ yìí",
   "feed.filter.search": "Wá nínú àwọn ìṣiṣẹ́",
   "feed.filter.all": "gbogbo",
   "feed.filter.event": "Ìṣẹ̀lẹ̀",
@@ -188,6 +194,23 @@
   "security.column.source": "Orísun",
   "security.column.alert": "Ìkìlọ̀",
   "security.column.summary": "Àkópọ̀",
+  "warnings.column.level": "Ìpele",
+  "warnings.column.repository": "Ibi ìpamọ́",
+  "warnings.column.run": "Ìṣiṣẹ́",
+  "warnings.column.job": "Iṣẹ́",
+  "warnings.column.where": "Níbo",
+  "warnings.column.title": "Àkọlé",
+  "warnings.column.message": "Ọ̀rọ̀",
+  "warnings.level.failure": "àṣìṣe",
+  "warnings.level.warning": "ìkìlọ̀",
+  "warnings.level.notice": "àkíyèsí",
+  "warnings.note": {
+    "other": "Nínú ìṣiṣẹ́ {n}: àṣìṣe {failure}, ìkìlọ̀ {warning}, àkíyèsí {notice}."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: a ka {done} nínú iṣẹ́ {n}."
+  },
+  "warnings.noRun": "Kò sí ọ̀kan nínú àwọn ẹ̀ka tí a yàn tí ó ní ìṣiṣẹ́ ìlànà-iṣẹ́.",
   "security.column.since": "Láti",
   "security.severity.critical": "eléwu gidigidi",
   "security.severity.high": "gíga",
@@ -355,9 +378,13 @@
   "tests.code.file": "fáìlì",
   "tests.code.language": "èdè",
   "tests.code.cases": "ọ̀ràn",
+  "tests.code.run": "ìṣiṣẹ́",
   "tests.code.reading": "Ń ka àkójọ náà…",
   "tests.code.note": {
     "other": "Fáìlì {n} pẹ̀lú ọ̀ràn {cases}."
+  },
+  "tests.code.held": {
+    "other": "Ìṣiṣẹ́ {run} ròyìn {n} nínú wọn."
   },
   "tests.code.noCases": "A kò rí ọ̀ràn kankan nínú fáìlì yìí.",
   "tests.code.noTree": "A kò sìn igi àwọn ìdánwò ní {path}.",

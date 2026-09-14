@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Вӧчӧмъяс",
   "view.security": "Видзчысьӧм",
+  "view.warnings": "Тӧдчӧдӧмъяс",
   "panel.filter": "Фильтр",
   "panel.design": "Ӧблик",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-ысь юалӧм, мый вежсьӧма",
   "loader.task.everything": "GitHub-ысь став уджалӧмъяс корӧм",
   "loader.task.artifacts": "#{number} уджалӧмлӧн артефактъяс: {done} / {total}",
+  "loader.task.warnings": "Тӧдчӧдӧмъяс: {total} уджысь {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "эз артмы: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Кузта",
   "feed.actions.running": "мунӧ",
   "feed.actions.longest": "Петкӧдлӧм уджалӧмъяс пиысь медкузь уджалӧм нюжаліс {duration} ({run}).",
+  "feed.actions.open": "Восьтны",
+  "feed.actions.jump.playwright": "Тайӧ уджалӧмлӧн Playwright чукӧр",
+  "feed.actions.jump.unit": "Тайӧ уджалӧмын репозиторийлӧн аслас чукӧръяс",
+  "feed.actions.jump.warnings": "Тайӧ уджалӧмлӧн тӧдчӧдӧмъяс",
   "feed.filter.search": "Корсьны уджалӧмъясысь",
   "feed.filter.all": "ставыс",
   "feed.filter.event": "Лоӧмтор",
@@ -198,6 +204,25 @@
   "security.column.source": "Ӧшмӧс",
   "security.column.alert": "Юӧртӧм",
   "security.column.summary": "Кывкӧрт",
+  "warnings.column.level": "Тшупӧд",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Уджалӧм",
+  "warnings.column.job": "Удж",
+  "warnings.column.where": "Кӧні",
+  "warnings.column.title": "Юрним",
+  "warnings.column.message": "Юӧр",
+  "warnings.level.failure": "мыж",
+  "warnings.level.warning": "тӧдчӧдӧм",
+  "warnings.level.notice": "пасйӧд",
+  "warnings.note": {
+    "one": "{n} уджалӧм вылын: {failure} мыж, {warning} тӧдчӧдӧм, {notice} пасйӧд.",
+    "other": "{n} уджалӧм вылын: {failure} мыж, {warning} тӧдчӧдӧм, {notice} пасйӧд."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} уджысь лыддьӧма {done}.",
+    "other": "{repo} {run}: {n} уджысь лыддьӧма {done}."
+  },
+  "warnings.noRun": "Пасйӧм увъяс пиысь ни ӧтиын абу уджноглӧн уджалӧм.",
   "security.column.since": "Кодсянь",
   "security.severity.critical": "критическӧй",
   "security.severity.high": "вылын",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "кыв",
   "tests.code.cases": "случайяс",
+  "tests.code.run": "уджалӧм",
   "tests.code.reading": "Чукӧр лыддьӧм…",
   "tests.code.note": {
     "one": "{n} файл, {cases} случай.",
     "other": "{n} файл, {cases} случай."
+  },
+  "tests.code.held": {
+    "one": "Уджалӧм {run} налысь {n} йылысь висьталіс.",
+    "other": "Уджалӧм {run} налысь {n} йылысь висьталіс."
   },
   "tests.code.noCases": "Тайӧ файлын ни ӧти случай абу аддзӧма.",
   "tests.code.noTree": "Тестъяс пу {path} вылын оз сетчы.",

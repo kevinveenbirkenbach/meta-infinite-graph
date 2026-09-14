@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Амалҳо",
   "view.security": "Амният",
+  "view.warnings": "Огоҳиҳо",
   "panel.filter": "Филтр",
   "panel.design": "Намуд",
   "design.theme": "Мавзӯъ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Пурсидан аз GitHub, ки чӣ тағйир ёфт",
   "loader.task.everything": "Дархости ҳамаи иҷроҳо аз GitHub",
   "loader.task.artifacts": "Артефактҳои иҷрои #{number}: {done} аз {total}",
+  "loader.task.warnings": "Огоҳиҳо: аз {total} вазифа {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ноком шуд: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Давомнокӣ",
   "feed.actions.running": "дар иҷро",
   "feed.actions.longest": "Тӯлонитарин иҷрои нишондодашуда {duration} ({run}) давом кард.",
+  "feed.actions.open": "Кушодан",
+  "feed.actions.jump.playwright": "Маҷмӯи Playwright-и ин иҷро",
+  "feed.actions.jump.unit": "Маҷмӯаҳои худи махзан дар ин иҷро",
+  "feed.actions.jump.warnings": "Огоҳиҳои ин иҷро",
   "feed.filter.search": "Ҷустуҷӯ дар иҷроҳо",
   "feed.filter.all": "ҳама",
   "feed.filter.event": "Рӯйдод",
@@ -198,6 +204,25 @@
   "security.column.source": "Манбаъ",
   "security.column.alert": "Огоҳӣ",
   "security.column.summary": "Хулоса",
+  "warnings.column.level": "Сатҳ",
+  "warnings.column.repository": "Махзан",
+  "warnings.column.run": "Иҷро",
+  "warnings.column.job": "Вазифа",
+  "warnings.column.where": "Дар куҷо",
+  "warnings.column.title": "Сарлавҳа",
+  "warnings.column.message": "Паём",
+  "warnings.level.failure": "хато",
+  "warnings.level.warning": "огоҳӣ",
+  "warnings.level.notice": "эзоҳ",
+  "warnings.note": {
+    "one": "Дар {n} иҷро: {failure} хато, {warning} огоҳӣ, {notice} эзоҳ.",
+    "other": "Дар {n} иҷро: {failure} хато, {warning} огоҳӣ, {notice} эзоҳ."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: аз {n} вазифа {done} хонда шуд.",
+    "other": "{repo} {run}: аз {n} вазифа {done} хонда шуд."
+  },
+  "warnings.noRun": "Ҳеҷ яке аз шохаҳои қайдшуда иҷрои раванди корӣ надорад.",
   "security.column.since": "Аз",
   "security.severity.critical": "критикӣ",
   "security.severity.high": "баланд",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "забон",
   "tests.code.cases": "ҳолатҳо",
+  "tests.code.run": "иҷро",
   "tests.code.reading": "Хондани маҷмӯи санҷишҳо…",
   "tests.code.note": {
     "one": "{n} файл бо {cases} ҳолат.",
     "other": "{n} файл бо {cases} ҳолат."
+  },
+  "tests.code.held": {
+    "one": "Иҷрои {run} дар бораи {n}-тои онҳо хабар дод.",
+    "other": "Иҷрои {run} дар бораи {n}-тои онҳо хабар дод."
   },
   "tests.code.noCases": "Дар ин файл ҳеҷ ҳолат ёфт нашуд.",
   "tests.code.noTree": "Дарахти санҷишҳо дар {path} пешниҳод намешавад.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Acziuns",
   "view.security": "Segirezza",
+  "view.warnings": "Avertiments",
   "panel.filter": "Filter",
   "panel.design": "Design",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Dumandar GitHub tge ch'è sa midà",
   "loader.task.everything": "Dumandar GitHub mintga execuziun",
   "loader.task.artifacts": "Artefacts da l'execuziun #{number}: {done} da {total}",
+  "loader.task.warnings": "Avertiments: {done} da {total} jobs",
   "loader.task.artifact": "Artefact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "betg reussì: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durada",
   "feed.actions.running": "en execuziun",
   "feed.actions.longest": "L'execuziun la pli lunga mussada ha durà {duration} ({run}).",
+  "feed.actions.open": "Avrir",
+  "feed.actions.jump.playwright": "La suite Playwright da questa execuziun",
+  "feed.actions.jump.unit": "Las atgnas suites dal repository en questa execuziun",
+  "feed.actions.jump.warnings": "Ils avertiments da questa execuziun",
   "feed.filter.search": "Tschertgar execuziuns",
   "feed.filter.all": "tuts",
   "feed.filter.event": "Eveniment",
@@ -198,6 +204,25 @@
   "security.column.source": "Funtauna",
   "security.column.alert": "Alarm",
   "security.column.summary": "Resumaziun",
+  "warnings.column.level": "Nivel",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Execuziun",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Nua",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Messadi",
+  "warnings.level.failure": "errur",
+  "warnings.level.warning": "avertiment",
+  "warnings.level.notice": "remartga",
+  "warnings.note": {
+    "one": "Sur {n} execuziun: {failure} errurs, {warning} avertiments, {notice} remartgas.",
+    "other": "Sur {n} execuziuns: {failure} errurs, {warning} avertiments, {notice} remartgas."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} da {n} job legì.",
+    "other": "{repo} {run}: {done} da {n} jobs legids."
+  },
+  "warnings.noRun": "Nagina da las rames marcadas ha ina execuziun da workflow.",
   "security.column.since": "Dapi",
   "security.severity.critical": "critic",
   "security.severity.high": "aut",
@@ -378,10 +403,15 @@
   "tests.code.file": "datoteca",
   "tests.code.language": "lingua",
   "tests.code.cases": "cass",
+  "tests.code.run": "execuziun",
   "tests.code.reading": "Leger la suite…",
   "tests.code.note": {
     "one": "{n} datoteca cun {cases} cass.",
     "other": "{n} datotecas cun {cases} cass."
+  },
+  "tests.code.held": {
+    "one": "L'execuziun {run} ha rapportà davart {n} da quels.",
+    "other": "L'execuziun {run} ha rapportà davart {n} da quels."
   },
   "tests.code.noCases": "Nagin cas è vegnì chattà en questa datoteca.",
   "tests.code.noTree": "L'arber da tests na vegn betg furnì sut {path}.",

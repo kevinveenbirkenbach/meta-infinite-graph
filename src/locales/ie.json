@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Actiones",
   "view.security": "Securitá",
+  "view.warnings": "Avertimentes",
   "panel.filter": "Filtre",
   "panel.design": "Aspecte",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Questionante GitHub pri quo ha changeat",
   "loader.task.everything": "Demandante de GitHub omni executiones",
   "loader.task.artifacts": "Artefactes del execution #{number}: {done} de {total}",
+  "loader.task.warnings": "Avertimentes: {done} de {total} labores",
   "loader.task.artifact": "Artefacte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallit: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durada",
   "feed.actions.running": "in curse",
   "feed.actions.longest": "Li max long execution monstrat durat {duration} ({run}).",
+  "feed.actions.open": "Aperter",
+  "feed.actions.jump.playwright": "Li suite Playwright de ti-ci execution",
+  "feed.actions.jump.unit": "Li propri suites del depositoria che ti-ci execution",
+  "feed.actions.jump.warnings": "Avertimentes de ti-ci execution",
   "feed.filter.search": "Serchar in li executiones",
   "feed.filter.all": "omnis",
   "feed.filter.event": "Eveniment",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonte",
   "security.column.alert": "Alerta",
   "security.column.summary": "Resumé",
+  "warnings.column.level": "Nivelle",
+  "warnings.column.repository": "Depositoria",
+  "warnings.column.run": "Execution",
+  "warnings.column.job": "Labor",
+  "warnings.column.where": "U",
+  "warnings.column.title": "Titul",
+  "warnings.column.message": "Missage",
+  "warnings.level.failure": "errore",
+  "warnings.level.warning": "avertiment",
+  "warnings.level.notice": "notation",
+  "warnings.note": {
+    "one": "Tra {n} execution: {failure} errores, {warning} avertimentes, {notice} notationes.",
+    "other": "Tra {n} executiones: {failure} errores, {warning} avertimentes, {notice} notationes."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} de {n} labor leet.",
+    "other": "{repo} {run}: {done} de {n} labores leet."
+  },
+  "warnings.noRun": "Null del marcat branches have un execution de flue de labor.",
   "security.column.since": "Desde",
   "security.severity.critical": "critic",
   "security.severity.high": "alt",
@@ -378,10 +403,15 @@
   "tests.code.file": "file",
   "tests.code.language": "lingue",
   "tests.code.cases": "casus",
+  "tests.code.run": "execution",
   "tests.code.reading": "Leente li suite…",
   "tests.code.note": {
     "one": "{n} file con {cases} casus.",
     "other": "{n} files con {cases} casus."
+  },
+  "tests.code.held": {
+    "one": "Li execution {run} raportat pri {n} de ili.",
+    "other": "Li execution {run} raportat pri {n} de ili."
   },
   "tests.code.noCases": "Null casu esset trovat in ti-ci file.",
   "tests.code.noTree": "Li árbor del testes ne es servit che {path}.",

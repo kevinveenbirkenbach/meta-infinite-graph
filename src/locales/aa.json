@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Taamooli",
   "view.security": "Amaan",
+  "view.warnings": "Kassisooli",
   "panel.filter": "Sirit",
   "panel.design": "Suurat",
   "design.theme": "Kuul",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub geddalte tu esserta",
   "loader.task.everything": "GitHub gexo kulli esserta",
   "loader.task.artifacts": "Gexo #{number} artifakti: {done}/{total}",
+  "loader.task.warnings": "Kassisooli: {total} taamoolik {done}",
   "loader.task.artifact": "Artifakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ma yewqinna: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Wakti",
   "feed.actions.running": "gexak yan",
   "feed.actions.longest": "Uybulsime gexooli addal dheerih tan gexo {duration} beyte ({run}).",
+  "feed.actions.open": "Fak",
+  "feed.actions.jump.playwright": "Tah gexoh Playwright tajribooli",
+  "feed.actions.jump.unit": "Makzan isi tajribooli tah gexol",
+  "feed.actions.jump.warnings": "Tah gexoh kassisooli",
   "feed.filter.search": "Gexooli gorris",
   "feed.filter.all": "ummaan",
   "feed.filter.event": "Xaadisa",
@@ -198,6 +204,25 @@
   "security.column.source": "Asal",
   "security.column.alert": "Kassis",
   "security.column.summary": "Kooba",
+  "warnings.column.level": "Daraja",
+  "warnings.column.repository": "Makzan",
+  "warnings.column.run": "Gexo",
+  "warnings.column.job": "Taama",
+  "warnings.column.where": "Arac",
+  "warnings.column.title": "Cunwaan",
+  "warnings.column.message": "Farmo",
+  "warnings.level.failure": "galat",
+  "warnings.level.warning": "kassis",
+  "warnings.level.notice": "xiinisso",
+  "warnings.note": {
+    "one": "{n} gexo addal: {failure} galat, {warning} kassis, {notice} xiinisso.",
+    "other": "{n} gexooli addal: {failure} galat, {warning} kassis, {notice} xiinisso."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} taamak {done} akriyimte.",
+    "other": "{repo} {run}: {n} taamoolik {done} akriyimte."
+  },
+  "warnings.noRun": "Doorimte farqittek tiya taamoh yangayyi gexo mali.",
   "security.column.since": "Ugutti",
   "security.severity.critical": "kaxxa gibdi",
   "security.severity.high": "fayya",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayl",
   "tests.code.language": "af",
   "tests.code.cases": "kaasooli",
+  "tests.code.run": "gexo",
   "tests.code.reading": "Tajribooli akriya…",
   "tests.code.note": {
     "one": "{n} fayl {cases} kaasooli luk.",
     "other": "{n} faylitte {cases} kaasooli luk."
+  },
+  "tests.code.held": {
+    "one": "Gexo {run} keenik {n} warise.",
+    "other": "Gexo {run} keenik {n} warise."
   },
   "tests.code.noCases": "Ah fayl addal kaas magerrimtinna.",
   "tests.code.noTree": "Tajriboolih caxa {path} addal matanna.",

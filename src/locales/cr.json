@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ᑑᑕᒧᐏᓇ",
   "view.security": "ᑲᓇᐍᔨᒋᑫᐏᐣ",
+  "view.warnings": "ᐋᑲᐧᐍᔨᐦᑕᒧᐦᐃᐍᐏᓇ",
   "panel.filter": "ᓇᐘᓲᓂᑫᐏᐣ",
   "panel.design": "ᐃᓯᓈᑲᐧᐣ",
   "design.theme": "ᐚᓭᔮᐏᐣ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub ᐁ ᑲᑫᐧᒋᒥᐦᐠ ᑳ ᒣᐢᑯᒋᐸᔨᐠ",
   "loader.task.everything": "GitHub ᐁ ᑲᑫᐧᒋᒥᐦᐠ ᑲᐦᑭᔭᐤ ᐱᒥᐸᔨᐏᓇ",
   "loader.task.artifacts": "ᐱᒥᐸᔨᐏᐣ #{number} ᐅᔑᐦᒋᑲᓇ: {done}/{total}",
+  "loader.task.warnings": "ᐋᑲᐧᐍᔨᐦᑕᒧᐦᐃᐍᐏᓇ: {total} ᐊᑐᐢᑫᐏᓇ ᐅᐦᒋ {done}",
   "loader.task.artifact": "ᐅᔑᐦᒋᑲᐣ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ᒪᔭᐸᔨᐤ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ᑖᐣ ᑭᓄᐙᐠ",
   "feed.actions.running": "ᐱᒥᐸᔨᐤ",
   "feed.actions.longest": "ᒫᐘᒋ ᑭᓄᐙᐤ ᐱᒥᐸᔨᐏᐣ {duration} ᑮᐱᒥᐸᔨᐤ ({run}).",
+  "feed.actions.open": "ᔫᐦᑌᓇ",
+  "feed.actions.jump.playwright": "ᐆᒪ ᐱᒥᐸᔨᐏᐣ ᐅ Playwright ᑯᒋᐦᑖᐏᓇ",
+  "feed.actions.jump.unit": "ᐆᒪ ᐱᒥᐸᔨᐏᓂᕽ ᐊᐢᑖᓱᐏᐣ ᐅᑎᐸᔨᐦᒋᑫᐏᐣ ᑯᒋᐦᑖᐏᓇ",
+  "feed.actions.jump.warnings": "ᐆᒪ ᐱᒥᐸᔨᐏᐣ ᐅᑦ ᐋᑲᐧᐍᔨᐦᑕᒧᐦᐃᐍᐏᓇ",
   "feed.filter.search": "ᓂᑐᓇ ᐱᒥᐸᔨᐏᓇ",
   "feed.filter.all": "ᑲᐦᑭᔭᐤ",
   "feed.filter.event": "ᐃᐢᐸᔨᐏᐣ",
@@ -198,6 +204,25 @@
   "security.column.source": "ᐅᐦᒋᐸᔨᐏᐣ",
   "security.column.alert": "ᓂᑲᓂᐢᑫᔨᐦᑕᒧᐦᐃᐍᐏᐣ",
   "security.column.summary": "ᐊᒋᒧᐏᓯᐢ",
+  "warnings.column.level": "ᑖᓂ ᐁᔑ ᐃᑌᔨᐦᑖᑲᐧᐠ",
+  "warnings.column.repository": "ᐊᐢᑖᓱᐏᐣ",
+  "warnings.column.run": "ᐱᒥᐸᔨᐏᐣ",
+  "warnings.column.job": "ᐊᑐᐢᑫᐏᐣ",
+  "warnings.column.where": "ᑖᓂᑌ",
+  "warnings.column.title": "ᐑᐦᐅᐏᐣ",
+  "warnings.column.message": "ᐍᐦᑕᒫᑫᐏᐣ",
+  "warnings.level.failure": "ᐘᓂᑑᑕᒧᐏᐣ",
+  "warnings.level.warning": "ᐋᑲᐧᐍᔨᐦᑕᒧᐦᐃᐍᐏᐣ",
+  "warnings.level.notice": "ᒪᓯᓇᐦᐃᑲᓂᓯᐢ",
+  "warnings.note": {
+    "one": "{n} ᐱᒥᐸᔨᐏᓂᕽ: {failure} ᐘᓂᑑᑕᒧᐏᓇ, {warning} ᐋᑲᐧᐍᔨᐦᑕᒧᐦᐃᐍᐏᓇ, {notice} ᒪᓯᓇᐦᐃᑲᓂᓯᓴ᙮",
+    "other": "{n} ᐱᒥᐸᔨᐏᓇ ᐅᐦᒋ: {failure} ᐘᓂᑑᑕᒧᐏᓇ, {warning} ᐋᑲᐧᐍᔨᐦᑕᒧᐦᐃᐍᐏᓇ, {notice} ᒪᓯᓇᐦᐃᑲᓂᓯᓴ᙮"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ᐊᑐᐢᑫᐏᐣ ᐅᐦᒋ {done} ᑮ ᐊᔭᒥᐦᑖᐤ᙮",
+    "other": "{repo} {run}: {n} ᐊᑐᐢᑫᐏᓇ ᐅᐦᒋ {done} ᑮ ᐊᔭᒥᐦᑖᐘ᙮"
+  },
+  "warnings.noRun": "ᓇᒨᔭ ᐊᐍᓇ ᑳ ᑭᐢᑭᓄᐚᒋᐦᑖᑫᐧᐠ ᐘᑎᐦᑲᐧᓇ ᐊᑐᐢᑫᐏᐣᐱᒥᒋᐘᐣ ᐱᒥᐸᔨᐏᐣ ᐅᑕᔮᐣ᙮",
   "security.column.since": "ᒫᒋᐸᔨᐏᐣ",
   "security.severity.critical": "ᒥᐢᑕᐦᐃ",
   "security.severity.high": "ᐃᐢᐱᒥᕽ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ᒪᓯᓇᐦᐃᑲᐣ",
   "tests.code.language": "ᐱᑭᐢᑫᐧᐏᐣ",
   "tests.code.cases": "ᑯᒋᐦᑖᐏᓇ",
+  "tests.code.run": "ᐱᒥᐸᔨᐏᐣ",
   "tests.code.reading": "ᑯᒋᐦᑖᐏᓇ ᐊᔭᒥᐦᑖᑲᓄᐘ…",
   "tests.code.note": {
     "one": "{cases} ᑯᒋᐦᑖᐏᓇ ᐁ ᐊᔮᐠ {n} ᒪᓯᓇᐦᐃᑲᐣ᙮",
     "other": "{cases} ᑯᒋᐦᑖᐏᓇ ᐁ ᐊᔮᑭ {n} ᒪᓯᓇᐦᐃᑲᓇ᙮"
+  },
+  "tests.code.held": {
+    "one": "ᐱᒥᐸᔨᐏᐣ {run} {n} ᐅᐦᒋ ᑮ ᐋᒋᒧᐤ᙮",
+    "other": "ᐱᒥᐸᔨᐏᐣ {run} {n} ᐅᐦᒋ ᑮ ᐋᒋᒧᐤ᙮"
   },
   "tests.code.noCases": "ᓇᒨᔭ ᑯᒋᐦᑖᐏᐣ ᑮ ᒥᐢᑳᑌᐤ ᐆᒪ ᒪᓯᓇᐦᐃᑲᓂᕽ᙮",
   "tests.code.noTree": "ᑯᒋᐦᑖᐏᓇ ᒥᐢᑎᑯ ᓇᒨᔭ {path} ᐃᑕ ᒥᔭᐤ᙮",

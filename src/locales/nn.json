@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Handlingar",
   "view.security": "Tryggleik",
+  "view.warnings": "Åtvaringar",
   "panel.filter": "Filter",
   "panel.design": "Utsjånad",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Spør GitHub kva som er endra",
   "loader.task.everything": "Ber GitHub om alle køyringar",
   "loader.task.artifacts": "Artefakt frå køyring #{number}: {done} av {total}",
+  "loader.task.warnings": "Åtvaringar: {done} av {total} jobbar",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "feila: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Varigheit",
   "feed.actions.running": "køyrer",
   "feed.actions.longest": "Den lengste viste køyringa tok {duration} ({run}).",
+  "feed.actions.open": "Opne",
+  "feed.actions.jump.playwright": "Playwright-suiten for denne køyringa",
+  "feed.actions.jump.unit": "Repositoriets eigne suitar ved denne køyringa",
+  "feed.actions.jump.warnings": "Åtvaringar for denne køyringa",
   "feed.filter.search": "Søk i køyringane",
   "feed.filter.all": "alle",
   "feed.filter.event": "Hending",
@@ -198,6 +204,25 @@
   "security.column.source": "Kjelde",
   "security.column.alert": "Varsel",
   "security.column.summary": "Samandrag",
+  "warnings.column.level": "Nivå",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Køyring",
+  "warnings.column.job": "Jobb",
+  "warnings.column.where": "Kvar",
+  "warnings.column.title": "Tittel",
+  "warnings.column.message": "Melding",
+  "warnings.level.failure": "feil",
+  "warnings.level.warning": "åtvaring",
+  "warnings.level.notice": "merknad",
+  "warnings.note": {
+    "one": "På tvers av {n} køyring: {failure} feil, {warning} åtvaringar, {notice} merknadar.",
+    "other": "På tvers av {n} køyringar: {failure} feil, {warning} åtvaringar, {notice} merknadar."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} av {n} jobb lesen.",
+    "other": "{repo} {run}: {done} av {n} jobbar lesne."
+  },
+  "warnings.noRun": "Ingen av dei avkryssa greinene har ei arbeidsflyt-køyring.",
   "security.column.since": "Sidan",
   "security.severity.critical": "kritisk",
   "security.severity.high": "høg",
@@ -378,10 +403,15 @@
   "tests.code.file": "fil",
   "tests.code.language": "språk",
   "tests.code.cases": "tilfelle",
+  "tests.code.run": "køyring",
   "tests.code.reading": "Les suiten…",
   "tests.code.note": {
     "one": "{n} fil med {cases} tilfelle.",
     "other": "{n} filer med {cases} tilfelle."
+  },
+  "tests.code.held": {
+    "one": "Køyring {run} rapporterte om {n} av dei.",
+    "other": "Køyring {run} rapporterte om {n} av dei."
   },
   "tests.code.noCases": "Det vart ikkje funne noko tilfelle i denne fila.",
   "tests.code.noTree": "Testtreet vert ikkje servert på {path}.",

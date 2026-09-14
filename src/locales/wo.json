@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Jëf yi",
   "view.security": "Kaaraange",
+  "view.warnings": "Artu yi",
   "panel.filter": "Segg",
   "panel.design": "Melo",
   "design.theme": "Melokaan",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Mi ngi laaj GitHub li soppiku",
   "loader.task.everything": "Mi ngi laaj GitHub doxin yépp",
   "loader.task.artifacts": "Ndefar yu dox #{number}: {done} ci {total}",
+  "loader.task.warnings": "Artu yi: {done} ci {total} liggéey",
   "loader.task.artifact": "Ndefar {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "sànku na: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Diir",
   "feed.actions.running": "mi ngi dox",
   "feed.actions.longest": "Dox bi gën a gudd ci yi ñu wone jël na {duration} ({run}).",
+  "feed.actions.open": "Ubbi",
+  "feed.actions.jump.playwright": "Natt yu Playwright yu dox bii",
+  "feed.actions.jump.unit": "Natt yu dencukaay bi boppam ci dox bii",
+  "feed.actions.jump.warnings": "Artu yu dox bii",
   "feed.filter.search": "Seet ci dox yi",
   "feed.filter.all": "lépp",
   "feed.filter.event": "Xew-xew",
@@ -188,6 +194,23 @@
   "security.column.source": "Cosaan",
   "security.column.alert": "Artu",
   "security.column.summary": "Gàttal",
+  "warnings.column.level": "Daraja",
+  "warnings.column.repository": "Dencukaay",
+  "warnings.column.run": "Dox",
+  "warnings.column.job": "Liggéey",
+  "warnings.column.where": "Fan",
+  "warnings.column.title": "Bopp",
+  "warnings.column.message": "Bataaxal",
+  "warnings.level.failure": "njuumte",
+  "warnings.level.warning": "artu",
+  "warnings.level.notice": "bind",
+  "warnings.note": {
+    "other": "Ci {n} dox: {failure} njuumte, {warning} artu, {notice} bind."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: jàng nañu {done} ci {n} liggéey."
+  },
+  "warnings.noRun": "Amul benn car bu ñu tanne bu am doxinu liggéey.",
   "security.column.since": "Li dale",
   "security.severity.critical": "metit lool",
   "security.severity.high": "kawe",
@@ -355,9 +378,13 @@
   "tests.code.file": "fiise",
   "tests.code.language": "làkk",
   "tests.code.cases": "kaas",
+  "tests.code.run": "dox",
   "tests.code.reading": "Mi ngi jàng natt yi…",
   "tests.code.note": {
     "other": "{n} fiise ak {cases} kaas."
+  },
+  "tests.code.held": {
+    "other": "Dox {run} wax na ci {n} ci ñoom."
   },
   "tests.code.noCases": "Amul benn kaas ci fiise bii.",
   "tests.code.noTree": "Garabu natt yi nekkul ci {path}.",

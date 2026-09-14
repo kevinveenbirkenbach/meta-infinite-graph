@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ruraykuna",
   "view.security": "Amachakuy",
+  "view.warnings": "Yuyarichiykuna",
   "panel.filter": "Suysuna",
   "panel.design": "Rikch'ay",
   "design.theme": "Rikch'ay laya",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-ta tapuchkan ima tikrasqanta",
   "loader.task.everything": "GitHub-manta llapan puriykunata mañakuchkan",
   "loader.task.artifacts": "Puriy #{number}-pa ruwasqankuna: {total}-manta {done}",
+  "loader.task.warnings": "Yuyarichiykuna: {total} llamk'aymanta {done}",
   "loader.task.artifact": "Ruwasqa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "pantarqan: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Unay",
   "feed.actions.running": "purichkan",
   "feed.actions.longest": "Rikuchisqa aswan unay puriyqa {duration} unarqan ({run}).",
+  "feed.actions.open": "Kichay",
+  "feed.actions.jump.playwright": "Kay puriypa Playwright huñun",
+  "feed.actions.jump.unit": "Kay puriypi waqaychanapa kikin llanchiynin",
+  "feed.actions.jump.warnings": "Kay puriypa yuyarichiynin",
   "feed.filter.search": "Puriykunata maskay",
   "feed.filter.all": "llapan",
   "feed.filter.event": "Ruwakuy",
@@ -198,6 +204,25 @@
   "security.column.source": "Pukyu",
   "security.column.alert": "Willakuy",
   "security.column.summary": "Pisichasqa",
+  "warnings.column.level": "Pata",
+  "warnings.column.repository": "Waqaychana",
+  "warnings.column.run": "Puriy",
+  "warnings.column.job": "Llamk'ay",
+  "warnings.column.where": "Maypi",
+  "warnings.column.title": "Sutin",
+  "warnings.column.message": "Willay",
+  "warnings.level.failure": "pantay",
+  "warnings.level.warning": "yuyarichiy",
+  "warnings.level.notice": "qillqasqa",
+  "warnings.note": {
+    "one": "{n} puriypi: {failure} pantay, {warning} yuyarichiy, {notice} qillqasqa.",
+    "other": "{n} puriykunapi: {failure} pantay, {warning} yuyarichiy, {notice} qillqasqa."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} llamk'aymanta {done} ñawinchasqa.",
+    "other": "{repo} {run}: {n} llamk'aykunamanta {done} ñawinchasqa."
+  },
+  "warnings.noRun": "Chimpusqa k'allmakunamanta mana mayqinpas llamk'ay puriyniyuqchu.",
   "security.column.since": "Qallarisqan",
   "security.severity.critical": "ancha sinchi",
   "security.severity.high": "hatun",
@@ -378,10 +403,15 @@
   "tests.code.file": "qillqa",
   "tests.code.language": "simi",
   "tests.code.cases": "llanchiykuna",
+  "tests.code.run": "puriy",
   "tests.code.reading": "Llanchiy huñuta ñawinchachkan…",
   "tests.code.note": {
     "one": "{cases} llanchiyniyuq {n} qillqa.",
     "other": "{cases} llanchiyniyuq {n} qillqakuna."
+  },
+  "tests.code.held": {
+    "one": "{run} puriyqa paykunamanta {n} willarqan.",
+    "other": "{run} puriyqa paykunamanta {n} willarqan."
   },
   "tests.code.noCases": "Kay qillqapi mana ima llanchiypas tarikurqanchu.",
   "tests.code.noTree": "Llanchiy sach'aqa manam {path} nisqapi qusqachu.",

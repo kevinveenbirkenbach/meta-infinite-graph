@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "क्रियाः",
   "view.security": "सुरक्षा",
+  "view.warnings": "चेतावन्यः",
   "panel.filter": "निस्यन्दकम्",
   "panel.design": "रूपविन्यासः",
   "design.theme": "वर्णयोजना",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub पृच्छ्यते किं परिवर्तितम् इति",
   "loader.task.everything": "GitHub सर्वाणि चालनानि याच्यते",
   "loader.task.artifacts": "चालनस्य #{number} कृतवस्तूनि: {total} मध्ये {done}",
+  "loader.task.warnings": "चेतावन्यः: {total} कार्येषु {done}",
   "loader.task.artifact": "कृतवस्तु {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "विफलम्: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "अवधिः",
   "feed.actions.running": "प्रचलति",
   "feed.actions.longest": "प्रदर्शितेषु दीर्घतमं चालनं {duration} यावत् अचलत् ({run})।",
+  "feed.actions.open": "उद्घाटयतु",
+  "feed.actions.jump.playwright": "अस्य चालनस्य Playwright परीक्षासमूहः",
+  "feed.actions.jump.unit": "अस्मिन् चालने भाण्डारस्य स्वकीयाः परीक्षासमूहाः",
+  "feed.actions.jump.warnings": "अस्य चालनस्य चेतावन्यः",
   "feed.filter.search": "चालनानि अन्विष्यतु",
   "feed.filter.all": "सर्वाणि",
   "feed.filter.event": "घटना",
@@ -198,6 +204,25 @@
   "security.column.source": "स्रोतः",
   "security.column.alert": "सूचना",
   "security.column.summary": "सारांशः",
+  "warnings.column.level": "स्तरः",
+  "warnings.column.repository": "भाण्डारम्",
+  "warnings.column.run": "चालनम्",
+  "warnings.column.job": "कार्यम्",
+  "warnings.column.where": "कुत्र",
+  "warnings.column.title": "शीर्षकम्",
+  "warnings.column.message": "सन्देशः",
+  "warnings.level.failure": "दोषः",
+  "warnings.level.warning": "चेतावनी",
+  "warnings.level.notice": "टिप्पणी",
+  "warnings.note": {
+    "one": "{n} चालने: {failure} दोषाः, {warning} चेतावन्यः, {notice} टिप्पण्यः।",
+    "other": "{n} चालनेषु: {failure} दोषाः, {warning} चेतावन्यः, {notice} टिप्पण्यः।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} कार्यात् {done} पठितम्।",
+    "other": "{repo} {run}: {n} कार्येभ्यः {done} पठितानि।"
+  },
+  "warnings.noRun": "चिह्नितासु शाखासु कस्याश्चिदपि कार्यप्रवाहचालनं नास्ति।",
   "security.column.since": "आरभ्य",
   "security.severity.critical": "सङ्कटपूर्णम्",
   "security.severity.high": "उच्चम्",
@@ -378,10 +403,15 @@
   "tests.code.file": "सञ्चिका",
   "tests.code.language": "भाषा",
   "tests.code.cases": "उदाहरणानि",
+  "tests.code.run": "चालनम्",
   "tests.code.reading": "परीक्षासमूहः पठ्यते…",
   "tests.code.note": {
     "one": "{n} सञ्चिका {cases} उदाहरणैः सह।",
     "other": "{n} सञ्चिकाः {cases} उदाहरणैः सह।"
+  },
+  "tests.code.held": {
+    "one": "चालनं {run} तेषु {n} विषये न्यवेदयत्।",
+    "other": "चालनं {run} तेषु {n} विषये न्यवेदयत्।"
   },
   "tests.code.noCases": "अस्यां सञ्चिकायां किमपि उदाहरणं न प्राप्तम्।",
   "tests.code.noTree": "परीक्षावृक्षः {path} इत्यत्र न परिवेष्यते।",

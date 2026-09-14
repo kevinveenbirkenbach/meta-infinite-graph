@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ተግባራት",
   "view.security": "ደህንነት",
+  "view.warnings": "ማስጠንቀቂያዎች",
   "panel.filter": "ማጣሪያ",
   "panel.design": "ንድፍ",
   "design.theme": "ገጽታ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "ምን እንደተለወጠ GitHubን በመጠየቅ ላይ",
   "loader.task.everything": "እያንዳንዱን ሩጫ GitHubን በመጠየቅ ላይ",
   "loader.task.artifacts": "የሩጫ #{number} አርቲፋክቶች፦ {done} ከ{total}",
+  "loader.task.warnings": "ማስጠንቀቂያዎች፦ ከ{total} ሥራዎች {done}",
   "loader.task.artifact": "አርቲፋክት {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "አልተሳካም፦ {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "የቆይታ ጊዜ",
   "feed.actions.running": "በሂደት ላይ",
   "feed.actions.longest": "ከሚታዩት ሩጫዎች ረጅሙ {duration} ፈጅቷል ({run})።",
+  "feed.actions.open": "ክፈት",
+  "feed.actions.jump.playwright": "የዚህ ሩጫ Playwright ስብስብ",
+  "feed.actions.jump.unit": "በዚህ ሩጫ ላይ የማከማቻው የራሱ ስብስቦች",
+  "feed.actions.jump.warnings": "የዚህ ሩጫ ማስጠንቀቂያዎች",
   "feed.filter.search": "ሩጫዎቹን ፈልግ",
   "feed.filter.all": "ሁሉም",
   "feed.filter.event": "ክስተት",
@@ -198,6 +204,25 @@
   "security.column.source": "ምንጭ",
   "security.column.alert": "ማንቂያ",
   "security.column.summary": "ማጠቃለያ",
+  "warnings.column.level": "ደረጃ",
+  "warnings.column.repository": "ማከማቻ",
+  "warnings.column.run": "ሩጫ",
+  "warnings.column.job": "ሥራ",
+  "warnings.column.where": "የት",
+  "warnings.column.title": "ርዕስ",
+  "warnings.column.message": "መልእክት",
+  "warnings.level.failure": "ስህተት",
+  "warnings.level.warning": "ማስጠንቀቂያ",
+  "warnings.level.notice": "ማስታወሻ",
+  "warnings.note": {
+    "one": "በ{n} ሩጫ ውስጥ፦ {failure} ስህተቶች፣ {warning} ማስጠንቀቂያዎች፣ {notice} ማስታወሻዎች።",
+    "other": "በ{n} ሩጫዎች ውስጥ፦ {failure} ስህተቶች፣ {warning} ማስጠንቀቂያዎች፣ {notice} ማስታወሻዎች።"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}፦ ከ{n} ሥራ {done} ተነቧል።",
+    "other": "{repo} {run}፦ ከ{n} ሥራዎች {done} ተነቧል።"
+  },
+  "warnings.noRun": "ከተመረጡት ቅርንጫፎች አንዳቸውም የሥራ ፍሰት ሩጫ የላቸውም።",
   "security.column.since": "ጀምሮ",
   "security.severity.critical": "ወሳኝ",
   "security.severity.high": "ከፍተኛ",
@@ -378,10 +403,15 @@
   "tests.code.file": "ፋይል",
   "tests.code.language": "ቋንቋ",
   "tests.code.cases": "ጉዳዮች",
+  "tests.code.run": "ሩጫ",
   "tests.code.reading": "ስብስቡ እየተነበበ ነው…",
   "tests.code.note": {
     "one": "{n} ፋይል ከ{cases} ጉዳዮች ጋር።",
     "other": "{n} ፋይሎች ከ{cases} ጉዳዮች ጋር።"
+  },
+  "tests.code.held": {
+    "one": "ሩጫ {run} ከእነሱ {n} ላይ ሪፖርት አድርጓል።",
+    "other": "ሩጫ {run} ከእነሱ {n} ላይ ሪፖርት አድርጓል።"
   },
   "tests.code.noCases": "በዚህ ፋይል ውስጥ ምንም ጉዳይ አልተገኘም።",
   "tests.code.noTree": "የሙከራዎቹ ዛፍ በ{path} ላይ አይቀርብም።",

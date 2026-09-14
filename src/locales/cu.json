@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Дѣѧнїѧ",
   "view.security": "Ѡхраненїе",
+  "view.warnings": "Предварѧнїѧ",
   "panel.filter": "Отборъ",
   "panel.design": "Оукрашенїе",
   "design.theme": "Ѡбразъ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Вопрошаемъ GitHub, что измѣнисѧ",
   "loader.task.everything": "Вопрошаемъ GitHub ѡ всѧкомъ совершенїи",
   "loader.task.artifacts": "Издѣлїѧ совершенїѧ #{number}: {done} ѿ {total}",
+  "loader.task.warnings": "Предварѧнїѧ: {done} ѿ {total} дѣлъ",
   "loader.task.artifact": "Издѣлїе {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "падесѧ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Продолженїе",
   "feed.actions.running": "совершаетсѧ",
   "feed.actions.longest": "Долгѣйшее ѿ показанныхъ совершенїй продолжисѧ {duration} ({run}).",
+  "feed.actions.open": "Ѿверзти",
+  "feed.actions.jump.playwright": "Сонмъ Playwright сегѡ совершенїѧ",
+  "feed.actions.jump.unit": "Своѧ искꙋшенїѧ хранилища въ семъ совершенїи",
+  "feed.actions.jump.warnings": "Предварѧнїѧ сегѡ совершенїѧ",
   "feed.filter.search": "Искати въ совершенїихъ",
   "feed.filter.all": "вси",
   "feed.filter.event": "Событїе",
@@ -198,6 +204,25 @@
   "security.column.source": "Источникъ",
   "security.column.alert": "Вѣщанїе",
   "security.column.summary": "Сокращенїе",
+  "warnings.column.level": "Степень",
+  "warnings.column.repository": "Хранилище",
+  "warnings.column.run": "Совершенїе",
+  "warnings.column.job": "Дѣло",
+  "warnings.column.where": "Гдѣ",
+  "warnings.column.title": "Надписанїе",
+  "warnings.column.message": "Вѣсть",
+  "warnings.level.failure": "погрѣшенїе",
+  "warnings.level.warning": "предварѧнїе",
+  "warnings.level.notice": "примѣчанїе",
+  "warnings.note": {
+    "one": "Въ {n} совершенїи: {failure} погрѣшенїй, {warning} предварѧнїй, {notice} примѣчанїй.",
+    "other": "Въ {n} совершенїихъ: {failure} погрѣшенїй, {warning} предварѧнїй, {notice} примѣчанїй."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: прочтесѧ {done} ѿ {n} дѣла.",
+    "other": "{repo} {run}: прочтошасѧ {done} ѿ {n} дѣлъ."
+  },
+  "warnings.noRun": "Ни едина ѿ назнаменанныхъ вѣтвей не имать совершенїѧ дѣлотеченїѧ.",
   "security.column.since": "Ѿ",
   "security.severity.critical": "лютаѧ",
   "security.severity.high": "высокаѧ",
@@ -378,10 +403,15 @@
   "tests.code.file": "свитокъ",
   "tests.code.language": "ѧзыкъ",
   "tests.code.cases": "случаи",
+  "tests.code.run": "совершенїе",
   "tests.code.reading": "Чтетсѧ сонмъ искꙋшенїй…",
   "tests.code.note": {
     "one": "{n} свитокъ съ {cases} случаи.",
     "other": "{n} свиткѡвъ съ {cases} случаи."
+  },
+  "tests.code.held": {
+    "one": "Совершенїе {run} возвѣсти ѡ {n} ѿ нихъ.",
+    "other": "Совершенїе {run} возвѣсти ѡ {n} ѿ нихъ."
   },
   "tests.code.noCases": "Ни единъ случай не ѡбрѣтесѧ въ семъ свиткѣ.",
   "tests.code.noTree": "Древо искꙋшенїй не предлагаетсѧ въ {path}.",

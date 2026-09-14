@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aktiounen",
   "view.security": "Sécherheet",
+  "view.warnings": "Warnungen",
   "panel.filter": "Filter",
   "panel.design": "Design",
   "design.theme": "Thema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub gëtt gefrot, wat geännert huet",
   "loader.task.everything": "GitHub gëtt no alle Leef gefrot",
   "loader.task.artifacts": "Artefakte vum Laf #{number}: {done} vun {total}",
+  "loader.task.warnings": "Warnungen: {done} vun {total} Jobs",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "feelgeschloen: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Dauer",
   "feed.actions.running": "leeft",
   "feed.actions.longest": "De längste gewisene Laf huet {duration} gedauert ({run}).",
+  "feed.actions.open": "Opmaachen",
+  "feed.actions.jump.playwright": "Playwright-Suite vun dësem Laf",
+  "feed.actions.jump.unit": "Dem Repository seng eege Suiten bei dësem Laf",
+  "feed.actions.jump.warnings": "Warnunge vun dësem Laf",
   "feed.filter.search": "An de Leef sichen",
   "feed.filter.all": "all",
   "feed.filter.event": "Evenement",
@@ -198,6 +204,25 @@
   "security.column.source": "Quell",
   "security.column.alert": "Meldung",
   "security.column.summary": "Resumé",
+  "warnings.column.level": "Niveau",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Laf",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Wou",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Message",
+  "warnings.level.failure": "Feeler",
+  "warnings.level.warning": "Warnung",
+  "warnings.level.notice": "Hiweis",
+  "warnings.note": {
+    "one": "Iwwer {n} Laf: {failure} Feeler, {warning} Warnungen, {notice} Hiweiser.",
+    "other": "Iwwer {n} Leef: {failure} Feeler, {warning} Warnungen, {notice} Hiweiser."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} vun {n} Job gelies.",
+    "other": "{repo} {run}: {done} vun {n} Jobs gelies."
+  },
+  "warnings.noRun": "Keng vun den ugekräizte Branchen huet e Workflow-Laf.",
   "security.column.since": "Zënter",
   "security.severity.critical": "kritesch",
   "security.severity.high": "héich",
@@ -378,10 +403,15 @@
   "tests.code.file": "Fichier",
   "tests.code.language": "Sprooch",
   "tests.code.cases": "Fäll",
+  "tests.code.run": "Laf",
   "tests.code.reading": "D'Suite gëtt gelies…",
   "tests.code.note": {
     "one": "{n} Fichier mat {cases} Fäll.",
     "other": "{n} Fichiere mat {cases} Fäll."
+  },
+  "tests.code.held": {
+    "one": "De Laf {run} huet iwwer {n} dovun bericht.",
+    "other": "De Laf {run} huet iwwer {n} dovun bericht."
   },
   "tests.code.noCases": "An dësem Fichier gouf kee Fall fonnt.",
   "tests.code.noTree": "De Testbam gëtt net op {path} ausgeliwwert.",

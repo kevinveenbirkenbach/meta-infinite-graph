@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Amallar",
   "view.security": "Xavfsizlik",
+  "view.warnings": "Ogohlantirishlar",
   "panel.filter": "Filtr",
   "panel.design": "Dizayn",
   "design.theme": "Mavzu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub’dan nima o‘zgargani so‘ralmoqda",
   "loader.task.everything": "GitHub’dan barcha ishga tushirishlar so‘ralmoqda",
   "loader.task.artifacts": "#{number}-ishga tushirish artefaktlari: {total} tadan {done} ta",
+  "loader.task.warnings": "Ogohlantirishlar: {total} ta vazifadan {done} tasi",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "muvaffaqiyatsiz: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Davomiylik",
   "feed.actions.running": "bajarilmoqda",
   "feed.actions.longest": "Ko‘rsatilgan eng uzun ishga tushirish {duration} ({run}) davom etdi.",
+  "feed.actions.open": "Ochish",
+  "feed.actions.jump.playwright": "Ushbu ishga tushirishning Playwright to‘plami",
+  "feed.actions.jump.unit": "Ushbu ishga tushirishda repozitoriyning o‘z to‘plamlari",
+  "feed.actions.jump.warnings": "Ushbu ishga tushirishning ogohlantirishlari",
   "feed.filter.search": "Ishga tushirishlardan qidirish",
   "feed.filter.all": "hammasi",
   "feed.filter.event": "Hodisa",
@@ -198,6 +204,25 @@
   "security.column.source": "Manba",
   "security.column.alert": "Ogohlantirish",
   "security.column.summary": "Qisqacha",
+  "warnings.column.level": "Daraja",
+  "warnings.column.repository": "Repozitoriy",
+  "warnings.column.run": "Ishga tushirish",
+  "warnings.column.job": "Vazifa",
+  "warnings.column.where": "Qayerda",
+  "warnings.column.title": "Sarlavha",
+  "warnings.column.message": "Xabar",
+  "warnings.level.failure": "xato",
+  "warnings.level.warning": "ogohlantirish",
+  "warnings.level.notice": "eslatma",
+  "warnings.note": {
+    "one": "{n} ta ishga tushirish bo‘yicha: {failure} ta xato, {warning} ta ogohlantirish, {notice} ta eslatma.",
+    "other": "{n} ta ishga tushirish bo‘yicha: {failure} ta xato, {warning} ta ogohlantirish, {notice} ta eslatma."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ta vazifadan {done} tasi o‘qildi.",
+    "other": "{repo} {run}: {n} ta vazifadan {done} tasi o‘qildi."
+  },
+  "warnings.noRun": "Belgilangan tarmoqlarning hech birida ish oqimi ishga tushirilmagan.",
   "security.column.since": "Qachondan",
   "security.severity.critical": "kritik",
   "security.severity.high": "yuqori",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayl",
   "tests.code.language": "til",
   "tests.code.cases": "holatlar",
+  "tests.code.run": "ishga tushirish",
   "tests.code.reading": "To‘plam o‘qilmoqda…",
   "tests.code.note": {
     "one": "{n} ta fayl, {cases} ta holat.",
     "other": "{n} ta fayl, {cases} ta holat."
+  },
+  "tests.code.held": {
+    "one": "{run} ishga tushirishi ulardan {n} tasi haqida xabar berdi.",
+    "other": "{run} ishga tushirishi ulardan {n} tasi haqida xabar berdi."
   },
   "tests.code.noCases": "Bu faylda hech qanday holat topilmadi.",
   "tests.code.noTree": "Testlar daraxti {path} manzilida taqdim etilmaydi.",

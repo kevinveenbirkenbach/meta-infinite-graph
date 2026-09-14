@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ciĩko",
   "view.security": "Ũgitĩri",
+  "view.warnings": "Mĩkaana",
   "panel.filter": "Gĩtũtũri",
   "panel.design": "Mũhianĩre",
   "design.theme": "Mũhiano",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Nĩ kũũria GitHub kĩrĩa kĩgarũrũkĩte",
   "loader.task.everything": "Nĩ kũũria GitHub gũthiĩ guothe",
   "loader.task.artifacts": "Indo iria ithondeketwo cia gũthiĩ #{number}: {done} harĩ {total}",
+  "loader.task.warnings": "Mĩkaana: {done} harĩ wĩra {total}",
   "loader.task.artifact": "Kĩrĩa gĩthondeketwo {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "yaremwo: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ihinda",
   "feed.actions.running": "ĩgũthiĩ",
   "feed.actions.longest": "Gũthiĩ kũraihu makĩria kuonanĩtio kwoire {duration} ({run}).",
+  "feed.actions.open": "Hingũra",
+  "feed.actions.jump.playwright": "Magerio ma Playwright ma gũthiĩ gũkũ",
+  "feed.actions.jump.unit": "Magerio ma ikũmbĩ rĩo rĩene harĩ gũthiĩ gũkũ",
+  "feed.actions.jump.warnings": "Mĩkaana ya gũthiĩ gũkũ",
   "feed.filter.search": "Caria mathiĩ-inĩ",
   "feed.filter.all": "ciothe",
   "feed.filter.event": "Ũndũ",
@@ -198,6 +204,25 @@
   "security.column.source": "Gĩthima",
   "security.column.alert": "Kĩmenyithia",
   "security.column.summary": "Mũhĩnyĩro",
+  "warnings.column.level": "Mũigana",
+  "warnings.column.repository": "Ikũmbĩ",
+  "warnings.column.run": "Gũthiĩ",
+  "warnings.column.job": "Wĩra",
+  "warnings.column.where": "Kũrĩa",
+  "warnings.column.title": "Kĩongo",
+  "warnings.column.message": "Ndũmĩrĩri",
+  "warnings.level.failure": "ihĩtia",
+  "warnings.level.warning": "mũkaana",
+  "warnings.level.notice": "ũmenyithia",
+  "warnings.note": {
+    "one": "Thĩinĩ wa gũthiĩ {n}: mahĩtia {failure}, mĩkaana {warning}, ũmenyithia {notice}.",
+    "other": "Thĩinĩ wa gũthiĩ {n}: mahĩtia {failure}, mĩkaana {warning}, ũmenyithia {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} harĩ wĩra {n} nĩ mũthome.",
+    "other": "{repo} {run}: {done} harĩ mĩwĩra {n} nĩ mĩthome."
+  },
+  "warnings.noRun": "Gũtirĩ rũhonge rwa iria ithuurĩtwo rũrĩ na gũthiĩ kwa mũtaratara wa wĩra.",
   "security.column.since": "Kuuma",
   "security.severity.critical": "ya kũguoya mũno",
   "security.severity.high": "ya igũrũ",
@@ -378,10 +403,15 @@
   "tests.code.file": "faira",
   "tests.code.language": "rũthiomi",
   "tests.code.cases": "maũndũ",
+  "tests.code.run": "gũthiĩ",
   "tests.code.reading": "Nĩ gũthoma magerio…",
   "tests.code.note": {
     "one": "Faira {n} ĩrĩ na maũndũ {cases}.",
     "other": "Maifaira {n} marĩ na maũndũ {cases}."
+  },
+  "tests.code.held": {
+    "one": "Gũthiĩ {run} nĩ kwaheanire ũhoro wa {n} kuuma kũrĩ mo.",
+    "other": "Gũthiĩ {run} nĩ kwaheanire ũhoro wa {n} kuuma kũrĩ mo."
   },
   "tests.code.noCases": "Gũtirĩ ũndũ wonekire faira-inĩ ĩno.",
   "tests.code.noTree": "Mũtĩ wa magerio ndũraheanwo harĩ {path}.",

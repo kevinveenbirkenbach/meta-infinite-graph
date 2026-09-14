@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Azzioni",
   "view.security": "Sicurezza",
+  "view.warnings": "Avertimenti",
   "panel.filter": "Filtru",
   "panel.design": "Aspettu",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Dumanda à GitHub ciò chì hè cambiatu",
   "loader.task.everything": "Dumanda à GitHub d'ogni esecuzione",
   "loader.task.artifacts": "Artefatti di l'esecuzione #{number}: {done} nant'à {total}",
+  "loader.task.warnings": "Avertimenti: {done} nant'à {total} travagli",
   "loader.task.artifact": "Artefattu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallitu: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durata",
   "feed.actions.running": "in esecuzione",
   "feed.actions.longest": "L'esecuzione più longa mostrata hà duratu {duration} ({run}).",
+  "feed.actions.open": "Aprì",
+  "feed.actions.jump.playwright": "Suite Playwright di sta esecuzione",
+  "feed.actions.jump.unit": "E suite propie di u dipositu in sta esecuzione",
+  "feed.actions.jump.warnings": "Avertimenti di sta esecuzione",
   "feed.filter.search": "Circà in l'esecuzioni",
   "feed.filter.all": "tutti",
   "feed.filter.event": "Avvenimentu",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonte",
   "security.column.alert": "Alerta",
   "security.column.summary": "Riassuntu",
+  "warnings.column.level": "Livellu",
+  "warnings.column.repository": "Dipositu",
+  "warnings.column.run": "Esecuzione",
+  "warnings.column.job": "Travagliu",
+  "warnings.column.where": "Induve",
+  "warnings.column.title": "Titulu",
+  "warnings.column.message": "Messagiu",
+  "warnings.level.failure": "errore",
+  "warnings.level.warning": "avertimentu",
+  "warnings.level.notice": "avvisu",
+  "warnings.note": {
+    "one": "Nant'à {n} esecuzione: {failure} errori, {warning} avertimenti, {notice} avvisi.",
+    "other": "Nant'à {n} esecuzioni: {failure} errori, {warning} avertimenti, {notice} avvisi."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} nant'à {n} travagliu lettu.",
+    "other": "{repo} {run}: {done} nant'à {n} travagli letti."
+  },
+  "warnings.noRun": "Nisuna di e rame marcate hà un'esecuzione di flussu di travagliu.",
   "security.column.since": "Dapoi",
   "security.severity.critical": "critica",
   "security.severity.high": "alta",
@@ -378,10 +403,15 @@
   "tests.code.file": "schedariu",
   "tests.code.language": "lingua",
   "tests.code.cases": "casi",
+  "tests.code.run": "esecuzione",
   "tests.code.reading": "Lettura di a suite…",
   "tests.code.note": {
     "one": "{n} schedariu cù {cases} casi.",
     "other": "{n} schedarii cù {cases} casi."
+  },
+  "tests.code.held": {
+    "one": "L'esecuzione {run} n'hà rappurtatu {n}.",
+    "other": "L'esecuzione {run} n'hà rappurtatu {n}."
   },
   "tests.code.noCases": "Nisun casu hè statu trovu in stu schedariu.",
   "tests.code.noTree": "L'arburu di e prove ùn hè micca servitu à {path}.",

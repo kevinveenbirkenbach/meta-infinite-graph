@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "പ്രവർത്തനങ്ങൾ",
   "view.security": "സുരക്ഷ",
+  "view.warnings": "മുന്നറിയിപ്പുകൾ",
   "panel.filter": "ഫിൽട്ടർ",
   "panel.design": "ഡിസൈൻ",
   "design.theme": "തീം",
@@ -172,6 +173,7 @@
   "loader.task.changes": "എന്താണ് മാറിയതെന്ന് GitHub-നോട് ചോദിക്കുന്നു",
   "loader.task.everything": "എല്ലാ റണ്ണുകളും GitHub-നോട് ചോദിക്കുന്നു",
   "loader.task.artifacts": "റൺ #{number}-ന്റെ ആർട്ടിഫാക്റ്റുകൾ: {total}-ൽ {done}",
+  "loader.task.warnings": "മുന്നറിയിപ്പുകൾ: {total} ജോലികളിൽ {done}",
   "loader.task.artifact": "ആർട്ടിഫാക്റ്റ് {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "പരാജയപ്പെട്ടു: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ദൈർഘ്യം",
   "feed.actions.running": "പ്രവർത്തിക്കുന്നു",
   "feed.actions.longest": "കാണിച്ചിരിക്കുന്നതിൽ ഏറ്റവും ദൈർഘ്യമേറിയ റൺ {duration} എടുത്തു ({run}).",
+  "feed.actions.open": "തുറക്കുക",
+  "feed.actions.jump.playwright": "ഈ റണ്ണിന്റെ Playwright സ്യൂട്ട്",
+  "feed.actions.jump.unit": "ഈ റണ്ണിലെ റിപ്പോസിറ്ററിയുടെ സ്വന്തം സ്യൂട്ടുകൾ",
+  "feed.actions.jump.warnings": "ഈ റണ്ണിന്റെ മുന്നറിയിപ്പുകൾ",
   "feed.filter.search": "റണ്ണുകൾ തിരയുക",
   "feed.filter.all": "എല്ലാം",
   "feed.filter.event": "ഇവന്റ്",
@@ -198,6 +204,25 @@
   "security.column.source": "ഉറവിടം",
   "security.column.alert": "അലേർട്ട്",
   "security.column.summary": "സംഗ്രഹം",
+  "warnings.column.level": "നില",
+  "warnings.column.repository": "റിപ്പോസിറ്ററി",
+  "warnings.column.run": "റൺ",
+  "warnings.column.job": "ജോലി",
+  "warnings.column.where": "എവിടെ",
+  "warnings.column.title": "തലക്കെട്ട്",
+  "warnings.column.message": "സന്ദേശം",
+  "warnings.level.failure": "പിശക്",
+  "warnings.level.warning": "മുന്നറിയിപ്പ്",
+  "warnings.level.notice": "അറിയിപ്പ്",
+  "warnings.note": {
+    "one": "{n} റണ്ണിൽ: {failure} പിശകുകൾ, {warning} മുന്നറിയിപ്പുകൾ, {notice} അറിയിപ്പുകൾ.",
+    "other": "{n} റണ്ണുകളിൽ: {failure} പിശകുകൾ, {warning} മുന്നറിയിപ്പുകൾ, {notice} അറിയിപ്പുകൾ."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ജോലിയിൽ {done} എണ്ണം വായിച്ചു.",
+    "other": "{repo} {run}: {n} ജോലികളിൽ {done} എണ്ണം വായിച്ചു."
+  },
+  "warnings.noRun": "ടിക്ക് ചെയ്ത ബ്രാഞ്ചുകളിൽ ഒന്നിനും വർക്ക്ഫ്ലോ റൺ ഇല്ല.",
   "security.column.since": "മുതൽ",
   "security.severity.critical": "ഗുരുതരം",
   "security.severity.high": "ഉയർന്നത്",
@@ -378,10 +403,15 @@
   "tests.code.file": "ഫയൽ",
   "tests.code.language": "ഭാഷ",
   "tests.code.cases": "കേസുകൾ",
+  "tests.code.run": "റൺ",
   "tests.code.reading": "സ്യൂട്ട് വായിക്കുന്നു…",
   "tests.code.note": {
     "one": "{cases} കേസുകളുള്ള {n} ഫയൽ.",
     "other": "{cases} കേസുകളുള്ള {n} ഫയലുകൾ."
+  },
+  "tests.code.held": {
+    "one": "റൺ {run} അവയിൽ {n} എണ്ണത്തെക്കുറിച്ച് റിപ്പോർട്ട് ചെയ്തു.",
+    "other": "റൺ {run} അവയിൽ {n} എണ്ണത്തെക്കുറിച്ച് റിപ്പോർട്ട് ചെയ്തു."
   },
   "tests.code.noCases": "ഈ ഫയലിൽ ഒരു കേസും കണ്ടെത്തിയില്ല.",
   "tests.code.noTree": "ടെസ്റ്റ് ട്രീ {path}-ൽ ലഭ്യമല്ല.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "אַקציעס",
   "view.security": "זיכערהייט",
+  "view.warnings": "וואָרענונגען",
   "panel.filter": "פֿילטער",
   "panel.design": "אויסזען",
   "design.theme": "טעמע",
@@ -172,6 +173,7 @@
   "loader.task.changes": "פֿרעגט GitHub וואָס האָט זיך געביטן",
   "loader.task.everything": "בעט GitHub אַלע לויפֿן",
   "loader.task.artifacts": "אַרטעפֿאַקטן פֿון לויף #{number}: {done} פֿון {total}",
+  "loader.task.warnings": "וואָרענונגען: {done} פֿון {total} אַרבעטן",
   "loader.task.artifact": "אַרטעפֿאַקט {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "דורכגעפֿאַלן: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "געדויער",
   "feed.actions.running": "לויפֿט",
   "feed.actions.longest": "דער לענגסטער געוויזענער לויף האָט געדויערט {duration} ({run}).",
+  "feed.actions.open": "עפֿענען",
+  "feed.actions.jump.playwright": "די Playwright־זאַמלונג פֿון דעם לויף",
+  "feed.actions.jump.unit": "די אייגענע זאַמלונגען פֿון דער רעפּאָזיטאָריע בײַ דעם לויף",
+  "feed.actions.jump.warnings": "וואָרענונגען פֿון דעם לויף",
   "feed.filter.search": "זוכן אין די לויפֿן",
   "feed.filter.all": "אַלע",
   "feed.filter.event": "געשעעניש",
@@ -198,6 +204,25 @@
   "security.column.source": "קוואַל",
   "security.column.alert": "וואָרענונג",
   "security.column.summary": "קיצור",
+  "warnings.column.level": "מדרגה",
+  "warnings.column.repository": "רעפּאָזיטאָריע",
+  "warnings.column.run": "לויף",
+  "warnings.column.job": "אַרבעט",
+  "warnings.column.where": "וווּ",
+  "warnings.column.title": "טיטל",
+  "warnings.column.message": "מעלדונג",
+  "warnings.level.failure": "פֿעלער",
+  "warnings.level.warning": "וואָרענונג",
+  "warnings.level.notice": "באַמערקונג",
+  "warnings.note": {
+    "one": "איבער {n} לויף: {failure} פֿעלערן, {warning} וואָרענונגען, {notice} באַמערקונגען.",
+    "other": "איבער {n} לויפֿן: {failure} פֿעלערן, {warning} וואָרענונגען, {notice} באַמערקונגען."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} פֿון {n} אַרבעט געלייענט.",
+    "other": "{repo} {run}: {done} פֿון {n} אַרבעטן געלייענט."
+  },
+  "warnings.noRun": "קיינער פֿון די אָנגעצייכנטע צווײַגן האָט ניט קיין וואָרקפֿלאָו־לויף.",
   "security.column.since": "זינט",
   "security.severity.critical": "קריטיש",
   "security.severity.high": "הויך",
@@ -378,10 +403,15 @@
   "tests.code.file": "טעקע",
   "tests.code.language": "שפּראַך",
   "tests.code.cases": "פֿאַלן",
+  "tests.code.run": "לויף",
   "tests.code.reading": "לייענט די זאַמלונג…",
   "tests.code.note": {
     "one": "{n} טעקע מיט {cases} פֿאַלן.",
     "other": "{n} טעקעס מיט {cases} פֿאַלן."
+  },
+  "tests.code.held": {
+    "one": "לויף {run} האָט באַריכטעט וועגן {n} פֿון זיי.",
+    "other": "לויף {run} האָט באַריכטעט וועגן {n} פֿון זיי."
   },
   "tests.code.noCases": "קיין פֿאַל איז ניט געפֿונען געוואָרן אין דער טעקע.",
   "tests.code.noTree": "דער טעסט־בוים ווערט ניט צוגעשטעלט בײַ {path}.",

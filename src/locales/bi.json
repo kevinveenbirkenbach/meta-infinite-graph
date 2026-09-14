@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ol aksen",
   "view.security": "Sefti",
+  "view.warnings": "Ol woning",
   "panel.filter": "Filta",
   "panel.design": "Luk",
   "design.theme": "Stael",
@@ -172,6 +173,7 @@
   "loader.task.changes": "I stap askem GitHub wanem i jenis",
   "loader.task.everything": "I stap askem GitHub blong evri ron",
   "loader.task.artifacts": "Ol atifak blong ron #{number}: {done} long {total}",
+  "loader.task.warnings": "Ol woning: {done} long {total} wok",
   "loader.task.artifact": "Atifak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "i fel: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Hamas taem",
   "feed.actions.running": "i stap ron",
   "feed.actions.longest": "Ron we i longfala moa long olgeta we i soemaot i tekem {duration} ({run}).",
+  "feed.actions.open": "Openem",
+  "feed.actions.jump.playwright": "Playwright tes blong ron ia",
+  "feed.actions.jump.unit": "Ol tes blong ripo ia long ron ia",
+  "feed.actions.jump.warnings": "Ol woning blong ron ia",
   "feed.filter.search": "Lukaotem ol ron",
   "feed.filter.all": "evriwan",
   "feed.filter.event": "Samting we i statem",
@@ -198,6 +204,25 @@
   "security.column.source": "Sos",
   "security.column.alert": "Woning",
   "security.column.summary": "Sotfala tok",
+  "warnings.column.level": "Level",
+  "warnings.column.repository": "Ripo",
+  "warnings.column.run": "Ron",
+  "warnings.column.job": "Wok",
+  "warnings.column.where": "Wea",
+  "warnings.column.title": "Taetel",
+  "warnings.column.message": "Mesej",
+  "warnings.level.failure": "eror",
+  "warnings.level.warning": "woning",
+  "warnings.level.notice": "smol tok",
+  "warnings.note": {
+    "one": "Long {n} ron: {failure} eror, {warning} woning, {notice} smol tok.",
+    "other": "Long {n} ron: {failure} eror, {warning} woning, {notice} smol tok."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: mifala i ridim {done} long {n} wok.",
+    "other": "{repo} {run}: mifala i ridim {done} long {n} wok."
+  },
+  "warnings.noRun": "I no gat wan brens we yu makem i gat wan wokflo ron.",
   "security.column.since": "Stat long",
   "security.severity.critical": "nogud tumas",
   "security.severity.high": "hae",
@@ -378,10 +403,15 @@
   "tests.code.file": "fael",
   "tests.code.language": "lanwis",
   "tests.code.cases": "kes",
+  "tests.code.run": "ron",
   "tests.code.reading": "I stap ridim ol tes…",
   "tests.code.note": {
     "one": "{n} fael wetem {cases} kes.",
     "other": "{n} fael wetem {cases} kes."
+  },
+  "tests.code.held": {
+    "one": "Ron {run} i talem long {n} long olgeta.",
+    "other": "Ron {run} i talem long {n} long olgeta."
   },
   "tests.code.noCases": "I no gat kes long fael ia.",
   "tests.code.noTree": "Tri blong ol tes i no stap long {path}.",

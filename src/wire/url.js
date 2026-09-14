@@ -37,6 +37,8 @@ function registerMatrixUrl(matrixView) {
     }, 'compact');
 }
 
+const WARNING_KEYS = { search: 'warn', level: 'warnlevel', job: 'warnjob', repository: 'warnrepo' };
+
 // Returns: the promises of the switches the URL turned on, which have to
 // settle before the first view is drawn.
 export function restoreFromUrl({
@@ -45,6 +47,13 @@ export function restoreFromUrl({
   for (const name of Object.keys(feeds.actions.filters)) {
     urlState.register(name, () => feeds.actions.filters[name], value => {
       feeds.actions.filters[name] = value;
+    }, '');
+  }
+  // The warnings tab filters by the same words the actions feed does, so its
+  // keys carry a prefix rather than overwriting the feed's.
+  for (const [name, key] of Object.entries(WARNING_KEYS)) {
+    urlState.register(key, () => feeds.warnings.filters[name], value => {
+      feeds.warnings.filters[name] = value;
     }, '');
   }
   const pending = [];

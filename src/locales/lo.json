@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ການດຳເນີນການ",
   "view.security": "ຄວາມປອດໄພ",
+  "view.warnings": "ຄຳເຕືອນ",
   "panel.filter": "ຕົວກັ່ນຕອງ",
   "panel.design": "ການອອກແບບ",
   "design.theme": "ຮູບແບບສີ",
@@ -163,6 +164,7 @@
   "loader.task.changes": "ກຳລັງຖາມ GitHub ວ່າມີຫຍັງປ່ຽນແປງ",
   "loader.task.everything": "ກຳລັງຂໍທຸກການແລ່ນຈາກ GitHub",
   "loader.task.artifacts": "ອາຕິແຟັກຂອງການແລ່ນ #{number}: {done} ຈາກ {total}",
+  "loader.task.warnings": "ຄຳເຕືອນ: {done} ຈາກ {total} ວຽກ",
   "loader.task.artifact": "ອາຕິແຟັກ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ລົ້ມເຫຼວ: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "ໄລຍະເວລາ",
   "feed.actions.running": "ກຳລັງແລ່ນ",
   "feed.actions.longest": "ການແລ່ນທີ່ຍາວທີ່ສຸດທີ່ສະແດງໃຊ້ເວລາ {duration} ({run}).",
+  "feed.actions.open": "ເປີດ",
+  "feed.actions.jump.playwright": "ຊຸດ Playwright ຂອງການແລ່ນນີ້",
+  "feed.actions.jump.unit": "ຊຸດຂອງຣີໂພສິທໍຣີເອງໃນການແລ່ນນີ້",
+  "feed.actions.jump.warnings": "ຄຳເຕືອນຂອງການແລ່ນນີ້",
   "feed.filter.search": "ຄົ້ນຫາການແລ່ນ",
   "feed.filter.all": "ທັງໝົດ",
   "feed.filter.event": "ເຫດການ",
@@ -188,6 +194,23 @@
   "security.column.source": "ແຫຼ່ງ",
   "security.column.alert": "ການແຈ້ງເຕືອນ",
   "security.column.summary": "ສະຫຼຸບ",
+  "warnings.column.level": "ລະດັບ",
+  "warnings.column.repository": "ຣີໂພສິທໍຣີ",
+  "warnings.column.run": "ການແລ່ນ",
+  "warnings.column.job": "ວຽກ",
+  "warnings.column.where": "ຢູ່ໃສ",
+  "warnings.column.title": "ຫົວຂໍ້",
+  "warnings.column.message": "ຂໍ້ຄວາມ",
+  "warnings.level.failure": "ຂໍ້ຜິດພາດ",
+  "warnings.level.warning": "ຄຳເຕືອນ",
+  "warnings.level.notice": "ໝາຍເຫດ",
+  "warnings.note": {
+    "other": "ຕະຫຼອດ {n} ການແລ່ນ: ຂໍ້ຜິດພາດ {failure}, ຄຳເຕືອນ {warning}, ໝາຍເຫດ {notice}."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: ອ່ານແລ້ວ {done} ຈາກ {n} ວຽກ."
+  },
+  "warnings.noRun": "ບໍ່ມີສາຂາທີ່ຕິກໄວ້ອັນໃດມີການແລ່ນຂອງເວີກໂຟລ.",
   "security.column.since": "ຕັ້ງແຕ່",
   "security.severity.critical": "ວິກິດ",
   "security.severity.high": "ສູງ",
@@ -355,9 +378,13 @@
   "tests.code.file": "ໄຟລ໌",
   "tests.code.language": "ພາສາ",
   "tests.code.cases": "ກໍລະນີ",
+  "tests.code.run": "ການແລ່ນ",
   "tests.code.reading": "ກຳລັງອ່ານຊຸດ…",
   "tests.code.note": {
     "other": "{n} ໄຟລ໌ ມີ {cases} ກໍລະນີ."
+  },
+  "tests.code.held": {
+    "other": "ການແລ່ນ {run} ໄດ້ລາຍງານ {n} ໃນນັ້ນ."
   },
   "tests.code.noCases": "ບໍ່ພົບກໍລະນີໃນໄຟລ໌ນີ້.",
   "tests.code.noTree": "ຕົ້ນໄມ້ການທົດສອບບໍ່ຖືກໃຫ້ບໍລິການທີ່ {path}.",

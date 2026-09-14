@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Nuwɔnawo",
   "view.security": "Dedienɔnɔ",
+  "view.warnings": "Nuxlɔ̃amewo",
   "panel.filter": "Tiatia",
   "panel.design": "Nɔnɔme",
   "design.theme": "Amadede",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ele GitHub biam nu siwo trɔ",
   "loader.task.everything": "Ele GitHub biam wɔwɔ ɖesiaɖe",
   "loader.task.artifacts": "Wɔwɔ #{number} ƒe nuwɔwɔwo: {done} le {total} me",
+  "loader.task.warnings": "Nuxlɔ̃amewo: {done} le dɔ {total} me",
   "loader.task.artifact": "Nuwɔwɔ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mede edzi o: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ɣeyiɣi didime",
   "feed.actions.running": "ele edzi yim",
   "feed.actions.longest": "Wɔwɔ didi wu si woɖe fia la xɔ {duration} ({run}).",
+  "feed.actions.open": "Ʋu",
+  "feed.actions.jump.playwright": "Wɔwɔ sia ƒe Playwright ƒuƒoƒo",
+  "feed.actions.jump.unit": "Nudzraɖoƒea ŋutɔ ƒe ƒuƒoƒowo le wɔwɔ sia me",
+  "feed.actions.jump.warnings": "Wɔwɔ sia ƒe nuxlɔ̃amewo",
   "feed.filter.search": "Di le wɔwɔwo me",
   "feed.filter.all": "katã",
   "feed.filter.event": "Nudzɔdzɔ",
@@ -198,6 +204,25 @@
   "security.column.source": "Dzɔtsoƒe",
   "security.column.alert": "Nuxlɔ̃ame",
   "security.column.summary": "Nyatakaka kpui",
+  "warnings.column.level": "Ðoƒe",
+  "warnings.column.repository": "Nudzraɖoƒe",
+  "warnings.column.run": "Wɔwɔ",
+  "warnings.column.job": "Dɔ",
+  "warnings.column.where": "Afi ka",
+  "warnings.column.title": "Tanya",
+  "warnings.column.message": "Gbedasi",
+  "warnings.level.failure": "vodada",
+  "warnings.level.warning": "nuxlɔ̃ame",
+  "warnings.level.notice": "ŋkuɖodzinya",
+  "warnings.note": {
+    "one": "Le wɔwɔ {n} me: vodada {failure}, nuxlɔ̃ame {warning}, ŋkuɖodzinya {notice}.",
+    "other": "Le wɔwɔ {n} me: vodada {failure}, nuxlɔ̃ame {warning}, ŋkuɖodzinya {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: woxlẽ {done} le dɔ {n} me.",
+    "other": "{repo} {run}: woxlẽ {done} le dɔ {n} me."
+  },
+  "warnings.noRun": "Alɔdze siwo wode dzesii la dometɔ aɖeke mekpɔ dɔwɔwɔɖoɖo ƒe wɔwɔ o.",
   "security.column.since": "Tso",
   "security.severity.critical": "vevie ŋutɔ",
   "security.severity.high": "kɔkɔ",
@@ -378,10 +403,15 @@
   "tests.code.file": "agbalẽ",
   "tests.code.language": "gbe",
   "tests.code.cases": "nyawo",
+  "tests.code.run": "wɔwɔ",
   "tests.code.reading": "Ƒuƒoƒoa xlẽm…",
   "tests.code.note": {
     "one": "Agbalẽ {n} kple nya {cases}.",
     "other": "Agbalẽ {n} kple nya {cases}."
+  },
+  "tests.code.held": {
+    "one": "Wɔwɔ {run} gblɔ nya tso wo dometɔ {n} ŋu.",
+    "other": "Wɔwɔ {run} gblɔ nya tso wo dometɔ {n} ŋu."
   },
   "tests.code.noCases": "Womekpɔ nya aɖeke le agbalẽ sia me o.",
   "tests.code.noTree": "Womedo dodokpɔwo ƒe atia ɖe {path} dzi o.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "액션",
   "view.security": "보안",
+  "view.warnings": "경고",
   "panel.filter": "필터",
   "panel.design": "디자인",
   "design.theme": "테마",
@@ -163,6 +164,7 @@
   "loader.task.changes": "GitHub에 변경 사항 요청 중",
   "loader.task.everything": "GitHub에 모든 실행 요청 중",
   "loader.task.artifacts": "실행 #{number}의 아티팩트: {done}/{total}",
+  "loader.task.warnings": "경고: {total}개 작업 중 {done}개",
   "loader.task.artifact": "아티팩트 {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "실패: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "소요 시간",
   "feed.actions.running": "실행 중",
   "feed.actions.longest": "표시된 가장 긴 실행은 {duration} 걸렸습니다({run}).",
+  "feed.actions.open": "열기",
+  "feed.actions.jump.playwright": "이 실행의 Playwright 스위트",
+  "feed.actions.jump.unit": "이 실행에서 저장소 자체의 스위트",
+  "feed.actions.jump.warnings": "이 실행의 경고",
   "feed.filter.search": "실행 검색",
   "feed.filter.all": "전체",
   "feed.filter.event": "이벤트",
@@ -188,6 +194,23 @@
   "security.column.source": "소스",
   "security.column.alert": "알림",
   "security.column.summary": "요약",
+  "warnings.column.level": "수준",
+  "warnings.column.repository": "저장소",
+  "warnings.column.run": "실행",
+  "warnings.column.job": "작업",
+  "warnings.column.where": "위치",
+  "warnings.column.title": "제목",
+  "warnings.column.message": "메시지",
+  "warnings.level.failure": "오류",
+  "warnings.level.warning": "경고",
+  "warnings.level.notice": "알림",
+  "warnings.note": {
+    "other": "실행 {n}개 전체: 오류 {failure}개, 경고 {warning}개, 알림 {notice}개."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: 작업 {n}개 중 {done}개를 읽음."
+  },
+  "warnings.noRun": "선택한 브랜치 중 워크플로 실행이 있는 것이 없습니다.",
   "security.column.since": "언제부터",
   "security.severity.critical": "심각",
   "security.severity.high": "높음",
@@ -355,9 +378,13 @@
   "tests.code.file": "파일",
   "tests.code.language": "언어",
   "tests.code.cases": "케이스",
+  "tests.code.run": "실행",
   "tests.code.reading": "스위트를 읽는 중…",
   "tests.code.note": {
     "other": "파일 {n}개, 케이스 {cases}개."
+  },
+  "tests.code.held": {
+    "other": "실행 {run}이 그중 {n}개를 보고함."
   },
   "tests.code.noCases": "이 파일에서 케이스를 찾지 못했습니다.",
   "tests.code.noTree": "{path}에서 테스트 트리가 제공되지 않습니다.",

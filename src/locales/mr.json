@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "क्रिया",
   "view.security": "सुरक्षा",
+  "view.warnings": "इशारे",
   "panel.filter": "फिल्टर",
   "panel.design": "रचना",
   "design.theme": "थीम",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub ला काय बदलले ते विचारत आहे",
   "loader.task.everything": "GitHub कडे प्रत्येक धाव मागत आहे",
   "loader.task.artifacts": "धाव #{number} चे आर्टिफॅक्ट: {total} पैकी {done}",
+  "loader.task.warnings": "इशारे: {total} कामांपैकी {done}",
   "loader.task.artifact": "आर्टिफॅक्ट {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "अयशस्वी: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "कालावधी",
   "feed.actions.running": "चालू आहे",
   "feed.actions.longest": "दाखवलेल्या धावांपैकी सर्वात लांब धावेला {duration} लागले ({run}).",
+  "feed.actions.open": "उघडा",
+  "feed.actions.jump.playwright": "या धावेचा Playwright संच",
+  "feed.actions.jump.unit": "या धावेतील रिपॉझिटरीचे स्वतःचे संच",
+  "feed.actions.jump.warnings": "या धावेचे इशारे",
   "feed.filter.search": "धावा शोधा",
   "feed.filter.all": "सर्व",
   "feed.filter.event": "घटना",
@@ -198,6 +204,25 @@
   "security.column.source": "स्रोत",
   "security.column.alert": "इशारा",
   "security.column.summary": "सारांश",
+  "warnings.column.level": "पातळी",
+  "warnings.column.repository": "रिपॉझिटरी",
+  "warnings.column.run": "धाव",
+  "warnings.column.job": "काम",
+  "warnings.column.where": "कुठे",
+  "warnings.column.title": "शीर्षक",
+  "warnings.column.message": "संदेश",
+  "warnings.level.failure": "त्रुटी",
+  "warnings.level.warning": "इशारा",
+  "warnings.level.notice": "सूचना",
+  "warnings.note": {
+    "one": "{n} धावेत: {failure} त्रुटी, {warning} इशारे, {notice} सूचना.",
+    "other": "{n} धावांत: {failure} त्रुटी, {warning} इशारे, {notice} सूचना."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} कामांपैकी {done} वाचले.",
+    "other": "{repo} {run}: {n} कामांपैकी {done} वाचली."
+  },
+  "warnings.noRun": "निवडलेल्या शाखांपैकी कोणत्याहीला वर्कफ्लो धाव नाही.",
   "security.column.since": "पासून",
   "security.severity.critical": "गंभीर",
   "security.severity.high": "उच्च",
@@ -378,10 +403,15 @@
   "tests.code.file": "फाइल",
   "tests.code.language": "भाषा",
   "tests.code.cases": "प्रकरणे",
+  "tests.code.run": "धाव",
   "tests.code.reading": "संच वाचत आहे…",
   "tests.code.note": {
     "one": "{cases} प्रकरणांसह {n} फाइल.",
     "other": "{cases} प्रकरणांसह {n} फाइली."
+  },
+  "tests.code.held": {
+    "one": "धाव {run} ने त्यांपैकी {n} बद्दल कळवले.",
+    "other": "धाव {run} ने त्यांपैकी {n} बद्दल कळवले."
   },
   "tests.code.noCases": "या फाइलमध्ये एकही प्रकरण सापडले नाही.",
   "tests.code.noTree": "चाचण्यांचे झाड {path} येथे पुरवले जात नाही.",

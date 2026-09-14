@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Izenzo",
   "view.security": "Ukuphepha",
+  "view.warnings": "Izexwayiso",
   "panel.filter": "Isihlungi",
   "panel.design": "Idizayini",
   "design.theme": "Itimu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kubuzwa ku-GitHub okushintshile",
   "loader.task.everything": "Kucelwa ku-GitHub konke ukusebenza",
   "loader.task.artifacts": "Imikhiqizo yokusebenza #{number}: {done} kokungu-{total}",
+  "loader.task.warnings": "Izexwayiso: {done} kwemisebenzi engu-{total}",
   "loader.task.artifact": "Umkhiqizo {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kwehlulekile: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ubude besikhathi",
   "feed.actions.running": "kusasebenza",
   "feed.actions.longest": "Ukusebenza okude kakhulu okuboniswayo kuthathe {duration} ({run}).",
+  "feed.actions.open": "Vula",
+  "feed.actions.jump.playwright": "Iqoqo le-Playwright lalokhu kusebenza",
+  "feed.actions.jump.unit": "Amaqoqo enqolobane ngokwayo kulokhu kusebenza",
+  "feed.actions.jump.warnings": "Izexwayiso zalokhu kusebenza",
   "feed.filter.search": "Sesha ekusebenzeni",
   "feed.filter.all": "konke",
   "feed.filter.event": "Isehlakalo",
@@ -198,6 +204,25 @@
   "security.column.source": "Umthombo",
   "security.column.alert": "Isexwayiso",
   "security.column.summary": "Isifinyezo",
+  "warnings.column.level": "Izinga",
+  "warnings.column.repository": "Inqolobane",
+  "warnings.column.run": "Ukusebenza",
+  "warnings.column.job": "Umsebenzi",
+  "warnings.column.where": "Kuphi",
+  "warnings.column.title": "Isihloko",
+  "warnings.column.message": "Umlayezo",
+  "warnings.level.failure": "iphutha",
+  "warnings.level.warning": "isexwayiso",
+  "warnings.level.notice": "inothi",
+  "warnings.note": {
+    "one": "Kukho konke ukusebenza okungu-{n}: amaphutha angu-{failure}, izexwayiso ezingu-{warning}, amanothi angu-{notice}.",
+    "other": "Kukho konke ukusebenza okungu-{n}: amaphutha angu-{failure}, izexwayiso ezingu-{warning}, amanothi angu-{notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: kufundwe {done} kumsebenzi ongu-{n}.",
+    "other": "{repo} {run}: kufundwe {done} kwemisebenzi engu-{n}."
+  },
+  "warnings.noRun": "Alikho igatsha elimakiwe elinokusebenza kokugeleza komsebenzi.",
   "security.column.since": "Kusukela",
   "security.severity.critical": "okubucayi kakhulu",
   "security.severity.high": "okuphezulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "ifayela",
   "tests.code.language": "ulimi",
   "tests.code.cases": "amacala",
+  "tests.code.run": "ukusebenza",
   "tests.code.reading": "Kufundwa iqoqo lezivivinyo…",
   "tests.code.note": {
     "one": "Ifayela elingu-{n} elinamacala angu-{cases}.",
     "other": "Amafayela angu-{n} anamacala angu-{cases}."
+  },
+  "tests.code.held": {
+    "one": "Ukusebenza {run} kubike ngamacala angu-{n} kuwo.",
+    "other": "Ukusebenza {run} kubike ngamacala angu-{n} kuwo."
   },
   "tests.code.noCases": "Alitholakalanga icala kuleli fayela.",
   "tests.code.noTree": "Isihlahla sezivivinyo asinikezwa ku-{path}.",

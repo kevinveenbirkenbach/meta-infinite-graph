@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "მოქმედებები",
   "view.security": "უსაფრთხოება",
+  "view.warnings": "გაფრთხილებები",
   "panel.filter": "ფილტრი",
   "panel.design": "დიზაინი",
   "design.theme": "თემა",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-ს ვეკითხებით, რა შეიცვალა",
   "loader.task.everything": "GitHub-იდან ყველა გაშვების მოთხოვნა",
   "loader.task.artifacts": "გაშვება #{number}-ის არტეფაქტები: {done} {total}-დან",
+  "loader.task.warnings": "გაფრთხილებები: {total}-დან {done} დავალება",
   "loader.task.artifact": "არტეფაქტი {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ვერ მოხერხდა: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ხანგრძლივობა",
   "feed.actions.running": "მიმდინარეობს",
   "feed.actions.longest": "ნაჩვენები ყველაზე ხანგრძლივი გაშვება გაგრძელდა {duration} ({run}).",
+  "feed.actions.open": "გახსნა",
+  "feed.actions.jump.playwright": "ამ გაშვების Playwright ნაკრები",
+  "feed.actions.jump.unit": "რეპოზიტორიის საკუთარი ნაკრებები ამ გაშვებაში",
+  "feed.actions.jump.warnings": "ამ გაშვების გაფრთხილებები",
   "feed.filter.search": "გაშვებებში ძიება",
   "feed.filter.all": "ყველა",
   "feed.filter.event": "მოვლენა",
@@ -198,6 +204,25 @@
   "security.column.source": "წყარო",
   "security.column.alert": "სიგნალი",
   "security.column.summary": "რეზიუმე",
+  "warnings.column.level": "დონე",
+  "warnings.column.repository": "რეპოზიტორია",
+  "warnings.column.run": "გაშვება",
+  "warnings.column.job": "დავალება",
+  "warnings.column.where": "სად",
+  "warnings.column.title": "სათაური",
+  "warnings.column.message": "შეტყობინება",
+  "warnings.level.failure": "შეცდომა",
+  "warnings.level.warning": "გაფრთხილება",
+  "warnings.level.notice": "შენიშვნა",
+  "warnings.note": {
+    "one": "{n} გაშვებაში: {failure} შეცდომა, {warning} გაფრთხილება, {notice} შენიშვნა.",
+    "other": "{n} გაშვებაში: {failure} შეცდომა, {warning} გაფრთხილება, {notice} შენიშვნა."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} დავალებიდან წაკითხულია {done}.",
+    "other": "{repo} {run}: {n} დავალებიდან წაკითხულია {done}."
+  },
+  "warnings.noRun": "მონიშნულ ტოტებს შორის არცერთს არ აქვს სამუშაო პროცესის გაშვება.",
   "security.column.since": "როდიდან",
   "security.severity.critical": "კრიტიკული",
   "security.severity.high": "მაღალი",
@@ -378,10 +403,15 @@
   "tests.code.file": "ფაილი",
   "tests.code.language": "ენა",
   "tests.code.cases": "შემთხვევები",
+  "tests.code.run": "გაშვება",
   "tests.code.reading": "ნაკრები იკითხება…",
   "tests.code.note": {
     "one": "{n} ფაილი {cases} შემთხვევით.",
     "other": "{n} ფაილი {cases} შემთხვევით."
+  },
+  "tests.code.held": {
+    "one": "გაშვებამ {run} მათგან {n} შესახებ მოახსენა.",
+    "other": "გაშვებამ {run} მათგან {n} შესახებ მოახსენა."
   },
   "tests.code.noCases": "ამ ფაილში შემთხვევა ვერ მოიძებნა.",
   "tests.code.noTree": "ტესტების ხე {path}-ზე არ მიეწოდება.",

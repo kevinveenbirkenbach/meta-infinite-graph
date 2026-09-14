@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Swiendlo",
   "view.security": "Vuhlayiseki",
+  "view.warnings": "Swilemukiso",
   "panel.filter": "Sefa",
   "panel.design": "Xivumbeko",
   "design.theme": "Nhlokomhaka",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ku vutisa GitHub leswi cinciweke",
   "loader.task.everything": "Ku kombela GitHub ku tirha hinkwako",
   "loader.task.artifacts": "Swiendliwa swa ku tirha #{number}: {done} eka {total}",
+  "loader.task.warnings": "Swilemukiso: {done} eka mintirho ya {total}",
   "loader.task.artifact": "Xiendliwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "swi tsandzekile: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Vulehi bya nkarhi",
   "feed.actions.running": "ka ha tirha",
   "feed.actions.longest": "Ku tirha loku leheke ngopfu loku kombisiweke ku teke {duration} ({run}).",
+  "feed.actions.open": "Pfula",
+  "feed.actions.jump.playwright": "Swikambelo swa Playwright swa ku tirha loku",
+  "feed.actions.jump.unit": "Swikambelo swa vuhlayiselo hi bya swona eka ku tirha loku",
+  "feed.actions.jump.warnings": "Swilemukiso swa ku tirha loku",
   "feed.filter.search": "Lava eka ku tirha",
   "feed.filter.all": "hinkwaswo",
   "feed.filter.event": "Xiendlakalo",
@@ -198,6 +204,25 @@
   "security.column.source": "Xihlovo",
   "security.column.alert": "Xitsundzuxo",
   "security.column.summary": "Nkomiso",
+  "warnings.column.level": "Xiyimo",
+  "warnings.column.repository": "Vuhlayiselo",
+  "warnings.column.run": "Ku tirha",
+  "warnings.column.job": "Ntirho",
+  "warnings.column.where": "Kwihi",
+  "warnings.column.title": "Nhloko-mhaka",
+  "warnings.column.message": "Rungula",
+  "warnings.level.failure": "xihoxo",
+  "warnings.level.warning": "xilemukiso",
+  "warnings.level.notice": "xiyeleliso",
+  "warnings.note": {
+    "one": "Eka ku tirha ka {n}: swihoxo {failure}, swilemukiso {warning}, swiyeleliso {notice}.",
+    "other": "Eka ku tirha ka {n}: swihoxo {failure}, swilemukiso {warning}, swiyeleliso {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} eka ntirho wa {n} wu hlayiwile.",
+    "other": "{repo} {run}: {done} eka mintirho ya {n} yi hlayiwile."
+  },
+  "warnings.noRun": "Ku hava rhavi leri hlawuriweke leri nga na ku tirha ka workflow.",
   "security.column.since": "Ku sukela",
   "security.severity.critical": "swi tika ngopfu",
   "security.severity.high": "swa le henhla",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayili",
   "tests.code.language": "ririmi",
   "tests.code.cases": "timhaka",
+  "tests.code.run": "ku tirha",
   "tests.code.reading": "Ku hlaya swikambelo…",
   "tests.code.note": {
     "one": "Fayili ra {n} ni timhaka ta {cases}.",
     "other": "Tifayili ta {n} ni timhaka ta {cases}."
+  },
+  "tests.code.held": {
+    "one": "Ku tirha {run} ku vikile hi {n} ya tona.",
+    "other": "Ku tirha {run} ku vikile hi {n} ya tona."
   },
   "tests.code.noCases": "A ku na mhaka leyi kumiweke eka fayili leri.",
   "tests.code.noTree": "Nsinya wa swikambelo a wu nyikiwi eka {path}.",

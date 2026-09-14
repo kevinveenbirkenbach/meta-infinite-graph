@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ایکشنز",
   "view.security": "سیکیورٹی",
+  "view.warnings": "انتباہات",
   "panel.filter": "فلٹر",
   "panel.design": "ڈیزائن",
   "design.theme": "تھیم",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub سے پوچھا جا رہا ہے کہ کیا بدلا",
   "loader.task.everything": "GitHub سے تمام رنز مانگے جا رہے ہیں",
   "loader.task.artifacts": "رن #{number} کے آرٹیفیکٹس: {total} میں سے {done}",
+  "loader.task.warnings": "انتباہات: {total} جابز میں سے {done}",
   "loader.task.artifact": "آرٹیفیکٹ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناکام: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "دورانیہ",
   "feed.actions.running": "جاری",
   "feed.actions.longest": "دکھائے گئے سب سے طویل رن میں {duration} ({run}) لگے۔",
+  "feed.actions.open": "کھولیں",
+  "feed.actions.jump.playwright": "اس رن کا Playwright سوٹ",
+  "feed.actions.jump.unit": "اس رن پر ریپوزٹری کے اپنے سوٹ",
+  "feed.actions.jump.warnings": "اس رن کے انتباہات",
   "feed.filter.search": "رنز میں تلاش کریں",
   "feed.filter.all": "سب",
   "feed.filter.event": "ایونٹ",
@@ -198,6 +204,25 @@
   "security.column.source": "ماخذ",
   "security.column.alert": "الرٹ",
   "security.column.summary": "خلاصہ",
+  "warnings.column.level": "سطح",
+  "warnings.column.repository": "ریپوزٹری",
+  "warnings.column.run": "رن",
+  "warnings.column.job": "جاب",
+  "warnings.column.where": "کہاں",
+  "warnings.column.title": "عنوان",
+  "warnings.column.message": "پیغام",
+  "warnings.level.failure": "خرابی",
+  "warnings.level.warning": "انتباہ",
+  "warnings.level.notice": "نوٹ",
+  "warnings.note": {
+    "one": "{n} رن میں: {failure} خرابیاں، {warning} انتباہات، {notice} نوٹس۔",
+    "other": "{n} رنز میں: {failure} خرابیاں، {warning} انتباہات، {notice} نوٹس۔"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} جاب میں سے {done} پڑھا گیا۔",
+    "other": "{repo} {run}: {n} جابز میں سے {done} پڑھے گئے۔"
+  },
+  "warnings.noRun": "منتخب کردہ برانچوں میں سے کسی کا بھی کوئی ورک فلو رن نہیں۔",
   "security.column.since": "کب سے",
   "security.severity.critical": "نازک",
   "security.severity.high": "زیادہ",
@@ -378,10 +403,15 @@
   "tests.code.file": "فائل",
   "tests.code.language": "زبان",
   "tests.code.cases": "کیسز",
+  "tests.code.run": "رن",
   "tests.code.reading": "سوٹ پڑھا جا رہا ہے…",
   "tests.code.note": {
     "one": "{cases} کیسز کے ساتھ {n} فائل۔",
     "other": "{cases} کیسز کے ساتھ {n} فائلیں۔"
+  },
+  "tests.code.held": {
+    "one": "رن {run} نے ان میں سے {n} کی اطلاع دی۔",
+    "other": "رن {run} نے ان میں سے {n} کی اطلاع دی۔"
   },
   "tests.code.noCases": "اس فائل میں کوئی کیس نہیں ملا۔",
   "tests.code.noTree": "ٹیسٹ ٹری {path} پر پیش نہیں کیا جاتا۔",

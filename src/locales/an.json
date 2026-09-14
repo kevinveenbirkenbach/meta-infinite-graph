@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Accions",
   "view.security": "Seguranza",
+  "view.warnings": "Alvertencias",
   "panel.filter": "Filtro",
   "panel.design": "Aparencia",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Preguntando a GitHub qué ha cambiau",
   "loader.task.everything": "Demandando a GitHub cada execución",
   "loader.task.artifacts": "Artefactos d'a execución #{number}: {done} de {total}",
+  "loader.task.warnings": "Alvertencias: {done} de {total} treballos",
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ha fallau: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durada",
   "feed.actions.running": "en execución",
   "feed.actions.longest": "A execución mas larga amostrada durió {duration} ({run}).",
+  "feed.actions.open": "Ubrir",
+  "feed.actions.jump.playwright": "Suite de Playwright d'esta execución",
+  "feed.actions.jump.unit": "As suites propias d'o repositorio en esta execución",
+  "feed.actions.jump.warnings": "Alvertencias d'esta execución",
   "feed.filter.search": "Buscar en as execucions",
   "feed.filter.all": "totz",
   "feed.filter.event": "Evento",
@@ -198,6 +204,25 @@
   "security.column.source": "Fuent",
   "security.column.alert": "Alerta",
   "security.column.summary": "Resumen",
+  "warnings.column.level": "Nivel",
+  "warnings.column.repository": "Repositorio",
+  "warnings.column.run": "Execución",
+  "warnings.column.job": "Treballo",
+  "warnings.column.where": "An",
+  "warnings.column.title": "Titol",
+  "warnings.column.message": "Mensache",
+  "warnings.level.failure": "error",
+  "warnings.level.warning": "alvertencia",
+  "warnings.level.notice": "nota",
+  "warnings.note": {
+    "one": "En {n} execución: {failure} errors, {warning} alvertencias, {notice} notas.",
+    "other": "En {n} execucions: {failure} errors, {warning} alvertencias, {notice} notas."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} de {n} treballo leyiu.",
+    "other": "{repo} {run}: {done} de {n} treballos leyius."
+  },
+  "warnings.noRun": "Garra d'as ramas marcadas no tiene execución de fluxo de treballo.",
   "security.column.since": "Dende",
   "security.severity.critical": "critica",
   "security.severity.high": "alta",
@@ -378,10 +403,15 @@
   "tests.code.file": "fichero",
   "tests.code.language": "luenga",
   "tests.code.cases": "casos",
+  "tests.code.run": "execución",
   "tests.code.reading": "Leyendo a suite…",
   "tests.code.note": {
     "one": "{n} fichero con {cases} casos.",
     "other": "{n} fichers con {cases} casos."
+  },
+  "tests.code.held": {
+    "one": "A execución {run} informó d'{n} d'ers.",
+    "other": "A execución {run} informó d'{n} d'ers."
   },
   "tests.code.noCases": "No s'ha trobau garra caso en este fichero.",
   "tests.code.noTree": "L'arbol de prebas no se sirve en {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aksi",
   "view.security": "Kaamanan",
+  "view.warnings": "Peringatan",
   "panel.filter": "Saringan",
   "panel.design": "Desain",
   "design.theme": "Téma",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Nanya ka GitHub naon nu robah",
   "loader.task.everything": "Nyuhunkeun sadaya pajalanan ka GitHub",
   "loader.task.artifacts": "Artefak pajalanan #{number}: {done} tina {total}",
+  "loader.task.warnings": "Peringatan: {done} tina {total} pagawéan",
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Lilana",
   "feed.actions.running": "keur jalan",
   "feed.actions.longest": "Pajalanan pangpanjangna anu dipintonkeun butuh {duration} ({run}).",
+  "feed.actions.open": "Buka",
+  "feed.actions.jump.playwright": "Rangkéan Playwright pajalanan ieu",
+  "feed.actions.jump.unit": "Rangkéan répositori sorangan dina pajalanan ieu",
+  "feed.actions.jump.warnings": "Peringatan pajalanan ieu",
   "feed.filter.search": "Téangan pajalanan",
   "feed.filter.all": "sadayana",
   "feed.filter.event": "Kajadian",
@@ -188,6 +194,23 @@
   "security.column.source": "Sumber",
   "security.column.alert": "Peringatan",
   "security.column.summary": "Ringkesan",
+  "warnings.column.level": "Tingkat",
+  "warnings.column.repository": "Répositori",
+  "warnings.column.run": "Pajalanan",
+  "warnings.column.job": "Pagawéan",
+  "warnings.column.where": "Di mana",
+  "warnings.column.title": "Judul",
+  "warnings.column.message": "Talatah",
+  "warnings.level.failure": "kasalahan",
+  "warnings.level.warning": "peringatan",
+  "warnings.level.notice": "catetan",
+  "warnings.note": {
+    "other": "Dina {n} pajalanan: {failure} kasalahan, {warning} peringatan, {notice} catetan."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: {done} tina {n} pagawéan dibaca."
+  },
+  "warnings.noRun": "Teu aya cabang nu dicentang nu boga pajalanan workflow.",
   "security.column.since": "Ti saprak",
   "security.severity.critical": "kritis",
   "security.severity.high": "luhur",
@@ -355,9 +378,13 @@
   "tests.code.file": "file",
   "tests.code.language": "basa",
   "tests.code.cases": "kasus",
+  "tests.code.run": "pajalanan",
   "tests.code.reading": "Maca rangkéan…",
   "tests.code.note": {
     "other": "{n} file kalawan {cases} kasus."
+  },
+  "tests.code.held": {
+    "other": "Pajalanan {run} ngalaporkeun {n} di antarana."
   },
   "tests.code.noCases": "Teu aya kasus nu kapanggih dina file ieu.",
   "tests.code.noTree": "Tangkal tés henteu disadiakeun dina {path}.",

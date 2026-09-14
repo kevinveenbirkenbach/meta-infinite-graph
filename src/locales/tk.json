@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Hereketler",
   "view.security": "Howpsuzlyk",
+  "view.warnings": "Duýduryşlar",
   "panel.filter": "Süzgüç",
   "panel.design": "Dizaýn",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-dan näme üýtgändigi soralýar",
   "loader.task.everything": "GitHub-dan ähli işledilişler soralýar",
   "loader.task.artifacts": "#{number} işledilişiň artefaktlary: {total}-dan {done}",
+  "loader.task.warnings": "Duýduryşlar: {total} işden {done}",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "şowsuz: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Dowamlylygy",
   "feed.actions.running": "işleýär",
   "feed.actions.longest": "Görkezilen iň uzak işlediliş {duration} ({run}) dowam etdi.",
+  "feed.actions.open": "Aç",
+  "feed.actions.jump.playwright": "Şu işledilişiň Playwright toplumy",
+  "feed.actions.jump.unit": "Şu işledilişde repozitoriýanyň öz toplumlary",
+  "feed.actions.jump.warnings": "Şu işledilişiň duýduryşlary",
   "feed.filter.search": "Işledilişlerde gözle",
   "feed.filter.all": "hemmesi",
   "feed.filter.event": "Waka",
@@ -198,6 +204,25 @@
   "security.column.source": "Çeşme",
   "security.column.alert": "Duýduryş",
   "security.column.summary": "Gysgaça",
+  "warnings.column.level": "Dereje",
+  "warnings.column.repository": "Repozitoriý",
+  "warnings.column.run": "Işlediliş",
+  "warnings.column.job": "Iş",
+  "warnings.column.where": "Nirede",
+  "warnings.column.title": "At",
+  "warnings.column.message": "Habar",
+  "warnings.level.failure": "ýalňyşlyk",
+  "warnings.level.warning": "duýduryş",
+  "warnings.level.notice": "bellik",
+  "warnings.note": {
+    "one": "{n} işlediliş boýunça: {failure} ýalňyşlyk, {warning} duýduryş, {notice} bellik.",
+    "other": "{n} işlediliş boýunça: {failure} ýalňyşlyk, {warning} duýduryş, {notice} bellik."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} işden {done} okaldy.",
+    "other": "{repo} {run}: {n} işden {done} okaldy."
+  },
+  "warnings.noRun": "Bellenen şahalaryň hiç birinde iş akymynyň işledilişi ýok.",
   "security.column.since": "Bäri",
   "security.severity.critical": "kritiki",
   "security.severity.high": "ýokary",
@@ -378,10 +403,15 @@
   "tests.code.file": "faýl",
   "tests.code.language": "dil",
   "tests.code.cases": "ýagdaýlar",
+  "tests.code.run": "işlediliş",
   "tests.code.reading": "Toplum okalýar…",
   "tests.code.note": {
     "one": "{n} faýl, {cases} ýagdaý.",
     "other": "{n} faýl, {cases} ýagdaý."
+  },
+  "tests.code.held": {
+    "one": "{run} işledilişi olaryň {n} barada habar berdi.",
+    "other": "{run} işledilişi olaryň {n} barada habar berdi."
   },
   "tests.code.noCases": "Bu faýlda hiç hili ýagdaý tapylmady.",
   "tests.code.noTree": "Synag agajy {path} salgysynda hödürlenmeýär.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aksi",
   "view.security": "Keamanan",
+  "view.warnings": "Peringatan",
   "panel.filter": "Filter",
   "panel.design": "Desain",
   "design.theme": "Tema",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Menanyakan GitHub apa yang berubah",
   "loader.task.everything": "Meminta semua run dari GitHub",
   "loader.task.artifacts": "Artefak run #{number}: {done} dari {total}",
+  "loader.task.warnings": "Peringatan: {done} dari {total} job",
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Durasi",
   "feed.actions.running": "berjalan",
   "feed.actions.longest": "Eksekusi terlama yang ditampilkan memakan waktu {duration} ({run}).",
+  "feed.actions.open": "Buka",
+  "feed.actions.jump.playwright": "Suite Playwright eksekusi ini",
+  "feed.actions.jump.unit": "Suite milik repositori sendiri pada eksekusi ini",
+  "feed.actions.jump.warnings": "Peringatan eksekusi ini",
   "feed.filter.search": "Cari di jalannya workflow",
   "feed.filter.all": "semua",
   "feed.filter.event": "Peristiwa",
@@ -188,6 +194,23 @@
   "security.column.source": "Sumber",
   "security.column.alert": "Peringatan",
   "security.column.summary": "Ringkasan",
+  "warnings.column.level": "Tingkat",
+  "warnings.column.repository": "Repositori",
+  "warnings.column.run": "Eksekusi",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Di mana",
+  "warnings.column.title": "Judul",
+  "warnings.column.message": "Pesan",
+  "warnings.level.failure": "galat",
+  "warnings.level.warning": "peringatan",
+  "warnings.level.notice": "catatan",
+  "warnings.note": {
+    "other": "Di {n} eksekusi: {failure} galat, {warning} peringatan, {notice} catatan."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: {done} dari {n} job terbaca."
+  },
+  "warnings.noRun": "Tidak ada cabang yang dicentang yang memiliki eksekusi workflow.",
   "security.column.since": "Sejak",
   "security.severity.critical": "kritis",
   "security.severity.high": "tinggi",
@@ -355,9 +378,13 @@
   "tests.code.file": "berkas",
   "tests.code.language": "bahasa",
   "tests.code.cases": "kasus",
+  "tests.code.run": "eksekusi",
   "tests.code.reading": "Membaca rangkaian tes…",
   "tests.code.note": {
     "other": "{n} berkas dengan {cases} kasus."
+  },
+  "tests.code.held": {
+    "other": "Eksekusi {run} melaporkan {n} di antaranya."
   },
   "tests.code.noCases": "Tidak ada kasus yang ditemukan di berkas ini.",
   "tests.code.noTree": "Pohon tes tidak disajikan di {path}.",

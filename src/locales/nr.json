@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Iinzenzo",
   "view.security": "Ukuvikeleka",
+  "view.warnings": "Amayeleliso",
   "panel.filter": "Isihlungi",
   "panel.design": "Ubujamo",
   "design.theme": "Itimu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kubuzwa ku-GitHub okutjhugulukileko",
   "loader.task.everything": "Kubawa koke ukusetjenziswa ku-GitHub",
   "loader.task.artifacts": "Ii-athifekthi zokusetjenziswa #{number}: {done} kwe-{total}",
+  "loader.task.warnings": "Amayeleliso: {done} kwemisebenzi eyi-{total}",
   "loader.task.artifact": "I-athifekthi {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kwehlulekile: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Isikhathi",
   "feed.actions.running": "kusasebenza",
   "feed.actions.longest": "Ukusetjenziswa okude khulu okutjengisiweko kuthethe {duration} ({run}).",
+  "feed.actions.open": "Vula",
+  "feed.actions.jump.playwright": "Isethi ye-Playwright yalokhu kusetjenziswa",
+  "feed.actions.jump.unit": "Iisethi zesigcino uqobo kulokhu kusetjenziswa",
+  "feed.actions.jump.warnings": "Amayeleliso walokhu kusetjenziswa",
   "feed.filter.search": "Funa ukusetjenziswa",
   "feed.filter.all": "koke",
   "feed.filter.event": "Isenzakalo",
@@ -198,6 +204,25 @@
   "security.column.source": "Umthombo",
   "security.column.alert": "Isaziso",
   "security.column.summary": "Isifinyezo",
+  "warnings.column.level": "Izinga",
+  "warnings.column.repository": "Isigcino",
+  "warnings.column.run": "Ukusetjenziswa",
+  "warnings.column.job": "Umsebenzi",
+  "warnings.column.where": "Kuphi",
+  "warnings.column.title": "Isihloko",
+  "warnings.column.message": "Umlayezo",
+  "warnings.level.failure": "iphutha",
+  "warnings.level.warning": "isiyeleliso",
+  "warnings.level.notice": "isaziso",
+  "warnings.note": {
+    "one": "Kukho ukusetjenziswa okuyi-{n}: amaphutha ayi-{failure}, amayeleliso ayi-{warning}, iimbiko ezizi-{notice}.",
+    "other": "Kukho ukusetjenziswa okuyi-{n}: amaphutha ayi-{failure}, amayeleliso ayi-{warning}, iimbiko ezizi-{notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: kufundwe {done} kumsebenzi oyi-{n}.",
+    "other": "{repo} {run}: kufundwe {done} kwemisebenzi eyi-{n}."
+  },
+  "warnings.noRun": "Akunalo igatja elikhethiweko elinokusetjenziswa kokugeleza komsebenzi.",
   "security.column.since": "Kusukela",
   "security.severity.critical": "kumbi khulu",
   "security.severity.high": "kuphezulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "ifayela",
   "tests.code.language": "ilimi",
   "tests.code.cases": "amacala",
+  "tests.code.run": "ukusetjenziswa",
   "tests.code.reading": "Kufundwa isethi…",
   "tests.code.note": {
     "one": "Ifayela eli-{n} elinamacala ayi-{cases}.",
     "other": "Amafayela ayi-{n} anamacala ayi-{cases}."
+  },
+  "tests.code.held": {
+    "one": "Ukusetjenziswa {run} kubike nge-{n} kuwo.",
+    "other": "Ukusetjenziswa {run} kubike nge-{n} kuwo."
   },
   "tests.code.noCases": "Akukho cala elitholakeleko kulelifayela.",
   "tests.code.noTree": "Umuthi wamalingo awukhutjhwa ku-{path}.",

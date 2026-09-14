@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Nyito",
   "view.security": "Tsireledzo",
+  "view.warnings": "Tsevhiso",
   "panel.filter": "Tshisefo",
   "panel.design": "Tshivhumbeo",
   "design.theme": "Mivhala",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub i khou vhudziswa zwo shandukaho",
   "loader.task.everything": "GitHub i khou humbelwa tshimbidzo dzoṱhe",
   "loader.task.artifacts": "Zwibveledzwa zwa tshimbidzo #{number}: {done} kha {total}",
+  "loader.task.warnings": "Tsevhiso: {done} kha mishumo ya {total}",
   "loader.task.artifact": "Tshibveledzwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zwo kundelwa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Tshifhinga tsho dzhiiwaho",
   "feed.actions.running": "zwi khou tshimbila",
   "feed.actions.longest": "Tshimbidzo ndapfu kha dzothe yo sumbedzwaho yo dzhia {duration} ({run}).",
+  "feed.actions.open": "Vula",
+  "feed.actions.jump.playwright": "Ndingo dza Playwright dza tshimbidzo iyi",
+  "feed.actions.jump.unit": "Ndingo dza vhulungelo vhune ha vhone kha tshimbidzo iyi",
+  "feed.actions.jump.warnings": "Tsevhiso dza tshimbidzo iyi",
   "feed.filter.search": "Ṱoḓa kha tshimbidzo",
   "feed.filter.all": "zwoṱhe",
   "feed.filter.event": "Tshiitea",
@@ -198,6 +204,25 @@
   "security.column.source": "Vhubvo",
   "security.column.alert": "Tsevhiso",
   "security.column.summary": "Manweledzo",
+  "warnings.column.level": "Tshiimo",
+  "warnings.column.repository": "Vhulungelo",
+  "warnings.column.run": "Tshimbidzo",
+  "warnings.column.job": "Mushumo",
+  "warnings.column.where": "Ngafhi",
+  "warnings.column.title": "Thoho",
+  "warnings.column.message": "Mulaedza",
+  "warnings.level.failure": "vhukhakhi",
+  "warnings.level.warning": "tsevhiso",
+  "warnings.level.notice": "notsi",
+  "warnings.note": {
+    "one": "Kha tshimbidzo ya {n}: vhukhakhi {failure}, tsevhiso {warning}, notsi {notice}.",
+    "other": "Kha tshimbidzo dza {n}: vhukhakhi {failure}, tsevhiso {warning}, notsi {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} kha mushumo wa {n} wo vhalwa.",
+    "other": "{repo} {run}: {done} kha mishumo ya {n} yo vhalwa."
+  },
+  "warnings.noRun": "A hu na tavhi ḽo swayiwaho ḽi re na tshimbidzo ya maitele a mushumo.",
   "security.column.since": "U bva",
   "security.severity.critical": "zwi vhavha vhukuma",
   "security.severity.high": "nṱha",
@@ -378,10 +403,15 @@
   "tests.code.file": "faela",
   "tests.code.language": "luambo",
   "tests.code.cases": "mafhungo",
+  "tests.code.run": "tshimbidzo",
   "tests.code.reading": "Ri khou vhala ndingo…",
   "tests.code.note": {
     "one": "Faela ya {n} na mafhungo a {cases}.",
     "other": "Dzifaela dza {n} na mafhungo a {cases}."
+  },
+  "tests.code.held": {
+    "one": "Tshimbidzo {run} yo vhiga nga ha {n} dzazwo.",
+    "other": "Tshimbidzo {run} yo vhiga nga ha {n} dzazwo."
   },
   "tests.code.noCases": "A hu na mafhungo o wanalaho kha ino faela.",
   "tests.code.noTree": "Muri wa ndingo a u ṋekedzwi kha {path}.",

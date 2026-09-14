@@ -13,6 +13,14 @@ export function selectedRepos(range) {
   return [...wanted];
 }
 
+// Returns: [{ repo, branch }] for every ticked ref, for what GitHub answers
+//   per branch rather than per repository.
+export function selectedBranches(range) {
+  return (range.catalog || { repos: [] }).repos.flatMap(repo => repo.refs
+    .filter(ref => range.refs.includes(ref.ref))
+    .map(ref => ({ repo: repo.full_name, branch: ref.name })));
+}
+
 // Neither lives in a git mirror, so these are the only views still spending
 // GitHub requests. GitHubApi caches every answer, so a second visit is free.
 export class GitHubFeed {
@@ -74,6 +82,11 @@ export class GitHubFeed {
         return runs.map(run => run.created_at).sort().pop() || null;
       },
       pickable: true,
+      jumps: [
+        { view: 'playwright', mark: '🎭' },
+        { view: 'unit', mark: '🧪' },
+        { view: 'warnings', mark: '⚠️' },
+      ],
       facets: [
         { name: 'result', label: t('feed.actions.result'), of: entry => entry.conclusion || entry.status },
         { name: 'event', label: t('feed.filter.event'), of: entry => entry.event },

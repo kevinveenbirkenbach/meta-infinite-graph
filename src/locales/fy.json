@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aksjes",
   "view.security": "Feiligens",
+  "view.warnings": "Warskôgings",
   "panel.filter": "Filter",
   "panel.design": "Uterlik",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub freegje wat feroare is",
   "loader.task.everything": "GitHub freegje om alle runs",
   "loader.task.artifacts": "Artefakten fan run #{number}: {done} fan {total}",
+  "loader.task.warnings": "Warskôgings: {done} fan {total} jobs",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislearre: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Doer",
   "feed.actions.running": "rint",
   "feed.actions.longest": "De langste toande run duorre {duration} ({run}).",
+  "feed.actions.open": "Iepenje",
+  "feed.actions.jump.playwright": "Playwright-suite fan dizze run",
+  "feed.actions.jump.unit": "De eigen suites fan it repository by dizze run",
+  "feed.actions.jump.warnings": "Warskôgings fan dizze run",
   "feed.filter.search": "Sykje yn de runs",
   "feed.filter.all": "alle",
   "feed.filter.event": "Barren",
@@ -198,6 +204,25 @@
   "security.column.source": "Boarne",
   "security.column.alert": "Warskôging",
   "security.column.summary": "Gearfetting",
+  "warnings.column.level": "Nivo",
+  "warnings.column.repository": "Repository",
+  "warnings.column.run": "Run",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Wêr",
+  "warnings.column.title": "Titel",
+  "warnings.column.message": "Berjocht",
+  "warnings.level.failure": "flater",
+  "warnings.level.warning": "warskôging",
+  "warnings.level.notice": "melding",
+  "warnings.note": {
+    "one": "Oer {n} run: {failure} flaters, {warning} warskôgings, {notice} meldingen.",
+    "other": "Oer {n} runs: {failure} flaters, {warning} warskôgings, {notice} meldingen."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} fan {n} job lêzen.",
+    "other": "{repo} {run}: {done} fan {n} jobs lêzen."
+  },
+  "warnings.noRun": "Gjin fan de oanfinkte tûken hat in workflow-run.",
   "security.column.since": "Sûnt",
   "security.severity.critical": "kritysk",
   "security.severity.high": "heech",
@@ -378,10 +403,15 @@
   "tests.code.file": "bestân",
   "tests.code.language": "taal",
   "tests.code.cases": "gefallen",
+  "tests.code.run": "run",
   "tests.code.reading": "De suite wurdt lêzen…",
   "tests.code.note": {
     "one": "{n} bestân mei {cases} gefallen.",
     "other": "{n} bestannen mei {cases} gefallen."
+  },
+  "tests.code.held": {
+    "one": "Run {run} rapportearre oer {n} dêrfan.",
+    "other": "Run {run} rapportearre oer {n} dêrfan."
   },
   "tests.code.noCases": "Yn dit bestân is gjin gefal fûn.",
   "tests.code.noTree": "De testebeam wurdt net op {path} oanbean.",

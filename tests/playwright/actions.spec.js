@@ -138,7 +138,7 @@ test.describe('read in UTC', () => {
     });
     await openActions(page, calls, '?refs=main&refresh=0', { runs });
     await expect(page.locator('table.feed-table thead th')).toHaveText(
-      ['Started', 'Ended', 'Duration', 'Repository', 'Result', 'Run', 'Workflow'], { timeout: 30000 }
+      ['Started', 'Ended', 'Duration', 'Repository', 'Result', 'Run', 'Workflow', 'Open'], { timeout: 30000 }
     );
     const cells = row => page.locator('table.feed-table tbody tr').nth(row).locator('td');
     await expect(cells(0).nth(0)).toHaveText('2026-08-21 09:00');

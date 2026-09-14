@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Акции",
   "view.security": "Безбедност",
+  "view.warnings": "Предупредувања",
   "panel.filter": "Филтер",
   "panel.design": "Изглед",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Се прашува GitHub што се променило",
   "loader.task.everything": "Се бара од GitHub секое извршување",
   "loader.task.artifacts": "Артефакти на извршување #{number}: {done} од {total}",
+  "loader.task.warnings": "Предупредувања: {done} од {total} задачи",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "неуспешно: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Времетраење",
   "feed.actions.running": "во тек",
   "feed.actions.longest": "Најдолгото прикажано извршување траеше {duration} ({run}).",
+  "feed.actions.open": "Отвори",
+  "feed.actions.jump.playwright": "Playwright пакетот на ова извршување",
+  "feed.actions.jump.unit": "Сопствените пакети на репозиториумот при ова извршување",
+  "feed.actions.jump.warnings": "Предупредувања на ова извршување",
   "feed.filter.search": "Барај извршувања",
   "feed.filter.all": "сите",
   "feed.filter.event": "Настан",
@@ -198,6 +204,25 @@
   "security.column.source": "Извор",
   "security.column.alert": "Аларм",
   "security.column.summary": "Резиме",
+  "warnings.column.level": "Ниво",
+  "warnings.column.repository": "Репозиториум",
+  "warnings.column.run": "Извршување",
+  "warnings.column.job": "Задача",
+  "warnings.column.where": "Каде",
+  "warnings.column.title": "Наслов",
+  "warnings.column.message": "Порака",
+  "warnings.level.failure": "грешка",
+  "warnings.level.warning": "предупредување",
+  "warnings.level.notice": "забелешка",
+  "warnings.note": {
+    "one": "Низ {n} извршување: {failure} грешки, {warning} предупредувања, {notice} забелешки.",
+    "other": "Низ {n} извршувања: {failure} грешки, {warning} предупредувања, {notice} забелешки."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: прочитана е {done} од {n} задача.",
+    "other": "{repo} {run}: прочитани се {done} од {n} задачи."
+  },
+  "warnings.noRun": "Ниту една од означените гранки нема извршување на работен тек.",
   "security.column.since": "Од",
   "security.severity.critical": "критично",
   "security.severity.high": "високо",
@@ -378,10 +403,15 @@
   "tests.code.file": "датотека",
   "tests.code.language": "јазик",
   "tests.code.cases": "случаи",
+  "tests.code.run": "извршување",
   "tests.code.reading": "Се чита тест-пакетот…",
   "tests.code.note": {
     "one": "{n} датотека со {cases} случаи.",
     "other": "{n} датотеки со {cases} случаи."
+  },
+  "tests.code.held": {
+    "one": "Извршувањето {run} извести за {n} од нив.",
+    "other": "Извршувањето {run} извести за {n} од нив."
   },
   "tests.code.noCases": "Во оваа датотека не е пронајден ниту еден случај.",
   "tests.code.noTree": "Стеблото на тестовите не се служи на {path}.",

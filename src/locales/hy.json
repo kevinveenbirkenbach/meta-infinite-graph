@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Գործողություններ",
   "view.security": "Անվտանգություն",
+  "view.warnings": "Զգուշացումներ",
   "panel.filter": "Զտիչ",
   "panel.design": "Տեսք",
   "design.theme": "Թեմա",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-ին հարցում, թե ինչ է փոխվել",
   "loader.task.everything": "GitHub-ից բոլոր գործարկումների հարցում",
   "loader.task.artifacts": "#{number} գործարկման արտեֆակտներ՝ {done} / {total}",
+  "loader.task.warnings": "Զգուշացումներ՝ {total} առաջադրանքից {done}",
   "loader.task.artifact": "Արտեֆակտ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ձախողված՝ {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Տևողություն",
   "feed.actions.running": "ընթացքում",
   "feed.actions.longest": "Ցուցադրված ամենաերկար գործարկումը տևել է {duration} ({run})։",
+  "feed.actions.open": "Բացել",
+  "feed.actions.jump.playwright": "Այս գործարկման Playwright հավաքածուն",
+  "feed.actions.jump.unit": "Պահոցի սեփական հավաքածուներն այս գործարկման ժամանակ",
+  "feed.actions.jump.warnings": "Այս գործարկման զգուշացումները",
   "feed.filter.search": "Որոնել գործարկումներում",
   "feed.filter.all": "բոլորը",
   "feed.filter.event": "Իրադարձություն",
@@ -198,6 +204,25 @@
   "security.column.source": "Աղբյուր",
   "security.column.alert": "Ահազանգ",
   "security.column.summary": "Ամփոփում",
+  "warnings.column.level": "Մակարդակ",
+  "warnings.column.repository": "Պահոց",
+  "warnings.column.run": "Գործարկում",
+  "warnings.column.job": "Առաջադրանք",
+  "warnings.column.where": "Որտեղ",
+  "warnings.column.title": "Վերնագիր",
+  "warnings.column.message": "Հաղորդագրություն",
+  "warnings.level.failure": "սխալ",
+  "warnings.level.warning": "զգուշացում",
+  "warnings.level.notice": "ծանուցում",
+  "warnings.note": {
+    "one": "{n} գործարկման ընթացքում՝ {failure} սխալ, {warning} զգուշացում, {notice} ծանուցում։",
+    "other": "{n} գործարկումների ընթացքում՝ {failure} սխալ, {warning} զգուշացում, {notice} ծանուցում։"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}՝ {n} առաջադրանքից {done}-ը կարդացվեց։",
+    "other": "{repo} {run}՝ {n} առաջադրանքից {done}-ը կարդացվեց։"
+  },
+  "warnings.noRun": "Նշված ճյուղերից ոչ մեկը աշխատահոսքի գործարկում չունի։",
   "security.column.since": "Սկսած",
   "security.severity.critical": "կրիտիկական",
   "security.severity.high": "բարձր",
@@ -378,10 +403,15 @@
   "tests.code.file": "ֆայլ",
   "tests.code.language": "լեզու",
   "tests.code.cases": "դեպքեր",
+  "tests.code.run": "գործարկում",
   "tests.code.reading": "Հավաքածուի ընթերցում…",
   "tests.code.note": {
     "one": "{n} ֆայլ՝ {cases} դեպքով։",
     "other": "{n} ֆայլ՝ {cases} դեպքով։"
+  },
+  "tests.code.held": {
+    "one": "{run} գործարկումը հաղորդել է դրանցից {n}-ի մասին։",
+    "other": "{run} գործարկումը հաղորդել է դրանցից {n}-ի մասին։"
   },
   "tests.code.noCases": "Այս ֆայլում ոչ մի դեպք չգտնվեց։",
   "tests.code.noTree": "Թեստերի ծառը {path} հասցեում չի մատուցվում։",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Gochaalee",
   "view.security": "Nageenya",
+  "view.warnings": "Akeekkachiisota",
   "panel.filter": "Calaltuu",
   "panel.design": "Dizaayinii",
   "design.theme": "Bifa",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub waan jijjiirame gaafachaa jira",
   "loader.task.everything": "GitHub raawwii hunda gaafachaa jira",
   "loader.task.artifacts": "Artifaaktota raawwii #{number}: {total} keessaa {done}",
+  "loader.task.warnings": "Akeekkachiisota: hojiiwwan {total} keessaa {done}",
   "loader.task.artifact": "Artifaaktii {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "hin milkoofne: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Turtii",
   "feed.actions.running": "raawwatamaa jira",
   "feed.actions.longest": "Raawwiin agarsiifame keessaa inni dheeraan {duration} fudhate ({run}).",
+  "feed.actions.open": "Bani",
+  "feed.actions.jump.playwright": "Qormaatota Playwright raawwii kanaa",
+  "feed.actions.jump.unit": "Qormaatota kuusaan mataan isaa qabu raawwii kana irratti",
+  "feed.actions.jump.warnings": "Akeekkachiisota raawwii kanaa",
   "feed.filter.search": "Raawwiiwwan barbaadi",
   "feed.filter.all": "hunda",
   "feed.filter.event": "Taatee",
@@ -198,6 +204,25 @@
   "security.column.source": "Madda",
   "security.column.alert": "Beeksisa",
   "security.column.summary": "Cuunfaa",
+  "warnings.column.level": "Sadarkaa",
+  "warnings.column.repository": "Kuusaa",
+  "warnings.column.run": "Raawwii",
+  "warnings.column.job": "Hojii",
+  "warnings.column.where": "Eessa",
+  "warnings.column.title": "Mata-duree",
+  "warnings.column.message": "Ergaa",
+  "warnings.level.failure": "dogoggora",
+  "warnings.level.warning": "akeekkachiisa",
+  "warnings.level.notice": "yaadannoo",
+  "warnings.note": {
+    "one": "Raawwii {n} keessatti: dogoggora {failure}, akeekkachiisa {warning}, yaadannoo {notice}.",
+    "other": "Raawwiilee {n} keessatti: dogoggora {failure}, akeekkachiisa {warning}, yaadannoo {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: hojii {n} keessaa {done} dubbifame.",
+    "other": "{repo} {run}: hojiiwwan {n} keessaa {done} dubbifaman."
+  },
+  "warnings.noRun": "Damee mallattaa'an keessaa tokkoyyuu raawwii hojii-yaa'insaa hin qabu.",
   "security.column.since": "Irraa kaasee",
   "security.severity.critical": "hamaa",
   "security.severity.high": "ol'aanaa",
@@ -378,10 +403,15 @@
   "tests.code.file": "faayilii",
   "tests.code.language": "afaan",
   "tests.code.cases": "qormaatota",
+  "tests.code.run": "raawwii",
   "tests.code.reading": "Qormaatota dubbisaa jira…",
   "tests.code.note": {
     "one": "Faayilii {n} qormaatota {cases} qabu.",
     "other": "Faayiloota {n} qormaatota {cases} qaban."
+  },
+  "tests.code.held": {
+    "one": "Raawwiin {run} isaan keessaa {n} gabaase.",
+    "other": "Raawwiin {run} isaan keessaa {n} gabaase."
   },
   "tests.code.noCases": "Faayilii kana keessatti qormaanni tokkoyyuu hin argamne.",
   "tests.code.noTree": "Mukni qormaatotaa {path} irratti hin tajaajilamu.",

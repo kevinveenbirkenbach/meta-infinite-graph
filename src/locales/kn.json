@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ಕ್ರಿಯೆಗಳು",
   "view.security": "ಭದ್ರತೆ",
+  "view.warnings": "ಎಚ್ಚರಿಕೆಗಳು",
   "panel.filter": "ಫಿಲ್ಟರ್",
   "panel.design": "ವಿನ್ಯಾಸ",
   "design.theme": "ಥೀಮ್",
@@ -172,6 +173,7 @@
   "loader.task.changes": "ಏನು ಬದಲಾಗಿದೆ ಎಂದು GitHub ಅನ್ನು ಕೇಳಲಾಗುತ್ತಿದೆ",
   "loader.task.everything": "ಎಲ್ಲಾ ಚಾಲನೆಗಳಿಗಾಗಿ GitHub ಅನ್ನು ಕೇಳಲಾಗುತ್ತಿದೆ",
   "loader.task.artifacts": "ಚಾಲನೆ #{number} ರ ಆರ್ಟಿಫ್ಯಾಕ್ಟ್‌ಗಳು: {total} ರಲ್ಲಿ {done}",
+  "loader.task.warnings": "ಎಚ್ಚರಿಕೆಗಳು: {total} ಜಾಬ್‌ಗಳಲ್ಲಿ {done}",
   "loader.task.artifact": "ಆರ್ಟಿಫ್ಯಾಕ್ಟ್ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ವಿಫಲ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ಅವಧಿ",
   "feed.actions.running": "ಚಾಲನೆಯಲ್ಲಿದೆ",
   "feed.actions.longest": "ತೋರಿಸಿರುವ ಅತಿ ಉದ್ದದ ಚಾಲನೆ {duration} ತೆಗೆದುಕೊಂಡಿತು ({run}).",
+  "feed.actions.open": "ತೆರೆಯಿರಿ",
+  "feed.actions.jump.playwright": "ಈ ಚಾಲನೆಯ Playwright ಸೂಟ್",
+  "feed.actions.jump.unit": "ಈ ಚಾಲನೆಯಲ್ಲಿ ರೆಪೊಸಿಟರಿಯ ಸ್ವಂತ ಸೂಟ್‌ಗಳು",
+  "feed.actions.jump.warnings": "ಈ ಚಾಲನೆಯ ಎಚ್ಚರಿಕೆಗಳು",
   "feed.filter.search": "ಚಾಲನೆಗಳಲ್ಲಿ ಹುಡುಕಿ",
   "feed.filter.all": "ಎಲ್ಲಾ",
   "feed.filter.event": "ಘಟನೆ",
@@ -198,6 +204,25 @@
   "security.column.source": "ಮೂಲ",
   "security.column.alert": "ಅಲರ್ಟ್",
   "security.column.summary": "ಸಾರಾಂಶ",
+  "warnings.column.level": "ಮಟ್ಟ",
+  "warnings.column.repository": "ರೆಪೊಸಿಟರಿ",
+  "warnings.column.run": "ಚಾಲನೆ",
+  "warnings.column.job": "ಜಾಬ್",
+  "warnings.column.where": "ಎಲ್ಲಿ",
+  "warnings.column.title": "ಶೀರ್ಷಿಕೆ",
+  "warnings.column.message": "ಸಂದೇಶ",
+  "warnings.level.failure": "ದೋಷ",
+  "warnings.level.warning": "ಎಚ್ಚರಿಕೆ",
+  "warnings.level.notice": "ಟಿಪ್ಪಣಿ",
+  "warnings.note": {
+    "one": "{n} ಚಾಲನೆಯಾದ್ಯಂತ: {failure} ದೋಷಗಳು, {warning} ಎಚ್ಚರಿಕೆಗಳು, {notice} ಟಿಪ್ಪಣಿಗಳು.",
+    "other": "{n} ಚಾಲನೆಗಳಾದ್ಯಂತ: {failure} ದೋಷಗಳು, {warning} ಎಚ್ಚರಿಕೆಗಳು, {notice} ಟಿಪ್ಪಣಿಗಳು."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} ಜಾಬ್‌ನಲ್ಲಿ {done} ಓದಲಾಗಿದೆ.",
+    "other": "{repo} {run}: {n} ಜಾಬ್‌ಗಳಲ್ಲಿ {done} ಓದಲಾಗಿದೆ."
+  },
+  "warnings.noRun": "ಗುರುತಿಸಲಾದ ಯಾವುದೇ ಶಾಖೆಗೂ ವರ್ಕ್‌ಫ್ಲೋ ಚಾಲನೆ ಇಲ್ಲ.",
   "security.column.since": "ಯಾವಾಗಿನಿಂದ",
   "security.severity.critical": "ಅತಿ ಗಂಭೀರ",
   "security.severity.high": "ಹೆಚ್ಚು",
@@ -378,10 +403,15 @@
   "tests.code.file": "ಕಡತ",
   "tests.code.language": "ಭಾಷೆ",
   "tests.code.cases": "ಪ್ರಕರಣಗಳು",
+  "tests.code.run": "ಚಾಲನೆ",
   "tests.code.reading": "ಸೂಟ್ ಓದಲಾಗುತ್ತಿದೆ…",
   "tests.code.note": {
     "one": "{cases} ಪ್ರಕರಣಗಳಿರುವ {n} ಕಡತ.",
     "other": "{cases} ಪ್ರಕರಣಗಳಿರುವ {n} ಕಡತಗಳು."
+  },
+  "tests.code.held": {
+    "one": "ಚಾಲನೆ {run} ಅವುಗಳಲ್ಲಿ {n} ಬಗ್ಗೆ ವರದಿ ಮಾಡಿದೆ.",
+    "other": "ಚಾಲನೆ {run} ಅವುಗಳಲ್ಲಿ {n} ಬಗ್ಗೆ ವರದಿ ಮಾಡಿದೆ."
   },
   "tests.code.noCases": "ಈ ಕಡತದಲ್ಲಿ ಯಾವುದೇ ಪ್ರಕರಣ ಕಂಡುಬಂದಿಲ್ಲ.",
   "tests.code.noTree": "ಪರೀಕ್ಷಾ ವೃಕ್ಷವನ್ನು {path} ನಲ್ಲಿ ಒದಗಿಸಲಾಗಿಲ್ಲ.",

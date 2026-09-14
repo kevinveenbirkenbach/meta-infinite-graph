@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Műveletek",
   "view.security": "Biztonság",
+  "view.warnings": "Figyelmeztetések",
   "panel.filter": "Szűrő",
   "panel.design": "Megjelenés",
   "design.theme": "Téma",
@@ -172,6 +173,7 @@
   "loader.task.changes": "A GitHub megkérdezése, mi változott",
   "loader.task.everything": "Az összes futtatás lekérése a GitHubról",
   "loader.task.artifacts": "Futtatás #{number} artefaktumai: {done} / {total}",
+  "loader.task.warnings": "Figyelmeztetések: {total} feladatból {done}",
   "loader.task.artifact": "Artefaktum: {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "sikertelen: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Időtartam",
   "feed.actions.running": "fut",
   "feed.actions.longest": "A leghosszabb megjelenített futtatás {duration} ideig tartott ({run}).",
+  "feed.actions.open": "Megnyitás",
+  "feed.actions.jump.playwright": "E futtatás Playwright-készlete",
+  "feed.actions.jump.unit": "A tároló saját készletei ennél a futtatásnál",
+  "feed.actions.jump.warnings": "E futtatás figyelmeztetései",
   "feed.filter.search": "Keresés a futtatásokban",
   "feed.filter.all": "mind",
   "feed.filter.event": "Esemény",
@@ -198,6 +204,25 @@
   "security.column.source": "Forrás",
   "security.column.alert": "Riasztás",
   "security.column.summary": "Összegzés",
+  "warnings.column.level": "Szint",
+  "warnings.column.repository": "Tároló",
+  "warnings.column.run": "Futtatás",
+  "warnings.column.job": "Feladat",
+  "warnings.column.where": "Hol",
+  "warnings.column.title": "Cím",
+  "warnings.column.message": "Üzenet",
+  "warnings.level.failure": "hiba",
+  "warnings.level.warning": "figyelmeztetés",
+  "warnings.level.notice": "megjegyzés",
+  "warnings.note": {
+    "one": "{n} futtatásban: {failure} hiba, {warning} figyelmeztetés, {notice} megjegyzés.",
+    "other": "{n} futtatásban: {failure} hiba, {warning} figyelmeztetés, {notice} megjegyzés."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} feladatból {done} beolvasva.",
+    "other": "{repo} {run}: {n} feladatból {done} beolvasva."
+  },
+  "warnings.noRun": "A kipipált ágak egyikének sincs munkafolyamat-futtatása.",
   "security.column.since": "Mióta",
   "security.severity.critical": "kritikus",
   "security.severity.high": "magas",
@@ -378,10 +403,15 @@
   "tests.code.file": "fájl",
   "tests.code.language": "nyelv",
   "tests.code.cases": "esetek",
+  "tests.code.run": "futtatás",
   "tests.code.reading": "A készlet beolvasása…",
   "tests.code.note": {
     "one": "{n} fájl {cases} esettel.",
     "other": "{n} fájl {cases} esettel."
+  },
+  "tests.code.held": {
+    "one": "A(z) {run} futtatás közülük {n} esetében adott jelentést.",
+    "other": "A(z) {run} futtatás közülük {n} esetében adott jelentést."
   },
   "tests.code.noCases": "Ebben a fájlban nem található eset.",
   "tests.code.noTree": "A tesztfa nincs kiszolgálva itt: {path}.",

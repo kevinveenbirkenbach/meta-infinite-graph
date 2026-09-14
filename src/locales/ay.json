@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Luräwinaka",
   "view.security": "Jark'aqasiña",
+  "view.warnings": "Amtayawinaka",
   "panel.filter": "Susuña",
   "panel.design": "Uñnaqa",
   "design.theme": "Uñnaqa kasta",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub ukar kunas mayjt'atapat jiskt'aski",
   "loader.task.everything": "GitHub ukar taqi sarawit jiskt'aski",
   "loader.task.artifacts": "Sarawi #{number} artefactonakapa: {done}/{total}",
+  "loader.task.warnings": "Amtayawinaka: {total} luräwinakat {done}",
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "janiw atipkiti: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Qawqha pacha",
   "feed.actions.running": "saraskakiwa",
   "feed.actions.longest": "Uñacht'ayat sarawinakat juk'amp jaya sarawixa {duration} pachaw apasïna ({run}).",
+  "feed.actions.open": "Jist'araña",
+  "feed.actions.jump.playwright": "Aka sarawin Playwright tamapa",
+  "feed.actions.jump.unit": "Aka sarawin imañan kikpa yant'awinakapa",
+  "feed.actions.jump.warnings": "Aka sarawin amtayawinakapa",
   "feed.filter.search": "Sarawinak thaqaña",
   "feed.filter.all": "taqpacha",
   "feed.filter.event": "Paskiri",
@@ -198,6 +204,25 @@
   "security.column.source": "Jalsu",
   "security.column.alert": "Iwxt'awi",
   "security.column.summary": "Juk'achata",
+  "warnings.column.level": "Patxa",
+  "warnings.column.repository": "Imaña",
+  "warnings.column.run": "Sarawi",
+  "warnings.column.job": "Luräwi",
+  "warnings.column.where": "Kawkhana",
+  "warnings.column.title": "Sutipa",
+  "warnings.column.message": "Apayawi",
+  "warnings.level.failure": "pantja",
+  "warnings.level.warning": "amtayawi",
+  "warnings.level.notice": "qillqata",
+  "warnings.note": {
+    "one": "{n} sarawina: {failure} pantja, {warning} amtayawi, {notice} qillqata.",
+    "other": "{n} sarawinakana: {failure} pantja, {warning} amtayawi, {notice} qillqata."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} luräwit {done} ullt'ata.",
+    "other": "{repo} {run}: {n} luräwinakat {done} ullt'ata."
+  },
+  "warnings.noRun": "Chimpuntata pallqanakata janiw mayniru llamk'aw sarawipa utjkiti.",
   "security.column.since": "Qalltawi",
   "security.severity.critical": "wali jach'a",
   "security.severity.high": "jach'a",
@@ -378,10 +403,15 @@
   "tests.code.file": "qillqa",
   "tests.code.language": "aru",
   "tests.code.cases": "yant'awi",
+  "tests.code.run": "sarawi",
   "tests.code.reading": "Yant'aw tama liyiski…",
   "tests.code.note": {
     "one": "{cases} yant'awimpi {n} qillqa.",
     "other": "{cases} yant'awimpi {n} qillqanaka."
+  },
+  "tests.code.held": {
+    "one": "{run} sarawix {n} ukanakat yatiyawayi.",
+    "other": "{run} sarawix {n} ukanakat yatiyawayi."
   },
   "tests.code.noCases": "Aka qillqan janiw mä yant'awis jikxatasitayki.",
   "tests.code.noTree": "Yant'aw quqax janiw {path} ukan churaskiti.",

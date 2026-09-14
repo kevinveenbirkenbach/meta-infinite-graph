@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Zviito",
   "view.security": "Chengetedzo",
+  "view.warnings": "Nyevero",
   "panel.filter": "Sefa",
   "panel.design": "Chimiro",
   "design.theme": "Dingindira",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Kubvunza GitHub zvachinja",
   "loader.task.everything": "Kubvunza GitHub kumhanya kwese",
   "loader.task.artifacts": "Zvigadzirwa zvekumhanya #{number}: {done} kubva pa{total}",
+  "loader.task.warnings": "Nyevero: {done} pamabasa {total}",
   "loader.task.artifact": "Chigadzirwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zvakundikana: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Kureba kwenguva",
   "feed.actions.running": "zvichiri kumhanya",
   "feed.actions.longest": "Kumhanya kurefu kwazvo kunoratidzwa kwakatora {duration} ({run}).",
+  "feed.actions.open": "Vhura",
+  "feed.actions.jump.playwright": "Miedzo yePlaywright yekumhanya uku",
+  "feed.actions.jump.unit": "Miedzo yedura pachayo pakumhanya uku",
+  "feed.actions.jump.warnings": "Nyevero dzekumhanya uku",
   "feed.filter.search": "Tsvaga mukumhanya",
   "feed.filter.all": "zvese",
   "feed.filter.event": "Chiitiko",
@@ -198,6 +204,25 @@
   "security.column.source": "Tsime",
   "security.column.alert": "Yambiro",
   "security.column.summary": "Pfupiso",
+  "warnings.column.level": "Chikamu",
+  "warnings.column.repository": "Dura",
+  "warnings.column.run": "Kumhanya",
+  "warnings.column.job": "Basa",
+  "warnings.column.where": "Kupi",
+  "warnings.column.title": "Musoro",
+  "warnings.column.message": "Shoko",
+  "warnings.level.failure": "kukanganisa",
+  "warnings.level.warning": "nyevero",
+  "warnings.level.notice": "chiziviso",
+  "warnings.note": {
+    "one": "Mukumhanya {n}: zvikanganiso {failure}, nyevero {warning}, ziviso {notice}.",
+    "other": "Mukumhanya {n}: zvikanganiso {failure}, nyevero {warning}, ziviso {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} pabasa {n} raverengwa.",
+    "other": "{repo} {run}: {done} pamabasa {n} averengwa."
+  },
+  "warnings.noRun": "Hapana bazi rakasarudzwa rine kumhanya kwemafambiro ebasa.",
   "security.column.since": "Kubva",
   "security.severity.critical": "zvakakomba zvikuru",
   "security.severity.high": "yepamusoro",
@@ -378,10 +403,15 @@
   "tests.code.file": "faira",
   "tests.code.language": "mutauro",
   "tests.code.cases": "nyaya",
+  "tests.code.run": "kumhanya",
   "tests.code.reading": "Kuverenga miedzo…",
   "tests.code.note": {
     "one": "Faira {n} rine nyaya {cases}.",
     "other": "Mafaira {n} ane nyaya {cases}."
+  },
+  "tests.code.held": {
+    "one": "Kumhanya {run} kwakataura nezve {n} pazviri.",
+    "other": "Kumhanya {run} kwakataura nezve {n} pazviri."
   },
   "tests.code.noCases": "Hapana nyaya yakawanikwa mufaira iri.",
   "tests.code.noTree": "Muti wemiedzo hauperekedzwe pa{path}.",

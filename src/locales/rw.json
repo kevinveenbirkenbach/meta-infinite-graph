@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ibikorwa",
   "view.security": "Umutekano",
+  "view.warnings": "Imiburo",
   "panel.filter": "Gushungura",
   "panel.design": "Imiterere",
   "design.theme": "Isura",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Birimo kubaza GitHub ibyahindutse",
   "loader.task.everything": "Birimo gusaba GitHub ikoreshwa ryose",
   "loader.task.artifacts": "Artefakiti z'ikoreshwa #{number}: {done} kuri {total}",
+  "loader.task.warnings": "Imiburo: {done} ku mirimo {total}",
   "loader.task.artifact": "Artefakiti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "byanze: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Igihe byamaze",
   "feed.actions.running": "biracyakora",
   "feed.actions.longest": "Ikoreshwa rirerire kurusha ayandi ryerekanwe ryamaze {duration} ({run}).",
+  "feed.actions.open": "Fungura",
+  "feed.actions.jump.playwright": "Urukurikirane rwa Playwright rw'iri koreshwa",
+  "feed.actions.jump.unit": "Inkurikirane bwite z'ububiko muri iri koreshwa",
+  "feed.actions.jump.warnings": "Imiburo y'iri koreshwa",
   "feed.filter.search": "Shakisha ikoreshwa",
   "feed.filter.all": "byose",
   "feed.filter.event": "Ibyabaye",
@@ -198,6 +204,25 @@
   "security.column.source": "Inkomoko",
   "security.column.alert": "Imenyesha",
   "security.column.summary": "Incamake",
+  "warnings.column.level": "Urwego",
+  "warnings.column.repository": "Ububiko",
+  "warnings.column.run": "Ikoreshwa",
+  "warnings.column.job": "Umurimo",
+  "warnings.column.where": "Aho",
+  "warnings.column.title": "Umutwe",
+  "warnings.column.message": "Ubutumwa",
+  "warnings.level.failure": "ikosa",
+  "warnings.level.warning": "umuburo",
+  "warnings.level.notice": "itangazo",
+  "warnings.note": {
+    "one": "Muri {n} ikoreshwa: amakosa {failure}, imiburo {warning}, amatangazo {notice}.",
+    "other": "Muri {n} ikoreshwa: amakosa {failure}, imiburo {warning}, amatangazo {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: hasomwe {done} ku murimo {n}.",
+    "other": "{repo} {run}: hasomwe {done} ku mirimo {n}."
+  },
+  "warnings.noRun": "Nta shami ryatoranyijwe rifite ikoreshwa rya workflow.",
   "security.column.since": "Kuva",
   "security.severity.critical": "bikomeye cyane",
   "security.severity.high": "hejuru",
@@ -378,10 +403,15 @@
   "tests.code.file": "dosiye",
   "tests.code.language": "ururimi",
   "tests.code.cases": "ingero",
+  "tests.code.run": "ikoreshwa",
   "tests.code.reading": "Gusoma urukurikirane…",
   "tests.code.note": {
     "one": "Dosiye {n} ifite ingero {cases}.",
     "other": "Dosiye {n} zifite ingero {cases}."
+  },
+  "tests.code.held": {
+    "one": "Ikoreshwa {run} ryatangaje {n} muri zo.",
+    "other": "Ikoreshwa {run} ryatangaje {n} muri zo."
   },
   "tests.code.noCases": "Nta ngero yabonetse muri iyi dosiye.",
   "tests.code.noTree": "Igiti cy'ibizamini ntikiboneka kuri {path}.",

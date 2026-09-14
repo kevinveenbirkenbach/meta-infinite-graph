@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Mavanga",
   "view.security": "Lutaninu",
+  "view.warnings": "Bikebisu",
   "panel.filter": "Nsungula",
   "panel.design": "Mbandu",
   "design.theme": "Mpila ya mbandu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Ke yufula GitHub yina me soba",
   "loader.task.everything": "Ke lomba GitHub nsalulu yonso",
   "loader.task.artifacts": "Bima ya nsalulu #{number}: {done} na {total}",
+  "loader.task.warnings": "Bikebisu: {done} na {total} bisalu",
   "loader.task.artifact": "Kima ya nsalulu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "me konda: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ntangu",
   "feed.actions.running": "ke sala",
   "feed.actions.longest": "Nsalulu ya nda kuluta yina me monisama bakaka {duration} ({run}).",
+  "feed.actions.open": "Kangula",
+  "feed.actions.jump.playwright": "Bimeka ya Playwright ya nsalulu yai",
+  "feed.actions.jump.unit": "Bimeka ya nzo ya bima yandi mosi na nsalulu yai",
+  "feed.actions.jump.warnings": "Bikebisu ya nsalulu yai",
   "feed.filter.search": "Sosa mu nsalulu",
   "feed.filter.all": "yonso",
   "feed.filter.event": "Dyambu",
@@ -198,6 +204,25 @@
   "security.column.source": "Kisina",
   "security.column.alert": "Lukebisu",
   "security.column.summary": "Nsamu ya nkufi",
+  "warnings.column.level": "Kiteso",
+  "warnings.column.repository": "Nzo ya bima",
+  "warnings.column.run": "Nsalulu",
+  "warnings.column.job": "Kisalu",
+  "warnings.column.where": "Kuwapi",
+  "warnings.column.title": "Zina",
+  "warnings.column.message": "Nsangu",
+  "warnings.level.failure": "kifu",
+  "warnings.level.warning": "kukebisa",
+  "warnings.level.notice": "nsonuku",
+  "warnings.note": {
+    "one": "Na nsalulu {n}: bifu {failure}, bikebisu {warning}, nsonuku {notice}.",
+    "other": "Na bansalulu {n}: bifu {failure}, bikebisu {warning}, nsonuku {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} na {n} kisalu me tangama.",
+    "other": "{repo} {run}: {done} na {n} bisalu me tangama."
+  },
+  "warnings.noRun": "Ata tavi mosi ya bo sola kele ve ti nsalulu ya nzila ya kisalu.",
   "security.column.since": "Banda",
   "security.severity.critical": "ya nene mingi",
   "security.severity.high": "ya zulu",
@@ -378,10 +403,15 @@
   "tests.code.file": "mukanda",
   "tests.code.language": "ndinga",
   "tests.code.cases": "mambu",
+  "tests.code.run": "nsalulu",
   "tests.code.reading": "Ke tanga bimeka…",
   "tests.code.note": {
     "one": "Mukanda {n} ti mambu {cases}.",
     "other": "Mikanda {n} ti mambu {cases}."
+  },
+  "tests.code.held": {
+    "one": "Nsalulu {run} ta zabisa {n} na kati na yo.",
+    "other": "Nsalulu {run} ta zabisa {n} na kati na yo."
   },
   "tests.code.noCases": "Diambu mosi ve me monana na mukanda yai.",
   "tests.code.noTree": "Nti ya bimeka ke pesamaka ve na {path}.",

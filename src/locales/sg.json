@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Âsärängö",
   "view.security": "Sêkîrîtê",
+  "view.warnings": "Âwango",
   "panel.filter": "Soro",
   "panel.design": "Lê tî yê",
   "design.theme": "Kodë tî lê",
@@ -163,6 +164,7 @@
   "loader.task.changes": "A yeke hûnda GitHub ye so a changé",
   "loader.task.everything": "A yeke hûnda GitHub âtambelängö kûê",
   "loader.task.artifacts": "Âartéfact tî tambelängö #{number}: {done} na yâ tî {total}",
+  "loader.task.warnings": "Âwango: {done} na yâ tî âkua {total}",
   "loader.task.artifact": "Artéfact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "a tï: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Ngoi tî ni",
   "feed.actions.running": "ayeke gue",
   "feed.actions.longest": "Tambelängö so ayo ahon kue so a fa ni amû ngoi {duration} ({run}).",
+  "feed.actions.open": "Zî",
+  "feed.actions.jump.playwright": "Âtara tî Playwright tî tambelängö sô",
+  "feed.actions.jump.unit": "Âtara tî ndo tî bätängö mvenî na tambelängö sô",
+  "feed.actions.jump.warnings": "Âwango tî tambelängö sô",
   "feed.filter.search": "Gi na yâ tî âtambelängö",
   "feed.filter.all": "kûê",
   "feed.filter.event": "Yê sô asï",
@@ -188,6 +194,23 @@
   "security.column.source": "Ndo tî löndö",
   "security.column.alert": "Kpälë",
   "security.column.summary": "Kête tënë ni",
+  "warnings.column.level": "Nivöo",
+  "warnings.column.repository": "Ndo tî bätängö",
+  "warnings.column.run": "Tambelängö",
+  "warnings.column.job": "Kua",
+  "warnings.column.where": "Ndo wa",
+  "warnings.column.title": "Lê tî tënë",
+  "warnings.column.message": "Tokua",
+  "warnings.level.failure": "sïönî",
+  "warnings.level.warning": "wango",
+  "warnings.level.notice": "sû tënë",
+  "warnings.note": {
+    "other": "Na yâ tî tambelängö {n}: sïönî {failure}, wango {warning}, sû tënë {notice}."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: a dîko {done} na yâ tî âkua {n}."
+  },
+  "warnings.noRun": "Mbâgë sô a soro ayeke na tambelängö tî lêgë tî kua pëpe.",
   "security.column.since": "Ngbene",
   "security.severity.critical": "ngangü mingi",
   "security.severity.high": "ngangü",
@@ -355,9 +378,13 @@
   "tests.code.file": "sû",
   "tests.code.language": "yângâ",
   "tests.code.cases": "âtapande",
+  "tests.code.run": "tambelängö",
   "tests.code.reading": "A yeke dîko âtara…",
   "tests.code.note": {
     "other": "Âsû {n} na âtapande {cases}."
+  },
+  "tests.code.held": {
+    "other": "Tambelängö {run} afa tënë tî {n} na yâ tî ala."
   },
   "tests.code.noCases": "A wara tapande oko na yâ tî sû sô pëpe.",
   "tests.code.noTree": "A yeke mû keke tî âtara na {path} pëpe.",

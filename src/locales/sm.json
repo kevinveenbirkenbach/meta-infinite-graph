@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Gaioiga",
   "view.security": "Saogalemu",
+  "view.warnings": "Lapataiga",
   "panel.filter": "Faamama",
   "panel.design": "Mamanu",
   "design.theme": "Autu",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Fesili i le GitHub po o le a mea na suia",
   "loader.task.everything": "Fesili i le GitHub mo tamoʻega uma",
   "loader.task.artifacts": "Atifeki o le tamoʻega #{number}: {done} mai le {total}",
+  "loader.task.warnings": "Lapataiga: {done} mai galuega e {total}",
   "loader.task.artifact": "Atifeki {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "toilalo: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Umi o le taimi",
   "feed.actions.running": "o loʻo tamoʻe",
   "feed.actions.longest": "O le tamoʻega sili ona umi o loʻo faʻaalia na alu ai {duration} ({run}).",
+  "feed.actions.open": "Tatala",
+  "feed.actions.jump.playwright": "Suʻega Playwright o lenei tamoʻega",
+  "feed.actions.jump.unit": "Suʻega a le faleteu lava ia i lenei tamoʻega",
+  "feed.actions.jump.warnings": "Lapataiga o lenei tamoʻega",
   "feed.filter.search": "Saili i tamoʻega",
   "feed.filter.all": "uma",
   "feed.filter.event": "Mea na tupu",
@@ -198,6 +204,25 @@
   "security.column.source": "Puna",
   "security.column.alert": "Lapataiga",
   "security.column.summary": "Aotelega",
+  "warnings.column.level": "Tulaga",
+  "warnings.column.repository": "Faleteu",
+  "warnings.column.run": "Tamoʻega",
+  "warnings.column.job": "Galuega",
+  "warnings.column.where": "O fea",
+  "warnings.column.title": "Ulutala",
+  "warnings.column.message": "Savali",
+  "warnings.level.failure": "sese",
+  "warnings.level.warning": "lapataiga",
+  "warnings.level.notice": "faamatalaga",
+  "warnings.note": {
+    "one": "I le tamoʻega e {n}: sese e {failure}, lapataiga e {warning}, faamatalaga e {notice}.",
+    "other": "I tamoʻega e {n}: sese e {failure}, lapataiga e {warning}, faamatalaga e {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: ua faitauina le {done} mai le galuega e {n}.",
+    "other": "{repo} {run}: ua faitauina le {done} mai galuega e {n}."
+  },
+  "warnings.noRun": "E leai se lala ua faailogaina e iai sana tamoʻega workflow.",
   "security.column.since": "Talu mai",
   "security.severity.critical": "matuā ogaoga",
   "security.severity.high": "maualuga",
@@ -378,10 +403,15 @@
   "tests.code.file": "faila",
   "tests.code.language": "gagana",
   "tests.code.cases": "mataupu",
+  "tests.code.run": "tamoʻega",
   "tests.code.reading": "Faitau le suʻega…",
   "tests.code.note": {
     "one": "Faila e {n} ma mataupu e {cases}.",
     "other": "Faila e {n} ma mataupu e {cases}."
+  },
+  "tests.code.held": {
+    "one": "Na lipotia e le tamoʻega {run} le {n} o ia mea.",
+    "other": "Na lipotia e le tamoʻega {run} le {n} o ia mea."
   },
   "tests.code.noCases": "E leai se mataupu na maua i lenei faila.",
   "tests.code.noTree": "E le o tuʻuina atu le laau suʻega i le {path}.",

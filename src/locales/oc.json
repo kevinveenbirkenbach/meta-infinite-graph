@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Accions",
   "view.security": "Seguretat",
+  "view.warnings": "Avertiments",
   "panel.filter": "Filtre",
   "panel.design": "Aparéncia",
   "design.theme": "Tèma",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Demanda a GitHub de çò que cambièt",
   "loader.task.everything": "Demanda a GitHub de totas las execucions",
   "loader.task.artifacts": "Artefactes de l'execucion #{number}: {done} de {total}",
+  "loader.task.warnings": "Avertiments: {done} sus {total} prètzfaits",
   "loader.task.artifact": "Artefacte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fracàs: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durada",
   "feed.actions.running": "en cors",
   "feed.actions.longest": "L'execucion mai longa afichada a durat {duration} ({run}).",
+  "feed.actions.open": "Dobrir",
+  "feed.actions.jump.playwright": "Seria Playwright d'aquesta execucion",
+  "feed.actions.jump.unit": "Las serias pròprias del depaus a aquesta execucion",
+  "feed.actions.jump.warnings": "Avertiments d'aquesta execucion",
   "feed.filter.search": "Cercar dins las execucions",
   "feed.filter.all": "totes",
   "feed.filter.event": "Eveniment",
@@ -198,6 +204,25 @@
   "security.column.source": "Font",
   "security.column.alert": "Alèrta",
   "security.column.summary": "Resumit",
+  "warnings.column.level": "Nivèl",
+  "warnings.column.repository": "Depaus",
+  "warnings.column.run": "Execucion",
+  "warnings.column.job": "Prètzfait",
+  "warnings.column.where": "Ont",
+  "warnings.column.title": "Títol",
+  "warnings.column.message": "Messatge",
+  "warnings.level.failure": "error",
+  "warnings.level.warning": "avertiment",
+  "warnings.level.notice": "nòta",
+  "warnings.note": {
+    "one": "Sus {n} execucion: {failure} errors, {warning} avertiments, {notice} nòtas.",
+    "other": "Sus {n} execucions: {failure} errors, {warning} avertiments, {notice} nòtas."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} sus {n} prètzfait legit.",
+    "other": "{repo} {run}: {done} sus {n} prètzfaits legits."
+  },
+  "warnings.noRun": "Cap de las brancas marcadas a pas d'execucion de flux de trabalh.",
   "security.column.since": "Dempuèi",
   "security.severity.critical": "critic",
   "security.severity.high": "naut",
@@ -378,10 +403,15 @@
   "tests.code.file": "fichièr",
   "tests.code.language": "lenga",
   "tests.code.cases": "cases",
+  "tests.code.run": "execucion",
   "tests.code.reading": "Lectura de la seria…",
   "tests.code.note": {
     "one": "{n} fichièr amb {cases} cases.",
     "other": "{n} fichièrs amb {cases} cases."
+  },
+  "tests.code.held": {
+    "one": "L'execucion {run} n'a senhalat {n}.",
+    "other": "L'execucion {run} n'a senhalat {n}."
   },
   "tests.code.noCases": "Cap de cas es pas estat trobat dins aqueste fichièr.",
   "tests.code.noTree": "L'arbre dels tèsts es pas servit a {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Aikiwa",
   "view.security": "Aman",
+  "view.warnings": "Gargadiwa",
   "panel.filter": "Tace",
   "panel.design": "Sura",
   "design.theme": "Lonwa",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-ro awo kǝnjiyana tambaydǝ",
   "loader.task.everything": "GitHub-ro gudǝ samma tambaydǝ",
   "loader.task.artifacts": "Kayan fitarwa gudǝ #{number}be: {done} {total}lan",
+  "loader.task.warnings": "Gargadiwa: {total} aikiwalan {done}",
   "loader.task.artifact": "Kayan fitarwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gǝnaba: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Nǝm kurugu",
   "feed.actions.running": "gudǝ dǝn",
   "feed.actions.longest": "Gudǝ kurugu nunadǝna {duration} sǝdǝna ({run}).",
+  "feed.actions.open": "Kǝlǝwu",
+  "feed.actions.jump.playwright": "Gudǝ adǝbe Playwright imtihanwa",
+  "feed.actions.jump.unit": "Ma'ajiyabe imtihanwa gudǝ adǝlan",
+  "feed.actions.jump.warnings": "Gudǝ adǝbe gargadiwa",
   "feed.filter.search": "Gudǝwa nemdǝ",
   "feed.filter.all": "samma",
   "feed.filter.event": "Awo tawandǝ",
@@ -198,6 +204,25 @@
   "security.column.source": "Tushe",
   "security.column.alert": "Faɗakarwa",
   "security.column.summary": "Taƙaice",
+  "warnings.column.level": "Matsayi",
+  "warnings.column.repository": "Ma'ajiya",
+  "warnings.column.run": "Gudǝ",
+  "warnings.column.job": "Aiki",
+  "warnings.column.where": "Ndaro",
+  "warnings.column.title": "Suna",
+  "warnings.column.message": "Sako",
+  "warnings.level.failure": "kuskure",
+  "warnings.level.warning": "gargadi",
+  "warnings.level.notice": "rubutu",
+  "warnings.note": {
+    "one": "Gudǝ {n}-lan: kuskurewa {failure}, gargadiwa {warning}, rubutuwa {notice}.",
+    "other": "Gudǝwa {n}-lan: kuskurewa {failure}, gargadiwa {warning}, rubutuwa {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: aiki {n}-lan {done} karatuna.",
+    "other": "{repo} {run}: aikiwa {n}-lan {done} karatuna."
+  },
+  "warnings.noRun": "Rashewa nasannazǝna kǝla workflow gudǝ baa.",
   "security.column.since": "Daga",
   "security.severity.critical": "tsanani kura",
   "security.severity.high": "kura",
@@ -378,10 +403,15 @@
   "tests.code.file": "fayil",
   "tests.code.language": "mana",
   "tests.code.cases": "kesuwa",
+  "tests.code.run": "gudǝ",
   "tests.code.reading": "Imtihanwa karatudǝ…",
   "tests.code.note": {
     "one": "Fayil {n} kesuwa {cases}-be.",
     "other": "Fayilwa {n} kesuwa {cases}-be."
+  },
+  "tests.code.held": {
+    "one": "Gudǝ {run} sandi-lan {n} yaye faada.",
+    "other": "Gudǝ {run} sandi-lan {n} yaye faada."
   },
   "tests.code.noCases": "Fayil adǝlan kes baa.",
   "tests.code.noTree": "Imtihanwabe kǝska {path}-lan baa.",

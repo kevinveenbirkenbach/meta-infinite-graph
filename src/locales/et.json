@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Toimingud",
   "view.security": "Turvalisus",
+  "view.warnings": "Hoiatused",
   "panel.filter": "Filter",
   "panel.design": "Kujundus",
   "design.theme": "Teema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHubilt küsimine, mis muutus",
   "loader.task.everything": "GitHubilt iga käivituse küsimine",
   "loader.task.artifacts": "Käivituse #{number} artefaktid: {done}/{total}",
+  "loader.task.warnings": "Hoiatused: {done}/{total} tööd",
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ebaõnnestus: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Kestus",
   "feed.actions.running": "käib",
   "feed.actions.longest": "Pikim kuvatud käivitus kestis {duration} ({run}).",
+  "feed.actions.open": "Ava",
+  "feed.actions.jump.playwright": "Selle käivituse Playwrighti komplekt",
+  "feed.actions.jump.unit": "Hoidla enda komplektid selles käivituses",
+  "feed.actions.jump.warnings": "Selle käivituse hoiatused",
   "feed.filter.search": "Otsi käivitustest",
   "feed.filter.all": "kõik",
   "feed.filter.event": "Sündmus",
@@ -198,6 +204,25 @@
   "security.column.source": "Allikas",
   "security.column.alert": "Hoiatus",
   "security.column.summary": "Kokkuvõte",
+  "warnings.column.level": "Tase",
+  "warnings.column.repository": "Hoidla",
+  "warnings.column.run": "Käivitus",
+  "warnings.column.job": "Töö",
+  "warnings.column.where": "Kus",
+  "warnings.column.title": "Pealkiri",
+  "warnings.column.message": "Teade",
+  "warnings.level.failure": "viga",
+  "warnings.level.warning": "hoiatus",
+  "warnings.level.notice": "märkus",
+  "warnings.note": {
+    "one": "{n} käivituse kohta: {failure} viga, {warning} hoiatust, {notice} märkust.",
+    "other": "{n} käivituse kohta: {failure} viga, {warning} hoiatust, {notice} märkust."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: loetud {done} tööd {n}-st.",
+    "other": "{repo} {run}: loetud {done} tööd {n}-st."
+  },
+  "warnings.noRun": "Ühelgi märgitud harul pole töövoo käivitust.",
   "security.column.since": "Alates",
   "security.severity.critical": "kriitiline",
   "security.severity.high": "kõrge",
@@ -378,10 +403,15 @@
   "tests.code.file": "fail",
   "tests.code.language": "keel",
   "tests.code.cases": "juhtumid",
+  "tests.code.run": "käivitus",
   "tests.code.reading": "Komplekti lugemine…",
   "tests.code.note": {
     "one": "{n} fail {cases} juhtumiga.",
     "other": "{n} faili {cases} juhtumiga."
+  },
+  "tests.code.held": {
+    "one": "Käivitus {run} raporteeris neist {n}.",
+    "other": "Käivitus {run} raporteeris neist {n}."
   },
   "tests.code.noCases": "Sellest failist ei leitud ühtegi juhtumit.",
   "tests.code.noTree": "Testide puud ei serveerita aadressil {path}.",

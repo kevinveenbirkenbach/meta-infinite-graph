@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Omume",
   "view.security": "Nchekwa",
+  "view.warnings": "Ịdọ aka ná ntị",
   "panel.filter": "Nzacha",
   "panel.design": "Nhazi",
   "design.theme": "Ụdị ngosi",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Na-ajụ GitHub ihe gbanwere",
   "loader.task.everything": "Na-arịọ GitHub maka ọsọ niile",
   "loader.task.artifacts": "Ihe arụpụtara nke ọsọ #{number}: {done} n'ime {total}",
+  "loader.task.warnings": "Ịdọ aka ná ntị: {done} n'ime ọrụ {total}",
   "loader.task.artifact": "Ihe arụpụtara {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "dara: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Ogologo oge",
   "feed.actions.running": "na-agba",
   "feed.actions.longest": "Ọsọ kachasị ogologo egosiri were {duration} ({run}).",
+  "feed.actions.open": "Mepee",
+  "feed.actions.jump.playwright": "Ụlụ ule Playwright nke ọsọ a",
+  "feed.actions.jump.unit": "Ule nke ọba ahụ n'onwe ya na ọsọ a",
+  "feed.actions.jump.warnings": "Ịdọ aka ná ntị nke ọsọ a",
   "feed.filter.search": "Chọọ na ọsọ niile",
   "feed.filter.all": "niile",
   "feed.filter.event": "Ihe omume",
@@ -188,6 +194,23 @@
   "security.column.source": "Isi mmalite",
   "security.column.alert": "Ọkwa",
   "security.column.summary": "Nchịkọta",
+  "warnings.column.level": "Ọkwa",
+  "warnings.column.repository": "Ọba",
+  "warnings.column.run": "Ọsọ",
+  "warnings.column.job": "Ọrụ",
+  "warnings.column.where": "Ebee",
+  "warnings.column.title": "Aha",
+  "warnings.column.message": "Ozi",
+  "warnings.level.failure": "njehie",
+  "warnings.level.warning": "ịdọ aka ná ntị",
+  "warnings.level.notice": "ndetu",
+  "warnings.note": {
+    "other": "N'ofe ọsọ {n}: njehie {failure}, ịdọ aka ná ntị {warning}, ndetu {notice}."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: agụrụ {done} n'ime ọrụ {n}."
+  },
+  "warnings.noRun": "Ọ dịghị nke ọ bụla n'ime alaka akara ahụ nwere ọsọ usoro ọrụ.",
   "security.column.since": "Kemgbe",
   "security.severity.critical": "dị oke njọ",
   "security.severity.high": "elu",
@@ -355,9 +378,13 @@
   "tests.code.file": "faịlụ",
   "tests.code.language": "asụsụ",
   "tests.code.cases": "ihe ule",
+  "tests.code.run": "ọsọ",
   "tests.code.reading": "Na-agụ ụlụ ule…",
   "tests.code.note": {
     "other": "Faịlụ {n} nwere ihe ule {cases}."
+  },
+  "tests.code.held": {
+    "other": "Ọsọ {run} kọrọ maka {n} n'ime ha."
   },
   "tests.code.noCases": "Achọtaghị ihe ule ọ bụla na faịlụ a.",
   "tests.code.noTree": "Osisi ule ahụ adịghị na {path}.",

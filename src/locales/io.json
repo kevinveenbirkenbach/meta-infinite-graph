@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Agi",
   "view.security": "Sekureso",
+  "view.warnings": "Avizi",
   "panel.filter": "Filtrilo",
   "panel.design": "Aspekto",
   "design.theme": "Temo",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Questionante GitHub pri quo chanjis",
   "loader.task.everything": "Demandante de GitHub omna exekuti",
   "loader.task.artifacts": "Artefakti di exekuto #{number}: {done} de {total}",
+  "loader.task.warnings": "Avizi: {done} de {total} labori",
   "loader.task.artifact": "Artefakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "faliis: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Durado",
   "feed.actions.running": "en exekuto",
   "feed.actions.longest": "La maxim longa exekuto montrita duris {duration} ({run}).",
+  "feed.actions.open": "Apertar",
+  "feed.actions.jump.playwright": "La Playwright-testaro di ca exekuto",
+  "feed.actions.jump.unit": "La propra testari di la depozeyo en ca exekuto",
+  "feed.actions.jump.warnings": "Avizi di ca exekuto",
   "feed.filter.search": "Serchar en la exekuti",
   "feed.filter.all": "omni",
   "feed.filter.event": "Evento",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonto",
   "security.column.alert": "Alerto",
   "security.column.summary": "Rezumo",
+  "warnings.column.level": "Nivelo",
+  "warnings.column.repository": "Depozeyo",
+  "warnings.column.run": "Exekuto",
+  "warnings.column.job": "Laboro",
+  "warnings.column.where": "Ube",
+  "warnings.column.title": "Titulo",
+  "warnings.column.message": "Mesajo",
+  "warnings.level.failure": "eroro",
+  "warnings.level.warning": "avizo",
+  "warnings.level.notice": "noto",
+  "warnings.note": {
+    "one": "Tra {n} exekuto: {failure} erori, {warning} avizi, {notice} noti.",
+    "other": "Tra {n} exekuti: {failure} erori, {warning} avizi, {notice} noti."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} de {n} laboro lektita.",
+    "other": "{repo} {run}: {done} de {n} labori lektita."
+  },
+  "warnings.noRun": "Nula de la markizita branchi havas exekuto di workflow.",
   "security.column.since": "De kande",
   "security.severity.critical": "kritika",
   "security.severity.high": "alta",
@@ -378,10 +403,15 @@
   "tests.code.file": "dokumento",
   "tests.code.language": "linguo",
   "tests.code.cases": "kazi",
+  "tests.code.run": "exekuto",
   "tests.code.reading": "Lektante la testo-serio…",
   "tests.code.note": {
     "one": "{n} dokumento kun {cases} kazi.",
     "other": "{n} dokumenti kun {cases} kazi."
+  },
+  "tests.code.held": {
+    "one": "La exekuto {run} raportis pri {n} de li.",
+    "other": "La exekuto {run} raportis pri {n} de li."
   },
   "tests.code.noCases": "Nula kazo trovesis en ca dokumento.",
   "tests.code.noTree": "La testo-arboro ne servesas che {path}.",

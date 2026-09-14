@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "एक्शन",
   "view.security": "सुरक्षा",
+  "view.warnings": "चेतावनी",
   "panel.filter": "फिल्टर",
   "panel.design": "डिजाइन",
   "design.theme": "थीम",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub से पूछल जा रहल बा कि का बदलल",
   "loader.task.everything": "GitHub से हर रन मांगल जा रहल बा",
   "loader.task.artifacts": "रन #{number} के आर्टिफैक्ट: {total} में से {done}",
+  "loader.task.warnings": "चेतावनी: {total} जॉब में से {done}",
   "loader.task.artifact": "आर्टिफैक्ट {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "फेल: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "अवधि",
   "feed.actions.running": "चल रहल बा",
   "feed.actions.longest": "देखावल सबसे लमहर रन में {duration} लागल ({run})।",
+  "feed.actions.open": "खोलीं",
+  "feed.actions.jump.playwright": "ई रन के Playwright सूट",
+  "feed.actions.jump.unit": "ई रन में रिपॉजिटरी के आपन सूट",
+  "feed.actions.jump.warnings": "ई रन के चेतावनी",
   "feed.filter.search": "रन में खोजीं",
   "feed.filter.all": "सब",
   "feed.filter.event": "घटना",
@@ -198,6 +204,25 @@
   "security.column.source": "स्रोत",
   "security.column.alert": "अलर्ट",
   "security.column.summary": "सारांश",
+  "warnings.column.level": "स्तर",
+  "warnings.column.repository": "रिपॉजिटरी",
+  "warnings.column.run": "रन",
+  "warnings.column.job": "जॉब",
+  "warnings.column.where": "कहाँ",
+  "warnings.column.title": "शीर्षक",
+  "warnings.column.message": "संदेश",
+  "warnings.level.failure": "गलती",
+  "warnings.level.warning": "चेतावनी",
+  "warnings.level.notice": "सूचना",
+  "warnings.note": {
+    "one": "{n} रन में: {failure} गलती, {warning} चेतावनी, {notice} सूचना।",
+    "other": "{n} गो रन में: {failure} गलती, {warning} चेतावनी, {notice} सूचना।"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} जॉब में से {done} पढ़ल गइल।",
+    "other": "{repo} {run}: {n} गो जॉब में से {done} पढ़ल गइल।"
+  },
+  "warnings.noRun": "टिक कइल कवनो ब्रांच में वर्कफ्लो रन नइखे।",
   "security.column.since": "कब से",
   "security.severity.critical": "बहुत गंभीर",
   "security.severity.high": "ऊँच",
@@ -378,10 +403,15 @@
   "tests.code.file": "फाइल",
   "tests.code.language": "भाषा",
   "tests.code.cases": "केस",
+  "tests.code.run": "रन",
   "tests.code.reading": "सूट पढ़ल जा रहल बा…",
   "tests.code.note": {
     "one": "{cases} केस वाला {n} फाइल।",
     "other": "{cases} केस वाला {n} गो फाइल।"
+  },
+  "tests.code.held": {
+    "one": "रन {run} में ओकरा में से {n} के रिपोर्ट भइल।",
+    "other": "रन {run} में ओकरा में से {n} गो के रिपोर्ट भइल।"
   },
   "tests.code.noCases": "ई फाइल में कवनो केस ना मिलल।",
   "tests.code.noTree": "टेस्ट ट्री {path} पर ना परोसल जाला।",

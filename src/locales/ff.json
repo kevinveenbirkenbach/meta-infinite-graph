@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Golle",
   "view.security": "Kisal",
+  "view.warnings": "Reentinooji",
   "panel.filter": "Cuɓol",
   "panel.design": "Mbaadi",
   "design.theme": "Nate",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Nana naamnee GitHub ko waylii",
   "loader.task.everything": "Nana naamnee GitHub doggol kala",
   "loader.task.artifacts": "Artefaaktuuji doggol #{number}: {done}/{total}",
+  "loader.task.warnings": "Reentinooji: {done} e {total} golle",
   "loader.task.artifact": "Artefaakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ronkii: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ɓooyngol",
   "feed.actions.running": "ina yahra",
   "feed.actions.longest": "Doggol ɓurngol juutde e ɗe njaltinaa ɓooyi {duration} ({run}).",
+  "feed.actions.open": "Uddit",
+  "feed.actions.jump.playwright": "Ƴeewndooji Playwright ndee doggol",
+  "feed.actions.jump.unit": "Ƴeewndooji mooftirde ndee e ndee doggol",
+  "feed.actions.jump.warnings": "Reentinooji ndee doggol",
   "feed.filter.search": "Yiylo e dogginaaji",
   "feed.filter.all": "fof",
   "feed.filter.event": "Huunde waɗnde",
@@ -198,6 +204,25 @@
   "security.column.source": "Iwdi",
   "security.column.alert": "Jeertinol",
   "security.column.summary": "Ciimtol",
+  "warnings.column.level": "Tolno",
+  "warnings.column.repository": "Mooftirde",
+  "warnings.column.run": "Doggol",
+  "warnings.column.job": "Golle",
+  "warnings.column.where": "Toy",
+  "warnings.column.title": "Tiitoonde",
+  "warnings.column.message": "Ɓataake",
+  "warnings.level.failure": "juumre",
+  "warnings.level.warning": "reentino",
+  "warnings.level.notice": "tintinol",
+  "warnings.note": {
+    "one": "E doggol {n}: juumreeji {failure}, reentinooji {warning}, tintinolji {notice}.",
+    "other": "E doggi {n}: juumreeji {failure}, reentinooji {warning}, tintinolji {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} e golle {n} janngaama.",
+    "other": "{repo} {run}: {done} e golle {n} janngaama."
+  },
+  "warnings.noRun": "Alaa e calɗi cuɓaaɗi ɗii ngoodi doggol golle.",
   "security.column.since": "Gila",
   "security.severity.critical": "teddi masin",
   "security.severity.high": "toowi",
@@ -378,10 +403,15 @@
   "tests.code.file": "winndannde",
   "tests.code.language": "ɗemngal",
   "tests.code.cases": "ƴeewndooji",
+  "tests.code.run": "doggol",
   "tests.code.reading": "Nana janngee ƴeewndooji ɗii…",
   "tests.code.note": {
     "one": "Winndannde {n} e ƴeewndooji {cases}.",
     "other": "Winndanɗe {n} e ƴeewndooji {cases}."
+  },
+  "tests.code.held": {
+    "one": "Doggol {run} humpitii {n} e majji.",
+    "other": "Doggol {run} humpitii {n} e majji."
   },
   "tests.code.noCases": "Alaa ƴeewndo tawaaɗo e ndee winndannde.",
   "tests.code.noTree": "Lekki ƴeewndooji ki rokkaaka e {path}.",

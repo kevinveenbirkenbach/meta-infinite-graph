@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "ተግባራት",
   "view.security": "ድሕንነት",
+  "view.warnings": "መጠንቀቕታታት",
   "panel.filter": "መጻረዪ",
   "panel.design": "ቅዲ",
   "design.theme": "ቴማ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub እንታይ ከም ዝተቐየረ ይሕተት ኣሎ",
   "loader.task.everything": "ካብ GitHub ኩሉ ምስራሕ ይሕተት ኣሎ",
   "loader.task.artifacts": "ኣርቲፋክትታት ናይ ምስራሕ #{number}: {done} ካብ {total}",
+  "loader.task.warnings": "መጠንቀቕታታት: ካብ {total} ስራሓት {done}",
   "loader.task.artifact": "ኣርቲፋክት {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ፈሺሉ: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "ንውሓት ግዜ",
   "feed.actions.running": "ይሰርሕ ኣሎ",
   "feed.actions.longest": "እቲ ዝተራእየ ዝነውሐ ምስራሕ {duration} ({run}) ወሲዱ።",
+  "feed.actions.open": "ክፈት",
+  "feed.actions.jump.playwright": "ናይዚ ምስራሕ እዚ Playwright ስብስብ",
+  "feed.actions.jump.unit": "ኣብዚ ምስራሕ እዚ ናይ መኽዘን ገዛእ ርእሱ ፈተናታት",
+  "feed.actions.jump.warnings": "ናይዚ ምስራሕ እዚ መጠንቀቕታታት",
   "feed.filter.search": "ኣብ ምስራሓት ድለ",
   "feed.filter.all": "ኩሉ",
   "feed.filter.event": "ፍጻመ",
@@ -198,6 +204,25 @@
   "security.column.source": "ምንጪ",
   "security.column.alert": "መጠንቀቕታ",
   "security.column.summary": "ጽማቕ",
+  "warnings.column.level": "ደረጃ",
+  "warnings.column.repository": "መኽዘን",
+  "warnings.column.run": "ምስራሕ",
+  "warnings.column.job": "ስራሕ",
+  "warnings.column.where": "ኣበይ",
+  "warnings.column.title": "ኣርእስቲ",
+  "warnings.column.message": "መልእኽቲ",
+  "warnings.level.failure": "ጌጋ",
+  "warnings.level.warning": "መጠንቀቕታ",
+  "warnings.level.notice": "መዘኻኸሪ",
+  "warnings.note": {
+    "one": "ኣብ {n} ምስራሕ: {failure} ጌጋታት፡ {warning} መጠንቀቕታታት፡ {notice} መዘኻኸርታት።",
+    "other": "ኣብ {n} ምስራሓት: {failure} ጌጋታት፡ {warning} መጠንቀቕታታት፡ {notice} መዘኻኸርታት።"
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: ካብ {n} ስራሕ {done} ተነቢቡ።",
+    "other": "{repo} {run}: ካብ {n} ስራሓት {done} ተነቢቦም።"
+  },
+  "warnings.noRun": "ካብቶም ምልክት ዝተገብረሎም ጨናፍር ሓደ እኳ ናይ ዎርክፍሎው ምስራሕ የብሉን።",
   "security.column.since": "ካብ",
   "security.severity.critical": "ኣዝዩ ከቢድ",
   "security.severity.high": "ልዑል",
@@ -378,10 +403,15 @@
   "tests.code.file": "ፋይል",
   "tests.code.language": "ቋንቋ",
   "tests.code.cases": "ኣብነታት",
+  "tests.code.run": "ምስራሕ",
   "tests.code.reading": "ስብስብ ፈተናታት ይንበብ ኣሎ…",
   "tests.code.note": {
     "one": "{cases} ኣብነታት ዘለዎ {n} ፋይል።",
     "other": "{cases} ኣብነታት ዘለዎም {n} ፋይላት።"
+  },
+  "tests.code.held": {
+    "one": "ምስራሕ {run} ካባታቶም {n} ጸብጺቡ።",
+    "other": "ምስራሕ {run} ካባታቶም {n} ጸብጺቡ።"
   },
   "tests.code.noCases": "ኣብዚ ፋይል እዚ ሓደ ኣብነት እኳ ኣይተረኽበን።",
   "tests.code.noTree": "ኦም ፈተናታት ኣብ {path} ኣይቀርብን።",

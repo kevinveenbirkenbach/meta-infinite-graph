@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Cakacaka",
   "view.security": "Veitaqomaki",
+  "view.warnings": "Ivakaroti",
   "panel.filter": "Sivi",
   "panel.design": "Rairai",
   "design.theme": "Ulutaga",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Taroga tiko na GitHub se cava e veisau",
   "loader.task.everything": "Kerea tiko na GitHub me baleta na cici kece",
   "loader.task.artifacts": "Na ka buli ni cici #{number}: {done} ena {total}",
+  "loader.task.warnings": "Ivakaroti: {done} vei na {total} na cakacaka",
   "loader.task.artifact": "Ka buli {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "sega ni rawa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Balavu ni gauna",
   "feed.actions.running": "sa cici tiko",
   "feed.actions.longest": "Na cici e balavu duadua e vakaraitaki e taura e {duration} ({run}).",
+  "feed.actions.open": "Dolava",
+  "feed.actions.jump.playwright": "Na ivakatovotovo Playwright ni cici oqo",
+  "feed.actions.jump.unit": "Na nona ivakatovotovo ga na vale ni maroroi ena cici oqo",
+  "feed.actions.jump.warnings": "Na ivakaroti ni cici oqo",
   "feed.filter.search": "Vakasaqara ena cici",
   "feed.filter.all": "kece",
   "feed.filter.event": "Vakavuna",
@@ -198,6 +204,25 @@
   "security.column.source": "Vu",
   "security.column.alert": "Ivakatakila",
   "security.column.summary": "Ivakamacala lekaleka",
+  "warnings.column.level": "Ivakatagedegede",
+  "warnings.column.repository": "Vale ni maroroi",
+  "warnings.column.run": "Cici",
+  "warnings.column.job": "Cakacaka",
+  "warnings.column.where": "E vei",
+  "warnings.column.title": "Ulutaga",
+  "warnings.column.message": "Itukutuku",
+  "warnings.level.failure": "cala",
+  "warnings.level.warning": "ivakaroti",
+  "warnings.level.notice": "ivolatukutuku",
+  "warnings.note": {
+    "one": "Ena loma ni {n} na cici: {failure} na cala, {warning} na ivakaroti, {notice} na ivolatukutuku.",
+    "other": "Ena loma ni {n} na cici: {failure} na cala, {warning} na ivakaroti, {notice} na ivolatukutuku."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: sa wiliki e {done} vei na {n} na cakacaka.",
+    "other": "{repo} {run}: sa wiliki e {done} vei na {n} na cakacaka."
+  },
+  "warnings.noRun": "E sega ni dua na tabana e digitaki e tiko kina e dua na cici ni workflow.",
   "security.column.since": "Mai",
   "security.severity.critical": "bibi sara",
   "security.severity.high": "cecere",
@@ -378,10 +403,15 @@
   "tests.code.file": "ivola",
   "tests.code.language": "vosa",
   "tests.code.cases": "kesi",
+  "tests.code.run": "cici",
   "tests.code.reading": "Wiliki tiko na ivakatovotovo…",
   "tests.code.note": {
     "one": "{n} na ivola kei na {cases} na kesi.",
     "other": "{n} na ivola kei na {cases} na kesi."
+  },
+  "tests.code.held": {
+    "one": "Na cici {run} a tukuna e {n} vei ira.",
+    "other": "Na cici {run} a tukuna e {n} vei ira."
   },
   "tests.code.noCases": "E sega ni kune e dua na kesi ena ivola oqo.",
   "tests.code.noTree": "E sega ni soli na kau ni vakatovotovo ena {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Naʼanishígíí",
   "view.security": "Baa áháyą́",
+  "view.warnings": "Ahanídaʼdiilnih",
   "panel.filter": "Hadaʼdiitʼį́",
   "panel.design": "Ííshjání Áhoolyaa",
   "design.theme": "Ádaatʼéhígíí",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub bínáádééłkid ánáádlaaígíí",
   "loader.task.everything": "GitHub bínáádééłkid naʼanish tʼáá ałtso",
   "loader.task.artifacts": "Naʼanish #{number} ádaalyaaígíí: {total} bitsʼą́ą́dóó {done}",
+  "loader.task.warnings": "Ahanídaʼdiilnih: naanish {total} bitsʼą́ą́dóó {done}",
   "loader.task.artifact": "Ádaalyaaígíí {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "doo yiiłtsą́ą́ da: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Bínáá",
   "feed.actions.running": "tʼah naʼanish",
   "feed.actions.longest": "Naʼanish nízaadgo ádíílííłígíí {duration} néineez ({run}).",
+  "feed.actions.open": "ʼÁdíítʼááh",
+  "feed.actions.jump.playwright": "Díí naʼanish bá Playwright nídaʼídíłkid",
+  "feed.actions.jump.unit": "Díí naʼanish bikáaʼgi rébo bee nídaʼídíłkid",
+  "feed.actions.jump.warnings": "Díí naʼanish bee ahanídaʼdiilnih",
   "feed.filter.search": "Naʼanish hanítaʼ",
   "feed.filter.all": "tʼáá ałtsoh",
   "feed.filter.event": "Ádahooníłígíí",
@@ -198,6 +204,25 @@
   "security.column.source": "Bitsʼą́ą́dę́ę́ʼ",
   "security.column.alert": "Bee haʼdiłnííh",
   "security.column.summary": "Tʼáá áłchʼíídígo",
+  "warnings.column.level": "Bidziil",
+  "warnings.column.repository": "Rébo",
+  "warnings.column.run": "Naʼanish",
+  "warnings.column.job": "Naanish",
+  "warnings.column.where": "Háadi",
+  "warnings.column.title": "Bízhiʼ",
+  "warnings.column.message": "Haneʼ",
+  "warnings.level.failure": "doo tʼáá ákótʼée da",
+  "warnings.level.warning": "ahanídaʼdiilnih",
+  "warnings.level.notice": "naaltsoos áłtsʼózí",
+  "warnings.note": {
+    "one": "Naʼanish {n} biyiʼ: {failure} doo ákótʼée da, {warning} ahanídaʼdiilnih, {notice} naaltsoos áłtsʼózí.",
+    "other": "Naʼanish {n} dabiyiʼ: {failure} doo ákótʼée da, {warning} ahanídaʼdiilnih, {notice} naaltsoos áłtsʼózí."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: naanish {n} bitsʼą́ą́dóó {done} yíníłtaʼ.",
+    "other": "{repo} {run}: naanish {n} dabitsʼą́ą́dóó {done} yíníłtaʼ."
+  },
+  "warnings.noRun": "Tsin bigaan hadeesʼnínígíí tʼáadoo łaʼ naanish bitiin naʼanish bee hólǫ́ǫ da.",
   "security.column.since": "Aadę́ę́ʼ",
   "security.severity.critical": "ayóo nidziil",
   "security.severity.high": "wódahgo",
@@ -378,10 +403,15 @@
   "tests.code.file": "naaltsoos",
   "tests.code.language": "saad",
   "tests.code.cases": "nídaʼídíłkid",
+  "tests.code.run": "naʼanish",
   "tests.code.reading": "Nídaʼídíłkid yíníłtaʼ…",
   "tests.code.note": {
     "one": "Naaltsoos {n}, {cases} nídaʼídíłkid biiʼ hólǫ́.",
     "other": "Naaltsoos {n}, {cases} nídaʼídíłkid dabiiʼ hólǫ́."
+  },
+  "tests.code.held": {
+    "one": "Naʼanish {run} éí {n} bąąh haneʼ áyiilaa.",
+    "other": "Naʼanish {run} éí {n} bąąh haneʼ áyiilaa."
   },
   "tests.code.noCases": "Díí naaltsoos biyiʼ nídaʼídíłkid doo hoolʼą́ą da.",
   "tests.code.noTree": "Nídaʼídíłkid bitsin éí {path} bikááʼ doo hólǫ́ǫ da.",

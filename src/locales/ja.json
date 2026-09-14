@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "アクション",
   "view.security": "セキュリティ",
+  "view.warnings": "警告",
   "panel.filter": "フィルター",
   "panel.design": "デザイン",
   "design.theme": "テーマ",
@@ -163,6 +164,7 @@
   "loader.task.changes": "GitHub に変更点を問い合わせ中",
   "loader.task.everything": "GitHub にすべての実行を問い合わせ中",
   "loader.task.artifacts": "実行 #{number} のアーティファクト: {done} / {total}",
+  "loader.task.warnings": "警告: {total} 件中 {done} 件のジョブ",
   "loader.task.artifact": "アーティファクト {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "失敗: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "所要時間",
   "feed.actions.running": "実行中",
   "feed.actions.longest": "表示中で最も長い実行は{duration}かかりました（{run}）。",
+  "feed.actions.open": "開く",
+  "feed.actions.jump.playwright": "この実行の Playwright スイート",
+  "feed.actions.jump.unit": "この実行でのリポジトリ自身のスイート",
+  "feed.actions.jump.warnings": "この実行の警告",
   "feed.filter.search": "実行を検索",
   "feed.filter.all": "すべて",
   "feed.filter.event": "イベント",
@@ -188,6 +194,23 @@
   "security.column.source": "ソース",
   "security.column.alert": "アラート",
   "security.column.summary": "概要",
+  "warnings.column.level": "レベル",
+  "warnings.column.repository": "リポジトリ",
+  "warnings.column.run": "実行",
+  "warnings.column.job": "ジョブ",
+  "warnings.column.where": "場所",
+  "warnings.column.title": "タイトル",
+  "warnings.column.message": "メッセージ",
+  "warnings.level.failure": "エラー",
+  "warnings.level.warning": "警告",
+  "warnings.level.notice": "通知",
+  "warnings.note": {
+    "other": "{n} 件の実行全体で、エラー {failure} 件、警告 {warning} 件、通知 {notice} 件。"
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: {n} 件中 {done} 件のジョブを読み込みました。"
+  },
+  "warnings.noRun": "チェックしたブランチのいずれにもワークフローの実行がありません。",
   "security.column.since": "いつから",
   "security.severity.critical": "重大",
   "security.severity.high": "高",
@@ -355,9 +378,13 @@
   "tests.code.file": "ファイル",
   "tests.code.language": "言語",
   "tests.code.cases": "ケース",
+  "tests.code.run": "実行",
   "tests.code.reading": "スイートを読み込み中…",
   "tests.code.note": {
     "other": "{n} 件のファイル、{cases} 件のケース。"
+  },
+  "tests.code.held": {
+    "other": "実行 {run} はそのうち {n} 件を報告しました。"
   },
   "tests.code.noCases": "このファイルにはケースが見つかりませんでした。",
   "tests.code.noTree": "テストツリーは {path} で配信されていません。",

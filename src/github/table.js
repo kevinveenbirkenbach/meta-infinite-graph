@@ -39,8 +39,9 @@ function Filters({ spec, options, filters, onFilter }) {
 //   options: facet name -> [[value, count]] over the rows the window keeps.
 //   filters: facet name and 'search' -> the value in force, '' for none.
 //   onFilter: (name, value) => void; a null name clears every filter.
-//   onPick: (entry) => void for a feed whose rows open something, else null.
+//   onPick: (entry, view) => void for a feed whose rows open something, else null.
 export function FeedTable({ spec, note, entries, options, filters, onFilter, onPick }) {
+  const jumps = onPick ? spec.jumps || [] : [];
   const cell = (entry, value, index) => {
     if (index === spec.markAt) return html`<td class=${`feed-mark feed-${spec.mark(entry)}`}>${value}</td>`;
     if (index === spec.linkAt && spec.link(entry)) {
@@ -48,8 +49,17 @@ export function FeedTable({ spec, note, entries, options, filters, onFilter, onP
     }
     return html`<td>${value}</td>`;
   };
+  const jump = entry => html`
+    <td class="feed-jumps">
+      ${jumps.map(one => html`
+        <button type="button" class="btn btn-sm btn-outline-secondary" title=${t(`feed.actions.jump.${one.view}`)}
+                onClick=${event => { event.stopPropagation(); onPick(entry, one.view); }}>${one.mark}</button>
+      `)}
+    </td>
+  `;
   const row = entry => {
     const cells = spec.cells(entry).map((value, index) => cell(entry, value, index));
+    if (jumps.length) cells.push(jump(entry));
     if (!onPick) return html`<tr>${cells}</tr>`;
     const pick = event => {
       if (!(event.target instanceof Element && event.target.closest('a'))) onPick(entry);
@@ -63,7 +73,10 @@ export function FeedTable({ spec, note, entries, options, filters, onFilter, onP
     <div>
       ${entries && html`
         <table class="table table-sm feed-table">
-          <thead><tr>${spec.columns.map(title => html`<th>${title}</th>`)}</tr></thead>
+          <thead><tr>
+            ${spec.columns.map(title => html`<th>${title}</th>`)}
+            ${jumps.length > 0 && html`<th>${t('feed.actions.open')}</th>`}
+          </tr></thead>
           <tbody>
             ${entries.map(row)}
           </tbody>

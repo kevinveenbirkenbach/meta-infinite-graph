@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Agoj",
   "view.security": "Sekureco",
+  "view.warnings": "Avertoj",
   "panel.filter": "Filtrilo",
   "panel.design": "Aspekto",
   "design.theme": "Etoso",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Demandante GitHub, kio ŝanĝiĝis",
   "loader.task.everything": "Petante de GitHub ĉiun rulon",
   "loader.task.artifacts": "Artefaktoj de rulo #{number}: {done} el {total}",
+  "loader.task.warnings": "Avertoj: {done} el {total} taskoj",
   "loader.task.artifact": "Artefakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "malsukcesis: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Daŭro",
   "feed.actions.running": "rulanta",
   "feed.actions.longest": "La plej longa montrita rulo daŭris {duration} ({run}).",
+  "feed.actions.open": "Malfermi",
+  "feed.actions.jump.playwright": "Playwright-testaro de ĉi tiu rulo",
+  "feed.actions.jump.unit": "La propraj testaroj de la deponejo ĉe ĉi tiu rulo",
+  "feed.actions.jump.warnings": "Avertoj de ĉi tiu rulo",
   "feed.filter.search": "Serĉi en la ruloj",
   "feed.filter.all": "ĉiuj",
   "feed.filter.event": "Evento",
@@ -198,6 +204,25 @@
   "security.column.source": "Fonto",
   "security.column.alert": "Averto",
   "security.column.summary": "Resumo",
+  "warnings.column.level": "Nivelo",
+  "warnings.column.repository": "Deponejo",
+  "warnings.column.run": "Rulo",
+  "warnings.column.job": "Tasko",
+  "warnings.column.where": "Kie",
+  "warnings.column.title": "Titolo",
+  "warnings.column.message": "Mesaĝo",
+  "warnings.level.failure": "eraro",
+  "warnings.level.warning": "averto",
+  "warnings.level.notice": "rimarko",
+  "warnings.note": {
+    "one": "Tra {n} rulo: {failure} eraroj, {warning} avertoj, {notice} rimarkoj.",
+    "other": "Tra {n} ruloj: {failure} eraroj, {warning} avertoj, {notice} rimarkoj."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} el {n} tasko legita.",
+    "other": "{repo} {run}: {done} el {n} taskoj legitaj."
+  },
+  "warnings.noRun": "Neniu el la markitaj branĉoj havas rulon de laborfluo.",
   "security.column.since": "Ekde",
   "security.severity.critical": "kritika",
   "security.severity.high": "alta",
@@ -378,10 +403,15 @@
   "tests.code.file": "dosiero",
   "tests.code.language": "lingvo",
   "tests.code.cases": "kazoj",
+  "tests.code.run": "rulo",
   "tests.code.reading": "Legante la testaron…",
   "tests.code.note": {
     "one": "{n} dosiero kun {cases} kazoj.",
     "other": "{n} dosieroj kun {cases} kazoj."
+  },
+  "tests.code.held": {
+    "one": "Rulo {run} raportis pri {n} el ili.",
+    "other": "Rulo {run} raportis pri {n} el ili."
   },
   "tests.code.noCases": "Neniu kazo troviĝis en ĉi tiu dosiero.",
   "tests.code.noTree": "La testarbo ne estas servata ĉe {path}.",

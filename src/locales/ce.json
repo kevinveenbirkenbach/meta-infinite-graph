@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ардамаш",
   "view.security": "Кхерамазалла",
+  "view.warnings": "ДӀахьедарш",
   "panel.filter": "Фильтр",
   "panel.design": "Дизайн",
   "design.theme": "Тема",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-ера хоттуш: хӀун хийцаделла",
   "loader.task.everything": "GitHub-ера массо кхочушдар доьхуш",
   "loader.task.artifacts": "#{number} кхочушдаран артефакташ: {done}/{total}",
+  "loader.task.warnings": "ДӀахьедарш: {total} балхах {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ца делла: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Йохалла",
   "feed.actions.running": "кхочушйеш ю",
   "feed.actions.longest": "Гайтинчу кхочушдаршна юкъара уггар беха кхочушдар {duration} даьлла ({run}).",
+  "feed.actions.open": "Схьадаста",
+  "feed.actions.jump.playwright": "ХӀокху кхочушдаран Playwright тоба",
+  "feed.actions.jump.unit": "ХӀокху кхочушдарехь репозиторин шен тобанаш",
+  "feed.actions.jump.warnings": "ХӀокху кхочушдаран дӀахьедарш",
   "feed.filter.search": "Кхочушдарш лаха",
   "feed.filter.all": "дерриг",
   "feed.filter.event": "Хилларг",
@@ -198,6 +204,25 @@
   "security.column.source": "Хьост",
   "security.column.alert": "Хаам",
   "security.column.summary": "Доцца хаам",
+  "warnings.column.level": "ТӀегӀа",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Кхочушдар",
+  "warnings.column.job": "Болх",
+  "warnings.column.where": "Мичахь",
+  "warnings.column.title": "Корта",
+  "warnings.column.message": "Хаам",
+  "warnings.level.failure": "гӀалат",
+  "warnings.level.warning": "дӀахьедар",
+  "warnings.level.notice": "билгалдаккхар",
+  "warnings.note": {
+    "one": "{n} кхочушдарехь: {failure} гӀалат, {warning} дӀахьедар, {notice} билгалдаккхар.",
+    "other": "{n} кхочушдарехь: {failure} гӀалат, {warning} дӀахьедар, {notice} билгалдаккхар."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} балхах {done} дешна.",
+    "other": "{repo} {run}: {n} балхах {done} дешна."
+  },
+  "warnings.noRun": "Хаьржинчу гӀаннех цхьаннахь а воркфлоун кхочушдар дац.",
   "security.column.since": "Дуьйна",
   "security.severity.critical": "критикин",
   "security.severity.high": "лакха",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "мотт",
   "tests.code.cases": "кейсаш",
+  "tests.code.run": "кхочушдар",
   "tests.code.reading": "Тоба йоьшуш ю…",
   "tests.code.note": {
     "one": "{n} файлехь {cases} кейс.",
     "other": "{n} файлехь {cases} кейс."
+  },
+  "tests.code.held": {
+    "one": "Кхочушдаро {run} царах {n} хьокъехь хаам бина.",
+    "other": "Кхочушдаро {run} царах {n} хьокъехь хаам бина."
   },
   "tests.code.noCases": "ХӀокху файлехь цхьа а кейс ца карийна.",
   "tests.code.noTree": "Тестийн дитт {path} тӀехь дац.",

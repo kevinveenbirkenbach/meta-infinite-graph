@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Tumindak",
   "view.security": "Keamanan",
+  "view.warnings": "Pènget",
   "panel.filter": "Saringan",
   "panel.design": "Rancangan",
   "design.theme": "Tema",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Takon GitHub apa sing owah",
   "loader.task.everything": "Njaluk kabeh lakon saka GitHub",
   "loader.task.artifacts": "Artefak lakon #{number}: {done} saka {total}",
+  "loader.task.warnings": "Pènget: {done} saka {total} pakaryan",
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Suwene",
   "feed.actions.running": "lagi mlaku",
   "feed.actions.longest": "Lakon paling suwe sing ditampilake butuh {duration} ({run}).",
+  "feed.actions.open": "Bukak",
+  "feed.actions.jump.playwright": "Paket Playwright lakon iki",
+  "feed.actions.jump.unit": "Paket pangujian duwèké repositori ing lakon iki",
+  "feed.actions.jump.warnings": "Pènget lakon iki",
   "feed.filter.search": "Golek ing lakon",
   "feed.filter.all": "kabeh",
   "feed.filter.event": "Kedadeyan",
@@ -188,6 +194,23 @@
   "security.column.source": "Sumber",
   "security.column.alert": "Pènget",
   "security.column.summary": "Ringkesan",
+  "warnings.column.level": "Tataran",
+  "warnings.column.repository": "Repositori",
+  "warnings.column.run": "Lakon",
+  "warnings.column.job": "Pakaryan",
+  "warnings.column.where": "Ngendi",
+  "warnings.column.title": "Judhul",
+  "warnings.column.message": "Pesen",
+  "warnings.level.failure": "kasalahan",
+  "warnings.level.warning": "pèngetan",
+  "warnings.level.notice": "cathetan",
+  "warnings.note": {
+    "other": "Ing {n} lakon: {failure} kasalahan, {warning} pèngetan, {notice} cathetan."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: {done} saka {n} pakaryan wis diwaca."
+  },
+  "warnings.noRun": "Ora ana cabang sing dicenthang sing duwé lakon alur kerja.",
   "security.column.since": "Wiwit",
   "security.severity.critical": "kritis",
   "security.severity.high": "dhuwur",
@@ -355,9 +378,13 @@
   "tests.code.file": "berkas",
   "tests.code.language": "basa",
   "tests.code.cases": "kasus",
+  "tests.code.run": "lakon",
   "tests.code.reading": "Maca paket pangujian…",
   "tests.code.note": {
     "other": "{n} berkas kanthi {cases} kasus."
+  },
+  "tests.code.held": {
+    "other": "Lakon {run} nglaporaké {n} ing antarané."
   },
   "tests.code.noCases": "Ora ana kasus sing ditemokaké ing berkas iki.",
   "tests.code.noTree": "Wit pangujian ora disuguhaké ing {path}.",

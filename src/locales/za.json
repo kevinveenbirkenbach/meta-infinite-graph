@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Hengzdoengh",
   "view.security": "Ancienz",
+  "view.warnings": "Gij gingjgau",
   "panel.filter": "Genj",
   "panel.design": "Sezgi",
   "design.theme": "Cujdiz",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Cingq cam GitHub gij bienq le",
   "loader.task.everything": "Cingq cam GitHub sojmiz yinhhengz",
   "loader.task.artifacts": "Gij doxgaiq yinhhengz #{number}: {total} ndawde {done}",
+  "loader.task.warnings": "Gij gingjgau: {total} aen hong ndawde {done}",
   "loader.task.artifact": "Doxgaiq {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "saetbaih: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Seizgan",
   "feed.actions.running": "cingq yinhhengz",
   "feed.actions.longest": "Yinhhengz ceiq raez yienh okdaeuj yungh le {duration} ({run}).",
+  "feed.actions.open": "Hai",
+  "feed.actions.jump.playwright": "Gij sawq Playwright aen yinhhengz neix",
+  "feed.actions.jump.unit": "Gij sawq bonjfaenh cangzgu youq aen yinhhengz neix",
+  "feed.actions.jump.warnings": "Gij gingjgau aen yinhhengz neix",
   "feed.filter.search": "Ra youq ndaw gij yinhhengz",
   "feed.filter.all": "daengx",
   "feed.filter.event": "Saehgienh",
@@ -198,6 +204,25 @@
   "security.column.source": "Laizyienz",
   "security.column.alert": "Gingjgau",
   "security.column.summary": "Cungjgez",
+  "warnings.column.level": "Gaepdaengj",
+  "warnings.column.repository": "Cangzgu",
+  "warnings.column.run": "Yinhhengz",
+  "warnings.column.job": "Hong",
+  "warnings.column.where": "Gizlawz",
+  "warnings.column.title": "Daezmoeg",
+  "warnings.column.message": "Saenqsik",
+  "warnings.level.failure": "loek",
+  "warnings.level.warning": "gingjgau",
+  "warnings.level.notice": "geiqsaeh",
+  "warnings.note": {
+    "one": "Youq {n} aen yinhhengz ndawde: loek {failure} aen, gingjgau {warning} aen, geiqsaeh {notice} aen.",
+    "other": "Youq {n} aen yinhhengz ndawde: loek {failure} aen, gingjgau {warning} aen, geiqsaeh {notice} aen."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} aen hong ndawde doeg le {done} aen.",
+    "other": "{repo} {run}: {n} aen hong ndawde doeg le {done} aen."
+  },
+  "warnings.noRun": "Gij nga veh gou de mbouj miz workflow yinhhengz.",
   "security.column.since": "Daj",
   "security.severity.critical": "yiemzcungh raixcaix",
   "security.severity.high": "sang",
@@ -378,10 +403,15 @@
   "tests.code.file": "vwnzgen",
   "tests.code.language": "vah",
   "tests.code.cases": "laeh",
+  "tests.code.run": "yinhhengz",
   "tests.code.reading": "Cingq doeg gij sawq…",
   "tests.code.note": {
     "one": "{n} aen vwnzgen, {cases} aen laeh.",
     "other": "{n} aen vwnzgen, {cases} aen laeh."
+  },
+  "tests.code.held": {
+    "one": "Yinhhengz {run} baugau le {n} aen ndawde.",
+    "other": "Yinhhengz {run} baugau le {n} aen ndawde."
   },
   "tests.code.noCases": "Aen vwnzgen neix mbouj ra ndaej laeh.",
   "tests.code.noTree": "Gij faex sawq mbouj youq {path} gung'wngq.",

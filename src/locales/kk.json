@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Әрекеттер",
   "view.security": "Қауіпсіздік",
+  "view.warnings": "Ескертулер",
   "panel.filter": "Сүзгі",
   "panel.design": "Дизайн",
   "design.theme": "Тақырып",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-тан не өзгергенін сұрау",
   "loader.task.everything": "GitHub-тан барлық іске қосылымдарды сұрау",
   "loader.task.artifacts": "#{number} іске қосылымның артефактілері: {done} / {total}",
+  "loader.task.warnings": "Ескертулер: {total} тапсырманың {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "сәтсіз: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Ұзақтығы",
   "feed.actions.running": "орындалуда",
   "feed.actions.longest": "Көрсетілген ең ұзақ іске қосылым {duration} уақыт алды ({run}).",
+  "feed.actions.open": "Ашу",
+  "feed.actions.jump.playwright": "Осы іске қосылымның Playwright жинағы",
+  "feed.actions.jump.unit": "Осы іске қосылымдағы репозиторийдің өз жинақтары",
+  "feed.actions.jump.warnings": "Осы іске қосылымның ескертулері",
   "feed.filter.search": "Іске қосылымдардан іздеу",
   "feed.filter.all": "барлығы",
   "feed.filter.event": "Оқиға",
@@ -198,6 +204,25 @@
   "security.column.source": "Дереккөз",
   "security.column.alert": "Дабыл",
   "security.column.summary": "Қысқаша",
+  "warnings.column.level": "Деңгей",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Іске қосылым",
+  "warnings.column.job": "Тапсырма",
+  "warnings.column.where": "Қайда",
+  "warnings.column.title": "Тақырып",
+  "warnings.column.message": "Хабар",
+  "warnings.level.failure": "қате",
+  "warnings.level.warning": "ескерту",
+  "warnings.level.notice": "хабарлама",
+  "warnings.note": {
+    "one": "{n} іске қосылым бойынша: {failure} қате, {warning} ескерту, {notice} хабарлама.",
+    "other": "{n} іске қосылым бойынша: {failure} қате, {warning} ескерту, {notice} хабарлама."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} тапсырманың {done} оқылды.",
+    "other": "{repo} {run}: {n} тапсырманың {done} оқылды."
+  },
+  "warnings.noRun": "Белгіленген тармақтардың ешқайсысында жұмыс ағынының іске қосылымы жоқ.",
   "security.column.since": "Қашаннан",
   "security.severity.critical": "сыни",
   "security.severity.high": "жоғары",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "тіл",
   "tests.code.cases": "жағдайлар",
+  "tests.code.run": "іске қосылым",
   "tests.code.reading": "Жинақ оқылуда…",
   "tests.code.note": {
     "one": "{n} файл, {cases} жағдай.",
     "other": "{n} файл, {cases} жағдай."
+  },
+  "tests.code.held": {
+    "one": "{run} іске қосылымы олардың {n} туралы хабарлады.",
+    "other": "{run} іске қосылымы олардың {n} туралы хабарлады."
   },
   "tests.code.noCases": "Бұл файлдан бірде-бір жағдай табылмады.",
   "tests.code.noTree": "Тесттер ағашы {path} мекенжайында берілмейді.",

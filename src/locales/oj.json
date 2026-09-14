@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Izhichigewinan",
   "view.security": "Ganawenjigewin",
+  "view.warnings": "Aakwa'amaagewinan",
   "panel.filter": "Zhaabobiiginigan",
   "panel.design": "Izhinaagwak",
   "design.theme": "Inaandewin",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Gagwedwewin GitHub wegonen gaa-aanjisemagak",
   "loader.task.everything": "Gagwedwewin GitHub endaso-maajiibizowin",
   "loader.task.artifacts": "Ozhichiganan maajiibizowin #{number} onji: {done} / {total}",
+  "loader.task.warnings": "Aakwa'amaagewinan: {done} ogo {total} anokiiwinan",
   "loader.task.artifact": "Ozhichigan {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gaawiin gii-gashkitoosiin: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Apiichi-ginwenzh",
   "feed.actions.running": "noongom maajiibizo",
   "feed.actions.longest": "Maajiibizowin gaa-nawaj-ginwenzhig gaa-waabanda'iwemagak {duration} gii-ginwenzhin ({run}).",
+  "feed.actions.open": "Baakinan",
+  "feed.actions.jump.playwright": "Playwright gagwejitoowinan o'ow maajiibizowin onji",
+  "feed.actions.jump.unit": "Asanjigowin odayi'iiman gagwejitoowinan o'ow maajiibizowining",
+  "feed.actions.jump.warnings": "O'ow maajiibizowin aakwa'amaagewinan",
   "feed.filter.search": "Nandawaabandan maajiibizowinan",
   "feed.filter.all": "gakina",
   "feed.filter.event": "Ezhiwebak",
@@ -198,6 +204,25 @@
   "security.column.source": "Ondinigewin",
   "security.column.alert": "Wiindamaagewin",
   "security.column.summary": "Dakwaa-dibaajimowin",
+  "warnings.column.level": "Apiitendaagwad",
+  "warnings.column.repository": "Asanjigowin",
+  "warnings.column.run": "Maajiibizowin",
+  "warnings.column.job": "Anokiiwin",
+  "warnings.column.where": "Aandi",
+  "warnings.column.title": "Izhinikaadeg",
+  "warnings.column.message": "Wiindamaagewin",
+  "warnings.level.failure": "wanichigewin",
+  "warnings.level.warning": "aakwa'amaagewin",
+  "warnings.level.notice": "wiindamaagewin",
+  "warnings.note": {
+    "one": "Imaa {n} maajiibizowin: {failure} wanichigewinan, {warning} aakwa'amaagewinan, {notice} wiindamaagewinan.",
+    "other": "Imaa {n} maajiibizowinan: {failure} wanichigewinan, {warning} aakwa'amaagewinan, {notice} wiindamaagewinan."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} ogo {n} anokiiwin gii-agindaanan.",
+    "other": "{repo} {run}: {done} ogo {n} anokiiwinan gii-agindaanan."
+  },
+  "warnings.noRun": "Gaawiin gegoo wadikwan gaa-onaabandang odayaanziin anokii-miikana maajiibizowin.",
   "security.column.since": "Apii gaa-maajiseg",
   "security.severity.critical": "gichi-maanaadad",
   "security.severity.high": "ishpiming",
@@ -378,10 +403,15 @@
   "tests.code.file": "mazina'igan",
   "tests.code.language": "inwewin",
   "tests.code.cases": "gagwejitoowinan",
+  "tests.code.run": "maajiibizowin",
   "tests.code.reading": "Agindaan gagwejitoowinan…",
   "tests.code.note": {
     "one": "{n} mazina'igan gaye {cases} gagwejitoowinan.",
     "other": "{n} mazina'iganan gaye {cases} gagwejitoowinan."
+  },
+  "tests.code.held": {
+    "one": "Maajiibizowin {run} gii-dibaajimo {n} imaa.",
+    "other": "Maajiibizowin {run} gii-dibaajimo {n} imaa."
   },
   "tests.code.noCases": "Gaawiin gegoo gagwejitoowin gii-mikigaadesinoon imaa o'ow mazina'iganing.",
   "tests.code.noTree": "Gagwejitoowinan omitigoom gaawiin miinigaadesinoon imaa {path}.",

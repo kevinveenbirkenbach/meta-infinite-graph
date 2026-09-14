@@ -7,17 +7,22 @@ import { CodeGrid } from './grid.js';
 export class CodeTestsView {
   // Args:
   //   codeTests: the CodeTests reading the repository's tests tree.
-  constructor(codeTests, container) {
+  //   annotations: the RunAnnotations a picked run's marks come from.
+  constructor(codeTests, annotations, container) {
     this.codeTests = codeTests;
+    this.annotations = annotations;
     this.container = container;
     this.root = el('div', { className: 'table-section' });
     this.kind = CodeTests.KINDS[0];
     this.files = null;
     this.note = '';
     this.open = '';
+    this.run = null;
     this.loaded = new Map();
     this.byKind = new Map();
     this.repaint = null;
+    /** @type {(promise: Promise<unknown>, label: () => string) => unknown} */
+    this.track = promise => promise;
   }
 
   _soon() {
@@ -32,6 +37,32 @@ export class CodeTestsView {
     this.open = this.open === file.path ? '' : file.path;
     this.codeTests.load(file).then(() => this._paint());
     this._paint();
+  }
+
+  // Args:
+  //   repo: owner/name of the run whose annotations mark the files.
+  //   run: that run as GitHub lists it, or null for none.
+  pick(repo, run) {
+    const held = this.run ? this.run.run.id : null;
+    if ((run ? run.id : null) === held) return;
+    this.run = run ? { repo, run } : null;
+    if (this.run) {
+      this.track(
+        this.annotations.load(repo, run, () => this._soon()).then(() => this._paint()),
+        () => t('loader.task.warnings', this.annotations.progress())
+      );
+    }
+    this._paint();
+  }
+
+  // Returns: the annotations of the picked run that name this file.
+  marksOf(file) {
+    if (!this.run) return [];
+    const state = this.annotations.state(this.run.repo, this.run.run);
+    if (!state) return [];
+    return state.entries.filter(entry => entry.path && (
+      entry.path === `tests/${file.path}` || entry.path.endsWith(`/${file.path}`)
+    ));
   }
 
   invalidate() {
@@ -90,9 +121,14 @@ export class CodeTestsView {
       this.note = [
         t('tests.code.note', { n: total, cases }),
         done === total ? '' : t('tests.code.reading'),
+        this.run ? t('tests.code.held', { run: `#${this.run.run.run_number}`, n: this._marked() }) : '',
       ].filter(Boolean).join(' ');
     }
     this._paint();
+  }
+
+  _marked() {
+    return this.files.filter(file => this.marksOf(file).length).length;
   }
 
   _paint() {

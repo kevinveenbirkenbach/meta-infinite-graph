@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Vitendo",
   "view.security": "Usalama",
+  "view.warnings": "Maonyo",
   "panel.filter": "Kichujio",
   "panel.design": "Muundo",
   "design.theme": "Mandhari",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Inauliza GitHub kilichobadilika",
   "loader.task.everything": "Inaomba GitHub uendeshaji wote",
   "loader.task.artifacts": "Artifakti za uendeshaji #{number}: {done} kati ya {total}",
+  "loader.task.warnings": "Maonyo: {done} kati ya kazi {total}",
   "loader.task.artifact": "Artifakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "imeshindwa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Muda",
   "feed.actions.running": "inaendelea",
   "feed.actions.longest": "Uendeshaji mrefu zaidi ulioonyeshwa ulichukua {duration} ({run}).",
+  "feed.actions.open": "Fungua",
+  "feed.actions.jump.playwright": "Kundi la Playwright la uendeshaji huu",
+  "feed.actions.jump.unit": "Makundi ya hazina yenyewe katika uendeshaji huu",
+  "feed.actions.jump.warnings": "Maonyo ya uendeshaji huu",
   "feed.filter.search": "Tafuta uendeshaji",
   "feed.filter.all": "zote",
   "feed.filter.event": "Tukio",
@@ -198,6 +204,25 @@
   "security.column.source": "Chanzo",
   "security.column.alert": "Tahadhari",
   "security.column.summary": "Muhtasari",
+  "warnings.column.level": "Kiwango",
+  "warnings.column.repository": "Hazina",
+  "warnings.column.run": "Uendeshaji",
+  "warnings.column.job": "Kazi",
+  "warnings.column.where": "Mahali",
+  "warnings.column.title": "Kichwa",
+  "warnings.column.message": "Ujumbe",
+  "warnings.level.failure": "hitilafu",
+  "warnings.level.warning": "onyo",
+  "warnings.level.notice": "taarifa",
+  "warnings.note": {
+    "one": "Katika uendeshaji {n}: hitilafu {failure}, maonyo {warning}, taarifa {notice}.",
+    "other": "Katika uendeshaji {n}: hitilafu {failure}, maonyo {warning}, taarifa {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} kati ya kazi {n} imesomwa.",
+    "other": "{repo} {run}: {done} kati ya kazi {n} zimesomwa."
+  },
+  "warnings.noRun": "Hakuna tawi lililotiwa alama lenye uendeshaji wa mtiririko wa kazi.",
   "security.column.since": "Tangu",
   "security.severity.critical": "hatari kubwa",
   "security.severity.high": "juu",
@@ -378,10 +403,15 @@
   "tests.code.file": "faili",
   "tests.code.language": "lugha",
   "tests.code.cases": "visa",
+  "tests.code.run": "uendeshaji",
   "tests.code.reading": "Inasoma kundi…",
   "tests.code.note": {
     "one": "Faili {n} lenye visa {cases}.",
     "other": "Faili {n} zenye visa {cases}."
+  },
+  "tests.code.held": {
+    "one": "Uendeshaji {run} uliripoti {n} kati yake.",
+    "other": "Uendeshaji {run} uliripoti {n} kati yake."
   },
   "tests.code.noCases": "Hakuna kisa kilichopatikana katika faili hili.",
   "tests.code.noTree": "Mti wa majaribio hautolewi katika {path}.",

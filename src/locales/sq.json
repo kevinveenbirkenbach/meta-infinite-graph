@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Veprimet",
   "view.security": "Siguria",
+  "view.warnings": "Paralajmërimet",
   "panel.filter": "Filtri",
   "panel.design": "Pamja",
   "design.theme": "Tema",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Po pyetet GitHub se çfarë ndryshoi",
   "loader.task.everything": "Po kërkohen nga GitHub të gjitha ekzekutimet",
   "loader.task.artifacts": "Artefaktet e ekzekutimit #{number}: {done} nga {total}",
+  "loader.task.warnings": "Paralajmërimet: {done} nga {total} punë",
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "dështoi: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Kohëzgjatja",
   "feed.actions.running": "në ekzekutim",
   "feed.actions.longest": "Ekzekutimi më i gjatë i shfaqur zgjati {duration} ({run}).",
+  "feed.actions.open": "Hap",
+  "feed.actions.jump.playwright": "Grupi Playwright i këtij ekzekutimi",
+  "feed.actions.jump.unit": "Grupet e vetë depos në këtë ekzekutim",
+  "feed.actions.jump.warnings": "Paralajmërimet e këtij ekzekutimi",
   "feed.filter.search": "Kërko në ekzekutime",
   "feed.filter.all": "të gjitha",
   "feed.filter.event": "Ngjarja",
@@ -198,6 +204,25 @@
   "security.column.source": "Burimi",
   "security.column.alert": "Sinjalizimi",
   "security.column.summary": "Përmbledhja",
+  "warnings.column.level": "Niveli",
+  "warnings.column.repository": "Depoja",
+  "warnings.column.run": "Ekzekutimi",
+  "warnings.column.job": "Puna",
+  "warnings.column.where": "Ku",
+  "warnings.column.title": "Titulli",
+  "warnings.column.message": "Mesazhi",
+  "warnings.level.failure": "gabim",
+  "warnings.level.warning": "paralajmërim",
+  "warnings.level.notice": "shënim",
+  "warnings.note": {
+    "one": "Në {n} ekzekutim: {failure} gabime, {warning} paralajmërime, {notice} shënime.",
+    "other": "Në {n} ekzekutime: {failure} gabime, {warning} paralajmërime, {notice} shënime."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: u lexua {done} nga {n} punë.",
+    "other": "{repo} {run}: u lexuan {done} nga {n} punë."
+  },
+  "warnings.noRun": "Asnjë nga degët e shënuara nuk ka një ekzekutim workflow-i.",
   "security.column.since": "Që prej",
   "security.severity.critical": "kritike",
   "security.severity.high": "e lartë",
@@ -378,10 +403,15 @@
   "tests.code.file": "skedar",
   "tests.code.language": "gjuhë",
   "tests.code.cases": "raste",
+  "tests.code.run": "ekzekutim",
   "tests.code.reading": "Po lexohet grupi…",
   "tests.code.note": {
     "one": "{n} skedar me {cases} raste.",
     "other": "{n} skedarë me {cases} raste."
+  },
+  "tests.code.held": {
+    "one": "Ekzekutimi {run} raportoi për {n} prej tyre.",
+    "other": "Ekzekutimi {run} raportoi për {n} prej tyre."
   },
   "tests.code.noCases": "Nuk u gjet asnjë rast në këtë skedar.",
   "tests.code.noTree": "Pema e testeve nuk shërbehet në {path}.",

@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Iilonga",
   "view.security": "Egameno",
+  "view.warnings": "Omalondodho",
   "panel.filter": "Oshihogololi",
   "panel.design": "Omuthaleko",
   "design.theme": "Omavala",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Tapu pulwa GitHub shoka sha lunduluka",
   "loader.task.everything": "Tapu pulwa GitHub omalongitho agehe",
   "loader.task.artifacts": "Oartefakta dhelongitho #{number}: {done} mu {total}",
+  "loader.task.warnings": "Omalondodho: {done} mu iilonga {total}",
   "loader.task.artifact": "Oartefakta {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "inali enda nawa: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Uule wethimbo",
   "feed.actions.running": "tali longwa",
   "feed.actions.longest": "Elongitho lyo lile unene tali ulikwa lya kutha {duration} ({run}).",
+  "feed.actions.open": "Egulula",
+  "feed.actions.jump.playwright": "Omakeshelo gaPlaywright gelongitho ndika",
+  "feed.actions.jump.unit": "Omakeshelo goshigandhi shene melongitho ndika",
+  "feed.actions.jump.warnings": "Omalondodho gelongitho ndika",
   "feed.filter.search": "Konga omalongitho",
   "feed.filter.all": "ayihe",
   "feed.filter.event": "Oshiningwanima",
@@ -198,6 +204,25 @@
   "security.column.source": "Onzo",
   "security.column.alert": "Etseyitho",
   "security.column.summary": "Efupipiko",
+  "warnings.column.level": "Ondondo",
+  "warnings.column.repository": "Oshigandhi",
+  "warnings.column.run": "Elongitho",
+  "warnings.column.job": "Oshilonga",
+  "warnings.column.where": "Peni",
+  "warnings.column.title": "Oshipalanyole",
+  "warnings.column.message": "Etumwalaka",
+  "warnings.level.failure": "epuko",
+  "warnings.level.warning": "elondodho",
+  "warnings.level.notice": "etseyitho",
+  "warnings.note": {
+    "one": "Melongitho {n}: omapuko {failure}, omalondodho {warning}, omatseyitho {notice}.",
+    "other": "Momalongitho {n}: omapuko {failure}, omalondodho {warning}, omatseyitho {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {done} mu oshilonga {n} osha leshwa.",
+    "other": "{repo} {run}: {done} mu iilonga {n} oya leshwa."
+  },
+  "warnings.noRun": "Kapu na oshitayi shimwe mwaashoka sha hogololwa shi na elongitho londjila yiilonga.",
   "security.column.since": "Okuza",
   "security.severity.critical": "uudhigu unene",
   "security.severity.high": "pombanda",
@@ -378,10 +403,15 @@
   "tests.code.file": "ofayila",
   "tests.code.language": "elaka",
   "tests.code.cases": "iipotha",
+  "tests.code.run": "elongitho",
   "tests.code.reading": "Tapu leshwa omakeshelo…",
   "tests.code.note": {
     "one": "Ofayila {n} yi na iipotha {cases}.",
     "other": "Iifayila {n} yi na iipotha {cases}."
+  },
+  "tests.code.held": {
+    "one": "Elongitho {run} olya hokolola {n} mwaayo.",
+    "other": "Elongitho {run} olya hokolola {n} mwaayo."
   },
   "tests.code.noCases": "Kapwa monika oshipotha nando oshimwe mofayila ndjika.",
   "tests.code.noTree": "Omuti gwomakeshelo inagu gandjwa pu {path}.",

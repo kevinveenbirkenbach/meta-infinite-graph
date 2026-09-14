@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Tác vụ",
   "view.security": "Bảo mật",
+  "view.warnings": "Cảnh báo",
   "panel.filter": "Bộ lọc",
   "panel.design": "Giao diện",
   "design.theme": "Chủ đề",
@@ -163,6 +164,7 @@
   "loader.task.changes": "Đang hỏi GitHub những gì đã thay đổi",
   "loader.task.everything": "Đang yêu cầu GitHub mọi lượt chạy",
   "loader.task.artifacts": "Tạo phẩm của lượt chạy #{number}: {done} trên {total}",
+  "loader.task.warnings": "Cảnh báo: {done} trên {total} job",
   "loader.task.artifact": "Tạo phẩm {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "thất bại: {message}",
@@ -171,6 +173,10 @@
   "feed.actions.duration": "Thời lượng",
   "feed.actions.running": "đang chạy",
   "feed.actions.longest": "Lượt chạy dài nhất được hiển thị mất {duration} ({run}).",
+  "feed.actions.open": "Mở",
+  "feed.actions.jump.playwright": "Bộ Playwright của lượt chạy này",
+  "feed.actions.jump.unit": "Các bộ kiểm thử của chính kho mã ở lượt chạy này",
+  "feed.actions.jump.warnings": "Cảnh báo của lượt chạy này",
   "feed.filter.search": "Tìm trong các lượt chạy",
   "feed.filter.all": "tất cả",
   "feed.filter.event": "Sự kiện",
@@ -188,6 +194,23 @@
   "security.column.source": "Nguồn",
   "security.column.alert": "Cảnh báo",
   "security.column.summary": "Tóm tắt",
+  "warnings.column.level": "Mức",
+  "warnings.column.repository": "Kho mã",
+  "warnings.column.run": "Lượt chạy",
+  "warnings.column.job": "Job",
+  "warnings.column.where": "Ở đâu",
+  "warnings.column.title": "Tiêu đề",
+  "warnings.column.message": "Thông điệp",
+  "warnings.level.failure": "lỗi",
+  "warnings.level.warning": "cảnh báo",
+  "warnings.level.notice": "ghi chú",
+  "warnings.note": {
+    "other": "Qua {n} lượt chạy: {failure} lỗi, {warning} cảnh báo, {notice} ghi chú."
+  },
+  "warnings.run": {
+    "other": "{repo} {run}: đã đọc {done} trên {n} job."
+  },
+  "warnings.noRun": "Không nhánh nào được đánh dấu có lượt chạy quy trình.",
   "security.column.since": "Từ",
   "security.severity.critical": "nghiêm trọng",
   "security.severity.high": "cao",
@@ -355,9 +378,13 @@
   "tests.code.file": "tệp",
   "tests.code.language": "ngôn ngữ",
   "tests.code.cases": "ca",
+  "tests.code.run": "lượt chạy",
   "tests.code.reading": "Đang đọc bộ kiểm thử…",
   "tests.code.note": {
     "other": "{n} tệp với {cases} ca."
+  },
+  "tests.code.held": {
+    "other": "Lượt chạy {run} đã báo cáo {n} trong số đó."
   },
   "tests.code.noCases": "Không tìm thấy ca nào trong tệp này.",
   "tests.code.noTree": "Cây kiểm thử không được phục vụ tại {path}.",

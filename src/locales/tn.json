@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Ditiro",
   "view.security": "Tshireletso",
+  "view.warnings": "Ditlhagiso",
   "panel.filter": "Sesefi",
   "panel.design": "Tebego",
   "design.theme": "Setaele",
@@ -172,6 +173,7 @@
   "loader.task.changes": "Go bodiwa GitHub gore go fetogile eng",
   "loader.task.everything": "Go kopiwa ditsamaiso tsotlhe mo GitHub",
   "loader.task.artifacts": "Ditlhagiswa tsa tsamaiso #{number}: {done} mo go {total}",
+  "loader.task.warnings": "Ditlhagiso: {done} mo ditirong di le {total}",
   "loader.task.artifact": "Setlhagiswa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "e paletswe: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Boleele jwa nako",
   "feed.actions.running": "e sa ntse e tsamaya",
   "feed.actions.longest": "Tsamaiso e telele go gaisa e e bontshitsweng e tsere {duration} ({run}).",
+  "feed.actions.open": "Bula",
+  "feed.actions.jump.playwright": "Setlhopha sa Playwright sa tsamaiso e",
+  "feed.actions.jump.unit": "Ditlhopha tsa polokelo ka boyona mo tsamaisong e",
+  "feed.actions.jump.warnings": "Ditlhagiso tsa tsamaiso e",
   "feed.filter.search": "Batla mo ditsamaisong",
   "feed.filter.all": "tsotlhe",
   "feed.filter.event": "Tiragalo",
@@ -198,6 +204,25 @@
   "security.column.source": "Motswedi",
   "security.column.alert": "Temoso",
   "security.column.summary": "Kakaretso",
+  "warnings.column.level": "Legato",
+  "warnings.column.repository": "Polokelo",
+  "warnings.column.run": "Tsamaiso",
+  "warnings.column.job": "Tiro",
+  "warnings.column.where": "Kae",
+  "warnings.column.title": "Setlhogo",
+  "warnings.column.message": "Molaetsa",
+  "warnings.level.failure": "phoso",
+  "warnings.level.warning": "tlhagiso",
+  "warnings.level.notice": "kitsiso",
+  "warnings.note": {
+    "one": "Mo tsamaisong e le {n}: diphoso {failure}, ditlhagiso {warning}, dikitsiso {notice}.",
+    "other": "Mo ditsamaisong di le {n}: diphoso {failure}, ditlhagiso {warning}, dikitsiso {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: go badilwe {done} mo tirong e le {n}.",
+    "other": "{repo} {run}: go badilwe {done} mo ditirong di le {n}."
+  },
+  "warnings.noRun": "Ga go na kala epe e e tshwailweng e e nang le tsamaiso ya kelelo ya tiro.",
   "security.column.since": "Go tloga",
   "security.severity.critical": "e masisi thata",
   "security.severity.high": "e kwa godimo",
@@ -378,10 +403,15 @@
   "tests.code.file": "faele",
   "tests.code.language": "puo",
   "tests.code.cases": "dikgetsi",
+  "tests.code.run": "tsamaiso",
   "tests.code.reading": "Go balwa setlhopha…",
   "tests.code.note": {
     "one": "Faele e le {n} e na le dikgetsi di le {cases}.",
     "other": "Difaele di le {n} di na le dikgetsi di le {cases}."
+  },
+  "tests.code.held": {
+    "one": "Tsamaiso {run} e begile ka {n} ya tsone.",
+    "other": "Tsamaiso {run} e begile ka {n} ya tsone."
   },
   "tests.code.noCases": "Ga go a fitlhelwa kgetsi epe mo faeleng e.",
   "tests.code.noTree": "Setlhare sa diteko ga se newe mo go {path}.",

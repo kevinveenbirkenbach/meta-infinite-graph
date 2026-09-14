@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Iliuusit",
   "view.security": "Isumannaallisaaneq",
+  "view.warnings": "Mianersoqqussutit",
   "panel.filter": "Immikkoortiterineq",
   "panel.design": "Ilusilersuineq",
   "design.theme": "Qalipaatit",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub apeqqutigineqarpoq suut allanngorsimanersut",
   "loader.task.everything": "GitHub-imit ingerlatsinerit tamarmik aaneqarput",
   "loader.task.artifacts": "Ingerlatsineq #{number}-ip artefaktii: {done} / {total}",
+  "loader.task.warnings": "Mianersoqqussutit: suliat {total}-nit {done}",
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "iluatsinngilaq: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Sivisussusia",
   "feed.actions.running": "ingerlavoq",
   "feed.actions.longest": "Ingerlatsineq takutinneqartoq sivisunerpaaq {duration}-mik sivisussuseqarpoq ({run}).",
+  "feed.actions.open": "Ammaruk",
+  "feed.actions.jump.playwright": "Ingerlatsinerup matuma Playwright-imik misiliutai",
+  "feed.actions.jump.unit": "Toqqorsiviup nammineq misiliutai ingerlatsinermi matumani",
+  "feed.actions.jump.warnings": "Ingerlatsinerup matuma mianersoqqussutai",
   "feed.filter.search": "Ingerlatsinerni ujaarit",
   "feed.filter.all": "tamarmik",
   "feed.filter.event": "Pisoq",
@@ -198,6 +204,25 @@
   "security.column.source": "Aallaavik",
   "security.column.alert": "Kalerrisaarut",
   "security.column.summary": "Eqikkaaneq",
+  "warnings.column.level": "Killiffik",
+  "warnings.column.repository": "Toqqorsivik",
+  "warnings.column.run": "Ingerlatsineq",
+  "warnings.column.job": "Suliaq",
+  "warnings.column.where": "Sumi",
+  "warnings.column.title": "Qulequtaq",
+  "warnings.column.message": "Paasissutissaq",
+  "warnings.level.failure": "kukkuneq",
+  "warnings.level.warning": "mianersoqqussut",
+  "warnings.level.notice": "oqaaseqaat",
+  "warnings.note": {
+    "one": "Ingerlatsinermi {n}-mi: kukkunerit {failure}, mianersoqqussutit {warning}, oqaaseqaatit {notice}.",
+    "other": "Ingerlatsinerni {n}-ni: kukkunerit {failure}, mianersoqqussutit {warning}, oqaaseqaatit {notice}."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: suliat {n}-nit {done} atuarneqarpoq.",
+    "other": "{repo} {run}: suliat {n}-nit {done} atuarneqarput."
+  },
+  "warnings.noRun": "Branchit nalunaaqutserneqartut ilaat suliap ingerlanerani ingerlatsinermik peqanngillat.",
   "security.column.since": "Aallarnerfia",
   "security.severity.critical": "navianartorujussuaq",
   "security.severity.high": "qaffasissoq",
@@ -378,10 +403,15 @@
   "tests.code.file": "fili",
   "tests.code.language": "oqaatsit",
   "tests.code.cases": "pisimasut",
+  "tests.code.run": "ingerlatsineq",
   "tests.code.reading": "Misiliutit atuarneqarput…",
   "tests.code.note": {
     "one": "Fili {n} pisimasunik {cases}-nik.",
     "other": "Filit {n} pisimasunik {cases}-nik."
+  },
+  "tests.code.held": {
+    "one": "Ingerlatsineq {run} taakkunannga {n} pillugu nalunaarpoq.",
+    "other": "Ingerlatsineq {run} taakkunannga {n} pillugit nalunaarpoq."
   },
   "tests.code.noCases": "Filimi matumani pisimasoqanngilaq.",
   "tests.code.noTree": "Misiliutit orpiat {path}-mi pineqanngilaq.",

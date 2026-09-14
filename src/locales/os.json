@@ -9,6 +9,7 @@
   "view.pulls": "PR",
   "view.actions": "Архайдтæ",
   "view.security": "Æдасдзинад",
+  "view.warnings": "Фæдзæхстытæ",
   "panel.filter": "Фильтр",
   "panel.design": "Дизайн",
   "design.theme": "Темæ",
@@ -172,6 +173,7 @@
   "loader.task.changes": "GitHub-æй фæрсын, цы аивта",
   "loader.task.everything": "GitHub-æй алы цыд домын",
   "loader.task.artifacts": "Цыд #{number}-ы артефакттæ: {total}-æй {done}",
+  "loader.task.warnings": "Фæдзæхстытæ: {total} куыстæй {done}",
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "нæ рауад: {message}",
@@ -180,6 +182,10 @@
   "feed.actions.duration": "Дæргъ",
   "feed.actions.running": "цæуы",
   "feed.actions.longest": "Æвдыст цыдтæй дæргъдæр ахаста {duration} ({run}).",
+  "feed.actions.open": "Байгом кæнын",
+  "feed.actions.jump.playwright": "Ацы цыды Playwright тесттæ",
+  "feed.actions.jump.unit": "Репозиторийы йæхи тесттæ ацы цыды",
+  "feed.actions.jump.warnings": "Ацы цыды фæдзæхстытæ",
   "feed.filter.search": "Цыдтæ агурын",
   "feed.filter.all": "æппæт",
   "feed.filter.event": "Цау",
@@ -198,6 +204,25 @@
   "security.column.source": "Гуырæн",
   "security.column.alert": "Хъусынгæнинаг",
   "security.column.summary": "Цыбырæй",
+  "warnings.column.level": "Къæпхæн",
+  "warnings.column.repository": "Репозиторий",
+  "warnings.column.run": "Цыд",
+  "warnings.column.job": "Куыст",
+  "warnings.column.where": "Кæм",
+  "warnings.column.title": "Сæргонд",
+  "warnings.column.message": "Хъусынгæнинаг",
+  "warnings.level.failure": "рæдыд",
+  "warnings.level.warning": "фæдзæхст",
+  "warnings.level.notice": "фиппаинаг",
+  "warnings.note": {
+    "one": "{n} цыды: {failure} рæдыд, {warning} фæдзæхст, {notice} фиппаинаг.",
+    "other": "{n} цыды: {failure} рæдыд, {warning} фæдзæхст, {notice} фиппаинаг."
+  },
+  "warnings.run": {
+    "one": "{repo} {run}: {n} куыстæй бакаст {done}.",
+    "other": "{repo} {run}: {n} куыстæй бакаст {done}."
+  },
+  "warnings.noRun": "Нысангонд къабæзтæй иуæн дæр нæй workflow-йы цыд.",
   "security.column.since": "Кæдæй",
   "security.severity.critical": "критикон",
   "security.severity.high": "бæрзонд",
@@ -378,10 +403,15 @@
   "tests.code.file": "файл",
   "tests.code.language": "æвзаг",
   "tests.code.cases": "хъуыддæгтæ",
+  "tests.code.run": "цыд",
   "tests.code.reading": "Тесттæ кæсын…",
   "tests.code.note": {
     "one": "{n} файл, {cases} хъуыддаг.",
     "other": "{n} файл, {cases} хъуыддаг."
+  },
+  "tests.code.held": {
+    "one": "Цыд {run} уыдонæй {n} тыххæй бахабар кодта.",
+    "other": "Цыд {run} уыдонæй {n} тыххæй бахабар кодта."
   },
   "tests.code.noCases": "Ацы файлы иу хъуыддаг дæр нæ ссардæуыд.",
   "tests.code.noTree": "Тестты бæлас {path}-ы нæ дæтты.",
