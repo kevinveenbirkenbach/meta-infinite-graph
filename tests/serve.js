@@ -24,6 +24,12 @@ const META = path.resolve(
   process.env.INFINITO_META_DIR || '../infinito-nexus-core/meta'
 );
 
+const TESTS = path.resolve(
+  __dirname,
+  '..',
+  process.env.INFINITO_TESTS_DIR || '../infinito-nexus-core/tests'
+);
+
 const MIME = {
   '.html': 'text/html',
   '.js': 'application/javascript',
@@ -55,6 +61,17 @@ http
           // Read before answering: a missing directory must reach the catch
           // below, not throw after the 200 head is already on the wire.
           const listing = autoindex(target || ROLES);
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          return res.end(listing);
+        }
+        const body = fs.readFileSync(target);
+        res.writeHead(200, { 'Content-Type': MIME[path.extname(target)] || 'text/plain' });
+        return res.end(body);
+      }
+      if (url.startsWith('/infinito_tests/')) {
+        const target = path.join(TESTS, url.replace(/^\/infinito_tests\//, ''));
+        if (url.endsWith('/')) {
+          const listing = autoindex(target);
           res.writeHead(200, { 'Content-Type': 'application/json' });
           return res.end(listing);
         }

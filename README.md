@@ -417,6 +417,7 @@ or the checkout there:
 MIG_PORT=8207
 INFINITO_ROLES_DIR=/path/to/infinito-nexus-core/roles
 INFINITO_META_DIR=/path/to/infinito-nexus-core/meta
+INFINITO_TESTS_DIR=/path/to/infinito-nexus-core/tests
 MIG_GITHUB_TOKEN=
 MIG_GITHUB_ALERTS=false
 MIG_GIT_ROOT=infinito-nexus/core
@@ -428,6 +429,10 @@ MIG_GIT_HOME=/var/lib/mig
 `categories.yml`. The 2D tables resolve a service key to its providing role
 through the category prefixes in that file, so an `.env` predating the 2D mode
 has to gain the line before `make up` starts.
+
+`INFINITO_TESTS_DIR` points at the repository-root `tests/`, served at
+`/infinito_tests/` with the same JSON autoindex as the roles tree. It is
+defaulted rather than required, so an `.env` predating it still starts.
 
 `MIG_GIT_ROOT` is the repository the local mirror clones, `MIG_GIT_FORKS` is
 `auto`, `off` or a space separated `owner/name` list, and `MIG_GIT_HOME` is

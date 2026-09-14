@@ -52,7 +52,10 @@ function mirror(page, calls) {
     }),
     page.route(`**/at/${SHA}/**`, route => {
       const url = new URL(route.request().url());
-      const served = url.pathname.replace(`/at/${SHA}/meta/`, '/infinito_meta/').replace(`/at/${SHA}/`, '/');
+      const served = url.pathname
+        .replace(`/at/${SHA}/meta/`, '/infinito_meta/')
+        .replace(`/at/${SHA}/tests/`, '/infinito_tests/')
+        .replace(`/at/${SHA}/`, '/');
       route.continue({ url: `${url.origin}${served}${url.search}` });
     }),
   ]);
