@@ -1,5 +1,6 @@
 import { byId, bySelector } from '../dom.js';
 import { t } from '../i18n.js';
+import { CodeTests } from '../tests/code/model.js';
 
 export function currentView() {
   return bySelector('input[name="view"]:checked', HTMLInputElement).value;
@@ -12,6 +13,8 @@ export function viewName(view) {
 }
 
 export const TEST_VIEWS = ['playwright', 'cli'];
+
+export const CODE_VIEWS = CodeTests.KINDS;
 
 // Filling these from the working copy would put today's numbers under a past
 // timestamp, so at a date that predates the schema they are greyed instead.
@@ -45,7 +48,8 @@ export function disableMetaViews(missing) {
 // Args:
 //   loader: the bottom bar's Loader, told which view is on screen and what it waits for.
 //   refresher: the FeedRefresher of the actions feed.
-export function wireViewMode(tableView, forkTree, testsView, feeds, loader, refresher) {
+//   codeView: the CodeTestsView drawing the repository's own suites.
+export function wireViewMode({ tableView, forkTree, testsView, codeView, feeds, loader, refresher }) {
   const pane = document.getElementById('tables-pane');
   const graph = document.getElementById('graph3d');
   feeds.actions.onPick = run => {
@@ -80,6 +84,7 @@ export function wireViewMode(tableView, forkTree, testsView, feeds, loader, refr
     const drawing = t('loader.task.view', { view: viewName(view) });
     if (view === 'forks') loader.track(view, forkTree.show(), drawing);
     else if (TEST_VIEWS.includes(view)) loader.track(view, testsView.show(view), drawing);
+    else if (CODE_VIEWS.includes(view)) loader.track(view, codeView.show(view), drawing);
     else if (feeds[view]) loader.track(view, feeds[view].show(), drawing);
     else if (tables) loader.track(view, tableView.show(view), drawing);
     refresher.restart();
@@ -95,7 +100,9 @@ export function wireViewMode(tableView, forkTree, testsView, feeds, loader, refr
 export function redraw(tableView, testsView) {
   const view = currentView();
   if (TEST_VIEWS.includes(view)) testsView.refresh();
-  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security'].includes(view)) tableView.refresh();
+  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security', ...CODE_VIEWS].includes(view)) {
+    tableView.refresh();
+  }
 }
 
 export function wirePanels() {

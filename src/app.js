@@ -1,6 +1,6 @@
 import { AutoResolver } from './autoResolver.js';
 import { CommitsView } from './commitsView.js';
-import { dataLoader, graphRenderer, selectionManager, setStatus, urlState } from './context.js';
+import { codeTests, dataLoader, graphRenderer, selectionManager, setStatus, urlState } from './context.js';
 import { ForkTree } from './fork/tree.js';
 import { GitRange } from './gitRange.js';
 import { GitHubApi } from './github/api.js';
@@ -17,6 +17,8 @@ import { PlaywrightMatrix } from './playwrightMatrix.js';
 import { RoleCardHost } from './role/cardHost.js';
 import { RoleInfo } from './role/info.js';
 import { TableView } from './table/view.js';
+import { CodeTests } from './tests/code/model.js';
+import { CodeTestsView } from './tests/code/view.js';
 import { TestRuns } from './tests/runs.js';
 import { TestsView } from './tests/view.js';
 import { UIManager } from './uiManager.js';
@@ -66,6 +68,7 @@ loader.track('*', gitRange.load()
     if (rewound && !missing.length) {
       dataLoader.basePath = `${rewound.path}roles`;
       dataLoader.metaPath = `${rewound.path}meta`;
+      codeTests.base = `${rewound.path}tests`;
       setStatus(t('status.scanningAt', { date: rewound.date.slice(0, 10) }));
     } else if (rewound) {
       gitRange.markMissing(rewound.date, missing);
@@ -102,6 +105,7 @@ loader.track('*', gitRange.load()
       actions: new GitHubFeed('actions', forkTree.api, gitRange, tables),
       security: new GitHubSecurity(forkTree.api, gitRange, tables),
     };
+    const codeView = new CodeTestsView(codeTests, tables);
     const testsView = new TestsView(
       tableView.tables, dataLoader, roleInfo, cardHost, document.getElementById('tables'),
       new TestRuns(forkTree.api, () => (gitRange.catalog ? gitRange.catalog.root : forkTree.root))
@@ -145,7 +149,7 @@ loader.track('*', gitRange.load()
     // takes __mig as ready any earlier can grab a row the redraw then replaces
     // under its pointer.
     return Promise.all(pending).then(() => {
-      wireViewMode(tableView, forkTree, testsView, feeds, loader, refresher);
+      wireViewMode({ tableView, forkTree, testsView, codeView, feeds, loader, refresher });
       wireReload({
         anchor: document.getElementById('view-loader'),
         loader,
@@ -168,13 +172,17 @@ loader.track('*', gitRange.load()
           commits: () => feeds.commits.show(),
           pulls: () => feeds.pulls.show(true),
           security: () => feeds.security.show(true),
+          ...Object.fromEntries(CodeTests.KINDS.map(kind => [kind, () => {
+            codeView.invalidate();
+            return codeView.show(kind);
+          }])),
         },
       });
       uiManager.onSelectionChange();
       urlState.capture();
       window.__mig = {
         metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
-        testsView, dataLoader, gitRange, feeds, matrixView,
+        testsView, codeView, codeTests, dataLoader, gitRange, feeds, matrixView,
         graph: graphRenderer.graph,
       };
     });

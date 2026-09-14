@@ -71,7 +71,8 @@ test('the tests menu moves between the playwright and the cli suites', async ({ 
   const playwrightRows = await rows.count();
   await expect(page.locator('#btn-tests'), 'an old ?view=tests link opens the playwright suite')
     .toHaveText('Tests · Playwright');
-  await expect(page.locator('#btn-tests + .view-menu label')).toHaveText(['Playwright', 'CLI']);
+  await expect(page.locator('#btn-tests + .view-menu label'), 'the role suites come first, the repository’s own below')
+    .toHaveText(['Playwright', 'CLI', 'Unit', 'Integration', 'External', 'Lint', 'Performance', 'Regression']);
 
   await pickView(page, 'cli');
   await expect(page.locator('#btn-tests')).toHaveText('Tests · CLI');

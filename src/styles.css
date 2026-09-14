@@ -278,6 +278,42 @@ tr.feed-pickable:hover td {
   background: var(--bs-secondary-bg);
 }
 
+.code-table td {
+  white-space: nowrap;
+}
+
+tr.code-row {
+  cursor: pointer;
+}
+
+tr.code-row:hover td {
+  background: var(--bs-secondary-bg);
+}
+
+tr.code-open td {
+  font-weight: 600;
+}
+
+.code-file {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.code-count {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.code-clean {
+  opacity: 0.4;
+}
+
+tr.code-cases ul {
+  margin: 0;
+  padding: 4px 0 4px 24px;
+  columns: 2;
+  font-size: 0.8rem;
+}
+
 .bottom-nav-links {
   display: flex;
   gap: 14px;

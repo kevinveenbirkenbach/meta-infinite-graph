@@ -3,6 +3,7 @@ import { byId } from './dom.js';
 import { GraphRenderer } from './graphRenderer.js';
 import { t } from './i18n.js';
 import { SelectionManager } from './selectionManager.js';
+import { CodeTests } from './tests/code/model.js';
 import { UrlState } from './urlState.js';
 
 window.addEventListener('error', e => {
@@ -11,6 +12,7 @@ window.addEventListener('error', e => {
 });
 
 export const dataLoader = new DataLoader('/roles');
+export const codeTests = new CodeTests('/infinito_tests');
 export const selectionManager = new SelectionManager();
 export const graphRenderer = new GraphRenderer('graph3d', selectionManager);
 

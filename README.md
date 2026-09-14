@@ -87,7 +87,8 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
 One row per role, variant and test. The **Tests** menu holds the two suites a
 role can ship, **Playwright** and **CLI**, the way **Roles** holds its views;
 `?view=playwright` and `?view=cli` open them, and an older `?view=tests` link
-opens Playwright.
+opens Playwright. Below them the menu holds the repository's
+[own suites](#the-repositorys-own-suites), which are files rather than roles.
 
 **Playwright** answers which of a role's tests actually runs in which
 `meta/variants.yml` variant, and which service flag decides it.
@@ -158,6 +159,23 @@ second look, a reload or another visitor costs no second download.
 - CI records videos only for failed tests, so a passing test shows none.
 - A line is marked by its artifact's name. When one deploy tests several roles,
   the others' reports sit in that artifact too, but their lines stay unmarked.
+
+#### The repository's own suites
+
+Below Playwright and CLI the **Tests** menu holds the suites `make test` fans
+out over, one view each: **Unit**, **Integration**, **External**, **Lint**,
+**Performance** and **Regression**. They are read from the repository's
+`tests/` tree, which the container mounts at `/infinito_tests/`
+(`INFINITO_TESTS_DIR`); with the time window in the past it is the worktree's
+copy of that tree, like the roles. Without the mount the view says so rather
+than showing an empty table.
+
+Each row is one test file: its folder, its name, its language and how many
+cases it declares. The count is what the runner discovers, so `def test_…`
+for Python, `test(…)`/`it(…)` for JavaScript, `function test…` for PHPUnit and
+`def test_…` for Ruby. The files are read a few at a time after the table is
+already on screen, so each count turns until its file is in. Clicking a row
+lists the case names.
 
 #### Gate filter
 
@@ -430,9 +448,10 @@ MIG_GIT_HOME=/var/lib/mig
 through the category prefixes in that file, so an `.env` predating the 2D mode
 has to gain the line before `make up` starts.
 
-`INFINITO_TESTS_DIR` points at the repository-root `tests/`, served at
-`/infinito_tests/` with the same JSON autoindex as the roles tree. It is
-defaulted rather than required, so an `.env` predating it still starts.
+`INFINITO_TESTS_DIR` points at the repository-root `tests/`, which the
+[suite views](#the-repositorys-own-suites) read. It is defaulted rather than
+required, so an `.env` predating it still starts; those views then say the
+tree is not served.
 
 `MIG_GIT_ROOT` is the repository the local mirror clones, `MIG_GIT_FORKS` is
 `auto`, `off` or a space separated `owner/name` list, and `MIG_GIT_HOME` is
