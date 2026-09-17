@@ -125,6 +125,21 @@ test('the card downloads the artifact once and links the test\'s video', async (
   const viewer = page.locator('.artifact-viewer');
   await card.locator('a', { hasText: 'Video' }).click();
   await expect(viewer.locator('video'), 'the video plays in a popup on the page').toHaveAttribute('src', `/artifacts/71/${VIDEO}`);
+  // Opacity does not count as hidden for Playwright, so the frame is measured
+  // rather than asked: a transparent viewer over a darkened page looks alive.
+  const shown = await page.evaluate(() => {
+    const frame = document.querySelector('.artifact-viewer-frame');
+    const box = frame.getBoundingClientRect();
+    const on = document.elementFromPoint(box.left + box.width / 2, box.top + 12);
+    return {
+      opacity: Number(getComputedStyle(frame).opacity),
+      wide: box.width,
+      onTop: Boolean(on && on.closest('.artifact-viewer')),
+    };
+  });
+  expect(shown.opacity, 'the frame is opaque, not a darkened backdrop alone').toBeGreaterThan(0.5);
+  expect(shown.wide, 'and it fills the window it opened over').toBeGreaterThan(200);
+  expect(shown.onTop, 'the viewer is above the card that opened it').toBe(true);
   expect(page.url(), 'the page stays where it was').toContain('view=playwright');
   await page.keyboard.press('Escape');
   await expect(viewer).toHaveCount(0);
