@@ -168,6 +168,9 @@
     "other": "{n} oñemboguata hína"
   },
   "loader.overview.none": "Ndaipóri gueteri mbaʼeve oñemyenyhẽva.",
+  "loader.overview.page": "Kuatiarogue {page} / {pages}",
+  "loader.overview.newer": "Pyahuvéva",
+  "loader.overview.older": "Tujavéva",
   "loader.task.boot": "Oñemoñeʼẽ rolkuéra ha imeta",
   "loader.task.view": "Oñembohaʼanga {view}",
   "loader.task.changes": "Oñeporandu GitHub-pe mbaʼépa oñemoambue",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ndoikói: {message}",
+  "loader.task.retry": "Emyenyhẽjey",
   "feed.actions.pick": "Ehechauka ko ñemboguata ñehaʼãkuéra",
   "feed.actions.ended": "Opa",
   "feed.actions.duration": "Aravo pukukue",

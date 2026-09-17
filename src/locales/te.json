@@ -168,6 +168,9 @@
     "other": "{n} నడుస్తున్నాయి"
   },
   "loader.overview.none": "ఇంకా ఏదీ లోడ్ కాలేదు.",
+  "loader.overview.page": "పేజీ {page} / {pages}",
+  "loader.overview.newer": "కొత్తవి",
+  "loader.overview.older": "పాతవి",
   "loader.task.boot": "పాత్రలను మరియు వాటి మెటాను చదువుతోంది",
   "loader.task.view": "{view} గీస్తోంది",
   "loader.task.changes": "ఏమి మారిందో GitHub ని అడుగుతోంది",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ఆర్టిఫాక్ట్ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "విఫలం: {message}",
+  "loader.task.retry": "మళ్లీ లోడ్ చేయి",
   "feed.actions.pick": "ఈ రన్ యొక్క పరీక్షలను చూపు",
   "feed.actions.ended": "ముగిసింది",
   "feed.actions.duration": "వ్యవధి",

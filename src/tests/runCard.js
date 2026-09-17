@@ -69,9 +69,15 @@ function videos(report, test, title) {
   return report.videos.filter(path => slug(path).includes(wanted));
 }
 
-function Outcome({ artifact, answer, error }, row) {
+function Outcome({ artifact, answer, error, retry }, row) {
   const label = [artifact.mode, artifact.distro, artifact.filesystem].filter(Boolean).join(' · ');
-  if (error) return html`<dd class="fork-error">${label}: ${t('tests.card.artifactFailed', { message: error.message })}</dd>`;
+  if (error) {
+    return html`<dd class="fork-error">
+      ${`${label}: `}${t('tests.card.artifactFailed', { message: error.message })}
+      <button type="button" class="btn btn-sm btn-outline-secondary loader-task-retry"
+              onClick=${retry}>${t('loader.task.retry')}</button>
+    </dd>`;
+  }
   const reports = answer.reports.filter(report => report.app === row.role
     && (row.variant === null || report.variant === row.variant));
   if (!reports.length) return html`<dd>${label}: ${t('tests.card.notInArtifact')}</dd>`;
@@ -104,8 +110,9 @@ export function fillRun(box, runs, row) {
     return;
   }
   render(html`${title}<dd>${t('tests.card.loadingArtifact')}</dd>`, box);
+  const retry = artifact => () => runs.reload(artifact.id).then(() => fillRun(box, runs, row));
   Promise.all(artifacts.map(artifact => runs.load(artifact.id).then(
     answer => ({ artifact, answer }),
-    error => ({ artifact, error })
+    error => ({ artifact, error, retry: retry(artifact) })
   ))).then(found => render(html`${title}${found.map(entry => Outcome(entry, row))}`, box));
 }

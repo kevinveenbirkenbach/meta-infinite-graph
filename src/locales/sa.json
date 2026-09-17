@@ -168,6 +168,9 @@
     "other": "{n} प्रचलन्ति"
   },
   "loader.overview.none": "अद्यापि किमपि न आरोपितम्।",
+  "loader.overview.page": "पृष्ठं {page} / {pages}",
+  "loader.overview.newer": "नूतनानि",
+  "loader.overview.older": "पुरातनानि",
   "loader.task.boot": "भूमिकाः तासां मेटा च पठ्यन्ते",
   "loader.task.view": "{view} चित्र्यते",
   "loader.task.changes": "GitHub पृच्छ्यते किं परिवर्तितम् इति",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "कृतवस्तु {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "विफलम्: {message}",
+  "loader.task.retry": "पुनः आरोपयतु",
   "feed.actions.pick": "अस्य चालनस्य परीक्षाः दर्शयतु",
   "feed.actions.ended": "समाप्तम्",
   "feed.actions.duration": "अवधिः",

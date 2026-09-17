@@ -168,6 +168,9 @@
     "other": "{n} иштеп жатат"
   },
   "loader.overview.none": "Азырынча эч нерсе жүктөлгөн жок.",
+  "loader.overview.page": "Барак {page} / {pages}",
+  "loader.overview.newer": "Жаңыраак",
+  "loader.overview.older": "Эскирээк",
   "loader.task.boot": "Ролдорду жана алардын meta маалыматын окуу",
   "loader.task.view": "{view} тартылууда",
   "loader.task.changes": "GitHub'тан эмне өзгөргөнүн суроо",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ишке ашкан жок: {message}",
+  "loader.task.retry": "Кайра жүктөө",
   "feed.actions.pick": "Бул иштетүүнүн тесттерин көрсөтүү",
   "feed.actions.ended": "Аяктаган",
   "feed.actions.duration": "Узактыгы",

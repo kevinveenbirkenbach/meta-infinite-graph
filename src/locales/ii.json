@@ -159,6 +159,9 @@
     "other": "{n} ꏲꏦꊖ"
   },
   "loader.overview.none": "ꃅꄜꀋꏲꏦꊖ。",
+  "loader.overview.page": "ꍗꑷ {page} / {pages}",
+  "loader.overview.newer": "ꀉꏂ",
+  "loader.overview.older": "ꀉꇊ",
   "loader.task.boot": "ꏮꌝꂾꑻꎼꄖꐎ",
   "loader.task.view": "{view} ꁱꊖ",
   "loader.task.changes": "GitHub ꇬꉛ ꇰꑟꌠ",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "ꍣꃶ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ꉷꏂꀠ：{message}",
+  "loader.task.retry": "ꄲꍫꑟꊖꏖ",
   "feed.actions.pick": "ꒃꑟ ꋃꏂ ꂷꑣꏂ",
   "feed.actions.ended": "ꐛꅉ",
   "feed.actions.duration": "ꄮꈚ",

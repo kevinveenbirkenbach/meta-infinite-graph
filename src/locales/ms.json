@@ -159,6 +159,9 @@
     "other": "{n} sedang berjalan"
   },
   "loader.overview.none": "Belum ada apa-apa yang dimuatkan.",
+  "loader.overview.page": "Halaman {page} daripada {pages}",
+  "loader.overview.newer": "Lebih baharu",
+  "loader.overview.older": "Lebih lama",
   "loader.task.boot": "Membaca peranan dan meta mereka",
   "loader.task.view": "Melukis {view}",
   "loader.task.changes": "Bertanya kepada GitHub apa yang berubah",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Artifak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
+  "loader.task.retry": "Muat semula",
   "feed.actions.pick": "Papar ujian larian ini",
   "feed.actions.ended": "Tamat",
   "feed.actions.duration": "Tempoh",

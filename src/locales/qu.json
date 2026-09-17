@@ -168,6 +168,9 @@
     "other": "{n} purichkan"
   },
   "loader.overview.none": "Manaraq imapas chaqnasqachu.",
+  "loader.overview.page": "P'anqa {page} / {pages}",
+  "loader.overview.newer": "Musuq",
+  "loader.overview.older": "Ñawpa",
   "loader.task.boot": "Ruwanakunata metankunatawan ñawinchachkan",
   "loader.task.view": "{view} siq'ichkan",
   "loader.task.changes": "GitHub-ta tapuchkan ima tikrasqanta",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Ruwasqa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "pantarqan: {message}",
+  "loader.task.retry": "Musuqmanta chaqnay",
   "feed.actions.pick": "Kay puriypa llanchiyninkunata rikuchiy",
   "feed.actions.ended": "Tukusqa",
   "feed.actions.duration": "Unay",

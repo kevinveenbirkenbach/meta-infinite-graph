@@ -159,6 +159,9 @@
     "other": "กำลังรัน {n} รายการ"
   },
   "loader.overview.none": "ยังไม่มีอะไรโหลดเสร็จ",
+  "loader.overview.page": "หน้า {page} จาก {pages}",
+  "loader.overview.newer": "ใหม่กว่า",
+  "loader.overview.older": "เก่ากว่า",
   "loader.task.boot": "กำลังอ่านบทบาทและเมตาของบทบาท",
   "loader.task.view": "กำลังวาด {view}",
   "loader.task.changes": "กำลังถาม GitHub ว่ามีอะไรเปลี่ยน",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "อาร์ติแฟกต์ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ล้มเหลว: {message}",
+  "loader.task.retry": "โหลดใหม่",
   "feed.actions.pick": "แสดงการทดสอบของการรันนี้",
   "feed.actions.ended": "สิ้นสุดเมื่อ",
   "feed.actions.duration": "ระยะเวลา",

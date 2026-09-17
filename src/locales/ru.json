@@ -186,6 +186,9 @@
     "other": "{n} выполняется"
   },
   "loader.overview.none": "Пока ничего не загружено.",
+  "loader.overview.page": "Страница {page} из {pages}",
+  "loader.overview.newer": "Новее",
+  "loader.overview.older": "Старше",
   "loader.task.boot": "Чтение ролей и их метаданных",
   "loader.task.view": "Отрисовка: {view}",
   "loader.task.changes": "Запрос к GitHub: что изменилось",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ошибка: {message}",
+  "loader.task.retry": "Загрузить снова",
   "feed.actions.pick": "Показать тесты этого запуска",
   "feed.actions.ended": "Завершено",
   "feed.actions.duration": "Длительность",

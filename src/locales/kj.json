@@ -168,6 +168,9 @@
     "other": "{n} otai longo"
   },
   "loader.overview.none": "Kape na sha etwa natango.",
+  "loader.overview.page": "Epandja {page} / {pages}",
+  "loader.overview.newer": "Ipe",
+  "loader.overview.older": "Onale",
   "loader.task.boot": "Otai leshwa oinakuwanifwa nometa yayo",
   "loader.task.view": "Otai shangwa {view}",
   "loader.task.changes": "Otai pulwa GitHub osho sha lunduluka",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Oshiningwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "inai wanifwa: {message}",
+  "loader.task.retry": "Eta vali",
   "feed.actions.pick": "Ulika omakondeko eendo eli",
   "feed.actions.ended": "Ya xula",
   "feed.actions.duration": "Oule wefimbo",

@@ -204,6 +204,9 @@
     "other": "{n} yn rhedeg"
   },
   "loader.overview.none": "Does dim wedi llwytho eto.",
+  "loader.overview.page": "Tudalen {page} o {pages}",
+  "loader.overview.newer": "Newyddach",
+  "loader.overview.older": "Hŷn",
   "loader.task.boot": "Yn darllen y rolau a'u meta",
   "loader.task.view": "Yn lluniadu {view}",
   "loader.task.changes": "Yn gofyn i GitHub beth newidiodd",
@@ -213,6 +216,7 @@
   "loader.task.artifact": "Arteffact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "wedi methu: {message}",
+  "loader.task.retry": "Llwytho eto",
   "feed.actions.pick": "Dangos profion y rhediad hwn",
   "feed.actions.ended": "Gorffennwyd",
   "feed.actions.duration": "Hyd",

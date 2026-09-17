@@ -168,6 +168,9 @@
     "other": "{n} folyamatban"
   },
   "loader.overview.none": "Még semmi sem töltődött be.",
+  "loader.overview.page": "{page}. oldal / {pages}",
+  "loader.overview.newer": "Újabbak",
+  "loader.overview.older": "Régebbiek",
   "loader.task.boot": "A szerepkörök és metaadataik beolvasása",
   "loader.task.view": "{view} megrajzolása",
   "loader.task.changes": "A GitHub megkérdezése, mi változott",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefaktum: {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "sikertelen: {message}",
+  "loader.task.retry": "Betöltés újra",
   "feed.actions.pick": "E futtatás tesztjeinek megjelenítése",
   "feed.actions.ended": "Befejezve",
   "feed.actions.duration": "Időtartam",

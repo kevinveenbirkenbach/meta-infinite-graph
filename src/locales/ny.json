@@ -168,6 +168,9 @@
     "other": "{n} zikuyenda"
   },
   "loader.overview.none": "Palibe chomwe chakwezedwa pakadali pano.",
+  "loader.overview.page": "Tsamba {page} mwa {pages}",
+  "loader.overview.newer": "Zatsopano",
+  "loader.overview.older": "Zakale",
   "loader.task.boot": "Tikuwerenga maudindo ndi meta yake",
   "loader.task.view": "Tikujambula {view}",
   "loader.task.changes": "Tikufunsa GitHub zomwe zasintha",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Chopangidwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zalephera: {message}",
+  "loader.task.retry": "Kwezaninso",
   "feed.actions.pick": "Onetsani mayeso a kuyendetsa uku",
   "feed.actions.ended": "Zinatha",
   "feed.actions.duration": "Nthawi",

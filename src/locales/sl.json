@@ -186,6 +186,9 @@
     "other": "{n} teče"
   },
   "loader.overview.none": "Nič se še ni naložilo.",
+  "loader.overview.page": "Stran {page} od {pages}",
+  "loader.overview.newer": "Novejše",
+  "loader.overview.older": "Starejše",
   "loader.task.boot": "Branje vlog in njihovih metapodatkov",
   "loader.task.view": "Izrisovanje {view}",
   "loader.task.changes": "Spraševanje GitHuba, kaj se je spremenilo",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ni uspelo: {message}",
+  "loader.task.retry": "Naloži znova",
   "feed.actions.pick": "Prikaži teste tega zagona",
   "feed.actions.ended": "Končano",
   "feed.actions.duration": "Trajanje",

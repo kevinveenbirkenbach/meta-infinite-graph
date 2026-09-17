@@ -195,6 +195,9 @@
     "other": "{n} ar siúl"
   },
   "loader.overview.none": "Níl aon rud lódáilte fós.",
+  "loader.overview.page": "Leathanach {page} as {pages}",
+  "loader.overview.newer": "Níos nuaí",
+  "loader.overview.older": "Níos sine",
   "loader.task.boot": "Na róil agus a meiteashonraí á léamh",
   "loader.task.view": "{view} á tharraingt",
   "loader.task.changes": "Ag fiafraí de GitHub cad a d’athraigh",
@@ -204,6 +207,7 @@
   "loader.task.artifact": "Déantán {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "theip air: {message}",
+  "loader.task.retry": "Lódáil arís",
   "feed.actions.pick": "Taispeáin tástálacha an rith seo",
   "feed.actions.ended": "Críochnaithe",
   "feed.actions.duration": "Fad",

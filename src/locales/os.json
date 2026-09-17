@@ -168,6 +168,9 @@
     "other": "{n} цæуынц"
   },
   "loader.overview.none": "Ноджы ницы бавгæд.",
+  "loader.overview.page": "Фарс {page} / {pages}",
+  "loader.overview.newer": "Ногдæр",
+  "loader.overview.older": "Зæрондæр",
   "loader.task.boot": "Рольтæ æмæ сæ мета кæсын",
   "loader.task.view": "{view} нывгæнгæ цæуы",
   "loader.task.changes": "GitHub-æй фæрсын, цы аивта",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "нæ рауад: {message}",
+  "loader.task.retry": "Ногæй бавгæнын",
   "feed.actions.pick": "Ацы цыды тесттæ равдисын",
   "feed.actions.ended": "Фæци",
   "feed.actions.duration": "Дæргъ",

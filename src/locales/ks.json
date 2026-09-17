@@ -168,6 +168,9 @@
     "other": "{n} چلان"
   },
   "loader.overview.none": "وۄنۍ تام چھُنہٕ کینٛہہ لوڈ گومُت۔",
+  "loader.overview.page": "صفحہٕ {page} / {pages}",
+  "loader.overview.newer": "نوٚو",
+  "loader.overview.older": "پرون",
   "loader.task.boot": "کِردار تہٕ تِہندۍ میٹا پرنہٕ یِوان",
   "loader.task.view": "{view} بناونہٕ یِوان",
   "loader.task.changes": "GitHub پرٛژھنہٕ یِوان زِ کیاہ بدلیوو",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "آرٹیفیکٹ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناکام: {message}",
+  "loader.task.retry": "دوبارٕ لوڈ کٔرِو",
   "feed.actions.pick": "یَتھ چلُن ہٕنٛد ٹیسٹ ہٲوِو",
   "feed.actions.ended": "ختم گوٚمُت",
   "feed.actions.duration": "مُدَت",

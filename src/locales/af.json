@@ -168,6 +168,9 @@
     "other": "{n} loop"
   },
   "loader.overview.none": "Niks is nog gelaai nie.",
+  "loader.overview.page": "Bladsy {page} van {pages}",
+  "loader.overview.newer": "Nuwer",
+  "loader.overview.older": "Ouer",
   "loader.task.boot": "Lees die rolle en hul meta",
   "loader.task.view": "Teken {view}",
   "loader.task.changes": "Vra GitHub wat verander het",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "misluk: {message}",
+  "loader.task.retry": "Laai weer",
   "feed.actions.pick": "Wys hierdie lopie se toetse",
   "feed.actions.ended": "Geëindig",
   "feed.actions.duration": "Duur",

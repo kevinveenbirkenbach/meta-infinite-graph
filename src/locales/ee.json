@@ -168,6 +168,9 @@
     "other": "{n} le edzi yim"
   },
   "loader.overview.none": "Naneke meva haɖe o.",
+  "loader.overview.page": "Axa {page} le {pages} me",
+  "loader.overview.newer": "Yeyeawo",
+  "loader.overview.older": "Xoxoawo",
   "loader.task.boot": "Ele dɔdeasiwo kple woƒe meta xlẽm",
   "loader.task.view": "Ele {view} ƒe nɔnɔmetata ɖem",
   "loader.task.changes": "Ele GitHub biam nu siwo trɔ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Nuwɔwɔ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mede edzi o: {message}",
+  "loader.task.retry": "Gbugbɔe tsɔ vɛ",
   "feed.actions.pick": "Ɖe wɔwɔ sia ƒe dodokpɔwo fia",
   "feed.actions.ended": "Ewu enu",
   "feed.actions.duration": "Ɣeyiɣi didime",

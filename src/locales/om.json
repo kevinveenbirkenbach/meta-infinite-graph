@@ -168,6 +168,9 @@
     "other": "{n} raawwatamaa jiru"
   },
   "loader.overview.none": "Ammaaf wanti fe'ame hin jiru.",
+  "loader.overview.page": "Fuula {page} / {pages}",
+  "loader.overview.newer": "Haaraa",
+  "loader.overview.older": "Dulloomaa",
   "loader.task.boot": "Gaheewwanii fi meetaa isaanii dubbisaa jira",
   "loader.task.view": "{view} fakkeessaa jira",
   "loader.task.changes": "GitHub waan jijjiirame gaafachaa jira",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artifaaktii {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "hin milkoofne: {message}",
+  "loader.task.retry": "Irra deebi'ii fe'i",
   "feed.actions.pick": "Qormaatota raawwii kanaa agarsiisi",
   "feed.actions.ended": "Xumurame",
   "feed.actions.duration": "Turtii",

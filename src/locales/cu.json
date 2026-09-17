@@ -168,6 +168,9 @@
     "other": "{n} совершаютсѧ"
   },
   "loader.overview.none": "Ничтоже ещё прїѧто бысть.",
+  "loader.overview.page": "Листъ {page} ѿ {pages}",
+  "loader.overview.newer": "Новѣйшаѧ",
+  "loader.overview.older": "Ветшайшаѧ",
   "loader.task.boot": "Чтенїе чинѡвъ и мета ихъ",
   "loader.task.view": "Начертанїе {view}",
   "loader.task.changes": "Вопрошаемъ GitHub, что измѣнисѧ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Издѣлїе {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "падесѧ: {message}",
+  "loader.task.retry": "Паки прїѧти",
   "feed.actions.pick": "Показати искꙋшенїѧ сегѡ совершенїѧ",
   "feed.actions.ended": "Скончанѡ",
   "feed.actions.duration": "Продолженїе",

@@ -168,6 +168,9 @@
     "other": "{n} ажиллаж байна"
   },
   "loader.overview.none": "Одоогоор юу ч ачаалагдаагүй байна.",
+  "loader.overview.page": "Хуудас {page} / {pages}",
+  "loader.overview.newer": "Шинэ",
+  "loader.overview.older": "Хуучин",
   "loader.task.boot": "Үүргүүд болон тэдгээрийн метаг уншиж байна",
   "loader.task.view": "{view} зурж байна",
   "loader.task.changes": "GitHub-аас юу өөрчлөгдсөнийг асууж байна",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "амжилтгүй: {message}",
+  "loader.task.retry": "Дахин ачаалах",
   "feed.actions.pick": "Энэ ажиллалтын тестүүдийг харуулах",
   "feed.actions.ended": "Дууссан",
   "feed.actions.duration": "Үргэлжлэх хугацаа",

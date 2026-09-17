@@ -168,6 +168,9 @@
     "other": "{n} aen cingq yinhhengz"
   },
   "loader.overview.none": "Lij caengz gazcaiq saek yiengh.",
+  "loader.overview.page": "Mbaw {page} / {pages}",
+  "loader.overview.newer": "Moq",
+  "loader.overview.older": "Gaeuq",
   "loader.task.boot": "Cingq doeg gij hong caeuq meta de",
   "loader.task.view": "Cingq veh {view}",
   "loader.task.changes": "Cingq cam GitHub gij bienq le",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Doxgaiq {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "saetbaih: {message}",
+  "loader.task.retry": "Caiq gazcaiq",
   "feed.actions.pick": "Yienh gij sawq aen yinhhengz neix",
   "feed.actions.ended": "Gietsat",
   "feed.actions.duration": "Seizgan",

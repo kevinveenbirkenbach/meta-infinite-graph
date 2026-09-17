@@ -168,6 +168,9 @@
     "other": "{n} ke sala"
   },
   "loader.overview.none": "Kima mosi me nata ntete ve.",
+  "loader.overview.page": "Lukaya {page} muna {pages}",
+  "loader.overview.newer": "Ya mpa",
+  "loader.overview.older": "Ya ntama",
   "loader.task.boot": "Ke tanga bisalu ti meta na yo",
   "loader.task.view": "Ke sona {view}",
   "loader.task.changes": "Ke yufula GitHub yina me soba",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Kima ya nsalulu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "me konda: {message}",
+  "loader.task.retry": "Nata diaka",
   "feed.actions.pick": "Songa bimeka ya nsalulu yai",
   "feed.actions.ended": "Me mana",
   "feed.actions.duration": "Ntangu",

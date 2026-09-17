@@ -159,6 +159,9 @@
     "other": "'oku lele 'a e {n}"
   },
   "loader.overview.none": "Kei 'ikai ha me'a kuo 'uta.",
+  "loader.overview.page": "Peesi {page} 'i he {pages}",
+  "loader.overview.newer": "Fo'ou",
+  "loader.overview.older": "Motu'a",
   "loader.task.boot": "'Oku lau 'a e ngaahi fatongia mo honau meta",
   "loader.task.view": "'Oku tā 'a e {view}",
   "loader.task.changes": "'Oku 'eke ki he GitHub pe ko e hā na'e liliu",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "'Ātifeki {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "tō: {message}",
+  "loader.task.retry": "Toe 'uta",
   "feed.actions.pick": "Fakahā 'a e ngaahi sivi 'o e lele ko 'eni",
   "feed.actions.ended": "Ngata",
   "feed.actions.duration": "Lōloa 'o e taimi",

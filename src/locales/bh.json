@@ -168,6 +168,9 @@
     "other": "{n} गो चल रहल बा"
   },
   "loader.overview.none": "अबहीं ले कुछुओ लोड ना भइल बा।",
+  "loader.overview.page": "पन्ना {page} / {pages}",
+  "loader.overview.newer": "नया",
+  "loader.overview.older": "पुरान",
   "loader.task.boot": "रोल आ ओकनी के मेटा पढ़ल जा रहल बा",
   "loader.task.view": "{view} बनावल जा रहल बा",
   "loader.task.changes": "GitHub से पूछल जा रहल बा कि का बदलल",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "आर्टिफैक्ट {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "फेल: {message}",
+  "loader.task.retry": "फेर से लोड करीं",
   "feed.actions.pick": "एह रन के परीक्षण देखाईं",
   "feed.actions.ended": "खतम भइल",
   "feed.actions.duration": "अवधि",

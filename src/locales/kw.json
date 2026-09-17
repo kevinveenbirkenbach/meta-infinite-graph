@@ -204,6 +204,9 @@
     "other": "{n} ow resek"
   },
   "loader.overview.none": "Ny veu travyth kargys hwath.",
+  "loader.overview.page": "Folen {page} a {pages}",
+  "loader.overview.newer": "Nowyttha",
+  "loader.overview.older": "Kottha",
   "loader.task.boot": "Ow redya an rolyow ha’ga meta",
   "loader.task.view": "Ow tenna {view}",
   "loader.task.changes": "Ow govyn orth GitHub pyth a janjyas",
@@ -213,6 +216,7 @@
   "loader.task.artifact": "Artefact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fyllis: {message}",
+  "loader.task.retry": "Daskarga",
   "feed.actions.pick": "Diskwedhes provow an res ma",
   "feed.actions.ended": "Gorfennys",
   "feed.actions.duration": "Hys",

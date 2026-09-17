@@ -177,6 +177,9 @@
     "other": "{n} пырать"
   },
   "loader.overview.none": "Халлӗхе нимӗн те тиенмен.",
+  "loader.overview.page": "Страница {page} / {pages}",
+  "loader.overview.newer": "Ҫӗнӗрех",
+  "loader.overview.older": "Кивӗрех",
   "loader.task.boot": "Рольсемпе вӗсен meta вуланать",
   "loader.task.view": "{view} ӳкерӗнет",
   "loader.task.changes": "GitHub-ран мӗн улшӑннине ыйтатпӑр",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ӑнӑҫсӑр: {message}",
+  "loader.task.retry": "Ҫӗнӗрен тие",
   "feed.actions.pick": "Ҫак ӗҫлетнин тестсене кӑтарт",
   "feed.actions.ended": "Вӗҫленнӗ",
   "feed.actions.duration": "Вӑхӑт тӑршшӗ",

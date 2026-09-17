@@ -168,6 +168,9 @@
     "other": "{n} dixebitin"
   },
   "loader.overview.none": "Hêj tiştek nehatiye barkirin.",
+  "loader.overview.page": "Rûpel {page} ji {pages}",
+  "loader.overview.newer": "Nûtir",
+  "loader.overview.older": "Kevntir",
   "loader.task.boot": "Rol û meta ya wan tên xwendin",
   "loader.task.view": "{view} tê xêzkirin",
   "loader.task.changes": "Ji GitHub tê pirsîn ka çi guherî",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "bi ser neket: {message}",
+  "loader.task.retry": "Dîsa bar bike",
   "feed.actions.pick": "Ceribandinên vê xebitandinê nîşan bide",
   "feed.actions.ended": "Qediya",
   "feed.actions.duration": "Dirêjahî",

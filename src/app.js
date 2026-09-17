@@ -118,7 +118,8 @@ loader.track('*', gitRange.load()
     testsView.track = (promise, label) => loader.track('playwright', promise, label);
     codeView.track = (promise, label) => loader.track(currentView(), promise, label);
     feeds.warnings.track = (promise, label) => loader.track('warnings', promise, label);
-    testsView.runs.onLoad = (name, promise) => loader.track(null, promise, t('loader.task.artifact', { name }));
+    testsView.runs.onLoad = (name, promise, retry) => loader
+      .track(null, promise, t('loader.task.artifact', { name }), retry);
     forkTree.api.onFetch = (path, promise) => loader.track(null, promise, t('loader.task.github', { path }));
     const autoResolver = new AutoResolver();
     const uiManager = new UIManager(
@@ -192,7 +193,7 @@ loader.track('*', gitRange.load()
       urlState.capture();
       window.__mig = {
         metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
-        testsView, codeView, codeTests, annotations, dataLoader, gitRange, feeds, matrixView, popup,
+        testsView, codeView, codeTests, annotations, dataLoader, gitRange, feeds, matrixView, popup, loader,
         graph: graphRenderer.graph,
       };
     });

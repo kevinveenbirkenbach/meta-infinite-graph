@@ -168,6 +168,9 @@
     "other": "{n} ընթացքում"
   },
   "loader.overview.none": "Դեռ ոչինչ չի բեռնվել։",
+  "loader.overview.page": "Էջ {page} / {pages}",
+  "loader.overview.newer": "Ավելի նոր",
+  "loader.overview.older": "Ավելի հին",
   "loader.task.boot": "Դերերի և դրանց մետատվյալների ընթերցում",
   "loader.task.view": "{view}-ի գծագրում",
   "loader.task.changes": "GitHub-ին հարցում, թե ինչ է փոխվել",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Արտեֆակտ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ձախողված՝ {message}",
+  "loader.task.retry": "Բեռնել կրկին",
   "feed.actions.pick": "Ցույց տալ այս գործարկման թեստերը",
   "feed.actions.ended": "Ավարտված",
   "feed.actions.duration": "Տևողություն",

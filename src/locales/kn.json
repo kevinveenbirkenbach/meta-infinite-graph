@@ -168,6 +168,9 @@
     "other": "{n} ಚಾಲನೆಯಲ್ಲಿವೆ"
   },
   "loader.overview.none": "ಇನ್ನೂ ಏನೂ ಲೋಡ್ ಆಗಿಲ್ಲ.",
+  "loader.overview.page": "ಪುಟ {page} / {pages}",
+  "loader.overview.newer": "ಹೊಸವು",
+  "loader.overview.older": "ಹಳೆಯವು",
   "loader.task.boot": "ಪಾತ್ರಗಳು ಮತ್ತು ಅವುಗಳ ಮೆಟಾವನ್ನು ಓದಲಾಗುತ್ತಿದೆ",
   "loader.task.view": "{view} ಅನ್ನು ಚಿತ್ರಿಸಲಾಗುತ್ತಿದೆ",
   "loader.task.changes": "ಏನು ಬದಲಾಗಿದೆ ಎಂದು GitHub ಅನ್ನು ಕೇಳಲಾಗುತ್ತಿದೆ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ಆರ್ಟಿಫ್ಯಾಕ್ಟ್ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ವಿಫಲ: {message}",
+  "loader.task.retry": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ",
   "feed.actions.pick": "ಈ ಚಾಲನೆಯ ಪರೀಕ್ಷೆಗಳನ್ನು ತೋರಿಸಿ",
   "feed.actions.ended": "ಮುಗಿದಿದೆ",
   "feed.actions.duration": "ಅವಧಿ",

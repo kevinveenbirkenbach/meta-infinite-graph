@@ -168,6 +168,9 @@
     "other": "{n} पवत्तन्ति"
   },
   "loader.overview.none": "न किञ्चि ताव आरोपितं।",
+  "loader.overview.page": "पिट्ठं {page} / {pages}",
+  "loader.overview.newer": "नवानि",
+  "loader.overview.older": "पुराणानि",
   "loader.task.boot": "किच्चानि तेसं meta च पठीयन्ति",
   "loader.task.view": "{view} लिखीयति",
   "loader.task.changes": "GitHub पुच्छीयति किं परिवत्तितं",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "कतभण्डं {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "विफलं: {message}",
+  "loader.task.retry": "पुन आरोपेहि",
   "feed.actions.pick": "इमस्स पवत्तनस्स परिक्खा दस्सेहि",
   "feed.actions.ended": "निट्ठितं",
   "feed.actions.duration": "कालपरिमाणं",

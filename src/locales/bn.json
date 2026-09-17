@@ -168,6 +168,9 @@
     "other": "{n}টি চলছে"
   },
   "loader.overview.none": "এখনও কিছু লোড হয়নি।",
+  "loader.overview.page": "পৃষ্ঠা {page} / {pages}",
+  "loader.overview.newer": "নতুন",
+  "loader.overview.older": "পুরোনো",
   "loader.task.boot": "রোল ও তাদের মেটা পড়া হচ্ছে",
   "loader.task.view": "{view} আঁকা হচ্ছে",
   "loader.task.changes": "কী বদলেছে GitHub-কে জিজ্ঞাসা করা হচ্ছে",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "আর্টিফ্যাক্ট {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ব্যর্থ: {message}",
+  "loader.task.retry": "আবার লোড করুন",
   "feed.actions.pick": "এই রানের পরীক্ষাগুলো দেখান",
   "feed.actions.ended": "শেষ",
   "feed.actions.duration": "সময়কাল",

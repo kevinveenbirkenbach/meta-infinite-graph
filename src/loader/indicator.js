@@ -2,7 +2,7 @@ import { html, render } from '../html.js';
 import { t } from '../i18n.js';
 
 const RADIUS = 6;
-const KEEP = 30;
+const KEEP = 400;
 
 // Returns: the pie slice covering fraction of the circle, clockwise from twelve.
 function slice(fraction) {
@@ -32,10 +32,11 @@ export class Loader {
   //     work that is listed but never turns the circle.
   //   result: what the work returned; only a promise is waited for.
   //   label: what the overview calls it, or () => that text as it changes.
+  //   retry: runs the same work again, offered on the failed task.
   // Returns: result, untouched.
-  track(view, result, label = /** @type {string | (() => string)} */ ('')) {
+  track(view, result, label = /** @type {string | (() => string)} */ (''), retry = null) {
     if (!result || typeof result.then !== 'function') return result;
-    const task = { view, label, state: 'loading', started: Date.now(), ended: null, error: null };
+    const task = { view, label, retry, state: 'loading', started: Date.now(), ended: null, error: null };
     this.tasks.unshift(task);
     const finished = this.tasks.filter(one => one.state !== 'loading');
     for (const stale of finished.slice(KEEP)) this.tasks.splice(this.tasks.indexOf(stale), 1);

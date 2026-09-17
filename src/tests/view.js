@@ -15,6 +15,7 @@ export class TestsView extends TestsCatalog {
     this.cardHost = cardHost;
     this.container = container;
     this.runs = runs;
+    runs.onChange = () => this._soon();
     this.root = el('div', { className: 'table-section' });
     this.section = false;
     this.loaded = null;

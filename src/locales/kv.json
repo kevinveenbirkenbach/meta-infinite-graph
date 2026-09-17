@@ -168,6 +168,9 @@
     "other": "{n} мунӧ"
   },
   "loader.overview.none": "Нинӧм на абу пыртӧма.",
+  "loader.overview.page": "Листбок {page} / {pages}",
+  "loader.overview.newer": "Выльджыкъяс",
+  "loader.overview.older": "Важджыкъяс",
   "loader.task.boot": "Рольяс да найӧ метаданнӧйяс лыддьӧм",
   "loader.task.view": "{view} серпасалӧм",
   "loader.task.changes": "GitHub-ысь юалӧм, мый вежсьӧма",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "эз артмы: {message}",
+  "loader.task.retry": "Выльысь пыртны",
   "feed.actions.pick": "Петкӧдлыны тайӧ уджалӧмлысь тестъяс",
   "feed.actions.ended": "Помасис",
   "feed.actions.duration": "Кузта",

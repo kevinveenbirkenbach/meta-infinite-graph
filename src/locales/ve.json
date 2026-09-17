@@ -168,6 +168,9 @@
     "other": "{n} zwi khou tshimbila"
   },
   "loader.overview.none": "A hu na tshe tsha hwaliwa zwazwino.",
+  "loader.overview.page": "Siaṱari {page} kha {pages}",
+  "loader.overview.newer": "Ntswa",
+  "loader.overview.older": "Kale",
   "loader.task.boot": "Mishumo na meta yayo i khou vhaliwa",
   "loader.task.view": "{view} i khou olwa",
   "loader.task.changes": "GitHub i khou vhudziswa zwo shandukaho",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Tshibveledzwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zwo kundelwa: {message}",
+  "loader.task.retry": "Hwala hafhu",
   "feed.actions.pick": "Sumbedza ndingo dza tshimbidzo iyi",
   "feed.actions.ended": "Zwo fhela",
   "feed.actions.duration": "Tshifhinga tsho dzhiiwaho",

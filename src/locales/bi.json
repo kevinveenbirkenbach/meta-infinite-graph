@@ -168,6 +168,9 @@
     "other": "{n} i stap ron"
   },
   "loader.overview.none": "I no gat wan samting i lod yet.",
+  "loader.overview.page": "Pej {page} long {pages}",
+  "loader.overview.newer": "Niufala",
+  "loader.overview.older": "Olfala",
   "loader.task.boot": "I stap ridim ol rol mo meta blong olgeta",
   "loader.task.view": "I stap droem {view}",
   "loader.task.changes": "I stap askem GitHub wanem i jenis",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Atifak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "i fel: {message}",
+  "loader.task.retry": "Lodem bakegen",
   "feed.actions.pick": "Soem ol tes blong ron ia",
   "feed.actions.ended": "I finis",
   "feed.actions.duration": "Hamas taem",

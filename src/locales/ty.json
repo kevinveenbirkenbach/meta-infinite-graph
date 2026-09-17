@@ -168,6 +168,9 @@
     "other": "{n} te horo nei"
   },
   "loader.overview.none": "ʻAita ā e mea i faʻaʻīhia.",
+  "loader.overview.page": "ʻApi {page} nō roto i te {pages}",
+  "loader.overview.newer": "ʻĀpī",
+  "loader.overview.older": "Tahito",
   "loader.task.boot": "Te taiʻo nei i te mau tōroʻa e tō rātou meta",
   "loader.task.view": "Te pāpaʻi nei i te {view}",
   "loader.task.changes": "Te ui nei iā GitHub eaha tei taui",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ʻAretefata {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ʻaita i manuïa: {message}",
+  "loader.task.retry": "Faʻaʻī faʻahou",
   "feed.actions.pick": "Faʻaʻite i te mau tāmataraʻa o teie horoʻaraʻa",
   "feed.actions.ended": "Haʻaotihia",
   "feed.actions.duration": "Roaraʻa",

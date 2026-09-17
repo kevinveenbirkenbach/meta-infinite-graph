@@ -168,6 +168,9 @@
     "other": "{n} socda"
   },
   "loader.overview.none": "Weli waxba lama soo rarin.",
+  "loader.overview.page": "Bog {page} ee {pages}",
+  "loader.overview.newer": "Cusub",
+  "loader.overview.older": "Hore",
   "loader.task.boot": "Waxaa la akhrinayaa doorarka iyo meta-dooda",
   "loader.task.view": "Waxaa la sawirayaa {view}",
   "loader.task.changes": "GitHub waxaa la weydiinayaa waxa isbeddelay",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Wax-soo-saar {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fashilmay: {message}",
+  "loader.task.retry": "Dib u soo rar",
   "feed.actions.pick": "Muuji tijaabooyinka socodsiintan",
   "feed.actions.ended": "Dhammaaday",
   "feed.actions.duration": "Muddada",

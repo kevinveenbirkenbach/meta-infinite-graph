@@ -177,6 +177,9 @@
     "other": "{n} בתהליך"
   },
   "loader.overview.none": "עדיין לא נטען דבר.",
+  "loader.overview.page": "עמוד {page} מתוך {pages}",
+  "loader.overview.newer": "חדשים יותר",
+  "loader.overview.older": "ישנים יותר",
   "loader.task.boot": "קורא את התפקידים ואת המטא שלהם",
   "loader.task.view": "מצייר את {view}",
   "loader.task.changes": "שואל את GitHub מה השתנה",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "ארטיפקט {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "נכשל: {message}",
+  "loader.task.retry": "טעינה מחדש",
   "feed.actions.pick": "הצגת הבדיקות של הרצה זו",
   "feed.actions.ended": "הסתיים",
   "feed.actions.duration": "משך",

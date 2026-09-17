@@ -177,6 +177,9 @@
     "other": "{n} în desfășurare"
   },
   "loader.overview.none": "Nu s-a încărcat încă nimic.",
+  "loader.overview.page": "Pagina {page} din {pages}",
+  "loader.overview.newer": "Mai noi",
+  "loader.overview.older": "Mai vechi",
   "loader.task.boot": "Se citesc rolurile și metadatele lor",
   "loader.task.view": "Se desenează {view}",
   "loader.task.changes": "Se întreabă GitHub ce s-a schimbat",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "Artefactul {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "a eșuat: {message}",
+  "loader.task.retry": "Încarcă din nou",
   "feed.actions.pick": "Afișează testele acestei rulări",
   "feed.actions.ended": "Încheiat",
   "feed.actions.duration": "Durată",

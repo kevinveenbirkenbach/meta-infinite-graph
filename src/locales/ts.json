@@ -168,6 +168,9 @@
     "other": "{n} ka ha tirha"
   },
   "loader.overview.none": "Ku hava lexi layichiweke ku fikela sweswi.",
+  "loader.overview.page": "Tluka {page} eka {pages}",
+  "loader.overview.newer": "Leswintshwa",
+  "loader.overview.older": "Swa khale",
   "loader.task.boot": "Ku hlaya mintirho na meta ya yona",
   "loader.task.view": "Ku dirowa {view}",
   "loader.task.changes": "Ku vutisa GitHub leswi cinciweke",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Xiendliwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "swi tsandzekile: {message}",
+  "loader.task.retry": "Layicha nakambe",
   "feed.actions.pick": "Kombisa swikambelo swa ku tirha loku",
   "feed.actions.ended": "Herile",
   "feed.actions.duration": "Vulehi bya nkarhi",

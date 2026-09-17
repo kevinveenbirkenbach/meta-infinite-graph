@@ -17,6 +17,7 @@ export class TestRuns {
     this.artifacts = [];
     this.unpacked = new Map();
     this.onLoad = null;
+    this.onChange = null;
   }
 
   // Returns: { done, total } over the picked run's artifacts.
@@ -105,20 +106,34 @@ export class TestRuns {
     if (!this.unpacked.has(id)) {
       const query = new URLSearchParams({ id: String(id), repo: this.repo || this.root() });
       const entry = { state: 'loading', answer: null, error: null, promise: null };
+      const settled = () => {
+        if (this.onChange) this.onChange();
+      };
       entry.promise = fetch(`/git/artifact?${query}`).then(async response => {
         const body = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(body.error || `HTTP ${response.status}`);
         Object.assign(entry, { state: 'done', answer: body });
+        settled();
         return body;
       }).catch(error => {
         Object.assign(entry, { state: 'error', error });
+        settled();
         throw error;
       });
       this.unpacked.set(id, entry);
       const artifact = this.artifacts.find(one => one.id === id);
-      if (this.onLoad) this.onLoad(artifact ? artifact.name : String(id), entry.promise);
+      if (this.onLoad) this.onLoad(artifact ? artifact.name : String(id), entry.promise, () => this.reload(id));
     }
     return this.unpacked.get(id).promise;
+  }
+
+  // Args:
+  //   id: the artifact to ask the server for again, whatever it answered before.
+  // Returns: the promise of the fresh attempt, which fails like the first one.
+  reload(id) {
+    this.unpacked.delete(id);
+    if (this.onChange) this.onChange();
+    return this.load(id).catch(() => null);
   }
 
   retry() {

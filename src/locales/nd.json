@@ -168,6 +168,9 @@
     "other": "{n} kuyaqhubeka"
   },
   "loader.overview.none": "Akukho okulayishiweyo okwamanje.",
+  "loader.overview.page": "Ikhasi {page} kwangu {pages}",
+  "loader.overview.newer": "Okutsha",
+  "loader.overview.older": "Okudala",
   "loader.task.boot": "Kufundwa izindima le-meta yazo",
   "loader.task.view": "Kudwetshwa {view}",
   "loader.task.changes": "Kubuzwa ku-GitHub okuguqukileyo",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "I-athifakthi {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kwehlulekile: {message}",
+  "loader.task.retry": "Layisha kabutsha",
   "feed.actions.pick": "Tshengisa izivivinyo zalokhu kuqhutshwa",
   "feed.actions.ended": "Kuphelile",
   "feed.actions.duration": "Isikhathi",

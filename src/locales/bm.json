@@ -159,6 +159,9 @@
     "other": "{n} bɛ boli la"
   },
   "loader.overview.none": "Foyi ma doni fɔlɔ.",
+  "loader.overview.page": "Ɲɛ {page} / {pages}",
+  "loader.overview.newer": "Kura",
+  "loader.overview.older": "Kɔrɔ",
   "loader.task.boot": "Jɔyɔrɔw n'u ka meta bɛ kalan",
   "loader.task.view": "{view} bɛ ja",
   "loader.task.changes": "Ka GitHub ɲininka min yɛlɛmana",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Artefakiti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "a ma ɲɛ: {message}",
+  "loader.task.retry": "A doni tugun",
   "feed.actions.pick": "Nin boli in kɔrɔbɔliw jira",
   "feed.actions.ended": "A banna",
   "feed.actions.duration": "Waati hakɛ",

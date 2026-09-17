@@ -186,6 +186,9 @@
     "other": "{n} beží"
   },
   "loader.overview.none": "Zatiaľ sa nič nenačítalo.",
+  "loader.overview.page": "Stránka {page} z {pages}",
+  "loader.overview.newer": "Novšie",
+  "loader.overview.older": "Staršie",
   "loader.task.boot": "Čítajú sa roly a ich metadáta",
   "loader.task.view": "Vykresľuje sa {view}",
   "loader.task.changes": "Zisťuje sa z GitHubu, čo sa zmenilo",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zlyhalo: {message}",
+  "loader.task.retry": "Načítať znova",
   "feed.actions.pick": "Zobraziť testy tohto behu",
   "feed.actions.ended": "Skončené",
   "feed.actions.duration": "Trvanie",

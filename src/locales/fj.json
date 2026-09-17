@@ -168,6 +168,9 @@
     "other": "{n} sa cici tiko"
   },
   "loader.overview.none": "Sa bera ni vakavodoki e dua na ka.",
+  "loader.overview.page": "Tabana {page} mai na {pages}",
+  "loader.overview.newer": "Vou",
+  "loader.overview.older": "Makawa",
   "loader.task.boot": "Wiliki tiko na itavi kei na nodra meta",
   "loader.task.view": "Droini tiko na {view}",
   "loader.task.changes": "Taroga tiko na GitHub se cava e veisau",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Ka buli {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "sega ni rawa: {message}",
+  "loader.task.retry": "Vakacuruma tale",
   "feed.actions.pick": "Vakaraitaka na vakatovotovo ni cici oqo",
   "feed.actions.ended": "Oti",
   "feed.actions.duration": "Balavu ni gauna",

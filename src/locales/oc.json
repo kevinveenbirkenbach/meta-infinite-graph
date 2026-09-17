@@ -168,6 +168,9 @@
     "other": "{n} en cors"
   },
   "loader.overview.none": "Res es pas encara estat cargat.",
+  "loader.overview.page": "Pagina {page} sus {pages}",
+  "loader.overview.newer": "Mai recents",
+  "loader.overview.older": "Mai ancians",
   "loader.task.boot": "Lectura dels ròtles e de lors metadonadas",
   "loader.task.view": "Dessenh de {view}",
   "loader.task.changes": "Demanda a GitHub de çò que cambièt",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefacte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fracàs: {message}",
+  "loader.task.retry": "Recargar",
   "feed.actions.pick": "Afichar los tèsts d'aquesta execucion",
   "feed.actions.ended": "Acabat",
   "feed.actions.duration": "Durada",

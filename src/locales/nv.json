@@ -168,6 +168,9 @@
     "other": "{n} tʼah naʼanish"
   },
   "loader.overview.none": "Tʼah doo naaltʼeeh da.",
+  "loader.overview.page": "Naaltsoos {page} / {pages}",
+  "loader.overview.newer": "Ániidí",
+  "loader.overview.older": "Ałkʼidą́ą́ʼ",
   "loader.task.boot": "Naanish dóó bimeta yíníłtaʼ",
   "loader.task.view": "{view} ályaa",
   "loader.task.changes": "GitHub bínáádééłkid ánáádlaaígíí",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Ádaalyaaígíí {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "doo yiiłtsą́ą́ da: {message}",
+  "loader.task.retry": "Nááʼádíílííł",
   "feed.actions.pick": "Díí naʼanish bee nídaʼídíłkid ííshjání ádíílííł",
   "feed.actions.ended": "Ałtso",
   "feed.actions.duration": "Bínáá",

@@ -168,6 +168,9 @@
     "other": "{n} bikidi kwendeja"
   },
   "loader.overview.none": "Kintu nansha kimo kekyaletwapo.",
+  "loader.overview.page": "Paje {page} mu {pages}",
+  "loader.overview.newer": "Bipya",
+  "loader.overview.older": "Bya kala",
   "loader.task.boot": "Kutanga mingilo ne meta yayo",
   "loader.task.view": "Kufunda {view}",
   "loader.task.changes": "Kwipangula GitHub byashinta",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kwakankalwa: {message}",
+  "loader.task.retry": "Leta monka",
   "feed.actions.pick": "Mwesha matompo a kuno kwendeja",
   "feed.actions.ended": "Kyapwile",
   "feed.actions.duration": "Bule bwa kitatyi",

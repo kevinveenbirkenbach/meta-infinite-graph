@@ -168,6 +168,9 @@
     "other": "{n} zviri kumhanya"
   },
   "loader.overview.none": "Hapana chakarodhwa parizvino.",
+  "loader.overview.page": "Peji {page} pane {pages}",
+  "loader.overview.newer": "Zvitsva",
+  "loader.overview.older": "Zvekare",
   "loader.task.boot": "Kuverenga mabasa nemeta yawo",
   "loader.task.view": "Kudhirowa {view}",
   "loader.task.changes": "Kubvunza GitHub zvachinja",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Chigadzirwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "zvakundikana: {message}",
+  "loader.task.retry": "Rodha zvakare",
   "feed.actions.pick": "Ratidza miedzo yekumhanya uku",
   "feed.actions.ended": "Zvakapera",
   "feed.actions.duration": "Kureba kwenguva",

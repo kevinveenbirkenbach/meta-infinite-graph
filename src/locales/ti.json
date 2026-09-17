@@ -168,6 +168,9 @@
     "other": "{n} ይሰርሑ ኣለዉ"
   },
   "loader.overview.none": "ክሳብ ሕጂ ዝተጻዕነ የለን።",
+  "loader.overview.page": "ገጽ {page} ካብ {pages}",
+  "loader.overview.newer": "ሓደስቲ",
+  "loader.overview.older": "ነባራት",
   "loader.task.boot": "ግደታትን ሜታኦምን ይንበቡ ኣለዉ",
   "loader.task.view": "{view} ይስኣል ኣሎ",
   "loader.task.changes": "GitHub እንታይ ከም ዝተቐየረ ይሕተት ኣሎ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ኣርቲፋክት {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ፈሺሉ: {message}",
+  "loader.task.retry": "ዳግማይ ጽዓን",
   "feed.actions.pick": "ፈተናታት ናይዚ ምስራሕ ኣርኢ",
   "feed.actions.ended": "ዝተወደአ",
   "feed.actions.duration": "ንውሓት ግዜ",

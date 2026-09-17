@@ -159,6 +159,9 @@
     "other": "{n} đang chạy"
   },
   "loader.overview.none": "Chưa có gì được tải.",
+  "loader.overview.page": "Trang {page} / {pages}",
+  "loader.overview.newer": "Mới hơn",
+  "loader.overview.older": "Cũ hơn",
   "loader.task.boot": "Đang đọc vai trò và meta của chúng",
   "loader.task.view": "Đang vẽ {view}",
   "loader.task.changes": "Đang hỏi GitHub những gì đã thay đổi",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Tạo phẩm {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "thất bại: {message}",
+  "loader.task.retry": "Tải lại",
   "feed.actions.pick": "Hiển thị các kiểm thử của lượt chạy này",
   "feed.actions.ended": "Kết thúc",
   "feed.actions.duration": "Thời lượng",

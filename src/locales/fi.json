@@ -168,6 +168,9 @@
     "other": "{n} käynnissä"
   },
   "loader.overview.none": "Mitään ei ole vielä ladattu.",
+  "loader.overview.page": "Sivu {page} / {pages}",
+  "loader.overview.newer": "Uudemmat",
+  "loader.overview.older": "Vanhemmat",
   "loader.task.boot": "Luetaan rooleja ja niiden metatietoja",
   "loader.task.view": "Piirretään: {view}",
   "loader.task.changes": "Kysytään GitHubilta, mikä muuttui",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "epäonnistui: {message}",
+  "loader.task.retry": "Lataa uudelleen",
   "feed.actions.pick": "Näytä tämän ajon testit",
   "feed.actions.ended": "Päättynyt",
   "feed.actions.duration": "Kesto",

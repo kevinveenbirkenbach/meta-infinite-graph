@@ -195,6 +195,9 @@
     "other": "{n} ec roie"
   },
   "loader.overview.none": "Cha nel veg er ny laadey foast.",
+  "loader.overview.page": "Duillag {page} ass {pages}",
+  "loader.overview.newer": "S'noa",
+  "loader.overview.older": "S'shenn",
   "loader.task.boot": "Lhaih ny ayrnyn as nyn meta",
   "loader.task.view": "Tayrn {view}",
   "loader.task.changes": "Fenaght jeh GitHub cre ta er chaghlaa",
@@ -204,6 +207,7 @@
   "loader.task.artifact": "Artefact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "failleil: {message}",
+  "loader.task.retry": "Laad reesht",
   "feed.actions.pick": "Soilshee prowallyn y roie shoh",
   "feed.actions.ended": "Er jerrey",
   "feed.actions.duration": "Mayrnaght",

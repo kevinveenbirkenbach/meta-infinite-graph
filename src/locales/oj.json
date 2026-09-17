@@ -168,6 +168,9 @@
     "other": "{n} noongom maajiibizowag"
   },
   "loader.overview.none": "Gaawiin gegoo biidoonjigaadesinoon.",
+  "loader.overview.page": "Mazina'igan {page} / {pages}",
+  "loader.overview.newer": "Oshki",
+  "loader.overview.older": "Gete",
   "loader.task.boot": "Agindaasowin anokiiwinan miinawaa meta",
   "loader.task.view": "Mazinibii'igaade {view}",
   "loader.task.changes": "Gagwedwewin GitHub wegonen gaa-aanjisemagak",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Ozhichigan {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gaawiin gii-gashkitoosiin: {message}",
+  "loader.task.retry": "Miinawaa biidoon",
   "feed.actions.pick": "Waabanda'iwen o'ow maajiibizowin gagwejitoowinan",
   "feed.actions.ended": "Gii-giizhitaa",
   "feed.actions.duration": "Apiichi-ginwenzh",

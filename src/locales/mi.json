@@ -168,6 +168,9 @@
     "other": "{n} e rere ana"
   },
   "loader.overview.none": "Kāore anō tētahi mea kia utaina.",
+  "loader.overview.page": "Whārangi {page} o {pages}",
+  "loader.overview.newer": "Hou ake",
+  "loader.overview.older": "Tawhito ake",
   "loader.task.boot": "E pānui ana i ngā tūranga me ō rātou meta",
   "loader.task.view": "E tuhi ana i {view}",
   "loader.task.changes": "E pātai ana ki a GitHub he aha i huri",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Taonga hanga {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "i rahua: {message}",
+  "loader.task.retry": "Uta anō",
   "feed.actions.pick": "Whakaaturia ngā whakamātautau o tēnei rerenga",
   "feed.actions.ended": "I mutu",
   "feed.actions.duration": "Roanga",

@@ -168,6 +168,9 @@
     "other": "{n} ingerlapput"
   },
   "loader.overview.none": "Suli sumik aaneqanngilaq.",
+  "loader.overview.page": "Qupperneq {page} / {pages}",
+  "loader.overview.newer": "Nutaat",
+  "loader.overview.older": "Pisoqaat",
   "loader.task.boot": "Atorfiit metaallu atuarneqarput",
   "loader.task.view": "{view} titartarneqarpoq",
   "loader.task.changes": "GitHub apeqqutigineqarpoq suut allanngorsimanersut",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "iluatsinngilaq: {message}",
+  "loader.task.retry": "Nutaamik aajuk",
   "feed.actions.pick": "Ingerlatsinerup matuma misiliutai takutikkit",
   "feed.actions.ended": "Naammassineqarpoq",
   "feed.actions.duration": "Sivisussusia",

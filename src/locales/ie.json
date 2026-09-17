@@ -168,6 +168,9 @@
     "other": "{n} in curse"
   },
   "loader.overview.none": "Ancor nequó ha esset cargat.",
+  "loader.overview.page": "Págine {page} de {pages}",
+  "loader.overview.newer": "Plu nov",
+  "loader.overview.older": "Plu ancian",
   "loader.task.boot": "Leente li roles e lor meta",
   "loader.task.view": "Designante {view}",
   "loader.task.changes": "Questionante GitHub pri quo ha changeat",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefacte {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallit: {message}",
+  "loader.task.retry": "Recargar",
   "feed.actions.pick": "Monstrar li testes de ti-ci execution",
   "feed.actions.ended": "Finit",
   "feed.actions.duration": "Durada",

@@ -168,6 +168,9 @@
     "other": "{n} in esecuzione"
   },
   "loader.overview.none": "Nunda hè statu caricatu per avà.",
+  "loader.overview.page": "Pagina {page} di {pages}",
+  "loader.overview.newer": "Più recenti",
+  "loader.overview.older": "Più vechji",
   "loader.task.boot": "Lettura di i roli è di i so meta",
   "loader.task.view": "Disegnu di {view}",
   "loader.task.changes": "Dumanda à GitHub ciò chì hè cambiatu",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefattu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallitu: {message}",
+  "loader.task.retry": "Ricaricà",
   "feed.actions.pick": "Mustrà e prove di sta esecuzione",
   "feed.actions.ended": "Finitu",
   "feed.actions.duration": "Durata",

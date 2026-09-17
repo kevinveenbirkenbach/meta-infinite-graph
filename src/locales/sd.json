@@ -168,6 +168,9 @@
     "other": "{n} هلي رهيا آهن"
   },
   "loader.overview.none": "اڃا تائين ڪجهه به لوڊ نه ٿيو آهي.",
+  "loader.overview.page": "صفحو {page} / {pages}",
+  "loader.overview.newer": "نوان",
+  "loader.overview.older": "پراڻا",
   "loader.task.boot": "ڪردار ۽ انهن جو ميٽا پڙهيو پيو وڃي",
   "loader.task.view": "{view} ٺاهيو پيو وڃي",
   "loader.task.changes": "GitHub کان پڇيو پيو وڃي ته ڇا بدليو",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "آرٽيفيڪٽ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناڪام: {message}",
+  "loader.task.retry": "ٻيهر لوڊ ڪريو",
   "feed.actions.pick": "هن رن جا ٽيسٽ ڏيکاريو",
   "feed.actions.ended": "ختم ٿيو",
   "feed.actions.duration": "مدو",

@@ -168,6 +168,9 @@
     "other": "{n} кхочушйеш ю"
   },
   "loader.overview.none": "ХӀинца а цхьа а хӀума чуйоьллина дац.",
+  "loader.overview.page": "АгӀо {page} / {pages}",
+  "loader.overview.newer": "Керла",
+  "loader.overview.older": "Шира",
   "loader.task.boot": "Рольш а, церан мета а йоьшуш",
   "loader.task.view": "{view} сурт хӀоттош",
   "loader.task.changes": "GitHub-ера хоттуш: хӀун хийцаделла",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ца делла: {message}",
+  "loader.task.retry": "Юха чуяккха",
   "feed.actions.pick": "ХӀокху кхочушдаран тесташ гайта",
   "feed.actions.ended": "Чекхъелла",
   "feed.actions.duration": "Йохалла",

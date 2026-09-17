@@ -159,6 +159,9 @@
     "other": "{n} keur jalan"
   },
   "loader.overview.none": "Can aya nu dimuat.",
+  "loader.overview.page": "Kaca {page} tina {pages}",
+  "loader.overview.newer": "Leuwih anyar",
+  "loader.overview.older": "Leuwih heubeul",
   "loader.task.boot": "Maca peran jeung meta-na",
   "loader.task.view": "Ngagambar {view}",
   "loader.task.changes": "Nanya ka GitHub naon nu robah",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
+  "loader.task.retry": "Muat deui",
   "feed.actions.pick": "Témbongkeun tés pajalanan ieu",
   "feed.actions.ended": "Réngsé",
   "feed.actions.duration": "Lilana",

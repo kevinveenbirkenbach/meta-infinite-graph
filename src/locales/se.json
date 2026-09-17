@@ -177,6 +177,9 @@
     "other": "{n} vuodjimin"
   },
   "loader.overview.none": "Ii mihkkege leat vel viežžojuvvon.",
+  "loader.overview.page": "Siidu {page} / {pages}",
+  "loader.overview.newer": "Ođđasat",
+  "loader.overview.older": "Boarrásat",
   "loader.task.boot": "Lohká rollaid ja daid metadieđuid",
   "loader.task.view": "Sárgu {view}",
   "loader.task.changes": "Jearrá GitHubas mii rievddai",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "Artefákta {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ii lihkostuvvan: {message}",
+  "loader.task.retry": "Viežža ođđasit",
   "feed.actions.pick": "Čájet dán vuodjima testaid",
   "feed.actions.ended": "Loahpahuvvon",
   "feed.actions.duration": "Bistin",

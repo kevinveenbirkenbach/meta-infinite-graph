@@ -168,6 +168,9 @@
     "other": "{n} biracyakora"
   },
   "loader.overview.none": "Nta kintu na kimwe kirafunguka.",
+  "loader.overview.page": "Urupapuro {page} kuri {pages}",
+  "loader.overview.newer": "Bishya",
+  "loader.overview.older": "Bya kera",
   "loader.task.boot": "Birimo gusoma inshingano na meta yazo",
   "loader.task.view": "Birimo gushushanya {view}",
   "loader.task.changes": "Birimo kubaza GitHub ibyahindutse",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakiti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "byanze: {message}",
+  "loader.task.retry": "Ongera upakire",
   "feed.actions.pick": "Garagaza ibizamini by'iri koreshwa",
   "feed.actions.ended": "Byarangiye",
   "feed.actions.duration": "Igihe byamaze",

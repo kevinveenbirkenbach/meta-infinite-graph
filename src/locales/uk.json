@@ -186,6 +186,9 @@
     "other": "{n} триває"
   },
   "loader.overview.none": "Ще нічого не завантажено.",
+  "loader.overview.page": "Сторінка {page} з {pages}",
+  "loader.overview.newer": "Новіші",
+  "loader.overview.older": "Старіші",
   "loader.task.boot": "Читання ролей та їхніх meta",
   "loader.task.view": "Відмальовування {view}",
   "loader.task.changes": "Запит до GitHub: що змінилося",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "невдало: {message}",
+  "loader.task.retry": "Завантажити знову",
   "feed.actions.pick": "Показати тести цього запуску",
   "feed.actions.ended": "Завершено",
   "feed.actions.duration": "Тривалість",

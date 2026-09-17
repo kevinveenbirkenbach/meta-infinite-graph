@@ -168,6 +168,9 @@
     "other": "{n} køyrer"
   },
   "loader.overview.none": "Ingenting er lasta enno.",
+  "loader.overview.page": "Side {page} av {pages}",
+  "loader.overview.newer": "Nyare",
+  "loader.overview.older": "Eldre",
   "loader.task.boot": "Les rollene og metaen deira",
   "loader.task.view": "Teiknar {view}",
   "loader.task.changes": "Spør GitHub kva som er endra",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "feila: {message}",
+  "loader.task.retry": "Last inn på nytt",
   "feed.actions.pick": "Vis testane for denne køyringa",
   "feed.actions.ended": "Avslutta",
   "feed.actions.duration": "Varigheit",

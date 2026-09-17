@@ -168,6 +168,9 @@
     "other": "{n} kusasebenta"
   },
   "loader.overview.none": "Kute lokulayishiwe kwanyalo.",
+  "loader.overview.page": "Likhasi {page} / {pages}",
+  "loader.overview.newer": "Lokusha",
+  "loader.overview.older": "Lokudzala",
   "loader.task.boot": "Kufundvwa tindzima nemeta yato",
   "loader.task.view": "Kudwetjwa {view}",
   "loader.task.changes": "Kubutwa GitHub loko lokushintjile",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Umkhicito {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "yehlulekile: {message}",
+  "loader.task.retry": "Layisha futsi",
   "feed.actions.pick": "Khombisa emavivinyo alokusebenta lokhu",
   "feed.actions.ended": "Kuphelile",
   "feed.actions.duration": "Budze besikhatsi",

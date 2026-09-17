@@ -168,6 +168,9 @@
     "other": "{n} lafen"
   },
   "loader.overview.none": "Nach näischt gelueden.",
+  "loader.overview.page": "Säit {page} vun {pages}",
+  "loader.overview.newer": "Méi nei",
+  "loader.overview.older": "Méi al",
   "loader.task.boot": "D'Rollen an hir Meta ginn gelies",
   "loader.task.view": "{view} gëtt gezeechent",
   "loader.task.changes": "GitHub gëtt gefrot, wat geännert huet",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "feelgeschloen: {message}",
+  "loader.task.retry": "Nach eng Kéier lueden",
   "feed.actions.pick": "D'Tester vun dësem Laf weisen",
   "feed.actions.ended": "Ofgeschloss",
   "feed.actions.duration": "Dauer",

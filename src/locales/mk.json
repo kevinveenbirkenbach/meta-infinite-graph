@@ -168,6 +168,9 @@
     "other": "{n} во тек"
   },
   "loader.overview.none": "Сè уште ништо не е вчитано.",
+  "loader.overview.page": "Страница {page} од {pages}",
+  "loader.overview.newer": "Понови",
+  "loader.overview.older": "Постари",
   "loader.task.boot": "Се читаат улогите и нивните метаподатоци",
   "loader.task.view": "Се исцртува {view}",
   "loader.task.changes": "Се прашува GitHub што се променило",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "неуспешно: {message}",
+  "loader.task.retry": "Вчитај повторно",
   "feed.actions.pick": "Прикажи ги тестовите на ова извршување",
   "feed.actions.ended": "Завршено",
   "feed.actions.duration": "Времетраење",

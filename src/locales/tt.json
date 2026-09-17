@@ -168,6 +168,9 @@
     "other": "{n} бара"
   },
   "loader.overview.none": "Әлегә бернәрсә дә йөкләнмәде.",
+  "loader.overview.page": "Бит {page} / {pages}",
+  "loader.overview.newer": "Яңарак",
+  "loader.overview.older": "Искерәк",
   "loader.task.boot": "Рольләр һәм аларның метасы укыла",
   "loader.task.view": "{view} ясала",
   "loader.task.changes": "GitHub'тан нәрсә үзгәргәне сорала",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "уңышсыз: {message}",
+  "loader.task.retry": "Кабат йөкләү",
   "feed.actions.pick": "Бу җибәрелешнең тестларын күрсәтү",
   "feed.actions.ended": "Тәмамланды",
   "feed.actions.duration": "Дәвамлылык",

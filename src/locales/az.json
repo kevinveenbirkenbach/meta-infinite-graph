@@ -168,6 +168,9 @@
     "other": "{n} icra olunur"
   },
   "loader.overview.none": "Hələ heç nə yüklənməyib.",
+  "loader.overview.page": "Səhifə {page} / {pages}",
+  "loader.overview.newer": "Yeni",
+  "loader.overview.older": "Köhnə",
   "loader.task.boot": "Rollar və onların metası oxunur",
   "loader.task.view": "{view} çəkilir",
   "loader.task.changes": "GitHub-dan nəyin dəyişdiyi soruşulur",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "uğursuz oldu: {message}",
+  "loader.task.retry": "Yenidən yüklə",
   "feed.actions.pick": "Bu icranın testlərini göstər",
   "feed.actions.ended": "Bitib",
   "feed.actions.duration": "Müddət",

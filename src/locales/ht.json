@@ -168,6 +168,9 @@
     "other": "{n} an kou"
   },
   "loader.overview.none": "Poko gen anyen ki chaje.",
+  "loader.overview.page": "Paj {page} sou {pages}",
+  "loader.overview.newer": "Pi nouvo",
+  "loader.overview.older": "Pi ansyen",
   "loader.task.boot": "Ap li wòl yo ak meta yo",
   "loader.task.view": "Ap desine {view}",
   "loader.task.changes": "Ap mande GitHub sa ki chanje",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "echwe: {message}",
+  "loader.task.retry": "Chaje ankò",
   "feed.actions.pick": "Montre tès egzekisyon sa a",
   "feed.actions.ended": "Fini",
   "feed.actions.duration": "Dire",

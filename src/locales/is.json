@@ -168,6 +168,9 @@
     "other": "{n} í gangi"
   },
   "loader.overview.none": "Ekkert hefur verið hlaðið enn.",
+  "loader.overview.page": "Síða {page} af {pages}",
+  "loader.overview.newer": "Nýrri",
+  "loader.overview.older": "Eldri",
   "loader.task.boot": "Les hlutverkin og lýsigögn þeirra",
   "loader.task.view": "Teikna {view}",
   "loader.task.changes": "Spyr GitHub hvað breyttist",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Afurð {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mistókst: {message}",
+  "loader.task.retry": "Hlaða aftur",
   "feed.actions.pick": "Sýna prófanir þessarar keyrslu",
   "feed.actions.ended": "Lokið",
   "feed.actions.duration": "Tímalengd",

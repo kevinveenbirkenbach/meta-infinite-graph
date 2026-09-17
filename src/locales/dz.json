@@ -159,6 +159,9 @@
     "other": "{n} གཡོག་བཀོལ་དོ།"
   },
   "loader.overview.none": "ད་ཚུན་ ག་ནི་ཡང་ ཕབ་ལེན་མ་འབད་བས།",
+  "loader.overview.page": "ཤོག་ལེབ་ {page} / {pages}",
+  "loader.overview.newer": "གསརཔ།",
+  "loader.overview.older": "རྙིངམ།",
   "loader.task.boot": "ལཱ་འགན་དང་ དེ་ཚུ་གི་ མེ་ཊ་ ལྷག་དོ་",
   "loader.task.view": "{view} འབྲི་དོ་",
   "loader.task.changes": "GitHub ལུ་ འགྱུར་བ་ག་ཅི་སོང་ག་ དྲི་དོ་",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "གྲུབ་དངོས་ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "འཐུས་ཤོར་: {message}",
+  "loader.task.retry": "ལོག་ཕབ་ལེན་འབད།",
   "feed.actions.pick": "གཡོག་བཀོལ་འདི་གི་བརྟག་དཔྱད་ཚུ་སྟོན།",
   "feed.actions.ended": "མཇུག་བསྡུ་ཡོདཔ་",
   "feed.actions.duration": "དུས་ཡུན་",

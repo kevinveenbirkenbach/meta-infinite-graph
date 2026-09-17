@@ -195,6 +195,9 @@
     "other": "{n} għaddejjin"
   },
   "loader.overview.none": "Għadu ma tgħabba xejn.",
+  "loader.overview.page": "Paġna {page} minn {pages}",
+  "loader.overview.newer": "Aktar riċenti",
+  "loader.overview.older": "Eqdem",
   "loader.task.boot": "Qed jinqraw ir-rwoli u l-meta tagħhom",
   "loader.task.view": "Qed jitpinġa {view}",
   "loader.task.changes": "Qed nistaqsu lil GitHub x'inbidel",
@@ -204,6 +207,7 @@
   "loader.task.artifact": "Artifatt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "falla: {message}",
+  "loader.task.retry": "Erġa' tella'",
   "feed.actions.pick": "Uri t-testijiet ta' dan it-tħaddim",
   "feed.actions.ended": "Spiċċa",
   "feed.actions.duration": "Tul",

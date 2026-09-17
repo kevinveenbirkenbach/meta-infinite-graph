@@ -159,6 +159,9 @@
     "other": "{n} mi ngi dox"
   },
   "loader.overview.none": "Dara yebbuwul ba léegi.",
+  "loader.overview.page": "Xët {page} ci {pages}",
+  "loader.overview.newer": "Bees",
+  "loader.overview.older": "Yàgg",
   "loader.task.boot": "Mi ngi jàng sas yi ak seeni meta",
   "loader.task.view": "Mi ngi rëdd {view}",
   "loader.task.changes": "Mi ngi laaj GitHub li soppiku",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Ndefar {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "sànku na: {message}",
+  "loader.task.retry": "Yebaat",
   "feed.actions.pick": "Wone natt yi ci dox bii",
   "feed.actions.ended": "Jeex na",
   "feed.actions.duration": "Diir",

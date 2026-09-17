@@ -159,6 +159,9 @@
     "other": "{n} ń ṣiṣẹ́"
   },
   "loader.overview.none": "Kò sí ohun tí a ti gbé wọlé síbẹ̀.",
+  "loader.overview.page": "Ojú-ìwé {page} nínú {pages}",
+  "loader.overview.newer": "Tuntun",
+  "loader.overview.older": "Àtijọ́",
   "loader.task.boot": "Ń ka àwọn ipa àti meta wọn",
   "loader.task.view": "Ń ya {view}",
   "loader.task.changes": "Ń béèrè lọ́wọ́ GitHub ohun tó yí padà",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Àtọwọ́dá {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kùnà: {message}",
+  "loader.task.retry": "Tún gbé",
   "feed.actions.pick": "Fi àwọn ìdánwò ìṣiṣẹ́ yìí hàn",
   "feed.actions.ended": "Parí",
   "feed.actions.duration": "Àkókò tí ó gbà",

@@ -168,6 +168,9 @@
     "other": "{n} işleýär"
   },
   "loader.overview.none": "Entek hiç zat ýüklenmedi.",
+  "loader.overview.page": "Sahypa {page} / {pages}",
+  "loader.overview.newer": "Täzeräk",
+  "loader.overview.older": "Köneräk",
   "loader.task.boot": "Rollar we olaryň meta maglumatlary okalýar",
   "loader.task.view": "{view} çyzylýar",
   "loader.task.changes": "GitHub-dan näme üýtgändigi soralýar",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "şowsuz: {message}",
+  "loader.task.retry": "Täzeden ýükle",
   "feed.actions.pick": "Bu işledilişiň synaglaryny görkez",
   "feed.actions.ended": "Tamamlandy",
   "feed.actions.duration": "Dowamlylygy",

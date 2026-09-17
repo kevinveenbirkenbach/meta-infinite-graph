@@ -168,6 +168,9 @@
     "other": "{n} pajäfidöls"
   },
   "loader.overview.none": "Nos nog pelodon.",
+  "loader.overview.page": "Pad {page} se {pages}",
+  "loader.overview.newer": "Nulikum",
+  "loader.overview.older": "Bäldikum",
   "loader.task.boot": "Reidam rolas e metas onas",
   "loader.task.view": "Magodam {view}",
   "loader.task.changes": "Säkam GitHub-i, kis pevotükon",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Dunot {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "no eplöpon: {message}",
+  "loader.task.retry": "Dönulodön",
   "feed.actions.pick": "Jonön blufis jäfidama at",
   "feed.actions.ended": "Pefinöl",
   "feed.actions.duration": "Dul",

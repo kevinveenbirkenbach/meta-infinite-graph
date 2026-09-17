@@ -204,6 +204,9 @@
     "other": "{n} قيد التشغيل"
   },
   "loader.overview.none": "لم يُحمَّل شيء بعد.",
+  "loader.overview.page": "صفحة {page} من {pages}",
+  "loader.overview.newer": "أحدث",
+  "loader.overview.older": "أقدم",
   "loader.task.boot": "جارٍ قراءة الأدوار وبياناتها الوصفية",
   "loader.task.view": "جارٍ رسم {view}",
   "loader.task.changes": "جارٍ سؤال GitHub عمّا تغيّر",
@@ -213,6 +216,7 @@
   "loader.task.artifact": "الأثر {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "فشل: {message}",
+  "loader.task.retry": "إعادة التحميل",
   "feed.actions.pick": "إظهار اختبارات هذا التشغيل",
   "feed.actions.ended": "انتهى",
   "feed.actions.duration": "المدة",

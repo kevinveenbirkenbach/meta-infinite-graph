@@ -159,6 +159,9 @@
     "other": "{n} lagi mlaku"
   },
   "loader.overview.none": "Durung ana sing diemot.",
+  "loader.overview.page": "Kaca {page} saka {pages}",
+  "loader.overview.newer": "Luwih anyar",
+  "loader.overview.older": "Luwih lawas",
   "loader.task.boot": "Maca peran lan meta-ne",
   "loader.task.view": "Nggambar {view}",
   "loader.task.changes": "Takon GitHub apa sing owah",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gagal: {message}",
+  "loader.task.retry": "Muat maneh",
   "feed.actions.pick": "Tampilake pangujian lakon iki",
   "feed.actions.ended": "Rampung",
   "feed.actions.duration": "Suwene",

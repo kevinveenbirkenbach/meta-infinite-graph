@@ -168,6 +168,9 @@
     "other": "{n} се изпълняват"
   },
   "loader.overview.none": "Още нищо не е заредено.",
+  "loader.overview.page": "Страница {page} от {pages}",
+  "loader.overview.newer": "По-нови",
+  "loader.overview.older": "По-стари",
   "loader.task.boot": "Четене на ролите и техните метаданни",
   "loader.task.view": "Изчертаване на {view}",
   "loader.task.changes": "Питане на GitHub какво се е променило",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "неуспех: {message}",
+  "loader.task.retry": "Ново зареждане",
   "feed.actions.pick": "Показване на тестовете на това изпълнение",
   "feed.actions.ended": "Завършено",
   "feed.actions.duration": "Продължителност",

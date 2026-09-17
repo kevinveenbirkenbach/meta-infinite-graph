@@ -168,6 +168,9 @@
     "other": "{n} ũge ran"
   },
   "loader.overview.none": "Eko ñaga rod.",
+  "loader.overview.page": "Peij {page} / {pages}",
+  "loader.overview.newer": "Imim",
+  "loader.overview.older": "Eken",
   "loader.task.boot": "Rid rol me meta",
   "loader.task.view": "Ekeiy {view}",
   "loader.task.changes": "Anga GitHub ñaga oiyeiy",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artifak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "eko: {message}",
+  "loader.task.retry": "Rirod",
   "feed.actions.pick": "Jo teset ijeiji ran ñaga",
   "feed.actions.ended": "Pinit",
   "feed.actions.duration": "Tãim",

@@ -168,6 +168,9 @@
     "other": "{n} ਚੱਲ ਰਹੀਆਂ ਹਨ"
   },
   "loader.overview.none": "ਹਾਲੇ ਤੱਕ ਕੁਝ ਵੀ ਲੋਡ ਨਹੀਂ ਹੋਇਆ।",
+  "loader.overview.page": "ਪੰਨਾ {page} / {pages}",
+  "loader.overview.newer": "ਨਵੇਂ",
+  "loader.overview.older": "ਪੁਰਾਣੇ",
   "loader.task.boot": "ਭੂਮਿਕਾਵਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਮੈਟਾ ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ",
   "loader.task.view": "{view} ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ",
   "loader.task.changes": "GitHub ਤੋਂ ਪੁੱਛਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਕੀ ਬਦਲਿਆ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ਆਰਟੀਫੈਕਟ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ਅਸਫਲ: {message}",
+  "loader.task.retry": "ਮੁੜ ਲੋਡ ਕਰੋ",
   "feed.actions.pick": "ਇਸ ਦੌੜ ਦੇ ਟੈਸਟ ਦਿਖਾਓ",
   "feed.actions.ended": "ਖ਼ਤਮ ਹੋਇਆ",
   "feed.actions.duration": "ਮਿਆਦ",

@@ -168,6 +168,9 @@
     "other": "{n} kører"
   },
   "loader.overview.none": "Intet er indlæst endnu.",
+  "loader.overview.page": "Side {page} af {pages}",
+  "loader.overview.newer": "Nyere",
+  "loader.overview.older": "Ældre",
   "loader.task.boot": "Læser rollerne og deres meta",
   "loader.task.view": "Tegner {view}",
   "loader.task.changes": "Spørger GitHub, hvad der er ændret",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislykkedes: {message}",
+  "loader.task.retry": "Indlæs igen",
   "feed.actions.pick": "Vis denne kørsels tests",
   "feed.actions.ended": "Afsluttet",
   "feed.actions.duration": "Varighed",

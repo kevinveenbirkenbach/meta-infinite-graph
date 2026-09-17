@@ -168,6 +168,9 @@
     "other": "{n} çalışıyor"
   },
   "loader.overview.none": "Henüz hiçbir şey yüklenmedi.",
+  "loader.overview.page": "Sayfa {page} / {pages}",
+  "loader.overview.newer": "Daha yeni",
+  "loader.overview.older": "Daha eski",
   "loader.task.boot": "Roller ve metaları okunuyor",
   "loader.task.view": "{view} çiziliyor",
   "loader.task.changes": "GitHub'a nelerin değiştiği soruluyor",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Yapıt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "başarısız: {message}",
+  "loader.task.retry": "Yeniden yükle",
   "feed.actions.pick": "Bu çalıştırmanın testlerini göster",
   "feed.actions.ended": "Bitti",
   "feed.actions.duration": "Süre",

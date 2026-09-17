@@ -168,6 +168,9 @@
     "other": "{n} käib"
   },
   "loader.overview.none": "Veel pole midagi laaditud.",
+  "loader.overview.page": "Lehekülg {page} / {pages}",
+  "loader.overview.newer": "Uuemad",
+  "loader.overview.older": "Vanemad",
   "loader.task.boot": "Rollide ja nende meta lugemine",
   "loader.task.view": "{view} joonistamine",
   "loader.task.changes": "GitHubilt küsimine, mis muutus",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ebaõnnestus: {message}",
+  "loader.task.retry": "Laadi uuesti",
   "feed.actions.pick": "Näita selle käivituse teste",
   "feed.actions.ended": "Lõpetatud",
   "feed.actions.duration": "Kestus",

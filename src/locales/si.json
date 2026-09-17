@@ -168,6 +168,9 @@
     "other": "{n}ක් ධාවනය වෙමින්"
   },
   "loader.overview.none": "තවම කිසිවක් පූරණය වී නැත.",
+  "loader.overview.page": "පිටුව {page} / {pages}",
+  "loader.overview.newer": "නව",
+  "loader.overview.older": "පැරණි",
   "loader.task.boot": "භූමිකා සහ ඒවායේ මෙටා දත්ත කියවමින්",
   "loader.task.view": "{view} අඳිමින්",
   "loader.task.changes": "වෙනස් වූ දේ GitHub වෙතින් විමසමින්",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ආටිෆැක්ට් {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "අසමත් විය: {message}",
+  "loader.task.retry": "නැවත පූරණය කරන්න",
   "feed.actions.pick": "මෙම ධාවනයේ පරීක්ෂණ පෙන්වන්න",
   "feed.actions.ended": "අවසන් විය",
   "feed.actions.duration": "කාලසීමාව",

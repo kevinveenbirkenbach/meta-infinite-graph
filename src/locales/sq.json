@@ -168,6 +168,9 @@
     "other": "{n} në ekzekutim"
   },
   "loader.overview.none": "Ende nuk është ngarkuar asgjë.",
+  "loader.overview.page": "Faqja {page} nga {pages}",
+  "loader.overview.newer": "Më të reja",
+  "loader.overview.older": "Më të vjetra",
   "loader.task.boot": "Po lexohen rolet dhe metadatat e tyre",
   "loader.task.view": "Po vizatohet {view}",
   "loader.task.changes": "Po pyetet GitHub se çfarë ndryshoi",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "dështoi: {message}",
+  "loader.task.retry": "Ngarko sërish",
   "feed.actions.pick": "Shfaq testet e këtij ekzekutimi",
   "feed.actions.ended": "Përfunduar",
   "feed.actions.duration": "Kohëzgjatja",

@@ -168,6 +168,9 @@
     "other": "{n} روان دي"
   },
   "loader.overview.none": "تر اوسه هېڅ نه دي پورته شوي.",
+  "loader.overview.page": "مخ {page} / {pages}",
+  "loader.overview.newer": "نوي",
+  "loader.overview.older": "زاړه",
   "loader.task.boot": "رولونه او د هغوی مېټا لوستل کېږي",
   "loader.task.view": "{view} انځورېږي",
   "loader.task.changes": "له GitHub نه پوښتل کېږي چې څه بدل شوي",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "آرټيفکټ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناکام شو: {message}",
+  "loader.task.retry": "بیا پورته کړئ",
   "feed.actions.pick": "د دې چلېدنې ازموینې وښیئ",
   "feed.actions.ended": "پای ته رسېدلی",
   "feed.actions.duration": "موده",

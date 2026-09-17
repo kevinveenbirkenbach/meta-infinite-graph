@@ -168,6 +168,9 @@
     "other": "{n} na gudana"
   },
   "loader.overview.none": "Babu abin da aka loda tukuna.",
+  "loader.overview.page": "Shafi {page} na {pages}",
+  "loader.overview.newer": "Sababbi",
+  "loader.overview.older": "Tsofaffi",
   "loader.task.boot": "Ana karanta matsayoyi da meta nasu",
   "loader.task.view": "Ana zana {view}",
   "loader.task.changes": "Ana tambayar GitHub abin da ya canza",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Kayan fitarwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ya gaza: {message}",
+  "loader.task.retry": "Sake loda",
   "feed.actions.pick": "Nuna gwaje-gwajen wannan gudanarwa",
   "feed.actions.ended": "An gama",
   "feed.actions.duration": "Tsawon lokaci",

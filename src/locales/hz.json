@@ -168,6 +168,9 @@
     "other": "{n} mai tjitwa"
   },
   "loader.overview.none": "Kaku na tjiyetwa natjiṋa.",
+  "loader.overview.page": "Epandja {page} mu {pages}",
+  "loader.overview.newer": "Omape",
+  "loader.overview.older": "Omakuru",
   "loader.task.boot": "Mai leserwa oviungura nometa yavyo",
   "loader.task.view": "Mai ṱunwa {view}",
   "loader.task.changes": "Mai purwa GitHub imbi mbya tanauka",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Otjiungurwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ya pandjara: {message}",
+  "loader.task.retry": "Eta rukwao",
   "feed.actions.pick": "Raisa omakondoroiso weungurisiro ndi",
   "feed.actions.ended": "Tja yanda",
   "feed.actions.duration": "Oure",

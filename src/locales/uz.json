@@ -168,6 +168,9 @@
     "other": "{n} ta bajarilmoqda"
   },
   "loader.overview.none": "Hali hech narsa yuklanmadi.",
+  "loader.overview.page": "Sahifa {page} / {pages}",
+  "loader.overview.newer": "Yangiroq",
+  "loader.overview.older": "Eskiroq",
   "loader.task.boot": "Rollar va ularning metama’lumotlari o‘qilmoqda",
   "loader.task.view": "{view} chizilmoqda",
   "loader.task.changes": "GitHub’dan nima o‘zgargani so‘ralmoqda",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "muvaffaqiyatsiz: {message}",
+  "loader.task.retry": "Qayta yuklash",
   "feed.actions.pick": "Bu ishga tushirishning testlarini ko‘rsatish",
   "feed.actions.ended": "Tugagan",
   "feed.actions.duration": "Davomiylik",

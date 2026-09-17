@@ -159,6 +159,9 @@
     "other": "{n} na-aga"
   },
   "loader.overview.none": "Ọ dịbeghị ihe ebutere.",
+  "loader.overview.page": "Peeji {page} nke {pages}",
+  "loader.overview.newer": "Ọhụrụ",
+  "loader.overview.older": "Ochie",
   "loader.task.boot": "Na-agụ ọrụ na meta ha",
   "loader.task.view": "Na-ese {view}",
   "loader.task.changes": "Na-ajụ GitHub ihe gbanwere",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Ihe arụpụtara {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "dara: {message}",
+  "loader.task.retry": "Bugharịa ọzọ",
   "feed.actions.pick": "Gosi ule nke ọsọ a",
   "feed.actions.ended": "Kwụsịrị",
   "feed.actions.duration": "Ogologo oge",

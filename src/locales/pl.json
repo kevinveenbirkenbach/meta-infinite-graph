@@ -186,6 +186,9 @@
     "other": "{n} w toku"
   },
   "loader.overview.none": "Nic jeszcze nie zostało wczytane.",
+  "loader.overview.page": "Strona {page} z {pages}",
+  "loader.overview.newer": "Nowsze",
+  "loader.overview.older": "Starsze",
   "loader.task.boot": "Odczytywanie ról i ich metadanych",
   "loader.task.view": "Rysowanie widoku {view}",
   "loader.task.changes": "Pytanie GitHub, co się zmieniło",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "niepowodzenie: {message}",
+  "loader.task.retry": "Wczytaj ponownie",
   "feed.actions.pick": "Pokaż testy tego uruchomienia",
   "feed.actions.ended": "Zakończono",
   "feed.actions.duration": "Czas trwania",

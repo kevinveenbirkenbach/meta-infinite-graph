@@ -168,6 +168,9 @@
     "other": "{n} მიმდინარეობს"
   },
   "loader.overview.none": "ჯერ არაფერი ჩატვირთულა.",
+  "loader.overview.page": "გვერდი {page} / {pages}",
+  "loader.overview.newer": "უფრო ახალი",
+  "loader.overview.older": "უფრო ძველი",
   "loader.task.boot": "როლებისა და მათი მეტას წაკითხვა",
   "loader.task.view": "{view}-ის დახატვა",
   "loader.task.changes": "GitHub-ს ვეკითხებით, რა შეიცვალა",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "არტეფაქტი {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ვერ მოხერხდა: {message}",
+  "loader.task.retry": "ხელახლა ჩატვირთვა",
   "feed.actions.pick": "ამ გაშვების ტესტების ჩვენება",
   "feed.actions.ended": "დასრულდა",
   "feed.actions.duration": "ხანგრძლივობა",

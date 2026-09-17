@@ -159,6 +159,9 @@
     "other": "{n} 个运行中"
   },
   "loader.overview.none": "尚未加载任何内容。",
+  "loader.overview.page": "第 {page} 页，共 {pages} 页",
+  "loader.overview.newer": "较新",
+  "loader.overview.older": "较旧",
   "loader.task.boot": "正在读取角色及其元数据",
   "loader.task.view": "正在绘制 {view}",
   "loader.task.changes": "正在向 GitHub 查询变更内容",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "工件 {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "失败：{message}",
+  "loader.task.retry": "重新加载",
   "feed.actions.pick": "显示此运行的测试",
   "feed.actions.ended": "结束时间",
   "feed.actions.duration": "时长",

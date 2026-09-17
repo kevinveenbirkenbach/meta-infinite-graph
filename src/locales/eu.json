@@ -168,6 +168,9 @@
     "other": "{n} exekutatzen"
   },
   "loader.overview.none": "Oraindik ez da ezer kargatu.",
+  "loader.overview.page": "Orria {page} / {pages}",
+  "loader.overview.newer": "Berriagoak",
+  "loader.overview.older": "Zaharragoak",
   "loader.task.boot": "Rolak eta haien metadatuak irakurtzen",
   "loader.task.view": "{view} marrazten",
   "loader.task.changes": "GitHub-i zer aldatu den galdetzen",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefaktua: {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "huts egin du: {message}",
+  "loader.task.retry": "Kargatu berriro",
   "feed.actions.pick": "Erakutsi exekuzio honen probak",
   "feed.actions.ended": "Amaitua",
   "feed.actions.duration": "Iraupena",

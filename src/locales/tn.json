@@ -168,6 +168,9 @@
     "other": "{n} di sa ntse di tsamaya"
   },
   "loader.overview.none": "Ga go sepe se se laetsweng go fitlha jaanong.",
+  "loader.overview.page": "Tsebe {page} ya {pages}",
+  "loader.overview.newer": "Tse dintšhwa",
+  "loader.overview.older": "Tsa bogologolo",
   "loader.task.boot": "Go balwa dikarolo le meta ya tsone",
   "loader.task.view": "Go tshwantshiwa {view}",
   "loader.task.changes": "Go bodiwa GitHub gore go fetogile eng",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Setlhagiswa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "e paletswe: {message}",
+  "loader.task.retry": "Laela gape",
   "feed.actions.pick": "Bontsha diteko tsa tsamaiso e",
   "feed.actions.ended": "E fedile",
   "feed.actions.duration": "Boleele jwa nako",

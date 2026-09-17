@@ -168,6 +168,9 @@
     "other": "{n} taya longwa"
   },
   "loader.overview.none": "Kaku na sha etwa natango.",
+  "loader.overview.page": "Epandja {page} / {pages}",
+  "loader.overview.newer": "Ompe",
+  "loader.overview.older": "Onkulu",
   "loader.task.boot": "Tapu leshwa oonkandangala nometa yadho",
   "loader.task.view": "Tapu ningwa ethano lya {view}",
   "loader.task.changes": "Tapu pulwa GitHub shoka sha lunduluka",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Oartefakta {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "inali enda nawa: {message}",
+  "loader.task.retry": "Etela we",
   "feed.actions.pick": "Ulika omakeshelo gelongitho ndika",
   "feed.actions.ended": "Sha pwa",
   "feed.actions.duration": "Uule wethimbo",

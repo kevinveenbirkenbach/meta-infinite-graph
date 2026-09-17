@@ -186,6 +186,9 @@
     "other": "{n} a’ ruith"
   },
   "loader.overview.none": "Cha deach dad a luchdadh fhathast.",
+  "loader.overview.page": "Duilleag {page} à {pages}",
+  "loader.overview.newer": "Nas ùire",
+  "loader.overview.older": "Nas sine",
   "loader.task.boot": "A’ leughadh nan dreuchdan is am meata",
   "loader.task.view": "A’ tarraing {view}",
   "loader.task.changes": "A’ faighneachd de GitHub dè dh’atharraich",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Artafact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "dh’fhàillig: {message}",
+  "loader.task.retry": "Luchdaich a-rithist",
   "feed.actions.pick": "Seall deuchainnean an ruith seo",
   "feed.actions.ended": "Air crìochnachadh",
   "feed.actions.duration": "Faid",

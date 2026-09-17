@@ -41,18 +41,18 @@ An interactive visualization of the [Infinito.Nexus](https://infinito.nexus) rol
   Hovering the circle, or giving it focus, lists what the page loads: the
   start, every tab drawn, each GitHub request, each artifact download and the
   run's artifacts as a whole with how many are in. Each line says whether it
-  is still going, done or failed, how long it took, and why it failed. Loads
-  still going stay listed, and so do the last 30 finished ones; the list
-  follows along while it is open. Requests and downloads are listed without
-  turning the circle, which turns for the tab on screen only.
+  is still going, done or failed, how long it took, and why it failed. A load
+  that failed carries a button that runs it again, and the fresh attempt lands
+  at the top. The history holds the last 400 loads, newest first, twenty to a
+  page with **Newer** and **Older** below them; the page follows along while it
+  is open. Requests and downloads are listed without turning the circle, which
+  turns for the tab on screen only.
 
   Every popup on the page - this overview, a role or test card, an artifact
-  viewer, a matrix panel - opens once the pointer has rested on its trigger
-  for a third of a second, or at once when it is clicked. It fades in over a
-  fifth of a second, lingers half a second after the pointer leaves and fades
-  out over another half, and carries the same minimize, maximize and close
-  controls in its top right corner. A popup held open by one of those controls
-  never fades. A card opens in the corner the pointer touched.
+  viewer, a matrix panel - lingers half a second after the pointer leaves and
+  then fades over another half, and carries the same minimize, maximize and
+  close controls in its top right corner. A popup held open by one of those
+  controls never fades.
 
   Right-clicking the circle, or Enter while it has focus, opens the reloads of
   the tab on screen. The **Actions** tab offers what changed or every run right
@@ -160,7 +160,8 @@ single artifact may weigh; both count bytes.
   `/artifacts/<id>/` and answers with the JUnit results of every report inside.
   It only takes `playwright-` artifacts up to `MIG_ARTIFACT_LIMIT`, of the root
   repository or a fork the mirror carries. A run that records video ships
-  hundreds of megabytes, so the ceiling is a runaway guard, not a size policy.
+  hundreds of megabytes, so the ceiling is a runaway guard, not a size policy;
+  a download that hits it says so and offers to try again.
 - Everything under `/artifacts/` is served with `Content-Security-Policy:
   sandbox allow-scripts`, so a report's script runs apart from the page and
   cannot read the token a visitor stored in the browser. A sandboxed page may

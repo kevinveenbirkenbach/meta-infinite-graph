@@ -168,6 +168,9 @@
     "other": "{n} tumatakbo"
   },
   "loader.overview.none": "Wala pang na-load.",
+  "loader.overview.page": "Pahina {page} ng {pages}",
+  "loader.overview.newer": "Mas bago",
+  "loader.overview.older": "Mas luma",
   "loader.task.boot": "Binabasa ang mga tungkulin at ang kanilang meta",
   "loader.task.view": "Iginuguhit ang {view}",
   "loader.task.changes": "Tinatanong ang GitHub kung ano ang nagbago",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artipakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "bumagsak: {message}",
+  "loader.task.retry": "I-load muli",
   "feed.actions.pick": "Ipakita ang mga pagsubok ng pagtakbong ito",
   "feed.actions.ended": "Natapos",
   "feed.actions.duration": "Tagal",

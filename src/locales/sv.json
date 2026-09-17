@@ -168,6 +168,9 @@
     "other": "{n} pågår"
   },
   "loader.overview.none": "Inget har laddats än.",
+  "loader.overview.page": "Sida {page} av {pages}",
+  "loader.overview.newer": "Nyare",
+  "loader.overview.older": "Äldre",
   "loader.task.boot": "Läser rollerna och deras metadata",
   "loader.task.view": "Ritar {view}",
   "loader.task.changes": "Frågar GitHub vad som ändrats",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "misslyckades: {message}",
+  "loader.task.retry": "Ladda igen",
   "feed.actions.pick": "Visa den här körningens tester",
   "feed.actions.ended": "Avslutad",
   "feed.actions.duration": "Varaktighet",

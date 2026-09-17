@@ -168,6 +168,9 @@
     "other": "{n} di ntse di tsamaya"
   },
   "loader.overview.none": "Ha ho letho le kentsweng hajwale.",
+  "loader.overview.page": "Leqephe {page} ho {pages}",
+  "loader.overview.newer": "Tse ntjha",
+  "loader.overview.older": "Tsa kgale",
   "loader.task.boot": "Ho balwa dikarolo le meta ya tsona",
   "loader.task.view": "Ho takwa {view}",
   "loader.task.changes": "Ho botswa GitHub se fetohileng",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Sehlahiswa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "e hlolehile: {message}",
+  "loader.task.retry": "Kenya hape",
   "feed.actions.pick": "Bontsha diteko tsa tsamaiso ena",
   "feed.actions.ended": "E fedile",
   "feed.actions.duration": "Botelele ba nako",

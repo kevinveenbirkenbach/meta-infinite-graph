@@ -159,6 +159,9 @@
     "other": "{n} 件実行中"
   },
   "loader.overview.none": "まだ何も読み込まれていません。",
+  "loader.overview.page": "{page} / {pages} ページ",
+  "loader.overview.newer": "新しい",
+  "loader.overview.older": "古い",
   "loader.task.boot": "ロールとそのメタデータを読み込み中",
   "loader.task.view": "{view} を描画中",
   "loader.task.changes": "GitHub に変更点を問い合わせ中",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "アーティファクト {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "失敗: {message}",
+  "loader.task.retry": "再読み込み",
   "feed.actions.pick": "この実行のテストを表示",
   "feed.actions.ended": "終了",
   "feed.actions.duration": "所要時間",

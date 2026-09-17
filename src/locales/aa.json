@@ -168,6 +168,9 @@
     "other": "{n} gexak yan"
   },
   "loader.overview.none": "Kaadu tu ma oobisimta.",
+  "loader.overview.page": "Qangal {page} / {pages}",
+  "loader.overview.newer": "Qusba",
+  "loader.overview.older": "Madaqa",
   "loader.task.boot": "Roolitte kee tet meta akriya",
   "loader.task.view": "{view} xagissa",
   "loader.task.changes": "GitHub geddalte tu esserta",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artifakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ma yewqinna: {message}",
+  "loader.task.retry": "Qusbah oobis",
   "feed.actions.pick": "Tah gexoh tajribooli uybulus",
   "feed.actions.ended": "Gufte",
   "feed.actions.duration": "Wakti",

@@ -177,6 +177,9 @@
     "other": "{n} notiek"
   },
   "loader.overview.none": "Vēl nekas nav ielādēts.",
+  "loader.overview.page": "Lapa {page} no {pages}",
+  "loader.overview.newer": "Jaunāki",
+  "loader.overview.older": "Vecāki",
   "loader.task.boot": "Nolasa lomas un to metadatus",
   "loader.task.view": "Zīmē {view}",
   "loader.task.changes": "Jautā GitHub, kas mainījies",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "Artefakts {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "neizdevās: {message}",
+  "loader.task.retry": "Ielādēt vēlreiz",
   "feed.actions.pick": "Rādīt šīs palaišanas testus",
   "feed.actions.ended": "Beigts",
   "feed.actions.duration": "Ilgums",

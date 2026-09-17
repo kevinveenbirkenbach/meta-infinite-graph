@@ -177,6 +177,9 @@
     "other": "{n} u tijeku"
   },
   "loader.overview.none": "Još ništa nije učitano.",
+  "loader.overview.page": "Stranica {page} od {pages}",
+  "loader.overview.newer": "Novije",
+  "loader.overview.older": "Starije",
   "loader.task.boot": "Čitanje uloga i njihovih meta podataka",
   "loader.task.view": "Iscrtavanje prikaza {view}",
   "loader.task.changes": "Pitam GitHub što se promijenilo",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "neuspjelo: {message}",
+  "loader.task.retry": "Ponovno učitaj",
   "feed.actions.pick": "Prikaži testove ovog pokretanja",
   "feed.actions.ended": "Završeno",
   "feed.actions.duration": "Trajanje",

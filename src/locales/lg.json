@@ -168,6 +168,9 @@
     "other": "{n} bikola"
   },
   "loader.overview.none": "Tewali kintu kyali kitikkiddwa.",
+  "loader.overview.page": "Olupapula {page} ku {pages}",
+  "loader.overview.newer": "Empya",
+  "loader.overview.older": "Enkadde",
   "loader.task.boot": "Nsoma emirimu ne meta yaagyo",
   "loader.task.view": "Nkuba ekifaananyi kya {view}",
   "loader.task.changes": "Mbuuza GitHub ebyakyuse",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Ekyakolebwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "kulemye: {message}",
+  "loader.task.retry": "Ddamu otikke",
   "feed.actions.pick": "Laga okugezesa kw'omulundi guno",
   "feed.actions.ended": "Kyaggwa",
   "feed.actions.duration": "Obuwanvu bw'ekiseera",

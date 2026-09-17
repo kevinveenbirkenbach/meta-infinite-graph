@@ -159,6 +159,9 @@
     "other": "{n} ayeke gue"
   },
   "loader.overview.none": "Mbeni ye pëpe a mû ândö.",
+  "loader.overview.page": "Lêmbëtï {page} na yâ tî {pages}",
+  "loader.overview.newer": "Fini",
+  "loader.overview.older": "Ândö",
   "loader.task.boot": "A yeke dîko âkua na meta tî ala",
   "loader.task.view": "A yeke sû {view}",
   "loader.task.changes": "A yeke hûnda GitHub ye so a changé",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "Artéfact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "a tï: {message}",
+  "loader.task.retry": "Mû ngbene",
   "feed.actions.pick": "Fa âtara tî tambelängö sô",
   "feed.actions.ended": "A hunzi",
   "feed.actions.duration": "Ngoi tî ni",

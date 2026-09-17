@@ -186,6 +186,9 @@
     "other": "{n} běží"
   },
   "loader.overview.none": "Zatím se nic nenačetlo.",
+  "loader.overview.page": "Stránka {page} z {pages}",
+  "loader.overview.newer": "Novější",
+  "loader.overview.older": "Starší",
   "loader.task.boot": "Čtení rolí a jejich metadat",
   "loader.task.view": "Vykreslování: {view}",
   "loader.task.changes": "Dotaz na GitHub, co se změnilo",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "selhalo: {message}",
+  "loader.task.retry": "Načíst znovu",
   "feed.actions.pick": "Zobrazit testy tohoto běhu",
   "feed.actions.ended": "Dokončeno",
   "feed.actions.duration": "Doba trvání",

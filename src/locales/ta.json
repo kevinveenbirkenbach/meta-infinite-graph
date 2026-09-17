@@ -168,6 +168,9 @@
     "other": "{n} இயங்குகின்றன"
   },
   "loader.overview.none": "இதுவரை எதுவும் ஏற்றப்படவில்லை.",
+  "loader.overview.page": "பக்கம் {page} / {pages}",
+  "loader.overview.newer": "புதியவை",
+  "loader.overview.older": "பழையவை",
   "loader.task.boot": "பாத்திரங்களையும் அவற்றின் மெட்டாவையும் படிக்கிறது",
   "loader.task.view": "{view} வரையப்படுகிறது",
   "loader.task.changes": "என்ன மாறியது என GitHub-இடம் கேட்கிறது",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ஆர்ட்டிஃபாக்ட் {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "தோல்வி: {message}",
+  "loader.task.retry": "மீண்டும் ஏற்று",
   "feed.actions.pick": "இந்த ஓட்டத்தின் சோதனைகளைக் காட்டு",
   "feed.actions.ended": "முடிந்தது",
   "feed.actions.duration": "கால அளவு",

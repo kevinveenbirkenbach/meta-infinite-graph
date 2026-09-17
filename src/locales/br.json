@@ -195,6 +195,9 @@
     "other": "{n} o vont en-dro"
   },
   "loader.overview.none": "N'eus bet karget netra c'hoazh.",
+  "loader.overview.page": "Pajenn {page} eus {pages}",
+  "loader.overview.newer": "Nevesoc'h",
+  "loader.overview.older": "Koshoc'h",
   "loader.task.boot": "O lenn ar rolloù hag o meta",
   "loader.task.view": "O tresañ {view}",
   "loader.task.changes": "O c'houlenn digant GitHub petra zo cheñchet",
@@ -204,6 +207,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "c'hwitet: {message}",
+  "loader.task.retry": "Adkargañ",
   "feed.actions.pick": "Diskouez amprouennoù an erounezadur-mañ",
   "feed.actions.ended": "Echuet",
   "feed.actions.duration": "Padelezh",

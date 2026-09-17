@@ -168,6 +168,9 @@
     "other": "{n} in esecutzione"
   },
   "loader.overview.none": "Nudda est istadu carrigadu ancora.",
+  "loader.overview.page": "Pàgina {page} de {pages}",
+  "loader.overview.newer": "Prus reghentes",
+  "loader.overview.older": "Prus betzos",
   "loader.task.boot": "Leghende sos rolos e sos metadatos issoro",
   "loader.task.view": "Disinnende {view}",
   "loader.task.changes": "Pregontende a GitHub su chi est cambiadu",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefatu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "fallidu: {message}",
+  "loader.task.retry": "Torra a carrigare",
   "feed.actions.pick": "Ammustra sas proas de custa esecutzione",
   "feed.actions.ended": "Acabbadu",
   "feed.actions.duration": "Durada",

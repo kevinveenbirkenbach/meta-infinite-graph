@@ -168,6 +168,9 @@
     "other": "{n} ɛrekɔ so"
   },
   "loader.overview.none": "Biribiara mmaeɛ da.",
+  "loader.overview.page": "Krataafa {page} wɔ {pages} mu",
+  "loader.overview.newer": "Foforo",
+  "loader.overview.older": "Dada",
   "loader.task.boot": "Ɛrekenkan nnwumadie ne wɔn meta",
   "loader.task.view": "Ɛreyɛ {view} mfonini",
   "loader.task.changes": "Ɛrebisa GitHub deɛ asesa",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Adeyɛdeɛ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "antumi: {message}",
+  "loader.task.retry": "San fa bra",
   "feed.actions.pick": "Kyerɛ mmirika yi nsɔhwɛ",
   "feed.actions.ended": "Ɛwieeɛ",
   "feed.actions.duration": "Berɛ tenten",

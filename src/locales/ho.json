@@ -168,6 +168,9 @@
     "other": "{n} gaukara noho"
   },
   "loader.overview.none": "Gau ta be abia lasi.",
+  "loader.overview.page": "Pej {page} ena {pages}",
+  "loader.overview.newer": "Matamata",
+  "loader.overview.older": "Gunana",
   "loader.task.boot": "Gaukara idia bona edia meta duahia noho",
   "loader.task.view": "{view} laulauna karaia noho",
   "loader.task.changes": "GitHub henanadai noho dahaka idia haidaua",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Gaukara kohu {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ia dika: {message}",
+  "loader.task.retry": "Lou abia",
   "feed.actions.pick": "Inai heau ena hetoho ba hahedinaraia",
   "feed.actions.ended": "Ia ore",
   "feed.actions.duration": "Nega",

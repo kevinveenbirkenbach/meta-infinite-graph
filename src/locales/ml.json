@@ -168,6 +168,9 @@
     "other": "{n} പ്രവർത്തിക്കുന്നു"
   },
   "loader.overview.none": "ഇതുവരെ ഒന്നും ലോഡ് ചെയ്തിട്ടില്ല.",
+  "loader.overview.page": "പേജ് {page} / {pages}",
+  "loader.overview.newer": "പുതിയവ",
+  "loader.overview.older": "പഴയവ",
   "loader.task.boot": "റോളുകളും അവയുടെ മെറ്റയും വായിക്കുന്നു",
   "loader.task.view": "{view} വരയ്ക്കുന്നു",
   "loader.task.changes": "എന്താണ് മാറിയതെന്ന് GitHub-നോട് ചോദിക്കുന്നു",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ആർട്ടിഫാക്റ്റ് {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "പരാജയപ്പെട്ടു: {message}",
+  "loader.task.retry": "വീണ്ടും ലോഡ് ചെയ്യുക",
   "feed.actions.pick": "ഈ റണ്ണിന്റെ ടെസ്റ്റുകൾ കാണിക്കുക",
   "feed.actions.ended": "അവസാനിച്ചത്",
   "feed.actions.duration": "ദൈർഘ്യം",

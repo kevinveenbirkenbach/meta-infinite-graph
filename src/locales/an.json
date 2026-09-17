@@ -168,6 +168,9 @@
     "other": "{n} en execución"
   },
   "loader.overview.none": "Encara no s'ha cargau cosa.",
+  "loader.overview.page": "Pachina {page} de {pages}",
+  "loader.overview.newer": "Más nuevos",
+  "loader.overview.older": "Más viellos",
   "loader.task.boot": "Leyendo os rols y a suya meta",
   "loader.task.view": "Dibuixando {view}",
   "loader.task.changes": "Preguntando a GitHub qué ha cambiau",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ha fallau: {message}",
+  "loader.task.retry": "Cargar de nuevo",
   "feed.actions.pick": "Amostrar as prebas d'ista execución",
   "feed.actions.ended": "Rematau",
   "feed.actions.duration": "Durada",

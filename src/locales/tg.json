@@ -168,6 +168,9 @@
     "other": "{n} дар иҷро"
   },
   "loader.overview.none": "Ҳанӯз чизе бор нашудааст.",
+  "loader.overview.page": "Саҳифаи {page} аз {pages}",
+  "loader.overview.newer": "Навтар",
+  "loader.overview.older": "Кӯҳнатар",
   "loader.task.boot": "Хондани нақшҳо ва метаи онҳо",
   "loader.task.view": "Кашидани {view}",
   "loader.task.changes": "Пурсидан аз GitHub, ки чӣ тағйир ёфт",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ноком шуд: {message}",
+  "loader.task.retry": "Аз нав бор кардан",
   "feed.actions.pick": "Санҷишҳои ин иҷроро нишон додан",
   "feed.actions.ended": "Анҷом ёфт",
   "feed.actions.duration": "Давомнокӣ",

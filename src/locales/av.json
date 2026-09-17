@@ -168,6 +168,9 @@
     "other": "{n} унеб буго"
   },
   "loader.overview.none": "Жеги щибниги тӀад рачӀун гьечӀо.",
+  "loader.overview.page": "Гьумер {page} / {pages}",
+  "loader.overview.newer": "ЦӀияб",
+  "loader.overview.older": "Херав",
   "loader.task.boot": "Рольал ва гьезул meta цӀалулеб буго",
   "loader.task.view": "{view} сурат бахъулеб буго",
   "loader.task.changes": "GitHub-алда щиб хисараб гьикъулеб буго",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Артефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "тӀубачӀо: {message}",
+  "loader.task.retry": "ЦӀидасан босе",
   "feed.actions.pick": "Гьаб байбихьизабиялъул тестал бихьизаре",
   "feed.actions.ended": "Лъугьана",
   "feed.actions.duration": "Заман",

@@ -168,6 +168,9 @@
     "other": "{n} funcionanta"
   },
   "loader.overview.none": "Nulo ja kargesis.",
+  "loader.overview.page": "Pagino {page} de {pages}",
+  "loader.overview.newer": "Plu nova",
+  "loader.overview.older": "Plu anciena",
   "loader.task.boot": "Lektante la roli e lia meta",
   "loader.task.view": "Desegnante {view}",
   "loader.task.changes": "Questionante GitHub pri quo chanjis",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "faliis: {message}",
+  "loader.task.retry": "Ri-kargar",
   "feed.actions.pick": "Montrar la testi di ca exekuto",
   "feed.actions.ended": "Finita",
   "feed.actions.duration": "Durado",

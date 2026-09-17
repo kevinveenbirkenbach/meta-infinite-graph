@@ -168,6 +168,9 @@
     "other": "{n} εκτελούνται"
   },
   "loader.overview.none": "Δεν έχει φορτωθεί τίποτα ακόμη.",
+  "loader.overview.page": "Σελίδα {page} από {pages}",
+  "loader.overview.newer": "Νεότερα",
+  "loader.overview.older": "Παλαιότερα",
   "loader.task.boot": "Ανάγνωση των ρόλων και των meta τους",
   "loader.task.view": "Σχεδίαση {view}",
   "loader.task.changes": "Ερώτηση στο GitHub για το τι άλλαξε",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Τεχνούργημα {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "απέτυχε: {message}",
+  "loader.task.retry": "Φόρτωση ξανά",
   "feed.actions.pick": "Εμφάνιση δοκιμών αυτής της εκτέλεσης",
   "feed.actions.ended": "Ολοκληρώθηκε",
   "feed.actions.duration": "Διάρκεια",

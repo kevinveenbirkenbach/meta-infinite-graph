@@ -168,6 +168,9 @@
     "other": "{n} ina yahra"
   },
   "loader.overview.none": "Alaa ko loowaa tawo.",
+  "loader.overview.page": "Hello {page} e {pages}",
+  "loader.overview.newer": "Kesum",
+  "loader.overview.older": "Hiiɗɗum",
   "loader.task.boot": "Nana janngee daaɗe e meta mum en",
   "loader.task.view": "Nana natee {view}",
   "loader.task.changes": "Nana naamnee GitHub ko waylii",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefaakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ronkii: {message}",
+  "loader.task.retry": "Loowtu",
   "feed.actions.pick": "Hollu ƴeewndooji ndee doggol",
   "feed.actions.ended": "Gasii",
   "feed.actions.duration": "Ɓooyngol",

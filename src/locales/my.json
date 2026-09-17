@@ -159,6 +159,9 @@
     "other": "{n} ခု လည်ပတ်နေဆဲ"
   },
   "loader.overview.none": "မည်သည့်အရာမျှ မဖွင့်ရသေးပါ။",
+  "loader.overview.page": "စာမျက်နှာ {page} / {pages}",
+  "loader.overview.newer": "ပိုသစ်",
+  "loader.overview.older": "ပိုဟောင်း",
   "loader.task.boot": "အခန်းကဏ္ဍများနှင့် ၎င်းတို့၏ မက်တာကို ဖတ်နေသည်",
   "loader.task.view": "{view} ကို ရေးဆွဲနေသည်",
   "loader.task.changes": "ပြောင်းလဲသည်များကို GitHub ထံ မေးနေသည်",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "အာတီဖက် {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "မအောင်မြင်ပါ: {message}",
+  "loader.task.retry": "ပြန်ဖွင့်ရန်",
   "feed.actions.pick": "ဤလည်ပတ်မှု၏ စမ်းသပ်မှုများကို ပြရန်",
   "feed.actions.ended": "ပြီးဆုံးချိန်",
   "feed.actions.duration": "ကြာချိန်",

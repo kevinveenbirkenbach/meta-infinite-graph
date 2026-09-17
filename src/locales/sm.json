@@ -168,6 +168,9 @@
     "other": "{n} o loʻo tamoʻe"
   },
   "loader.overview.none": "E leʻi uta lava se mea.",
+  "loader.overview.page": "Itulau {page} mai le {pages}",
+  "loader.overview.newer": "Fou",
+  "loader.overview.older": "Tuai",
   "loader.task.boot": "Faitau matafaioi ma a latou meta",
   "loader.task.view": "Tusi {view}",
   "loader.task.changes": "Fesili i le GitHub po o le a mea na suia",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Atifeki {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "toilalo: {message}",
+  "loader.task.retry": "Toe uta",
   "feed.actions.pick": "Faaali suʻega o lenei tamoʻega",
   "feed.actions.ended": "Uma",
   "feed.actions.duration": "Umi o le taimi",

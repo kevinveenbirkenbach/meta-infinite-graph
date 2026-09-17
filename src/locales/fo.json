@@ -168,6 +168,9 @@
     "other": "{n} koyra"
   },
   "loader.overview.none": "Einki er innlisið enn.",
+  "loader.overview.page": "Síða {page} av {pages}",
+  "loader.overview.newer": "Nýggjari",
+  "loader.overview.older": "Eldri",
   "loader.task.boot": "Lesur leiklutirnar og teirra meta",
   "loader.task.view": "Teknar {view}",
   "loader.task.changes": "Spyr GitHub, hvat er broytt",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "miseydnaðist: {message}",
+  "loader.task.retry": "Innles aftur",
   "feed.actions.pick": "Vís royndirnar hjá hesi koyringini",
   "feed.actions.ended": "Endað",
   "feed.actions.duration": "Longd",

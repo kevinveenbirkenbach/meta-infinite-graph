@@ -159,6 +159,9 @@
     "other": "{n} កំពុងដំណើរការ"
   },
   "loader.overview.none": "មិនទាន់មានអ្វីត្រូវបានផ្ទុកនៅឡើយទេ។",
+  "loader.overview.page": "ទំព័រ {page} / {pages}",
+  "loader.overview.newer": "ថ្មីជាង",
+  "loader.overview.older": "ចាស់ជាង",
   "loader.task.boot": "កំពុងអានតួនាទី និងទិន្នន័យមេតារបស់វា",
   "loader.task.view": "កំពុងគូរ {view}",
   "loader.task.changes": "កំពុងសួរ GitHub ថាមានអ្វីផ្លាស់ប្ដូរ",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "កញ្ចប់លទ្ធផល {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "បរាជ័យ៖ {message}",
+  "loader.task.retry": "ផ្ទុកឡើងវិញ",
   "feed.actions.pick": "បង្ហាញតេស្តនៃដំណើរការនេះ",
   "feed.actions.ended": "បានបញ្ចប់",
   "feed.actions.duration": "រយៈពេល",

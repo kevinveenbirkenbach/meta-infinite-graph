@@ -168,6 +168,9 @@
     "other": "{n} loupe"
   },
   "loader.overview.none": "Nog niks gelaje.",
+  "loader.overview.page": "Pagina {page} vaan {pages}",
+  "loader.overview.newer": "Nuujer",
+  "loader.overview.older": "Awwer",
   "loader.task.boot": "De rolle en hun meta weure gelaze",
   "loader.task.view": "{view} weurt getekend",
   "loader.task.changes": "GitHub weurt gevraog wat veranderd is",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislök: {message}",
+  "loader.task.retry": "Opnuuj laje",
   "feed.actions.pick": "Teste vaan deze loup toene",
   "feed.actions.ended": "Geïndig",
   "feed.actions.duration": "Duur",

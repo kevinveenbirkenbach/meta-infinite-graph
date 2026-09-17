@@ -213,6 +213,29 @@ iframe.artifact-viewer-body {
   color: var(--bs-danger);
 }
 
+.loader-task-retry {
+  --bs-btn-padding-x: 6px;
+  --bs-btn-padding-y: 0;
+  margin-left: 8px;
+  font-size: 0.75rem;
+}
+
+.loader-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.loader-pager .btn {
+  --bs-btn-padding-x: 8px;
+  --bs-btn-padding-y: 0;
+  font-size: 0.75rem;
+}
+
 .view-loader svg {
   width: 16px;
   height: 16px;

@@ -186,6 +186,9 @@
     "other": "{n} выконваецца"
   },
   "loader.overview.none": "Пакуль нічога не загружана.",
+  "loader.overview.page": "Старонка {page} з {pages}",
+  "loader.overview.newer": "Навейшыя",
+  "loader.overview.older": "Старэйшыя",
   "loader.task.boot": "Чытанне роляў і іх метаданых",
   "loader.task.view": "Адмалёўка: {view}",
   "loader.task.changes": "Запыт да GitHub: што змянілася",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Артэфакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "памылка: {message}",
+  "loader.task.retry": "Загрузіць зноў",
   "feed.actions.pick": "Паказаць тэсты гэтага запуску",
   "feed.actions.ended": "Завершана",
   "feed.actions.duration": "Працягласць",

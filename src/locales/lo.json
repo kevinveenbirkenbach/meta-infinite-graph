@@ -159,6 +159,9 @@
     "other": "{n} ກຳລັງແລ່ນ"
   },
   "loader.overview.none": "ຍັງບໍ່ມີຫຍັງໂຫຼດເທື່ອ.",
+  "loader.overview.page": "ໜ້າ {page} / {pages}",
+  "loader.overview.newer": "ໃໝ່ກວ່າ",
+  "loader.overview.older": "ເກົ່າກວ່າ",
   "loader.task.boot": "ກຳລັງອ່ານບົດບາດ ແລະ ເມຕາຂອງພວກມັນ",
   "loader.task.view": "ກຳລັງແຕ້ມ {view}",
   "loader.task.changes": "ກຳລັງຖາມ GitHub ວ່າມີຫຍັງປ່ຽນແປງ",
@@ -168,6 +171,7 @@
   "loader.task.artifact": "ອາຕິແຟັກ {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ລົ້ມເຫຼວ: {message}",
+  "loader.task.retry": "ໂຫຼດຄືນໃໝ່",
   "feed.actions.pick": "ສະແດງການທົດສອບຂອງການແລ່ນນີ້",
   "feed.actions.ended": "ສິ້ນສຸດ",
   "feed.actions.duration": "ໄລຍະເວລາ",

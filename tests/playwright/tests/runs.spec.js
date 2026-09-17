@@ -187,3 +187,44 @@ test('a server without a token says so in the card', async ({ page }) => {
   await expect(failed, 'the overview names the download that failed and why').toContainText('needs MIG_GITHUB_TOKEN');
   await expect(page.locator('#loader-overview .loader-task-done', { hasText: 'Artifacts of run #42: 2 of 2' })).toHaveCount(1);
 });
+
+test('a failed artifact offers to load it again, and the history pages', async ({ page }) => {
+  const calls = [];
+  let broken = true;
+  await wire(page, calls, ok);
+  await page.route('**/git/artifact?id=*', route => {
+    calls.push(`artifact:${new URL(route.request().url()).searchParams.get('id')}`);
+    if (!broken) return route.fulfill(ok);
+    return route.fulfill({
+      status: 502, contentType: 'application/json', body: JSON.stringify({ error: 'is larger than 268435456 bytes' }),
+    });
+  });
+  await page.goto('/?view=playwright&run=900');
+  await expect.poll(() => page.locator('table.tests-matrix td[data-cell]').count(), { timeout: 180000 })
+    .toBeGreaterThan(300);
+
+  await page.locator('#view-loader').hover();
+  const failed = page.locator('#loader-overview .loader-task-failed',
+    { hasText: `playwright-compose-${ROLE}-1-debian-btrfs` }).first();
+  await expect(failed).toContainText('larger than');
+  broken = false;
+  await failed.locator('button', { hasText: 'Load again' }).click();
+
+  await expect.poll(() => calls.filter(call => call === 'artifact:71').length,
+    'the retry asks the server for that one artifact again').toBeGreaterThan(1);
+  await expect(page.locator('#loader-overview .loader-task-done').first(), 'the fresh try tops the history')
+    .toContainText('Artifact playwright-');
+
+  await page.evaluate(() => {
+    for (let index = 0; index < 25; index += 1) {
+      window.__mig.loader.track(null, Promise.resolve(), `probe ${index}`);
+    }
+  });
+  const pager = page.locator('#loader-overview .loader-pager');
+  await expect(pager).toContainText('Page 1 of');
+  const newest = await page.locator('#loader-overview .loader-task-label').first().innerText();
+  await pager.locator('button', { hasText: 'Older' }).click();
+  await expect(pager).toContainText('Page 2 of');
+  await expect(page.locator('#loader-overview .loader-task-label').first(), 'the next page is older work')
+    .not.toHaveText(newest);
+});

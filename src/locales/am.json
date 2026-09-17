@@ -168,6 +168,9 @@
     "other": "{n} በሂደት ላይ"
   },
   "loader.overview.none": "እስካሁን ምንም አልተጫነም።",
+  "loader.overview.page": "ገጽ {page} ከ{pages}",
+  "loader.overview.newer": "አዲስ",
+  "loader.overview.older": "አሮጌ",
   "loader.task.boot": "ሚናዎቹንና ሜታቸውን በማንበብ ላይ",
   "loader.task.view": "{view}ን በመሳል ላይ",
   "loader.task.changes": "ምን እንደተለወጠ GitHubን በመጠየቅ ላይ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "አርቲፋክት {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "አልተሳካም፦ {message}",
+  "loader.task.retry": "እንደገና ጫን",
   "feed.actions.pick": "የዚህን ሩጫ ሙከራዎች አሳይ",
   "feed.actions.ended": "የተጠናቀቀ",
   "feed.actions.duration": "የቆይታ ጊዜ",

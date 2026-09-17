@@ -168,6 +168,9 @@
     "other": "{n} имҩаԥысуеит"
   },
   "loader.overview.none": "Макьана акгьы аҭагалам.",
+  "loader.overview.page": "Адаҟьа {page} / {pages}",
+  "loader.overview.newer": "Иҿыцу",
+  "loader.overview.older": "Ижәытәу",
   "loader.task.boot": "Аролқәеи рметадырқәеи рыԥхьара",
   "loader.task.view": "{view} асахьаҭыхра",
   "loader.task.changes": "GitHub иԥсахыз азҵаара",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Аартефакт {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "иқәымҿиит: {message}",
+  "loader.task.retry": "Еиҭа аҭагалара",
   "feed.actions.pick": "Ари аларшәара атестқәа раарԥшра",
   "feed.actions.ended": "Иалгеит",
   "feed.actions.duration": "Аамҭа",

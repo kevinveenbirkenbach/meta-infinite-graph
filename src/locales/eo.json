@@ -168,6 +168,9 @@
     "other": "{n} rulantaj"
   },
   "loader.overview.none": "Nenio estas ŝargita ankoraŭ.",
+  "loader.overview.page": "Paĝo {page} el {pages}",
+  "loader.overview.newer": "Pli novaj",
+  "loader.overview.older": "Pli malnovaj",
   "loader.task.boot": "Legante la rolojn kaj iliajn metadatumojn",
   "loader.task.view": "Desegnante {view}",
   "loader.task.changes": "Demandante GitHub, kio ŝanĝiĝis",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "malsukcesis: {message}",
+  "loader.task.retry": "Reŝargi",
   "feed.actions.pick": "Montri la testojn de ĉi tiu rulo",
   "feed.actions.ended": "Finita",
   "feed.actions.duration": "Daŭro",

@@ -168,6 +168,9 @@
     "other": "{n}টা চলি আছে"
   },
   "loader.overview.none": "এতিয়ালৈকে একো লোড হোৱা নাই।",
+  "loader.overview.page": "পৃষ্ঠা {page} / {pages}",
+  "loader.overview.newer": "নতুন",
+  "loader.overview.older": "পুৰণি",
   "loader.task.boot": "ভূমিকাসমূহ আৰু সেইবোৰৰ মেটা পঢ়ি থকা হৈছে",
   "loader.task.view": "{view} আঁকি থকা হৈছে",
   "loader.task.changes": "কি সলনি হৈছে GitHubক সোধা হৈছে",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "আৰ্টিফেক্ট {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "বিফল: {message}",
+  "loader.task.retry": "পুনৰ ল'ড কৰক",
   "feed.actions.pick": "এই চলনৰ পৰীক্ষাসমূহ দেখুৱাওক",
   "feed.actions.ended": "শেষ হৈছিল",
   "feed.actions.duration": "সময়কাল",

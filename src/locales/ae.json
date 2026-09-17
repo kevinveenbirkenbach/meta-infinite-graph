@@ -168,6 +168,9 @@
     "other": "{n} tačiṇti"
   },
   "loader.overview.none": "Naēcim nūrəm frabarətəm.",
+  "loader.overview.page": "Varəka {page} / {pages}",
+  "loader.overview.newer": "Nauua",
+  "loader.overview.older": "Zaurura",
   "loader.task.boot": "Kārā̊ aēšąm meta-ca frasrāuuaiieiṇte",
   "loader.task.view": "{view} paēsaiiete",
   "loader.task.changes": "GitHub pərəsāmahi yat vīcitəm",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artifaktəm {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "nōit vanat: {message}",
+  "loader.task.retry": "Pasca bara",
   "feed.actions.pick": "Daršaiia aŋhā̊ tačinaiiā̊ pərəsā̊",
   "feed.actions.ended": "Apəmō.kərəta",
   "feed.actions.duration": "Zruuan",

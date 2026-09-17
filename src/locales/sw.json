@@ -168,6 +168,9 @@
     "other": "{n} zinaendelea"
   },
   "loader.overview.none": "Hakuna kilichopakiwa bado.",
+  "loader.overview.page": "Ukurasa {page} kati ya {pages}",
+  "loader.overview.newer": "Mpya zaidi",
+  "loader.overview.older": "Za zamani",
   "loader.task.boot": "Inasoma majukumu na meta yake",
   "loader.task.view": "Inachora {view}",
   "loader.task.changes": "Inauliza GitHub kilichobadilika",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artifakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "imeshindwa: {message}",
+  "loader.task.retry": "Pakia tena",
   "feed.actions.pick": "Onyesha majaribio ya uendeshaji huu",
   "feed.actions.ended": "Iliisha",
   "feed.actions.duration": "Muda",

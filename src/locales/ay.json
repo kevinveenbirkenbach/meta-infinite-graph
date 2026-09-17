@@ -168,6 +168,9 @@
     "other": "{n} saraskakiwa"
   },
   "loader.overview.none": "Janiw kunas apkatataskiti.",
+  "loader.overview.page": "Laphi {page} / {pages}",
+  "loader.overview.newer": "Machaqa",
+  "loader.overview.older": "Nayra",
   "loader.task.boot": "Lurawinak metapampi liyiski",
   "loader.task.view": "{view} siq'iski",
   "loader.task.changes": "GitHub ukar kunas mayjt'atapat jiskt'aski",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefacto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "janiw atipkiti: {message}",
+  "loader.task.retry": "Wasitat apkataña",
   "feed.actions.pick": "Aka sarawin yant'awinakap uñacht'ayaña",
   "feed.actions.ended": "Tukuyata",
   "feed.actions.duration": "Qawqha pacha",

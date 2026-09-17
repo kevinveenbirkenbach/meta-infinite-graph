@@ -177,6 +177,9 @@
     "other": "{n} em execução"
   },
   "loader.overview.none": "Nada foi carregado ainda.",
+  "loader.overview.page": "Página {page} de {pages}",
+  "loader.overview.newer": "Mais recentes",
+  "loader.overview.older": "Mais antigas",
   "loader.task.boot": "Lendo os papéis e sua meta",
   "loader.task.view": "Desenhando {view}",
   "loader.task.changes": "Perguntando ao GitHub o que mudou",
@@ -186,6 +189,7 @@
   "loader.task.artifact": "Artefato {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "falhou: {message}",
+  "loader.task.retry": "Carregar de novo",
   "feed.actions.pick": "Mostrar os testes desta execução",
   "feed.actions.ended": "Terminado",
   "feed.actions.duration": "Duração",

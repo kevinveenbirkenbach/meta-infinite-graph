@@ -168,6 +168,9 @@
     "other": "{n} currunt"
   },
   "loader.overview.none": "Nihil adhuc oneratum est.",
+  "loader.overview.page": "Pagina {page} ex {pages}",
+  "loader.overview.newer": "Recentiora",
+  "loader.overview.older": "Antiquiora",
   "loader.task.boot": "Munera eorumque metadata leguntur",
   "loader.task.view": "{view} depingitur",
   "loader.task.changes": "GitHub rogatur quid mutatum sit",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefactum {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "defecit: {message}",
+  "loader.task.retry": "Iterum onerare",
   "feed.actions.pick": "Probationes huius cursus ostendere",
   "feed.actions.ended": "Finitum",
   "feed.actions.duration": "Duratio",

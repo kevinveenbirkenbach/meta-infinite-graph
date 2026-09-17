@@ -168,6 +168,9 @@
     "other": "{n} dwaande"
   },
   "loader.overview.none": "Der is noch neat laden.",
+  "loader.overview.page": "Side {page} fan {pages}",
+  "loader.overview.newer": "Nijer",
+  "loader.overview.older": "Âlder",
   "loader.task.boot": "De rollen en harren meta lêze",
   "loader.task.view": "{view} tekenje",
   "loader.task.changes": "GitHub freegje wat feroare is",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislearre: {message}",
+  "loader.task.retry": "Opnij lade",
   "feed.actions.pick": "De tests fan dizze run sjen litte",
   "feed.actions.ended": "Einige",
   "feed.actions.duration": "Doer",

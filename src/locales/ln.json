@@ -168,6 +168,9 @@
     "other": "{n} ezali kotambola"
   },
   "loader.overview.none": "Eloko moko te ezwami naino.",
+  "loader.overview.page": "Lokasa {page} na {pages}",
+  "loader.overview.newer": "Ya sika",
+  "loader.overview.older": "Ya kala",
   "loader.task.boot": "Ezali kotánga mikumba mpe meta na yango",
   "loader.task.view": "Ezali kobenda elilingi ya {view}",
   "loader.task.changes": "Ezali kotuna GitHub oyo ebongwani",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ekweyi: {message}",
+  "loader.task.retry": "Kozwa lisusu",
   "feed.actions.pick": "Lakisá mimekano ya botamboli oyo",
   "feed.actions.ended": "Esili",
   "feed.actions.duration": "Ntango",

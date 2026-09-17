@@ -168,6 +168,9 @@
     "other": "{n} savaktut"
   },
   "loader.overview.none": "Suli sumik tigusiqanngitchuq.",
+  "loader.overview.page": "Makpiġaaq {page} / {pages}",
+  "loader.overview.newer": "Nutaaq",
+  "loader.overview.older": "Utuqqaq",
   "loader.task.boot": "Taiguaqtuq savaanik meta-ŋisiġlu",
   "loader.task.view": "{view} titiqqiqtuq",
   "loader.task.changes": "GitHub apiqsruqtuq sumik allaŋŋuqtuanik",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Sanaaq {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "piyuŋŋitchuq: {message}",
+  "loader.task.retry": "Utiqtitchiñ",
   "feed.actions.pick": "Tautuktitchiñ uuktuutit savaktitchiniġmi uvani",
   "feed.actions.ended": "Nuŋuttuaq",
   "feed.actions.duration": "Sivisutigiŋa",

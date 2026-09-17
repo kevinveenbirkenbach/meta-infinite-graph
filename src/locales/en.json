@@ -168,6 +168,9 @@
     "other": "{n} running"
   },
   "loader.overview.none": "Nothing has loaded yet.",
+  "loader.overview.page": "Page {page} of {pages}",
+  "loader.overview.newer": "Newer",
+  "loader.overview.older": "Older",
   "loader.task.boot": "Reading the roles and their meta",
   "loader.task.view": "Drawing {view}",
   "loader.task.changes": "Asking GitHub what changed",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artifact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "failed: {message}",
+  "loader.task.retry": "Load again",
   "feed.actions.pick": "Show this run's tests",
   "feed.actions.ended": "Ended",
   "feed.actions.duration": "Duration",

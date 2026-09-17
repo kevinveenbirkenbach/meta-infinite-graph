@@ -168,6 +168,9 @@
     "other": "{n} ziriko zirakorwa"
   },
   "loader.overview.none": "Nta kintu na kimwe carapakirwa.",
+  "loader.overview.page": "Urupapuro {page} kuri {pages}",
+  "loader.overview.newer": "Bishasha",
+  "loader.overview.older": "Bya kera",
   "loader.task.boot": "Hasomwa imirimo na meta yayo",
   "loader.task.view": "Harashushanywa {view}",
   "loader.task.changes": "Harabazwa GitHub ivyahindutse",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakti {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "vyananiranye: {message}",
+  "loader.task.retry": "Subira upakire",
   "feed.actions.pick": "Erekana ibigeragezo vy'iri korwa",
   "feed.actions.ended": "Vyarangiye",
   "feed.actions.duration": "Igihe vyamaze",

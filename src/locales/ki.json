@@ -168,6 +168,9 @@
     "other": "{n} nĩ irathiĩ"
   },
   "loader.overview.none": "Gũtirĩ kĩndũ kĩrehetwo o na rĩu.",
+  "loader.overview.page": "Ũrupa {page} harĩ {pages}",
+  "loader.overview.newer": "Kĩerũ",
+  "loader.overview.older": "Gĩkũrũ",
   "loader.task.boot": "Nĩ gũthoma mawĩra na meta yamo",
   "loader.task.view": "Nĩ gũcora {view}",
   "loader.task.changes": "Nĩ kũũria GitHub kĩrĩa kĩgarũrũkĩte",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Kĩrĩa gĩthondeketwo {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "yaremwo: {message}",
+  "loader.task.retry": "Cookia rĩngĩ",
   "feed.actions.pick": "Onania magerio ma gũthiĩ gũkũ",
   "feed.actions.ended": "Ĩrĩkĩtie",
   "feed.actions.duration": "Ihinda",

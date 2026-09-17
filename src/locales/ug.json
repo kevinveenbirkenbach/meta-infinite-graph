@@ -168,6 +168,9 @@
     "other": "{n} ئىجرا بولۇۋاتىدۇ"
   },
   "loader.overview.none": "تېخى ھېچنېمە يۈكلەنمىدى.",
+  "loader.overview.page": "بەت {page} / {pages}",
+  "loader.overview.newer": "يېڭىراق",
+  "loader.overview.older": "كونىراق",
   "loader.task.boot": "روللار ۋە ئۇلارنىڭ مېتا ئۇچۇرى ئوقۇلۇۋاتىدۇ",
   "loader.task.view": "{view} سىزىلىۋاتىدۇ",
   "loader.task.changes": "GitHub دىن نېمىلەرنىڭ ئۆزگەرگەنلىكى سورىلىۋاتىدۇ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "ئارتىفاكت {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "مەغلۇپ بولدى: {message}",
+  "loader.task.retry": "قايتا يۈكلەش",
   "feed.actions.pick": "بۇ ئىجرانىڭ سىناقلىرىنى كۆرسىتىش",
   "feed.actions.ended": "تۈگىگەن",
   "feed.actions.duration": "داۋاملىشىش ۋاقتى",

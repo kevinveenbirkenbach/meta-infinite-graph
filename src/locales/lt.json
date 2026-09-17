@@ -186,6 +186,9 @@
     "other": "Vykdoma: {n}"
   },
   "loader.overview.none": "Dar niekas neįkelta.",
+  "loader.overview.page": "Puslapis {page} iš {pages}",
+  "loader.overview.newer": "Naujesni",
+  "loader.overview.older": "Senesni",
   "loader.task.boot": "Skaitomos rolės ir jų meta duomenys",
   "loader.task.view": "Piešiama: {view}",
   "loader.task.changes": "Klausiama GitHub, kas pasikeitė",
@@ -195,6 +198,7 @@
   "loader.task.artifact": "Artefaktas {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "nepavyko: {message}",
+  "loader.task.retry": "Įkelti iš naujo",
   "feed.actions.pick": "Rodyti šio paleidimo testus",
   "feed.actions.ended": "Baigta",
   "feed.actions.duration": "Trukmė",

@@ -168,6 +168,9 @@
     "other": "{n} לויפֿן"
   },
   "loader.overview.none": "נאָך גאָרנישט ניט געלאָדן.",
+  "loader.overview.page": "בלאַט {page} פֿון {pages}",
+  "loader.overview.newer": "נײַערע",
+  "loader.overview.older": "עלטערע",
   "loader.task.boot": "לייענט די ראָלעס און זייער מעטאַ",
   "loader.task.view": "צייכנט {view}",
   "loader.task.changes": "פֿרעגט GitHub וואָס האָט זיך געביטן",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "אַרטעפֿאַקט {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "דורכגעפֿאַלן: {message}",
+  "loader.task.retry": "לאָדן נאָך אַ מאָל",
   "feed.actions.pick": "ווײַזן די טעסטן פֿון דעם לויף",
   "feed.actions.ended": "געענדיקט",
   "feed.actions.duration": "געדויער",

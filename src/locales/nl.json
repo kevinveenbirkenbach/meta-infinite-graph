@@ -168,6 +168,9 @@
     "other": "{n} bezig"
   },
   "loader.overview.none": "Er is nog niets geladen.",
+  "loader.overview.page": "Pagina {page} van {pages}",
+  "loader.overview.newer": "Nieuwer",
+  "loader.overview.older": "Ouder",
   "loader.task.boot": "De rollen en hun meta lezen",
   "loader.task.view": "{view} tekenen",
   "loader.task.changes": "GitHub vragen wat er veranderd is",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefact {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislukt: {message}",
+  "loader.task.retry": "Opnieuw laden",
   "feed.actions.pick": "Tests van deze run tonen",
   "feed.actions.ended": "Beëindigd",
   "feed.actions.duration": "Duur",

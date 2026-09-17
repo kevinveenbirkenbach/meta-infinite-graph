@@ -168,6 +168,9 @@
     "other": "{n} در حال اجرا"
   },
   "loader.overview.none": "هنوز چیزی بارگذاری نشده است.",
+  "loader.overview.page": "صفحهٔ {page} از {pages}",
+  "loader.overview.newer": "تازه‌تر",
+  "loader.overview.older": "قدیمی‌تر",
   "loader.task.boot": "در حال خواندن نقش‌ها و فراداده‌هایشان",
   "loader.task.view": "در حال ترسیم {view}",
   "loader.task.changes": "در حال پرسیدن از GitHub که چه چیزی تغییر کرده",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "آرتیفکت {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ناموفق: {message}",
+  "loader.task.retry": "بارگذاری دوباره",
   "feed.actions.pick": "نمایش آزمون‌های این اجرا",
   "feed.actions.ended": "پایان",
   "feed.actions.duration": "مدت",

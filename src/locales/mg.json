@@ -168,6 +168,9 @@
     "other": "{n} mandeha"
   },
   "loader.overview.none": "Mbola tsy nisy nampidirina.",
+  "loader.overview.page": "Pejy {page} amin'ny {pages}",
+  "loader.overview.newer": "Vaovao",
+  "loader.overview.older": "Taloha",
   "loader.task.boot": "Mamaky ny andraikitra sy ny meta-ny",
   "loader.task.view": "Manao sary ny {view}",
   "loader.task.changes": "Manontany an'i GitHub izay niova",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakta {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "tsy nahomby: {message}",
+  "loader.task.retry": "Ampidiro indray",
   "feed.actions.pick": "Asehoy ny fitsapana amin'ity fandehanana ity",
   "feed.actions.ended": "Nifarana",
   "feed.actions.duration": "Faharetana",

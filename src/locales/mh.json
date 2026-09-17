@@ -168,6 +168,9 @@
     "other": "{n} rej kōjerbal"
   },
   "loader.overview.none": "Ejjañin wōt juon men ear bōk.",
+  "loader.overview.page": "Peij {page} iaan {pages}",
+  "loader.overview.newer": "Ekāāl",
+  "loader.overview.older": "Etto",
   "loader.task.boot": "Ej riiti jerbal ko im meta eo aer",
   "loader.task.view": "Ej kōmmane pija in {view}",
   "loader.task.changes": "Ej kajjitōk ippān GitHub ta eo ear oktak",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Aatipak {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ear jab tōprak: {message}",
+  "loader.task.retry": "Bar bōk",
   "feed.actions.pick": "Kwaļọk teej ko an kōjerbal in",
   "feed.actions.ended": "Ejemļo̧k",
   "feed.actions.duration": "Aitokan",

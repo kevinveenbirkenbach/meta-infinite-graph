@@ -168,6 +168,9 @@
     "other": "{n} ha kakalamten"
   },
   "loader.overview.none": "Taya' ni hafa ma katga trabiha.",
+  "loader.overview.page": "Påhina {page} gi {pages}",
+  "loader.overview.newer": "Nuebu",
+  "loader.overview.older": "Åmko'",
   "loader.task.boot": "Ma taitai i papet siha yan i meta-ñiha",
   "loader.task.view": "Ma pinta {view}",
   "loader.task.changes": "Ma faisen GitHub hafa tinilaika",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakto {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "ti malofan: {message}",
+  "loader.task.retry": "Na'kåtga ta'lo",
   "feed.actions.pick": "Na'annok i prueba siha gi este na kinalamten",
   "feed.actions.ended": "Munhåyan",
   "feed.actions.duration": "Inanakko'",

@@ -168,6 +168,9 @@
     "other": "{n} kjører"
   },
   "loader.overview.none": "Ingenting er lastet ennå.",
+  "loader.overview.page": "Side {page} av {pages}",
+  "loader.overview.newer": "Nyere",
+  "loader.overview.older": "Eldre",
   "loader.task.boot": "Leser rollene og metaen deres",
   "loader.task.view": "Tegner {view}",
   "loader.task.changes": "Spør GitHub hva som er endret",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Artefakt {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "mislyktes: {message}",
+  "loader.task.retry": "Last inn på nytt",
   "feed.actions.pick": "Vis testene for denne kjøringen",
   "feed.actions.ended": "Avsluttet",
   "feed.actions.duration": "Varighet",

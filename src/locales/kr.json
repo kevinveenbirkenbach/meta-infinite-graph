@@ -168,6 +168,9 @@
     "other": "{n} gudǝ dǝ"
   },
   "loader.overview.none": "Awo kawudǝna baa.",
+  "loader.overview.page": "Shafi {page} / {pages}",
+  "loader.overview.newer": "Sabuwa",
+  "loader.overview.older": "Gargajiya",
   "loader.task.boot": "Rolwa-a meta sandiyey karatudǝ",
   "loader.task.view": "{view} zanadǝ",
   "loader.task.changes": "GitHub-ro awo kǝnjiyana tambaydǝ",
@@ -177,6 +180,7 @@
   "loader.task.artifact": "Kayan fitarwa {name}",
   "loader.task.github": "GitHub {path}",
   "loader.task.failed": "gǝnaba: {message}",
+  "loader.task.retry": "Ngǝwu kawudǝ",
   "feed.actions.pick": "Gudǝ adǝbe imtihanwa nunadǝ",
   "feed.actions.ended": "Dajiǝna",
   "feed.actions.duration": "Nǝm kurugu",
