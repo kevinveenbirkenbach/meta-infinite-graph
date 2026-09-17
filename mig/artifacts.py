@@ -19,10 +19,10 @@ import zipfile
 
 API = "https://api.github.com"
 PREFIX = "playwright-"
-LIMIT = 256 * 1024 * 1024
+LIMIT = int(os.environ.get("MIG_ARTIFACT_LIMIT") or 2 * 1024 * 1024 * 1024)
 # An artifact never changes once uploaded, so it stays until the disk budget
 # runs out rather than until a count does: one deploy run alone uploads dozens.
-BUDGET = 2 * 1024 * 1024 * 1024
+BUDGET = int(os.environ.get("MIG_ARTIFACT_BUDGET") or 8 * 1024 * 1024 * 1024)
 RESULTS = "results.json"
 JUNIT = "playwright-junit.xml"
 ATTACHMENT = re.compile(r"\[\[ATTACHMENT\|([^\]]+)\]\]")

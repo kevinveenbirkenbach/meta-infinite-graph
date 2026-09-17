@@ -141,15 +141,18 @@ frame; Escape or a click beside it closes it, and a click with a modifier key
 opens a new tab instead.
 
 An artifact never changes once uploaded, so the server keeps every one it
-unpacked until 2 GiB are used and then drops the ones read longest ago. A
+unpacked until 8 GiB are used and then drops the ones read longest ago. A
 second look, a reload or another visitor costs no second download.
+`MIG_ARTIFACT_BUDGET` moves that ceiling, `MIG_ARTIFACT_LIMIT` the 2 GiB a
+single artifact may weigh; both count bytes.
 
 - The download needs `MIG_GITHUB_TOKEN`: GitHub hands an artifact only to a
   token, even for a public repository. Without one the card says so.
 - `GET /git/artifact?id=&repo=` fetches the zip, unpacks it under
   `/artifacts/<id>/` and answers with the JUnit results of every report inside.
-  It only takes `playwright-` artifacts up to 256 MB, of the root repository or
-  a fork the mirror carries.
+  It only takes `playwright-` artifacts up to `MIG_ARTIFACT_LIMIT`, of the root
+  repository or a fork the mirror carries. A run that records video ships
+  hundreds of megabytes, so the ceiling is a runaway guard, not a size policy.
 - Everything under `/artifacts/` is served with `Content-Security-Policy:
   sandbox allow-scripts`, so a report's script runs apart from the page and
   cannot read the token a visitor stored in the browser. A sandboxed page may

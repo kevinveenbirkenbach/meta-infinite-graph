@@ -1,3 +1,4 @@
+import importlib
 import io
 import sys
 import urllib.error
@@ -129,6 +130,19 @@ def test_the_zip_follows_its_redirect_without_the_token(monkeypatch):
         ("https://api.github.com/repos/infinito-nexus/core/actions/artifacts/5/zip", "secret", False),
         ("https://blob.example/zip?sig=x", "", True),
     ], "the signed blob URL never sees the bearer token"
+
+
+def test_a_recorded_run_fits_and_the_operator_can_move_the_ceilings(monkeypatch):
+    assert artifacts.LIMIT >= 1024 * 1024 * 1024, "a run that records video ships hundreds of megabytes"
+    monkeypatch.setenv("MIG_ARTIFACT_LIMIT", "123")
+    monkeypatch.setenv("MIG_ARTIFACT_BUDGET", "456")
+    try:
+        moved = importlib.reload(artifacts)
+        assert (moved.LIMIT, moved.BUDGET) == (123, 456)
+    finally:
+        monkeypatch.delenv("MIG_ARTIFACT_LIMIT")
+        monkeypatch.delenv("MIG_ARTIFACT_BUDGET")
+        importlib.reload(artifacts)
 
 
 def test_the_least_recently_read_artifacts_leave_once_the_budget_is_spent(github, tmp_path, monkeypatch):
