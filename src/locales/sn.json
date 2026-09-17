@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} haisi mumafaira emeta ebasa",
   "tests.why.closure": "{path} inosarudzwa pamuganhu wakaiswa",
   "card.close": "Vhara",
+  "card.minimize": "Deredza",
   "card.maximize": "Kurisa",
   "card.restore": "Dzorera",
   "status.noCategories": "{path}/categories.yml haipo kana kuti haina mepu yeroles. Batanidza dhairekitori remeta/ redura reinfinito (INFINITO_META_DIR mu.env) wozogadzira stack zvakare ne make up.",

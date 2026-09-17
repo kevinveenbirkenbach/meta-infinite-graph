@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} нет в метафайлах роли",
   "tests.why.closure": "{path} определяется развёрнутым замыканием",
   "card.close": "Закрыть",
+  "card.minimize": "Свернуть",
   "card.maximize": "Развернуть",
   "card.restore": "Восстановить",
   "status.noCategories": "{path}/categories.yml отсутствует или не содержит сопоставления ролей. Смонтируйте каталог meta/ репозитория infinito (INFINITO_META_DIR в .env) и пересоздайте стек командой make up.",

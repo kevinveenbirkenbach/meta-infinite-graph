@@ -434,6 +434,7 @@
   "tests.why.missing": "Nyns yw {path} yn restrennow meta an rol",
   "tests.why.closure": "{path} a settya war an degeans displegys",
   "card.close": "Degea",
+  "card.minimize": "Byghanhe",
   "card.maximize": "Brashe",
   "card.restore": "Daskor",
   "status.noCategories": "{path}/categories.yml yw kellys po nyns eus mappyans rolyow ynno. Mountewgh an restrenva meta/ a'n wythva infinito (INFINITO_META_DIR yn .env) ha dasgwrewgh an bern gans make up.",

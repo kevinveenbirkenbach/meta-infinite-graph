@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} haipo kwenye faili za meta za jukumu",
   "tests.why.closure": "{path} huamuliwa kwenye mkusanyiko kamili uliosambazwa",
   "card.close": "Funga",
+  "card.minimize": "Punguza ukubwa",
   "card.maximize": "Ongeza ukubwa",
   "card.restore": "Rejesha",
   "status.noCategories": "{path}/categories.yml haipo au haina ramani ya roles. Pachika saraka ya meta/ ya hazina ya infinito (INFINITO_META_DIR katika .env) na uunde upya mkusanyiko kwa make up.",

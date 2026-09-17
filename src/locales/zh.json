@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} 不在该角色的元数据文件中",
   "tests.why.closure": "{path} 由部署闭包决定",
   "card.close": "关闭",
+  "card.minimize": "最小化",
   "card.maximize": "最大化",
   "card.restore": "还原",
   "status.noCategories": "{path}/categories.yml 缺失或没有 roles 映射。请挂载 infinito 仓库的 meta/ 目录（.env 中的 INFINITO_META_DIR），然后用 make up 重新创建堆栈。",

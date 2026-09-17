@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} রোলের মেটা ফাইলে নেই",
   "tests.why.closure": "{path} ডিপ্লয় করা ক্লোজারে নির্ধারিত হয়",
   "card.close": "বন্ধ করুন",
+  "card.minimize": "ছোট করুন",
   "card.maximize": "বড় করুন",
   "card.restore": "পুনরুদ্ধার করুন",
   "status.noCategories": "{path}/categories.yml নেই অথবা এতে কোনো রোল ম্যাপিং নেই। infinito রিপোজিটরির meta/ ডিরেক্টরি মাউন্ট করুন (.env-এ INFINITO_META_DIR) এবং make up দিয়ে স্ট্যাকটি আবার তৈরি করুন।",

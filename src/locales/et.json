@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} puudub rolli metafailides",
   "tests.why.closure": "{path} otsustatakse juurutatud sulundi põhjal",
   "card.close": "Sulge",
+  "card.minimize": "Minimeeri",
   "card.maximize": "Maksimeeri",
   "card.restore": "Taasta",
   "status.noCategories": "{path}/categories.yml puudub või sellel pole rollide vastendust. Ühenda infinito hoidla kataloog meta/ (INFINITO_META_DIR failis .env) ja loo virn uuesti käsuga make up.",

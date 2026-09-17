@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} gaawiin ayaasinoon imaa anokiiwin meta mazina'iganing",
   "tests.why.closure": "{path} izhiwebad imaa gaa-achigaadeg gibaakwaawin",
   "card.close": "Gibaakwan",
+  "card.minimize": "Agaasidoon",
   "card.maximize": "Mindidoon",
   "card.restore": "Azhe-ayaan",
   "status.noCategories": "{path}/categories.yml gaawiin ayaasinoon gemaa gaawiin roles odayaanziin. Dakobidoon infinito asanjigowin meta/ makak (INFINITO_META_DIR imaa .env) miinawaa aanji-ozhitoon makakoon make up aabajitooyan.",

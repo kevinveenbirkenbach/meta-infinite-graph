@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} kuma jiro faylasha meta ee doorka",
   "tests.why.closure": "{path} waxaa go'aamiya xiridda la dejiyay",
   "card.close": "Xidh",
+  "card.minimize": "Yaree",
   "card.maximize": "Weynee",
   "card.restore": "Soo celi",
   "status.noCategories": "{path}/categories.yml ma jiro ama ma laha khariidad doorar. Ku xidh galka meta/ ee kaydka infinito (INFINITO_META_DIR ee .env) oo dib u samee stack-ga adoo isticmaalaya make up.",

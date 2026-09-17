@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} não está nos arquivos meta do papel",
   "tests.why.closure": "{path} se decide no fecho implantado",
   "card.close": "Fechar",
+  "card.minimize": "Minimizar",
   "card.maximize": "Maximizar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml está ausente ou não tem mapeamento de roles. Monte o diretório meta/ do repositório infinito (INFINITO_META_DIR no .env) e recrie a stack com make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ayikho emafayilini wemeta wendima",
   "tests.why.closure": "{path} iqunywa sihlopha esivaliweko esifakiweko",
   "card.close": "Vala",
+  "card.minimize": "Nciphisa",
   "card.maximize": "Khulisa",
   "card.restore": "Buyisela",
   "status.noCategories": "{path}/categories.yml ayikho namkha ayinalo irhelo leendima. Hlanganisa isiqulo meta/ sesigcino se-infinito (INFINITO_META_DIR ku-.env) bese wakha kabutjha isitaki nge-make up.",

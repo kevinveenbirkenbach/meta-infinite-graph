@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} റോളിന്റെ മെറ്റ ഫയലുകളിൽ ഇല്ല",
   "tests.why.closure": "{path} വിന്യസിച്ച ക്ലോഷറിൽ തീരുമാനിക്കപ്പെടുന്നു",
   "card.close": "അടയ്ക്കുക",
+  "card.minimize": "ചെറുതാക്കുക",
   "card.maximize": "വലുതാക്കുക",
   "card.restore": "പുനഃസ്ഥാപിക്കുക",
   "status.noCategories": "{path}/categories.yml കാണുന്നില്ല അല്ലെങ്കിൽ അതിൽ റോൾ മാപ്പിംഗ് ഇല്ല. infinito റിപ്പോസിറ്ററിയുടെ meta/ ഡയറക്ടറി മൗണ്ട് ചെയ്ത് (.env-ലെ INFINITO_META_DIR) make up ഉപയോഗിച്ച് സ്റ്റാക്ക് വീണ്ടും സൃഷ്ടിക്കുക.",

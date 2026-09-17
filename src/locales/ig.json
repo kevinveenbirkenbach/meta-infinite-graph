@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} adịghị na faịlụ meta nke ọrụ ahụ",
   "tests.why.closure": "{path} na-edozi na mmechi e bugara",
   "card.close": "Mechie",
+  "card.minimize": "Mee ka ọ dị nta",
   "card.maximize": "Mee ka ọ buo ibu",
   "card.restore": "Weghachi",
   "status.noCategories": "{path}/categories.yml adịghị ma ọ bụ enweghị nkewa ọrụ. Wụnye ndekọ meta/ nke ọba infinito (INFINITO_META_DIR na .env) ma mepụta stack ọzọ site na make up.",

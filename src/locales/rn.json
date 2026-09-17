@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ntiri mu madosiye ya meta y'umurimo",
   "tests.why.closure": "{path} yemezwa n'igice cashizweho",
   "card.close": "Ugara",
+  "card.minimize": "Gabanya",
   "card.maximize": "Agura cane",
   "card.restore": "Subiza",
   "status.noCategories": "{path}/categories.yml ntiriho canke ntigira ihuzwa rya roles. Shiramwo akabati meta/ k'ububiko bwa infinito (INFINITO_META_DIR muri .env) hanyuma usubire wubake stack na make up.",

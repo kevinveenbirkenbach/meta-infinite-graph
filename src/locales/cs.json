@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} není v meta souborech role",
   "tests.why.closure": "{path} se rozhoduje na nasazeném uzávěru",
   "card.close": "Zavřít",
+  "card.minimize": "Minimalizovat",
   "card.maximize": "Maximalizovat",
   "card.restore": "Obnovit",
   "status.noCategories": "{path}/categories.yml chybí nebo nemá mapování roles. Připojte adresář meta/ repozitáře infinito (INFINITO_META_DIR v .env) a znovu vytvořte stack příkazem make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} be gaukara ena meta fail lalonai lasi",
   "tests.why.closure": "{path} be atoa hutuma koua ese ia hamomokania",
   "card.close": "Koua",
+  "card.minimize": "Hamaragia",
   "card.maximize": "Habadaia herea",
   "card.restore": "Lou hamaoromaoroa",
   "status.noCategories": "{path}/categories.yml ia boio o gaukara edia lista lasi. infinito stoa ena meta/ folda atoa (INFINITO_META_DIR .env lalonai) bona make up amo stack lou karaia.",

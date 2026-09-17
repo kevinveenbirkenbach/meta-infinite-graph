@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} немає в meta-файлах ролі",
   "tests.why.closure": "{path} визначається розгорнутим замиканням",
   "card.close": "Закрити",
+  "card.minimize": "Згорнути",
   "card.maximize": "Розгорнути",
   "card.restore": "Відновити",
   "status.noCategories": "{path}/categories.yml відсутній або не має відображення roles. Змонтуйте каталог meta/ репозиторію infinito (INFINITO_META_DIR у .env) і перестворіть стек командою make up.",

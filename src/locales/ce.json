@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} рольан мета-файлашкахь дац",
   "tests.why.closure": "{path} дӀахӀоттийначу замыканехь къастало",
   "card.close": "ДӀакъовла",
+  "card.minimize": "Уггар жима дан",
   "card.maximize": "Уггар доккха дан",
   "card.restore": "МеттахӀотто",
   "status.noCategories": "{path}/categories.yml дац я цу чохь рольийн карта яц. infinito репозиторин meta/ папка тӀеозаде (INFINITO_META_DIR .env чохь), стек make up командица юха кхолла.",

@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} није у мета-датотекама улоге",
   "tests.why.closure": "{path} се одређује на распоређеном затворењу",
   "card.close": "Затвори",
+  "card.minimize": "Умањи",
   "card.maximize": "Увећај",
   "card.restore": "Врати",
   "status.noCategories": "{path}/categories.yml недостаје или нема мапирање улога. Монтирајте директоријум meta/ репозиторијума infinito (INFINITO_META_DIR у .env) и поново направите стек са make up.",

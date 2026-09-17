@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} भूमिकेच्या मेटा फायलींमध्ये नाही",
   "tests.why.closure": "{path} तैनात केलेल्या संवरणावर निश्चित होते",
   "card.close": "बंद करा",
+  "card.minimize": "लहान करा",
   "card.maximize": "मोठे करा",
   "card.restore": "पूर्ववत करा",
   "status.noCategories": "{path}/categories.yml गहाळ आहे किंवा त्यात roles मॅपिंग नाही. infinito रिपॉझिटरीची meta/ निर्देशिका माउंट करा (.env मधील INFINITO_META_DIR) आणि make up ने स्टॅक पुन्हा तयार करा.",

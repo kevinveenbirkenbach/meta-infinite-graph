@@ -1,13 +1,11 @@
-import { t } from '../i18n.js';
+import { chrome, hideLater, waiting } from '../popup.js';
+
 export class RoleCardHost {
   constructor(roleInfo) {
     this.roleInfo = roleInfo;
     this.cards = new Map();
+    this.waits = waiting();
   }
-
-  static LINGER = 500;
-
-  static FADE = 500;
 
   has(role) {
     return this.cards.has(role);
@@ -17,41 +15,35 @@ export class RoleCardHost {
     return this.cards.size;
   }
 
+  // The pointer must stay outside the card, or the card holds itself open and
+  // covers whatever the pointer moves to next.
+  static GAP = 5;
+
   _place(entry) {
     const point = entry.locate ? entry.locate() : entry.point;
     if (!point) return;
     const width = entry.element.offsetWidth;
     const height = entry.element.offsetHeight;
-    const left = point.flip ? point.x - width - 14 : point.x + 14;
+    const left = point.flip ? point.x - width - RoleCardHost.GAP : point.x + RoleCardHost.GAP;
     entry.element.style.left =
       `${Math.max(8, Math.min(left, window.innerWidth - width - 8))}px`;
     entry.element.style.top =
-      `${Math.max(8, Math.min(point.y + 14, window.innerHeight - height - 8))}px`;
+      `${Math.max(8, Math.min(point.y + RoleCardHost.GAP, window.innerHeight - height - 8))}px`;
   }
 
   _build(role, entry) {
     const element = document.createElement('div');
-    element.className = 'role-card-host';
+    element.className = 'role-card-host popup-fade';
     element.dataset.role = role;
     element.appendChild(entry.build ? entry.build() : this.roleInfo.card(role));
 
-    const close = document.createElement('button');
-    close.type = 'button';
-    close.className = 'role-card-close';
-    close.title = t('card.close');
-    close.textContent = '×';
-    close.addEventListener('click', () => this.drop(role));
-    element.appendChild(close);
-
-    if (!entry.build) {
-      const grow = document.createElement('button');
-      grow.type = 'button';
-      grow.className = 'role-card-grow';
-      grow.title = t('card.maximize');
-      grow.textContent = '⤢';
-      grow.addEventListener('click', () => this.maximize(role));
-      element.appendChild(grow);
-    }
+    entry.chrome = chrome(element, {
+      onClose: () => this.drop(role),
+      onState: state => {
+        if (state) this.hold(role);
+        else this._place(entry);
+      },
+    });
 
     element.addEventListener('mouseenter', () => this.hold(role));
     element.addEventListener('mouseleave', () => this.release(role));
@@ -65,7 +57,9 @@ export class RoleCardHost {
   _ensure(role, point, locate, build) {
     let entry = this.cards.get(role);
     if (entry) {
-      entry.point = point || entry.point;
+      // Moving inside the trigger fires mouseover again; the card stays where
+      // the pointer first opened it rather than crawling after it.
+      entry.point = entry.point || point;
       if (locate) entry.locate = locate;
       this.hold(role);
       if (entry.element) {
@@ -74,7 +68,7 @@ export class RoleCardHost {
       }
       return entry;
     }
-    entry = { element: null, hideTimer: null, frame: null, pinned: false, point, locate, build };
+    entry = { element: null, hide: null, chrome: null, frame: null, pinned: false, point, locate, build };
     this.cards.set(role, entry);
     if (build) {
       this._build(role, entry);
@@ -95,50 +89,44 @@ export class RoleCardHost {
   hold(role) {
     const entry = this.cards.get(role);
     if (!entry) return;
-    clearTimeout(entry.hideTimer);
-    entry.hideTimer = null;
+    if (entry.hide) entry.hide.cancel();
+    entry.hide = null;
     entry.released = false;
     if (entry.element) entry.element.classList.remove('fading');
-  }
-
-  maximize(role) {
-    const entry = this.cards.get(role);
-    if (!entry || !entry.element) return;
-    entry.maximized = !entry.maximized;
-    entry.element.classList.toggle('maximized', entry.maximized);
-    const grow = entry.element.querySelector('.role-card-grow');
-    grow.textContent = entry.maximized ? '⤡' : '⤢';
-    grow.title = t(entry.maximized ? 'card.restore' : 'card.maximize');
-    if (entry.maximized) this.hold(role);
-    else this._place(entry);
   }
 
   // A maximized card covers the window, so the pointer leaving it means it left
   // the page, not the card; letting that fade it would close it under the reader.
   release(role) {
+    this.waits.cancel(role);
     const entry = this.cards.get(role);
-    if (!entry || entry.pinned || entry.maximized) return;
+    if (!entry || entry.pinned || (entry.chrome && entry.chrome.state)) return;
     entry.released = true;
     if (!entry.element) return;
-    clearTimeout(entry.hideTimer);
-    entry.hideTimer = setTimeout(() => {
-      entry.element.classList.add('fading');
-      entry.element.classList.remove('on');
-      entry.hideTimer = setTimeout(() => this.drop(role), RoleCardHost.FADE);
-    }, RoleCardHost.LINGER);
+    if (entry.hide) entry.hide.cancel();
+    entry.hide = hideLater(entry.element, () => this.drop(role));
   }
 
   drop(role) {
+    this.waits.cancel(role);
     const entry = this.cards.get(role);
     if (!entry) return;
-    clearTimeout(entry.hideTimer);
+    if (entry.hide) entry.hide.cancel();
     cancelAnimationFrame(entry.frame);
     if (entry.element) entry.element.remove();
     this.cards.delete(role);
   }
 
-  show(role, point, build) {
-    this._ensure(role, point, null, build);
+  // Args:
+  //   now: true opens at once, for a click or the keyboard; a pointer resting
+  //     on the trigger waits POPUP.DELAY, so passing over it opens nothing.
+  show(role, point, build, now = false) {
+    if (now || this.cards.has(role)) {
+      this.waits.cancel(role);
+      this._ensure(role, point, null, build);
+      return;
+    }
+    this.waits.arm(role, () => this._ensure(role, point, null, build));
   }
 
   _follow(role, entry) {
@@ -159,8 +147,8 @@ export class RoleCardHost {
     const entry = this._ensure(role, null, locate);
     entry.pinned = true;
     entry.locate = locate;
-    clearTimeout(entry.hideTimer);
-    entry.hideTimer = null;
+    if (entry.hide) entry.hide.cancel();
+    entry.hide = null;
     if (entry.element) {
       entry.element.classList.add('pinned', 'on');
       entry.element.classList.remove('fading');
@@ -181,10 +169,15 @@ export class RoleCardHost {
   }
 
   bind(container) {
+    const at = event => ({ x: event.clientX, y: event.clientY });
     container.addEventListener('mouseover', event => {
       const trigger = event.target.closest('[data-role-name]');
       if (!trigger) return;
-      this.show(trigger.dataset.roleName, { x: event.clientX, y: event.clientY });
+      this.show(trigger.dataset.roleName, at(event));
+    });
+    container.addEventListener('click', event => {
+      const trigger = event.target.closest('[data-role-name]');
+      if (trigger) this.show(trigger.dataset.roleName, at(event), null, true);
     });
     container.addEventListener('mouseout', event => {
       const trigger = event.target.closest('[data-role-name]');

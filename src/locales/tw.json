@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} nni dwumadi no meta fael mu",
   "tests.why.closure": "{path} gyina nkatasoɔ a wɔasi hɔ no so",
   "card.close": "To mu",
+  "card.minimize": "Ma ɛnyɛ ketewa",
   "card.maximize": "Ma ɛnyɛ kɛse",
   "card.restore": "San de bra",
   "status.noCategories": "{path}/categories.yml nni hɔ anaa dwumadi nhyehyɛe biara nni mu. Fa infinito akorae meta/ foda no hyɛ mu (INFINITO_META_DIR wɔ .env mu) na fa make up san yɛ stack no.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ne esas en la meta-dosieri di la rolo",
   "tests.why.closure": "{path} decidesas en la deplegita klozuro",
   "card.close": "Klozar",
+  "card.minimize": "Minimigar",
   "card.maximize": "Maximigar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml mankas o havas nula mapo di roles. Muntez la direktorio meta/ di la depozeyo infinito (INFINITO_META_DIR en .env) e rikreez la stako per make up.",

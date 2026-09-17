@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} non es in le files meta del rolo",
   "tests.why.closure": "{path} se decide in le clausura deployate",
   "card.close": "Clauder",
+  "card.minimize": "Minimisar",
   "card.maximize": "Maximisar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml manca o non ha un mappa de rolos. Monta le directorio meta/ del repositorio infinito (INFINITO_META_DIR in .env) e recrea le pila con make up.",

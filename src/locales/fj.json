@@ -346,6 +346,7 @@
   "tests.why.missing": "E sega ni tiko na {path} ena faile meta ni itavi",
   "tests.why.closure": "E vakadeitaki na {path} ena iwasewase sa vakacurumi",
   "card.close": "Sogota",
+  "card.minimize": "Vakalailaitaka",
   "card.maximize": "Vakalevutaka",
   "card.restore": "Vakalesuya",
   "status.noCategories": "E sega na {path}/categories.yml se sega kina na ituvatuva roles. Vakacuruma na ivolavola meta/ ni vale ni maroroi infinito (INFINITO_META_DIR ena .env) ka buli tale na stack ena make up.",

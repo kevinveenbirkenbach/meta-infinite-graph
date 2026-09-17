@@ -16,6 +16,7 @@ import { MatrixView } from './matrix/view.js';
 import { MetaGraph } from './meta/graph.js';
 import { MetaTables } from './meta/tables.js';
 import { PlaywrightMatrix } from './playwrightMatrix.js';
+import * as popup from './popup.js';
 import { RoleCardHost } from './role/cardHost.js';
 import { RoleInfo } from './role/info.js';
 import { TableView } from './table/view.js';
@@ -191,7 +192,7 @@ loader.track('*', gitRange.load()
       urlState.capture();
       window.__mig = {
         metaGraph, selectionManager, uiManager, tableView, roleInfo, cardHost, forkTree,
-        testsView, codeView, codeTests, annotations, dataLoader, gitRange, feeds, matrixView,
+        testsView, codeView, codeTests, annotations, dataLoader, gitRange, feeds, matrixView, popup,
         graph: graphRenderer.graph,
       };
     });

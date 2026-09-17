@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} tekiri mu fayiro za meta ez'omulimu",
   "tests.why.closure": "{path} kisalibwawo ku kibinja ekiteereddwawo",
   "card.close": "Ggalawo",
+  "card.minimize": "Kendeeza",
   "card.maximize": "Gaziya ddala",
   "card.restore": "Zzaawo",
   "status.noCategories": "{path}/categories.yml ebulawo oba terina kukwataganya kwa roles. Teekako ekitabo meta/ ekya tterekero lya infinito (INFINITO_META_DIR mu .env) era ozzeemu okukola stack ne make up.",

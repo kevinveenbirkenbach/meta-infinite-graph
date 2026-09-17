@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} nu se află în fișierele meta ale rolului",
   "tests.why.closure": "{path} se stabilește pe închiderea implementată",
   "card.close": "Închide",
+  "card.minimize": "Minimizează",
   "card.maximize": "Maximizează",
   "card.restore": "Restaurează",
   "status.noCategories": "{path}/categories.yml lipsește sau nu are o mapare roles. Montează directorul meta/ al depozitului infinito (INFINITO_META_DIR în .env) și recreează stiva cu make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} rolbe meta fayilwalan ba",
   "tests.why.closure": "{path} rabawa ajiyanabelan tabbatarna",
   "card.close": "Rufǝ",
+  "card.minimize": "Tsǝtsǝdǝ",
   "card.maximize": "Kuradǝ",
   "card.restore": "Wǝltǝ",
   "status.noCategories": "{path}/categories.yml ba, au roles taswira ba. infinito ma'ajiyabe meta/ jaka haɗǝ (INFINITO_META_DIR .env-lan) kuru stack make up-a ngǝwu sǝdǝ.",

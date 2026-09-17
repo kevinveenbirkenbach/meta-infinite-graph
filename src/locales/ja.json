@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} はロールのメタファイルにありません",
   "tests.why.closure": "{path} はデプロイされたクロージャで決まります",
   "card.close": "閉じる",
+  "card.minimize": "最小化",
   "card.maximize": "最大化",
   "card.restore": "元に戻す",
   "status.noCategories": "{path}/categories.yml が存在しないか、roles のマッピングがありません。infinito リポジトリの meta/ ディレクトリをマウントし（.env の INFINITO_META_DIR）、make up でスタックを再作成してください。",

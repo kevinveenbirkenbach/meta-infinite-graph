@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} භූමිකාවේ මෙටා ගොනුවල නැත",
   "tests.why.closure": "{path} යෙදවූ සංවෘතය මත තීරණය වේ",
   "card.close": "වසන්න",
+  "card.minimize": "කුඩා කරන්න",
   "card.maximize": "උපරිම කරන්න",
   "card.restore": "ප්‍රතිසාධනය කරන්න",
   "status.noCategories": "{path}/categories.yml අස්ථානගත වී හෝ roles සිතියමක් නැත. infinito ගබඩාවේ meta/ නාමාවලිය සවි කර (.env හි INFINITO_META_DIR) make up සමඟ තොගය නැවත සාදන්න.",

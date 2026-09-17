@@ -324,6 +324,7 @@
   "tests.why.missing": "{path}이(가) 역할의 메타 파일에 없음",
   "tests.why.closure": "{path}은(는) 배포된 클로저에서 결정됨",
   "card.close": "닫기",
+  "card.minimize": "최소화",
   "card.maximize": "최대화",
   "card.restore": "복원",
   "status.noCategories": "{path}/categories.yml이 없거나 역할 매핑이 없습니다. infinito 저장소의 meta/ 디렉터리를 마운트하고(.env의 INFINITO_META_DIR) make up으로 스택을 다시 만드세요.",

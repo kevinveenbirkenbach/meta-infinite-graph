@@ -174,19 +174,21 @@ export class TestsView extends TestsCatalog {
     return t('tests.run.ran', { ran, n: this.lines.length, number: this.runs.run.run_number });
   }
 
-  _hover(event) {
+  // Args:
+  //   now: a click opens the card without the pointer having to rest first.
+  _hover(event, now = false) {
     const cell = event.target.closest('[data-cell]');
     if (!cell) return;
     const row = this.detail.get(cell.dataset.cell);
-    const box = cell.getBoundingClientRect();
     this.cardHost.show(
       `#test-${cell.dataset.cell}`,
-      { x: box.left, y: box.bottom },
+      { x: event.clientX, y: event.clientY },
       () => {
         const card = TestsView.card(row, this.roleInfo, this._plan(row));
         if (this._held()) fillRun(card.appendChild(el('dl', { className: 'role-card-facts test-run' })), this.runs, row);
         return card;
-      }
+      },
+      now
     );
   }
 

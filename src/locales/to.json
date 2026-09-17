@@ -324,6 +324,7 @@
   "tests.why.missing": "'Oku 'ikai 'i he ngaahi faile meta 'o e fatongia 'a e {path}",
   "tests.why.closure": "'Oku fakapapau'i 'a e {path} 'i he tāpuni kuo fokotu'u",
   "card.close": "Tāpuni",
+  "card.minimize": "Fakasi'isi'i",
   "card.maximize": "Fakalahi kakato",
   "card.restore": "Fakafoki",
   "status.noCategories": "'Oku 'ikai 'i ai 'a e {path}/categories.yml pe 'oku 'ikai ha fakafehokotaki fatongia ai. Fakahū 'a e fakahokohoko meta/ 'o e tauhi'anga infinito (INFINITO_META_DIR 'i he .env) pea toe fa'u 'a e sitaki 'aki 'a e make up.",

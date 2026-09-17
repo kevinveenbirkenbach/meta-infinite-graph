@@ -346,6 +346,7 @@
   "tests.why.missing": "Tsy ao amin'ny rakitra meta an'ny andraikitra ny {path}",
   "tests.why.closure": "Tapahina amin'ny fanakatonana napetraka ny {path}",
   "card.close": "Akatony",
+  "card.minimize": "Akelezo",
   "card.maximize": "Halehibeo",
   "card.restore": "Averina",
   "status.noCategories": "Tsy hita ny {path}/categories.yml na tsy misy fifandraisan'andraikitra ao. Apetaho ny lahatahiry meta/ an'ny tahiry infinito (INFINITO_META_DIR ao amin'ny .env) ary amboary indray ny stack amin'ny make up.",

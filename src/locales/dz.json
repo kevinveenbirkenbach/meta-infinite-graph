@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} ལཱ་འགན་གྱི་མེ་ཊ་ཡིག་སྣོད་ཚུ་ནང་ མེད།",
   "tests.why.closure": "{path} གཞི་བཙུགས་འབད་ཡོད་པའི་ཁ་བསྡམ་ཐོག་ལུ་ གཏན་འཁེལ་འབདཝ་ཨིན།",
   "card.close": "ཁ་བསྡམ།",
+  "card.minimize": "ཆུང་ཤོས་བཟོ།",
   "card.maximize": "ཆེ་ཤོས་བཟོ།",
   "card.restore": "སླར་གསོ།",
   "status.noCategories": "{path}/categories.yml མེདཔ་ ཡང་ན་ ལཱ་འགན་སབ་ཁྲ་མེད། infinito མཛོད་ཀྱི་ meta/ སྣོད་ཐོ་ སྦྱར་ (.env ནང་ INFINITO_META_DIR) ཞིནམ་ལས་ make up གིས་ བརྩེགས་ཚན་ལོག་གསར་བསྐྲུན་འབད།",

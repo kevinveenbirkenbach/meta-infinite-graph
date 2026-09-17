@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} ayeke na yâ tî âfisiê tî meta tî kua pëpe",
   "tests.why.closure": "{path} ayeke hunzi na ndö tî yê sô a zîa na kua",
   "card.close": "Kânga",
+  "card.minimize": "Sâra si a kete",
   "card.maximize": "Sâra si a kono",
   "card.restore": "Kîri na ni",
   "status.noCategories": "{path}/categories.yml ayeke dä pëpe wala roles ayeke na yâ ni pëpe. Zîa dosiê meta/ tî ndo tî bätängö tî infinito (INFINITO_META_DIR na yâ tî .env) na leke stack ngbene na make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} faayiloota meetaa gahee keessa hin jiru",
   "tests.why.closure": "{path} cufamaa diriirfame irratti murtaa'a",
   "card.close": "Cufi",
+  "card.minimize": "Xiqqeessi",
   "card.maximize": "Guddisi",
   "card.restore": "Deebisi",
   "status.noCategories": "{path}/categories.yml hin jiru yookaan kaarta gaheewwanii hin qabu. Galmee meta/ kuusaa infinito (INFINITO_META_DIR .env keessatti) fe'i, achiis make up n tuutaa irra deebi'ii uumi.",

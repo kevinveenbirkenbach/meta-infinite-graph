@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} mana ruwanaq meta qillqankunapichu",
   "tests.why.closure": "{path} churasqa wichqaypi sayachisqa",
   "card.close": "Wichqay",
+  "card.minimize": "Huch'uyyachiy",
   "card.maximize": "Hatunyachiy",
   "card.restore": "Kutichiy",
   "status.noCategories": "{path}/categories.yml mana kanchu utaq mana ruwana t'inkiyniyuqchu. infinito waqaychanaq meta/ carpetanta churay (.env-pi INFINITO_META_DIR) hinaspa make up-wan stackta musuqmanta ruray.",

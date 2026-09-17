@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} no és als fitxers meta del rol",
   "tests.why.closure": "{path} es resol en la clausura desplegada",
   "card.close": "Tanca",
+  "card.minimize": "Minimitza",
   "card.maximize": "Maximitza",
   "card.restore": "Restaura",
   "status.noCategories": "{path}/categories.yml falta o no té cap mapatge de rols. Munta el directori meta/ del repositori infinito (INFINITO_META_DIR a .env) i torna a crear la pila amb make up.",

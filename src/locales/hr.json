@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} nije u meta datotekama uloge",
   "tests.why.closure": "{path} se razrješava na postavljenom zatvorenju",
   "card.close": "Zatvori",
+  "card.minimize": "Minimiziraj",
   "card.maximize": "Maksimiziraj",
   "card.restore": "Vrati",
   "status.noCategories": "{path}/categories.yml nedostaje ili nema mapiranje uloga. Montirajte direktorij meta/ repozitorija infinito (INFINITO_META_DIR u .env) i ponovno stvorite stog s make up.",

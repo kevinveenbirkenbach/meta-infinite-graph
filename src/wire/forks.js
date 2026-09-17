@@ -13,16 +13,17 @@ export function wireForks(forkTree, cardHost) {
 
   // Left of the panel rather than at the pointer: the panel is the right edge
   // of the window, so a card at the pointer covers the very input to fill in.
-  const help = () => {
+  const help = (now = false) => {
     const box = field.getBoundingClientRect();
     cardHost.show(
       ForkCards.TOKEN_HELP,
       { x: box.left, y: box.top, flip: true },
-      ForkCards.tokenHelp
+      ForkCards.tokenHelp,
+      now
     );
   };
-  field.addEventListener('mouseover', help);
-  field.addEventListener('focusin', help);
+  field.addEventListener('mouseover', () => help());
+  field.addEventListener('focusin', () => help(true));
   field.addEventListener('mouseout', () => cardHost.release(ForkCards.TOKEN_HELP));
   field.addEventListener('focusout', () => cardHost.release(ForkCards.TOKEN_HELP));
 

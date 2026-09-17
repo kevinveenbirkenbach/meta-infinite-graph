@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ne estas en la metadosieroj de la rolo",
   "tests.why.closure": "{path} decidiĝas laŭ la deplojita fermaĵo",
   "card.close": "Fermi",
+  "card.minimize": "Minimumigi",
   "card.maximize": "Maksimumigi",
   "card.restore": "Restarigi",
   "status.noCategories": "{path}/categories.yml mankas aŭ ne havas rolan mapon. Muntu la dosierujon meta/ de la deponejo infinito (INFINITO_META_DIR en .env) kaj rekreu la stakon per make up.",

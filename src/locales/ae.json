@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} nōit asti nipištaēšu meta kārahe",
   "tests.why.closure": "{path} pairidaēzē nišaδitē vīcitō",
   "card.close": "Hąmvaraiia",
+  "card.minimize": "Kasišta.kərənūiδi",
   "card.maximize": "Mazišta.kərənūiδi",
   "card.restore": "Pasca.stāiia",
   "status.noCategories": "{path}/categories.yml nōit asti vā nōit rāzarə kāranąm baraiti. Upa.bąsaiia meta/ haṇjamanahe infinito (INFINITO_META_DIR .env aṇtarə) aδa pasca dazdi rāšəm make up haca.",

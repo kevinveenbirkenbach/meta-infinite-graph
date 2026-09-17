@@ -412,6 +412,7 @@
   "tests.why.missing": "Cha nel {path} ayns coadanyn meta yn ayrn",
   "tests.why.closure": "Ta {path} socrit er y dooney skeaylit",
   "card.close": "Dooin",
+  "card.minimize": "Jean s'beg",
   "card.maximize": "Jean s'mooar",
   "card.restore": "Aa-hoiaghey",
   "status.noCategories": "Ta {path}/categories.yml ersooyl, ny cha nel mapp roles ayn. Croch-stiagh yn fillag meta/ jeh tashtey infinito (INFINITO_META_DIR ayns .env) as aa-chroo y stack lesh make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "Kāore a {path} i ngā kōnae meta o te tūranga",
   "tests.why.closure": "Ka whakatauhia a {path} i runga i te katinga kua whakatūria",
   "card.close": "Katia",
+  "card.minimize": "Whakaitihia",
   "card.maximize": "Whakanuia",
   "card.restore": "Whakahokia",
   "status.noCategories": "Kei te ngaro a {path}/categories.yml, kāore rānei he mahere roles. Kōkuhuna te whaiaronga meta/ o te pātaka infinito (INFINITO_META_DIR i .env), ā, waihangatia anō te tāpae ki te make up.",

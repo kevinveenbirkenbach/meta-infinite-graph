@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} kayi li momafaela gameta gonkandangala",
   "tests.why.closure": "{path} otayi tulwa po kekwatathano ndyoka lya tulwa miilonga",
   "card.close": "Pata",
+  "card.minimize": "Shonopeka",
   "card.maximize": "Nenepeka thiluthilu",
   "card.restore": "Galulila",
   "status.noCategories": "{path}/categories.yml kayi po nenge kayi na omukalo gwa roles. Tula mo oshikutu meta/ shoshigandhi shinfinito (INFINITO_META_DIR mo .env) e to shiti we ostack no make up.",

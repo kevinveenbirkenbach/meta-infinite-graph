@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} non está nos ficheiros meta do rol",
   "tests.why.closure": "{path} decídese no peche despregado",
   "card.close": "Pechar",
+  "card.minimize": "Minimizar",
   "card.maximize": "Maximizar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml falta ou non ten ningunha correspondencia de roles. Monta o directorio meta/ do repositorio infinito (INFINITO_META_DIR en .env) e recrea a pila con make up.",

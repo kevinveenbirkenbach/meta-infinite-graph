@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} ບໍ່ຢູ່ໃນໄຟລ໌ເມຕາຂອງບົດບາດ",
   "tests.why.closure": "{path} ຕັດສິນຕາມຊຸດປິດທີ່ຕິດຕັ້ງແລ້ວ",
   "card.close": "ປິດ",
+  "card.minimize": "ຫຍໍ້ລົງ",
   "card.maximize": "ຂະຫຍາຍໃຫຍ່ສຸດ",
   "card.restore": "ຄືນຂະໜາດ",
   "status.noCategories": "{path}/categories.yml ຂາດຫາຍ ຫຼື ບໍ່ມີການແມັບ roles. ເມົາໄດເຣັກທໍຣີ meta/ ຂອງຣີໂພສິທໍຣີ infinito (INFINITO_META_DIR ໃນ .env) ແລະ ສ້າງສະແຕັກຄືນໃໝ່ດ້ວຍ make up.",

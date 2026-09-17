@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ভূমিকাৰ মেটা ফাইলত নাই",
   "tests.why.closure": "{path} ডিপ্লয় কৰা ক্লোজাৰত নিৰ্ধাৰিত হয়",
   "card.close": "বন্ধ কৰক",
+  "card.minimize": "সৰু কৰক",
   "card.maximize": "সৰ্বাধিক কৰক",
   "card.restore": "পুনৰুদ্ধাৰ কৰক",
   "status.noCategories": "{path}/categories.yml নাই বা ইয়াত ভূমিকাৰ মেপিং নাই। infinito ৰিপজিটৰিৰ meta/ ডাইৰেক্টৰী মাউণ্ট কৰক (.env ত INFINITO_META_DIR) আৰু make up ৰে ষ্টেকটো পুনৰ সৃষ্টি কৰক।",

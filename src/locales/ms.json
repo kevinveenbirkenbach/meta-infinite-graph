@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} tiada dalam fail meta peranan",
   "tests.why.closure": "{path} ditentukan oleh penutupan yang digunakan",
   "card.close": "Tutup",
+  "card.minimize": "Kecilkan",
   "card.maximize": "Maksimumkan",
   "card.restore": "Pulihkan",
   "status.noCategories": "{path}/categories.yml tiada atau tidak mempunyai pemetaan peranan. Lekapkan direktori meta/ repositori infinito (INFINITO_META_DIR dalam .env) dan cipta semula tindanan dengan make up.",

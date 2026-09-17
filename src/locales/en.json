@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} is not in the role's meta files",
   "tests.why.closure": "{path} settles on the deployed closure",
   "card.close": "Close",
+  "card.minimize": "Minimize",
   "card.maximize": "Maximize",
   "card.restore": "Restore",
   "status.noCategories": "{path}/categories.yml is missing or has no roles mapping. Mount the infinito repository meta/ directory (INFINITO_META_DIR in .env) and recreate the stack with make up.",

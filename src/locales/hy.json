@@ -346,6 +346,7 @@
   "tests.why.missing": "{path}-ը դերի մետա ֆայլերում չէ",
   "tests.why.closure": "{path}-ը որոշվում է տեղակայված փակման վրա",
   "card.close": "Փակել",
+  "card.minimize": "Փոքրացնել",
   "card.maximize": "Մեծացնել",
   "card.restore": "Վերականգնել",
   "status.noCategories": "{path}/categories.yml-ը բացակայում է կամ չունի roles համապատասխանեցում։ Միացրեք infinito պահոցի meta/ պանակը (INFINITO_META_DIR՝ .env-ում) և վերստեղծեք ստեկը make up-ով։",

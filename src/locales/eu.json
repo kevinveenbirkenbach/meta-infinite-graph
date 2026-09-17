@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ez dago rolaren meta fitxategietan",
   "tests.why.closure": "{path} hedatutako itxieran erabakitzen da",
   "card.close": "Itxi",
+  "card.minimize": "Minimizatu",
   "card.maximize": "Maximizatu",
   "card.restore": "Leheneratu",
   "status.noCategories": "{path}/categories.yml falta da edo ez du roles mapaketarik. Muntatu infinito biltegiaren meta/ direktorioa (INFINITO_META_DIR .env fitxategian) eta birsortu pila make up erabiliz.",

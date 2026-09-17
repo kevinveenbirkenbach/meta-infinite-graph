@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} er ikki í metafílum leiklutsins",
   "tests.why.closure": "{path} verður avgjørt á útbreidda umfarinum",
   "card.close": "Lat aftur",
+  "card.minimize": "Minka",
   "card.maximize": "Stórka",
   "card.restore": "Endurstovna",
   "status.noCategories": "{path}/categories.yml manglar ella hevur onga roles-kortlegging. Fest meta/-mappuna í infinito-goymsluni (INFINITO_META_DIR í .env) og endurskapa stakkin við make up.",

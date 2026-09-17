@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} es pas dins los fichièrs meta del ròtle",
   "tests.why.closure": "{path} se decidís sus la clausura desplegada",
   "card.close": "Tampar",
+  "card.minimize": "Minimizar",
   "card.maximize": "Maximizar",
   "card.restore": "Restablir",
   "status.noCategories": "{path}/categories.yml es mancant o a pas cap de correspondéncia roles. Montatz lo repertòri meta/ del depaus infinito (INFINITO_META_DIR dins .env) e tornatz crear la pila amb make up.",

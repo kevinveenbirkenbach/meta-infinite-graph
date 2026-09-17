@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ntiri muri dosiye za meta z'inshingano",
   "tests.why.closure": "{path} yemezwa n'icyegeranyo cyashyizweho",
   "card.close": "Funga",
+  "card.minimize": "Gabanya",
   "card.maximize": "Agura cyane",
   "card.restore": "Garura",
   "status.noCategories": "{path}/categories.yml ntiboneka cyangwa nta roles zirimo. Shyiraho ububiko meta/ bwa infinito (INFINITO_META_DIR muri .env) hanyuma wongere wubake stack ukoresheje make up.",

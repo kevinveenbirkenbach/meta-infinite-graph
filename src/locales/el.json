@@ -346,6 +346,7 @@
   "tests.why.missing": "Το {path} δεν βρίσκεται στα αρχεία meta του ρόλου",
   "tests.why.closure": "Το {path} καθορίζεται από το αναπτυγμένο κλείσιμο",
   "card.close": "Κλείσιμο",
+  "card.minimize": "Ελαχιστοποίηση",
   "card.maximize": "Μεγιστοποίηση",
   "card.restore": "Επαναφορά",
   "status.noCategories": "Το {path}/categories.yml λείπει ή δεν έχει αντιστοίχιση roles. Προσαρτήστε τον κατάλογο meta/ του αποθετηρίου infinito (INFINITO_META_DIR στο .env) και δημιουργήστε ξανά τη στοίβα με make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} kaidipo mu mafisye a meta a mwingilo",
   "tests.why.closure": "{path} ipwanibwa na kisaka kishitwe kitūdilwe",
   "card.close": "Shita",
+  "card.minimize": "Kepesha",
   "card.maximize": "Tamija bininge",
   "card.restore": "Alamuna",
   "status.noCategories": "{path}/categories.yml kaidipo nansha kaidipo na bulondani bwa mingilo. Kwatakanya kibalo meta/ kya kilamino kya infinito (INFINITO_META_DIR mu .env) kadi longa monka stack na make up.",

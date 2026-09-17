@@ -412,6 +412,7 @@
   "tests.why.missing": "{path} mhuwiex fil-fajls meta tar-rwol",
   "tests.why.closure": "{path} jiġi deċiż fuq l-għeluq skjerat",
   "card.close": "Agħlaq",
+  "card.minimize": "Ċekken",
   "card.maximize": "Kabbar",
   "card.restore": "Irrestawra",
   "status.noCategories": "{path}/categories.yml nieqes jew m'għandux mapping ta' roles. Immonta d-direttorju meta/ tar-repożitorju infinito (INFINITO_META_DIR f'.env) u erġa' oħloq l-istack b'make up.",

@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} nekkul ci fisye meta yu sas bi",
   "tests.why.closure": "{path} dafay aju ci mbooloo mi ñu samp",
   "card.close": "Tëj",
+  "card.minimize": "Wàññi",
   "card.maximize": "Yaatal ba mu mat",
   "card.restore": "Delloo",
   "status.noCategories": "{path}/categories.yml amul walla amul natalu roles. Takkal kaggu meta/ bu dencukaayu infinito (INFINITO_META_DIR ci .env) te sosaatal stak bi ak make up.",

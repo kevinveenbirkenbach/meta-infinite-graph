@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} rolning meta fayllarida yo‘q",
   "tests.why.closure": "{path} joylashtirilgan yopilmada hal bo‘ladi",
   "card.close": "Yopish",
+  "card.minimize": "Kichiklashtirish",
   "card.maximize": "Kattalashtirish",
   "card.restore": "Tiklash",
   "status.noCategories": "{path}/categories.yml yo‘q yoki unda roles moslashuvi yo‘q. infinito repozitoriysining meta/ katalogini ulang (.env dagi INFINITO_META_DIR) va stekni make up bilan qayta yarating.",

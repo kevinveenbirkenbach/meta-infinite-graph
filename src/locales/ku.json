@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ne di pelên meta yên rolê de ye",
   "tests.why.closure": "{path} li ser girtîbûna bicihkirî diyar dibe",
   "card.close": "Bigire",
+  "card.minimize": "Biçûk bike",
   "card.maximize": "Mezin bike",
   "card.restore": "Vegerîne",
   "status.noCategories": "{path}/categories.yml tune ye an jî nexşeya rolan tê de tune. Pelrêça meta/ ya depoya infinito siwar bike (INFINITO_META_DIR di .env de) û stackê bi make up ji nû ve biafirîne.",

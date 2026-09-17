@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ndĩrĩ faelo-inĩ cia meta cia wĩra",
   "tests.why.closure": "{path} ĩtuagwo nĩ gĩkundi kĩhingĩre kĩrĩa kĩhandĩtwo",
   "card.close": "Hinga",
+  "card.minimize": "Nyihia",
   "card.maximize": "Nenehia mũno",
   "card.restore": "Cookia",
   "status.noCategories": "{path}/categories.yml ndĩrĩ kuo kana ndĩrĩ na mũtaratara wa mawĩra. Handa kĩbeti meta/ gĩa ikũmbĩ rĩa infinito (INFINITO_META_DIR thĩinĩ wa .env) na ũcooke wake stack rĩngĩ na make up.",

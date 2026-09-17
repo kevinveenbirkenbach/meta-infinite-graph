@@ -46,7 +46,7 @@ test('hovering the token field explains how to create and how to persist one', a
   await expect(card).toContainText('MIG_GITHUB_TOKEN=github_pat_');
   await expect(card).toContainText('5000 an hour');
   await expect(card.locator('a[href*="settings/personal-access-tokens"]')).toHaveCount(1);
-  await expect(page.locator('.role-card-host .role-card-close')).toBeVisible();
+  await expect(page.locator('.role-card-host .popup-close')).toBeVisible();
 
   await page.mouse.move(2, 2);
   await expect(page.locator('.role-card-host')).toHaveCount(0);

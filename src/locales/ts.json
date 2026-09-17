@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} a yi kona eka tifayili ta meta ta ntirho",
   "tests.why.closure": "{path} yi tiyisisiwa hi xiphemu lexi vekiweke",
   "card.close": "Pfala",
+  "card.minimize": "Hunguta",
   "card.maximize": "Kurisa ngopfu",
   "card.restore": "Vuyisa",
   "status.noCategories": "{path}/categories.yml a yi kona kumbe a yi na mepe wa roles. Hlanganisa folda ya meta/ ya vuhlayiselo bya infinito (INFINITO_META_DIR eka .env) kutani u endla stack nakambe hi make up.",

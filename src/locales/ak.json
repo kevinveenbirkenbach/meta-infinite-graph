@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} nni dwumadie no meta fael mu",
   "tests.why.closure": "Nhyehyɛe a wɔde asi hɔ no na ɛsi {path} pi",
   "card.close": "To mu",
+  "card.minimize": "Ma ɛnyɛ ketewa",
   "card.maximize": "Ma ɛnyɛ kɛseɛ pa ara",
   "card.restore": "San fa sane",
   "status.noCategories": "{path}/categories.yml nni hɔ anaa ɛnni roles nhyehyɛe. Fa infinito akorae meta/ foda no hyɛ mu (INFINITO_META_DIR wɔ .env mu) na san yɛ stack no wɔ make up.",

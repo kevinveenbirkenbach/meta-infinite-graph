@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} ne figure pas dans les fichiers meta du rôle",
   "tests.why.closure": "{path} se décide sur la clôture déployée",
   "card.close": "Fermer",
+  "card.minimize": "Réduire",
   "card.maximize": "Agrandir",
   "card.restore": "Restaurer",
   "status.noCategories": "{path}/categories.yml est absent ou ne contient pas de correspondance des rôles. Montez le répertoire meta/ du dépôt infinito (INFINITO_META_DIR dans .env) et recréez la pile avec make up.",

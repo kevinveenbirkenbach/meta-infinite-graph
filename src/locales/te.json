@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} పాత్ర మెటా ఫైళ్లలో లేదు",
   "tests.why.closure": "{path} డిప్లాయ్ చేసిన క్లోజర్‌పై నిర్ణయించబడుతుంది",
   "card.close": "మూసివేయి",
+  "card.minimize": "చిన్నదిగా చేయి",
   "card.maximize": "గరిష్టీకరించు",
   "card.restore": "పునరుద్ధరించు",
   "status.noCategories": "{path}/categories.yml లేదు లేదా దానిలో roles మ్యాపింగ్ లేదు. infinito రిపోజిటరీ యొక్క meta/ డైరెక్టరీని మౌంట్ చేసి (.env లో INFINITO_META_DIR) make up తో స్టాక్‌ను మళ్లీ సృష్టించండి.",

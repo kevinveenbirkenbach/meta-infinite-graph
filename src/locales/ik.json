@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} savaam meta makpiġaaŋiñi piŋŋitchuq",
   "tests.why.closure": "{path} iñiqtitchiŋaruam umiŋaŋani nalunaiqsiruq",
   "card.close": "Umiksiñ",
+  "card.minimize": "Mikilisiñ",
   "card.maximize": "Aŋiklisiñ",
   "card.restore": "Utiqtiñ",
   "status.noCategories": "{path}/categories.yml piŋŋitchuq, naagga savaat iñiqsuiniŋanik piqaŋŋitchuq. Iḷiuŋ infinito iḷiġviaŋata meta/ iḷiġviaŋa (INFINITO_META_DIR .env-mi) sanaqqiġlugulu make up-mik.",

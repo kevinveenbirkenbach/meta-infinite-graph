@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} staat niet in de metabestanden van de rol",
   "tests.why.closure": "{path} wordt bepaald door de uitgerolde afsluiting",
   "card.close": "Sluiten",
+  "card.minimize": "Minimaliseren",
   "card.maximize": "Maximaliseren",
   "card.restore": "Herstellen",
   "status.noCategories": "{path}/categories.yml ontbreekt of heeft geen rollentoewijzing. Koppel de map meta/ van de infinito-repository (INFINITO_META_DIR in .env) en maak de stack opnieuw aan met make up.",

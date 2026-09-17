@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} nem szerepel a szerepkör metafájljaiban",
   "tests.why.closure": "{path} a telepített lezárton dől el",
   "card.close": "Bezárás",
+  "card.minimize": "Kis méret",
   "card.maximize": "Teljes méret",
   "card.restore": "Visszaállítás",
   "status.noCategories": "A(z) {path}/categories.yml hiányzik, vagy nincs benne roles leképezés. Csatold az infinito tároló meta/ könyvtárát (INFINITO_META_DIR a .env-ben), és hozd létre újra a stacket a make up paranccsal.",

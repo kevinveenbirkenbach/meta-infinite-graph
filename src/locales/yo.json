@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} kò sí nínú àwọn fáìlì meta ipa náà",
   "tests.why.closure": "{path} ni a pinnu lórí àkójọ tí a gbé kalẹ̀",
   "card.close": "Pa dé",
+  "card.minimize": "Mú kéré",
   "card.maximize": "Mú tóbi jù",
   "card.restore": "Mú padà",
   "status.noCategories": "{path}/categories.yml kò sí tàbí kò ní ìbámu ipa. So àpò meta/ ti ibi ìpamọ́ infinito mọ́ (INFINITO_META_DIR nínú .env), kí o sì tún stack náà dá pẹ̀lú make up.",

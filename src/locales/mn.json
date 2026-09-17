@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} үүргийн мета файлуудад байхгүй",
   "tests.why.closure": "{path} байршуулсан хаалтаар тодорхойлогдоно",
   "card.close": "Хаах",
+  "card.minimize": "Багасгах",
   "card.maximize": "Томсгох",
   "card.restore": "Сэргээх",
   "status.noCategories": "{path}/categories.yml байхгүй эсвэл roles зураглалгүй байна. infinito репозиторийн meta/ хавтсыг холбож (.env доторх INFINITO_META_DIR), стекийг make up-аар дахин үүсгэнэ үү.",

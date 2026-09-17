@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} არ არის როლის მეტა ფაილებში",
   "tests.why.closure": "{path} განლაგებული ჩაკეტვით წყდება",
   "card.close": "დახურვა",
+  "card.minimize": "დაპატარავება",
   "card.maximize": "გადიდება",
   "card.restore": "აღდგენა",
   "status.noCategories": "{path}/categories.yml აკლია ან მასში roles შესაბამისობა არ არის. დაამონტაჟეთ infinito რეპოზიტორიის meta/ დირექტორია (INFINITO_META_DIR .env-ში) და ხელახლა შექმენით სტეკი make up-ით.",

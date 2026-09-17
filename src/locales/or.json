@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ଭୂମିକାର ମେଟା ଫାଇଲରେ ନାହିଁ",
   "tests.why.closure": "{path} ନିୟୋଜିତ କ୍ଲୋଜରରେ ସ୍ଥିର ହୁଏ",
   "card.close": "ବନ୍ଦ କରନ୍ତୁ",
+  "card.minimize": "ଛୋଟ କରନ୍ତୁ",
   "card.maximize": "ବଡ଼ କରନ୍ତୁ",
   "card.restore": "ପୁନଃସ୍ଥାପନ କରନ୍ତୁ",
   "status.noCategories": "{path}/categories.yml ନାହିଁ କିମ୍ବା ଏଥିରେ ଭୂମିକା ମ୍ୟାପିଂ ନାହିଁ। infinito ରିପୋଜିଟୋରିର meta/ ଡିରେକ୍ଟୋରି ମାଉଣ୍ଟ କରନ୍ତୁ (.env ରେ INFINITO_META_DIR) ଏବଂ make up ସହ ଷ୍ଟାକ୍ ପୁଣି ତିଆରି କରନ୍ତୁ।",

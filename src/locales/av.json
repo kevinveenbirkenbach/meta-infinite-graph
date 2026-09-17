@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} рольалъул meta файлазда гьечӀо",
   "tests.why.closure": "{path} лъезабураб къамуялда тӀубала",
   "card.close": "Къае",
+  "card.minimize": "ГьитӀинаб гьабе",
   "card.maximize": "КӀодо гьабе",
   "card.restore": "ТӀадбуссинабе",
   "status.noCategories": "{path}/categories.yml гьечӀо яги гьелда roles бухьен гьечӀо. infinito репозиториялъул meta/ каталог бухьинабе (.env-алда INFINITO_META_DIR) ва стек make up кумекалдалъун цӀидасан гӀуцӀе.",

@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} ni v metadatotekah vloge",
   "tests.why.closure": "{path} se določi na nameščenem zaprtju",
   "card.close": "Zapri",
+  "card.minimize": "Minimiraj",
   "card.maximize": "Maksimiraj",
   "card.restore": "Obnovi",
   "status.noCategories": "{path}/categories.yml manjka ali nima preslikave vlog. Priklopite imenik meta/ repozitorija infinito (INFINITO_META_DIR v .env) in znova ustvarite sklad z make up.",

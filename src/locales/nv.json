@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} éí naanish bimeta naaltsoos biiʼ ádin",
   "tests.why.closure": "{path} éí ádahoolʼį́ʼígíí bikʼehgo ííshjání silį́į́ʼ",
   "card.close": "Ndíítʼááh",
+  "card.minimize": "Áłtsʼíísígo ádíílííł",
   "card.maximize": "Ayóí áníłtsoh ádíílííł",
   "card.restore": "Tʼáá ádzaagi nááʼádíílííł",
   "status.noCategories": "{path}/categories.yml ádin doodago naanish bee ałkééʼ naazʼą́ ádin. infinito rébo bimeta/ biiʼ siʼą́ ádíílííł (.env biiʼ INFINITO_META_DIR) áádóó make up bee nááʼádíílííł.",

@@ -73,7 +73,7 @@ test('clicking a graph node pins its card until it is closed', async ({ page }) 
   await page.evaluate(role => window.__mig.cardHost.pin(role, () => ({ x: 100, y: 100 })), role);
   await expect(card).toBeVisible();
 
-  await card.locator('.role-card-close').click();
+  await card.locator('.popup-close').click();
   await expect(card).toBeHidden({ timeout: 3000 });
 });
 

@@ -346,6 +346,7 @@
   "tests.why.missing": "E le o iai {path} i faila meta o le matafaioi",
   "tests.why.closure": "E faamautu {path} i le vaega ua faatulagaina",
   "card.close": "Tapuni",
+  "card.minimize": "Faaitiitia",
   "card.maximize": "Faalapoa",
   "card.restore": "Toe faafoi",
   "status.noCategories": "E leai {path}/categories.yml pe leai foi se faafanua roles. Faapipii le lisi meta/ o le faleteu infinito (INFINITO_META_DIR i le .env) ma toe fai le stack i le make up.",

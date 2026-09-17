@@ -43,7 +43,7 @@ test('the maximized card shows the table, and it unfolds per service', async ({ 
   const card = page.locator(`.role-card-host[data-role="${role}"]`);
   await expect(card).toBeVisible({ timeout: 60000 });
   await card.hover();
-  await card.locator('.role-card-grow').click();
+  await card.locator('.popup-maximize').click();
 
   const table = card.locator('table.role-card-resources');
   await expect(table).toBeVisible();
@@ -131,8 +131,8 @@ test('the maximize button spreads the card over the window and back', async ({ p
   const before = await card.boundingBox();
 
   await card.hover();
-  await card.locator('.role-card-grow').click();
-  await expect(card).toHaveClass(/maximized/);
+  await card.locator('.popup-maximize').click();
+  await expect(card).toHaveClass(/popup-maximized/);
   const viewport = page.viewportSize();
   const spread = await card.boundingBox();
   expect(spread.width, 'nearly the whole width').toBeGreaterThan(viewport.width - 40);
@@ -142,20 +142,29 @@ test('the maximize button spreads the card over the window and back', async ({ p
   await page.waitForTimeout(1500);
   await expect(card, 'a maximized card does not fade when the pointer leaves').toBeVisible();
 
-  await card.locator('.role-card-grow').click();
-  await expect(card).not.toHaveClass(/maximized/);
+  await card.locator('.popup-maximize').click();
+  await expect(card).not.toHaveClass(/popup-maximized/);
   expect((await card.boundingBox()).width).toBeLessThan(before.width + 40);
 });
 
-test('only a role card gets the maximize button', async ({ page }) => {
+test('every card carries the same three controls, in the same corner', async ({ page }) => {
   await open2d(page);
   const role = await hoverRoleWithDependencies(page);
-  await expect(page.locator(`.role-card-host[data-role="${role}"] .role-card-grow`))
-    .toHaveCount(1, { timeout: 60000 });
+  const marks = card => card.locator('.popup-chrome .popup-button');
+  const held = page.locator(`.role-card-host[data-role="${role}"]`);
+  await expect(marks(held), 'minimize, maximize and close').toHaveText(['−', '⤢', '×'], { timeout: 60000 });
+
   await page.evaluate(() => window.__mig.cardHost.show('#probe', { x: 40, y: 40 },
     () => Object.assign(document.createElement('div'), { textContent: 'probe' })));
-  await expect(page.locator('.role-card-host[data-role="#probe"]')).toBeVisible();
-  await expect(page.locator('.role-card-host[data-role="#probe"] .role-card-grow')).toHaveCount(0);
+  const probe = page.locator('.role-card-host[data-role="#probe"]');
+  await expect(marks(probe), 'a card built by a caller is no exception').toHaveText(['−', '⤢', '×']);
+
+  await probe.locator('.popup-minimize').click();
+  await expect(probe).toHaveClass(/popup-minimized/);
+  await probe.locator('.popup-minimize').click();
+  await expect(probe).not.toHaveClass(/popup-minimized/);
+  await probe.locator('.popup-close').click();
+  await expect(probe).toHaveCount(0);
 });
 
 test('a second card opens without replacing the first', async ({ page }) => {
@@ -171,7 +180,7 @@ test('a second card opens without replacing the first', async ({ page }) => {
   await expect(page.locator(`.role-card-host[data-role="${first}"]`)).toBeVisible();
   expect(await page.locator('.role-card-host').count()).toBe(2);
 
-  await expect(page.locator(`.role-card-host[data-role="${second}"] .role-card-close`))
+  await expect(page.locator(`.role-card-host[data-role="${second}"] .popup-close`))
     .toBeVisible();
   await expect
     .poll(() => page.locator(`.role-card-host[data-role="${second}"]`)

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} در پرونده‌های فرادادهٔ نقش نیست",
   "tests.why.closure": "{path} بر اساس بستار استقرار یافته تعیین می‌شود",
   "card.close": "بستن",
+  "card.minimize": "کمینه",
   "card.maximize": "بیشینه",
   "card.restore": "بازگردانی",
   "status.noCategories": "{path}/categories.yml وجود ندارد یا نگاشت roles ندارد. پوشهٔ meta/ مخزن infinito را سوار کنید (INFINITO_META_DIR در .env) و پشته را با make up دوباره بسازید.",

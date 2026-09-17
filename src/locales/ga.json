@@ -412,6 +412,7 @@
   "tests.why.missing": "Níl {path} i meiteachomhaid an róil",
   "tests.why.closure": "Socraítear {path} ar an dúnadh imlonnaithe",
   "card.close": "Dún",
+  "card.minimize": "Íoslaghdaigh",
   "card.maximize": "Uasmhéadaigh",
   "card.restore": "Athchóirigh",
   "status.noCategories": "Tá {path}/categories.yml ar iarraidh nó níl mapáil ról ann. Feistigh an chomhadlann meta/ de stóras infinito (INFINITO_META_DIR in .env) agus athchruthaigh an chruach le make up.",

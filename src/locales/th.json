@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} ไม่อยู่ในไฟล์เมตาของบทบาท",
   "tests.why.closure": "{path} ตัดสินจากชุดปิดที่ติดตั้งแล้ว",
   "card.close": "ปิด",
+  "card.minimize": "ย่อ",
   "card.maximize": "ขยายเต็ม",
   "card.restore": "คืนขนาด",
   "status.noCategories": "{path}/categories.yml หายไปหรือไม่มีการจับคู่บทบาท เมานต์ไดเรกทอรี meta/ ของรีโพสิทอรี infinito (INFINITO_META_DIR ใน .env) แล้วสร้างสแตกใหม่ด้วย make up",

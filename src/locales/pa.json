@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ਭੂਮਿਕਾ ਦੀਆਂ ਮੈਟਾ ਫਾਈਲਾਂ ਵਿੱਚ ਨਹੀਂ ਹੈ",
   "tests.why.closure": "{path} ਤੈਨਾਤ ਕੀਤੇ ਘੇਰੇ ਉੱਤੇ ਤੈਅ ਹੁੰਦਾ ਹੈ",
   "card.close": "ਬੰਦ ਕਰੋ",
+  "card.minimize": "ਛੋਟਾ ਕਰੋ",
   "card.maximize": "ਵੱਡਾ ਕਰੋ",
   "card.restore": "ਮੁੜ ਬਹਾਲ ਕਰੋ",
   "status.noCategories": "{path}/categories.yml ਮੌਜੂਦ ਨਹੀਂ ਜਾਂ ਇਸ ਵਿੱਚ roles ਮੈਪਿੰਗ ਨਹੀਂ ਹੈ। infinito ਰਿਪੋਜ਼ਟਰੀ ਦੀ meta/ ਡਾਇਰੈਕਟਰੀ ਮਾਊਂਟ ਕਰੋ (.env ਵਿੱਚ INFINITO_META_DIR) ਅਤੇ make up ਨਾਲ ਸਟੈਕ ਦੁਬਾਰਾ ਬਣਾਓ।",

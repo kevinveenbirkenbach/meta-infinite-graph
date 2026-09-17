@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} non è nei file meta del ruolo",
   "tests.why.closure": "{path} si decide sulla chiusura distribuita",
   "card.close": "Chiudi",
+  "card.minimize": "Riduci",
   "card.maximize": "Ingrandisci",
   "card.restore": "Ripristina",
   "status.noCategories": "{path}/categories.yml manca o non contiene una mappatura roles. Monta la directory meta/ del repository infinito (INFINITO_META_DIR in .env) e ricrea lo stack con make up.",

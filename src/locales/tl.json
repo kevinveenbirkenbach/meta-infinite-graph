@@ -346,6 +346,7 @@
   "tests.why.missing": "Wala ang {path} sa mga meta file ng tungkulin",
   "tests.why.closure": "Napagpapasyahan ang {path} sa na-deploy na closure",
   "card.close": "Isara",
+  "card.minimize": "Paliitin",
   "card.maximize": "Palakihin",
   "card.restore": "Ibalik",
   "status.noCategories": "Nawawala ang {path}/categories.yml o wala itong roles mapping. I-mount ang meta/ directory ng infinito repository (INFINITO_META_DIR sa .env) at muling likhain ang stack gamit ang make up.",

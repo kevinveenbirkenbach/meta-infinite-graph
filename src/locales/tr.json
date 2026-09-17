@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} rolün meta dosyalarında yok",
   "tests.why.closure": "{path} dağıtılan kapanışa göre belirlenir",
   "card.close": "Kapat",
+  "card.minimize": "Küçült",
   "card.maximize": "Büyüt",
   "card.restore": "Geri yükle",
   "status.noCategories": "{path}/categories.yml eksik ya da rol eşlemesi içermiyor. infinito deposunun meta/ dizinini bağlayın (.env içinde INFINITO_META_DIR) ve yığını make up ile yeniden oluşturun.",

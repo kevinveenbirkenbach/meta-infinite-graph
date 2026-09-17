@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} er ekki í meta-skrám hlutverksins",
   "tests.why.closure": "{path} ræðst af uppsettu lokuninni",
   "card.close": "Loka",
+  "card.minimize": "Lágmarka",
   "card.maximize": "Hámarka",
   "card.restore": "Endurheimta",
   "status.noCategories": "{path}/categories.yml vantar eða hefur enga hlutverkavörpun. Tengdu meta/-möppu infinito-geymslunnar (INFINITO_META_DIR í .env) og endurgerðu staflann með make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} рольнең мета файлларында юк",
   "tests.why.closure": "{path} урнаштырылган йомылмада хәл ителә",
   "card.close": "Ябу",
+  "card.minimize": "Кечерәйтү",
   "card.maximize": "Зурайту",
   "card.restore": "Кайтару",
   "status.noCategories": "{path}/categories.yml юк яки анда roles бәйләнеше юк. infinito репозиториеның meta/ папкасын тоташтырыгыз (.env эчендә INFINITO_META_DIR) һәм стекны make up белән яңадан төзегез.",

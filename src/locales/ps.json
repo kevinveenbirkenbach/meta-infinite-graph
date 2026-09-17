@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} د رول په مېټا فایلونو کې نشته",
   "tests.why.closure": "{path} پر ځای پر ځای شوي تړلي ټولګي ټاکل کېږي",
   "card.close": "بندول",
+  "card.minimize": "کوچنيول",
   "card.maximize": "بشپړ لویول",
   "card.restore": "بېرته راوستل",
   "status.noCategories": "{path}/categories.yml نشته یا د رولونو نقشه نه لري. د infinito زېرمتون meta/ لارښود نصب کړئ (INFINITO_META_DIR په .env کې) او سټک د make up سره بیا جوړ کړئ.",

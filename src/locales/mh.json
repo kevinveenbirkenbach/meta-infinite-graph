@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ejjab ilo faiļ in meta an jerbal eo",
   "tests.why.closure": "{path} ej pepe ilo kōjem eo kwaar kōjerbale",
   "card.close": "Kilōk",
+  "card.minimize": "Kōdikdik",
   "card.maximize": "Kōkilep",
   "card.restore": "Kōjepļaak",
   "status.noCategories": "{path}/categories.yml ejjeļọk ak ejjeļọk roles ilo e. Kōbaik diraktōri in meta/ an jikin kōjparok in infinito (INFINITO_META_DIR ilo .env) im bar kōm̧m̧ane stack eo kōn make up.",

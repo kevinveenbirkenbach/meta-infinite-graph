@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} не е в мета файловете на ролята",
   "tests.why.closure": "{path} се определя от внедреното затваряне",
   "card.close": "Затваряне",
+  "card.minimize": "Намаляване",
   "card.maximize": "Увеличаване",
   "card.restore": "Възстановяване",
   "status.noCategories": "{path}/categories.yml липсва или няма съпоставяне на роли. Монтирайте директорията meta/ на хранилището infinito (INFINITO_META_DIR в .env) и пресъздайте стека с make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} भूमिकायाः मेटासञ्चिकासु नास्ति",
   "tests.why.closure": "{path} प्रस्थापितेन संवरणेन निर्णीयते",
   "card.close": "पिदधातु",
+  "card.minimize": "अल्पं करोतु",
   "card.maximize": "बृहत् करोतु",
   "card.restore": "पुनःस्थापयतु",
   "status.noCategories": "{path}/categories.yml नास्ति अथवा तस्मिन् roles मानचित्रणं नास्ति। infinito भाण्डारस्य meta/ निर्देशिकाम् आरोहयतु (.env मध्ये INFINITO_META_DIR), make up द्वारा च राशिं पुनः रचयतु।",

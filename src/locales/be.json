@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} няма ў метафайлах ролі",
   "tests.why.closure": "{path} вызначаецца разгорнутым замыканнем",
   "card.close": "Закрыць",
+  "card.minimize": "Згарнуць",
   "card.maximize": "Разгарнуць",
   "card.restore": "Аднавіць",
   "status.noCategories": "{path}/categories.yml адсутнічае або не мае адпаведнасці roles. Змантуйце каталог meta/ рэпазіторыя infinito (INFINITO_META_DIR у .env) і перастварыце стэк праз make up.",

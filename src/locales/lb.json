@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ass net an de Meta-Dateie vun der Roll",
   "tests.why.closure": "{path} entscheet sech op der deployéierter Hüll",
   "card.close": "Zoumaachen",
+  "card.minimize": "Minimméieren",
   "card.maximize": "Maximéieren",
   "card.restore": "Restauréieren",
   "status.noCategories": "{path}/categories.yml feelt oder huet keng roles-Zouuerdnung. Montéier de meta/-Dossier vum infinito-Repository (INFINITO_META_DIR an .env) a bau de Stack mat make up nei op.",

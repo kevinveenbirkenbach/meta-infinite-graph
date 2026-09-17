@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} no está en los archivos meta del rol",
   "tests.why.closure": "{path} se resuelve en el cierre desplegado",
   "card.close": "Cerrar",
+  "card.minimize": "Minimizar",
   "card.maximize": "Maximizar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml falta o no tiene un mapeo de roles. Monta el directorio meta/ del repositorio infinito (INFINITO_META_DIR en .env) y recrea la pila con make up.",

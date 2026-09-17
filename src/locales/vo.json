@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} no binon in ragivs metas rola",
   "tests.why.closure": "{path} pafümon dub färmükot pepladöl",
   "card.close": "Färmükön",
+  "card.minimize": "Smalükön",
   "card.maximize": "Gretükön",
   "card.restore": "Geükön",
   "status.noCategories": "{path}/categories.yml defon u no labon kaedi rolas. Monitolös ragivari meta/ konletöpa infinito (INFINITO_META_DIR in .env) e dönujafolös stoki me make up.",

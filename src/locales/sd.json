@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ڪردار جي ميٽا فائلن ۾ ناهي",
   "tests.why.closure": "{path} ڊيپلاءِ ٿيل بندش تي طئي ٿئي ٿو",
   "card.close": "بند ڪريو",
+  "card.minimize": "ننڍو ڪريو",
   "card.maximize": "وڏو ڪريو",
   "card.restore": "بحال ڪريو",
   "status.noCategories": "{path}/categories.yml غائب آهي يا ان ۾ ڪردارن جي ميپنگ ناهي. infinito ريپوزٽري جي meta/ ڊائريڪٽري مائونٽ ڪريو (.env ۾ INFINITO_META_DIR) ۽ make up سان اسٽيڪ ٻيهر ٺاهيو.",

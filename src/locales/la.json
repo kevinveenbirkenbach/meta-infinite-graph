@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} non est in fasciculis meta muneris",
   "tests.why.closure": "{path} in clausura instructa statuitur",
   "card.close": "Claudere",
+  "card.minimize": "Minuere",
   "card.maximize": "Maximare",
   "card.restore": "Restituere",
   "status.noCategories": "{path}/categories.yml deest aut nullam munerum descriptionem habet. Directorium meta/ repositorii infinito conecte (INFINITO_META_DIR in .env) et acervum cum make up recrea.",

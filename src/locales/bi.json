@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} i no stap long ol meta fael blong rol",
   "tests.why.closure": "{path} i dipen long ful grup we i putum finis",
   "card.close": "Satem",
+  "card.minimize": "Mekem i smol",
   "card.maximize": "Mekem i bigwan",
   "card.restore": "Putum bak",
   "status.noCategories": "{path}/categories.yml i no stap o i no gat roles map. Putum meta/ folda blong infinito ripo (INFINITO_META_DIR long .env) mo mekem stak bakegen wetem make up.",

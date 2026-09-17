@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ba ya cikin fayilolin meta na matsayin",
   "tests.why.closure": "{path} yana daidaita a kan rufewar da aka tura",
   "card.close": "Rufe",
+  "card.minimize": "Rage girma",
   "card.maximize": "Faɗaɗa",
   "card.restore": "Maido",
   "status.noCategories": "{path}/categories.yml ya ɓace ko ba shi da taswirar matsayoyi. Haɗa kundin meta/ na ma'ajiyar infinito (INFINITO_META_DIR a .env) kuma sake ƙirƙirar tarin da make up.",

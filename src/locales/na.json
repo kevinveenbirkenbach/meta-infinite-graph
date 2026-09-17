@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} eko ijeiji pail meta rol",
   "tests.why.closure": "{path} tetor ijeiji krotja diproi",
   "card.close": "Korot",
+  "card.minimize": "Minimait",
   "card.maximize": "Maktimait",
   "card.restore": "Ritoa",
   "status.noCategories": "{path}/categories.yml eko me eko ian mab roles. Maunt direkteri meta/ ribo infinito (INFINITO_META_DIR ijeiji .env) ma kiriet taek ma make up.",

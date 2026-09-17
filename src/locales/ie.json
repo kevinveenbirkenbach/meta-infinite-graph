@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ne es in li files meta del rol",
   "tests.why.closure": "{path} es decidet sur li clausura implantat",
   "card.close": "Cluder",
+  "card.minimize": "Minimisar",
   "card.maximize": "Maximisar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml manca o ne have un mappation roles. Monta li directoria meta/ del depositoria infinito (INFINITO_META_DIR in .env) e recrea li stack con make up.",

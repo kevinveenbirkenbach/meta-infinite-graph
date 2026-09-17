@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} janiw lurawin meta qillqatanakapankiti",
   "tests.why.closure": "{path} uchat jist'antawin sayt'ayata",
   "card.close": "Jist'antaña",
+  "card.minimize": "Jisk'achaña",
   "card.maximize": "Jach'achaña",
   "card.restore": "Kutt'ayaña",
   "status.noCategories": "{path}/categories.yml janiw utjkiti jan ukax janiw lurawi mayachawinïkiti. infinito imañan meta/ carpetap uchäm (.env ukan INFINITO_META_DIR) ukat make up ukamp stack wasitat luram.",

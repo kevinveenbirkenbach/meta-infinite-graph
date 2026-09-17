@@ -1,6 +1,7 @@
 import { el } from '../dom.js';
 import { html, render, useState } from '../html.js';
 import { t } from '../i18n.js';
+import { chrome, onEscape } from '../popup.js';
 import { MatrixModel } from './model.js';
 
 export class MatrixPanels {
@@ -11,23 +12,26 @@ export class MatrixPanels {
     this._escape = null;
   }
 
-  _float(className, x, y, vnode) {
+  // Args:
+  //   framed: true gives the panel the shared minimize, maximize and close
+  //     controls; a menu closes by picking from it and takes none.
+  _float(className, x, y, vnode, framed = false) {
     this.close();
     const panel = el('div', { className: `${className} matrix-float` });
     document.body.appendChild(panel);
-    render(vnode, panel);
+    // A framed panel renders into a body of its own: repainting the panel
+    // itself would take the control bar with it.
+    render(vnode, framed ? panel.appendChild(el('div', { className: 'popup-body' })) : panel);
+    if (framed) chrome(panel, { onClose: () => this.close() });
     const box = panel.getBoundingClientRect();
     panel.style.left = `${Math.max(8, Math.min(x, window.innerWidth - box.width - 8))}px`;
     panel.style.top = `${Math.max(8, Math.min(y, window.innerHeight - box.height - 8))}px`;
     this._outside = event => {
       if (!panel.contains(event.target)) this.close();
     };
-    this._escape = event => {
-      if (event.key === 'Escape') this.close();
-    };
     setTimeout(() => {
       document.addEventListener('mousedown', this._outside);
-      document.addEventListener('keydown', this._escape);
+      this._escape = onEscape(() => this.close());
     });
     return panel;
   }
@@ -39,7 +43,7 @@ export class MatrixPanels {
       open.remove();
     }
     if (this._outside) document.removeEventListener('mousedown', this._outside);
-    if (this._escape) document.removeEventListener('keydown', this._escape);
+    if (this._escape) this._escape();
     this._outside = null;
     this._escape = null;
   }
@@ -52,7 +56,7 @@ export class MatrixPanels {
       <pre>${typeof value === 'object' && value !== null
         ? jsyaml.dump(value, { lineWidth: 100 }).trimEnd()
         : String(value)}</pre>
-    `);
+    `, true);
   }
 
   menu(id, x, y, rows) {
@@ -60,12 +64,12 @@ export class MatrixPanels {
   }
 
   picker(x, y) {
-    this.picked = this._float('matrix-picker', x, y, html`<${Picker} panels=${this} />`);
+    this.picked = this._float('matrix-picker', x, y, html`<${Picker} panels=${this} />`, true);
     this.picked.querySelector('input').focus();
   }
 
   repaintPicker() {
-    if (this.picked) render(html`<${Picker} panels=${this} />`, this.picked);
+    if (this.picked) render(html`<${Picker} panels=${this} />`, this.picked.querySelector('.popup-body'));
   }
 
   // Args:

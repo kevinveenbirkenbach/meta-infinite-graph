@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} nie je v meta súboroch roly",
   "tests.why.closure": "{path} sa rozhodne na nasadenom uzávere",
   "card.close": "Zavrieť",
+  "card.minimize": "Minimalizovať",
   "card.maximize": "Maximalizovať",
   "card.restore": "Obnoviť",
   "status.noCategories": "{path}/categories.yml chýba alebo nemá mapovanie rolí. Pripojte adresár meta/ repozitára infinito (INFINITO_META_DIR v .env) a znovu vytvorte zásobník pomocou make up.",

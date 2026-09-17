@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ha e yo difaeleng tsa meta tsa karolo",
   "tests.why.closure": "{path} e tiiswa ke kwalo e kentsweng tshebetsong",
   "card.close": "Kwala",
+  "card.minimize": "Fokotsa",
   "card.maximize": "Hodisa ka botlalo",
   "card.restore": "Kgutlisa",
   "status.noCategories": "{path}/categories.yml ha e yo kapa ha e na tlhophiso ya dikarolo. Kenya bukana ya meta/ ya polokelo ya infinito (INFINITO_META_DIR ho .env) mme o hlahise stack botjha ka make up.",

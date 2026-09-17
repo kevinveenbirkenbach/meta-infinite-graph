@@ -42,7 +42,7 @@ test('hovering a cell opens a card with that run’s detail', async ({ page }) =
   await expect(card).toBeVisible();
   await expect(card).toContainText('Variant');
   await expect(card).toContainText('Gate');
-  await expect(page.locator('.role-card-host .role-card-close')).toBeVisible();
+  await expect(page.locator('.role-card-host .popup-close')).toBeVisible();
 
   const named = await page.evaluate(() => {
     const cell = document.querySelector('table.tests-matrix td[data-cell]');
@@ -51,14 +51,15 @@ test('hovering a cell opens a card with that run’s detail', async ({ page }) =
   });
   expect(named.card, 'the card names the role of its own cell').toContain(named.role);
 
-  // The card must not sit on the cell it explains, or the pointer cannot leave.
+  // The card opens at the pointer, so it covers part of its own cell. What it
+  // must not cover is the pointer itself, or it holds itself open forever.
   const clear = await page.evaluate(() => {
     const host = document.querySelector('.role-card-host').getBoundingClientRect();
     const cell = document.querySelector('table.tests-matrix td[data-cell]').getBoundingClientRect();
-    return host.left >= cell.right || host.right <= cell.left
-      || host.top >= cell.bottom || host.bottom <= cell.top;
+    const at = { x: cell.left + cell.width / 2, y: cell.top + cell.height / 2 };
+    return at.x < host.left || at.x > host.right || at.y < host.top || at.y > host.bottom;
   });
-  expect(clear).toBe(true);
+  expect(clear, 'the point the card opened at stays outside it').toBe(true);
 
   await page.mouse.move(2, 2);
   await expect(page.locator('.role-card-host')).toHaveCount(0);

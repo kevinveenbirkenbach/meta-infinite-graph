@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} a i ho kha faela dza meta dza mushumo",
   "tests.why.closure": "{path} i tiwa nga tshigwada tsho vhewaho",
   "card.close": "Vala",
+  "card.minimize": "Ita ṱhukhu",
   "card.maximize": "Hudza nga hu fhelelaho",
   "card.restore": "Vhuedzedza",
   "status.noCategories": "{path}/categories.yml a i ho kana a i na u ṱumanya ha roles. Ṱumanyani dairekhithari ya meta/ ya vhulungelo ha infinito (INFINITO_META_DIR kha .env) nahone ni sike hafhu stack nga make up.",

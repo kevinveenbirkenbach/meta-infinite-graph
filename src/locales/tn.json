@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ga e mo difaeleng tsa meta tsa karolo",
   "tests.why.closure": "{path} e swetswa mo go tswaleng go go tsentsweng tirisong",
   "card.close": "Tswala",
+  "card.minimize": "Fokotsa",
   "card.maximize": "Godisa thata",
   "card.restore": "Busetsa",
   "status.noCategories": "{path}/categories.yml ga e yo kgotsa ga e na mapa wa roles. Tsenya lefelo la meta/ la polokelo ya infinito (INFINITO_META_DIR mo .env) mme o dire setlhomo sešwa ka make up.",

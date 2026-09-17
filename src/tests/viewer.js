@@ -1,5 +1,6 @@
 import { html, render } from '../html.js';
 import { t } from '../i18n.js';
+import { chrome, onEscape } from '../popup.js';
 
 // Args:
 //   url: a file under /artifacts/.
@@ -11,13 +12,11 @@ export function openViewer(url, kind, title) {
   box.setAttribute('role', 'dialog');
   box.setAttribute('aria-modal', 'true');
   box.setAttribute('aria-label', title);
+  let stopEscape = () => {};
   const close = () => {
-    document.removeEventListener('keydown', escape, true);
+    stopEscape();
     render(null, box);
     box.remove();
-  };
-  const escape = event => {
-    if (event.key === 'Escape') close();
   };
   // The report's own script runs sandboxed twice over: here and by the CSP
   // header nginx sends with every file under /artifacts/.
@@ -26,16 +25,16 @@ export function openViewer(url, kind, title) {
       <div class="artifact-viewer-head">
         <span class="artifact-viewer-title">${title}</span>
         <a href=${url} target="_blank" rel="noreferrer">${t('tests.viewer.open')}</a>
-        <button type="button" class="btn-close" aria-label=${t('card.close')} onClick=${close}></button>
       </div>
       ${kind === 'video'
         ? html`<video class="artifact-viewer-body" src=${url} controls autoplay></video>`
         : html`<iframe class="artifact-viewer-body" src=${url} sandbox="allow-scripts" title=${title}></iframe>`}
     </div>
   `, box);
+  chrome(/** @type {HTMLElement} */ (box.querySelector('.artifact-viewer-frame')), { onClose: close });
   box.addEventListener('click', close);
-  document.addEventListener('keydown', escape, true);
-  const button = box.querySelector('button');
+  stopEscape = onEscape(close);
+  const button = /** @type {HTMLButtonElement} */ (box.querySelector('.popup-close'));
   if (button) button.focus();
 }
 

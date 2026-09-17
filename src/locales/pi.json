@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} किच्चस्स meta सञ्चिकासु नत्थि",
   "tests.why.closure": "{path} पतिट्ठापितपरियोसाने निच्छीयति",
   "card.close": "पिदहाहि",
+  "card.minimize": "अप्पं करोहि",
   "card.maximize": "महन्तं करोहि",
   "card.restore": "पुन ठपेहि",
   "status.noCategories": "{path}/categories.yml नत्थि, अथ वा तत्थ किच्चसम्बन्धो नत्थि। infinito भण्डागारस्स meta/ निधानं आरोपेहि (.env मध्ये INFINITO_META_DIR), make up इमिना च रासिं पुन करोहि।",

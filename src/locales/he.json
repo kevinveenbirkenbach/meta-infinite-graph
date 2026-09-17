@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} אינו בקובצי המטא של התפקיד",
   "tests.why.closure": "{path} מוכרע לפי הסגור הפרוס",
   "card.close": "סגירה",
+  "card.minimize": "מזעור",
   "card.maximize": "הגדלה",
   "card.restore": "שחזור",
   "status.noCategories": "{path}/categories.yml חסר או שאין בו מיפוי roles. עגנו את תיקיית meta/ של מאגר infinito (INFINITO_META_DIR ב־.env) וצרו מחדש את המחסנית עם make up.",

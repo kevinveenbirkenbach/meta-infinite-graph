@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} کردار کی میٹا فائلوں میں نہیں",
   "tests.why.closure": "{path} ڈیپلائے شدہ کلوژر پر طے ہوتا ہے",
   "card.close": "بند کریں",
+  "card.minimize": "چھوٹا کریں",
   "card.maximize": "بڑا کریں",
   "card.restore": "بحال کریں",
   "status.noCategories": "{path}/categories.yml موجود نہیں یا اس میں کرداروں کی میپنگ نہیں۔ infinito ریپوزٹری کی meta/ ڈائریکٹری ماؤنٹ کریں (.env میں INFINITO_META_DIR) اور make up سے اسٹیک دوبارہ بنائیں۔",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} n'è betg en las datotecas meta da la rolla",
   "tests.why.closure": "{path} sa decida sin la serrada installada",
   "card.close": "Serrar",
+  "card.minimize": "Minimar",
   "card.maximize": "Maximar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml manca u n'ha nagina attribuziun roles. Montescha il register meta/ dal repository infinito (INFINITO_META_DIR en .env) e creescha da nov il stack cun make up.",

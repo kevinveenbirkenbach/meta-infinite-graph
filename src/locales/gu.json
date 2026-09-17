@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ભૂમિકાની મેટા ફાઇલોમાં નથી",
   "tests.why.closure": "{path} ડિપ્લોય થયેલા ઘેરા પર નક્કી થાય છે",
   "card.close": "બંધ કરો",
+  "card.minimize": "નાનું કરો",
   "card.maximize": "મોટું કરો",
   "card.restore": "પુનઃસ્થાપિત કરો",
   "status.noCategories": "{path}/categories.yml ગુમ છે અથવા તેમાં roles મૅપિંગ નથી. infinito રિપોઝિટરીની meta/ ડિરેક્ટરી માઉન્ટ કરો (.env માં INFINITO_META_DIR) અને make up વડે સ્ટૅક ફરી બનાવો.",

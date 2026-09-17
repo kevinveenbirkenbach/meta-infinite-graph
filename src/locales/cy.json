@@ -434,6 +434,7 @@
   "tests.why.missing": "Nid yw {path} yn ffeiliau meta'r rôl",
   "tests.why.closure": "Mae {path} yn setlo ar y caead a ddefnyddiwyd",
   "card.close": "Cau",
+  "card.minimize": "Lleihau",
   "card.maximize": "Mwyhau",
   "card.restore": "Adfer",
   "status.noCategories": "Mae {path}/categories.yml ar goll neu heb fapio rolau. Gosodwch gyfeiriadur meta/ ystorfa infinito (INFINITO_META_DIR yn .env) ac ail-grëwch y pentwr gyda make up.",

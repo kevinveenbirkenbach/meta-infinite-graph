@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ùn hè micca in i schedarii meta di u rolu",
   "tests.why.closure": "{path} si decide nant'à a chjusura spiegata",
   "card.close": "Chjode",
+  "card.minimize": "Riducì",
   "card.maximize": "Ingrandà",
   "card.restore": "Risturà",
   "status.noCategories": "{path}/categories.yml manca o ùn hà nisuna currispundenza roles. Muntate u cartulare meta/ di u dipositu infinito (INFINITO_META_DIR in .env) è ricreate a pila cù make up.",

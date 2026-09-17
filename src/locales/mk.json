@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} не е во мета-датотеките на улогата",
   "tests.why.closure": "{path} се решава на распоредената затвореност",
   "card.close": "Затвори",
+  "card.minimize": "Минимизирај",
   "card.maximize": "Максимизирај",
   "card.restore": "Врати",
   "status.noCategories": "{path}/categories.yml недостасува или нема мапирање на улоги. Монтирајте го директориумот meta/ од репозиториумот infinito (INFINITO_META_DIR во .env) и повторно создајте го стекот со make up.",

@@ -72,10 +72,10 @@ export class ForkTree extends ForkHistory {
     if (!this.network) return;
     const shown = Object.fromEntries([...this.opened].map(name => [name, this.branchesBy[name] || []]));
     const graph = new ForkGraph(this.network, this.histories, this.tagsBy, shown);
-    const drawn = ForkPlot.draw(graph, this.plot.clientWidth || 900, (commit, repo, event) => {
+    const drawn = ForkPlot.draw(graph, this.plot.clientWidth || 900, (commit, repo, event, now) => {
       if (!commit) return this.cards.release(ForkCards.COMMIT);
       this._point = { x: event.clientX, y: event.clientY };
-      this.cards.show(ForkCards.COMMIT, this._point, () => ForkCards.commitCard(commit, repo));
+      this.cards.show(ForkCards.COMMIT, this._point, () => ForkCards.commitCard(commit, repo), now);
     }, name => this.toggle(name));
     const focused = this.plot.contains(document.activeElement) ? document.activeElement.getAttribute('data-repo') : null;
     this.plot.innerHTML = '';

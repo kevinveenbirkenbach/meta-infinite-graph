@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} mbouj youq ndaw vwnzgienh meta hong",
   "tests.why.closure": "{path} youq gwnz aen gyoebhab bouhcw gietdingh",
   "card.close": "Haep",
+  "card.minimize": "Guh iq",
   "card.maximize": "Guh hung",
   "card.restore": "Dauqfuk",
   "status.noCategories": "{path}/categories.yml mbouj miz roxnaeuz mbouj miz roles. Cuengq meta/ cangzgu infinito haeuj (INFINITO_META_DIR youq .env), caiq yungh make up guh moq stack.",

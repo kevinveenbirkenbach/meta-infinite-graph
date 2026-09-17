@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} رولنىڭ مېتا ھۆججەتلىرىدە يوق",
   "tests.why.closure": "{path} ئورۇنلاشتۇرۇلغان يېپىقلىقتا بېكىتىلىدۇ",
   "card.close": "تاقاش",
+  "card.minimize": "كىچىكلىتىش",
   "card.maximize": "ئەڭ چوڭ قىلىش",
   "card.restore": "ئەسلىگە قايتۇرۇش",
   "status.noCategories": "{path}/categories.yml يوق ياكى رول خەرىتىسى يوق. infinito ئامبىرىنىڭ meta/ مۇندەرىجىسىنى ئېگەرلەڭ (.env دىكى INFINITO_META_DIR) ۋە make up بىلەن stack نى قايتا قۇرۇڭ.",

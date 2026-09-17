@@ -412,6 +412,7 @@
   "tests.why.missing": "N'emañ ket {path} e restroù meta ar rol",
   "tests.why.closure": "{path} a vez divizet war ar c'hlozadur lakaet e pleustr",
   "card.close": "Serriñ",
+  "card.minimize": "Bihanaat",
   "card.maximize": "Brasaat",
   "card.restore": "Assevel",
   "status.noCategories": "Mankout a ra {path}/categories.yml pe n'en deus kenglotadur roles ebet. Staliit teuliad meta/ kavlec'h infinito (INFINITO_META_DIR e .env) hag adkrouit ar bern gant make up.",

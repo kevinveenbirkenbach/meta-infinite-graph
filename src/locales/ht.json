@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} pa nan fichye meta wòl la",
   "tests.why.closure": "{path} deside sou fèmti ki deplwaye a",
   "card.close": "Fèmen",
+  "card.minimize": "Minimize",
   "card.maximize": "Maksimize",
   "card.restore": "Retabli",
   "status.noCategories": "{path}/categories.yml manke oswa li pa gen koresondans wòl. Monte repètwa meta/ depo infinito a (INFINITO_META_DIR nan .env) epi rekreye stack la ak make up.",

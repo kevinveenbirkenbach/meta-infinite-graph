@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ኣብ ፋይላት ሜታ ናይቲ ግደ የለን",
   "tests.why.closure": "{path} ኣብቲ ዝተዘርግሐ ምዕጻው ይውሰን",
   "card.close": "ዕጸው",
+  "card.minimize": "ኣንእስ",
   "card.maximize": "ኣዕቢ",
   "card.restore": "ምለስ",
   "status.noCategories": "{path}/categories.yml የለን ወይ ናይ ግደታት ምድማር የብሉን። ንማህደር meta/ ናይ መኽዘን infinito ኣእትዎ (INFINITO_META_DIR ኣብ .env)፣ ነቲ ስታክ ድማ ብ make up ዳግማይ ፍጠሮ።",

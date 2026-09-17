@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} rolun meta fayllarında yoxdur",
   "tests.why.closure": "{path} yerləşdirilmiş qapanışda müəyyənləşir",
   "card.close": "Bağla",
+  "card.minimize": "Kiçilt",
   "card.maximize": "Böyüt",
   "card.restore": "Bərpa et",
   "status.noCategories": "{path}/categories.yml yoxdur və ya roles xəritələməsi daşımır. infinito repozitoriyasının meta/ qovluğunu qoşun (.env içində INFINITO_META_DIR) və steki make up ilə yenidən yaradın.",

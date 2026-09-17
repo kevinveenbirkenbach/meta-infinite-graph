@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} рольы мета файлты нæй",
   "tests.why.closure": "{path} æвæрд æхгæдæй бæлвырд кæны",
   "card.close": "Сæхгæнын",
+  "card.minimize": "Чысылдæр кæнын",
   "card.maximize": "Стырдæр кæнын",
   "card.restore": "Раздæрау скæнын",
   "status.noCategories": "{path}/categories.yml нæй кæнæ йæ roles æвдыст нæй. infinito репозиторийы meta/ директори сбæтт (INFINITO_META_DIR .env-ы) æмæ стек ногæй скæн make up-æй.",

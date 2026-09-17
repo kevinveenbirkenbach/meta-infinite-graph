@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} n' est nén dins les fitchîs meta do role",
   "tests.why.closure": "{path} est decidé so l' cloyaedje disployî",
   "card.close": "Clôre",
+  "card.minimize": "Raptiti",
   "card.maximize": "Ragrandi",
   "card.restore": "Rimete",
   "status.noCategories": "{path}/categories.yml manke oudonbén n' a nole coresponde di roles. Montez l' ridant meta/ do depo infinito (INFINITO_META_DIR dins .env) et rifijhoz l' pîle avou make up.",

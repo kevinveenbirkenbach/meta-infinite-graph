@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ezali te na bafisyé ya meta ya mokumba",
   "tests.why.closure": "{path} ekatami na bokangi oyo etyami",
   "card.close": "Kokanga",
+  "card.minimize": "Kokómisa moke",
   "card.maximize": "Kokómisa monene",
   "card.restore": "Kozongisa",
   "status.noCategories": "{path}/categories.yml ezali te to ezali na bokabwani ya mikumba te. Kangisá répertoire meta/ ya ebombelo infinito (INFINITO_META_DIR na .env) mpe salá lisusu etando na make up.",

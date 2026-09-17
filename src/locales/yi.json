@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} איז ניט אין דער ראָלעס מעטאַ־טעקעס",
   "tests.why.closure": "{path} באַשטימט זיך אויף דער אײַנגעפֿירטער פֿאַרמאַכונג",
   "card.close": "פֿאַרמאַכן",
+  "card.minimize": "מינימירן",
   "card.maximize": "מאַקסימירן",
   "card.restore": "צוריקשטעלן",
   "status.noCategories": "{path}/categories.yml פֿעלט אָדער האָט קיין ראָלעס־מאַפּע ניט. מאָנטירט דעם meta/ טעקע־אָרט פֿון דער infinito רעפּאָזיטאָריע (INFINITO_META_DIR אין .env) און שאַפֿט איבער דעם סטעק מיט make up.",

@@ -35,7 +35,8 @@ export function TestsGrid({ view }) {
     <p class="table-note">${view.note}</p>
     <div class="table-scroll">
       ${lines && html`
-        <table class="tests-matrix" onMouseOver=${event => view._hover(event)} onMouseOut=${event => view._leave(event)}>
+        <table class="tests-matrix" onMouseOver=${event => view._hover(event)}
+               onClick=${event => view._hover(event, true)} onMouseOut=${event => view._leave(event)}>
           <thead><tr>
             ${['role', 'variant', 'rank', ...(held ? ['run'] : [])].map(name => axis(t(`tests.axis.${name}`)))}
             ${Array.from({ length: width }, (_, index) => html`<th>${String(index + 1)}</th>`)}

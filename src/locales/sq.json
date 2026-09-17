@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} nuk është në skedarët meta të rolit",
   "tests.why.closure": "{path} përcaktohet në mbylljen e vendosur",
   "card.close": "Mbyll",
+  "card.minimize": "Minimizo",
   "card.maximize": "Maksimizo",
   "card.restore": "Rikthe",
   "status.noCategories": "{path}/categories.yml mungon ose nuk ka përputhje roles. Monto dosjen meta/ të depos infinito (INFINITO_META_DIR në .env) dhe rikrijo stack-un me make up.",

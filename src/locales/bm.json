@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} tɛ jɔyɔrɔ ka meta dosiyew kɔnɔ",
   "tests.why.closure": "{path} bɛ latigɛ kulu datugulen sigilen fɛ",
   "card.close": "A datugu",
+  "card.minimize": "A dɔgɔya",
   "card.maximize": "A bonya kosɛbɛ",
   "card.restore": "A segin",
   "status.noCategories": "{path}/categories.yml tɛ yen walima jɔyɔrɔw ka lisi tɛ a la. infinito maralan ka meta/ fɔlidɛri don (INFINITO_META_DIR .env kɔnɔ) ka stack lalɔ kokura ni make up ye.",

@@ -1,6 +1,7 @@
 import { elapsed } from '../github/time.js';
 import { html, render } from '../html.js';
 import { t } from '../i18n.js';
+import { chrome, hideLater, waiting } from '../popup.js';
 
 const MARK = { done: '✓', failed: '✗' };
 
@@ -38,35 +39,56 @@ function Overview({ loader }) {
 //   loader: the Loader whose tasks it lists.
 export function wireLoaderOverview(anchor, loader) {
   const box = document.body.appendChild(document.createElement('div'));
-  box.className = 'loader-overview';
+  box.className = 'loader-overview popup-fade';
   box.setAttribute('role', 'tooltip');
   box.id = 'loader-overview';
   box.hidden = true;
   anchor.setAttribute('aria-describedby', box.id);
+  const list = box.appendChild(document.createElement('div'));
   let ticker = null;
+  let leaving = null;
 
   const paint = () => {
     if (box.hidden) return;
-    render(html`<${Overview} loader=${loader} />`, box);
+    render(html`<${Overview} loader=${loader} />`, list);
+    if (bar.state === 'maximized') return;
     const place = anchor.getBoundingClientRect();
     box.style.left = `${place.left}px`;
     box.style.bottom = `${window.innerHeight - place.top + 6}px`;
   };
+  const waits = waiting();
+  const hide = () => {
+    waits.cancel(box.id);
+    box.hidden = true;
+    box.classList.remove('on', 'fading');
+    clearInterval(ticker);
+    leaving = null;
+  };
   const show = () => {
+    if (leaving) leaving.cancel();
+    leaving = null;
     box.hidden = false;
+    box.classList.add('on');
     paint();
     clearInterval(ticker);
     ticker = setInterval(paint, 1000);
   };
-  const hide = () => {
-    box.hidden = true;
-    clearInterval(ticker);
+  const bar = chrome(box, { onClose: hide, onState: () => paint() });
+  const rest = () => (box.hidden ? waits.arm(box.id, show) : show());
+  const leave = () => {
+    waits.cancel(box.id);
+    if (box.hidden || bar.state) return;
+    if (leaving) leaving.cancel();
+    leaving = hideLater(box, hide);
   };
 
   loader.onChange = paint;
-  anchor.addEventListener('mouseenter', show);
+  box.addEventListener('mouseenter', show);
+  box.addEventListener('mouseleave', leave);
+  anchor.addEventListener('mouseenter', rest);
+  anchor.addEventListener('click', show);
   anchor.addEventListener('focus', show);
-  anchor.addEventListener('mouseleave', hide);
-  anchor.addEventListener('blur', hide);
+  anchor.addEventListener('mouseleave', leave);
+  anchor.addEventListener('blur', leave);
   anchor.addEventListener('contextmenu', hide);
 }

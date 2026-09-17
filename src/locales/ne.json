@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} भूमिकाका मेटा फाइलहरूमा छैन",
   "tests.why.closure": "{path} डिप्लोय गरिएको घेरामा निर्धारण हुन्छ",
   "card.close": "बन्द गर्नुहोस्",
+  "card.minimize": "सानो पार्नुहोस्",
   "card.maximize": "ठूलो पार्नुहोस्",
   "card.restore": "पुनर्स्थापना गर्नुहोस्",
   "status.noCategories": "{path}/categories.yml छैन वा यसमा roles म्यापिङ छैन। infinito रिपोजिटरीको meta/ डाइरेक्टरी माउन्ट गर्नुहोस् (.env मा INFINITO_META_DIR) र make up बाट स्ट्याक पुनः बनाउनुहोस्।",

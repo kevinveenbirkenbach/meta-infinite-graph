@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ndaipóri rol meta marandurendápe",
   "tests.why.closure": "{path} ojekuaa oñemoĩvape paite",
   "card.close": "Emboty",
+  "card.minimize": "Emomichĩ",
   "card.maximize": "Embotuichaiterei",
   "card.restore": "Emyatyrõ",
   "status.noCategories": "{path}/categories.yml ndaipóri térã ndoguerekói roles ñemohenda. Emoĩ infinito ñongatuha meta/ ryru (INFINITO_META_DIR .env-pe) ha ejapo jey stack make up ndive.",

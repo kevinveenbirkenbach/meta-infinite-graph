@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ролдун meta файлдарында жок",
   "tests.why.closure": "{path} жайылтылган жабылууда аныкталат",
   "card.close": "Жабуу",
+  "card.minimize": "Кичирейтүү",
   "card.maximize": "Чоңойтуу",
   "card.restore": "Калыбына келтирүү",
   "status.noCategories": "{path}/categories.yml жок же анда roles байланышы жок. infinito репозиторийинин meta/ каталогун туташтырып (.env ичиндеги INFINITO_META_DIR), стекти make up менен кайра түзүңүз.",

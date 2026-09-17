@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} roluň meta faýllarynda ýok",
   "tests.why.closure": "{path} ýerleşdirilen ýapyklyk boýunça kesgitlenýär",
   "card.close": "Ýap",
+  "card.minimize": "Kiçelt",
   "card.maximize": "Ulalt",
   "card.restore": "Dikelt",
   "status.noCategories": "{path}/categories.yml ýok ýa-da onda rollaryň gabat gelşi ýok. infinito repozitoriýsiniň meta/ katalogyny birikdiriň (.env içindäki INFINITO_META_DIR) we steki make up bilen täzeden dörediň.",

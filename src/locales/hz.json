@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} kai ri mozofaira zometa zotjiungura",
   "tests.why.closure": "{path} i tokwa motjipatwa tja twa mo",
   "card.close": "Pata",
+  "card.minimize": "Ṱiṱisa",
   "card.maximize": "Kurisa tjinene",
   "card.restore": "Yarura",
   "status.noCategories": "{path}/categories.yml kai ri po poo kai notjitjiwa tjoviungura. Twa ofolda meta/ yondjuwo yovitjangwa ya infinito (INFINITO_META_DIR mu .env) nu u tunge rukwao otjitumbwa na make up.",

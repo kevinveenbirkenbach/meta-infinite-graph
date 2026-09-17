@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} дар файлҳои мета-и нақш нест",
   "tests.why.closure": "{path} аз рӯи пӯшиши ҷойгиршуда муайян мешавад",
   "card.close": "Пӯшидан",
+  "card.minimize": "Хурд кардан",
   "card.maximize": "Калон кардан",
   "card.restore": "Барқарор кардан",
   "status.noCategories": "{path}/categories.yml вуҷуд надорад ё харитаи roles надорад. Феҳристи meta/-и махзани infinito-ро васл кунед (INFINITO_META_DIR дар .env) ва стекро бо make up аз нав созед.",

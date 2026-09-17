@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ᓇᒨᔭ ᐊᔮᐤ ᐊᑐᐢᑫᐏᐣ meta-ᒪᓯᓇᐦᐃᑲᓂᕽ",
   "tests.why.closure": "{path} ᑮᓯᐦᑖᐤ ᑳᑮᐊᐢᑖᕽ ᐅᐦᒋ",
   "card.close": "ᑭᐸᐦᐊ",
+  "card.minimize": "ᐊᐱᓯᓰᐦᑕ",
   "card.maximize": "ᒥᓯᑭᐦᑕ",
   "card.restore": "ᑮᐦᑖᐧᒼ ᐊᐢᑖ",
   "status.noCategories": "{path}/categories.yml ᓇᒪᑌᐤ ᐊᐦᐴ ᓇᒨᔭ ᐊᑐᐢᑫᐏᓇᐑᐦᐅᐏᓇ ᐊᔮᐤ᙮ ᐊᐢᑖ infinito ᐊᐢᑖᓱᐏᐣ meta/ (INFINITO_META_DIR ᐆᑕ .env) ᐁᑲᐧ ᑮᐦᑖᐧᒼ ᐅᓰᐦᑕ make up ᐅᐦᒋ᙮",

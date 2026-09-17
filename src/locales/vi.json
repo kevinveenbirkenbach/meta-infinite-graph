@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} không có trong các tệp meta của vai trò",
   "tests.why.closure": "{path} được quyết định bởi bao đóng đã triển khai",
   "card.close": "Đóng",
+  "card.minimize": "Thu nhỏ",
   "card.maximize": "Phóng to",
   "card.restore": "Khôi phục",
   "status.noCategories": "{path}/categories.yml bị thiếu hoặc không có ánh xạ roles. Hãy gắn thư mục meta/ của kho mã infinito (INFINITO_META_DIR trong .env) rồi tạo lại stack bằng make up.",

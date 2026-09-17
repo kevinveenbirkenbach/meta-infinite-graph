@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} kai po meefaila dometa doshinakuwanifwa",
   "tests.why.closure": "{path} ohai tokolwa mongudu ya tulwa po",
   "card.close": "Pata",
+  "card.minimize": "Shonopeka",
   "card.maximize": "Nenepeka",
   "card.restore": "Alulula",
   "status.noCategories": "{path}/categories.yml ya kana ile kai na omusholondodo woinakuwanifwa. Tula mo ofoloda meta/ yorepositori infinito (INFINITO_META_DIR mo-.env) nokushita vali ostak na make up.",

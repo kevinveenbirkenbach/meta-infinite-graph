@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} no est in sos archìvios meta de su rolu",
   "tests.why.closure": "{path} si decidet in su tancamentu installadu",
   "card.close": "Serra",
+  "card.minimize": "Minimiza",
   "card.maximize": "Ismannia",
   "card.restore": "Riprìstina",
   "status.noCategories": "{path}/categories.yml mancat o no tenet una mapadura de sos rolos. Monta sa cartella meta/ de su depòsitu infinito (INFINITO_META_DIR in .env) e torra a creare s'istiva cun make up.",

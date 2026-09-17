@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ayikho kumafayela e-meta endima",
   "tests.why.closure": "{path} inqunywa ekuvalweni okufakiwe",
   "card.close": "Vala",
+  "card.minimize": "Nciphisa",
   "card.maximize": "Khulisa",
   "card.restore": "Buyisela",
   "status.noCategories": "{path}/categories.yml ayikho noma ayinakho ukumepha kwezindima. Faka uhla lwemibhalo lwe-meta/ lwenqolobane ye-infinito (INFINITO_META_DIR ku-.env) bese wakha kabusha isitaki nge-make up.",

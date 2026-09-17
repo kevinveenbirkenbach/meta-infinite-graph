@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} பாத்திரத்தின் மெட்டா கோப்புகளில் இல்லை",
   "tests.why.closure": "{path} வரிசைப்படுத்தப்பட்ட மூடலில் தீர்மானிக்கப்படுகிறது",
   "card.close": "மூடு",
+  "card.minimize": "சிறிதாக்கு",
   "card.maximize": "பெரிதாக்கு",
   "card.restore": "மீட்டமை",
   "status.noCategories": "{path}/categories.yml இல்லை அல்லது அதில் பாத்திர வரைபடம் இல்லை. infinito களஞ்சியத்தின் meta/ கோப்பகத்தை ஏற்றவும் (.env இல் INFINITO_META_DIR), பின் make up மூலம் அடுக்கை மீண்டும் உருவாக்கவும்.",

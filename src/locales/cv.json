@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} роль meta файлӗсенче ҫук",
   "tests.why.closure": "{path} вырнаҫтарнӑ хупӑлчаллӑхра татӑлать",
   "card.close": "Хуп",
+  "card.minimize": "Пӗчӗклет",
   "card.maximize": "Пысӑклат",
   "card.restore": "Каялла тавӑр",
   "status.noCategories": "{path}/categories.yml ҫук е унта roles ҫыхӑнӑвӗ ҫук. infinito репозиторийӗн meta/ каталогне ҫыхӑнтарӑр (.env ӑшӗнчи INFINITO_META_DIR) те стека make up урлӑ ҫӗнӗрен тӑвӑр.",

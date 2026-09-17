@@ -346,6 +346,7 @@
   "tests.why.missing": "ʻAita {path} i roto i te mau pue meta o te tōroʻa",
   "tests.why.closure": "E faʻaotihia {path} i nia i te ʻōpaniraʻa i haʻamauhia",
   "card.close": "ʻŌpani",
+  "card.minimize": "Faʻaiti",
   "card.maximize": "Faʻarahi roa",
   "card.restore": "Faʻahoʻi",
   "status.noCategories": "Ua ʻere {path}/categories.yml aore ra ʻaita e roles i roto. Tāmau i te piha meta/ o te vairaʻa infinito (INFINITO_META_DIR i roto i te .env) e hāmani faʻahou i te stack nā roto iā make up.",

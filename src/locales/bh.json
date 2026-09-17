@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} रोल के मेटा फाइल में नइखे",
   "tests.why.closure": "{path} डिप्लॉय भइल क्लोजर से तय होला",
   "card.close": "बंद करीं",
+  "card.minimize": "छोट करीं",
   "card.maximize": "बड़ा करीं",
   "card.restore": "पहिले जइसन करीं",
   "status.noCategories": "{path}/categories.yml नइखे या ओहमें roles मैपिंग नइखे। infinito रिपॉजिटरी के meta/ डायरेक्टरी माउंट करीं (.env में INFINITO_META_DIR) आ make up से स्टैक फेर से बनाईं।",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} atorfiup meta-filiini peqanngilaq",
   "tests.why.closure": "{path} atulersitami matunermi aalajangerneqarpoq",
   "card.close": "Matuguk",
+  "card.minimize": "Mikilliguk",
   "card.maximize": "Angilliguk",
   "card.restore": "Utertiguk",
   "status.noCategories": "{path}/categories.yml peqanngilaq imaluunniit roles-imik attaveqanngilaq. infinito-p toqqorsiviata meta/ ilanngutiguk (INFINITO_META_DIR .env-imi) stackilu make up atorlugu nutaamik pilersiguk.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} нѣсть въ хартїѧхъ мета чина",
   "tests.why.closure": "{path} ѡпредѣлѧетсѧ на поставленномъ замкненїи",
   "card.close": "Затворити",
+  "card.minimize": "Оумалити",
   "card.maximize": "Распространити",
   "card.restore": "Возставити",
   "status.noCategories": "{path}/categories.yml нѣсть или не имать начертанїѧ чинѡвъ. Прикрѣпи мѣсто meta/ хранилища infinito (INFINITO_META_DIR въ .env) и паки сотвори стогъ съ make up.",

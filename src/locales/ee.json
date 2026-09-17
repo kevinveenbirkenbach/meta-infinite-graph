@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} mele dɔdeasi ƒe meta agbalẽwo me o",
   "tests.why.closure": "{path} ɖoa ta le nu siwo woɖo ƒe ƒoƒu nu",
   "card.close": "Tu",
+  "card.minimize": "Wɔe sue",
   "card.maximize": "Kekee blibo",
   "card.restore": "Gbugbɔe ɖo",
   "status.noCategories": "{path}/categories.yml mele eme o alo roles ƒe ɖoɖo aɖeke mele eme o. Tsɔ infinito nudzraɖoƒe ƒe meta/ agbalẽdzraɖoƒe de eme (INFINITO_META_DIR le .env me) eye nàgbugbɔ stack la wɔ kple make up.",

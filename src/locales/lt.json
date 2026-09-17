@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} nėra rolės meta failuose",
   "tests.why.closure": "{path} nustatomas pagal įdiegtą uždarinį",
   "card.close": "Uždaryti",
+  "card.minimize": "Sumažinti",
   "card.maximize": "Išdidinti",
   "card.restore": "Atkurti",
   "status.noCategories": "{path}/categories.yml nėra arba jame nėra roles susiejimo. Prijunkite infinito saugyklos katalogą meta/ (INFINITO_META_DIR faile .env) ir iš naujo sukurkite steką su make up.",

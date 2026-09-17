@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} findes ikke i rollens meta-filer",
   "tests.why.closure": "{path} afgøres på den udrullede lukning",
   "card.close": "Luk",
+  "card.minimize": "Minimér",
   "card.maximize": "Maksimér",
   "card.restore": "Gendan",
   "status.noCategories": "{path}/categories.yml mangler eller har ingen roles-tilknytning. Montér infinito-repositoryets meta/-mappe (INFINITO_META_DIR i .env), og genskab stakken med make up.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} абу рольлӧн meta файлъясын",
   "tests.why.closure": "{path} шуссьӧ пуктӧм тупкӧд вылын",
   "card.close": "Пӧдлавны",
+  "card.minimize": "Ичӧтмӧдны",
   "card.maximize": "Паськӧдны",
   "card.restore": "Бергӧдны",
   "status.noCategories": "{path}/categories.yml абу либӧ сэні абу roles лӧсялӧм. Йитӧй infinito репозиторийлысь meta/ папка (INFINITO_META_DIR .env-ын) да выльысь лӧсьӧдӧй стек make up командаӧн.",

@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} roolih meta faylooli addal mali",
   "tests.why.closure": "{path} deploy tekke alfitil xiqta",
   "card.close": "Alif",
+  "card.minimize": "Dagoysis",
   "card.maximize": "Kaxxis",
   "card.restore": "Qagis",
   "status.noCategories": "{path}/categories.yml mali hinnay roles xiqqi mali. infinito makzanih meta/ diraktoori culus (INFINITO_META_DIR .env addal), tohuk lakal make up luk stack qusbah ab.",

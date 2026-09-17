@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} သည် အခန်းကဏ္ဍ၏ မက်တာဖိုင်များတွင် မရှိပါ",
   "tests.why.closure": "{path} ကို ဖြန့်ချိထားသော အစုအဝေးပေါ်တွင် ဆုံးဖြတ်သည်",
   "card.close": "ပိတ်ရန်",
+  "card.minimize": "ချုံ့ရန်",
   "card.maximize": "အကြီးဆုံးချဲ့ရန်",
   "card.restore": "ပြန်ထားရန်",
   "status.noCategories": "{path}/categories.yml မရှိပါ သို့မဟုတ် အခန်းကဏ္ဍ မြေပုံ မပါပါ။ infinito သိုလှောင်ရာ၏ meta/ ဖိုင်တွဲကို mount လုပ်ပြီး (.env ထဲရှိ INFINITO_META_DIR) make up ဖြင့် stack ကို ပြန်ဖန်တီးပါ။",

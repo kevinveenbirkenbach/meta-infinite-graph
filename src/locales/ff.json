@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} woodaani e fiilɗe meta darnde",
   "tests.why.closure": "{path} ina teeŋtinee e udditaare tabitinaande",
   "card.close": "Uddu",
+  "card.minimize": "Famɗin",
   "card.maximize": "Mawnin",
   "card.restore": "Artir",
   "status.noCategories": "{path}/categories.yml ina ŋakki walla alaa jokkondiral daaɗe. Waɗ runngere meta/ mooftirde infinito (INFINITO_META_DIR e .env) refti sosa kadi ƴiiwal ngal e make up.",

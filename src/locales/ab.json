@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ароль аметафаилқәа рҟны иҟам",
   "tests.why.closure": "{path} иргылоу аркра ала ишьақәгылоит",
   "card.close": "Адыркра",
+  "card.minimize": "Аиҵатәра",
   "card.maximize": "Аҭбаара ду",
   "card.restore": "Аиҭашьақәыргылара",
   "status.noCategories": "{path}/categories.yml ыҟам, мамзаргьы roles аиҿкаара амам. infinito арепозиториа meta/ акаталог иадҳәал (INFINITO_META_DIR .env аҟны), нас астек make up ала еиҭаԥҵа.",

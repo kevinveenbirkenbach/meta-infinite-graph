@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ಪಾತ್ರದ ಮೆಟಾ ಫೈಲ್‌ಗಳಲ್ಲಿ ಇಲ್ಲ",
   "tests.why.closure": "{path} ನಿಯೋಜಿತ ಕ್ಲೋಶರ್‌ನಲ್ಲಿ ನಿರ್ಧಾರವಾಗುತ್ತದೆ",
   "card.close": "ಮುಚ್ಚಿ",
+  "card.minimize": "ಚಿಕ್ಕದಾಗಿಸಿ",
   "card.maximize": "ಗರಿಷ್ಠಗೊಳಿಸಿ",
   "card.restore": "ಮರುಸ್ಥಾಪಿಸಿ",
   "status.noCategories": "{path}/categories.yml ಕಾಣೆಯಾಗಿದೆ ಅಥವಾ ಅದರಲ್ಲಿ ಪಾತ್ರಗಳ ಮ್ಯಾಪಿಂಗ್ ಇಲ್ಲ. infinito ರೆಪೊಸಿಟರಿಯ meta/ ಡೈರೆಕ್ಟರಿಯನ್ನು ಮೌಂಟ್ ಮಾಡಿ (.env ನಲ್ಲಿ INFINITO_META_DIR) ಮತ್ತು make up ಮೂಲಕ ಸ್ಟ್ಯಾಕ್ ಅನ್ನು ಮರುರಚಿಸಿ.",

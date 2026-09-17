@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} kele ve mu bafisye ya meta ya kisalu",
   "tests.why.closure": "{path} ke zabana na kivukisa kya me tulama",
   "card.close": "Kanga",
+  "card.minimize": "Sa fioti",
   "card.maximize": "Nenesa",
   "card.restore": "Vutula",
   "status.noCategories": "{path}/categories.yml kele ve to kele ve na kitalu kya roles. Kangisa nzo meta/ ya nzo ya bima ya infinito (INFINITO_META_DIR mu .env) mpi tunga diaka stak na make up.",

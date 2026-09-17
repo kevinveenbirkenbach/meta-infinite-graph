@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} finnes ikke i rollens metafiler",
   "tests.why.closure": "{path} avgjøres av den utrullede tillukningen",
   "card.close": "Lukk",
+  "card.minimize": "Minimer",
   "card.maximize": "Maksimer",
   "card.restore": "Gjenopprett",
   "status.noCategories": "{path}/categories.yml mangler eller har ingen rolletilordning. Monter meta/-katalogen i infinito-repositoryet (INFINITO_META_DIR i .env) og gjenopprett stakken med make up.",

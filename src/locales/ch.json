@@ -346,6 +346,7 @@
   "tests.why.missing": "Taya' i {path} gi i file meta i papet",
   "tests.why.closure": "Ma disidi i {path} gi i pinatten ni mana'setbe",
   "card.close": "Huchom",
+  "card.minimize": "Na'dikike'",
   "card.maximize": "Na'dångkolo todu",
   "card.restore": "Na'tåtte",
   "status.noCategories": "Taya' i {path}/categories.yml pat taya' mapan roles-ña. Na'hålom i direktorio meta/ gi i repositorio infinito (INFINITO_META_DIR gi .env) ya fa'tinas ta'lo i stack yan make up.",

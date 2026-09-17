@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} рөлдің мета файлдарында жоқ",
   "tests.why.closure": "{path} орналастырылған тұйықтама бойынша анықталады",
   "card.close": "Жабу",
+  "card.minimize": "Кішірейту",
   "card.maximize": "Үлкейту",
   "card.restore": "Қалпына келтіру",
   "status.noCategories": "{path}/categories.yml жоқ немесе онда рөлдер сәйкестігі жоқ. infinito репозиторийінің meta/ каталогын тіркеңіз (.env ішіндегі INFINITO_META_DIR) және стекті make up арқылы қайта жасаңыз.",

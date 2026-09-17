@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} no ye en os ficheros meta d'o rol",
   "tests.why.closure": "{path} se decide en a clausura desplegada",
   "card.close": "Zarrar",
+  "card.minimize": "Minimizar",
   "card.maximize": "Maximizar",
   "card.restore": "Restaurar",
   "status.noCategories": "{path}/categories.yml falta u no tiene garra mapeyo de rols. Munta o directorio meta/ d'o repositorio infinito (INFINITO_META_DIR en .env) y torna a crear a pila con make up.",

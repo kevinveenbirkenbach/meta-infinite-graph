@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} palibe m'mafayilo a meta a udindo",
   "tests.why.closure": "{path} imatsimikizika pa gulu loyikidwa",
   "card.close": "Tsekani",
+  "card.minimize": "Chepetsani",
   "card.maximize": "Kulitsani",
   "card.restore": "Bwezeretsani",
   "status.noCategories": "{path}/categories.yml palibe kapena ilibe mapu a maudindo. Lumikizani chikwatu cha meta/ cha nkhokwe ya infinito (INFINITO_META_DIR mu .env) ndipo pangani stack kachiwiri ndi make up.",

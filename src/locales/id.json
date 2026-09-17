@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} tidak ada di berkas meta peran",
   "tests.why.closure": "{path} ditentukan oleh closure yang di-deploy",
   "card.close": "Tutup",
+  "card.minimize": "Perkecil",
   "card.maximize": "Maksimalkan",
   "card.restore": "Pulihkan",
   "status.noCategories": "{path}/categories.yml tidak ada atau tidak punya pemetaan roles. Pasang direktori meta/ dari repositori infinito (INFINITO_META_DIR di .env) dan buat ulang stack dengan make up.",

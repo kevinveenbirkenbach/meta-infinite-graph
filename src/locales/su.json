@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} teu aya dina file meta peran",
   "tests.why.closure": "{path} ditangtukeun dina panutup nu disebarkeun",
   "card.close": "Tutup",
+  "card.minimize": "Leutikkeun",
   "card.maximize": "Maksimalkeun",
   "card.restore": "Balikkeun",
   "status.noCategories": "{path}/categories.yml teu aya atawa teu boga pemetaan roles. Pasang diréktori meta/ répositori infinito (INFINITO_META_DIR dina .env) sarta jieun deui stack ku make up.",

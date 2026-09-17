@@ -97,7 +97,7 @@ html, body {
 .artifact-viewer {
   position: fixed;
   inset: 0;
-  z-index: 1400;
+  z-index: 3000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +113,18 @@ html, body {
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+  position: relative;
+}
+
+.artifact-viewer-frame.popup-maximized {
+  inset: auto !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0;
+}
+
+.artifact-viewer-frame.popup-minimized {
+  height: auto !important;
 }
 
 .artifact-viewer-head {
@@ -120,6 +132,7 @@ html, body {
   align-items: center;
   gap: 12px;
   padding: 6px 10px;
+  padding-right: 76px;
   border-bottom: 1px solid var(--bs-border-color);
   font-size: 0.85rem;
 }
@@ -878,6 +891,72 @@ img.role-icon {
   cursor: help;
 }
 
+/* Only a popup that comes and goes with the pointer fades; a viewer opened by
+   a click is there the moment it is asked for. */
+.popup-fade {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.popup-fade.on {
+  opacity: 0.95;
+}
+
+.popup-fade.fading {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  pointer-events: none;
+}
+
+.popup-chrome {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  z-index: 1;
+  display: flex;
+  gap: 2px;
+}
+
+.popup-button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  opacity: 0.5;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 2px;
+  cursor: pointer;
+}
+
+.popup-button:hover,
+.popup-button:focus-visible {
+  opacity: 1;
+}
+
+/* Every popup writes left and top inline as it opens, so only !important
+   keeps a maximized one on the whole window. */
+.popup-maximized {
+  inset: 8px !important;
+  max-width: none !important;
+  max-height: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.popup-maximized.on {
+  opacity: 1;
+}
+
+.popup-minimized {
+  max-height: 1.9rem !important;
+  min-height: 0;
+  overflow: hidden !important;
+}
+
+.popup-minimized > :not(.popup-chrome) {
+  visibility: hidden;
+}
+
 .role-card-host {
   position: fixed;
   z-index: 2000;
@@ -890,19 +969,7 @@ img.role-icon {
   background: var(--bs-body-bg);
   box-shadow: 0 6px 24px rgba(0,0,0,0.25);
   font-size: 0.82rem;
-  opacity: 0;
-  transition: opacity 0.1s ease-out;
   pointer-events: auto;
-}
-
-.role-card-host.on {
-  opacity: 0.95;
-}
-
-.role-card-host.fading {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-  pointer-events: none;
 }
 
 .role-card-host.pinned {
@@ -977,23 +1044,6 @@ img.role-icon {
   border-top: 1px solid var(--bs-border-color);
   display: flex;
   gap: 12px;
-}
-
-.role-card-close {
-  position: absolute;
-  top: 4px;
-  right: 6px;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  opacity: 0.5;
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.role-card-close:hover {
-  opacity: 1;
 }
 
 .role-card-host:has(.token-help) {
@@ -1204,35 +1254,6 @@ img.role-icon {
   white-space: nowrap;
 }
 
-.role-card-grow {
-  position: absolute;
-  top: 4px;
-  right: 28px;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  opacity: 0.5;
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.role-card-grow:hover {
-  opacity: 1;
-}
-
-/* _place writes left and top inline on every open and every pinned frame, so
-   only !important keeps a maximized card on the whole window. */
-.role-card-host.maximized {
-  inset: 8px !important;
-  max-width: none;
-  max-height: none;
-}
-
-.role-card-host.maximized.on {
-  opacity: 1;
-}
-
 .role-card-host .role-card-title {
   padding-right: 48px;
 }
@@ -1271,8 +1292,8 @@ img.role-icon {
   text-underline-offset: 2px;
 }
 
-.role-card-host:not(.maximized) .role-card-resources,
-.role-card-host.maximized .res-fact {
+.role-card-host:not(.popup-maximized) .role-card-resources,
+.role-card-host.popup-maximized .res-fact {
   display: none;
 }
 
@@ -1465,6 +1486,11 @@ body.matrix-dragging * {
 .matrix-float {
   position: fixed;
   z-index: 2100;
+}
+
+.matrix-float.popup .popup-body,
+.loader-overview.popup > div {
+  padding-top: 14px;
 }
 
 .matrix-menu {

@@ -324,6 +324,7 @@
   "tests.why.missing": "{path} មិននៅក្នុងឯកសារមេតានៃតួនាទី",
   "tests.why.closure": "{path} កំណត់លើការបិទដែលបានដាក់ឱ្យប្រើ",
   "card.close": "បិទ",
+  "card.minimize": "បង្រួម",
   "card.maximize": "ពង្រីកអតិបរមា",
   "card.restore": "ស្ដារ",
   "status.noCategories": "{path}/categories.yml បាត់ ឬគ្មានការផ្គូផ្គង roles។ ម៉ោនថត meta/ នៃឃ្លាំង infinito (INFINITO_META_DIR ក្នុង .env) ហើយបង្កើតស្ដាកឡើងវិញដោយ make up។",

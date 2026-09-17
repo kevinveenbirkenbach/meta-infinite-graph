@@ -390,6 +390,7 @@
   "tests.why.missing": "Chan eil {path} ann am faidhlichean meata na dreuchd",
   "tests.why.closure": "Thèid {path} a shocrachadh leis a’ chlòsadh a chaidh a chur an sàs",
   "card.close": "Dùin",
+  "card.minimize": "Fìor-lùghdaich",
   "card.maximize": "Làn-mheudaich",
   "card.restore": "Aisig",
   "status.noCategories": "Tha {path}/categories.yml a dhìth no chan eil mapadh roles ann. Munntaich pasgan meta/ an ionaid-tasgaidh infinito (INFINITO_META_DIR ann an .env) agus ath-chruthaich an stac le make up.",

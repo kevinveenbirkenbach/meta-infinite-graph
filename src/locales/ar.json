@@ -434,6 +434,7 @@
   "tests.why.missing": "{path} ليس في ملفات meta للدور",
   "tests.why.closure": "{path} يُحسم على الإغلاق المنشور",
   "card.close": "إغلاق",
+  "card.minimize": "تصغير",
   "card.maximize": "تكبير",
   "card.restore": "استعادة",
   "status.noCategories": "الملف {path}/categories.yml مفقود أو لا يحتوي على تعيين roles. اربط المجلد meta/ من مستودع infinito (INFINITO_META_DIR في .env) وأعد إنشاء الحزمة بالأمر make up.",

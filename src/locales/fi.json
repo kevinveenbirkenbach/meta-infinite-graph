@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} ei ole roolin meta-tiedostoissa",
   "tests.why.closure": "{path} ratkeaa käyttöönotetun sulkeuman perusteella",
   "card.close": "Sulje",
+  "card.minimize": "Pienennä",
   "card.maximize": "Suurenna",
   "card.restore": "Palauta",
   "status.noCategories": "{path}/categories.yml puuttuu tai siinä ei ole roolien määritystä. Liitä infinito-repositorion meta/-hakemisto (INFINITO_META_DIR tiedostossa .env) ja luo pino uudelleen komennolla make up.",

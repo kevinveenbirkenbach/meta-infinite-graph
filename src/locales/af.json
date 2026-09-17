@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} is nie in die rol se metalêers nie",
   "tests.why.closure": "{path} word deur die ontplooide afsluiting bepaal",
   "card.close": "Sluit",
+  "card.minimize": "Minimeer",
   "card.maximize": "Maksimeer",
   "card.restore": "Herstel",
   "status.noCategories": "{path}/categories.yml ontbreek of het geen rolle-toewysing nie. Koppel die meta/-gids van die infinito-bewaarplek (INFINITO_META_DIR in .env) en herskep die stapel met make up.",

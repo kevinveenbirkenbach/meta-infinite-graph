@@ -22,7 +22,8 @@ export class ForkPlot {
   // Args:
   //   graph: a ForkGraph over the fetched repositories.
   //   width: the pixel width to lay the time axis out in.
-  //   onPick: called with a commit when its dot is hovered.
+  //   onPick: called with a commit when its dot is hovered, and with a fourth
+  //     argument true when it is clicked, which opens the card at once.
   //   onToggle: called with a repository's full_name when its label is clicked.
   static draw(graph, width, onPick, onToggle) {
     const span = graph.span();
@@ -193,6 +194,7 @@ export class ForkPlot {
           cx: x(ForkGraph._time(commit.date)), cy: lane, r: 2.4,
         });
         dot.addEventListener('mouseover', event => onPick(commit, row, event));
+        dot.addEventListener('click', event => onPick(commit, row, event, true));
         dot.addEventListener('mouseout', () => onPick(null, row));
         group.appendChild(dot);
       }

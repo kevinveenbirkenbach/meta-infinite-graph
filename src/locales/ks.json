@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} چھُنہٕ کِردارٕچَن میٹا فائلَن منٛز",
   "tests.why.closure": "{path} چھُ تعینات کٔرِتھ دٲیرَس پؠٹھ طےٚ گژھان",
   "card.close": "بنٛد کٔرِو",
+  "card.minimize": "لۆکُٹ کٔرِو",
   "card.maximize": "بوٚڈ کٔرِو",
   "card.restore": "بَحال کٔرِو",
   "status.noCategories": "{path}/categories.yml چھُنہٕ موجوٗد یا چھُس نہ کانٛہہ roles میپِنگ۔ infinito ذخیرٕچ meta/ ڈایرٮ۪کٹری کٔرِو ماونٹ (.env منٛز INFINITO_META_DIR) تہٕ سٹیک کٔرِو make up سٟتؠ دوبارٕ تَیار۔",

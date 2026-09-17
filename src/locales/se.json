@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} ii leat rolla metafiillain",
   "tests.why.closure": "{path} mearriduvvo ásahuvvon giddagasa mielde",
   "card.close": "Gidde",
+  "card.minimize": "Minimere",
   "card.maximize": "Maksimere",
   "card.restore": "Máhcat",
   "status.noCategories": "{path}/categories.yml váilu dahje das ii leat rollagoallostat. Čatnna infinito-vuorkká meta/-máhpa (INFINITO_META_DIR .env-fiillas) ja ráhkat stáhka ođđasit make up bokte.",

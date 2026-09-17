@@ -390,6 +390,7 @@
   "tests.why.missing": "{path} nie występuje w plikach meta roli",
   "tests.why.closure": "{path} rozstrzyga się na wdrożonym domknięciu",
   "card.close": "Zamknij",
+  "card.minimize": "Minimalizuj",
   "card.maximize": "Maksymalizuj",
   "card.restore": "Przywróć",
   "status.noCategories": "Brak pliku {path}/categories.yml lub nie ma w nim mapowania roles. Zamontuj katalog meta/ repozytorium infinito (INFINITO_META_DIR w .env) i odtwórz stos poleceniem make up.",

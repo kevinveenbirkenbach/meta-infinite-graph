@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} በሚናው ሜታ ፋይሎች ውስጥ የለም",
   "tests.why.closure": "{path} በተሰማራው መዝጊያ ላይ ይወሰናል",
   "card.close": "ዝጋ",
+  "card.minimize": "አሳንስ",
   "card.maximize": "አስፋ",
   "card.restore": "መልስ",
   "status.noCategories": "{path}/categories.yml የለም ወይም roles የሚል ካርታ የለውም። የ infinito ማከማቻውን meta/ ማውጫ ይሰኩ (INFINITO_META_DIR በ .env ውስጥ)፣ ቁልሉንም በ make up እንደገና ይፍጠሩ።",

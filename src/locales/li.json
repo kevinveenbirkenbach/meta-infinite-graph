@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} steit neet in de metabestande vaan de rol",
   "tests.why.closure": "{path} weurt bepaold door de oetgerolde sluting",
   "card.close": "Sloete",
+  "card.minimize": "Minimalisere",
   "card.maximize": "Maximalisere",
   "card.restore": "Hersjtelle",
   "status.noCategories": "{path}/categories.yml óntbrik of haet gein roles-mapping. Koppel de meta/-map vaan de infinito-opslaag (INFINITO_META_DIR in .env) en maak de stack opnuuj mèt make up.",

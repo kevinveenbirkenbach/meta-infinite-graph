@@ -368,6 +368,7 @@
   "tests.why.missing": "{path} nav lomas meta failos",
   "tests.why.closure": "{path} tiek noteikts izvietotajā slēgumā",
   "card.close": "Aizvērt",
+  "card.minimize": "Minimizēt",
   "card.maximize": "Maksimizēt",
   "card.restore": "Atjaunot",
   "status.noCategories": "{path}/categories.yml trūkst vai tajā nav lomu kartējuma. Piemontējiet infinito repozitorija meta/ direktoriju (INFINITO_META_DIR failā .env) un izveidojiet steku no jauna ar make up.",

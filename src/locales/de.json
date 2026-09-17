@@ -346,6 +346,7 @@
   "tests.why.missing": "{path} steht nicht in den Meta-Dateien der Rolle",
   "tests.why.closure": "{path} entscheidet sich an der ausgerollten Hülle",
   "card.close": "Schließen",
+  "card.minimize": "Minimieren",
   "card.maximize": "Maximieren",
   "card.restore": "Wiederherstellen",
   "status.noCategories": "{path}/categories.yml fehlt oder hat keine roles-Zuordnung. Binde das Verzeichnis meta/ des infinito-Repositorys ein (INFINITO_META_DIR in .env) und erstelle den Stack mit make up neu.",
