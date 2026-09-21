@@ -348,6 +348,21 @@ tr.feed-pickable:hover td {
   font-size: 0.75rem;
 }
 
+.csp-unsafe-eval { color: var(--bs-danger); font-weight: 600; }
+.csp-unsafe-inline { color: var(--bs-warning); }
+.csp-wildcard { color: var(--bs-warning); }
+.csp-scheme, .csp-host { opacity: 0.8; }
+
+.csp-directive, .csp-source, .todo-where {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+
+.csp-table td.csp-reason, .todo-table td.todo-item {
+  white-space: normal;
+  max-width: 52ch;
+}
+
 .code-table td {
   white-space: nowrap;
 }

@@ -353,8 +353,8 @@ too.
 ### Security
 
 The **Security** menu holds the views of what the repositories owe their own
-policy, each named after what it reads: **GitHub Alerts** and **CI Warnings**.
-`?view=security` and `?view=warnings` open them. The two are one word apart in
+policy, each named after what it reads: **GitHub Alerts**, **CI Warnings** and
+**CSP**. `?view=security`, `?view=warnings` and `?view=csp` open them. The two are one word apart in
 English and the same word in half the languages the app speaks, so each carries
 its source.
 
@@ -410,6 +410,20 @@ Only the exact value `true` turns it on. Every visitor of the instance then
 sees the alerts the server token can read, so set it only on an instance no one
 else reaches. The proxy sends each of these paths with the query shown above
 and drops the visitor's own.
+
+#### CSP
+
+The **CSP** view answers what the repositories allow themselves, read from
+`roles/<role>/meta/csp.yml` rather than from a running deployment, so it needs
+no token and no request. One row per exception, worst first: a flag the file
+turns on (`unsafe-eval` before `unsafe-inline`, and any other token a role
+writes after them), then the whitelisted sources by how far they open the
+policy - a wildcard, then a scheme like `data:` or `blob:`, then a named host.
+
+Each row names the role, the directive the exception belongs to and, for a
+flag, the reason its `# nocheck:` marker states, which the YAML parser drops
+and the view reads from the file as written. The search and the kind menu
+narrow the table.
 
 ### 2D tables
 

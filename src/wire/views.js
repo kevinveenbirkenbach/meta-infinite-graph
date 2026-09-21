@@ -111,7 +111,8 @@ export function wireViewMode({ tableView, forkTree, testsView, codeView, feeds, 
 export function redraw(tableView, testsView) {
   const view = currentView();
   if (TEST_VIEWS.includes(view)) testsView.refresh();
-  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security', 'warnings', ...CODE_VIEWS].includes(view)) {
+  else if (!['graph', 'forks', 'commits', 'pulls', 'actions', 'security', 'warnings', 'csp',
+    ...CODE_VIEWS].includes(view)) {
     tableView.refresh();
   }
 }

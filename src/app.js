@@ -1,5 +1,7 @@
 import { AutoResolver } from './autoResolver.js';
 import { CommitsView } from './commitsView.js';
+import { CspScan } from './csp/model.js';
+import { CspView } from './csp/view.js';
 import { codeTests, dataLoader, graphRenderer, selectionManager, setStatus, urlState } from './context.js';
 import { ForkTree } from './fork/tree.js';
 import { GitRange } from './gitRange.js';
@@ -109,6 +111,7 @@ loader.track('*', gitRange.load()
       actions: new GitHubFeed('actions', forkTree.api, gitRange, tables),
       security: new GitHubSecurity(forkTree.api, gitRange, tables),
       warnings: new GitHubWarnings(forkTree.api, gitRange, tables, annotations),
+      csp: new CspView(new CspScan(dataLoader), roleInfo, tables),
     };
     const codeView = new CodeTestsView(codeTests, annotations, tables);
     const testsView = new TestsView(
@@ -118,6 +121,7 @@ loader.track('*', gitRange.load()
     testsView.track = (promise, label) => loader.track('playwright', promise, label);
     codeView.track = (promise, label) => loader.track(currentView(), promise, label);
     feeds.warnings.track = (promise, label) => loader.track('warnings', promise, label);
+    feeds.csp.track = (promise, label) => loader.track('csp', promise, label);
     testsView.runs.onLoad = (name, promise, retry) => loader
       .track(null, promise, t('loader.task.artifact', { name }), retry);
     forkTree.api.onFetch = (path, promise) => loader.track(null, promise, t('loader.task.github', { path }));
@@ -151,6 +155,7 @@ loader.track('*', gitRange.load()
     });
     feeds.actions.onFilter = () => urlState.capture();
     feeds.warnings.onFilter = () => urlState.capture();
+    feeds.csp.onFilter = () => urlState.capture();
     tableView.setFilters(uiManager.filters());
     let drawView = () => {};
     wireControls({ testsView, matrixView, roleInfo, forkTree, onRun: () => drawView() });
@@ -183,6 +188,10 @@ loader.track('*', gitRange.load()
           pulls: () => feeds.pulls.show(true),
           security: () => feeds.security.show(true),
           warnings: () => feeds.warnings.show(true),
+          csp: () => {
+            feeds.csp.invalidate();
+            return feeds.csp.show();
+          },
           ...Object.fromEntries(CodeTests.KINDS.map(kind => [kind, () => {
             codeView.invalidate();
             return codeView.show(kind);
