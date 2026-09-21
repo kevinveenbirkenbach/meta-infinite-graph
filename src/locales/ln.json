@@ -14,6 +14,7 @@
   "view.securityWith": "Libateli · {view}",
   "view.items": "Biloko",
   "view.itemsWith": "Biloko · {view}",
+  "view.todos": "Makambo ya kosala",
   "view.warnings": "CI Makebisi",
   "csp.column.kind": "Bokeseni",
   "csp.column.role": "Mokumba",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Bokeseni {n} na mobeko ya ebandeli, mikumba {roles} elobi yango.",
     "other": "Bokeseni {n} na mobeko ya ebandeli, mikumba {roles} elobi yango."
+  },
+  "todos.column.kind": "Elembo",
+  "todos.column.where": "Wapi",
+  "todos.column.item": "Eloko",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ezali kotánga makambo oyo ebombelo ezali naino na yango …",
+  "todos.failed": "Talatala eyanoli te: {message}",
+  "todos.capped": "Kaka ya liboso nde etangami.",
+  "todos.note": {
+    "one": "Eloko {n} efungwami na bafisye {files}.",
+    "other": "Biloko {n} efungwami na bafisye {files}."
   },
   "panel.filter": "Kopona",
   "panel.design": "Bolɛngɛli",

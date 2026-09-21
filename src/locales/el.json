@@ -14,6 +14,7 @@
   "view.securityWith": "Ασφάλεια · {view}",
   "view.items": "Στοιχεία",
   "view.itemsWith": "Στοιχεία · {view}",
+  "view.todos": "Εκκρεμότητες",
   "view.warnings": "CI Προειδοποιήσεις",
   "csp.column.kind": "Εξαίρεση",
   "csp.column.role": "Ρόλος",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} εξαίρεση στην προεπιλεγμένη πολιτική, δηλωμένη από {roles} ρόλους.",
     "other": "{n} εξαιρέσεις στην προεπιλεγμένη πολιτική, δηλωμένες από {roles} ρόλους."
+  },
+  "todos.column.kind": "Σήμανση",
+  "todos.column.where": "Πού",
+  "todos.column.item": "Στοιχείο",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ανάγνωση όσων χρωστά ακόμη το αποθετήριο στον εαυτό του…",
+  "todos.failed": "Ο καθρέφτης δεν απάντησε: {message}",
+  "todos.capped": "Παρατίθενται μόνο τα πρώτα από αυτά.",
+  "todos.note": {
+    "one": "{n} ανοιχτό στοιχείο σε {files} αρχεία.",
+    "other": "{n} ανοιχτά στοιχεία σε {files} αρχεία."
   },
   "panel.filter": "Φίλτρο",
   "panel.design": "Εμφάνιση",

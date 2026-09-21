@@ -14,6 +14,7 @@
   "view.securityWith": "Куркынычсызлык · {view}",
   "view.items": "Элементлар",
   "view.itemsWith": "Элементлар · {view}",
+  "view.todos": "Башкарасы эшләр",
   "view.warnings": "CI Кисәтүләр",
   "csp.column.kind": "Искәрмә",
   "csp.column.role": "Роль",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Төп сәясәттән {n} искәрмә, {roles} роль игълан иткән.",
     "other": "Төп сәясәттән {n} искәрмә, {roles} роль игълан иткән."
+  },
+  "todos.column.kind": "Билге",
+  "todos.column.where": "Кайда",
+  "todos.column.item": "Элемент",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Репозиторийның үзенә бурычы укыла…",
+  "todos.failed": "Көзге җавап бирмәде: {message}",
+  "todos.capped": "Тик беренчеләре генә күрсәтелә.",
+  "todos.note": {
+    "one": "{files} файлда {n} ачык элемент.",
+    "other": "{files} файлда {n} ачык элемент."
   },
   "panel.filter": "Фильтр",
   "panel.design": "Бизәлеш",

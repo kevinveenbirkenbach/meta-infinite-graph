@@ -14,6 +14,7 @@
   "view.securityWith": "Sicurezza · {view}",
   "view.items": "Elementi",
   "view.itemsWith": "Elementi · {view}",
+  "view.todos": "Da fà",
   "view.warnings": "CI Avertimenti",
   "csp.column.kind": "Eccezzione",
   "csp.column.role": "Rolu",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eccezzione à a pulitica predefinita, dichjarata da {roles} roli.",
     "other": "{n} eccezzioni à a pulitica predefinita, dichjarate da {roles} roli."
+  },
+  "todos.column.kind": "Marcatore",
+  "todos.column.where": "Induve",
+  "todos.column.item": "Elementu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lettura di ciò chì u dipositu si deve sempre …",
+  "todos.failed": "U specchju ùn hà micca rispostu: {message}",
+  "todos.capped": "Solu i primi sò elencati.",
+  "todos.note": {
+    "one": "{n} elementu apertu in {files} schedari.",
+    "other": "{n} elementi aperti in {files} schedari."
   },
   "panel.filter": "Filtru",
   "panel.design": "Aspettu",

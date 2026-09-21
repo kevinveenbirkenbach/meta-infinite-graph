@@ -14,6 +14,7 @@
   "view.securityWith": "सुरक्खा · {view}",
   "view.items": "वत्थूनि",
   "view.itemsWith": "वत्थूनि · {view}",
+  "view.todos": "कत्तब्बानि",
   "view.warnings": "CI सतिकरणानि",
   "csp.column.kind": "अपवादो",
   "csp.column.role": "किच्चं",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "पकतिनीतिया {n} अपवादो, {roles} किच्चेहि पकासितो.",
     "other": "पकतिनीतिया {n} अपवादा, {roles} किच्चेहि पकासिता."
+  },
+  "todos.column.kind": "सञ्ञा",
+  "todos.column.where": "कत्थ",
+  "todos.column.item": "वत्थु",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "भण्डागारं अत्तनो यं इणं धारेति तं पठति…",
+  "todos.failed": "आदासो न पटिवदति: {message}",
+  "todos.capped": "पठमानि एव दस्सितानि.",
+  "todos.note": {
+    "one": "{files} फाइलेसु {n} विवटं वत्थु.",
+    "other": "{files} फाइलेसु {n} विवटानि वत्थूनि."
   },
   "panel.filter": "परिस्सावनं",
   "panel.design": "रूपविधानं",

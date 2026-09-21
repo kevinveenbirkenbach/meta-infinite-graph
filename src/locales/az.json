@@ -14,6 +14,7 @@
   "view.securityWith": "Təhlükəsizlik · {view}",
   "view.items": "Elementlər",
   "view.itemsWith": "Elementlər · {view}",
+  "view.todos": "Görüləcəklər",
   "view.warnings": "CI Xəbərdarlıqlar",
   "csp.column.kind": "İstisna",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Standart siyasətə {n} istisna, {roles} rol tərəfindən bəyan edilib.",
     "other": "Standart siyasətə {n} istisna, {roles} rol tərəfindən bəyan edilib."
+  },
+  "todos.column.kind": "Marker",
+  "todos.column.where": "Harada",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Deponun özünə hələ borclu olduqları oxunur…",
+  "todos.failed": "Güzgü cavab vermədi: {message}",
+  "todos.capped": "Yalnız ilk olanlar sadalanıb.",
+  "todos.note": {
+    "one": "{files} faylda {n} açıq element.",
+    "other": "{files} faylda {n} açıq element."
   },
   "panel.filter": "Filtr",
   "panel.design": "Dizayn",

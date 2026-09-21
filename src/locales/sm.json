@@ -14,6 +14,7 @@
   "view.securityWith": "Saogalemu · {view}",
   "view.items": "Mea",
   "view.itemsWith": "Mea · {view}",
+  "view.todos": "Mea e fai",
   "view.warnings": "CI Lapataiga",
   "csp.column.kind": "Tuusaunoaga",
   "csp.column.role": "Matafaioi",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} tuusaunoaga i le faiga masani, na faailoa e matafaioi e {roles}.",
     "other": "{n} tuusaunoaga i le faiga masani, na faailoa e matafaioi e {roles}."
+  },
+  "todos.column.kind": "Faailoga",
+  "todos.column.where": "Fea",
+  "todos.column.item": "Mea",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "O loo faitau mea o loo nofo aitalafu ai le faleteu ia te ia lava…",
+  "todos.failed": "E le'i tali mai le faaata: {message}",
+  "todos.capped": "Ua na o mea muamua o loo lisi.",
+  "todos.note": {
+    "one": "{n} mea matala i faila e {files}.",
+    "other": "{n} mea matala i faila e {files}."
   },
   "panel.filter": "Faamama",
   "panel.design": "Mamanu",

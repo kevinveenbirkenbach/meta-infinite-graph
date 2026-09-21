@@ -14,6 +14,7 @@
   "view.securityWith": "Umutekano · {view}",
   "view.items": "Ibintu",
   "view.itemsWith": "Ibintu · {view}",
+  "view.todos": "Ibisabwa gukorwa",
   "view.warnings": "CI Imiburo",
   "csp.column.kind": "Ikidasanzwe",
   "csp.column.role": "Inshingano",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Ikidasanzwe {n} ku mabwiriza asanzwe, cyatangajwe n'inshingano {roles}.",
     "other": "Ibidasanzwe {n} ku mabwiriza asanzwe, byatangajwe n'inshingano {roles}."
+  },
+  "todos.column.kind": "Ikimenyetso",
+  "todos.column.where": "Aho biri",
+  "todos.column.item": "Ikintu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Gusoma ibyo ububiko bukiberamo ubwabwo…",
+  "todos.failed": "Indorerwamo ntiyasubije: {message}",
+  "todos.capped": "Hagaragajwe ibya mbere gusa.",
+  "todos.note": {
+    "one": "Ikintu {n} gifunguye muri dosiye {files}.",
+    "other": "Ibintu {n} bifunguye muri dosiye {files}."
   },
   "panel.filter": "Gushungura",
   "panel.design": "Imiterere",

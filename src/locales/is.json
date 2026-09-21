@@ -14,6 +14,7 @@
   "view.securityWith": "Öryggi · {view}",
   "view.items": "Atriði",
   "view.itemsWith": "Atriði · {view}",
+  "view.todos": "Verkefni",
   "view.warnings": "CI Aðvaranir",
   "csp.column.kind": "Undantekning",
   "csp.column.role": "Hlutverk",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} undantekning frá sjálfgefnu stefnunni, lýst af {roles} hlutverkum.",
     "other": "{n} undantekningar frá sjálfgefnu stefnunni, lýst af {roles} hlutverkum."
+  },
+  "todos.column.kind": "Merki",
+  "todos.column.where": "Hvar",
+  "todos.column.item": "Atriði",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Les hvað geymslan skuldar sjálfri sér enn …",
+  "todos.failed": "Spegillinn svaraði ekki: {message}",
+  "todos.capped": "Aðeins þau fyrstu eru talin upp.",
+  "todos.note": {
+    "one": "{n} opið atriði í {files} skrám.",
+    "other": "{n} opin atriði í {files} skrám."
   },
   "panel.filter": "Sía",
   "panel.design": "Útlit",

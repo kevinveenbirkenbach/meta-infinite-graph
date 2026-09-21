@@ -14,6 +14,7 @@
   "view.securityWith": "Қауіпсіздік · {view}",
   "view.items": "Элементтер",
   "view.itemsWith": "Элементтер · {view}",
+  "view.todos": "Істер",
   "view.warnings": "CI Ескертулер",
   "csp.column.kind": "Ерекшелік",
   "csp.column.role": "Рөл",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Әдепкі саясаттан {n} ерекшелік, {roles} рөл жариялаған.",
     "other": "Әдепкі саясаттан {n} ерекшелік, {roles} рөл жариялаған."
+  },
+  "todos.column.kind": "Белгі",
+  "todos.column.where": "Қайда",
+  "todos.column.item": "Элемент",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Репозиторийдің өзіне әлі борышты нәрсесі оқылуда …",
+  "todos.failed": "Айна жауап бермеді: {message}",
+  "todos.capped": "Тек алғашқылары ғана тізілген.",
+  "todos.note": {
+    "one": "{files} файлда {n} ашық элемент.",
+    "other": "{files} файлда {n} ашық элемент."
   },
   "panel.filter": "Сүзгі",
   "panel.design": "Дизайн",

@@ -14,6 +14,7 @@
   "view.securityWith": "Xavfsizlik · {view}",
   "view.items": "Elementlar",
   "view.itemsWith": "Elementlar · {view}",
+  "view.todos": "Bajariladigan ishlar",
   "view.warnings": "CI Ogohlantirishlar",
   "csp.column.kind": "Istisno",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Standart siyosatga {n} istisno, {roles} rol tomonidan e'lon qilingan.",
     "other": "Standart siyosatga {n} istisno, {roles} rol tomonidan e'lon qilingan."
+  },
+  "todos.column.kind": "Belgi",
+  "todos.column.where": "Qayerda",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Repozitoriy o'ziga hali qarzdor bo'lgan narsalar o'qilmoqda…",
+  "todos.failed": "Oyna javob bermadi: {message}",
+  "todos.capped": "Faqat birinchilari ro'yxatlangan.",
+  "todos.note": {
+    "one": "{files} faylda {n} ochiq element.",
+    "other": "{files} faylda {n} ochiq element."
   },
   "panel.filter": "Filtr",
   "panel.design": "Dizayn",

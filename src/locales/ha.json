@@ -14,6 +14,7 @@
   "view.securityWith": "Tsaro · {view}",
   "view.items": "Abubuwa",
   "view.itemsWith": "Abubuwa · {view}",
+  "view.todos": "Abin yi",
   "view.warnings": "CI Gargaɗi",
   "csp.column.kind": "Keɓancewa",
   "csp.column.role": "Matsayi",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Keɓancewa {n} ga daidaitaccen ka'ida, matsayi {roles} sun bayyana ta.",
     "other": "Keɓancewa {n} ga daidaitaccen ka'ida, matsayi {roles} sun bayyana su."
+  },
+  "todos.column.kind": "Alama",
+  "todos.column.where": "Inda",
+  "todos.column.item": "Abu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ana karanta abin da ma'ajiya ke bin kanta…",
+  "todos.failed": "Madubi bai amsa ba: {message}",
+  "todos.capped": "Na farko kaɗai aka jera.",
+  "todos.note": {
+    "one": "Abu {n} a buɗe cikin fayiloli {files}.",
+    "other": "Abubuwa {n} a buɗe cikin fayiloli {files}."
   },
   "panel.filter": "Tacewa",
   "panel.design": "Zane",

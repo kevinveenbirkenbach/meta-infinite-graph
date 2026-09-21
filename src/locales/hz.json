@@ -14,6 +14,7 @@
   "view.securityWith": "Ohungamiro · {view}",
   "view.items": "Oviṋa",
   "view.itemsWith": "Oviṋa · {view}",
+  "view.todos": "Ovitjitwa",
   "view.warnings": "CI Omaraerisiro",
   "csp.column.kind": "Ehitisiro",
   "csp.column.role": "Otjiungura",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} ehitisiro komatwako wotjikando, ya tjivisiwa i oviungura {roles}.",
     "other": "{n} omahitisiro komatwako wotjikando, ya tjivisiwa i oviungura {roles}."
+  },
+  "todos.column.kind": "Otjiraisiro",
+  "todos.column.where": "Pi",
+  "todos.column.item": "Otjiṋa",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Mape resewa imbi ondjuwo yomambo mbi i heya oini…",
+  "todos.failed": "Otjirorero katji ziri: {message}",
+  "todos.capped": "Oviṱengatenga porwavyo mbi vya tjangwa.",
+  "todos.note": {
+    "one": "{n} otjiṋa tji tji ri ouyandje mo {files} omahamburo.",
+    "other": "{n} oviṋa mbi vi ri ouyandje mo {files} omahamburo."
   },
   "panel.filter": "Otjitoororo",
   "panel.design": "Omutarero",

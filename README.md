@@ -253,8 +253,17 @@ order behind the planned ones; they still have tests.
 
 ### Items
 
-The **Items** menu holds what is open rather than what ran; **PR** lives here.
-`?view=pulls` opens it.
+The **Items** menu holds what is open rather than what ran: **PR** and
+**Todos**. `?view=pulls` and `?view=todos` open them.
+
+#### Todos
+
+Every `TODO`, `FIXME`, `XXX` and `HACK` the code carries, plus every line of
+every `TODO.md`, in one table. The browser cannot walk a repository file by
+file, so the mirror answers `GET /git/todos?ref=`, which is one `git grep` over
+the ref plus a read of each note file; a line that both sources name is listed
+once. Each row links to that line of the file on GitHub, and the marker menu
+and the search narrow them.
 
 ### Timeline
 
@@ -352,11 +361,11 @@ too.
 
 ### Security
 
-The **Security** menu holds the views of what the repositories owe their own
+The **Security** menu holds three views of what the repositories owe their own
 policy, each named after what it reads: **GitHub Alerts**, **CI Warnings** and
-**CSP**. `?view=security`, `?view=warnings` and `?view=csp` open them. The two are one word apart in
-English and the same word in half the languages the app speaks, so each carries
-its source.
+**CSP**. `?view=security`, `?view=warnings` and `?view=csp` open them. The first
+two are one word apart in English and the same word in half the languages the
+app speaks, so each carries its source.
 
 #### Warnings
 

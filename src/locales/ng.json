@@ -14,6 +14,7 @@
   "view.securityWith": "Egameno · {view}",
   "view.items": "Iinima",
   "view.itemsWith": "Iinima · {view}",
+  "view.todos": "Iilonga ya thigala",
   "view.warnings": "CI Omalondodho",
   "csp.column.kind": "Eyooloko",
   "csp.column.role": "Onkandangala",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eyooloko lyompango yopaunene, lya tseyithwa koonkandangala {roles}.",
     "other": "{n} omayooloko gompango yopaunene, ga tseyithwa koonkandangala {roles}."
+  },
+  "todos.column.kind": "Endhindhiliko",
+  "todos.column.where": "Peni",
+  "todos.column.item": "Oshinima",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Otaku leshwa shoka ehala lyokupungula natango li na okwiipa lyo yene…",
+  "todos.failed": "Okamono inaka yamukula: {message}",
+  "todos.capped": "Oyitango ayike oyi li momusholondondo.",
+  "todos.note": {
+    "one": "{n} oshinima sha patuluka miifayela {files}.",
+    "other": "{n} iinima ya patuluka miifayela {files}."
   },
   "panel.filter": "Oshihogololi",
   "panel.design": "Omuthaleko",

@@ -14,6 +14,7 @@
   "view.securityWith": "Ancienz · {view}",
   "view.items": "Gij hangh",
   "view.itemsWith": "Gij hangh · {view}",
+  "view.todos": "Gij saeh aeu guh",
   "view.warnings": "CI Gij gingjgau",
   "csp.column.kind": "Laehvaih",
   "csp.column.role": "Hong",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Moegdik cwngcwz miz {n} aen laehvaih, youz {roles} hong sing'mingz.",
     "other": "Moegdik cwngcwz miz {n} aen laehvaih, youz {roles} hong sing'mingz."
+  },
+  "todos.column.kind": "Geiqhauh",
+  "todos.column.where": "Youq gizlawz",
+  "todos.column.item": "Hangh",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Cingq doeg gij saeh cangzgu lij caengz guh sat…",
+  "todos.failed": "Gingq mbouj dap: {message}",
+  "todos.capped": "Cij lied gij gaxgonq.",
+  "todos.note": {
+    "one": "{files} aen dangzgen ndawde miz {n} hangh caengz gvaq.",
+    "other": "{files} aen dangzgen ndawde miz {n} hangh caengz gvaq."
   },
   "panel.filter": "Genj",
   "panel.design": "Sezgi",

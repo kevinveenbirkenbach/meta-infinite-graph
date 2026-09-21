@@ -14,6 +14,7 @@
   "view.securityWith": "ಭದ್ರತೆ · {view}",
   "view.items": "ಐಟಂಗಳು",
   "view.itemsWith": "ಐಟಂಗಳು · {view}",
+  "view.todos": "ಮಾಡಬೇಕಾದವು",
   "view.warnings": "CI ಎಚ್ಚರಿಕೆಗಳು",
   "csp.column.kind": "ವಿನಾಯಿತಿ",
   "csp.column.role": "ಪಾತ್ರ",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ಪೂರ್ವನಿಯೋಜಿತ ನೀತಿಗೆ {n} ವಿನಾಯಿತಿ, {roles} ಪಾತ್ರಗಳು ಘೋಷಿಸಿವೆ.",
     "other": "ಪೂರ್ವನಿಯೋಜಿತ ನೀತಿಗೆ {n} ವಿನಾಯಿತಿಗಳು, {roles} ಪಾತ್ರಗಳು ಘೋಷಿಸಿವೆ."
+  },
+  "todos.column.kind": "ಗುರುತು",
+  "todos.column.where": "ಎಲ್ಲಿ",
+  "todos.column.item": "ಐಟಂ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ರೆಪೊಸಿಟರಿ ತನಗೆ ತಾನೇ ಇನ್ನೂ ಬಾಕಿ ಇರುವುದನ್ನು ಓದಲಾಗುತ್ತಿದೆ …",
+  "todos.failed": "ಕನ್ನಡಿ ಉತ್ತರಿಸಲಿಲ್ಲ: {message}",
+  "todos.capped": "ಅವುಗಳಲ್ಲಿ ಮೊದಲಿನವು ಮಾತ್ರ ಪಟ್ಟಿಯಾಗಿವೆ.",
+  "todos.note": {
+    "one": "{files} ಫೈಲ್‌ಗಳಲ್ಲಿ {n} ಬಾಕಿ ಐಟಂ.",
+    "other": "{files} ಫೈಲ್‌ಗಳಲ್ಲಿ {n} ಬಾಕಿ ಐಟಂಗಳು."
   },
   "panel.filter": "ಫಿಲ್ಟರ್",
   "panel.design": "ವಿನ್ಯಾಸ",

@@ -14,6 +14,7 @@
   "view.securityWith": "Безбедност · {view}",
   "view.items": "Ставки",
   "view.itemsWith": "Ставки · {view}",
+  "view.todos": "Задачи",
   "view.warnings": "CI Предупредувања",
   "csp.column.kind": "Исклучок",
   "csp.column.role": "Улога",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} исклучок од стандардната политика, објавен од {roles} улоги.",
     "other": "{n} исклучоци од стандардната политика, објавени од {roles} улоги."
+  },
+  "todos.column.kind": "Ознака",
+  "todos.column.where": "Каде",
+  "todos.column.item": "Ставка",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Се чита што репозиториумот сè уште си должи себеси…",
+  "todos.failed": "Огледалото не одговори: {message}",
+  "todos.capped": "Наведени се само првите од нив.",
+  "todos.note": {
+    "one": "{n} отворена ставка во {files} датотеки.",
+    "other": "{n} отворени ставки во {files} датотеки."
   },
   "panel.filter": "Филтер",
   "panel.design": "Изглед",

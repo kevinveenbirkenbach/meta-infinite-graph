@@ -14,6 +14,7 @@
   "view.securityWith": "Qaunagiksrun · {view}",
   "view.items": "Piqutit",
   "view.itemsWith": "Piqutit · {view}",
+  "view.todos": "Savaksrat",
   "view.warnings": "CI Itqanaiyaġutit",
   "csp.column.kind": "Allanŋuruaq",
   "csp.column.role": "Savaaq",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} allanŋuruaq maliġusrit ilaŋanniñ, savaat {roles} nalunaiqsipkaraat.",
     "other": "{n} allanŋuruat maliġusrit ilaŋanniñ, savaat {roles} nalunaiqsipkaraat."
+  },
+  "todos.column.kind": "Nalunaikkun",
+  "todos.column.where": "Nani",
+  "todos.column.item": "Piqun",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Naaqtuaq suna suli savaktaugiaḷik…",
+  "todos.failed": "Tarraq kiuŋitchuq: {message}",
+  "todos.capped": "Sivulliit kisimik aglaktaut.",
+  "todos.note": {
+    "one": "{n} savaksraq {files} aglaatni.",
+    "other": "{n} savaksrat {files} aglaatni."
   },
   "panel.filter": "Aviktuun",
   "panel.design": "Sanaaġusiq",

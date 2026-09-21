@@ -14,6 +14,7 @@
   "view.securityWith": "Kaaraange · {view}",
   "view.items": "Mbir yi",
   "view.itemsWith": "Mbir yi · {view}",
+  "view.todos": "Liggéey yi war",
   "view.warnings": "CI Artu yi",
   "csp.column.kind": "Ràññeeku",
   "csp.column.role": "Sas",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} ci {total} sas",
   "csp.note": {
     "other": "{n} ràññeeku ci yoon wi ëpp, sas {roles} yi ko wax."
+  },
+  "todos.column.kind": "Màndarga",
+  "todos.column.where": "Fan",
+  "todos.column.item": "Mbir",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Nañu di jàng li denc bi ame ci boppam…",
+  "todos.failed": "Seetu bi tontuwul: {message}",
+  "todos.capped": "Ñu bind kese yi ci njëkk.",
+  "todos.note": {
+    "other": "{n} mbir bu ubbeeku ci {files} dencukaay."
   },
   "panel.filter": "Segg",
   "panel.design": "Melo",

@@ -14,6 +14,7 @@
   "view.securityWith": "Kōjparok · {view}",
   "view.items": "Men ko",
   "view.itemsWith": "Men ko · {view}",
+  "view.todos": "Jerbal ko rej pād",
   "view.warnings": "CI Kakkōl ko",
   "csp.column.kind": "Oktak",
   "csp.column.role": "Jerbal",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} oktak jān kien eo eṃōj kōjenolọke, {roles} jerbal raar kwaḷọke.",
     "other": "{n} oktak jān kien eo eṃōj kōjenolọke, {roles} jerbal raar kwaḷọke."
+  },
+  "todos.column.kind": "Kakōḷḷe",
+  "todos.column.where": "Ia",
+  "todos.column.item": "Men",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ej riiti ta eo jikin kōjparok eo ej muri ippān make …",
+  "todos.failed": "Mirror eo ear jab uwaak: {message}",
+  "todos.capped": "Ko moktata wōt rej walọk.",
+  "todos.note": {
+    "one": "{n} men ej pād ilo {files} faile.",
+    "other": "{n} men ko rej pād ilo {files} faile."
   },
   "panel.filter": "Kāālōt",
   "panel.design": "Wāween",

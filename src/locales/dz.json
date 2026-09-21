@@ -14,6 +14,7 @@
   "view.securityWith": "ཉེན་སྲུང་ · {view}",
   "view.items": "དོན་ཚན་ཚུ་",
   "view.itemsWith": "དོན་ཚན་ཚུ་ · {view}",
+  "view.todos": "འབད་དགོ་མི་ཚུ་",
   "view.warnings": "CI དྲན་སྐུལ་ཚུ་",
   "csp.column.kind": "དམིགས་བསལ་",
   "csp.column.role": "ལཱ་འགན་",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: ལཱ་འགན་ {total} ལས་ {done}",
   "csp.note": {
     "other": "སྔོན་སྒྲིག་སྲིད་བྱུས་ལུ་ དམིགས་བསལ་ {n}། ལཱ་འགན་ {roles} གིས་ བཀོད་ཡོདཔ།"
+  },
+  "todos.column.kind": "རྟགས་",
+  "todos.column.where": "ག་ཏེ་",
+  "todos.column.item": "དོན་ཚན་",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "མཛོད་ཀྱིས་རང་ལུ་ལྷག་ལུས་མི་ ལྷག་དོ་ …",
+  "todos.failed": "མེ་ལོང་གིས་ ལན་མ་བྱིན་: {message}",
+  "todos.capped": "དང་པམ་ཚུ་རྐྱངམ་གཅིག་ ཐོ་བཀོད་འབད་ཡི།",
+  "todos.note": {
+    "other": "ཡིག་སྣོད་ {files} ནང་ ཁ་ཕྱེ་ཡོད་མི་ དོན་ཚན་ {n}།"
   },
   "panel.filter": "ཚགས་མ་",
   "panel.design": "བཀོད་སྒྲིག་",

@@ -14,6 +14,7 @@
   "view.securityWith": "Egameno · {view}",
   "view.items": "Oinima",
   "view.itemsWith": "Oinima · {view}",
+  "view.todos": "Oilonga yokuninga",
   "view.warnings": "CI Omakumaido",
   "csp.column.kind": "Okuyoolokapo",
   "csp.column.role": "Oshinakuwanifwa",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Okuyoolokapo {n} komhango yopaunene, kwa tumbulwa koinakuwanifwa {roles}.",
     "other": "Okuyoolokapo {n} komhango yopaunene, kwa tumbulwa koinakuwanifwa {roles}."
+  },
+  "todos.column.kind": "Edidiliko",
+  "todos.column.where": "Peni",
+  "todos.column.item": "Oshinima",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Otaku leshwa osho orepositori tai likolelele natango…",
+  "todos.failed": "Okalinga inaka nyamukula: {message}",
+  "todos.capped": "Oyotete aike tai holoka.",
+  "todos.note": {
+    "one": "Oshinima {n} shi na okuninga meefaila {files}.",
+    "other": "Oinima {n} i na okuninga meefaila {files}."
   },
   "panel.filter": "Oshisefa",
   "panel.design": "Omuholo",

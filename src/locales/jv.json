@@ -14,6 +14,7 @@
   "view.securityWith": "Keamanan · {view}",
   "view.items": "Item",
   "view.itemsWith": "Item · {view}",
+  "view.todos": "Sing kudu digarap",
   "view.warnings": "CI Pènget",
   "csp.column.kind": "Pangecualian",
   "csp.column.role": "Peran",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} saka {total} peran",
   "csp.note": {
     "other": "{n} pangecualian marang kawicaksanan gawan, diaturaké déning {roles} peran."
+  },
+  "todos.column.kind": "Tandha",
+  "todos.column.where": "Ing ngendi",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Maca apa sing isih diutangi répositori marang awaké dhéwé…",
+  "todos.failed": "Pangilon ora mangsuli: {message}",
+  "todos.capped": "Mung sing pisanan sing kadhaptar.",
+  "todos.note": {
+    "other": "{n} item mbukak ing {files} berkas."
   },
   "panel.filter": "Saringan",
   "panel.design": "Rancangan",

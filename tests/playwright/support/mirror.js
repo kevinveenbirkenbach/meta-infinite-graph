@@ -23,6 +23,16 @@ const CATALOG = {
   ],
 };
 
+const TODOS = {
+  ref: 'origin/HEAD',
+  capped: false,
+  items: [
+    { path: 'roles/web-app-nextcloud/tasks/main.yml', line: 12, kind: 'todo', text: '# TODO: drop the workaround' },
+    { path: 'utils/handler/ci.py', line: 4, kind: 'fixme', text: '# FIXME: the mirror lags' },
+    { path: 'roles/dev-npm/TODO.md', line: 3, kind: 'note', text: 'pin the lockfile' },
+  ],
+};
+
 const LOG = {
   main: [
     { sha: 'aaaa1111', parents: ['aaaa2222'], date: '2026-09-01T00:00:00Z', message: 'newest on main' },
@@ -42,6 +52,9 @@ function mirror(page, calls) {
     page.route('**/git/checkout*', route => route.fulfill({
       status: 200, contentType: 'application/json',
       body: JSON.stringify({ sha: SHA, date: '2026-09-08T00:00:00Z', path: `/at/${SHA}/` }),
+    })),
+    page.route('**/git/todos*', route => route.fulfill({
+      status: 200, contentType: 'application/json', body: JSON.stringify(TODOS),
     })),
     page.route('**/git/log*', route => {
       const ref = new URL(route.request().url()).searchParams.get('ref');
@@ -71,4 +84,4 @@ async function boot(page, calls, query = '') {
   await page.evaluate(() => window.__mig.forkTree.api.forget());
 }
 
-module.exports = { SHA, CATALOG, LOG, mirror, boot };
+module.exports = { SHA, CATALOG, LOG, TODOS, mirror, boot };

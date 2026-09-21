@@ -14,6 +14,7 @@
   "view.securityWith": "Tshireletso · {view}",
   "view.items": "Dilo",
   "view.itemsWith": "Dilo · {view}",
+  "view.todos": "Tse di sa dirwang",
   "view.warnings": "CI Ditlhagiso",
   "csp.column.kind": "Kgethololo",
   "csp.column.role": "Karolo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kgethololo {n} mo pholesing ya tlwaelo, e begilwe ke dikarolo {roles}.",
     "other": "Dikgethololo {n} mo pholesing ya tlwaelo, di begilwe ke dikarolo {roles}."
+  },
+  "todos.column.kind": "Letshwao",
+  "todos.column.where": "Kae",
+  "todos.column.item": "Selo",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Go balwa se polokelo e sa ntseng e ikolota sona…",
+  "todos.failed": "Seipone ga se a araba: {message}",
+  "todos.capped": "Go kwadilwe tse di ntlha fela.",
+  "todos.note": {
+    "one": "Selo {n} se se bulegileng mo difaeleng tse {files}.",
+    "other": "Dilo {n} tse di bulegileng mo difaeleng tse {files}."
   },
   "panel.filter": "Sesefi",
   "panel.design": "Tebego",

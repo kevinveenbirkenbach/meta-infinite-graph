@@ -14,6 +14,7 @@
   "view.securityWith": "امنیت · {view}",
   "view.items": "توکي",
   "view.itemsWith": "توکي · {view}",
+  "view.todos": "کارونه",
   "view.warnings": "اخطارونه CI",
   "csp.column.kind": "استثنا",
   "csp.column.role": "رول",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "د تلواله تګلارې {n} استثنا، چې {roles} رولونو اعلان کړې.",
     "other": "د تلواله تګلارې {n} استثناوې، چې {roles} رولونو اعلان کړې."
+  },
+  "todos.column.kind": "نښه",
+  "todos.column.where": "چېرته",
+  "todos.column.item": "توکی",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "لوستل کېږي چې ذخیره لا هم په ځان څه پور لري…",
+  "todos.failed": "هېنداره ځواب ونه ویلو: {message}",
+  "todos.capped": "یوازې لومړني یې لړلیک شوي.",
+  "todos.note": {
+    "one": "په {files} دوتنو کې {n} خلاص توکی.",
+    "other": "په {files} دوتنو کې {n} خلاص توکي."
   },
   "panel.filter": "چاڼګر",
   "panel.design": "ډيزاين",

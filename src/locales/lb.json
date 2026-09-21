@@ -14,6 +14,7 @@
   "view.securityWith": "Sécherheet · {view}",
   "view.items": "Elementer",
   "view.itemsWith": "Elementer · {view}",
+  "view.todos": "Ze maachen",
   "view.warnings": "CI Warnungen",
   "csp.column.kind": "Ausnam",
   "csp.column.role": "Roll",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} Ausnam vun der Standardpolitik, vun {roles} Rollen deklaréiert.",
     "other": "{n} Ausnamen vun der Standardpolitik, vun {roles} Rollen deklaréiert."
+  },
+  "todos.column.kind": "Marker",
+  "todos.column.where": "Wou",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Et gëtt gelies, wat de Repository sech nach selwer schëlleg ass …",
+  "todos.failed": "De Spigel huet net geäntwert: {message}",
+  "todos.capped": "Nëmmen déi éischt dovu sinn opgelëscht.",
+  "todos.note": {
+    "one": "{n} oppent Element iwwer {files} Fichieren.",
+    "other": "{n} oppen Elementer iwwer {files} Fichieren."
   },
   "panel.filter": "Filter",
   "panel.design": "Design",

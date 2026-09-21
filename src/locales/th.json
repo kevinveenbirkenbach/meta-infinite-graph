@@ -14,6 +14,7 @@
   "view.securityWith": "ความปลอดภัย · {view}",
   "view.items": "รายการ",
   "view.itemsWith": "รายการ · {view}",
+  "view.todos": "สิ่งที่ต้องทำ",
   "view.warnings": "CI คำเตือน",
   "csp.column.kind": "ข้อยกเว้น",
   "csp.column.role": "บทบาท",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} จาก {total} บทบาท",
   "csp.note": {
     "other": "{n} ข้อยกเว้นจากนโยบายเริ่มต้น ประกาศโดย {roles} บทบาท"
+  },
+  "todos.column.kind": "เครื่องหมาย",
+  "todos.column.where": "ที่ใด",
+  "todos.column.item": "รายการ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "กำลังอ่านสิ่งที่รีโพสิทอรียังติดค้างตัวเอง …",
+  "todos.failed": "มิเรอร์ไม่ตอบ: {message}",
+  "todos.capped": "แสดงเฉพาะรายการแรก ๆ เท่านั้น",
+  "todos.note": {
+    "other": "{n} รายการที่ค้างอยู่ใน {files} ไฟล์"
   },
   "panel.filter": "ตัวกรอง",
   "panel.design": "การออกแบบ",

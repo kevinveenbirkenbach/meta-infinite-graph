@@ -14,6 +14,7 @@
   "view.securityWith": "လုံခြုံရေး · {view}",
   "view.items": "အချက်များ",
   "view.itemsWith": "အချက်များ · {view}",
+  "view.todos": "လုပ်ရန်များ",
   "view.warnings": "CI သတိပေးချက်များ",
   "csp.column.kind": "ခြွင်းချက်",
   "csp.column.role": "အခန်းကဏ္ဍ",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: အခန်းကဏ္ဍ {total} အနက် {done}",
   "csp.note": {
     "other": "မူရင်းမူဝါဒအတွက် ခြွင်းချက် {n} ခု၊ အခန်းကဏ္ဍ {roles} ခုက ကြေညာထားသည်။"
+  },
+  "todos.column.kind": "အမှတ်အသား",
+  "todos.column.where": "နေရာ",
+  "todos.column.item": "အချက်",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "သိုလှောင်ရာက မိမိကိုယ်ကို ပေးဆပ်ရန် ကျန်နေသေးသည်များကို ဖတ်နေသည်…",
+  "todos.failed": "မှန်က မဖြေကြားပါ: {message}",
+  "todos.capped": "ပထမဆုံးများကိုသာ ဖော်ပြထားသည်။",
+  "todos.note": {
+    "other": "ဖိုင် {files} ခုတွင် ပွင့်နေသော အချက် {n} ခု။"
   },
   "panel.filter": "စစ်ထုတ်ရန်",
   "panel.design": "ဒီဇိုင်း",

@@ -14,6 +14,7 @@
   "view.securityWith": "Æдасдзинад · {view}",
   "view.items": "Хæйттæ",
   "view.itemsWith": "Хæйттæ · {view}",
+  "view.todos": "Куыстытæ",
   "view.warnings": "CI Фæдзæхстытæ",
   "csp.column.kind": "Хицæндзинад",
   "csp.column.role": "Роль",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} хицæндзинад сæйраг фæтчы, {roles} ролы загътой.",
     "other": "{n} хицæндзинады сæйраг фæтчы, {roles} ролы загътой."
+  },
+  "todos.column.kind": "Нысан",
+  "todos.column.where": "Кæм",
+  "todos.column.item": "Хай",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Репозиторий йæхиуыл цы хæсджын у, уый кæсын …",
+  "todos.failed": "Айдæн дзуапп нæ радта: {message}",
+  "todos.capped": "Æрмæст фыццæгтæ æвдыст цæуынц.",
+  "todos.note": {
+    "one": "{n} гом хай {files} файлы.",
+    "other": "{n} гом хайы {files} файлы."
   },
   "panel.filter": "Фильтр",
   "panel.design": "Дизайн",

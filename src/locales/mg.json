@@ -14,6 +14,7 @@
   "view.securityWith": "Fiarovana · {view}",
   "view.items": "Singa",
   "view.itemsWith": "Singa · {view}",
+  "view.todos": "Atao",
   "view.warnings": "CI Fampitandremana",
   "csp.column.kind": "Fanavahana",
   "csp.column.role": "Andraikitra",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Fanavahana {n} amin'ny politika mahazatra, nambaran'ny andraikitra {roles}.",
     "other": "Fanavahana {n} amin'ny politika mahazatra, nambaran'ny andraikitra {roles}."
+  },
+  "todos.column.kind": "Marika",
+  "todos.column.where": "Aiza",
+  "todos.column.item": "Singa",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Mamaky izay mbola trosan'ny tahiry amin'ny tenany…",
+  "todos.failed": "Tsy namaly ny fitaratra: {message}",
+  "todos.capped": "Ny voalohany ihany no voatanisa.",
+  "todos.note": {
+    "one": "Singa misokatra {n} ao anatin'ny rakitra {files}.",
+    "other": "Singa misokatra {n} ao anatin'ny rakitra {files}."
   },
   "panel.filter": "Sivana",
   "panel.design": "Endrika",

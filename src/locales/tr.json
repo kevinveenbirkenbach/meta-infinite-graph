@@ -14,6 +14,7 @@
   "view.securityWith": "Güvenlik · {view}",
   "view.items": "Öğeler",
   "view.itemsWith": "Öğeler · {view}",
+  "view.todos": "Yapılacaklar",
   "view.warnings": "CI Uyarılar",
   "csp.column.kind": "İstisna",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Varsayılan politikaya {n} istisna, {roles} rol tarafından bildirildi.",
     "other": "Varsayılan politikaya {n} istisna, {roles} rol tarafından bildirildi."
+  },
+  "todos.column.kind": "İşaret",
+  "todos.column.where": "Nerede",
+  "todos.column.item": "Öğe",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Deponun kendine hâlâ borçlu olduğu şeyler okunuyor …",
+  "todos.failed": "Yansı yanıt vermedi: {message}",
+  "todos.capped": "Yalnızca ilk olanlar listelendi.",
+  "todos.note": {
+    "one": "{files} dosyada {n} açık öğe.",
+    "other": "{files} dosyada {n} açık öğe."
   },
   "panel.filter": "Filtre",
   "panel.design": "Tasarım",

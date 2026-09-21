@@ -14,6 +14,7 @@
   "view.securityWith": "Amniga · {view}",
   "view.items": "Walxaha",
   "view.itemsWith": "Walxaha · {view}",
+  "view.todos": "Waxa la qabanayo",
   "view.warnings": "CI Digniino",
   "csp.column.kind": "Ka reebis",
   "csp.column.role": "Door",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} ka reebis siyaasadda caadiga ah, waxaa ku dhawaaqay {roles} door.",
     "other": "{n} ka reebis siyaasadda caadiga ah, waxaa ku dhawaaqay {roles} door."
+  },
+  "todos.column.kind": "Calaamad",
+  "todos.column.where": "Halka",
+  "todos.column.item": "Walax",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Waxaa la akhrinayaa waxa kaydku weli naftiisa ku leeyahay…",
+  "todos.failed": "Muraayaddu ma jawaabin: {message}",
+  "todos.capped": "Waxaa la taxay kuwa ugu horreeya oo kaliya.",
+  "todos.note": {
+    "one": "{n} walax furan oo ku jira {files} feyl.",
+    "other": "{n} walxood oo furan oo ku jira {files} feyl."
   },
   "panel.filter": "Sifee",
   "panel.design": "Naqshad",

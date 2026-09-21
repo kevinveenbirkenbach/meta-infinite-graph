@@ -14,6 +14,7 @@
   "view.securityWith": "セキュリティ · {view}",
   "view.items": "項目",
   "view.itemsWith": "項目 · {view}",
+  "view.todos": "やること",
   "view.warnings": "CI 警告",
   "csp.column.kind": "例外",
   "csp.column.role": "ロール",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {total} 個中 {done} 個のロール",
   "csp.note": {
     "other": "既定のポリシーに対する例外 {n} 件、{roles} 個のロールが宣言。"
+  },
+  "todos.column.kind": "マーカー",
+  "todos.column.where": "場所",
+  "todos.column.item": "項目",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "リポジトリが自らに残している宿題を読み込み中 …",
+  "todos.failed": "ミラーが応答しませんでした: {message}",
+  "todos.capped": "最初のものだけを表示しています。",
+  "todos.note": {
+    "other": "{files} 個のファイルにまたがる未処理の項目 {n} 件。"
   },
   "panel.filter": "フィルター",
   "panel.design": "デザイン",

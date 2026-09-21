@@ -14,6 +14,7 @@
   "view.securityWith": "Amachakuy · {view}",
   "view.items": "Kaqkuna",
   "view.itemsWith": "Kaqkuna · {view}",
+  "view.todos": "Ruranakuna",
   "view.warnings": "CI Yuyarichiykuna",
   "csp.column.kind": "Mana hina kaq",
   "csp.column.role": "Ruwana",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} mana hina kaq ñawpaq kamachiymanta, {roles} ruwanakunam willarqan.",
     "other": "{n} mana hina kaqkuna ñawpaq kamachiymanta, {roles} ruwanakunam willarqan."
+  },
+  "todos.column.kind": "Unancha",
+  "todos.column.where": "Maypi",
+  "todos.column.item": "Kaq",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Waqaychana kikinman imatachus manaraq ruwasqanta ñawinchachkan …",
+  "todos.failed": "Rirpuqa manam kutichirqachu: {message}",
+  "todos.capped": "Ñawpaqkunallam qillqasqa.",
+  "todos.note": {
+    "one": "{files} qillqanakunapi {n} kicharisqa kaq.",
+    "other": "{files} qillqanakunapi {n} kicharisqa kaqkuna."
   },
   "panel.filter": "Suysuna",
   "panel.design": "Rikch'ay",

@@ -14,6 +14,7 @@
   "view.securityWith": "Tryggleik · {view}",
   "view.items": "Element",
   "view.itemsWith": "Element · {view}",
+  "view.todos": "Gjeremål",
   "view.warnings": "CI Åtvaringar",
   "csp.column.kind": "Unntak",
   "csp.column.role": "Rolle",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} unntak frå standardpolicyen, oppgjeve av {roles} roller.",
     "other": "{n} unntak frå standardpolicyen, oppgjevne av {roles} roller."
+  },
+  "todos.column.kind": "Markør",
+  "todos.column.where": "Kvar",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Les kva repositoryet framleis skuldar seg sjølv …",
+  "todos.failed": "Spegelen svara ikkje: {message}",
+  "todos.capped": "Berre dei første er lista opp.",
+  "todos.note": {
+    "one": "{n} ope punkt i {files} filer.",
+    "other": "{n} opne punkt i {files} filer."
   },
   "panel.filter": "Filter",
   "panel.design": "Utsjånad",

@@ -14,6 +14,7 @@
   "view.securityWith": "Chitetezo · {view}",
   "view.items": "Zinthu",
   "view.itemsWith": "Zinthu · {view}",
+  "view.todos": "Zoyenera kuchitidwa",
   "view.warnings": "CI Machenjezo",
   "csp.column.kind": "Kupatula",
   "csp.column.role": "Udindo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kupatula {n} pa ndondomeko yokhazikika, kotchulidwa ndi maudindo {roles}.",
     "other": "Kupatula {n} pa ndondomeko yokhazikika, kotchulidwa ndi maudindo {roles}."
+  },
+  "todos.column.kind": "Chizindikiro",
+  "todos.column.where": "Kuti",
+  "todos.column.item": "Chinthu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Kuwerenga zomwe malo osungira akadali ndi ngongole kwa iwo eni…",
+  "todos.failed": "Galasi silinayankhe: {message}",
+  "todos.capped": "Zoyamba zokha ndi zomwe zalembedwa.",
+  "todos.note": {
+    "one": "Chinthu {n} chotseguka m'mafayilo {files}.",
+    "other": "Zinthu {n} zotseguka m'mafayilo {files}."
   },
   "panel.filter": "Sefa",
   "panel.design": "Kapangidwe",

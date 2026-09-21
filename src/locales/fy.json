@@ -14,6 +14,7 @@
   "view.securityWith": "Feiligens · {view}",
   "view.items": "Items",
   "view.itemsWith": "Items · {view}",
+  "view.todos": "Te dwaan",
   "view.warnings": "CI Warskôgings",
   "csp.column.kind": "Utsûndering",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} útsûndering op it standertbelied, oanjûn troch {roles} rollen.",
     "other": "{n} útsûnderings op it standertbelied, oanjûn troch {roles} rollen."
+  },
+  "todos.column.kind": "Marker",
+  "todos.column.where": "Wêr",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lêst wat it repository himsels noch skuldich is…",
+  "todos.failed": "De spegel joech gjin antwurd: {message}",
+  "todos.capped": "Allinnich de earsten dêrfan wurde neamd.",
+  "todos.note": {
+    "one": "{n} iepen item yn {files} triemmen.",
+    "other": "{n} iepen items yn {files} triemmen."
   },
   "panel.filter": "Filter",
   "panel.design": "Uterlik",

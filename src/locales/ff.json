@@ -14,6 +14,7 @@
   "view.securityWith": "Kisal · {view}",
   "view.items": "Kuule",
   "view.itemsWith": "Kuule · {view}",
+  "view.todos": "Ko waɗetee",
   "view.warnings": "CI Reentinooji",
   "csp.column.kind": "Luttinaangal",
   "csp.column.role": "Daawol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Luttinaangal {n} e laawol goowaangol, {roles} daaɗe njaltini ɗum.",
     "other": "Luttinaaɗe {n} e laawol goowaangol, {roles} daaɗe njaltini ɗum."
+  },
+  "todos.column.kind": "Maande",
+  "todos.column.where": "Ɗo",
+  "todos.column.item": "Huunde",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Janngude ko mooftirde ndee ñamlii hoore-mum…",
+  "todos.failed": "Daarorgal ngal jaabaaki: {message}",
+  "todos.capped": "Ko adiiɓe tan limtaa.",
+  "todos.note": {
+    "one": "Huunde {n} udditiinde e piille {files}.",
+    "other": "Kuule {n} udditiiɗe e piille {files}."
   },
   "panel.filter": "Cuɓol",
   "panel.design": "Mbaadi",

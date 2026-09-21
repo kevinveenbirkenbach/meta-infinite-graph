@@ -14,6 +14,7 @@
   "view.securityWith": "זיכערהייט · {view}",
   "view.items": "עלעמענטן",
   "view.itemsWith": "עלעמענטן · {view}",
+  "view.todos": "צו טאָן",
   "view.warnings": "וואָרענונגען CI",
   "csp.column.kind": "אויסנאַם",
   "csp.column.role": "ראָלע",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} אויסנאַם פֿון דער פֿאָרויסגעזעצטער פּאָליטיק, דערקלערט פֿון {roles} ראָלעס.",
     "other": "{n} אויסנאַמען פֿון דער פֿאָרויסגעזעצטער פּאָליטיק, דערקלערט פֿון {roles} ראָלעס."
+  },
+  "todos.column.kind": "צייכן",
+  "todos.column.where": "וווּ",
+  "todos.column.item": "עלעמענט",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "לייענט וואָס די רעפּאָזיטאָריע איז נאָך שולדיק זיך אַליין …",
+  "todos.failed": "דער שפּיגל האָט נישט געענטפֿערט: {message}",
+  "todos.capped": "בלויז די ערשטע פֿון זיי זײַנען אויסגערעכנט.",
+  "todos.note": {
+    "one": "{n} אָפֿענער עלעמענט אין {files} טעקעס.",
+    "other": "{n} אָפֿענע עלעמענטן אין {files} טעקעס."
   },
   "panel.filter": "פֿילטער",
   "panel.design": "אויסזען",

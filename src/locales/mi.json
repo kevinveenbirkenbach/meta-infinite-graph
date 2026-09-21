@@ -14,6 +14,7 @@
   "view.securityWith": "Haumarutanga · {view}",
   "view.items": "Ngā Tūemi",
   "view.itemsWith": "Ngā Tūemi · {view}",
+  "view.todos": "Ngā Mahi",
   "view.warnings": "CI Whakatūpato",
   "csp.column.kind": "Tuku motuhake",
   "csp.column.role": "Tūranga",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} tuku motuhake i te kaupapahere taunoa, i whakapuakina e ngā tūranga {roles}.",
     "other": "{n} tuku motuhake i te kaupapahere taunoa, i whakapuakina e ngā tūranga {roles}."
+  },
+  "todos.column.kind": "Tohu",
+  "todos.column.where": "Kei hea",
+  "todos.column.item": "Tūemi",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "E pānui ana i ngā mea e nama tonu ana te pūranga ki a ia anō…",
+  "todos.failed": "Kāore te whakaata i whakautu: {message}",
+  "todos.capped": "Ko ngā mea tuatahi anake kua rārangihia.",
+  "todos.note": {
+    "one": "{n} tūemi tuwhera i roto i ngā kōnae {files}.",
+    "other": "{n} tūemi tuwhera i roto i ngā kōnae {files}."
   },
   "panel.filter": "Tātari",
   "panel.design": "Hoahoa",

@@ -14,6 +14,7 @@
   "view.securityWith": "ደህንነት · {view}",
   "view.items": "ንጥሎች",
   "view.itemsWith": "ንጥሎች · {view}",
+  "view.todos": "ተግባራት",
   "view.warnings": "CI ማስጠንቀቂያዎች",
   "csp.column.kind": "ልዩ ሁኔታ",
   "csp.column.role": "ሚና",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} ልዩ ሁኔታ ከነባሪው ፖሊሲ፣ በ{roles} ሚናዎች የተገለጸ።",
     "other": "{n} ልዩ ሁኔታዎች ከነባሪው ፖሊሲ፣ በ{roles} ሚናዎች የተገለጹ።"
+  },
+  "todos.column.kind": "ምልክት",
+  "todos.column.where": "የት",
+  "todos.column.item": "ንጥል",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ማከማቻው ለራሱ ያለበትን እየተነበበ ነው…",
+  "todos.failed": "መስተዋቱ አልመለሰም፦ {message}",
+  "todos.capped": "የመጀመሪያዎቹ ብቻ ተዘርዝረዋል።",
+  "todos.note": {
+    "one": "{n} ክፍት ንጥል በ{files} ፋይሎች ውስጥ።",
+    "other": "{n} ክፍት ንጥሎች በ{files} ፋይሎች ውስጥ።"
   },
   "panel.filter": "ማጣሪያ",
   "panel.design": "ንድፍ",

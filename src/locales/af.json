@@ -14,6 +14,7 @@
   "view.securityWith": "Sekuriteit · {view}",
   "view.items": "Items",
   "view.itemsWith": "Items · {view}",
+  "view.todos": "Todo's",
   "view.warnings": "CI Waarskuwings",
   "csp.column.kind": "Uitsondering",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} uitsondering op die verstekbeleid, deur {roles} rolle verklaar.",
     "other": "{n} uitsonderings op die verstekbeleid, deur {roles} rolle verklaar."
+  },
+  "todos.column.kind": "Merker",
+  "todos.column.where": "Waar",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lees wat die bewaarplek homself nog skuld…",
+  "todos.failed": "Die spieël het nie geantwoord nie: {message}",
+  "todos.capped": "Slegs die eerstes daarvan word gelys.",
+  "todos.note": {
+    "one": "{n} oop item oor {files} lêers.",
+    "other": "{n} oop items oor {files} lêers."
   },
   "panel.filter": "Filter",
   "panel.design": "Ontwerp",

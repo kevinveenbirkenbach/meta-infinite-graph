@@ -14,6 +14,7 @@
   "view.securityWith": "Seguresa · {view}",
   "view.items": "Elementos",
   "view.itemsWith": "Elementos · {view}",
+  "view.todos": "De fàghere",
   "view.warnings": "CI Avisos",
   "csp.column.kind": "Etzetzione",
   "csp.column.role": "Rolu",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} etzetzione a sa polìtica predefinida, decrarada dae {roles} rolos.",
     "other": "{n} etzetziones a sa polìtica predefinida, decraradas dae {roles} rolos."
+  },
+  "todos.column.kind": "Marcadore",
+  "todos.column.where": "Ue",
+  "todos.column.item": "Elementu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lezende su chi su repositòriu si depet galu a issu etotu…",
+  "todos.failed": "S'ispiju no at rispostu: {message}",
+  "todos.capped": "Si nd'elencant isceti sos primos.",
+  "todos.note": {
+    "one": "{n} elementu abertu in {files} archìvios.",
+    "other": "{n} elementos abertos in {files} archìvios."
   },
   "panel.filter": "Filtru",
   "panel.design": "Disignu",

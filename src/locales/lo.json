@@ -14,6 +14,7 @@
   "view.securityWith": "ຄວາມປອດໄພ · {view}",
   "view.items": "ລາຍການ",
   "view.itemsWith": "ລາຍການ · {view}",
+  "view.todos": "ສິ່ງທີ່ຕ້ອງເຮັດ",
   "view.warnings": "CI ຄຳເຕືອນ",
   "csp.column.kind": "ຂໍ້ຍົກເວັ້ນ",
   "csp.column.role": "ບົດບາດ",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} ຈາກ {total} ບົດບາດ",
   "csp.note": {
     "other": "{n} ຂໍ້ຍົກເວັ້ນຈາກນະໂຍບາຍເລີ່ມຕົ້ນ, ປະກາດໂດຍ {roles} ບົດບາດ."
+  },
+  "todos.column.kind": "ເຄື່ອງໝາຍ",
+  "todos.column.where": "ຢູ່ໃສ",
+  "todos.column.item": "ລາຍການ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ກຳລັງອ່ານສິ່ງທີ່ບ່ອນເກັບຂໍ້ມູນຍັງຕິດໜີ້ຕົນເອງ…",
+  "todos.failed": "ກະຈົກບໍ່ຕອບ: {message}",
+  "todos.capped": "ມີພຽງອັນທຳອິດເທົ່ານັ້ນທີ່ຖືກລາຍຊື່.",
+  "todos.note": {
+    "other": "{n} ລາຍການທີ່ຍັງເປີດຢູ່ໃນ {files} ໄຟລ໌."
   },
   "panel.filter": "ຕົວກັ່ນຕອງ",
   "panel.design": "ການອອກແບບ",

@@ -14,6 +14,7 @@
   "view.securityWith": "સુરક્ષા · {view}",
   "view.items": "વસ્તુઓ",
   "view.itemsWith": "વસ્તુઓ · {view}",
+  "view.todos": "કરવાનું બાકી",
   "view.warnings": "CI ચેતવણીઓ",
   "csp.column.kind": "અપવાદ",
   "csp.column.role": "ભૂમિકા",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ડિફોલ્ટ નીતિમાં {n} અપવાદ, {roles} ભૂમિકાઓએ જાહેર કર્યો.",
     "other": "ડિફોલ્ટ નીતિમાં {n} અપવાદ, {roles} ભૂમિકાઓએ જાહેર કર્યા."
+  },
+  "todos.column.kind": "માર્કર",
+  "todos.column.where": "ક્યાં",
+  "todos.column.item": "વસ્તુ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "રિપોઝિટરી હજુ પોતાને શું દેવું છે તે વાંચી રહ્યા છીએ …",
+  "todos.failed": "મિરરે જવાબ ન આપ્યો: {message}",
+  "todos.capped": "તેમાંથી ફક્ત પહેલાં જ યાદીમાં છે.",
+  "todos.note": {
+    "one": "{files} ફાઇલોમાં {n} ખુલ્લી વસ્તુ.",
+    "other": "{files} ફાઇલોમાં {n} ખુલ્લી વસ્તુઓ."
   },
   "panel.filter": "ફિલ્ટર",
   "panel.design": "ડિઝાઇન",

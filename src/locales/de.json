@@ -14,6 +14,7 @@
   "view.securityWith": "Sicherheit · {view}",
   "view.items": "Einträge",
   "view.itemsWith": "Einträge · {view}",
+  "view.todos": "Todos",
   "view.warnings": "CI Warnungen",
   "csp.column.kind": "Ausnahme",
   "csp.column.role": "Rolle",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} Ausnahme von der Standardrichtlinie, erklärt von {roles} Rollen.",
     "other": "{n} Ausnahmen von der Standardrichtlinie, erklärt von {roles} Rollen."
+  },
+  "todos.column.kind": "Marker",
+  "todos.column.where": "Wo",
+  "todos.column.item": "Eintrag",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Es wird gelesen, was das Repository sich noch schuldet…",
+  "todos.failed": "Der Spiegel hat nicht geantwortet: {message}",
+  "todos.capped": "Nur die ersten davon werden aufgeführt.",
+  "todos.note": {
+    "one": "{n} offener Eintrag in {files} Dateien.",
+    "other": "{n} offene Einträge in {files} Dateien."
   },
   "panel.filter": "Filter",
   "panel.design": "Gestaltung",

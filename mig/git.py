@@ -9,6 +9,8 @@ Endpoints (all GET, all JSON):
   /log?ref=&since=&until=      commits on one ref, newest first
   /checkout?at=&ref=           worktree at the newest commit before `at`
   /refresh                     fetch every remote again
+  /todos?ref=                  every TODO marker in the code and every line of
+                               a TODO.md, on one ref
   /artifact?id=&repo=          a Playwright artifact of the root or a mirrored
                                fork, unpacked under /artifacts/<id>/, and its
                                results
@@ -23,6 +25,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 import artifacts
+import todos
 
 ROOT = os.environ["MIG_GIT_ROOT"]
 HOME = os.environ["MIG_GIT_HOME"]
@@ -196,6 +199,8 @@ class Handler(BaseHTTPRequestHandler):
                 body = checkout(query.get("at", ""), query.get("ref", "origin/HEAD"))
             elif route.path == "/refresh":
                 body = refresh()
+            elif route.path == "/todos":
+                body = todos.collect(lambda args: git(*args, check=False), query.get("ref", "origin/HEAD"))
             elif route.path == "/artifact" and query.get("id", "").isdigit():
                 body = artifacts.fetch(mirrored(query.get("repo", ROOT)), query["id"],
                                        os.environ.get("MIG_GITHUB_TOKEN", ""), UNPACKED)

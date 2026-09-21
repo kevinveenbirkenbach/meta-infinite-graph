@@ -14,6 +14,7 @@
   "view.securityWith": "Tietoturva · {view}",
   "view.items": "Kohteet",
   "view.itemsWith": "Kohteet · {view}",
+  "view.todos": "Tehtävät",
   "view.warnings": "CI Varoitukset",
   "csp.column.kind": "Poikkeus",
   "csp.column.role": "Rooli",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} poikkeus oletuskäytäntöön, ilmoitettu {roles} roolista.",
     "other": "{n} poikkeusta oletuskäytäntöön, ilmoitettu {roles} roolista."
+  },
+  "todos.column.kind": "Merkintä",
+  "todos.column.where": "Missä",
+  "todos.column.item": "Kohde",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Luetaan, mitä repositorio on yhä itselleen velkaa …",
+  "todos.failed": "Peili ei vastannut: {message}",
+  "todos.capped": "Vain ensimmäiset niistä on lueteltu.",
+  "todos.note": {
+    "one": "{n} avoin kohta {files} tiedostossa.",
+    "other": "{n} avointa kohtaa {files} tiedostossa."
   },
   "panel.filter": "Suodatin",
   "panel.design": "Ulkoasu",

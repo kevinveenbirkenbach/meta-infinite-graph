@@ -14,6 +14,7 @@
   "view.securityWith": "Seguridad · {view}",
   "view.items": "Mga Item",
   "view.itemsWith": "Mga Item · {view}",
+  "view.todos": "Mga Gagawin",
   "view.warnings": "CI Mga Babala",
   "csp.column.kind": "Eksepsiyon",
   "csp.column.role": "Tungkulin",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eksepsiyon sa default na patakaran, idineklara ng {roles} tungkulin.",
     "other": "{n} na eksepsiyon sa default na patakaran, idineklara ng {roles} tungkulin."
+  },
+  "todos.column.kind": "Marka",
+  "todos.column.where": "Saan",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Binabasa kung ano pa ang utang ng repositoryo sa sarili nito …",
+  "todos.failed": "Hindi sumagot ang mirror: {message}",
+  "todos.capped": "Ang mga nauuna lamang ang nakalista.",
+  "todos.note": {
+    "one": "{n} bukas na item sa {files} na file.",
+    "other": "{n} na bukas na item sa {files} na file."
   },
   "panel.filter": "Salain",
   "panel.design": "Disenyo",

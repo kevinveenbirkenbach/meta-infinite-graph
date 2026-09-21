@@ -14,6 +14,7 @@
   "view.securityWith": "Usalama · {view}",
   "view.items": "Vipengele",
   "view.itemsWith": "Vipengele · {view}",
+  "view.todos": "Ya kufanya",
   "view.warnings": "CI Maonyo",
   "csp.column.kind": "Msamaha",
   "csp.column.role": "Jukumu",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Msamaha {n} kwa sera chaguo-msingi, uliotangazwa na majukumu {roles}.",
     "other": "Misamaha {n} kwa sera chaguo-msingi, iliyotangazwa na majukumu {roles}."
+  },
+  "todos.column.kind": "Alama",
+  "todos.column.where": "Mahali",
+  "todos.column.item": "Kipengele",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Inasoma kile ambacho hazina bado inajidai yenyewe…",
+  "todos.failed": "Kioo hakikujibu: {message}",
+  "todos.capped": "Vya kwanza pekee ndivyo vimeorodheshwa.",
+  "todos.note": {
+    "one": "Kipengele {n} kilicho wazi katika faili {files}.",
+    "other": "Vipengele {n} vilivyo wazi katika faili {files}."
   },
   "panel.filter": "Kichujio",
   "panel.design": "Muundo",

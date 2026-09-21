@@ -14,6 +14,7 @@
   "view.securityWith": "Securitas · {view}",
   "view.items": "Res",
   "view.itemsWith": "Res · {view}",
+  "view.todos": "Agenda",
   "view.warnings": "CI Monitiones",
   "csp.column.kind": "Exceptio",
   "csp.column.role": "Munus",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} exceptio a consilio praedefinito, a {roles} muneribus declarata.",
     "other": "{n} exceptiones a consilio praedefinito, a {roles} muneribus declaratae."
+  },
+  "todos.column.kind": "Nota",
+  "todos.column.where": "Ubi",
+  "todos.column.item": "Res",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Legens quid repositorium sibi adhuc debeat…",
+  "todos.failed": "Speculum non respondit: {message}",
+  "todos.capped": "Solae primae enumerantur.",
+  "todos.note": {
+    "one": "{n} res aperta in {files} fasciculis.",
+    "other": "{n} res apertae in {files} fasciculis."
   },
   "panel.filter": "Colum",
   "panel.design": "Species",

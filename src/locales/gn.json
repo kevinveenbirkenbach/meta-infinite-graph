@@ -14,6 +14,7 @@
   "view.securityWith": "Tekorosã · {view}",
   "view.items": "Mba'ekuéra",
   "view.itemsWith": "Mba'ekuéra · {view}",
+  "view.todos": "Ojejapova'erã",
   "view.warnings": "CI Ñeñatendeuka",
   "csp.column.kind": "Ñemboyke",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} ñemboyke pe política ypykuépe, {roles} rol omoherakuãva'ekue.",
     "other": "{n} ñemboyke pe política ypykuépe, {roles} rol omoherakuãva'ekue."
+  },
+  "todos.column.kind": "Techaukaha",
+  "todos.column.where": "Moõpa",
+  "todos.column.item": "Mba'e",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Omoñe'ẽhína mba'épa gueteri odebe pe ñongatuha ijupe…",
+  "todos.failed": "Pe itakua ndombohovaíri: {message}",
+  "todos.capped": "Oñemohenda umi peteĩha añoite.",
+  "todos.note": {
+    "one": "{n} mba'e ijurujáva {files} marandurenda ryepýpe.",
+    "other": "{n} mba'e ijurujáva {files} marandurenda ryepýpe."
   },
   "panel.filter": "Yrupẽ",
   "panel.design": "Jehechauka",

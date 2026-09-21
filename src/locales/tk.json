@@ -14,6 +14,7 @@
   "view.securityWith": "Howpsuzlyk · {view}",
   "view.items": "Elementler",
   "view.itemsWith": "Elementler · {view}",
+  "view.todos": "Ediljekler",
   "view.warnings": "CI Duýduryşlar",
   "csp.column.kind": "Kadadan çykma",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Başlangyç syýasatdan {n} kadadan çykma, {roles} rol tarapyndan yglan edildi.",
     "other": "Başlangyç syýasatdan {n} kadadan çykma, {roles} rol tarapyndan yglan edildi."
+  },
+  "todos.column.kind": "Belgi",
+  "todos.column.where": "Nirede",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Repozitoriýniň özüne heniz bergili zatlary okalýar…",
+  "todos.failed": "Aýna jogap bermedi: {message}",
+  "todos.capped": "Diňe ilkinjileri sanalýar.",
+  "todos.note": {
+    "one": "{files} faýlda {n} açyk element.",
+    "other": "{files} faýlda {n} açyk element."
   },
   "panel.filter": "Süzgüç",
   "panel.design": "Dizaýn",

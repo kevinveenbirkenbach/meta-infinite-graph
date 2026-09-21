@@ -14,6 +14,7 @@
   "view.securityWith": "Såvrité · {view}",
   "view.items": "Cayets",
   "view.itemsWith": "Cayets · {view}",
+  "view.todos": "A fé",
   "view.warnings": "CI Adviertixhmints",
   "csp.column.kind": "Esception",
   "csp.column.role": "Role",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} esception al politike di dfôt, dijhowe pa {roles} roles.",
     "other": "{n} esceptions al politike di dfôt, dijhowes pa {roles} roles."
+  },
+  "todos.column.kind": "Mårke",
+  "todos.column.where": "Wice",
+  "todos.column.item": "Cayet",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Dji lé çou ki l' depo si doet co lu-minme …",
+  "todos.failed": "Li mureu n' a nén responu: {message}",
+  "todos.capped": "Seulmint les prumîs sont djhous.",
+  "todos.note": {
+    "one": "{n} cayet drovou so {files} fitchîs.",
+    "other": "{n} cayets drovous so {files} fitchîs."
   },
   "panel.filter": "Passete",
   "panel.design": "Aparence",

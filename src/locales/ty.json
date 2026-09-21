@@ -14,6 +14,7 @@
   "view.securityWith": "Pārururaʻa · {view}",
   "view.items": "Te mau mea",
   "view.itemsWith": "Te mau mea · {view}",
+  "view.todos": "Te mau ʻohipa e rave",
   "view.warnings": "CI Te mau faʻaararaʻa",
   "csp.column.kind": "Faʻataʻaraʻa",
   "csp.column.role": "Tōroʻa",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} faʻataʻaraʻa i te ture matamua, ua faʻaite-hia e te {roles} tōroʻa.",
     "other": "{n} faʻataʻaraʻa i te ture matamua, ua faʻaite-hia e te {roles} tōroʻa."
+  },
+  "todos.column.kind": "Tāpaʻo",
+  "todos.column.where": "Tei hea",
+  "todos.column.item": "Mea",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Te tāiʻo nei i tā te vairaʻa parau e tarahu noa ra iā na iho…",
+  "todos.failed": "ʻAita te hiʻo i pāhono mai: {message}",
+  "todos.capped": "Nā mea matamua ana'e tei faʻataʻahia.",
+  "todos.note": {
+    "one": "{n} mea vai noa i roto i te {files} faila.",
+    "other": "{n} mea vai noa i roto i te {files} faila."
   },
   "panel.filter": "Māʻiti",
   "panel.design": "Hōhoʻa",

@@ -21,11 +21,11 @@ test('the app carries its own name and no toggle beside it', async ({ page }) =>
   await expect(page.locator('#btn-filter'), 'the filter button still opens the panel').toBeVisible();
 });
 
-test('security holds alerts, warnings and CSP', async ({ page }) => {
+test('security holds alerts, warnings and CSP; items holds pulls and todos', async ({ page }) => {
   await open(page);
   await expect(page.locator('#btn-security + .view-menu label'), 'each entry names where it reads from')
     .toHaveText(['GitHub Alerts', 'CI Warnings', 'CSP']);
-  await expect(page.locator('#btn-items + .view-menu label')).toHaveText(['PR']);
+  await expect(page.locator('#btn-items + .view-menu label')).toHaveText(['PR', 'Todos']);
   await expect(page.locator('#view-warnings'), 'warnings is no longer a tab of its own')
     .toHaveCount(1);
   await expect(page.locator('.navbar input[name="view"][value="warnings"] + label.btn')).toHaveCount(0);
@@ -69,4 +69,22 @@ test('the CSP view lists every exception a role declares, worst first', async ({
   const narrowed = await page.locator('table.csp-table tbody td:first-child').allInnerTexts();
   expect([...new Set(narrowed.map(text => text.trim()))]).toEqual(['wildcard']);
   await expect(rows.first()).toContainText('*');
+});
+
+test('the todos view lists code markers and TODO.md lines together', async ({ page }) => {
+  await open(page, '?view=todos');
+  const rows = page.locator('table.todo-table tbody tr');
+  await expect.poll(() => rows.count(), { timeout: 60000 }).toBe(3);
+  await expect(page.locator('#btn-items')).toHaveText('Items · Todos');
+  await expect(page.locator('.table-note')).toContainText('3 open items across 3 files');
+
+  await expect(rows.filter({ hasText: 'FIXME' })).toHaveCount(1);
+  await expect(rows.filter({ hasText: 'TODO.md' }), 'a note file line is an item too').toHaveCount(1);
+  await expect(rows.filter({ hasText: 'TODO.md' }).locator('a')).toHaveAttribute(
+    'href', 'https://github.com/infinito-nexus/core/blob/HEAD/roles/dev-npm/TODO.md#L3'
+  );
+
+  await page.locator('.feed-search').fill('lockfile');
+  await expect.poll(() => rows.count()).toBe(1);
+  await expect(page.locator('.table-note')).toContainText('1 is left after the filters');
 });

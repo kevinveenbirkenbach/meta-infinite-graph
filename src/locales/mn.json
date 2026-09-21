@@ -14,6 +14,7 @@
   "view.securityWith": "Аюулгүй байдал · {view}",
   "view.items": "Зүйлүүд",
   "view.itemsWith": "Зүйлүүд · {view}",
+  "view.todos": "Хийх зүйлс",
   "view.warnings": "CI Анхааруулгууд",
   "csp.column.kind": "Онцгой тохиолдол",
   "csp.column.role": "Үүрэг",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Үндсэн бодлогын {n} онцгой тохиолдол, {roles} үүрэг зарласан.",
     "other": "Үндсэн бодлогын {n} онцгой тохиолдол, {roles} үүрэг зарласан."
+  },
+  "todos.column.kind": "Тэмдэг",
+  "todos.column.where": "Хаана",
+  "todos.column.item": "Зүйл",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Агуулах өөртөө юу өртэй хэвээр байгааг уншиж байна…",
+  "todos.failed": "Толь хариу өгсөнгүй: {message}",
+  "todos.capped": "Тэдгээрийн зөвхөн эхнийхийг л жагсаав.",
+  "todos.note": {
+    "one": "{files} файлд {n} нээлттэй зүйл.",
+    "other": "{files} файлд {n} нээлттэй зүйл."
   },
   "panel.filter": "Шүүлтүүр",
   "panel.design": "Загвар",

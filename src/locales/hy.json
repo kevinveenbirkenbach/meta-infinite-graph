@@ -14,6 +14,7 @@
   "view.securityWith": "Անվտանգություն · {view}",
   "view.items": "Տարրեր",
   "view.itemsWith": "Տարրեր · {view}",
+  "view.todos": "Անելիքներ",
   "view.warnings": "CI Զգուշացումներ",
   "csp.column.kind": "Բացառություն",
   "csp.column.role": "Դեր",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} բացառություն լռելյայն քաղաքականությունից՝ հայտարարված {roles} դերի կողմից։",
     "other": "{n} բացառություն լռելյայն քաղաքականությունից՝ հայտարարված {roles} դերերի կողմից։"
+  },
+  "todos.column.kind": "Նշիչ",
+  "todos.column.where": "Որտեղ",
+  "todos.column.item": "Տարր",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ընթերցվում է այն, ինչ պահոցը դեռ պարտք է իրեն …",
+  "todos.failed": "Հայելին չպատասխանեց՝ {message}",
+  "todos.capped": "Թվարկված են միայն առաջինները։",
+  "todos.note": {
+    "one": "{n} բաց տարր {files} ֆայլում։",
+    "other": "{n} բաց տարր {files} ֆայլերում։"
   },
   "panel.filter": "Զտիչ",
   "panel.design": "Տեսք",

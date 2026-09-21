@@ -14,6 +14,7 @@
   "view.securityWith": "Kaamanan · {view}",
   "view.items": "Item",
   "view.itemsWith": "Item · {view}",
+  "view.todos": "Kudu dipigawé",
   "view.warnings": "CI Peringatan",
   "csp.column.kind": "Iwal",
   "csp.column.role": "Peran",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} ti {total} peran",
   "csp.note": {
     "other": "{n} iwal tina kawijakan baku, ditétélakeun ku {roles} peran."
+  },
+  "todos.column.kind": "Tanda",
+  "todos.column.where": "Di mana",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Maca naon anu masih jadi hutang répositori ka dirina …",
+  "todos.failed": "Eunteung teu ngajawab: {message}",
+  "todos.capped": "Ngan anu munggaran anu didaptarkeun.",
+  "todos.note": {
+    "other": "{n} item muka dina {files} koropak."
   },
   "panel.filter": "Saringan",
   "panel.design": "Desain",

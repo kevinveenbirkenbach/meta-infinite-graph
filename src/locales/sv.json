@@ -14,6 +14,7 @@
   "view.securityWith": "Säkerhet · {view}",
   "view.items": "Poster",
   "view.itemsWith": "Poster · {view}",
+  "view.todos": "Att göra",
   "view.warnings": "CI Varningar",
   "csp.column.kind": "Undantag",
   "csp.column.role": "Roll",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} undantag från standardpolicyn, deklarerat av {roles} roller.",
     "other": "{n} undantag från standardpolicyn, deklarerade av {roles} roller."
+  },
+  "todos.column.kind": "Markör",
+  "todos.column.where": "Var",
+  "todos.column.item": "Post",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Läser vad förrådet fortfarande är skyldigt sig självt…",
+  "todos.failed": "Spegeln svarade inte: {message}",
+  "todos.capped": "Endast de första av dem listas.",
+  "todos.note": {
+    "one": "{n} öppen post i {files} filer.",
+    "other": "{n} öppna poster i {files} filer."
   },
   "panel.filter": "Filter",
   "panel.design": "Utseende",

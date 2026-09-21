@@ -14,6 +14,7 @@
   "view.securityWith": "Ѡхраненїе · {view}",
   "view.items": "Части",
   "view.itemsWith": "Части · {view}",
+  "view.todos": "Дѣла",
   "view.warnings": "CI Предварѧнїѧ",
   "csp.column.kind": "Изъѧтїе",
   "csp.column.role": "Чинъ",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} изъѧтїе ѿ оуставленїѧ ѡбщагѡ, ѿ {roles} чинѡвъ возвѣщено.",
     "other": "{n} изъѧтїй ѿ оуставленїѧ ѡбщагѡ, ѿ {roles} чинѡвъ возвѣщено."
+  },
+  "todos.column.kind": "Знаменїе",
+  "todos.column.where": "Гдѣ",
+  "todos.column.item": "Часть",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Чтетсѧ, что хранилище себѣ должно еще …",
+  "todos.failed": "Зерцало не ѿвѣща: {message}",
+  "todos.capped": "Пе́рвые токмѡ исчислѧютсѧ.",
+  "todos.note": {
+    "one": "{n} дѣло ѿверсто въ {files} книгахъ.",
+    "other": "{n} дѣлъ ѿверсто въ {files} книгахъ."
   },
   "panel.filter": "Отборъ",
   "panel.design": "Оукрашенїе",

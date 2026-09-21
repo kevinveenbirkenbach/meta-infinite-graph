@@ -14,6 +14,7 @@
   "view.securityWith": "ድሕንነት · {view}",
   "view.items": "ነጥብታት",
   "view.itemsWith": "ነጥብታት · {view}",
+  "view.todos": "ዝግበሩ",
   "view.warnings": "CI መጠንቀቕታታት",
   "csp.column.kind": "ፍልይ ዝበለ",
   "csp.column.role": "ግደ",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ካብቲ ነባሪ ፖሊሲ {n} ፍልይ ዝበለ፡ {roles} ግደታት ኣፍሊጠንኦ።",
     "other": "ካብቲ ነባሪ ፖሊሲ {n} ፍልይ ዝበሉ፡ {roles} ግደታት ኣፍሊጠንኦም።"
+  },
+  "todos.column.kind": "ምልክት",
+  "todos.column.where": "ኣበይ",
+  "todos.column.item": "ነጥቢ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "እቲ መኽዘን ንባዕሉ ገና እንታይ ከም ዝዕድዮ ይንበብ ኣሎ…",
+  "todos.failed": "እቲ መስትያት ኣይመለሰን: {message}",
+  "todos.capped": "ካባታቶም እቶም ቀዳሞት ጥራይ ተዘርዚሮም።",
+  "todos.note": {
+    "one": "ኣብ {files} ፋይላት {n} ክፉት ነጥቢ።",
+    "other": "ኣብ {files} ፋይላት {n} ክፉታት ነጥብታት።"
   },
   "panel.filter": "መጻረዪ",
   "panel.design": "ቅዲ",

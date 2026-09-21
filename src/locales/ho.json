@@ -14,6 +14,7 @@
   "view.securityWith": "Gimaia · {view}",
   "view.items": "Gau",
   "view.itemsWith": "Gau · {view}",
+  "view.todos": "Karaia gaudia",
   "view.warnings": "CI Hadibaia herevadia",
   "csp.column.kind": "Idau gauna",
   "csp.column.role": "Gaukara",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} idau gauna taravatu badana dekenai, {roles} gaukara ese idia gwauraia.",
     "other": "{n} idau gauna taravatu badana dekenai, {roles} gaukara ese idia gwauraia."
+  },
+  "todos.column.kind": "Toa",
+  "todos.column.where": "Edeseni",
+  "todos.column.item": "Gauna",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Stoa ese sibona dekenai ia abia dae gauna duahia noho…",
+  "todos.failed": "Galasi ese ia haere lasi: {message}",
+  "todos.capped": "Guna gaudia sibona idia hahedinaraia.",
+  "todos.note": {
+    "one": "{n} gau kehoa {files} fail lalonai.",
+    "other": "{n} gau kehoa {files} fail lalonai."
   },
   "panel.filter": "Filta",
   "panel.design": "Toana",

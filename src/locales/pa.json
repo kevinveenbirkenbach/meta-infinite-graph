@@ -14,6 +14,7 @@
   "view.securityWith": "ਸੁਰੱਖਿਆ · {view}",
   "view.items": "ਇਕਾਈਆਂ",
   "view.itemsWith": "ਇਕਾਈਆਂ · {view}",
+  "view.todos": "ਕਰਨ ਵਾਲੇ",
   "view.warnings": "CI ਚੇਤਾਵਨੀਆਂ",
   "csp.column.kind": "ਛੋਟ",
   "csp.column.role": "ਭੂਮਿਕਾ",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ਮੂਲ ਨੀਤੀ ਤੋਂ {n} ਛੋਟ, {roles} ਭੂਮਿਕਾਵਾਂ ਨੇ ਐਲਾਨੀ।",
     "other": "ਮੂਲ ਨੀਤੀ ਤੋਂ {n} ਛੋਟਾਂ, {roles} ਭੂਮਿਕਾਵਾਂ ਨੇ ਐਲਾਨੀਆਂ।"
+  },
+  "todos.column.kind": "ਨਿਸ਼ਾਨ",
+  "todos.column.where": "ਕਿੱਥੇ",
+  "todos.column.item": "ਇਕਾਈ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ਰਿਪੋਜ਼ਟਰੀ ਹਾਲੇ ਵੀ ਆਪਣੇ ਆਪ ਨੂੰ ਕੀ ਦੇਣਦਾਰ ਹੈ, ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…",
+  "todos.failed": "ਸ਼ੀਸ਼ੇ ਨੇ ਜਵਾਬ ਨਹੀਂ ਦਿੱਤਾ: {message}",
+  "todos.capped": "ਇਹਨਾਂ ਵਿੱਚੋਂ ਸਿਰਫ਼ ਪਹਿਲੀਆਂ ਹੀ ਸੂਚੀਬੱਧ ਹਨ।",
+  "todos.note": {
+    "one": "{files} ਫ਼ਾਈਲਾਂ ਵਿੱਚ {n} ਖੁੱਲ੍ਹੀ ਇਕਾਈ।",
+    "other": "{files} ਫ਼ਾਈਲਾਂ ਵਿੱਚ {n} ਖੁੱਲ੍ਹੀਆਂ ਇਕਾਈਆਂ।"
   },
   "panel.filter": "ਫਿਲਟਰ",
   "panel.design": "ਡਿਜ਼ਾਈਨ",

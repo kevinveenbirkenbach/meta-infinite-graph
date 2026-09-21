@@ -14,6 +14,7 @@
   "view.securityWith": "Securitate · {view}",
   "view.items": "Elementos",
   "view.itemsWith": "Elementos · {view}",
+  "view.todos": "A facer",
   "view.warnings": "CI Avertimentos",
   "csp.column.kind": "Exception",
   "csp.column.role": "Rolo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} exception al politica predefinite, declarate per {roles} rolos.",
     "other": "{n} exceptiones al politica predefinite, declarate per {roles} rolos."
+  },
+  "todos.column.kind": "Marcator",
+  "todos.column.where": "Ubi",
+  "todos.column.item": "Elemento",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lectura de lo que le repositorio ancora se debe…",
+  "todos.failed": "Le speculo non respondeva: {message}",
+  "todos.capped": "Solmente le primes es listate.",
+  "todos.note": {
+    "one": "{n} elemento aperte in {files} files.",
+    "other": "{n} elementos aperte in {files} files."
   },
   "panel.filter": "Filtro",
   "panel.design": "Designo",

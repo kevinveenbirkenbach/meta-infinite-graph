@@ -14,6 +14,7 @@
   "view.securityWith": "Nageenya · {view}",
   "view.items": "Wantoota",
   "view.itemsWith": "Wantoota · {view}",
+  "view.todos": "Hojii hafe",
   "view.warnings": "CI Akeekkachiisota",
   "csp.column.kind": "Addaa",
   "csp.column.role": "Gahee",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Imaammata durtii irraa {n} addaa, gaheewwan {roles} labsan.",
     "other": "Imaammata durtii irraa {n} addaa, gaheewwan {roles} labsan."
+  },
+  "todos.column.kind": "Mallattoo",
+  "todos.column.where": "Eessa",
+  "todos.column.item": "Wanta",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Waan kuusaan ammallee ofii isaatiif liqii qabu dubbisaa jira…",
+  "todos.failed": "Daawitiin hin deebifne: {message}",
+  "todos.capped": "Isaan keessaa kan jalqabaa qofatu tarreeffame.",
+  "todos.note": {
+    "one": "Faayilii {files} keessatti wanta banaa {n}.",
+    "other": "Faayilii {files} keessatti wantoota banaa {n}."
   },
   "panel.filter": "Calaltuu",
   "panel.design": "Dizaayinii",

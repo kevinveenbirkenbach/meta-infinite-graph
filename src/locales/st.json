@@ -14,6 +14,7 @@
   "view.securityWith": "Tshireletso · {view}",
   "view.items": "Dintho",
   "view.itemsWith": "Dintho · {view}",
+  "view.todos": "Tse lokelang ho etswa",
   "view.warnings": "CI Ditemoso",
   "csp.column.kind": "Kgethollo",
   "csp.column.role": "Karolo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kgethollo e {n} leanong le tlwaelehileng, e boletswe ke dikarolo tse {roles}.",
     "other": "Dikgethollo tse {n} leanong le tlwaelehileng, di boletswe ke dikarolo tse {roles}."
+  },
+  "todos.column.kind": "Letshwao",
+  "todos.column.where": "Hokae",
+  "todos.column.item": "Ntho",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ho balwa seo polokelo e ntseng e ikolota sona…",
+  "todos.failed": "Seipone ha se a araba: {message}",
+  "todos.capped": "Ho thathamisitswe tsa pele feela.",
+  "todos.note": {
+    "one": "Ntho e {n} e butswe difaeleng tse {files}.",
+    "other": "Dintho tse {n} di butswe difaeleng tse {files}."
   },
   "panel.filter": "Sefe",
   "panel.design": "Moralo",

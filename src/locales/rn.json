@@ -14,6 +14,7 @@
   "view.securityWith": "Umutekano · {view}",
   "view.items": "Ibintu",
   "view.itemsWith": "Ibintu · {view}",
+  "view.todos": "Ibikorwa bisigaye",
   "view.warnings": "CI Imburi",
   "csp.column.kind": "Ikidasanzwe",
   "csp.column.role": "Umurimo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Ikidasanzwe {n} ku ngingo isanzwe, catangajwe n'imirimo {roles}.",
     "other": "Ibidasanzwe {n} ku ngingo isanzwe, vyatangajwe n'imirimo {roles}."
+  },
+  "todos.column.kind": "Ikimenyetso",
+  "todos.column.where": "Aho",
+  "todos.column.item": "Ikintu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Turiko turasoma ivyo ububiko bukibereyemwo ubwabwo…",
+  "todos.failed": "Icirore nticishuye: {message}",
+  "todos.capped": "Hatanzwe gusa ivya mbere.",
+  "todos.note": {
+    "one": "Ikintu {n} kidakozwe mu madosiye {files}.",
+    "other": "Ibintu {n} bidakozwe mu madosiye {files}."
   },
   "panel.filter": "Akayunguruzo",
   "panel.design": "Isura",

@@ -14,6 +14,7 @@
   "view.securityWith": "سيڪيورٽي · {view}",
   "view.items": "شيون",
   "view.itemsWith": "شيون · {view}",
+  "view.todos": "ڪرڻ جا ڪم",
   "view.warnings": "خبردارايون CI",
   "csp.column.kind": "استثنا",
   "csp.column.role": "ڪردار",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ڊفالٽ پاليسي ۾ {n} استثنا، {roles} ڪردارن ظاهر ڪيو.",
     "other": "ڊفالٽ پاليسي ۾ {n} استثنا، {roles} ڪردارن ظاهر ڪيا."
+  },
+  "todos.column.kind": "نشاني",
+  "todos.column.where": "ڪٿي",
+  "todos.column.item": "شيءِ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ريپوزٽري پاڻ تي جيڪو اڃا واجب آهي اهو پڙهيو پيو وڃي…",
+  "todos.failed": "آئيني جواب نه ڏنو: {message}",
+  "todos.capped": "رڳو پهريان ڏيکاريا ويا آهن.",
+  "todos.note": {
+    "one": "{files} فائلن ۾ {n} کليل شيءِ.",
+    "other": "{files} فائلن ۾ {n} کليل شيون."
   },
   "panel.filter": "فلٽر",
   "panel.design": "ڊيزائن",

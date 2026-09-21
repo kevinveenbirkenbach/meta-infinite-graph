@@ -14,6 +14,7 @@
   "view.securityWith": "Keselamatan · {view}",
   "view.items": "Item",
   "view.itemsWith": "Item · {view}",
+  "view.todos": "Tugasan",
   "view.warnings": "CI Amaran",
   "csp.column.kind": "Pengecualian",
   "csp.column.role": "Peranan",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} daripada {total} peranan",
   "csp.note": {
     "other": "{n} pengecualian kepada dasar lalai, diisytiharkan oleh {roles} peranan."
+  },
+  "todos.column.kind": "Penanda",
+  "todos.column.where": "Di mana",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Membaca apa yang masih terhutang oleh repositori kepada dirinya …",
+  "todos.failed": "Cermin tidak menjawab: {message}",
+  "todos.capped": "Hanya yang pertama disenaraikan.",
+  "todos.note": {
+    "other": "{n} item terbuka merentasi {files} fail."
   },
   "panel.filter": "Penapis",
   "panel.design": "Reka bentuk",

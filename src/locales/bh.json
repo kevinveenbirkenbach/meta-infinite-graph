@@ -14,6 +14,7 @@
   "view.securityWith": "सुरक्षा · {view}",
   "view.items": "आइटम",
   "view.itemsWith": "आइटम · {view}",
+  "view.todos": "करे के काम",
   "view.warnings": "CI चेतावनी",
   "csp.column.kind": "अपवाद",
   "csp.column.role": "रोल",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "डिफॉल्ट नीति में {n} अपवाद, {roles} रोल घोषित कइले बाड़ें.",
     "other": "डिफॉल्ट नीति में {n} अपवाद, {roles} रोल घोषित कइले बाड़ें."
+  },
+  "todos.column.kind": "मार्कर",
+  "todos.column.where": "कहाँ",
+  "todos.column.item": "आइटम",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "रिपॉजिटरी अबहीं ले अपने पर का बाकी बा, ऊ पढ़ल जा रहल बा…",
+  "todos.failed": "दर्पण जवाब ना दिहलस: {message}",
+  "todos.capped": "खाली पहिलका कुछ देखावल गइल बा.",
+  "todos.note": {
+    "one": "{files} फाइल में {n} खुलल आइटम.",
+    "other": "{files} फाइल में {n} खुलल आइटम."
   },
   "panel.filter": "फिल्टर",
   "panel.design": "डिजाइन",

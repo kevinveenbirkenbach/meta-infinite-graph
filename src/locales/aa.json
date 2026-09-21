@@ -14,6 +14,7 @@
   "view.securityWith": "Amaan · {view}",
   "view.items": "Caagiida",
   "view.itemsWith": "Caagiida · {view}",
+  "view.todos": "Abtam",
   "view.warnings": "CI Kassisooli",
   "csp.column.kind": "Istisnaa",
   "csp.column.role": "Rooli",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} istisnaa asaasi siyaasatal, {roles} roolitteh warsime.",
     "other": "{n} istisnaawa asaasi siyaasatal, {roles} roolitteh warsime."
+  },
+  "todos.column.kind": "Astá",
+  "todos.column.where": "Ara",
+  "todos.column.item": "Caagid",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Makzan isih cakkisimah tanim takriye…",
+  "todos.failed": "Muraayá ma gacisinna: {message}",
+  "todos.capped": "Naharsittem dibuk taybulle.",
+  "todos.note": {
+    "one": "{n} fakimte caagid {files} failwak.",
+    "other": "{n} fakimte caagiida {files} failwak."
   },
   "panel.filter": "Sirit",
   "panel.design": "Suurat",

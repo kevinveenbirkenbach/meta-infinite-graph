@@ -14,6 +14,7 @@
   "view.securityWith": "Beveiliging · {view}",
   "view.items": "Items",
   "view.itemsWith": "Items · {view}",
+  "view.todos": "Te doon",
   "view.warnings": "CI Waarschuwinge",
   "csp.column.kind": "Oetzundering",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} oetzundering op 't standaardbeleid, aangegeve door {roles} rolle.",
     "other": "{n} oetzunderinge op 't standaardbeleid, aangegeve door {roles} rolle."
+  },
+  "todos.column.kind": "Merkteike",
+  "todos.column.where": "Woe",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lèst wat de opslaag zichzelf nog sjöldig is…",
+  "todos.failed": "De spegel haet neet geantwoord: {message}",
+  "todos.capped": "Allein de ierste zeen opgesomp.",
+  "todos.note": {
+    "one": "{n} ope item in {files} besjtande.",
+    "other": "{n} ope items in {files} besjtande."
   },
   "panel.filter": "Filter",
   "panel.design": "Vörmgeving",

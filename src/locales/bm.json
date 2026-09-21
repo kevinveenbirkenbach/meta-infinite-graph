@@ -14,6 +14,7 @@
   "view.securityWith": "Lakana · {view}",
   "view.items": "Fɛnw",
   "view.itemsWith": "Fɛnw · {view}",
+  "view.todos": "Baara kɛtaw",
   "view.warnings": "CI Lasɔmiliw",
   "csp.column.kind": "Kɛrɛnkɛrɛnnen",
   "csp.column.role": "Jɔyɔrɔ",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} / {total} jɔyɔrɔ",
   "csp.note": {
     "other": "Sariya gansan kɛrɛnkɛrɛnnen {n}, jɔyɔrɔ {roles} y'u fɔ."
+  },
+  "todos.column.kind": "Taamasyɛn",
+  "todos.column.where": "Yɔrɔ",
+  "todos.column.item": "Fɛn",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Marayɔrɔ juru min bɛ a yɛrɛ la, o bɛ kalan na…",
+  "todos.failed": "Dubalen ma jaabi: {message}",
+  "todos.capped": "U fɔlɔw dɔrɔn de sɛbɛnna.",
+  "todos.note": {
+    "other": "Fɛn dayɛlɛlen {n} bɛ gafe {files} kɔnɔ."
   },
   "panel.filter": "Sɛgɛsɛgɛli",
   "panel.design": "Cogoya",

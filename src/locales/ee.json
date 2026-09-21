@@ -14,6 +14,7 @@
   "view.securityWith": "Dedienɔnɔ · {view}",
   "view.items": "Nuwo",
   "view.itemsWith": "Nuwo · {view}",
+  "view.todos": "Dɔwɔnawo",
   "view.warnings": "CI Nuxlɔ̃amewo",
   "csp.column.kind": "Tovovo",
   "csp.column.role": "Dɔdeasi",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Tovovo {n} tso se gbãtɔa gbɔ, dɔdeasi {roles} ye gblɔe.",
     "other": "Tovovo {n} tso se gbãtɔa gbɔ, dɔdeasi {roles} ye gblɔe."
+  },
+  "todos.column.kind": "Dzesi",
+  "todos.column.where": "Afi ka",
+  "todos.column.item": "Nu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Wole nu si wòle be nudzraɖoƒea nawɔ na eɖokui la xlẽm…",
+  "todos.failed": "Ahuhɔ̃e la meɖo eŋu o: {message}",
+  "todos.capped": "Gbãtɔwo ko woƒo nu tso.",
+  "todos.note": {
+    "one": "Nu ʋuʋu {n} le agbalẽ {files} me.",
+    "other": "Nu ʋuʋu {n} le agbalẽ {files} me."
   },
   "panel.filter": "Tiatia",
   "panel.design": "Nɔnɔme",

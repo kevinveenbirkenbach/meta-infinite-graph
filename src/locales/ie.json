@@ -14,6 +14,7 @@
   "view.securityWith": "Securitá · {view}",
   "view.items": "Elementes",
   "view.itemsWith": "Elementes · {view}",
+  "view.todos": "A far",
   "view.warnings": "CI Avertimentes",
   "csp.column.kind": "Exception",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} exception al politica predefinit, declarat de {roles} roles.",
     "other": "{n} exceptiones al politica predefinit, declarat de {roles} roles."
+  },
+  "todos.column.kind": "Marca",
+  "todos.column.where": "U",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lectent quo li repositoria ancor deve a se self…",
+  "todos.failed": "Li spegul ne respondet: {message}",
+  "todos.capped": "Solmen li prim de ili es listat.",
+  "todos.note": {
+    "one": "{n} element apert in {files} files.",
+    "other": "{n} elementes apert in {files} files."
   },
   "panel.filter": "Filtre",
   "panel.design": "Aspecte",

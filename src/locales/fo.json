@@ -14,6 +14,7 @@
   "view.securityWith": "Trygd · {view}",
   "view.items": "Lutir",
   "view.itemsWith": "Lutir · {view}",
+  "view.todos": "Uppgávur",
   "view.warnings": "CI Ávaringar",
   "csp.column.kind": "Undantak",
   "csp.column.role": "Leiklutur",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} undantak frá vanligu reglunum, lýst av {roles} leiklutum.",
     "other": "{n} undantøk frá vanligu reglunum, lýst av {roles} leiklutum."
+  },
+  "todos.column.kind": "Merki",
+  "todos.column.where": "Hvar",
+  "todos.column.item": "Lutur",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lesi hvat goymslan enn skuldar sær sjálvari…",
+  "todos.failed": "Spegilin svaraði ikki: {message}",
+  "todos.capped": "Bert tey fyrstu eru skrásett.",
+  "todos.note": {
+    "one": "{n} opin lutur í {files} fílum.",
+    "other": "{n} opnir lutir í {files} fílum."
   },
   "panel.filter": "Sía",
   "panel.design": "Útsjónd",

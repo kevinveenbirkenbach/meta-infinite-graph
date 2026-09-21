@@ -14,6 +14,7 @@
   "view.securityWith": "Ganawenjigewin · {view}",
   "view.items": "Gegoonan",
   "view.itemsWith": "Gegoonan · {view}",
+  "view.todos": "Gaa-izhichigeng",
   "view.warnings": "CI Aakwa'amaagewinan",
   "csp.column.kind": "Bakaan-izhiwebak",
   "csp.column.role": "Anokiiwin",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} bakaan-izhiwebak imaa inaakonigewining, {roles} anokiiwinan gii-wiindaanaawaa.",
     "other": "{n} bakaan-izhiwebakoon imaa inaakonigewining, {roles} anokiiwinan gii-wiindaanaawaa."
+  },
+  "todos.column.kind": "Mazinaakizon",
+  "todos.column.where": "Aandi",
+  "todos.column.item": "Gegoo",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Agindaan gaa-bi-ishkwaasing imaa asanjigowining …",
+  "todos.failed": "Gaawiin gii-nakwetanzii waabamoojichaagwaan: {message}",
+  "todos.capped": "Nitam eta go ozhibii'igaadewan.",
+  "todos.note": {
+    "one": "{n} gegoo eshkwaasing imaa {files} mazina'iganan.",
+    "other": "{n} gegoonan eshkwaasingin imaa {files} mazina'iganan."
   },
   "panel.filter": "Zhaabobiiginigan",
   "panel.design": "Izhinaagwak",

@@ -14,6 +14,7 @@
   "view.securityWith": "Ààbò · {view}",
   "view.items": "Àwọn nǹkan",
   "view.itemsWith": "Àwọn nǹkan · {view}",
+  "view.todos": "Àwọn iṣẹ́ láti ṣe",
   "view.warnings": "CI Àwọn ìkìlọ̀",
   "csp.column.kind": "Àyọkúrò",
   "csp.column.role": "Ipa",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} nínú ipa {total}",
   "csp.note": {
     "other": "Àyọkúrò {n} sí ìlànà àbáláyé, tí ipa {roles} kéde."
+  },
+  "todos.column.kind": "Àmì",
+  "todos.column.where": "Níbo",
+  "todos.column.item": "Nǹkan",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ń ka ohun tí ìṣúra kóòdù ṣì jẹ ara rẹ̀ ní gbèsè…",
+  "todos.failed": "Dígí kò dáhùn: {message}",
+  "todos.capped": "Àwọn àkọ́kọ́ nìkan ni a tò.",
+  "todos.note": {
+    "other": "Nǹkan {n} tí ó ṣí sílẹ̀ nínú fáìlì {files}."
   },
   "panel.filter": "Àlẹ̀mọ́",
   "panel.design": "Ìrísí",

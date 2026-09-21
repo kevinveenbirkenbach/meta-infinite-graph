@@ -14,6 +14,7 @@
   "view.securityWith": "Bảo mật · {view}",
   "view.items": "Mục",
   "view.itemsWith": "Mục · {view}",
+  "view.todos": "Việc cần làm",
   "view.warnings": "CI Cảnh báo",
   "csp.column.kind": "Ngoại lệ",
   "csp.column.role": "Vai trò",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} trên {total} vai trò",
   "csp.note": {
     "other": "{n} ngoại lệ đối với chính sách mặc định, do {roles} vai trò khai báo."
+  },
+  "todos.column.kind": "Dấu",
+  "todos.column.where": "Ở đâu",
+  "todos.column.item": "Mục",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Đang đọc những gì kho lưu trữ vẫn còn nợ chính nó…",
+  "todos.failed": "Tấm gương không trả lời: {message}",
+  "todos.capped": "Chỉ những mục đầu tiên được liệt kê.",
+  "todos.note": {
+    "other": "{n} mục còn mở trong {files} tệp."
   },
   "panel.filter": "Bộ lọc",
   "panel.design": "Giao diện",

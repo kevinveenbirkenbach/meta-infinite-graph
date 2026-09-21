@@ -14,6 +14,7 @@
   "view.securityWith": "უსაფრთხოება · {view}",
   "view.items": "ელემენტები",
   "view.itemsWith": "ელემენტები · {view}",
+  "view.todos": "გასაკეთებელი",
   "view.warnings": "CI გაფრთხილებები",
   "csp.column.kind": "გამონაკლისი",
   "csp.column.role": "როლი",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} გამონაკლისი ნაგულისხმევი პოლიტიკიდან, გამოცხადებული {roles} როლის მიერ.",
     "other": "{n} გამონაკლისი ნაგულისხმევი პოლიტიკიდან, გამოცხადებული {roles} როლის მიერ."
+  },
+  "todos.column.kind": "მარკერი",
+  "todos.column.where": "სად",
+  "todos.column.item": "ელემენტი",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "იკითხება ის, რაც რეპოზიტორიას ჯერ კიდევ ევალება საკუთარი თავის წინაშე…",
+  "todos.failed": "სარკემ არ უპასუხა: {message}",
+  "todos.capped": "ჩამოთვლილია მხოლოდ პირველები.",
+  "todos.note": {
+    "one": "{n} ღია ელემენტი {files} ფაილში.",
+    "other": "{n} ღია ელემენტი {files} ფაილში."
   },
   "panel.filter": "ფილტრი",
   "panel.design": "დიზაინი",

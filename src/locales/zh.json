@@ -14,6 +14,7 @@
   "view.securityWith": "安全 · {view}",
   "view.items": "条目",
   "view.itemsWith": "条目 · {view}",
+  "view.todos": "待办",
   "view.warnings": "CI 警告",
   "csp.column.kind": "例外",
   "csp.column.role": "角色",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP：{total} 个角色中的 {done} 个",
   "csp.note": {
     "other": "默认策略的 {n} 项例外，由 {roles} 个角色声明。"
+  },
+  "todos.column.kind": "标记",
+  "todos.column.where": "位置",
+  "todos.column.item": "条目",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "正在读取仓库仍欠自己的事项 …",
+  "todos.failed": "镜像没有响应：{message}",
+  "todos.capped": "仅列出其中最前面的部分。",
+  "todos.note": {
+    "other": "{files} 个文件中共 {n} 个未完成条目。"
   },
   "panel.filter": "筛选",
   "panel.design": "外观",

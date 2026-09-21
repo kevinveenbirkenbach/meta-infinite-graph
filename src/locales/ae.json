@@ -14,6 +14,7 @@
   "view.securityWith": "Θrāθra · {view}",
   "view.items": "Ciθrā̊",
   "view.itemsWith": "Ciθrā̊ · {view}",
+  "view.todos": "Varəziia",
   "view.warnings": "CI Zbārəθā̊",
   "csp.column.kind": "Aniiō.dāta",
   "csp.column.role": "Kāra",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} aniiō.dāta hača haiθiia dāta, framruta {roles} kārā̊.",
     "other": "{n} aniiō.dāta hača haiθiia dāta, framruta {roles} kārā̊."
+  },
+  "todos.column.kind": "Daxšta",
+  "todos.column.where": "Kuθra",
+  "todos.column.item": "Ciθra",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Vaēnaiti yat nōit varštəm asti…",
+  "todos.failed": "Aiβi.vaēna nōit paiti.aoxta: {message}",
+  "todos.capped": "Aēuuō paoiriia hiš framruta.",
+  "todos.note": {
+    "one": "{n} varəziia ciθra antarə {files} nipištā̊.",
+    "other": "{n} varəziia ciθra antarə {files} nipištā̊."
   },
   "panel.filter": "Vīcira",
   "panel.design": "Kəhrp",

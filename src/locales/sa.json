@@ -14,6 +14,7 @@
   "view.securityWith": "सुरक्षा · {view}",
   "view.items": "विषयाः",
   "view.itemsWith": "विषयाः · {view}",
+  "view.todos": "कर्तव्यानि",
   "view.warnings": "CI चेतावन्यः",
   "csp.column.kind": "अपवादः",
   "csp.column.role": "भूमिका",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "मूलनीत्याः {n} अपवादः, {roles} भूमिकाभिः उक्तः।",
     "other": "मूलनीत्याः {n} अपवादाः, {roles} भूमिकाभिः उक्ताः।"
+  },
+  "todos.column.kind": "चिह्नम्",
+  "todos.column.where": "कुत्र",
+  "todos.column.item": "विषयः",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "भाण्डारं स्वस्मै यत् ऋणी अस्ति तत् पठ्यते …",
+  "todos.failed": "प्रतिबिम्बं न प्रत्युत्तरम् अददात्: {message}",
+  "todos.capped": "तेषु प्रथमानि एव सूचितानि।",
+  "todos.note": {
+    "one": "{files} सञ्चिकासु {n} उद्घाटितः विषयः।",
+    "other": "{files} सञ्चिकासु {n} उद्घाटिताः विषयाः।"
   },
   "panel.filter": "निस्यन्दकम्",
   "panel.design": "रूपविन्यासः",

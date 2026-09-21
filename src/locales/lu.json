@@ -14,6 +14,7 @@
   "view.securityWith": "Bulami · {view}",
   "view.items": "Bintu",
   "view.itemsWith": "Bintu · {view}",
+  "view.todos": "Myanda ya kulonga",
   "view.warnings": "CI Bidyumu",
   "csp.column.kind": "Kishile",
   "csp.column.role": "Mwingilo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kishile {n} ku mbila ya kibangidilo, mingilo {roles} yasapula.",
     "other": "Bishile {n} ku mbila ya kibangidilo, mingilo {roles} yasapula."
+  },
+  "todos.column.kind": "Kilombolwa",
+  "todos.column.where": "Kwepi",
+  "todos.column.item": "Kintu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Kutanga byobya bidi kilamino kikidi na bya kulonga …",
+  "todos.failed": "Kimweneno kekyalondolwelepo: {message}",
+  "todos.capped": "Bya kubangila bitupu byo bitelwe.",
+  "todos.note": {
+    "one": "Kintu {n} kishile mu mafwele {files}.",
+    "other": "Bintu {n} bishile mu mafwele {files}."
   },
   "panel.filter": "Kisenselo",
   "panel.design": "Mpangilo",

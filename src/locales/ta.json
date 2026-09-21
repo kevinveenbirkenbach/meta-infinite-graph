@@ -14,6 +14,7 @@
   "view.securityWith": "பாதுகாப்பு · {view}",
   "view.items": "உருப்படிகள்",
   "view.itemsWith": "உருப்படிகள் · {view}",
+  "view.todos": "செய்யவேண்டியவை",
   "view.warnings": "CI எச்சரிக்கைகள்",
   "csp.column.kind": "விதிவிலக்கு",
   "csp.column.role": "பாத்திரம்",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "இயல்புநிலைக் கொள்கையில் {n} விதிவிலக்கு, {roles} பாத்திரங்கள் அறிவித்தன.",
     "other": "இயல்புநிலைக் கொள்கையில் {n} விதிவிலக்குகள், {roles} பாத்திரங்கள் அறிவித்தன."
+  },
+  "todos.column.kind": "குறி",
+  "todos.column.where": "எங்கே",
+  "todos.column.item": "உருப்படி",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "களஞ்சியம் தனக்குத்தானே இன்னும் கடன்பட்டதைப் படிக்கிறது …",
+  "todos.failed": "மிரர் பதிலளிக்கவில்லை: {message}",
+  "todos.capped": "அவற்றில் முதலானவை மட்டுமே பட்டியலிடப்பட்டுள்ளன.",
+  "todos.note": {
+    "one": "{files} கோப்புகளில் {n} திறந்த உருப்படி.",
+    "other": "{files} கோப்புகளில் {n} திறந்த உருப்படிகள்."
   },
   "panel.filter": "வடிகட்டி",
   "panel.design": "வடிவமைப்பு",

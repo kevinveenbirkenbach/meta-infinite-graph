@@ -14,6 +14,7 @@
   "view.securityWith": "Sekureco · {view}",
   "view.items": "Eroj",
   "view.itemsWith": "Eroj · {view}",
+  "view.todos": "Farendaĵoj",
   "view.warnings": "CI Avertoj",
   "csp.column.kind": "Escepto",
   "csp.column.role": "Rolo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} escepto al la defaŭlta politiko, deklarita de {roles} roloj.",
     "other": "{n} esceptoj al la defaŭlta politiko, deklaritaj de {roles} roloj."
+  },
+  "todos.column.kind": "Markilo",
+  "todos.column.where": "Kie",
+  "todos.column.item": "Ero",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Legante kion la deponejo ankoraŭ ŝuldas al si …",
+  "todos.failed": "La spegulo ne respondis: {message}",
+  "todos.capped": "Nur la unuaj el ili estas listigitaj.",
+  "todos.note": {
+    "one": "{n} malfermita ero en {files} dosieroj.",
+    "other": "{n} malfermitaj eroj en {files} dosieroj."
   },
   "panel.filter": "Filtrilo",
   "panel.design": "Aspekto",

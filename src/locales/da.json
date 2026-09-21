@@ -14,6 +14,7 @@
   "view.securityWith": "Sikkerhed · {view}",
   "view.items": "Poster",
   "view.itemsWith": "Poster · {view}",
+  "view.todos": "Opgaver",
   "view.warnings": "CI Advarsler",
   "csp.column.kind": "Undtagelse",
   "csp.column.role": "Rolle",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} undtagelse fra standardpolitikken, erklæret af {roles} roller.",
     "other": "{n} undtagelser fra standardpolitikken, erklæret af {roles} roller."
+  },
+  "todos.column.kind": "Markør",
+  "todos.column.where": "Hvor",
+  "todos.column.item": "Post",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Læser, hvad repositoryet stadig skylder sig selv …",
+  "todos.failed": "Spejlet svarede ikke: {message}",
+  "todos.capped": "Kun de første af dem er vist.",
+  "todos.note": {
+    "one": "{n} åben post på tværs af {files} filer.",
+    "other": "{n} åbne poster på tværs af {files} filer."
   },
   "panel.filter": "Filter",
   "panel.design": "Udseende",

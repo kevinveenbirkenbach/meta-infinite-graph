@@ -14,6 +14,7 @@
   "view.securityWith": "Nchekwa · {view}",
   "view.items": "Ihe ndị dị",
   "view.itemsWith": "Ihe ndị dị · {view}",
+  "view.todos": "Ihe a ga-eme",
   "view.warnings": "CI Ịdọ aka ná ntị",
   "csp.column.kind": "Mwepụ",
   "csp.column.role": "Ọrụ",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} nke {total} ọrụ",
   "csp.note": {
     "other": "Mwepụ {n} na amụma ndabara, ọrụ {roles} kwupụtara ya."
+  },
+  "todos.column.kind": "Akara",
+  "todos.column.where": "Ebee",
+  "todos.column.item": "Ihe",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Na-agụ ihe ọba ahụ ka ji onwe ya…",
+  "todos.failed": "Enyo azaghị: {message}",
+  "todos.capped": "Ọ bụ naanị ndị mbụ ka edepụtara.",
+  "todos.note": {
+    "other": "Ihe {n} ghepụrụ eghe na faịlụ {files}."
   },
   "panel.filter": "Nzacha",
   "panel.design": "Nhazi",

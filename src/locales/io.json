@@ -14,6 +14,7 @@
   "view.securityWith": "Sekureso · {view}",
   "view.items": "Elementi",
   "view.itemsWith": "Elementi · {view}",
+  "view.todos": "Facendi",
   "view.warnings": "CI Avizi",
   "csp.column.kind": "Excepto",
   "csp.column.role": "Rolo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} excepto a la standarda politiko, deklarita da {roles} roli.",
     "other": "{n} excepti a la standarda politiko, deklarita da {roles} roli."
+  },
+  "todos.column.kind": "Markilo",
+  "todos.column.where": "Ube",
+  "todos.column.item": "Elemento",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lektas to quon la depozeyo ankore debas a su ipsa…",
+  "todos.failed": "La spegulo ne respondis: {message}",
+  "todos.capped": "Nur la unesma esas listigita.",
+  "todos.note": {
+    "one": "{n} apertita elemento en {files} dosieri.",
+    "other": "{n} apertita elementi en {files} dosieri."
   },
   "panel.filter": "Filtrilo",
   "panel.design": "Aspekto",

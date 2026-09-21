@@ -14,6 +14,7 @@
   "view.securityWith": "Tsireledzo · {view}",
   "view.items": "Zwithu",
   "view.itemsWith": "Zwithu · {view}",
+  "view.todos": "Zwi songo itwaho",
   "view.warnings": "CI Tsevhiso",
   "csp.column.kind": "Tshiphambano",
   "csp.column.role": "Mushumo",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Tshiphambano {n} kha mbekanyamaitele ya u thoma, mishumo {roles} yo tshi bula.",
     "other": "Ziphambano {n} kha mbekanyamaitele ya u thoma, mishumo {roles} yo zwi bula."
+  },
+  "todos.column.kind": "Tswayo",
+  "todos.column.where": "Ngafhi",
+  "todos.column.item": "Tshithu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ri khou vhala zwine vhulungelo ha kha ḓi tea u ita …",
+  "todos.failed": "Khophi a yo ngo fhindula: {message}",
+  "todos.capped": "Ndi zwa u thoma fhedzi zwo ṅwaliwaho.",
+  "todos.note": {
+    "one": "Tshithu {n} tsho vulea kha faela {files}.",
+    "other": "Zwithu {n} zwo vulea kha faela {files}."
   },
   "panel.filter": "Tshisefo",
   "panel.design": "Tshivhumbeo",

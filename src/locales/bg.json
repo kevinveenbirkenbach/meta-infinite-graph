@@ -14,6 +14,7 @@
   "view.securityWith": "Сигурност · {view}",
   "view.items": "Елементи",
   "view.itemsWith": "Елементи · {view}",
+  "view.todos": "Задачи",
   "view.warnings": "CI Предупреждения",
   "csp.column.kind": "Изключение",
   "csp.column.role": "Роля",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} изключение от политиката по подразбиране, обявено от {roles} роли.",
     "other": "{n} изключения от политиката по подразбиране, обявени от {roles} роли."
+  },
+  "todos.column.kind": "Маркер",
+  "todos.column.where": "Къде",
+  "todos.column.item": "Елемент",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Чете се какво хранилището още дължи на себе си…",
+  "todos.failed": "Огледалото не отговори: {message}",
+  "todos.capped": "Изброени са само първите от тях.",
+  "todos.note": {
+    "one": "{n} отворен елемент в {files} файла.",
+    "other": "{n} отворени елемента в {files} файла."
   },
   "panel.filter": "Филтър",
   "panel.design": "Оформление",

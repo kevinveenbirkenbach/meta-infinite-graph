@@ -14,6 +14,7 @@
   "view.securityWith": "Baa áháyą́ · {view}",
   "view.items": "Ádaatʼéii",
   "view.itemsWith": "Ádaatʼéii · {view}",
+  "view.todos": "Ályaa dooleełígíí",
   "view.warnings": "CI Ahanídaʼdiilnih",
   "csp.column.kind": "Náánáłaʼígíí",
   "csp.column.role": "Naanish",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} náánáłaʼígíí beehazʼáanii ániidígíí bitsʼą́ą́dóó, naanish {roles} yee halneʼ.",
     "other": "{n} náánáłaʼígíí beehazʼáanii ániidígíí bitsʼą́ą́dóó, naanish {roles} yee halneʼ."
+  },
+  "todos.column.kind": "Bee ééhózin",
+  "todos.column.where": "Háadi",
+  "todos.column.item": "Ádaatʼéii",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Rébo tʼáadoo ííłʼíní yę́ę yíníłtaʼ …",
+  "todos.failed": "Bee ádéestʼį́ʼí doo náádííʼniid da: {message}",
+  "todos.capped": "Áłtsé ádaatʼéii tʼéiyá bikááʼ.",
+  "todos.note": {
+    "one": "{n} ádaatʼéii doo ályaa da, naaltsoos {files} bitah.",
+    "other": "{n} ádaatʼéii doo ályaa da, naaltsoos {files} dabitah."
   },
   "panel.filter": "Hadaʼdiitʼį́",
   "panel.design": "Ííshjání Áhoolyaa",

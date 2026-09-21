@@ -14,6 +14,7 @@
   "view.securityWith": "Sefti · {view}",
   "view.items": "Ol samting",
   "view.itemsWith": "Ol samting · {view}",
+  "view.todos": "Ol wok blong mekem",
   "view.warnings": "CI Ol woning",
   "csp.column.kind": "Eksepsen",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eksepsen long defol polisi, {roles} rol i talemaot.",
     "other": "{n} eksepsen long defol polisi, {roles} rol i talemaot."
+  },
+  "todos.column.kind": "Maka",
+  "todos.column.where": "Wea",
+  "todos.column.item": "Samting",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "I stap ridim wanem we ripo i mas mekem yet …",
+  "todos.failed": "Kopi i no ansa: {message}",
+  "todos.capped": "Ol fas wan nomo i stap long lis.",
+  "todos.note": {
+    "one": "{n} samting i open long {files} fael.",
+    "other": "{n} samting i open long {files} fael."
   },
   "panel.filter": "Filta",
   "panel.design": "Luk",

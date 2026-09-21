@@ -14,6 +14,7 @@
   "view.securityWith": "ආරක්ෂාව · {view}",
   "view.items": "අයිතම",
   "view.itemsWith": "අයිතම · {view}",
+  "view.todos": "කළ යුතු දෑ",
   "view.warnings": "CI අනතුරු ඇඟවීම්",
   "csp.column.kind": "ව්‍යතිරේකය",
   "csp.column.role": "භූමිකාව",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "පෙරනිමි ප්‍රතිපත්තියට ව්‍යතිරේක {n}ක්, භූමිකා {roles}ක් විසින් ප්‍රකාශ කර ඇත.",
     "other": "පෙරනිමි ප්‍රතිපත්තියට ව්‍යතිරේක {n}ක්, භූමිකා {roles}ක් විසින් ප්‍රකාශ කර ඇත."
+  },
+  "todos.column.kind": "සලකුණ",
+  "todos.column.where": "කොහේද",
+  "todos.column.item": "අයිතමය",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ගබඩාව තවමත් තමාටම ණයගැති දේ කියවමින්…",
+  "todos.failed": "දර්පණය පිළිතුරු දුන්නේ නැත: {message}",
+  "todos.capped": "මුල් ඒවා පමණක් ලැයිස්තුගත කර ඇත.",
+  "todos.note": {
+    "one": "ගොනු {files}ක් හරහා විවෘත අයිතම {n}ක්.",
+    "other": "ගොනු {files}ක් හරහා විවෘත අයිතම {n}ක්."
   },
   "panel.filter": "පෙරහන",
   "panel.design": "පෙනුම",

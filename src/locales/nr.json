@@ -14,6 +14,7 @@
   "view.securityWith": "Ukuvikeleka · {view}",
   "view.items": "Izinto",
   "view.itemsWith": "Izinto · {view}",
+  "view.todos": "Okufanele kwenziwe",
   "view.warnings": "CI Amayeleliso",
   "csp.column.kind": "Isihlukaniso",
   "csp.column.role": "Indima",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Isihlukaniso esingu-{n} emthethweni ojayelekileko, sibikwe ziindima ezingu-{roles}.",
     "other": "Izihlukaniso ezingu-{n} emthethweni ojayelekileko, zibikwe ziindima ezingu-{roles}."
+  },
+  "todos.column.kind": "Uphawu",
+  "todos.column.where": "Kuphi",
+  "todos.column.item": "Into",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ifunda lokho isigcino esisakukweleda kwaso…",
+  "todos.failed": "Isibuko asikaphenduli: {message}",
+  "todos.capped": "Kudzwiwe kwaphela ezokuthoma.",
+  "todos.note": {
+    "one": "Into engu-{n} evulekileko kumafayela angu-{files}.",
+    "other": "Izinto ezingu-{n} ezivulekileko kumafayela angu-{files}."
   },
   "panel.filter": "Isihlungi",
   "panel.design": "Ubujamo",

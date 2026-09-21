@@ -14,6 +14,7 @@
   "view.securityWith": "Biztonság · {view}",
   "view.items": "Elemek",
   "view.itemsWith": "Elemek · {view}",
+  "view.todos": "Teendők",
   "view.warnings": "CI Figyelmeztetések",
   "csp.column.kind": "Kivétel",
   "csp.column.role": "Szerepkör",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} kivétel az alapértelmezett szabályzat alól, {roles} szerepkör deklarálta.",
     "other": "{n} kivétel az alapértelmezett szabályzat alól, {roles} szerepkör deklarálta."
+  },
+  "todos.column.kind": "Jelölő",
+  "todos.column.where": "Hol",
+  "todos.column.item": "Elem",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Annak olvasása, amivel a tároló még tartozik önmagának…",
+  "todos.failed": "A tükör nem válaszolt: {message}",
+  "todos.capped": "Csak az elsők szerepelnek a listán.",
+  "todos.note": {
+    "one": "{n} nyitott elem {files} fájlban.",
+    "other": "{n} nyitott elem {files} fájlban."
   },
   "panel.filter": "Szűrő",
   "panel.design": "Megjelenés",

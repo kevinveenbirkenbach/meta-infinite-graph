@@ -14,6 +14,7 @@
   "view.securityWith": "Амният · {view}",
   "view.items": "Унсурҳо",
   "view.itemsWith": "Унсурҳо · {view}",
+  "view.todos": "Корҳои иҷрошаванда",
   "view.warnings": "CI Огоҳиҳо",
   "csp.column.kind": "Истисно",
   "csp.column.role": "Нақш",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} истисно аз сиёсати пешфарз, ки аз ҷониби {roles} нақш эълон шудааст.",
     "other": "{n} истисно аз сиёсати пешфарз, ки аз ҷониби {roles} нақш эълон шудааст."
+  },
+  "todos.column.kind": "Аломат",
+  "todos.column.where": "Дар куҷо",
+  "todos.column.item": "Унсур",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Хондани он чи махзан ҳанӯз ба худ қарздор аст…",
+  "todos.failed": "Оина ҷавоб надод: {message}",
+  "todos.capped": "Танҳо аввалинҳо номбар шудаанд.",
+  "todos.note": {
+    "one": "{n} унсури кушода дар {files} файл.",
+    "other": "{n} унсури кушода дар {files} файл."
   },
   "panel.filter": "Филтр",
   "panel.design": "Намуд",

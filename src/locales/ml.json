@@ -14,6 +14,7 @@
   "view.securityWith": "സുരക്ഷ · {view}",
   "view.items": "ഇനങ്ങൾ",
   "view.itemsWith": "ഇനങ്ങൾ · {view}",
+  "view.todos": "ചെയ്യാനുള്ളവ",
   "view.warnings": "CI മുന്നറിയിപ്പുകൾ",
   "csp.column.kind": "ഒഴിവാക്കൽ",
   "csp.column.role": "റോൾ",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "സ്ഥിരം നയത്തിന് {n} ഒഴിവാക്കൽ, {roles} റോളുകൾ പ്രഖ്യാപിച്ചു.",
     "other": "സ്ഥിരം നയത്തിന് {n} ഒഴിവാക്കലുകൾ, {roles} റോളുകൾ പ്രഖ്യാപിച്ചു."
+  },
+  "todos.column.kind": "അടയാളം",
+  "todos.column.where": "എവിടെ",
+  "todos.column.item": "ഇനം",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "റിപ്പോസിറ്ററി ഇനിയും സ്വയം ബാക്കിവെച്ചത് വായിക്കുന്നു …",
+  "todos.failed": "മിറർ മറുപടി നൽകിയില്ല: {message}",
+  "todos.capped": "അവയിൽ ആദ്യത്തേവ മാത്രമേ പട്ടികപ്പെടുത്തിയിട്ടുള്ളൂ.",
+  "todos.note": {
+    "one": "{files} ഫയലുകളിലായി {n} തുറന്ന ഇനം.",
+    "other": "{files} ഫയലുകളിലായി {n} തുറന്ന ഇനങ്ങൾ."
   },
   "panel.filter": "ഫിൽട്ടർ",
   "panel.design": "ഡിസൈൻ",

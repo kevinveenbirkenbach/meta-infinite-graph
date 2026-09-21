@@ -14,6 +14,7 @@
   "view.securityWith": "سیکیورٹی · {view}",
   "view.items": "اشیاء",
   "view.itemsWith": "اشیاء · {view}",
+  "view.todos": "کرنے کے کام",
   "view.warnings": "انتباہات CI",
   "csp.column.kind": "استثنا",
   "csp.column.role": "کردار",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "طے شدہ پالیسی سے {n} استثنا، جو {roles} کرداروں نے بیان کیا۔",
     "other": "طے شدہ پالیسی سے {n} استثناءات، جو {roles} کرداروں نے بیان کیے۔"
+  },
+  "todos.column.kind": "نشان",
+  "todos.column.where": "کہاں",
+  "todos.column.item": "شے",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "پڑھا جا رہا ہے کہ مخزن اب بھی خود پر کیا قرض رکھتا ہے…",
+  "todos.failed": "آئینے نے جواب نہیں دیا: {message}",
+  "todos.capped": "ان میں سے صرف پہلی درج ہیں۔",
+  "todos.note": {
+    "one": "{files} فائلوں میں {n} کھلی شے۔",
+    "other": "{files} فائلوں میں {n} کھلی اشیاء۔"
   },
   "panel.filter": "فلٹر",
   "panel.design": "ڈیزائن",

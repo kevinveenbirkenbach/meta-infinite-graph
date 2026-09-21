@@ -14,6 +14,7 @@
   "view.securityWith": "Sekirite · {view}",
   "view.items": "Atik yo",
   "view.itemsWith": "Atik yo · {view}",
+  "view.todos": "Bagay pou fè",
   "view.warnings": "CI Avètisman",
   "csp.column.kind": "Eksepsyon",
   "csp.column.role": "Wòl",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eksepsyon nan règ pa defo a, {roles} wòl deklare l.",
     "other": "{n} eksepsyon nan règ pa defo a, {roles} wòl deklare yo."
+  },
+  "todos.column.kind": "Makè",
+  "todos.column.where": "Ki kote",
+  "todos.column.item": "Atik",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "N ap li sa depo a dwe tèt li toujou…",
+  "todos.failed": "Glas la pa reponn: {message}",
+  "todos.capped": "Se sèlman premye yo ki nan lis la.",
+  "todos.note": {
+    "one": "{n} atik ouvè nan {files} fichye.",
+    "other": "{n} atik ouvè nan {files} fichye."
   },
   "panel.filter": "Filtè",
   "panel.design": "Aparans",

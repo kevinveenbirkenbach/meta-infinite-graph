@@ -14,6 +14,7 @@
   "view.securityWith": "Keamanan · {view}",
   "view.items": "Item",
   "view.itemsWith": "Item · {view}",
+  "view.todos": "Tugas",
   "view.warnings": "CI Peringatan",
   "csp.column.kind": "Pengecualian",
   "csp.column.role": "Peran",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} dari {total} peran",
   "csp.note": {
     "other": "{n} pengecualian terhadap kebijakan bawaan, dinyatakan oleh {roles} peran."
+  },
+  "todos.column.kind": "Penanda",
+  "todos.column.where": "Di mana",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Membaca apa yang masih menjadi utang repositori pada dirinya sendiri …",
+  "todos.failed": "Mirror tidak menjawab: {message}",
+  "todos.capped": "Hanya yang pertama yang ditampilkan.",
+  "todos.note": {
+    "other": "{n} item terbuka di {files} berkas."
   },
   "panel.filter": "Filter",
   "panel.design": "Desain",

@@ -14,6 +14,7 @@
   "view.securityWith": "بىخەتەرلىك · {view}",
   "view.items": "تۈرلەر",
   "view.itemsWith": "تۈرلەر · {view}",
+  "view.todos": "قىلىدىغان ئىشلار",
   "view.warnings": "ئاگاھلاندۇرۇشلار CI",
   "csp.column.kind": "ئىستىسنا",
   "csp.column.role": "رول",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "كۆڭۈلدىكى سىياسەتكە {n} ئىستىسنا، {roles} رول ئېلان قىلغان.",
     "other": "كۆڭۈلدىكى سىياسەتكە {n} ئىستىسنا، {roles} رول ئېلان قىلغان."
+  },
+  "todos.column.kind": "بەلگە",
+  "todos.column.where": "قەيەردە",
+  "todos.column.item": "تۈر",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ئامبارنىڭ ئۆزىگە تېخى قەرزدار بولغان ئىشلىرى ئوقۇلۇۋاتىدۇ…",
+  "todos.failed": "ئەينەك جاۋاب بەرمىدى: {message}",
+  "todos.capped": "پەقەت ئالدىنقىلىرىلا كۆرسىتىلدى.",
+  "todos.note": {
+    "one": "{files} ھۆججەتتە {n} ئوچۇق تۈر.",
+    "other": "{files} ھۆججەتتە {n} ئوچۇق تۈر."
   },
   "panel.filter": "سۈزگۈچ",
   "panel.design": "لايىھە",

@@ -14,6 +14,7 @@
   "view.securityWith": "Видзчысьӧм · {view}",
   "view.items": "Элементъяс",
   "view.itemsWith": "Элементъяс · {view}",
+  "view.todos": "Вӧчанторъяс",
   "view.warnings": "CI Тӧдчӧдӧмъяс",
   "csp.column.kind": "Торъялӧм",
   "csp.column.role": "Роль",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} торъялӧм шӧр политикаысь, {roles} роль юӧртӧма.",
     "other": "{n} торъялӧм шӧр политикаысь, {roles} роль юӧртӧма."
+  },
+  "todos.column.kind": "Пас",
+  "todos.column.where": "Кӧні",
+  "todos.column.item": "Элемент",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Лыддьӧ, мый репозиторий на аслыс уджтӧм…",
+  "todos.failed": "Гӧгыль эз вочавидз: {message}",
+  "todos.capped": "Гижӧма сӧмын медводдзаясӧс.",
+  "todos.note": {
+    "one": "{n} восьса элемент {files} файлын.",
+    "other": "{n} восьса элемент {files} файлын."
   },
   "panel.filter": "Фильтр",
   "panel.design": "Ӧблик",

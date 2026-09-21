@@ -14,6 +14,7 @@
   "view.securityWith": "Sikkerhet · {view}",
   "view.items": "Elementer",
   "view.itemsWith": "Elementer · {view}",
+  "view.todos": "Gjøremål",
   "view.warnings": "CI Advarsler",
   "csp.column.kind": "Unntak",
   "csp.column.role": "Rolle",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} unntak fra standardpolicyen, erklært av {roles} roller.",
     "other": "{n} unntak fra standardpolicyen, erklært av {roles} roller."
+  },
+  "todos.column.kind": "Markør",
+  "todos.column.where": "Hvor",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Leser hva repositoriet fortsatt skylder seg selv…",
+  "todos.failed": "Speilet svarte ikke: {message}",
+  "todos.capped": "Bare de første av dem er listet.",
+  "todos.note": {
+    "one": "{n} åpent element i {files} filer.",
+    "other": "{n} åpne elementer i {files} filer."
   },
   "panel.filter": "Filter",
   "panel.design": "Utseende",

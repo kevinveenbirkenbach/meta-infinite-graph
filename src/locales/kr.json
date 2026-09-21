@@ -14,6 +14,7 @@
   "view.securityWith": "Aman · {view}",
   "view.items": "Awo",
   "view.itemsWith": "Awo · {view}",
+  "view.todos": "Awo dinzəna",
   "view.warnings": "CI Gargadiwa",
   "csp.column.kind": "Kebancewa",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kebancewa {n} siyasa asal-be, rol {roles} kaɗəgəna.",
     "other": "Kebancewa {n} siyasa asal-be, rol {roles} kaɗəgəna."
+  },
+  "todos.column.kind": "Alama",
+  "todos.column.where": "Ndarangə",
+  "todos.column.item": "Awo",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ma'ajiya nandə-ro ngəwu adəga karanjin…",
+  "todos.failed": "Madubi jawab cinzə: {message}",
+  "todos.capped": "Awo kurugu sadə ruwuna.",
+  "todos.note": {
+    "one": "Awo {n} bulturo fayil {files}-la.",
+    "other": "Awo {n} bulturo fayil {files}-la."
   },
   "panel.filter": "Tace",
   "panel.design": "Sura",

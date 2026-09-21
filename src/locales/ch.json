@@ -14,6 +14,7 @@
   "view.securityWith": "Siguridåt · {view}",
   "view.items": "Kosas siha",
   "view.itemsWith": "Kosas siha · {view}",
+  "view.todos": "Para u macho'gue",
   "view.warnings": "CI Adbiette siha",
   "csp.column.kind": "Eksepsion",
   "csp.column.role": "Papet",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eksepsion gi i default na areklamentu, dineklara ni {roles} na papet.",
     "other": "{n} na eksepsion gi i default na areklamentu, dineklara ni {roles} na papet."
+  },
+  "todos.column.kind": "Ma'kå",
+  "todos.column.where": "Månu",
+  "todos.column.item": "Kosa",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Tataitai håfa trabia debi i repositorio para guiya…",
+  "todos.failed": "Ti manoppe i lulok: {message}",
+  "todos.capped": "Manmalista ha' i fine'nana siha.",
+  "todos.note": {
+    "one": "{n} kosa ni mababa gi {files} na failu.",
+    "other": "{n} na kosa ni mababa gi {files} na failu."
   },
   "panel.filter": "Filtro",
   "panel.design": "Disenu",

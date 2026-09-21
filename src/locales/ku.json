@@ -14,6 +14,7 @@
   "view.securityWith": "Ewlehî · {view}",
   "view.items": "Hêman",
   "view.itemsWith": "Hêman · {view}",
+  "view.todos": "Karên kirinê",
   "view.warnings": "CI Hişyarî",
   "csp.column.kind": "Îstîsna",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} îstîsna ji polîtîkaya berdest, ji aliyê {roles} rolan ve hatiye ragihandin.",
     "other": "{n} îstîsna ji polîtîkaya berdest, ji aliyê {roles} rolan ve hatine ragihandin."
+  },
+  "todos.column.kind": "Nîşan",
+  "todos.column.where": "Li ku",
+  "todos.column.item": "Hêman",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ya ku depo hê jî deynê xwe ye tê xwendin…",
+  "todos.failed": "Neynikê bersiv neda: {message}",
+  "todos.capped": "Tenê yên pêşî ji wan hatine rêzkirin.",
+  "todos.note": {
+    "one": "{n} hêmana vekirî di {files} pelan de.",
+    "other": "{n} hêmanên vekirî di {files} pelan de."
   },
   "panel.filter": "Parzûn",
   "panel.design": "Sêwiran",

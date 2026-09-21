@@ -14,6 +14,7 @@
   "view.securityWith": "امنیت · {view}",
   "view.items": "موارد",
   "view.itemsWith": "موارد · {view}",
+  "view.todos": "کارها",
   "view.warnings": "هشدارها CI",
   "csp.column.kind": "استثنا",
   "csp.column.role": "نقش",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} استثنا بر سیاست پیش‌فرض، اعلام‌شده توسط {roles} نقش.",
     "other": "{n} استثنا بر سیاست پیش‌فرض، اعلام‌شده توسط {roles} نقش."
+  },
+  "todos.column.kind": "نشانه",
+  "todos.column.where": "کجا",
+  "todos.column.item": "مورد",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "خواندن آنچه مخزن هنوز به خود بدهکار است…",
+  "todos.failed": "آینه پاسخ نداد: {message}",
+  "todos.capped": "تنها نخستین آن‌ها فهرست شده‌اند.",
+  "todos.note": {
+    "one": "{n} مورد باز در {files} پرونده.",
+    "other": "{n} مورد باز در {files} پرونده."
   },
   "panel.filter": "فیلتر",
   "panel.design": "ظاهر",

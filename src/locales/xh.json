@@ -14,6 +14,7 @@
   "view.securityWith": "Ukhuseleko · {view}",
   "view.items": "Izinto",
   "view.itemsWith": "Izinto · {view}",
+  "view.todos": "Okufuneka kwenziwe",
   "view.warnings": "CI Izilumkiso",
   "csp.column.kind": "Umahluko",
   "csp.column.role": "Indima",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Umahluko ongu-{n} kumgaqo-nkqubo osisiseko, ubhengezwe ziindima ezingu-{roles}.",
     "other": "Imahluko engu-{n} kumgaqo-nkqubo osisiseko, ibhengezwe ziindima ezingu-{roles}."
+  },
+  "todos.column.kind": "Uphawu",
+  "todos.column.where": "Phi",
+  "todos.column.item": "Into",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ifunda oko uvimba asakutyala kuye ngokwakhe…",
+  "todos.failed": "Isipili asiphendulanga: {message}",
+  "todos.capped": "Kudweliswe ezokuqala kuphela.",
+  "todos.note": {
+    "one": "Into engu-{n} evulekileyo kwiifayile ezingu-{files}.",
+    "other": "Izinto ezingu-{n} ezivulekileyo kwiifayile ezingu-{files}."
   },
   "panel.filter": "Isihluzi",
   "panel.design": "Uyilo",

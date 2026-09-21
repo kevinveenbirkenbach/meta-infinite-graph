@@ -14,6 +14,7 @@
   "view.securityWith": "Segurtasuna · {view}",
   "view.items": "Elementuak",
   "view.itemsWith": "Elementuak · {view}",
+  "view.todos": "Egitekoak",
   "view.warnings": "CI Abisuak",
   "csp.column.kind": "Salbuespena",
   "csp.column.role": "Rola",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} salbuespen politika lehenetsian, {roles} rolek deklaratua.",
     "other": "{n} salbuespen politika lehenetsian, {roles} rolek deklaratuak."
+  },
+  "todos.column.kind": "Marka",
+  "todos.column.where": "Non",
+  "todos.column.item": "Elementua",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Biltegiak oraindik bere buruari zor diona irakurtzen …",
+  "todos.failed": "Ispiluak ez du erantzun: {message}",
+  "todos.capped": "Lehenengoak baino ez dira zerrendatzen.",
+  "todos.note": {
+    "one": "{n} elementu irekita {files} fitxategitan.",
+    "other": "{n} elementu irekita {files} fitxategitan."
   },
   "panel.filter": "Iragazkia",
   "panel.design": "Diseinua",

@@ -14,6 +14,7 @@
   "view.securityWith": "Seguranza · {view}",
   "view.items": "Elementos",
   "view.itemsWith": "Elementos · {view}",
+  "view.todos": "Pendients",
   "view.warnings": "Alvertencias",
   "csp.column.kind": "Excepción",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} excepción a la politica per defecto, declarada per {roles} rols.",
     "other": "{n} excepcions a la politica per defecto, declaradas per {roles} rols."
+  },
+  "todos.column.kind": "Marca",
+  "todos.column.where": "An",
+  "todos.column.item": "Elemento",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Leyendo o que o repositorio encara se debe…",
+  "todos.failed": "O mirallo no respondió: {message}",
+  "todos.capped": "Nomás se listan os primers.",
+  "todos.note": {
+    "one": "{n} elemento ubierto en {files} fichers.",
+    "other": "{n} elementos ubiertos en {files} fichers."
   },
   "panel.filter": "Filtro",
   "panel.design": "Aparencia",

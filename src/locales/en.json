@@ -14,6 +14,7 @@
   "view.securityWith": "Security · {view}",
   "view.items": "Items",
   "view.itemsWith": "Items · {view}",
+  "view.todos": "Todos",
   "view.warnings": "CI Warnings",
   "csp.column.kind": "Exception",
   "csp.column.role": "Role",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} exception to the default policy, declared by {roles} roles.",
     "other": "{n} exceptions to the default policy, declared by {roles} roles."
+  },
+  "todos.column.kind": "Marker",
+  "todos.column.where": "Where",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Reading what the repository still owes itself…",
+  "todos.failed": "The mirror did not answer: {message}",
+  "todos.capped": "Only the first of them are listed.",
+  "todos.note": {
+    "one": "{n} open item across {files} files.",
+    "other": "{n} open items across {files} files."
   },
   "panel.filter": "Filter",
   "panel.design": "Design",

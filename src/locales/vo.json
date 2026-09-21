@@ -14,6 +14,7 @@
   "view.securityWith": "Sefod · {view}",
   "view.items": "Teils",
   "view.itemsWith": "Teils · {view}",
+  "view.todos": "Dunöfs",
   "view.warnings": "CI Warnods",
   "csp.column.kind": "Lecep",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Lecep {n} lü defaduk-pötet, pedeklaradöl fa rols {roles}.",
     "other": "Leceps {n} lü defaduk-pötet, pedeklaradöls fa rols {roles}."
+  },
+  "todos.column.kind": "Mak",
+  "todos.column.where": "Kiop",
+  "todos.column.item": "Teil",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Reidön kelosi konletöp dunon ok balvo…",
+  "todos.failed": "Spegäl no eresponon: {message}",
+  "todos.capped": "Te balidiks pelisedons.",
+  "todos.note": {
+    "one": "Teil {n} pemapenöl in ragivs {files}.",
+    "other": "Teils {n} pemapenöls in ragivs {files}."
   },
   "panel.filter": "Sif",
   "panel.design": "Fomot",

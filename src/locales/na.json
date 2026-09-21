@@ -14,6 +14,7 @@
   "view.securityWith": "Sekiuriti · {view}",
   "view.items": "Item",
   "view.itemsWith": "Item · {view}",
+  "view.todos": "Wok iyo",
   "view.warnings": "CI Waning",
   "csp.column.kind": "Eksepsen",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} eksepsen ijeiji polisi, {roles} rol ianga.",
     "other": "{n} eksepsen ijeiji polisi, {roles} rol ianga."
+  },
+  "todos.column.kind": "Mak",
+  "todos.column.where": "Iowa",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Rid eat ribo epuwe iyo …",
+  "todos.failed": "Mira eko amen: {message}",
+  "todos.capped": "Etsi ekayae nomo.",
+  "todos.note": {
+    "one": "{n} item obon ijeiji {files} fail.",
+    "other": "{n} item obon ijeiji {files} fail."
   },
   "panel.filter": "Pirta",
   "panel.design": "Dijãin",

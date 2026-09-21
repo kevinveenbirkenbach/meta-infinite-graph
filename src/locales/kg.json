@@ -14,6 +14,7 @@
   "view.securityWith": "Lutaninu · {view}",
   "view.items": "Bima",
   "view.itemsWith": "Bima · {view}",
+  "view.todos": "Mambu ya kusala",
   "view.warnings": "CI Bikebisu",
   "csp.column.kind": "Kuvambana",
   "csp.column.role": "Kisalu",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kuvambana {n} na nsiku ya kisika, bisalu {roles} me tuba yo.",
     "other": "Kuvambana {n} na nsiku ya kisika, bisalu {roles} me tuba yo."
+  },
+  "todos.column.kind": "Dimbu",
+  "todos.column.where": "Kuwapi",
+  "todos.column.item": "Diambu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ke tanga mambu yina nzo ya bima ke na yo kaka …",
+  "todos.failed": "Lumweno me vutula ve: {message}",
+  "todos.capped": "Kaka ya ntete me sonama.",
+  "todos.note": {
+    "one": "Diambu {n} ya kukanguka na bafisye {files}.",
+    "other": "Mambu {n} ya kukanguka na bafisye {files}."
   },
   "panel.filter": "Nsungula",
   "panel.design": "Mbandu",

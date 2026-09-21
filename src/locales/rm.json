@@ -14,6 +14,7 @@
   "view.securityWith": "Segirezza · {view}",
   "view.items": "Elements",
   "view.itemsWith": "Elements · {view}",
+  "view.todos": "Da far",
   "view.warnings": "CI Avertiments",
   "csp.column.kind": "Excepziun",
   "csp.column.role": "Rolla",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} excepziun da la directiva da standard, decleranda da {roles} rollas.",
     "other": "{n} excepziuns da la directiva da standard, decleradas da {roles} rollas."
+  },
+  "todos.column.kind": "Marca",
+  "todos.column.where": "Nua",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Leger quai ch'il repositori sa deva anc a sez…",
+  "todos.failed": "Il spievel n'ha betg respundì: {message}",
+  "todos.capped": "Mo ils emprims da quels èn inventarisads.",
+  "todos.note": {
+    "one": "{n} element avert en {files} datotecas.",
+    "other": "{n} elements averts en {files} datotecas."
   },
   "panel.filter": "Filter",
   "panel.design": "Design",

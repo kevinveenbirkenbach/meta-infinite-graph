@@ -14,6 +14,7 @@
   "view.securityWith": "Ũgitĩri · {view}",
   "view.items": "Indo",
   "view.itemsWith": "Indo · {view}",
+  "view.todos": "Cia gwĩkwo",
   "view.warnings": "CI Mĩkaana",
   "csp.column.kind": "Kĩhitũkĩro",
   "csp.column.role": "Wĩra",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Kĩhitũkĩro {n} harĩ watho wa mũtugo, kuumana na mawĩra {roles}.",
     "other": "Ihitũkĩro {n} harĩ watho wa mũtugo, kuumana na mawĩra {roles}."
+  },
+  "todos.column.kind": "Rũũri",
+  "todos.column.where": "Kũrĩa",
+  "todos.column.item": "Kĩndũ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Gũthoma kĩrĩa kĩgĩĩna kĩrĩ na thiirĩ nakĩo…",
+  "todos.failed": "Gĩcicio gĩtiacokia: {message}",
+  "todos.capped": "Nĩ cia mbere ciiki irĩ mũhari.",
+  "todos.note": {
+    "one": "Kĩndũ {n} gĩtarĩkĩte thĩinĩ wa mabuku {files}.",
+    "other": "Indo {n} itarĩkĩte thĩinĩ wa mabuku {files}."
   },
   "panel.filter": "Gĩtũtũri",
   "panel.design": "Mũhianĩre",

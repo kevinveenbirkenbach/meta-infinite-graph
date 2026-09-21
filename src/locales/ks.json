@@ -14,6 +14,7 @@
   "view.securityWith": "حِفاظت · {view}",
   "view.items": "چیزٕ",
   "view.itemsWith": "چیزٕ · {view}",
+  "view.todos": "کرُن باقی",
   "view.warnings": "خَبَردٲرؠ CI",
   "csp.column.kind": "اِستِثنا",
   "csp.column.role": "کِردار",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ڈیفالٹ پالِسی کٕنِز {n} اِستِثنا، {roles} کِردارَو کٕر اعلان۔",
     "other": "ڈیفالٹ پالِسی کٕنِز {n} اِستِثنا، {roles} کِردارَو کٕر اعلان۔"
+  },
+  "todos.column.kind": "نِشان",
+  "todos.column.where": "کۄت",
+  "todos.column.item": "چیز",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ذخیرَس پؠٹھ پننہٕ پؠٹھ یٕم باقی چھِ، تِم پَرنہٕ یِوان …",
+  "todos.failed": "آینہٕ دِیُت نہٕ جَواب: {message}",
+  "todos.capped": "صرف گۄڈنٕچ چھِ درج۔",
+  "todos.note": {
+    "one": "{files} فایلَن منٛز {n} کھُلہٕ چیز۔",
+    "other": "{files} فایلَن منٛز {n} کھُلہٕ چیزٕ۔"
   },
   "panel.filter": "فِلٹَر",
   "panel.design": "ڈِزایِن",

@@ -14,6 +14,7 @@
   "view.securityWith": "Siguria · {view}",
   "view.items": "Zërat",
   "view.itemsWith": "Zërat · {view}",
+  "view.todos": "Për t'u bërë",
   "view.warnings": "CI Paralajmërimet",
   "csp.column.kind": "Përjashtim",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} përjashtim nga politika e parazgjedhur, deklaruar nga {roles} role.",
     "other": "{n} përjashtime nga politika e parazgjedhur, deklaruar nga {roles} role."
+  },
+  "todos.column.kind": "Shënues",
+  "todos.column.where": "Ku",
+  "todos.column.item": "Zëri",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Po lexohet çfarë i detyrohet ende depoja vetes…",
+  "todos.failed": "Pasqyra nuk u përgjigj: {message}",
+  "todos.capped": "Renditen vetëm të parët prej tyre.",
+  "todos.note": {
+    "one": "{n} zë i hapur në {files} skedarë.",
+    "other": "{n} zëra të hapur në {files} skedarë."
   },
   "panel.filter": "Filtri",
   "panel.design": "Pamja",

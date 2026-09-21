@@ -14,6 +14,7 @@
   "view.securityWith": "নিরাপত্তা · {view}",
   "view.items": "আইটেম",
   "view.itemsWith": "আইটেম · {view}",
+  "view.todos": "করণীয়",
   "view.warnings": "CI সতর্কবার্তা",
   "csp.column.kind": "ব্যতিক্রম",
   "csp.column.role": "রোল",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ডিফল্ট নীতির {n}টি ব্যতিক্রম, {roles}টি রোল ঘোষণা করেছে।",
     "other": "ডিফল্ট নীতির {n}টি ব্যতিক্রম, {roles}টি রোল ঘোষণা করেছে।"
+  },
+  "todos.column.kind": "চিহ্ন",
+  "todos.column.where": "কোথায়",
+  "todos.column.item": "আইটেম",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "রিপোজিটরি নিজের কাছে যা এখনও বাকি রেখেছে তা পড়া হচ্ছে…",
+  "todos.failed": "আয়না উত্তর দেয়নি: {message}",
+  "todos.capped": "কেবল প্রথমগুলোই দেখানো হয়েছে।",
+  "todos.note": {
+    "one": "{files}টি ফাইলে {n}টি খোলা আইটেম।",
+    "other": "{files}টি ফাইলে {n}টি খোলা আইটেম।"
   },
   "panel.filter": "ফিল্টার",
   "panel.design": "নকশা",

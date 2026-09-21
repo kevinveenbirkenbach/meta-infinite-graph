@@ -14,6 +14,7 @@
   "view.securityWith": "భద్రత · {view}",
   "view.items": "అంశాలు",
   "view.itemsWith": "అంశాలు · {view}",
+  "view.todos": "చేయవలసినవి",
   "view.warnings": "CI హెచ్చరికలు",
   "csp.column.kind": "మినహాయింపు",
   "csp.column.role": "పాత్ర",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "డిఫాల్ట్ విధానానికి {n} మినహాయింపు, {roles} పాత్రలు ప్రకటించాయి.",
     "other": "డిఫాల్ట్ విధానానికి {n} మినహాయింపులు, {roles} పాత్రలు ప్రకటించాయి."
+  },
+  "todos.column.kind": "గుర్తు",
+  "todos.column.where": "ఎక్కడ",
+  "todos.column.item": "అంశం",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "రిపాజిటరీ ఇంకా తనకు తానే ఏమి బాకీ ఉందో చదువుతోంది…",
+  "todos.failed": "అద్దం సమాధానం ఇవ్వలేదు: {message}",
+  "todos.capped": "వాటిలో మొదటివి మాత్రమే జాబితా చేయబడ్డాయి.",
+  "todos.note": {
+    "one": "{files} ఫైళ్లలో {n} తెరిచిన అంశం.",
+    "other": "{files} ఫైళ్లలో {n} తెరిచిన అంశాలు."
   },
   "panel.filter": "ఫిల్టర్",
   "panel.design": "రూపకల్పన",

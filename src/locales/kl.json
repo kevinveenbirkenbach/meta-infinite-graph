@@ -14,6 +14,7 @@
   "view.securityWith": "Isumannaallisaaneq · {view}",
   "view.items": "Immikkoortut",
   "view.itemsWith": "Immikkoortut · {view}",
+  "view.todos": "Suliassat",
   "view.warnings": "CI Mianersoqqussutit",
   "csp.column.kind": "Immikkut akuersissut",
   "csp.column.role": "Atorfik",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} immikkut akuersissut malittarisassani pissusissamisoortuni, atorfinnit {roles} nalunaarutigineqartoq.",
     "other": "{n} immikkut akuersissutit malittarisassani pissusissamisoortuni, atorfinnit {roles} nalunaarutigineqartut."
+  },
+  "todos.column.kind": "Nalunaaqut",
+  "todos.column.where": "Sumi",
+  "todos.column.item": "Immikkoortoq",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Toqqorsivik namminermut suli akiitsoqarnera atuarneqarpoq…",
+  "todos.failed": "Tarrarsuut akinngilaq: {message}",
+  "todos.capped": "Siullersaannaat allattorneqarput.",
+  "todos.note": {
+    "one": "{n} immikkoortoq ammasoq {files} fiilini.",
+    "other": "{n} immikkoortut ammasut {files} fiilini."
   },
   "panel.filter": "Immikkoortiterineq",
   "panel.design": "Ilusilersuineq",

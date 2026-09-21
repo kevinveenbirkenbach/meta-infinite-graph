@@ -14,6 +14,7 @@
   "view.securityWith": "Obukuumi · {view}",
   "view.items": "Ebintu",
   "view.itemsWith": "Ebintu · {view}",
+  "view.todos": "Ebitannakolebwa",
   "view.warnings": "CI Okulabula",
   "csp.column.kind": "Ekiggyiddwako",
   "csp.column.role": "Omulimu",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} ekiggyiddwako ku mateeka aga bulijjo, ekyalangirirwa emirimu {roles}.",
     "other": "{n} ebiggyiddwako ku mateeka aga bulijjo, ebyalangirirwa emirimu {roles}."
+  },
+  "todos.column.kind": "Akabonero",
+  "todos.column.where": "Wa",
+  "todos.column.item": "Ekintu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Okusoma etterekero kye kikyeebanja…",
+  "todos.failed": "Endabirwamu teyaddamu: {message}",
+  "todos.capped": "Ebisooka byokka bye biwandiikiddwa.",
+  "todos.note": {
+    "one": "Ekintu {n} ekiggule mu fayiro {files}.",
+    "other": "Ebintu {n} ebiggule mu fayiro {files}."
   },
   "panel.filter": "Ekisengejja",
   "panel.design": "Endabika",

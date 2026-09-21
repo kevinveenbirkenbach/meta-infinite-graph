@@ -14,6 +14,7 @@
   "view.securityWith": "Ашәарҭадара · {view}",
   "view.items": "Ахәҭақәа",
   "view.itemsWith": "Ахәҭақәа · {view}",
+  "view.todos": "Иҟаҵатәу",
   "view.warnings": "CI Агәҽанҵарақәа",
   "csp.column.kind": "Иалкааз",
   "csp.column.role": "Арол",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} иалкааз аполитика хадазы, {roles} арол ирыланаҵеит.",
     "other": "{n} иалкааз аполитика хадазы, {roles} арол ирыланаҵеит."
+  },
+  "todos.column.kind": "Адырга",
+  "todos.column.where": "Аҭыԥ",
+  "todos.column.item": "Ахәҭа",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Арепозиториа ихаҭа изхароу аԥхьара …",
+  "todos.failed": "Асаркьа ҭак ҟанаҵаӡеит: {message}",
+  "todos.capped": "Актәиқәа мацара иаагоуп.",
+  "todos.note": {
+    "one": "{n} иаарту ахәҭа {files} афаил аҟны.",
+    "other": "{n} иаарту ахәҭа {files} афаилқәа рҟны."
   },
   "panel.filter": "Афильтр",
   "panel.design": "Адизаин",

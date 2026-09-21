@@ -14,6 +14,7 @@
   "view.securityWith": "보안 · {view}",
   "view.items": "항목",
   "view.itemsWith": "항목 · {view}",
+  "view.todos": "할 일",
   "view.warnings": "CI 경고",
   "csp.column.kind": "예외",
   "csp.column.role": "역할",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: 역할 {total}개 중 {done}개",
   "csp.note": {
     "other": "기본 정책의 예외 {n}개, 역할 {roles}개가 선언했습니다."
+  },
+  "todos.column.kind": "표시",
+  "todos.column.where": "위치",
+  "todos.column.item": "항목",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "저장소가 아직 스스로에게 진 빚을 읽는 중…",
+  "todos.failed": "미러가 응답하지 않았습니다: {message}",
+  "todos.capped": "그중 처음 것들만 표시됩니다.",
+  "todos.note": {
+    "other": "파일 {files}개에 열린 항목 {n}개."
   },
   "panel.filter": "필터",
   "panel.design": "디자인",

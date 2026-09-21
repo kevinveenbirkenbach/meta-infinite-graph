@@ -14,6 +14,7 @@
   "view.securityWith": "সুৰক্ষা · {view}",
   "view.items": "বিষয়সমূহ",
   "view.itemsWith": "বিষয়সমূহ · {view}",
+  "view.todos": "কৰিবলগীয়া",
   "view.warnings": "CI সকীয়নি",
   "csp.column.kind": "ব্যতিক্ৰম",
   "csp.column.role": "ভূমিকা",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ডিফ'ল্ট নীতিৰ {n} ব্যতিক্ৰম, {roles} ভূমিকাই ঘোষণা কৰিছে।",
     "other": "ডিফ'ল্ট নীতিৰ {n} ব্যতিক্ৰম, {roles} ভূমিকাই ঘোষণা কৰিছে।"
+  },
+  "todos.column.kind": "চিহ্ন",
+  "todos.column.where": "ক'ত",
+  "todos.column.item": "বিষয়",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ভঁৰালটোৱে নিজকে এতিয়াও কি দিব লাগে, সেয়া পঢ়া হৈছে…",
+  "todos.failed": "দাপোনে উত্তৰ নিদিলে: {message}",
+  "todos.capped": "ইয়াৰ প্ৰথমকেইটাহে তালিকাভুক্ত কৰা হৈছে।",
+  "todos.note": {
+    "one": "{files} টা ফাইলত {n} টা মুকলি বিষয়।",
+    "other": "{files} টা ফাইলত {n} টা মুকলি বিষয়।"
   },
   "panel.filter": "ফিল্টাৰ",
   "panel.design": "ডিজাইন",

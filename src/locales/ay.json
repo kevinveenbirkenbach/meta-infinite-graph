@@ -14,6 +14,7 @@
   "view.securityWith": "Jark'aqasiña · {view}",
   "view.items": "Yänaka",
   "view.itemsWith": "Yänaka · {view}",
+  "view.todos": "Lurañanaka",
   "view.warnings": "CI Amtayawinaka",
   "csp.column.kind": "Jaljtawi",
   "csp.column.role": "Lurawi",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} jaljtawi nayra kamachit, {roles} lurawinakaw uñacht'ayi.",
     "other": "{n} jaljtawinaka nayra kamachit, {roles} lurawinakaw uñacht'ayi."
+  },
+  "todos.column.kind": "Chimpu",
+  "todos.column.where": "Kawkhana",
+  "todos.column.item": "Yä",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Imañan kunti lurañapa ukanak liyiski …",
+  "todos.failed": "Lirpux janiw jayskiti: {message}",
+  "todos.capped": "Nayrïrinakakiw uñacht'ayata.",
+  "todos.note": {
+    "one": "{n} lurañaw jist'arata {files} qillqatana.",
+    "other": "{n} lurañanakaw jist'arata {files} qillqatanakana."
   },
   "panel.filter": "Susuña",
   "panel.design": "Uñnaqa",

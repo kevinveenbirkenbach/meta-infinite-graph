@@ -14,6 +14,7 @@
   "view.securityWith": "Turvalisus · {view}",
   "view.items": "Kirjed",
   "view.itemsWith": "Kirjed · {view}",
+  "view.todos": "Ülesanded",
   "view.warnings": "CI Hoiatused",
   "csp.column.kind": "Erand",
   "csp.column.role": "Roll",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} erand vaikepoliitikast, deklareeritud {roles} rolli poolt.",
     "other": "{n} erandit vaikepoliitikast, deklareeritud {roles} rolli poolt."
+  },
+  "todos.column.kind": "Märgend",
+  "todos.column.where": "Kus",
+  "todos.column.item": "Kirje",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Loeme, mida hoidla endale veel võlgneb…",
+  "todos.failed": "Peegel ei vastanud: {message}",
+  "todos.capped": "Loetletud on ainult esimesed.",
+  "todos.note": {
+    "one": "{n} avatud kirje {files} failis.",
+    "other": "{n} avatud kirjet {files} failis."
   },
   "panel.filter": "Filter",
   "panel.design": "Kujundus",

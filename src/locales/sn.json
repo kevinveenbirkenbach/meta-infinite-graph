@@ -14,6 +14,7 @@
   "view.securityWith": "Chengetedzo · {view}",
   "view.items": "Zvinhu",
   "view.itemsWith": "Zvinhu · {view}",
+  "view.todos": "Zvichiri kuitwa",
   "view.warnings": "CI Nyevero",
   "csp.column.kind": "Chisiyiso",
   "csp.column.role": "Basa",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Chisiyiso {n} pamutemo wekutanga, mabasa {roles} akachitaura.",
     "other": "Zvisiyiso {n} pamutemo wekutanga, mabasa {roles} akazvitaura."
+  },
+  "todos.column.kind": "Chiratidzo",
+  "todos.column.where": "Kupi",
+  "todos.column.item": "Chinhu",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Kuverenga zvichiri kukweretwa nedura kwariri …",
+  "todos.failed": "Girazi harina kupindura: {message}",
+  "todos.capped": "Zvekutanga chete ndizvo zvakanyorwa.",
+  "todos.note": {
+    "one": "Chinhu {n} chakavhurika mumafaira {files}.",
+    "other": "Zvinhu {n} zvakavhurika mumafaira {files}."
   },
   "panel.filter": "Sefa",
   "panel.design": "Chimiro",

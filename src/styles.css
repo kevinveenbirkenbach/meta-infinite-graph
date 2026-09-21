@@ -363,6 +363,10 @@ tr.feed-pickable:hover td {
   max-width: 52ch;
 }
 
+.todo-fixme { color: var(--bs-danger); }
+.todo-hack, .todo-xxx { color: var(--bs-warning); }
+.todo-note { opacity: 0.8; }
+
 .code-table td {
   white-space: nowrap;
 }

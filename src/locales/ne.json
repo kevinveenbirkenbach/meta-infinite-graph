@@ -14,6 +14,7 @@
   "view.securityWith": "सुरक्षा · {view}",
   "view.items": "वस्तुहरू",
   "view.itemsWith": "वस्तुहरू · {view}",
+  "view.todos": "गर्न बाँकी",
   "view.warnings": "CI चेतावनीहरू",
   "csp.column.kind": "अपवाद",
   "csp.column.role": "भूमिका",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "पूर्वनिर्धारित नीतिमा {n} अपवाद, {roles} भूमिकाहरूले घोषणा गरेका।",
     "other": "पूर्वनिर्धारित नीतिमा {n} अपवादहरू, {roles} भूमिकाहरूले घोषणा गरेका।"
+  },
+  "todos.column.kind": "चिन्ह",
+  "todos.column.where": "कहाँ",
+  "todos.column.item": "वस्तु",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "रिपोजिटरीले आफैँलाई अझै तिर्न बाँकी कुरा पढ्दै …",
+  "todos.failed": "मिररले जवाफ दिएन: {message}",
+  "todos.capped": "तीमध्ये पहिलाहरू मात्र सूचीबद्ध छन्।",
+  "todos.note": {
+    "one": "{files} फाइलहरूमा {n} खुला वस्तु।",
+    "other": "{files} फाइलहरूमा {n} खुला वस्तुहरू।"
   },
   "panel.filter": "फिल्टर",
   "panel.design": "डिजाइन",

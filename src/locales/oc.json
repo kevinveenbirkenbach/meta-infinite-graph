@@ -14,6 +14,7 @@
   "view.securityWith": "Seguretat · {view}",
   "view.items": "Elements",
   "view.itemsWith": "Elements · {view}",
+  "view.todos": "De far",
   "view.warnings": "CI Avertiments",
   "csp.column.kind": "Excepcion",
   "csp.column.role": "Ròtle",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} excepcion a la politica per defaut, declarada per {roles} ròtles.",
     "other": "{n} excepcions a la politica per defaut, declaradas per {roles} ròtles."
+  },
+  "todos.column.kind": "Marcador",
+  "todos.column.where": "Ont",
+  "todos.column.item": "Element",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Lectura de çò que lo depaus se deu encara…",
+  "todos.failed": "Lo miralh a pas respondut: {message}",
+  "todos.capped": "Solament los primièrs son listats.",
+  "todos.note": {
+    "one": "{n} element dobèrt dins {files} fichièrs.",
+    "other": "{n} elements dobèrts dins {files} fichièrs."
   },
   "panel.filter": "Filtre",
   "panel.design": "Aparéncia",

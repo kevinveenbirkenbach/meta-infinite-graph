@@ -14,6 +14,7 @@
   "view.securityWith": "Beveiliging · {view}",
   "view.items": "Items",
   "view.itemsWith": "Items · {view}",
+  "view.todos": "Todo's",
   "view.warnings": "CI Waarschuwingen",
   "csp.column.kind": "Uitzondering",
   "csp.column.role": "Rol",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} uitzondering op het standaardbeleid, gedeclareerd door {roles} rollen.",
     "other": "{n} uitzonderingen op het standaardbeleid, gedeclareerd door {roles} rollen."
+  },
+  "todos.column.kind": "Markering",
+  "todos.column.where": "Waar",
+  "todos.column.item": "Item",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Bezig met lezen wat de repository zichzelf nog schuldig is…",
+  "todos.failed": "De spiegel antwoordde niet: {message}",
+  "todos.capped": "Alleen de eerste daarvan worden vermeld.",
+  "todos.note": {
+    "one": "{n} openstaand item in {files} bestanden.",
+    "other": "{n} openstaande items in {files} bestanden."
   },
   "panel.filter": "Filter",
   "panel.design": "Ontwerp",

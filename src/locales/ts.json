@@ -14,6 +14,7 @@
   "view.securityWith": "Vuhlayiseki · {view}",
   "view.items": "Swilo",
   "view.itemsWith": "Swilo · {view}",
+  "view.todos": "Leswi faneleke ku endliwa",
   "view.warnings": "CI Swilemukiso",
   "csp.column.kind": "Xihlawulekisi",
   "csp.column.role": "Ntirho",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Xihlawulekisi {n} eka pholisi ya ntolovelo, lexi tivisiweke hi mintirho {roles}.",
     "other": "Swihlawulekisi {n} eka pholisi ya ntolovelo, leswi tivisiweke hi mintirho {roles}."
+  },
+  "todos.column.kind": "Mfungho",
+  "todos.column.where": "Kwihi",
+  "todos.column.item": "Xilo",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ku hlayiwa leswi khumbi ra vuhlayiselo ri ha tikoloteke swona…",
+  "todos.failed": "Xivoni a xi hlamulanga: {message}",
+  "todos.capped": "Ku tsariwe ntsena swo sungula.",
+  "todos.note": {
+    "one": "Xilo {n} lexi pfulekeke eka tifayili {files}.",
+    "other": "Swilo {n} leswi pfulekeke eka tifayili {files}."
   },
   "panel.filter": "Sefa",
   "panel.design": "Xivumbeko",

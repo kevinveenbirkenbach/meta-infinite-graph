@@ -14,6 +14,7 @@
   "view.securityWith": "Veitaqomaki · {view}",
   "view.items": "Veika",
   "view.itemsWith": "Veika · {view}",
+  "view.todos": "Ka me caka",
   "view.warnings": "CI Ivakaroti",
   "csp.column.kind": "Veivakadonui",
   "csp.column.role": "Itavi",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} na veivakadonui ena ivakarau taumada, e tukuna na {roles} na itavi.",
     "other": "{n} na veivakadonui ena ivakarau taumada, e tukuna na {roles} na itavi."
+  },
+  "todos.column.kind": "Ivakatakilakila",
+  "todos.column.where": "Vei",
+  "todos.column.item": "Ka",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Wilika tiko na ka e se dinauta tiko vua na ivolatukutuku…",
+  "todos.failed": "A sega ni sauma na iloilo: {message}",
+  "todos.capped": "Sa volai ga na imatai ni kena.",
+  "todos.note": {
+    "one": "{n} na ka e se dola tiko ena {files} na ivola.",
+    "other": "{n} na ka e se dola tiko ena {files} na ivola."
   },
   "panel.filter": "Sivi",
   "panel.design": "Rairai",

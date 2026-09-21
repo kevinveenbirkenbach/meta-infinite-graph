@@ -14,6 +14,7 @@
   "view.securityWith": "សុវត្ថិភាព · {view}",
   "view.items": "ធាតុ",
   "view.itemsWith": "ធាតុ · {view}",
+  "view.todos": "កិច្ចការត្រូវធ្វើ",
   "view.warnings": "CI ការព្រមាន",
   "csp.column.kind": "ករណីលើកលែង",
   "csp.column.role": "តួនាទី",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} ក្នុងចំណោម {total} តួនាទី",
   "csp.note": {
     "other": "ករណីលើកលែង {n} ចំពោះគោលការណ៍លំនាំដើម ដែលប្រកាសដោយតួនាទី {roles}។"
+  },
+  "todos.column.kind": "សញ្ញាសម្គាល់",
+  "todos.column.where": "នៅឯណា",
+  "todos.column.item": "ធាតុ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "កំពុងអានអ្វីដែលឃ្លាំងនៅជំពាក់ខ្លួនឯង…",
+  "todos.failed": "កញ្ចក់មិនបានឆ្លើយតប៖ {message}",
+  "todos.capped": "មានតែធាតុដំបូងប៉ុណ្ណោះដែលត្រូវបានរាយ។",
+  "todos.note": {
+    "other": "ធាតុបើកចំហ {n} នៅក្នុងឯកសារ {files}។"
   },
   "panel.filter": "តម្រង",
   "panel.design": "រចនា",

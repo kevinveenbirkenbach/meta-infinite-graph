@@ -14,6 +14,7 @@
   "view.securityWith": "Sêkîrîtê · {view}",
   "view.items": "Âyê",
   "view.itemsWith": "Âyê · {view}",
+  "view.todos": "Âkua tî sâra",
   "view.warnings": "CI Âwango",
   "csp.column.kind": "Ndê",
   "csp.column.role": "Kua",
@@ -27,6 +28,20 @@
   "csp.progress": "CSP: {done} na yâ tî âkua {total}",
   "csp.note": {
     "other": "Ndê {n} na ndö tî ndiä tî kôzo, âkua {roles} afa ni."
+  },
+  "todos.column.kind": "Fä",
+  "todos.column.where": "Na ndo wa",
+  "todos.column.item": "Yê",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "A yeke diko yê so dabuku angbâ tî mû na terê tî lo…",
+  "todos.failed": "Mirôro akiri tënë pëpe: {message}",
+  "todos.capped": "Gï âkôzo ni si a sû.",
+  "todos.note": {
+    "other": "Âyê {n} so azi na yâ tî âfîsîe {files}."
   },
   "panel.filter": "Soro",
   "panel.design": "Lê tî yê",

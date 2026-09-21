@@ -14,6 +14,7 @@
   "view.securityWith": "Kuphepha · {view}",
   "view.items": "Tintfo",
   "view.itemsWith": "Tintfo · {view}",
+  "view.todos": "Lokusamele kwentiwe",
   "view.warnings": "CI Ticwayiso",
   "csp.column.kind": "Lokwehlukile",
   "csp.column.role": "Indzima",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "{n} lokwehlukile enchubomgomweni lejwayelekile, lokwatiswe tindzima {roles}.",
     "other": "{n} lokwehlukile enchubomgomweni lejwayelekile, lokwatiswe tindzima {roles}."
+  },
+  "todos.column.kind": "Luphawu",
+  "todos.column.where": "Kuphi",
+  "todos.column.item": "Intfo",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Kufundvwa loko indzawo yekugcina lesasakweleta khona ngekwayo…",
+  "todos.failed": "Sibuko asiphendvulanga: {message}",
+  "todos.capped": "Kubalwe kuphela lokwekucala kwako.",
+  "todos.note": {
+    "one": "{n} intfo levulekile emafayelini langu-{files}.",
+    "other": "Tintfo letingu-{n} letivulekile emafayelini langu-{files}."
   },
   "panel.filter": "Sihlungi",
   "panel.design": "Kubukeka",

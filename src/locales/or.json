@@ -14,6 +14,7 @@
   "view.securityWith": "ସୁରକ୍ଷା · {view}",
   "view.items": "ଆଇଟମ୍",
   "view.itemsWith": "ଆଇଟମ୍ · {view}",
+  "view.todos": "କରିବାକୁ ଥିବା",
   "view.warnings": "CI ଚେତାବନୀ",
   "csp.column.kind": "ବ୍ୟତିକ୍ରମ",
   "csp.column.role": "ଭୂମିକା",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "ଡିଫଲ୍ଟ ନୀତିରେ {n} ବ୍ୟତିକ୍ରମ, {roles} ଭୂମିକା ଘୋଷଣା କରିଛନ୍ତି।",
     "other": "ଡିଫଲ୍ଟ ନୀତିରେ {n} ବ୍ୟତିକ୍ରମ, {roles} ଭୂମିକା ଘୋଷଣା କରିଛନ୍ତି।"
+  },
+  "todos.column.kind": "ଚିହ୍ନ",
+  "todos.column.where": "କେଉଁଠି",
+  "todos.column.item": "ଆଇଟମ୍",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "ରିପୋଜିଟୋରି ନିଜକୁ ଏବେ ବି ଯାହା ଦେବାକୁ ବାକି ଅଛି ତାହା ପଢ଼ାଯାଉଛି…",
+  "todos.failed": "ଦର୍ପଣ ଉତ୍ତର ଦେଲା ନାହିଁ: {message}",
+  "todos.capped": "କେବଳ ପ୍ରଥମଗୁଡ଼ିକ ତାଲିକାଭୁକ୍ତ।",
+  "todos.note": {
+    "one": "{files} ଫାଇଲରେ {n} ଖୋଲା ଆଇଟମ୍।",
+    "other": "{files} ଫାଇଲରେ {n} ଖୋଲା ଆଇଟମ୍।"
   },
   "panel.filter": "ଫିଲ୍ଟର",
   "panel.design": "ଡିଜାଇନ୍",

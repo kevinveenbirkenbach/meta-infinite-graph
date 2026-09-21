@@ -14,6 +14,7 @@
   "view.securityWith": "Ahobammɔ · {view}",
   "view.items": "Nneɛma",
   "view.itemsWith": "Nneɛma · {view}",
+  "view.todos": "Nneɛma a ɛda so wɔ hɔ",
   "view.warnings": "CI Kɔkɔbɔ",
   "csp.column.kind": "Nyiyi",
   "csp.column.role": "Dwumadi",
@@ -28,6 +29,21 @@
   "csp.note": {
     "one": "Nyiyi {n} wɔ nhyehyɛeɛ titire no so, dwumadi {roles} na ɛkaeɛ.",
     "other": "Nyiyi {n} wɔ nhyehyɛeɛ titire no so, dwumadi {roles} na ɛkaeɛ."
+  },
+  "todos.column.kind": "Agyiraeɛ",
+  "todos.column.where": "Ɛhe",
+  "todos.column.item": "Adeɛ",
+  "todos.kind.todo": "TODO",
+  "todos.kind.fixme": "FIXME",
+  "todos.kind.xxx": "XXX",
+  "todos.kind.hack": "HACK",
+  "todos.kind.note": "TODO.md",
+  "todos.reading": "Ɛrekenkan deɛ akorae no da ne ho so …",
+  "todos.failed": "Ahwehwɛ no ammua: {message}",
+  "todos.capped": "Deɛ ɛdi kan nko ara na wɔakyerɛ.",
+  "todos.note": {
+    "one": "Adeɛ {n} a ɛda hɔ wɔ nkrataa {files} mu.",
+    "other": "Nneɛma {n} a ɛda hɔ wɔ nkrataa {files} mu."
   },
   "panel.filter": "Nyiyimu",
   "panel.design": "Nhyehyɛe",
