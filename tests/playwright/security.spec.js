@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { pickView } = require('./support/tables');
 const { boot } = require('./support/mirror');
 
 const CORE = 'infinito-nexus/core';
@@ -75,7 +76,7 @@ const cell = (page, repo, source) => page.locator(`.security-summary tr[data-rep
 test('the security tab gathers every source of every ticked repository, worst first', async ({ page }) => {
   const calls = [];
   await direct(page, calls);
-  await page.locator('label[for="view-security"]').click();
+  await pickView(page, 'security');
 
   const rows = page.locator('table.security-table tbody tr');
   await expect.poll(() => rows.count(), { timeout: 30000 }).toBe(5);
@@ -110,7 +111,7 @@ test('the security tab gathers every source of every ticked repository, worst fi
 test('behind the server token the alerts stay withheld unless the instance allows them', async ({ page }) => {
   const calls = [];
   await proxied(page, calls, false);
-  await page.locator('label[for="view-security"]').click();
+  await pickView(page, 'security');
 
   await expect.poll(() => page.locator('table.security-table tbody tr').count(), { timeout: 30000 }).toBe(1);
   expect(calls.filter(call => !call.startsWith('log:')).sort(),
@@ -127,7 +128,7 @@ test('behind the server token the alerts stay withheld unless the instance allow
 test('an instance that allows alerts reads them through its proxy', async ({ page }) => {
   const calls = [];
   await proxied(page, calls, true);
-  await page.locator('label[for="view-security"]').click();
+  await pickView(page, 'security');
 
   await expect.poll(() => page.locator('table.security-table tbody tr').count(), { timeout: 30000 }).toBe(5);
   expect(calls.filter(call => call.startsWith('/gh/')).length, 'four sources for each of two repositories').toBe(8);
@@ -138,7 +139,7 @@ test('with nothing ticked the security tab asks GitHub nothing', async ({ page }
   const calls = [];
   await page.route('https://api.github.com/**', route => answer(route, calls, '/repos/'));
   await boot(page, calls, '?refs=none/at-all');
-  await page.locator('label[for="view-security"]').click();
+  await pickView(page, 'security');
   await expect(page.locator('.table-note')).toContainText('No source ticked');
   expect(calls.filter(call => !call.startsWith('log:'))).toEqual([]);
 });

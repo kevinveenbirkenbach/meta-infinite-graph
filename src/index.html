@@ -59,14 +59,26 @@
           </div>
           <input type="radio" class="btn-check" name="view" id="view-commits" value="commits">
           <label class="btn btn-outline-light" for="view-commits" data-i18n="view.commits"></label>
-          <input type="radio" class="btn-check" name="view" id="view-pulls" value="pulls">
-          <label class="btn btn-outline-light" for="view-pulls" data-i18n="view.pulls"></label>
+          <div class="btn-group btn-group-sm" role="group">
+            <button id="btn-items" type="button" class="btn btn-outline-light dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-i18n="view.items"></button>
+            <div class="dropdown-menu view-menu">
+              <input type="radio" class="btn-check" name="view" id="view-pulls" value="pulls">
+              <label class="dropdown-item" for="view-pulls" data-i18n="view.pulls"></label>
+            </div>
+          </div>
           <input type="radio" class="btn-check" name="view" id="view-actions" value="actions">
           <label class="btn btn-outline-light" for="view-actions" data-i18n="view.actions"></label>
-          <input type="radio" class="btn-check" name="view" id="view-warnings" value="warnings">
-          <label class="btn btn-outline-light" for="view-warnings" data-i18n="view.warnings"></label>
-          <input type="radio" class="btn-check" name="view" id="view-security" value="security">
-          <label class="btn btn-outline-light" for="view-security" data-i18n="view.security"></label>
+          <div class="btn-group btn-group-sm" role="group">
+            <button id="btn-security" type="button" class="btn btn-outline-light dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-i18n="view.security"></button>
+            <div class="dropdown-menu view-menu">
+              <input type="radio" class="btn-check" name="view" id="view-security" value="security">
+              <label class="dropdown-item" for="view-security" data-i18n="view.alerts"></label>
+              <input type="radio" class="btn-check" name="view" id="view-warnings" value="warnings">
+              <label class="dropdown-item" for="view-warnings" data-i18n="view.warnings"></label>
+            </div>
+          </div>
         </div>
         <button id="btn-filter" type="button" class="btn btn-sm btn-outline-light"
                 data-i18n-title="panel.filter">🔍</button>

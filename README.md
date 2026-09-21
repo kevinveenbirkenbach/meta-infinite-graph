@@ -191,7 +191,7 @@ lists the case names.
 
 With an [Actions run](#actions-run) picked, a **run** column marks every file
 that run reported on, worst level first, and the hover text carries the
-messages. The marks are the same annotations the [Warnings](#warnings) tab
+messages. The marks are the same annotations the [Warnings](#warnings) view
 gathers, so picking a run once serves both.
 
 #### Gate filter
@@ -251,6 +251,11 @@ artefact is visible rather than silently wrong. Without the file the view still
 works and the CI option says what to run. Rows the sweep does not plan keep name
 order behind the planned ones; they still have tests.
 
+### Items
+
+The **Items** menu holds what is open rather than what ran; **PR** lives here.
+`?view=pulls` opens it.
+
 ### Timeline
 
 The only view that leaves the mounted `roles/` tree: it reads the GitHub API
@@ -306,7 +311,7 @@ The proxy only forwards what the page actually calls: `/repos/owner/name` and
 its `/forks`, `/branches`, `/tags`, `/commits`, `/pulls`, `/actions/runs`,
 `/actions/runs/<id>/artifacts`, `/actions/runs/<id>/jobs`,
 `/check-runs/<id>/annotations` and `/security-advisories`, plus the alert paths
-of the [Security](#security) tab
+of the [Alerts](#alerts) view
 when `MIG_GITHUB_ALERTS=true`. Anything else answers 404, so the token cannot
 be borrowed for the rest of the API.
 
@@ -345,9 +350,17 @@ draw a run: 🎭 the Playwright table, 🧪 the repository's
 that run. Whichever is opened, the run is picked first, so the others hold it
 too.
 
-### Warnings
+### Security
 
-The **Warnings** tab gathers what every job of a run reported with
+The **Security** menu holds the views of what the repositories owe their own
+policy, each named after what it reads: **GitHub Alerts** and **CI Warnings**.
+`?view=security` and `?view=warnings` open them. The two are one word apart in
+English and the same word in half the languages the app speaks, so each carries
+its source.
+
+#### Warnings
+
+The **Warnings** view gathers what every job of a run reported with
 `::error::`, `::warning::` and `::notice::`, across all of its jobs, worst
 first. It reads the newest run of every ticked branch on its own, and the
 picked run (`?run=`) beside them; one line per run says how many of its jobs
@@ -367,9 +380,9 @@ message, file and job. Its keys carry a `warn` prefix in the URL (`?warn=`,
 `?warnlevel=`, `?warnjob=`, `?warnrepo=`), so they never collide with the
 [Actions](#actions) filters.
 
-### Security
+#### Alerts
 
-The **Security** tab lists the findings of every repository ticked in the
+The **Alerts** view lists the findings of every repository ticked in the
 sources menu in one table, worst first. Above it one row per repository counts
 the findings per source and links to that source's page on GitHub.
 

@@ -24,6 +24,8 @@ const META_VIEWS = ['graph', 'bond', 'matrix', ...TEST_VIEWS];
 const MENUS = {
   'btn-roles': ['view.roles', 'view.rolesWith'],
   'btn-tests': ['view.tests', 'view.testsWith'],
+  'btn-items': ['view.items', 'view.itemsWith'],
+  'btn-security': ['view.security', 'view.securityWith'],
 };
 
 export function disableMetaViews(missing) {

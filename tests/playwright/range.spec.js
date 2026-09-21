@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { pickView } = require('./support/tables');
 
 const SHA = 'abc123def456';
 
@@ -192,7 +193,7 @@ test('the ticked sources and the window stay in the URL whatever else changes', 
     .toBe(true);
   const query = () => page.evaluate(() => Object.fromEntries(new URLSearchParams(window.location.search)));
 
-  await page.locator('label[for="view-pulls"]').click();
+  await pickView(page, 'pulls');
   await expect.poll(query, 'a view change rebuilds the query around the range, not without it')
     .toMatchObject({ view: 'pulls', refs: 'main,f1/master', from: '2025-01-01T00:00:00.000Z' });
   expect(await query(), 'the right handle at the far right is the default and stays out').not.toHaveProperty('until');

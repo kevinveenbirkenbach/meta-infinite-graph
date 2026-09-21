@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const { pickView } = require('./support/tables');
 const { boot } = require('./support/feeds');
 
 test('the commits tab merges the ticked refs and drops the duplicate', async ({ page }) => {
@@ -27,7 +28,7 @@ test('a ref nobody ticked is never walked', async ({ page }) => {
 test('the PR tab keeps what the range covers and links the rest out', async ({ page }) => {
   const calls = [];
   await boot(page, calls, '?refs=main,f1/master');
-  await page.locator('label[for="view-pulls"]').click();
+  await pickView(page, 'pulls');
 
   const rows = page.locator('table.feed-table tbody tr');
   await expect.poll(() => rows.count(), { timeout: 30000 }).toBe(2);
@@ -64,7 +65,7 @@ test('the actions tab reads the runs and marks the conclusion', async ({ page })
 test('leaving and returning to a feed spends no second request', async ({ page }) => {
   const calls = [];
   await boot(page, calls, '?refs=main');
-  await page.locator('label[for="view-pulls"]').click();
+  await pickView(page, 'pulls');
   await expect.poll(() => page.locator('table.feed-table tbody tr').count(), { timeout: 30000 })
     .toBe(1);
   const spent = calls.filter(one => one.endsWith('/pulls')).length;
@@ -72,7 +73,7 @@ test('leaving and returning to a feed spends no second request', async ({ page }
 
   await page.locator('label[for="view-actions"]').click();
   await expect.poll(() => page.locator('table.feed-table tbody tr').count()).toBe(1);
-  await page.locator('label[for="view-pulls"]').click();
+  await pickView(page, 'pulls');
   await expect.poll(() => page.locator('table.feed-table tbody tr').count()).toBe(1);
 
   expect(calls.filter(one => one.endsWith('/pulls')).length,
@@ -82,7 +83,7 @@ test('leaving and returning to a feed spends no second request', async ({ page }
 test('a feed with nothing ticked asks GitHub nothing at all', async ({ page }) => {
   const calls = [];
   await boot(page, calls, '?refs=none/at-all');
-  await page.locator('label[for="view-pulls"]').click();
+  await pickView(page, 'pulls');
   await expect(page.locator('.table-note')).toContainText('No source ticked');
   expect(calls.filter(one => one.endsWith('/pulls'))).toEqual([]);
 });
