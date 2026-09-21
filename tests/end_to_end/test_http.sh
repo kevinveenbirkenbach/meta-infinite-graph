@@ -21,7 +21,7 @@ if [[ "${status}" != "200" ]]; then
   exit 1
 fi
 
-grep -q "Meta Infinite Graph" "${TMP_DIR}/index.html"
+grep -q "Meta.Infinito.Nexus" "${TMP_DIR}/index.html"
 
 status="$(curl -sS -o "${TMP_DIR}/roles.json" -w '%{http_code}' "${BASE_URL}/roles/")"
 if [[ "${status}" != "200" ]]; then
